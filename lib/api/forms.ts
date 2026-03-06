@@ -26,7 +26,7 @@ function getFormMetadata(): FormMetadata {
  * Generic function to submit form data to the API
  */
 async function submitForm<T extends ContactFormData | RequestSampleFormData>(
-  category: 'contact' | 'request-sample',
+  category: 'contact' | 'request-sample' | 'request-customization',
   data: T
 ): Promise<ApiResponse<FormSubmissionResponse>> {
   try {
