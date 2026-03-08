@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export const revalidate = 300;
+export const fetchCache = 'default-cache';
 
 async function CategoryReportsContent({
   categorySlug,

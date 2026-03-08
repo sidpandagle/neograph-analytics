@@ -66,7 +66,7 @@ export default function RootLayout({
         {/* Google Translate: define callback before the loader script runs */}
         <Script
           id="google-translate-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.googleTranslateElementInit = function() {

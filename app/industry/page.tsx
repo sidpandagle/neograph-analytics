@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 300;
+export const fetchCache = 'default-cache';
 
 interface PageProps {
   searchParams: Promise<{ page?: string }>;

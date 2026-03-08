@@ -1,14 +1,11 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import ReportCard from './ReportCard';
-import type { FilterState } from './FilterSidebar';
+import FilterSidebar, { type FilterState } from './FilterSidebar';
 import Pagination from './Pagination';
 import categories from '@/data/categories.json';
-
-const FilterSidebar = dynamic(() => import('./FilterSidebar'), { ssr: false });
 
 interface Report {
   id: number;
