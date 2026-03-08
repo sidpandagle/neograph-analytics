@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import ReportCard from './ReportCard';
 import type { FilterState } from './FilterSidebar';
 import Pagination from './Pagination';
-import SearchBar from './SearchBar';
 import categories from '@/data/categories.json';
 
 const FilterSidebar = dynamic(() => import('./FilterSidebar'), { ssr: false });
@@ -30,9 +28,10 @@ interface Report {
 interface ReportsListingClientProps {
   reports: Report[];
   activeCategorySlug?: string;
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
 }
-
-const ITEMS_PER_PAGE = 12;
 
 const CATEGORY_ICONS: Record<string, string> = {
   'Biotechnology': '🧬',
@@ -49,47 +48,23 @@ const CATEGORY_ICONS: Record<string, string> = {
   'Animal Health': '🐾',
 };
 
-export default function ReportsListingClient({ reports, activeCategorySlug }: ReportsListingClientProps) {
-  const searchParams = useSearchParams();
-  const [filters, setFilters] = useState<FilterState>(() => {
-    const cat = activeCategorySlug ? categories.find((c) => c.slug === activeCategorySlug) : null;
-    return {
-      industries: cat ? [cat.name] : [],
-      regions: [],
-      reportTypes: [],
-      priceRanges: [],
-      searchQuery: '',
-    };
+export default function ReportsListingClient({
+  reports,
+  activeCategorySlug,
+  currentPage,
+  totalPages,
+  totalItems,
+}: ReportsListingClientProps) {
+  const [filters, setFilters] = useState<FilterState>({
+    industries: [],
+    regions: [],
+    reportTypes: [],
+    priceRanges: [],
   });
-  const [currentPage, setCurrentPage] = useState(1);
-  const [searchResults, setSearchResults] = useState<Report[] | null>(null);
-  const [isSearching, setIsSearching] = useState(false);
 
   const activeCategory = categories.find((c) => c.slug === activeCategorySlug) || null;
 
-  // Sync search param from URL
-  useEffect(() => {
-    const searchParam = searchParams.get('search');
-    if (searchParam) {
-      setFilters((prev) => ({ ...prev, searchQuery: searchParam }));
-    }
-  }, [searchParams]);
-
-  // Per-category report counts (across ALL reports, unfiltered)
-  const categoryCounts = useMemo(
-    () =>
-      reports.reduce((acc, r) => {
-        acc[r.category] = (acc[r.category] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-    [reports]
-  );
-
-  const handleSearchResults = useCallback((results: Report[] | null, loading: boolean) => {
-    setSearchResults(results);
-    setIsSearching(loading);
-    setCurrentPage(1);
-  }, []);
+  const categoryCounts = activeCategory ? { [activeCategory.name]: totalItems } : {};
 
   const isPriceInRange = (price: string, range: string): boolean => {
     const n = parseInt(price.replace(/[^0-9]/g, ''));
@@ -103,37 +78,14 @@ export default function ReportsListingClient({ reports, activeCategorySlug }: Re
   };
 
   const filteredReports = useMemo(() => {
-    const source = searchResults !== null ? searchResults : reports;
-    return source.filter((report) => {
-      if (filters.searchQuery) {
-        const q = filters.searchQuery.toLowerCase();
-        if (!report.title.toLowerCase().includes(q) && !report.description.toLowerCase().includes(q))
-          return false;
-      }
-      if (filters.industries.length > 0 && !filters.industries.includes(report.category)) return false;
+    return reports.filter((report) => {
       if (filters.regions.length > 0 && !filters.regions.includes(report.region)) return false;
       if (filters.reportTypes.length > 0 && !filters.reportTypes.includes(report.reportType)) return false;
       if (filters.priceRanges.length > 0 && !filters.priceRanges.some((r) => isPriceInRange(report.price, r)))
         return false;
       return true;
     });
-  }, [reports, filters, searchResults]);
-
-  const totalPages = Math.ceil(filteredReports.length / ITEMS_PER_PAGE);
-
-  const paginatedReports = useMemo(() => {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return filteredReports.slice(start, start + ITEMS_PER_PAGE);
-  }, [filteredReports, currentPage]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filters]);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    document.getElementById('reports-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  }, [reports, filters]);
 
   const categoryIcon = activeCategory ? (CATEGORY_ICONS[activeCategory.name] || '📊') : '📊';
 
@@ -181,7 +133,7 @@ export default function ReportsListingClient({ reports, activeCategorySlug }: Re
                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                     <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
                   </svg>
-                  {isSearching ? '...' : `${filteredReports.length} ${filteredReports.length === 1 ? 'report' : 'reports'}`}
+                  {`${totalItems} ${totalItems === 1 ? 'report' : 'reports'}`}
                 </span>
               </div>
             </div>
@@ -195,43 +147,32 @@ export default function ReportsListingClient({ reports, activeCategorySlug }: Re
 
           {/* ── Main: Report List ──────────────────────────────────── */}
           <main id="reports-list">
-            {/* Search */}
-            <div className="mb-5">
-              <SearchBar
-                onSearchResults={handleSearchResults}
-                placeholder={`Search ${activeCategory ? activeCategory.name + ' ' : ''}reports by title or keywords…`}
-              />
-            </div>
-
             {/* Meta row */}
             <div className="flex items-center justify-between pb-3 border-b border-slate-200 mb-1">
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wide">
-                {isSearching
-                  ? 'Searching…'
-                  : `${paginatedReports.length} of ${filteredReports.length} reports`}
+                {`${filteredReports.length} of ${totalItems} reports`}
               </p>
             </div>
 
             {/* Report list */}
-            {paginatedReports.length > 0 ? (
+            {filteredReports.length > 0 ? (
               <>
                 <div>
-                  {paginatedReports.map((report) => (
+                  {filteredReports.map((report) => (
                     <ReportCard key={report.id} report={report} />
                   ))}
                 </div>
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
-                  onPageChange={handlePageChange}
                 />
               </>
             ) : (
               <div className="text-center py-20 border border-dashed border-slate-200 rounded-xl mt-4">
-                <div className="text-5xl mb-4">🔍</div>
+                <div className="text-5xl mb-4">📋</div>
                 <h3 className="text-lg font-semibold text-slate-700 mb-2">No reports found</h3>
                 <p className="text-sm text-slate-400 mb-6">
-                  Try adjusting your search terms or region filter
+                  Try adjusting your filters
                 </p>
                 {filters.regions.length > 0 && (
                   <button
@@ -251,7 +192,7 @@ export default function ReportsListingClient({ reports, activeCategorySlug }: Re
               <FilterSidebar
                 filters={filters}
                 onFilterChange={setFilters}
-                totalCount={filteredReports.length}
+                totalCount={totalItems}
                 categoryCounts={categoryCounts}
                 activeCategorySlug={activeCategorySlug}
               />

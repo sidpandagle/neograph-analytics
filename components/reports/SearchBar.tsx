@@ -7,10 +7,11 @@ import { searchReports, isApiError, type Report } from '@/lib/api';
 interface SearchBarProps {
   onSearchResults: (results: Report[] | null, isLoading: boolean) => void;
   placeholder?: string;
+  initialValue?: string;
 }
 
-export default function SearchBar({ onSearchResults, placeholder }: SearchBarProps) {
-  const [query, setQuery] = useState('');
+export default function SearchBar({ onSearchResults, placeholder, initialValue }: SearchBarProps) {
+  const [query, setQuery] = useState(initialValue ?? '');
   const [isLoading, setIsLoading] = useState(false);
   const debouncedQuery = useDebounce(query, 300);
 

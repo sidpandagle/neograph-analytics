@@ -161,7 +161,8 @@ export interface ReportFilters {
   page?: number;
   limit?: number;
   status?: ReportStatus;
-  category_id?: number;
+  category?: string;     // category slug (e.g. 'healthcare-it') — sent as ?category=
+  category_id?: number;  // kept for backward compat but category (slug) takes precedence
   report_type?: ReportType;
   geography?: string;
   search?: string;

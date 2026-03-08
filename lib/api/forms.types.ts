@@ -1,6 +1,6 @@
 // Form submission types based on the API design
 
-export type FormCategory = 'contact' | 'request-sample' | 'request-customization';
+export type FormCategory = 'contact' | 'request-sample' | 'request-customization' | 'schedule-demo';
 
 export type FormStatus = 'pending' | 'processed' | 'archived';
 
@@ -55,6 +55,21 @@ export interface FormSubmissionResponse {
   category: FormCategory;
   message: string;
   createdAt: string;
+}
+
+// Schedule Demo Form Data
+export interface ScheduleDemoFormData {
+  fullName: string;
+  email: string;
+  company: string;
+  jobTitle?: string;
+  phone?: string;
+  companySize?: string;
+  interests?: string;
+  preferredDateTimeUTC?: string; // ISO UTC string of the selected slot
+  userTimezone?: string;         // IANA timezone name (client's TZ)
+  preferredTimeLocal?: string;   // formatted in client's TZ, e.g. "7:30 PM IST"
+  additionalInfo?: string;
 }
 
 // Error response (for form-specific error handling)

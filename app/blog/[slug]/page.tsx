@@ -135,7 +135,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
             <Badge variant="default">{blog.category}</Badge>
           </div>
 
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-4xl font-bold">
             {blog.title}
           </h1>
 

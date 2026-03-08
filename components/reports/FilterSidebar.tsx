@@ -8,7 +8,6 @@ export interface FilterState {
   regions: string[];
   reportTypes: string[];
   priceRanges: string[];
-  searchQuery: string;
 }
 
 interface FilterSidebarProps {
@@ -40,22 +39,13 @@ export default function FilterSidebar({
         <nav className="py-1.5">
           <Link
             href="/industry"
-            className={`flex items-center justify-between px-4 py-2 text-sm transition-colors ${
+            className={`flex items-center px-4 py-2 text-sm transition-colors ${
               !activeCategorySlug
                 ? 'text-[#2563A3] bg-blue-50 font-semibold'
                 : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
             }`}
           >
             <span>All Industries</span>
-            <span
-              className={`text-xs px-2 py-0.5 rounded-full ${
-                !activeCategorySlug
-                  ? 'bg-blue-100 text-[#2563A3]'
-                  : 'bg-slate-100 text-slate-500'
-              }`}
-            >
-              {totalAllReports}
-            </span>
           </Link>
           {categories.map((category) => {
             const isActive = category.slug === activeCategorySlug;
@@ -64,24 +54,13 @@ export default function FilterSidebar({
               <Link
                 key={category.id}
                 href={`/industry/${category.slug}`}
-                className={`flex items-center justify-between px-4 py-2 text-sm transition-colors ${
+                className={`flex items-center px-4 py-2 text-sm transition-colors ${
                   isActive
                     ? 'text-[#2563A3] bg-blue-50 font-semibold border-l-[3px] border-[#2563A3]'
                     : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 border-l-[3px] border-transparent'
                 }`}
               >
                 <span>{category.name}</span>
-                {count > 0 && (
-                  <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
-                      isActive
-                        ? 'bg-blue-100 text-[#2563A3]'
-                        : 'bg-slate-100 text-slate-500'
-                    }`}
-                  >
-                    {count}
-                  </span>
-                )}
               </Link>
             );
           })}

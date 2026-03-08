@@ -30,7 +30,8 @@ export async function getReports(
     page: filters?.page || 1,
     limit: filters?.limit || 100,
     status: filters?.status || 'published',
-    ...(filters?.category_id && { category_id: filters.category_id }),
+    // Backend reads ?category=<slug>; prefer slug over numeric id
+    ...(filters?.category && { category: filters.category }),
     ...(filters?.report_type && { report_type: filters.report_type }),
     ...(filters?.geography && { geography: filters.geography }),
     ...(filters?.search && { search: filters.search }),
@@ -67,10 +68,24 @@ export async function getReports(
   // Map API reports to UI format
   const mappedReports = mapApiReportsToReports(apiReports);
 
+  // Backend meta is at the top-level response with snake_case fields:
+  // { page, limit, total, total_pages } — map to frontend PaginationMeta
+  const rawMeta = (response as unknown as { meta?: { page?: number; limit?: number; total?: number; total_pages?: number } }).meta;
+  const mappedMeta: PaginationMeta | undefined = rawMeta
+    ? {
+        currentPage: rawMeta.page ?? 1,
+        totalPages: rawMeta.total_pages ?? 1,
+        totalItems: rawMeta.total ?? 0,
+        itemsPerPage: rawMeta.limit ?? 10,
+        hasNextPage: (rawMeta.page ?? 1) < (rawMeta.total_pages ?? 1),
+        hasPreviousPage: (rawMeta.page ?? 1) > 1,
+      }
+    : undefined;
+
   return {
     success: true,
     data: mappedReports,
-    meta: (response.data as { meta?: PaginationMeta })?.meta,
+    meta: mappedMeta,
   };
 }
 
@@ -177,9 +192,21 @@ export async function searchReports(
   // Map API reports to UI format
   const mappedReports = mapApiReportsToReports(apiReports);
 
+  const rawSearchMeta = (response as unknown as { meta?: { page?: number; limit?: number; total?: number; total_pages?: number } }).meta;
+  const searchMappedMeta: PaginationMeta | undefined = rawSearchMeta
+    ? {
+        currentPage: rawSearchMeta.page ?? 1,
+        totalPages: rawSearchMeta.total_pages ?? 1,
+        totalItems: rawSearchMeta.total ?? 0,
+        itemsPerPage: rawSearchMeta.limit ?? 50,
+        hasNextPage: (rawSearchMeta.page ?? 1) < (rawSearchMeta.total_pages ?? 1),
+        hasPreviousPage: (rawSearchMeta.page ?? 1) > 1,
+      }
+    : undefined;
+
   return {
     success: true,
     data: mappedReports,
-    meta: (response.data as { meta?: PaginationMeta })?.meta,
+    meta: searchMappedMeta,
   };
 }

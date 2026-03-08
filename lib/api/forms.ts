@@ -1,6 +1,7 @@
 import type {
   ContactFormData,
   RequestSampleFormData,
+  ScheduleDemoFormData,
   FormSubmissionRequest,
   FormSubmissionResponse,
   FormMetadata,
@@ -25,8 +26,8 @@ function getFormMetadata(): FormMetadata {
 /**
  * Generic function to submit form data to the API
  */
-async function submitForm<T extends ContactFormData | RequestSampleFormData>(
-  category: 'contact' | 'request-sample' | 'request-customization',
+async function submitForm<T extends ContactFormData | RequestSampleFormData | ScheduleDemoFormData>(
+  category: 'contact' | 'request-sample' | 'request-customization' | 'schedule-demo',
   data: T
 ): Promise<ApiResponse<FormSubmissionResponse>> {
   try {
@@ -91,6 +92,15 @@ export async function submitRequestCustomizationForm(
   data: RequestSampleFormData
 ): Promise<ApiResponse<FormSubmissionResponse>> {
   return submitForm('request-customization', data);
+}
+
+/**
+ * Submit schedule demo form
+ */
+export async function submitScheduleDemoForm(
+  data: ScheduleDemoFormData
+): Promise<ApiResponse<FormSubmissionResponse>> {
+  return submitForm('schedule-demo', data);
 }
 
 /**

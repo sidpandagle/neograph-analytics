@@ -186,12 +186,45 @@ export const generateProductSchema = (params: {
       url: params.url,
       price: effectivePrice,
       priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: {
         '@type': 'Organization',
         name: 'Healthcare Foresights',
         url: 'https://www.healthcareforesights.com',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'USD',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'US',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 1,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'US',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
       },
     },
     aggregateRating: {
@@ -255,6 +288,9 @@ export const generateLocalBusinessSchema = () => ({
   name: 'Healthcare Foresights',
   url: 'https://www.healthcareforesights.com',
   email: 'support@healthcareforesights.com',
+  telephone: '+17377342707',
+  image: 'https://www.healthcareforesights.com/assets/images/logo.png',
+  priceRange: '$$$$',
   description: 'Healthcare Foresights delivers trusted healthcare market research, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.',
   sameAs: [
     'https://twitter.com/HealthcareForesights',
@@ -262,6 +298,10 @@ export const generateLocalBusinessSchema = () => ({
   ],
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '1333, 701 Tillery Street Unit 12',
+    addressLocality: 'Austin',
+    addressRegion: 'TX',
+    postalCode: '78702',
     addressCountry: 'US',
   },
 });
