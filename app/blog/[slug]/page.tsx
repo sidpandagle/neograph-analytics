@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     const blog = response.data;
 
     // Use metadata fields if available, otherwise fallback to defaults
-    const title = blog.metadata?.metaTitle || `${blog.title} | Healthcare Insights`;
+    const title = blog.metadata?.metaTitle || blog.title;
     const description = blog.metadata?.metaDescription || blog.excerpt;
     const keywords = blog.metadata?.keywords || [];
 
     return {
-      title,
+      title: { absolute: title },
       description,
       keywords,
       openGraph: {

@@ -5,8 +5,6 @@ import { getReports, isApiError } from '@/lib/api';
 import { ReportsListingClient } from '@/components/reports';
 import ReportsSkeleton from '@/components/reports/ReportsSkeleton';
 
-const ITEMS_PER_PAGE = 10;
-
 export const metadata: Metadata = {
   title: "Healthcare Market Research Reports & Industry Analysis",
   description: "Browse in-depth healthcare market research reports covering industry trends, competitive analysis, forecasts, and strategic insights.",
@@ -19,15 +17,10 @@ export const metadata: Metadata = {
 export const revalidate = 300;
 export const fetchCache = 'default-cache';
 
-interface PageProps {
-  searchParams: Promise<{ page?: string }>;
-}
-
-async function ReportsContent({ page }: { page: number }) {
+async function ReportsContent() {
   const response = await getReports({
     status: 'published',
-    page,
-    limit: ITEMS_PER_PAGE,
+    limit: 1000,
   });
 
   if (isApiError(response)) {
@@ -47,27 +40,20 @@ async function ReportsContent({ page }: { page: number }) {
     );
   }
 
-  const currentPage = response.meta?.currentPage ?? page;
-  const totalPages = response.meta?.totalPages ?? 1;
   const totalItems = response.meta?.totalItems ?? response.data.length;
 
   return (
     <ReportsListingClient
       reports={response.data}
-      currentPage={currentPage}
-      totalPages={totalPages}
       totalItems={totalItems}
     />
   );
 }
 
-export default async function IndustryPage({ searchParams }: PageProps) {
-  const { page: pageParam } = await searchParams;
-  const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
-
+export default async function IndustryPage() {
   return (
     <Suspense fallback={<ReportsSkeleton />}>
-      <ReportsContent page={page} />
+      <ReportsContent />
     </Suspense>
   );
 }

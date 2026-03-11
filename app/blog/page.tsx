@@ -1,6 +1,7 @@
-import { Section, Container, Grid } from "@/components/ui";
-import { BlogCard } from "@/components/blog/BlogCard";
+import { Suspense } from "react";
+import BlogListingClient from "@/components/blog/BlogListingClient";
 import { getBlogs, isApiError } from "@/lib/api";
+import BlogLoading from "./loading";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,58 +13,48 @@ export const metadata: Metadata = {
   },
 };
 
-// Enable ISR with 5-minute revalidation
 export const revalidate = 300;
 
-export default async function BlogPage() {
-  // Fetch blogs from API
-  const response = await getBlogs({ status: 'published', limit: 100 });
+interface PageProps {
+  searchParams: Promise<{ category?: string }>;
+}
 
-  // Handle API errors
+async function BlogsContent({ categorySlug }: { categorySlug?: string }) {
+  const response = await getBlogs({
+    status: 'published',
+    limit: 1000,
+    ...(categorySlug && { category: categorySlug }),
+  });
+
   if (isApiError(response)) {
     console.error('Failed to fetch blogs:', response.message);
     return (
-      <Section>
-        <Container>
-          <div className="mb-12">
-            <h1 className="mb-4 text-4xl font-bold md:text-5xl">Insights & Analysis</h1>
-            <p className="text-lg text-[var(--muted-foreground)] max-w-2xl">
-              Unable to load blog posts at this time. Please try again later.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <h2 className="text-2xl font-bold text-gray-900">Unable to Load Articles</h2>
+          <p className="text-gray-600">{response.message}</p>
+        </div>
+      </div>
     );
   }
 
-  const blogs = response.data;
+  const totalItems = response.meta?.totalItems ?? response.data.length;
 
   return (
-    <Section>
-      <Container>
-        <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl">Insights & Analysis</h1>
-          <p className="text-lg text-[var(--muted-foreground)] max-w-2xl">
-            Expert perspectives on healthcare market trends, emerging technologies, and industry transformations.
-          </p>
-        </div>
+    <BlogListingClient
+      blogs={response.data}
+      totalItems={totalItems}
+      activeCategorySlug={categorySlug}
+    />
+  );
+}
 
-        <Grid cols={3}>
-          {blogs.map((blog) => (
-            <BlogCard
-              key={blog.id}
-              slug={blog.slug}
-              title={blog.title}
-              excerpt={blog.excerpt}
-              category={blog.category}
-              author={blog.author}
-              date={blog.date}
-              readTime={blog.readTime}
-              location={blog.location}
-            />
-          ))}
-        </Grid>
-      </Container>
-    </Section>
+export default async function BlogPage({ searchParams }: PageProps) {
+  const { category } = await searchParams;
+
+  return (
+    <Suspense fallback={<BlogLoading />}>
+      <BlogsContent categorySlug={category} />
+    </Suspense>
   );
 }

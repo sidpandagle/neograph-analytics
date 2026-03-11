@@ -7,7 +7,9 @@ import type {
   ApiCategory,
 } from './categories.types';
 import type { ReportsListData, Report, ReportFilters } from './reports.types';
-import { mapApiReportsToReports } from './mappers';
+import type { BlogsListData, Blog, BlogFilters } from './blogs.types';
+import type { PressReleasesListData, PressRelease, PressReleaseFilters } from './press-releases.types';
+import { mapApiReportsToReports, mapApiBlogsToblogs, mapApiPressReleasesToPressReleases } from './mappers';
 
 /**
  * Fetch all categories from the API
@@ -85,5 +87,73 @@ export async function getReportsByCategory(
     success: true,
     data: mappedReports,
     meta: response.data.meta,
+  };
+}
+
+/**
+ * Fetch blogs by category slug
+ *
+ * @param slug - Category slug (e.g., 'healthcare-it')
+ * @param filters - Optional filters (page, limit, status, etc.)
+ * @returns Promise<ApiResponse<Blog[]>>
+ */
+export async function getBlogsByCategory(
+  slug: string,
+  filters?: BlogFilters
+): Promise<ApiResponse<Blog[]>> {
+  const params: Record<string, string | number | boolean | undefined> = {
+    page: filters?.page || 1,
+    limit: filters?.limit || 100,
+  };
+
+  const queryString = buildQueryString(params);
+  const response = await apiFetch<BlogsListData>(
+    `/api/v1/categories/${slug}/blogs${queryString}`
+  );
+
+  if (!response.success) {
+    return response;
+  }
+
+  const apiBlogs = (response.data as unknown as { blogs: BlogsListData['blogs'] }).blogs ?? [];
+  const mappedBlogs = mapApiBlogsToblogs(apiBlogs);
+
+  return {
+    success: true,
+    data: mappedBlogs,
+  };
+}
+
+/**
+ * Fetch press releases by category slug
+ *
+ * @param slug - Category slug (e.g., 'healthcare-it')
+ * @param filters - Optional filters (page, limit, etc.)
+ * @returns Promise<ApiResponse<PressRelease[]>>
+ */
+export async function getPressReleasesByCategory(
+  slug: string,
+  filters?: PressReleaseFilters
+): Promise<ApiResponse<PressRelease[]>> {
+  const params: Record<string, string | number | boolean | undefined> = {
+    page: filters?.page || 1,
+    limit: filters?.limit || 100,
+  };
+
+  const queryString = buildQueryString(params);
+  const response = await apiFetch<PressReleasesListData>(
+    `/api/v1/categories/${slug}/press-releases${queryString}`
+  );
+
+  if (!response.success) {
+    return response;
+  }
+
+  const apiPressReleases = (response.data as unknown as { pressReleases: PressReleasesListData['pressReleases'] }).pressReleases ?? [];
+  const mappedPressReleases = mapApiPressReleasesToPressReleases(apiPressReleases);
+
+  return {
+    success: true,
+    data: mappedPressReleases,
   };
 }

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: ConsultingServicePageProps): 
   }
 
   return {
-    title: `${service.title} | Consulting Services`,
+    title: { absolute: `${service.title} | Consulting Services` },
     description: service.description,
   };
 }

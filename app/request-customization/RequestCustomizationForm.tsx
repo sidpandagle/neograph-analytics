@@ -89,7 +89,7 @@ export default function RequestCustomizationForm() {
 
   return (
     <>
-      <Section padding="lg" background="muted">
+      <Section padding="lg" background="muted" className="pb-8">
         <Container size="lg">
           <div className="text-center space-y-4">
             <Badge variant="primary" size="md">
@@ -103,7 +103,7 @@ export default function RequestCustomizationForm() {
         </Container>
       </Section>
 
-      <Section>
+      <Section className="pt-8">
         <Container size="lg">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left Column - Form (2/3 width) */}

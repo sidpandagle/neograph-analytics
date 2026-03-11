@@ -90,6 +90,7 @@ export interface PressReleaseFilters {
   page?: number;
   limit?: number;
   status?: PressReleaseStatus;
+  category?: string;
   categoryId?: number;
   authorId?: number;
   search?: string;

@@ -57,7 +57,7 @@ export async function generateMetadata({
       : ["healthcare market research", "healthcare industry analysis", report.category, report.region];
 
     return {
-      title,
+      title: { absolute: title },
       description,
       keywords,
       openGraph: {
@@ -356,9 +356,12 @@ export default async function ReportPage({
     image: reportOgImage,
   });
 
+  const productDescription = report.description ||
+    `${report.title} - Comprehensive market research report covering market size, trends, forecasts, and competitive landscape in the ${report.category} sector.`;
+
   const productSchema = generateProductSchema({
     name: report.title,
-    description: report.description,
+    description: productDescription,
     url: reportUrl,
     price: report.price,
     discountedPrice: report.discounted_price,

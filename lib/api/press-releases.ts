@@ -29,6 +29,7 @@ export async function getPressReleases(
     page: filters?.page || 1,
     limit: filters?.limit || 100,
     status: filters?.status || 'published',
+    ...(filters?.category && { category: filters.category }),
     ...(filters?.categoryId && { categoryId: filters.categoryId }),
     ...(filters?.authorId && { authorId: filters.authorId }),
     ...(filters?.search && { search: filters.search }),

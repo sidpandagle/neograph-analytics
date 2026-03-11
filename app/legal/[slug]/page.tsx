@@ -37,12 +37,12 @@ export async function generateMetadata({ params }: LegalPageProps): Promise<Meta
     const page = response.data;
 
     // Use metadata fields if available, otherwise fallback to defaults
-    const title = page.metadata?.metaTitle || `${page.title} | Healthcare Foresights`;
+    const title = page.metadata?.metaTitle || page.title;
     const description = page.metadata?.metaDescription || page.excerpt;
     const keywords = page.metadata?.keywords || ["healthcare legal", "policies"];
 
     return {
-      title,
+      title: { absolute: title },
       description,
       keywords,
       openGraph: {

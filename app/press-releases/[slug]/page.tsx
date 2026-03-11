@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PressReleasePageProps): Promi
     const keywords = pressRelease.metadata?.keywords || ["healthcare press releases", "healthcare news", "industry announcements", "healthcare market updates"];
 
     return {
-      title,
+      title: { absolute: title },
       description,
       keywords,
       openGraph: {

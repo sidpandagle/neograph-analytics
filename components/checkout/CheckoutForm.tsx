@@ -173,6 +173,16 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
+                Country
+              </label>
+              <CountrySelect
+                value={countryCode}
+                onChange={handleCountryChange}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
                 Phone Number
               </label>
               <input
@@ -182,16 +192,6 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
                 onChange={handleChange}
                 placeholder="+1 234 567 8900"
                 className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
-                Country
-              </label>
-              <CountrySelect
-                value={countryCode}
-                onChange={handleCountryChange}
               />
             </div>
           </div>

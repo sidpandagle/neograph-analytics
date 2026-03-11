@@ -1,6 +1,7 @@
-import { Section, Container, Grid } from "@/components/ui";
-import { PressReleaseCard } from "@/components/press-releases/PressReleaseCard";
+import { Suspense } from "react";
+import PressReleaseListingClient from "@/components/press-releases/PressReleaseListingClient";
 import { getPressReleases, isApiError } from "@/lib/api";
+import PressReleasesLoading from "./loading";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,58 +13,48 @@ export const metadata: Metadata = {
   },
 };
 
-// Enable ISR with 5-minute revalidation
 export const revalidate = 300;
 
-export default async function PressReleasesPage() {
-  // Fetch press releases from API
-  const response = await getPressReleases({ status: 'published', limit: 100 });
+interface PageProps {
+  searchParams: Promise<{ category?: string }>;
+}
 
-  // Handle API errors
+async function PressReleasesContent({ categorySlug }: { categorySlug?: string }) {
+  const response = await getPressReleases({
+    status: 'published',
+    limit: 1000,
+    ...(categorySlug && { category: categorySlug }),
+  });
+
   if (isApiError(response)) {
     console.error('Failed to fetch press releases:', response.message);
     return (
-      <Section>
-        <Container>
-          <div className="mb-12">
-            <h1 className="mb-4 text-4xl font-bold md:text-5xl">Press Releases</h1>
-            <p className="text-lg text-[var(--muted-foreground)] max-w-2xl">
-              Unable to load press releases at this time. Please try again later.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <h2 className="text-2xl font-bold text-gray-900">Unable to Load Press Releases</h2>
+          <p className="text-gray-600">{response.message}</p>
+        </div>
+      </div>
     );
   }
 
-  const pressReleases = response.data;
+  const totalItems = response.meta?.totalItems ?? response.data.length;
 
   return (
-    <Section>
-      <Container>
-        <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl">Press Releases</h1>
-          <p className="text-lg text-[var(--muted-foreground)] max-w-2xl">
-            Latest news and announcements from Healthcare Foresights. Stay informed about our research publications and industry insights.
-          </p>
-        </div>
+    <PressReleaseListingClient
+      pressReleases={response.data}
+      totalItems={totalItems}
+      activeCategorySlug={categorySlug}
+    />
+  );
+}
 
-        <Grid cols={3}>
-          {pressReleases.map((pressRelease) => (
-            <PressReleaseCard
-              key={pressRelease.id}
-              slug={pressRelease.slug}
-              title={pressRelease.title}
-              excerpt={pressRelease.excerpt}
-              category={pressRelease.category}
-              author={pressRelease.author}
-              date={pressRelease.date}
-              readTime={pressRelease.readTime}
-              location={pressRelease.location}
-            />
-          ))}
-        </Grid>
-      </Container>
-    </Section>
+export default async function PressReleasesPage({ searchParams }: PageProps) {
+  const { category } = await searchParams;
+
+  return (
+    <Suspense fallback={<PressReleasesLoading />}>
+      <PressReleasesContent categorySlug={category} />
+    </Suspense>
   );
 }

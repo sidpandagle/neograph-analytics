@@ -7,11 +7,9 @@ import { ReportsListingClient } from '@/components/reports';
 import ReportsSkeleton from '@/components/reports/ReportsSkeleton';
 import categories from '@/data/categories.json';
 
-const ITEMS_PER_PAGE = 10;
-
 interface PageProps {
   params: Promise<{ category: string }>;
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<Record<string, never>>;
 }
 
 export async function generateStaticParams() {
@@ -45,18 +43,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export const revalidate = 300;
 export const fetchCache = 'default-cache';
 
-async function CategoryReportsContent({
-  categorySlug,
-  page,
-}: {
-  categorySlug: string;
-  page: number;
-}) {
+async function CategoryReportsContent({ categorySlug }: { categorySlug: string }) {
   const response = await getReports({
     status: 'published',
-    category: categorySlug,   // backend reads ?category=<slug>
-    page,
-    limit: ITEMS_PER_PAGE,
+    category: categorySlug,
+    limit: 1000,
   });
 
   if (isApiError(response)) {
@@ -76,38 +67,28 @@ async function CategoryReportsContent({
     );
   }
 
-  const currentPage = response.meta?.currentPage ?? page;
-  const totalPages = response.meta?.totalPages ?? 1;
   const totalItems = response.meta?.totalItems ?? response.data.length;
 
   return (
     <ReportsListingClient
       reports={response.data}
       activeCategorySlug={categorySlug}
-      currentPage={currentPage}
-      totalPages={totalPages}
       totalItems={totalItems}
     />
   );
 }
 
-export default async function CategoryPage({ params, searchParams }: PageProps) {
+export default async function CategoryPage({ params }: PageProps) {
   const { category } = await params;
-  const { page: pageParam } = await searchParams;
   const categoryData = categories.find((c) => c.slug === category);
 
   if (!categoryData) {
     notFound();
   }
 
-  const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
-
   return (
     <Suspense fallback={<ReportsSkeleton />}>
-      <CategoryReportsContent
-        categorySlug={category}
-        page={page}
-      />
+      <CategoryReportsContent categorySlug={category} />
     </Suspense>
   );
 }

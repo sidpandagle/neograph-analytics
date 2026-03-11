@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import ReportCard from './ReportCard';
 import FilterSidebar, { type FilterState } from './FilterSidebar';
 import Pagination from './Pagination';
 import categories from '@/data/categories.json';
+
+const ITEMS_PER_PAGE = 10;
 
 interface Report {
   id: number;
@@ -25,8 +27,6 @@ interface Report {
 interface ReportsListingClientProps {
   reports: Report[];
   activeCategorySlug?: string;
-  currentPage: number;
-  totalPages: number;
   totalItems: number;
 }
 
@@ -48,16 +48,35 @@ const CATEGORY_ICONS: Record<string, string> = {
 export default function ReportsListingClient({
   reports,
   activeCategorySlug,
-  currentPage,
-  totalPages,
   totalItems,
 }: ReportsListingClientProps) {
+  const storageKey = activeCategorySlug ? `industry_${activeCategorySlug}_page` : 'industry_page';
+
+  const [currentPage, setCurrentPage] = useState(1);
   const [filters, setFilters] = useState<FilterState>({
     industries: [],
     regions: [],
     reportTypes: [],
     priceRanges: [],
   });
+
+  // Restore page from sessionStorage on mount
+  useEffect(() => {
+    const saved = sessionStorage.getItem(storageKey);
+    if (saved) setCurrentPage(Math.max(1, parseInt(saved, 10) || 1));
+  }, [storageKey]);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    sessionStorage.setItem(storageKey, String(page));
+    document.getElementById('reports-list')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleFilterChange = (newFilters: FilterState) => {
+    setFilters(newFilters);
+    setCurrentPage(1);
+    sessionStorage.setItem(storageKey, '1');
+  };
 
   const activeCategory = categories.find((c) => c.slug === activeCategorySlug) || null;
 
@@ -83,6 +102,12 @@ export default function ReportsListingClient({
       return true;
     });
   }, [reports, filters]);
+
+  const totalPages = Math.ceil(filteredReports.length / ITEMS_PER_PAGE);
+  const paginatedReports = filteredReports.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   const categoryIcon = activeCategory ? (CATEGORY_ICONS[activeCategory.name] || '📊') : '📊';
 
@@ -155,13 +180,14 @@ export default function ReportsListingClient({
             {filteredReports.length > 0 ? (
               <>
                 <div>
-                  {filteredReports.map((report) => (
+                  {paginatedReports.map((report) => (
                     <ReportCard key={report.id} report={report} />
                   ))}
                 </div>
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
+                  onPageChange={handlePageChange}
                 />
               </>
             ) : (
@@ -173,7 +199,7 @@ export default function ReportsListingClient({
                 </p>
                 {filters.regions.length > 0 && (
                   <button
-                    onClick={() => setFilters((f) => ({ ...f, regions: [] }))}
+                    onClick={() => handleFilterChange({ ...filters, regions: [] })}
                     className="text-sm font-medium text-[#2563A3] hover:underline"
                   >
                     Clear region filters
@@ -188,7 +214,7 @@ export default function ReportsListingClient({
             <div className="sticky top-24">
               <FilterSidebar
                 filters={filters}
-                onFilterChange={setFilters}
+                onFilterChange={handleFilterChange}
                 totalCount={totalItems}
                 categoryCounts={categoryCounts}
                 activeCategorySlug={activeCategorySlug}

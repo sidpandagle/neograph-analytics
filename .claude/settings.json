@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"E:/Siddhant/Projects/ai-projects/healthcare-market-research-collection/healthcare-market-research/.claude/statusline-command.sh\""
+  }
+}

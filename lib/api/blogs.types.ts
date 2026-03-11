@@ -88,6 +88,7 @@ export interface BlogFilters {
   page?: number;
   limit?: number;
   status?: BlogStatus;
+  category?: string;
   categoryId?: number;
   authorId?: number;
   search?: string;
