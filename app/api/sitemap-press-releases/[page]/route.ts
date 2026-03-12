@@ -32,7 +32,7 @@ export async function GET(
     }
 
     const pressReleaseUrls = pressReleasesResponse.data.map((pressRelease) => ({
-      url: `${BASE_URL}/press-releases/${pressRelease.slug}`,
+      url: `${BASE_URL}/press-release/${pressRelease.slug}`,
       lastModified: new Date(pressRelease.date).toISOString(),
       changeFrequency: 'daily',
       priority: 0.6,

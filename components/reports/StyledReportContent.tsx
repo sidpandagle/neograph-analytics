@@ -27,6 +27,18 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
       img.setAttribute('loading', 'lazy');
       img.setAttribute('decoding', 'async');
 
+      // Route CDN images through Next.js image optimization for responsive delivery
+      const src = img.getAttribute('src');
+      if (src && src.includes('cdn.healthcareforesights.com')) {
+        const encodedSrc = encodeURIComponent(src);
+        img.setAttribute('src', `/_next/image?url=${encodedSrc}&w=828&q=75`);
+        img.setAttribute(
+          'srcset',
+          `/_next/image?url=${encodedSrc}&w=640&q=75 640w, /_next/image?url=${encodedSrc}&w=828&q=75 828w, /_next/image?url=${encodedSrc}&w=1080&q=75 1080w`
+        );
+        img.setAttribute('sizes', '(max-width: 768px) 100vw, 768px');
+      }
+
       // Reserve space to prevent CLS if natural dimensions are available
       if (!img.getAttribute('width') && img.naturalWidth) {
         img.setAttribute('width', String(img.naturalWidth));

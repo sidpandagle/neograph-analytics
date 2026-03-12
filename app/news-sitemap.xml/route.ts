@@ -25,7 +25,7 @@ export async function GET() {
     const prEntries =
       prRes.success && prRes.data
         ? prRes.data.map((pr) => ({
-            url: `${BASE_URL}/press-releases/${pr.slug}`,
+            url: `${BASE_URL}/press-release/${pr.slug}`,
             title: pr.title,
             publishDate: pr.publishDate || pr.updatedAt || pr.date,
           }))

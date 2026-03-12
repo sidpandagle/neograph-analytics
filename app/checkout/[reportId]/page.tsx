@@ -9,10 +9,10 @@ import Link from 'next/link';
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ reportSlug: string }>;
+  params: Promise<{ reportId: string }>;
 }): Promise<Metadata> {
-  const { reportSlug } = await params;
-  const response = await getReportBySlug(reportSlug);
+  const { reportId } = await params;
+  const response = await getReportBySlug(reportId);
 
   if (isApiError(response)) {
     return { title: 'Checkout' };
@@ -27,11 +27,11 @@ export async function generateMetadata({
 export default async function CheckoutPage({
   params,
 }: {
-  params: Promise<{ reportSlug: string }>;
+  params: Promise<{ reportId: string }>;
 }) {
-  const { reportSlug } = await params;
+  const { reportId } = await params;
 
-  const response = await getReportBySlug(reportSlug);
+  const response = await getReportBySlug(reportId);
   if (isApiError(response)) {
     notFound();
   }

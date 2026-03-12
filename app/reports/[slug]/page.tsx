@@ -420,6 +420,7 @@ export default async function ReportPage({
           discounted_price={report.discounted_price}
           reportTitle={report.title}
           reportSlug={report.slug}
+          reportId={report.id}
         >
           <article>
               <header className="mb-8 pb-8 border-b border-[var(--border)]">

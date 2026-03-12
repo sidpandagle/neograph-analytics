@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useSearchParams } from "next/navigation";
 import { Section, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, Badge, Captcha, type CaptchaRef } from "@/components/ui";
 import { CountrySelect } from "@/components/ui/country-select";
 import { CONTACT_INFO } from "@/lib/contact";
@@ -9,10 +8,12 @@ import { QuickContactSection, TrustedPartnersSidebar } from "@/components/contac
 import { submitRequestCustomizationForm, isFormError } from "@/lib/api";
 import { getDefaultCountry, type Country } from "@/lib/data/countries";
 
-export default function RequestCustomizationForm() {
-  const searchParams = useSearchParams();
-  const reportTitle = searchParams.get("report") || "";
-  const reportSlug = searchParams.get("slug") || "";
+interface RequestCustomizationFormProps {
+  reportTitle?: string;
+  reportSlug?: string;
+}
+
+export default function RequestCustomizationForm({ reportTitle = "", reportSlug = "" }: RequestCustomizationFormProps) {
   const defaultCountry = getDefaultCountry();
   const captchaRef = useRef<CaptchaRef>(null);
 
@@ -96,6 +97,11 @@ export default function RequestCustomizationForm() {
               Request Customisation
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold">Tailor the Report to Your Needs</h1>
+            {reportTitle && (
+              <p className="text-xl font-medium text-[var(--foreground)] max-w-3xl mx-auto">
+                {reportTitle}
+              </p>
+            )}
             <p className="text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto">
               Tell us what you need — additional regions, segments, company profiles, or data points. We will build a version of this report specifically for your business.
             </p>

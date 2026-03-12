@@ -16,6 +16,7 @@ interface ReportContentWrapperProps {
   discounted_price: string;
   reportTitle?: string;
   reportSlug?: string;
+  reportId?: number;
   children: ReactNode;
 }
 
@@ -27,6 +28,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
   discounted_price,
   reportTitle,
   reportSlug,
+  reportId,
   children,
 }) => {
   const [showFullTOC, setShowFullTOC] = useState(false);
@@ -115,8 +117,8 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       {/* Right Sidebar - CTA Panel */}
       <aside className={hasFullContent ? 'lg:col-span-3 2xl:col-span-2' : 'lg:col-span-2 2xl:col-span-2'}>
         <div className="sticky top-24 space-y-4">
-          <CustomizeReportCard reportTitle={reportTitle} reportSlug={reportSlug} />
-          <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} />
+          <CustomizeReportCard reportTitle={reportTitle} reportSlug={reportSlug} reportId={reportId} />
+          <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} reportId={reportId} />
         </div>
       </aside>
     </div>

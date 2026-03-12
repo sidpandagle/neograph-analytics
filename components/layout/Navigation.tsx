@@ -13,7 +13,7 @@ import { ConsultingService } from "@/lib/api/consulting.types";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/blogs" },
   { name: "Press Releases", href: "/press-releases" },
 ];
 
@@ -48,7 +48,7 @@ export default function Navigation() {
             key={item.href}
             href={item.href}
             className={`text-sm font-medium transition-colors hover:text-[var(--primary)] whitespace-nowrap ${
-              pathname === item.href
+              pathname === item.href || pathname.startsWith(item.href + "/") || (item.href === "/blogs" && pathname.startsWith("/blog/"))
                 ? "text-[var(--primary)]"
                 : "text-[var(--muted-foreground)]"
             }`}
@@ -150,7 +150,7 @@ export default function Navigation() {
               className={cn(
                 "py-3 px-4 text-base font-medium rounded-lg transition-colors",
                 "hover:bg-slate-100",
-                pathname === item.href
+                pathname === item.href || pathname.startsWith(item.href + "/") || (item.href === "/blogs" && pathname.startsWith("/blog/"))
                   ? "text-[var(--primary)] bg-slate-50"
                   : "text-slate-700"
               )}

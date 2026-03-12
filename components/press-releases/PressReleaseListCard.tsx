@@ -19,7 +19,7 @@ export default function PressReleaseListCard({ pressRelease }: PressReleaseListC
   }
 
   return (
-    <Link href={`/press-releases/${pressRelease.slug}`} className="group block">
+    <Link href={`/press-release/${pressRelease.slug}`} className="group block">
       <article
         className="relative py-6 pl-5 -ml-5 border-b border-slate-100
           before:absolute before:left-0 before:top-4 before:bottom-4 before:w-[3px]

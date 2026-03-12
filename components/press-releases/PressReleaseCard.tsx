@@ -23,7 +23,7 @@ export function PressReleaseCard({
   location,
 }: PressReleaseCardProps) {
   return (
-    <Link href={`/press-releases/${slug}`} className="group">
+    <Link href={`/press-release/${slug}`} className="group">
       <Card className="h-full hover:shadow-primary-lg hover:border-ocean-500 transition-all duration-300 hover:-translate-y-1">
         <CardHeader>
           <div className="mb-3">

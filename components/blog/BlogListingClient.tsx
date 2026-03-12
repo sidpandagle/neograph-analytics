@@ -114,7 +114,7 @@ export default function BlogListingClient({
           {/* ── Right Sidebar ──────────────────────────────────────── */}
           <aside className="hidden lg:block">
             <div className="sticky top-24">
-              <CategorySidebar basePath="/blog" activeCategorySlug={activeCategorySlug} />
+              <CategorySidebar basePath="/blogs" categoryBasePath="/blogs" activeCategorySlug={activeCategorySlug} />
             </div>
           </aside>
         </div>

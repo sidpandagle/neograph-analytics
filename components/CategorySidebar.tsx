@@ -3,10 +3,12 @@ import categories from '@/data/categories.json';
 
 interface CategorySidebarProps {
   basePath: string;
+  categoryBasePath?: string;
   activeCategorySlug?: string;
 }
 
-export default function CategorySidebar({ basePath, activeCategorySlug }: CategorySidebarProps) {
+export default function CategorySidebar({ basePath, categoryBasePath, activeCategorySlug }: CategorySidebarProps) {
+  const catBase = categoryBasePath ?? basePath;
   return (
     <div className="space-y-5">
       {/* Browse by Category */}
@@ -32,7 +34,7 @@ export default function CategorySidebar({ basePath, activeCategorySlug }: Catego
             return (
               <Link
                 key={category.id}
-                href={`${basePath}?category=${category.slug}`}
+                href={`${catBase}/${category.slug}`}
                 className={`flex items-center px-4 py-2 text-sm transition-colors ${
                   isActive
                     ? 'text-[#2563A3] bg-blue-50 font-semibold border-l-[3px] border-[#2563A3]'
