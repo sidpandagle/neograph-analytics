@@ -61,6 +61,37 @@ export default function GoogleTranslate() {
     setCurrentLang(getCurrentLangFromCookie());
   }, []);
 
+  // Load Google Translate scripts only when a non-English language is active.
+  // This removes ~300KB of 3rd-party JS/CSS from the critical path for English users.
+  useEffect(() => {
+    if (currentLang === 'en') return;
+    if (document.getElementById('google-translate-element-script')) return;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).googleTranslateElementInit = function () {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      new (window as any).google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+      );
+      const observer = new MutationObserver(() => {
+        const banner = document.querySelector('iframe.goog-te-banner-frame');
+        if (banner) {
+          (banner as HTMLElement).style.display = 'none';
+          document.body.style.top = '0px';
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+      setTimeout(() => observer.disconnect(), 5000);
+    };
+
+    const script = document.createElement('script');
+    script.id = 'google-translate-element-script';
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(script);
+  }, [currentLang]);
+
   // When a non-English language is active, Google Translate mutates the DOM with
   // <font> wrappers. Next.js client-side navigation then tries to reconcile against
   // that mutated DOM and throws. Fix: intercept all internal anchor clicks and
@@ -126,6 +157,8 @@ export default function GoogleTranslate() {
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
+        {/* Pulse ring — uses transform+opacity (GPU composited) instead of box-shadow */}
+        <span className="lang-ring" aria-hidden="true" />
         {/* Gradient fill — fades in on hover instead of snapping */}
         <span className="lang-fill" aria-hidden="true" />
         {/* Shine sweep */}
@@ -140,14 +173,27 @@ export default function GoogleTranslate() {
             color: #2563A3;
             border: 1.5px solid #2563A3;
             background: transparent;
-            animation: langPulse 2.4s ease-in-out infinite;
             transition: color 0.55s ease, border-color 0.55s ease;
-            will-change: box-shadow;
+          }
+
+          /* Pulse ring — transform+opacity are GPU composited, unlike box-shadow */
+          .lang-ring {
+            position: absolute;
+            inset: -2px;
+            border-radius: 9999px;
+            border: 1.5px solid rgba(37, 99, 163, 0.5);
+            animation: langPulse 2.4s ease-in-out infinite;
+            pointer-events: none;
+            will-change: transform, opacity;
           }
           @keyframes langPulse {
-            0%   { box-shadow: 0 0 0 0 rgba(37,99,163,0.5); }
-            65%  { box-shadow: 0 0 0 6px rgba(37,99,163,0); }
-            100% { box-shadow: 0 0 0 0 rgba(37,99,163,0); }
+            0%   { transform: scale(1);    opacity: 0.7; }
+            65%  { transform: scale(1.18); opacity: 0;   }
+            100% { transform: scale(1);    opacity: 0;   }
+          }
+          .lang-btn:hover .lang-ring {
+            animation-play-state: paused;
+            opacity: 0;
           }
 
           /* Gradient fill layer — opacity-transitions smoothly */
@@ -164,23 +210,24 @@ export default function GoogleTranslate() {
             opacity: 1;
           }
 
-          /* Shine sweep */
+          /* Shine sweep — translateX is GPU composited, unlike left */
           .lang-shine {
             position: absolute;
-            top: 0; left: -80%;
+            top: 0;
+            left: 0;
             width: 45%; height: 100%;
             background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
-            transform: skewX(-18deg);
+            transform: skewX(-18deg) translateX(-180%);
             animation: langShine 2.4s ease-in-out infinite;
             z-index: 4;
             pointer-events: none;
             will-change: transform, opacity;
           }
           @keyframes langShine {
-            0%   { left: -80%; opacity: 0; }
+            0%   { transform: skewX(-18deg) translateX(-180%); opacity: 0; }
             18%  { opacity: 1; }
-            55%  { left: 130%; opacity: 0; }
-            100% { left: 130%; opacity: 0; }
+            55%  { transform: skewX(-18deg) translateX(320%);  opacity: 0; }
+            100% { transform: skewX(-18deg) translateX(320%);  opacity: 0; }
           }
           .lang-btn:hover .lang-shine {
             opacity: 0;
@@ -192,7 +239,6 @@ export default function GoogleTranslate() {
           .lang-btn:hover {
             color: #fff;
             border-color: rgba(29,78,216,0.6);
-            animation-play-state: paused;
             box-shadow: 0 4px 16px rgba(37,99,163,0.28);
           }
 

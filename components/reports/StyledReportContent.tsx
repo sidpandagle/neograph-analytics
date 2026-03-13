@@ -222,13 +222,12 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
           box-shadow: 0 2px 8px rgba(41, 173, 164, 0.2);
         }
 
-        /* Links with teal color */
+        /* Links with teal color — no color transition (non-composited, flagged by Lighthouse) */
         .styled-report-content a {
           color: #00695C;
           text-decoration: underline;
           text-decoration-color: #B0D9D5;
           text-decoration-color: var(--teal-border, #B0D9D5);
-          transition: color 0.2s ease, text-decoration-color 0.2s ease;
         }
 
         .styled-report-content a:hover {

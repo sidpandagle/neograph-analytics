@@ -63,35 +63,6 @@ export default function RootLayout({
         <StructuredData data={generateOrganizationSchema()} />
         <StructuredData data={generateWebSiteSchema()} />
         <StructuredData data={generateLocalBusinessSchema()} />
-        {/* Google Translate: define callback before the loader script runs */}
-        <Script
-          id="google-translate-init"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.googleTranslateElementInit = function() {
-                new google.translate.TranslateElement(
-                  { pageLanguage: 'en', autoDisplay: false },
-                  'google_translate_element'
-                );
-                var _gtObserver = new MutationObserver(function() {
-                  var banner = document.querySelector('iframe.goog-te-banner-frame');
-                  if (banner) {
-                    banner.style.display = 'none';
-                    document.body.style.top = '0px';
-                    _gtObserver.disconnect();
-                  }
-                });
-                _gtObserver.observe(document.body, { childList: true, subtree: true });
-                setTimeout(function() { _gtObserver.disconnect(); }, 5000);
-              };
-            `,
-          }}
-        />
-        <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="lazyOnload"
-        />
         {/* HubSpot Embed Code */}
         <Script
           id="hs-script-loader"
