@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { StructuredData, generateOrganizationSchema, generateWebSiteSchema, generateLocalBusinessSchema } from "@/components/seo/StructuredData";
-import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -65,8 +65,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
         <link rel="preconnect" href="https://translate.google.com" />
         <link rel="dns-prefetch" href="https://translate.google.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" /> */}
         <StructuredData data={generateOrganizationSchema()} />
         <StructuredData data={generateWebSiteSchema()} />
         <StructuredData data={generateLocalBusinessSchema()} />
@@ -82,7 +82,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-NJ1DNL58KB" />
+        {/* <GoogleAnalytics gaId="G-NJ1DNL58KB" /> */}
       </body>
     </html>
   );
