@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getReports, isApiError } from '@/lib/api';
 import { ReportsListingClient } from '@/components/reports';
+import IndustryHero from '@/components/reports/IndustryHero';
 import categories from '@/data/categories.json';
 
 interface PageProps {
@@ -73,12 +74,17 @@ export default async function CategoryPage({ params }: PageProps) {
     );
   }
 
+  const totalItems = response.meta?.totalItems ?? response.data.length;
+
   return (
-    <ReportsListingClient
-      reports={response.data}
-      activeCategorySlug={category}
-      totalItems={response.meta?.totalItems ?? response.data.length}
-      totalPages={response.meta?.totalPages ?? 1}
-    />
+    <>
+      <IndustryHero totalItems={totalItems} activeCategory={categoryData} />
+      <ReportsListingClient
+        reports={response.data}
+        activeCategorySlug={category}
+        totalItems={totalItems}
+        totalPages={response.meta?.totalPages ?? 1}
+      />
+    </>
   );
 }

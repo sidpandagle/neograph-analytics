@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getReports, isApiError } from '@/lib/api';
 import { ReportsListingClient } from '@/components/reports';
+import IndustryHero from '@/components/reports/IndustryHero';
 
 export const metadata: Metadata = {
   title: "Healthcare Market Research Reports & Industry Analysis",
@@ -39,11 +40,16 @@ export default async function IndustryPage() {
     );
   }
 
+  const totalItems = response.meta?.totalItems ?? response.data.length;
+
   return (
-    <ReportsListingClient
-      reports={response.data}
-      totalItems={response.meta?.totalItems ?? response.data.length}
-      totalPages={response.meta?.totalPages ?? 1}
-    />
+    <>
+      <IndustryHero totalItems={totalItems} />
+      <ReportsListingClient
+        reports={response.data}
+        totalItems={totalItems}
+        totalPages={response.meta?.totalPages ?? 1}
+      />
+    </>
   );
 }

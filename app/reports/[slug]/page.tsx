@@ -15,29 +15,17 @@ import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, genera
 import categories from "@/data/categories.json";
 
 /**
- * Processes raw HTML content server-side to route CDN images through Next.js
- * image optimization. This ensures the SSR output already has optimized URLs,
- * avoiding the double-fetch that occurs when useEffect modifies src client-side.
+ * Processes raw HTML content server-side to add performance attributes to CDN images.
+ * Images load directly from the CDN to avoid server-side fetch issues in production.
  */
 function processHtmlImages(html: string): string {
   return html.replace(
     /<img([^>]*?)>/gi,
     (match, attrs: string) => {
-      const srcMatch = attrs.match(/src="(https:\/\/cdn\.healthcareforesights\.com\/[^"]+)"/i);
-      if (!srcMatch) return match;
+      const hasCdnSrc = /src="https:\/\/cdn\.healthcareforesights\.com\//i.test(attrs);
+      if (!hasCdnSrc) return match;
 
-      const src = srcMatch[1];
-      const encoded = encodeURIComponent(src);
-      const optimizedSrc = `/_next/image?url=${encoded}&w=828&q=75`;
-      const srcset = [
-        `/_next/image?url=${encoded}&w=640&q=75 640w`,
-        `/_next/image?url=${encoded}&w=828&q=75 828w`,
-        `/_next/image?url=${encoded}&w=1080&q=75 1080w`,
-      ].join(', ');
-
-      let newAttrs = attrs.replace(/src="[^"]*"/i, `src="${optimizedSrc}"`);
-      if (!newAttrs.includes('srcset=')) newAttrs += ` srcset="${srcset}"`;
-      if (!newAttrs.includes('sizes=')) newAttrs += ` sizes="(max-width: 768px) 100vw, 768px"`;
+      let newAttrs = attrs;
       if (!newAttrs.includes('loading=')) newAttrs += ` loading="lazy"`;
       if (!newAttrs.includes('decoding=')) newAttrs += ` decoding="async"`;
 
@@ -183,13 +171,18 @@ export default async function ReportPage({
   let response;
   try {
     response = await getReportBySlug(slug);
-  } catch {
-    notFound();
+  } catch (error) {
+    // Re-throw network errors so ISR doesn't cache them as 404
+    throw error;
   }
 
   if (isApiError(response)) {
+    if (response.statusCode === 404) {
+      notFound();
+    }
+    // Non-404 errors (network issues, server errors) should not be cached as 404
     console.error('Failed to fetch report:', response.message);
-    notFound();
+    throw new Error(`Failed to load report: ${response.message}`);
   }
 
   const report = response.data as Report;

@@ -27,19 +27,7 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
       img.setAttribute('loading', 'lazy');
       img.setAttribute('decoding', 'async');
 
-      // Route CDN images through Next.js image optimization for responsive delivery.
-      // Server-side processing in page.tsx already handles this for SSR HTML, so we
-      // only apply here as a fallback for images not yet optimized (e.g. client navigation).
-      const src = img.getAttribute('src');
-      if (src && src.includes('cdn.healthcareforesights.com') && !src.startsWith('/_next/image')) {
-        const encodedSrc = encodeURIComponent(src);
-        img.setAttribute('src', `/_next/image?url=${encodedSrc}&w=828&q=75`);
-        img.setAttribute(
-          'srcset',
-          `/_next/image?url=${encodedSrc}&w=640&q=75 640w, /_next/image?url=${encodedSrc}&w=828&q=75 828w, /_next/image?url=${encodedSrc}&w=1080&q=75 1080w`
-        );
-        img.setAttribute('sizes', '(max-width: 768px) 100vw, 768px');
-      }
+      // Images load directly from CDN — no /_next/image routing needed here.
 
       // Prevent CLS: set aspect-ratio from HTML attributes (naturalWidth is 0 for
       // lazy images that haven't loaded yet, so we must read from the element attributes)
