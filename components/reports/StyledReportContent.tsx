@@ -13,72 +13,72 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
 }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!contentRef.current) return;
+  // useEffect(() => {
+  //   if (!contentRef.current) return;
 
-    // Find all images in the content
-    const images = contentRef.current.querySelectorAll('img');
+  //   // Find all images in the content
+  //   const images = contentRef.current.querySelectorAll('img');
 
-    images.forEach((img, i) => {
-      // Skip if already wrapped (check for image-container as it's the direct parent after wrapping)
-      if (img.parentElement?.classList.contains('image-container')) return;
+  //   images.forEach((img, i) => {
+  //     // Skip if already wrapped (check for image-container as it's the direct parent after wrapping)
+  //     if (img.parentElement?.classList.contains('image-container')) return;
 
-      // Set loading/decoding attributes before wrapping
-      img.setAttribute('loading', 'lazy');
-      img.setAttribute('decoding', 'async');
+  //     // Set loading/decoding attributes before wrapping
+  //     img.setAttribute('loading', 'lazy');
+  //     img.setAttribute('decoding', 'async');
 
-      // Images load directly from CDN — no /_next/image routing needed here.
+  //     // Images load directly from CDN — no /_next/image routing needed here.
 
-      // Prevent CLS: set aspect-ratio from HTML attributes (naturalWidth is 0 for
-      // lazy images that haven't loaded yet, so we must read from the element attributes)
-      const attrW = img.getAttribute('width');
-      const attrH = img.getAttribute('height');
-      if (attrW && attrH) {
-        img.style.aspectRatio = `${attrW} / ${attrH}`;
-      } else {
-        // Fallback: reserve 16:9 space so page doesn't reflow when image loads
-        img.style.aspectRatio = '16 / 9';
-      }
+  //     // Prevent CLS: set aspect-ratio from HTML attributes (naturalWidth is 0 for
+  //     // lazy images that haven't loaded yet, so we must read from the element attributes)
+  //     const attrW = img.getAttribute('width');
+  //     const attrH = img.getAttribute('height');
+  //     if (attrW && attrH) {
+  //       img.style.aspectRatio = `${attrW} / ${attrH}`;
+  //     } else {
+  //       // Fallback: reserve 16:9 space so page doesn't reflow when image loads
+  //       img.style.aspectRatio = '16 / 9';
+  //     }
 
-      // Create wrapper div for image
-      const wrapper = document.createElement('div');
-      wrapper.className = 'image-wrapper';
+  //     // Create wrapper div for image
+  //     const wrapper = document.createElement('div');
+  //     wrapper.className = 'image-wrapper';
 
-      // Create image container with border (matching the commented code styling)
-      const imageContainer = document.createElement('div');
-      imageContainer.className = 'image-container';
+  //     // Create image container with border (matching the commented code styling)
+  //     const imageContainer = document.createElement('div');
+  //     imageContainer.className = 'image-container';
 
-      // Wrap the image
-      img.parentNode?.insertBefore(wrapper, img);
-      imageContainer.appendChild(img);
-      wrapper.appendChild(imageContainer);
+  //     // Wrap the image
+  //     img.parentNode?.insertBefore(wrapper, img);
+  //     imageContainer.appendChild(img);
+  //     wrapper.appendChild(imageContainer);
 
-      // Only add CTA to the first image and check globally if CTA already exists
-      if (i === 0 && contentRef.current) {
-        // Check if CTA section already exists anywhere in the content to prevent duplication
-        const existingCTA = contentRef.current.querySelector('.image-cta-section');
-        if (!existingCTA) {
-          // Create CTA section (matching the commented code styling)
-          const ctaSection = document.createElement('div');
-          ctaSection.className = 'image-cta-section';
-          ctaSection.innerHTML = `
-            <div class="image-cta-content">
-              <div class="image-cta-text">To learn more about this report,</div>
-              <a href="/request-sample${reportSlug ? `?report=${reportSlug}` : ''}"  target="_blank" class="image-cta-button">
-                <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download Free Sample
-              </a>
-            </div>
-          `;
-          wrapper.appendChild(ctaSection);
-        }
-      }
-    });
-  }, [htmlContent, reportSlug]);
+  //     // Only add CTA to the first image and check globally if CTA already exists
+  //     if (i === 0 && contentRef.current) {
+  //       // Check if CTA section already exists anywhere in the content to prevent duplication
+  //       const existingCTA = contentRef.current.querySelector('.image-cta-section');
+  //       if (!existingCTA) {
+  //         // Create CTA section (matching the commented code styling)
+  //         const ctaSection = document.createElement('div');
+  //         ctaSection.className = 'image-cta-section';
+  //         ctaSection.innerHTML = `
+  //           <div class="image-cta-content">
+  //             <div class="image-cta-text">To learn more about this report,</div>
+  //             <a href="/request-sample${reportSlug ? `?report=${reportSlug}` : ''}"  target="_blank" class="image-cta-button">
+  //               <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  //                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+  //                 <polyline points="7 10 12 15 17 10"></polyline>
+  //                 <line x1="12" y1="15" x2="12" y2="3"></line>
+  //               </svg>
+  //               Download Free Sample
+  //             </a>
+  //           </div>
+  //         `;
+  //         wrapper.appendChild(ctaSection);
+  //       }
+  //     }
+  //   });
+  // }, [htmlContent, reportSlug]);
 
   return (
     <>
