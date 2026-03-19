@@ -38,7 +38,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function PressReleaseCategoryContent({ categorySlug }: { categorySlug: string }) {
-  const response = await getPressReleasesByCategory(categorySlug, { page: 1, limit: 10 });
+  const [response, categoriesResponse] = await Promise.all([
+    getPressReleasesByCategory(categorySlug, { page: 1, limit: 10 }),
+    getCategories({ limit: 200 }),
+  ]);
 
   if (isApiError(response)) {
     console.error("Failed to fetch press releases by category:", response.message);
@@ -56,6 +59,10 @@ async function PressReleaseCategoryContent({ categorySlug }: { categorySlug: str
     notFound();
   }
 
+  const categoryName = isApiError(categoriesResponse) || !categoriesResponse.data
+    ? formatSlug(categorySlug)
+    : (categoriesResponse.data.find((c) => c.slug === categorySlug)?.name ?? formatSlug(categorySlug));
+
   const totalItems = response.meta?.totalItems ?? response.data.length;
   const totalPages = response.meta?.totalPages ?? 1;
 
@@ -65,6 +72,7 @@ async function PressReleaseCategoryContent({ categorySlug }: { categorySlug: str
       totalItems={totalItems}
       totalPages={totalPages}
       activeCategorySlug={categorySlug}
+      categoryName={categoryName}
     />
   );
 }

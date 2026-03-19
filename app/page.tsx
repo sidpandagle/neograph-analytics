@@ -16,8 +16,8 @@ import {
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Healthcare Foresights | Healthcare Market Insights & Research Reports",
-  description: "Healthcare Foresights delivers trusted healthcare market research, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
+  title: "Healthcare Foresights | Healthcare Market Insights | Reports",
+  description: "Healthcare Foresights delivers trusted market research, insights, trends, forecasts, consulting and data-driven analysis across all healthcare sectors.",
   keywords: ["healthcare foresights", "healthcare market research", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
   alternates: {
     canonical: 'https://www.healthcareforesights.com',

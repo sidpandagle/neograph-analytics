@@ -15,6 +15,7 @@ interface PressReleaseListingClientProps {
   totalItems: number;
   totalPages: number;
   activeCategorySlug?: string;
+  categoryName?: string;
 }
 
 export default function PressReleaseListingClient({
@@ -22,6 +23,7 @@ export default function PressReleaseListingClient({
   totalItems: initialTotalItems,
   totalPages: initialTotalPages,
   activeCategorySlug,
+  categoryName,
 }: PressReleaseListingClientProps) {
   const storageKey = activeCategorySlug ? `press_releases_${activeCategorySlug}_page` : 'press_releases_page';
   const [pressReleases, setPressReleases] = useState<PressRelease[]>(initialPressReleases);
@@ -87,7 +89,7 @@ export default function PressReleaseListingClient({
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 leading-tight">
-                Press Releases
+                {categoryName ? `${categoryName} Press Releases` : 'Press Releases'}
               </h1>
               <p className="text-sm sm:text-base text-slate-500 max-w-2xl mb-4">
                 Latest news and announcements from Healthcare Foresights. Stay informed about our research publications and industry insights.

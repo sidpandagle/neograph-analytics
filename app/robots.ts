@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/legal/'],
+        disallow: ['/legal/', '/request-customization', '/request-sample', '/request-analyst-meeting', '/checkout/'],
       },
     ],
     sitemap: 'https://www.healthcareforesights.com/sitemap.xml',

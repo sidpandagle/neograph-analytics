@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { apiFetch } from '@/lib/api/config';
 
+export const revalidate = 3600; // regenerate hourly
+
 const BASE_URL = 'https://www.healthcareforesights.com';
 const ITEMS_PER_SITEMAP = 1000;
 
