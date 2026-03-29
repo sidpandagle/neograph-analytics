@@ -7,7 +7,7 @@ import PressReleaseListCard from './PressReleaseListCard';
 import Pagination from '@/components/reports/Pagination';
 import { getPressReleases, isApiError } from '@/lib/api';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 8;
 
 interface PressReleaseListingClientProps {
   pressReleases: PressRelease[];

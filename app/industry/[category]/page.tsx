@@ -56,7 +56,7 @@ export default async function CategoryPage({ params }: PageProps) {
     status: 'published',
     category,
     page: 1,
-    limit: 10,
+    limit: 8,
     sort_by: 'publish_date_desc',
   });
 

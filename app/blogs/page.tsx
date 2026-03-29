@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export const revalidate = 300;
 
 async function BlogsContent() {
-  const response = await getBlogs({ status: 'published', page: 1, limit: 10, sort_by: 'publish_date_desc' });
+  const response = await getBlogs({ status: 'published', page: 1, limit: 8, sort_by: 'publish_date_desc' });
 
   if (isApiError(response)) {
     console.error('Failed to fetch blogs:', response.message);

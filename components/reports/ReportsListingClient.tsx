@@ -11,7 +11,7 @@ import type { ReportType } from '@/lib/api/reports.types';
 
 const FilterSidebar = dynamic(() => import('./FilterSidebar'), { ssr: false });
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 8;
 
 interface Report {
   id: number;

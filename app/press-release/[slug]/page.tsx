@@ -119,7 +119,9 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
           </div>
 
           <div className="mb-6">
-            <Badge variant="default">{pressRelease.category}</Badge>
+            <Link href={`/industry/${pressRelease.category.toLowerCase().replace(/\s+/g, '-')}`}>
+              <Badge variant="default" className="cursor-pointer hover:opacity-80">{pressRelease.category}</Badge>
+            </Link>
           </div>
 
           <h1 className="mb-6 text-4xl font-bold">
@@ -151,7 +153,7 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
         </Container>
       </Section>
 
-      <Section>
+      <Section className="pt-8">
         <Container size="lg">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left – article (2/3 width) */}

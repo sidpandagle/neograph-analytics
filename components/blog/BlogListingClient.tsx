@@ -7,7 +7,7 @@ import BlogListCard from './BlogListCard';
 import Pagination from '@/components/reports/Pagination';
 import { getBlogs, isApiError } from '@/lib/api';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 8;
 
 interface BlogListingClientProps {
   blogs: Blog[];

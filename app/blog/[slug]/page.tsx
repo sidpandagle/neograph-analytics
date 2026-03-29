@@ -120,7 +120,9 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
           </div>
 
           <div className="mb-6">
-            <Badge variant="default">{blog.category}</Badge>
+            <Link href={`/industry/${blog.category.toLowerCase().replace(/\s+/g, '-')}`}>
+              <Badge variant="default" className="cursor-pointer hover:opacity-80">{blog.category}</Badge>
+            </Link>
           </div>
 
           <h1 className="mb-6 text-4xl font-bold">
@@ -152,7 +154,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         </Container>
       </Section>
 
-      <Section>
+      <Section className="pt-8">
         <Container size="lg">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left – article (2/3 width) */}
