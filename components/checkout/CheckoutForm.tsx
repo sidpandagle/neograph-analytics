@@ -42,7 +42,7 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
   const [step, setStep] = useState<Step>('details');
   const [details, setDetails] = useState<CustomerDetails>(getInitialDetails);
   const [countryCode, setCountryCode] = useState<string>(getDefaultCountry().code);
-  const [paymentMethod, setPaymentMethod] = useState<'paypal' | 'stripe'>('paypal');
+  const [paymentMethod, setPaymentMethod] = useState<'paypal' | 'stripe'>('stripe');
   const [orderId, setOrderId] = useState<number | null>(null);
   const [paypalOrderId, setPaypalOrderId] = useState<string>('');
   const [stripeClientSecret, setStripeClientSecret] = useState<string>('');
@@ -244,17 +244,6 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"
-                onClick={() => setPaymentMethod('paypal')}
-                className={`py-2 px-3 rounded-md border text-sm font-medium transition-colors ${
-                  paymentMethod === 'paypal'
-                    ? 'border-[var(--primary)] bg-[var(--primary)]/10 text-[var(--primary)]'
-                    : 'border-[var(--border)] text-[var(--muted-foreground)] hover:border-[var(--primary)]'
-                }`}
-              >
-                PayPal
-              </button>
-              <button
-                type="button"
                 onClick={() => setPaymentMethod('stripe')}
                 className={`py-2 px-3 rounded-md border text-sm font-medium transition-colors ${
                   paymentMethod === 'stripe'
@@ -263,6 +252,17 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
                 }`}
               >
                 Credit / Debit Card
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaymentMethod('paypal')}
+                className={`py-2 px-3 rounded-md border text-sm font-medium transition-colors ${
+                  paymentMethod === 'paypal'
+                    ? 'border-[var(--primary)] bg-[var(--primary)]/10 text-[var(--primary)]'
+                    : 'border-[var(--border)] text-[var(--muted-foreground)] hover:border-[var(--primary)]'
+                }`}
+              >
+                PayPal
               </button>
             </div>
           </div>
