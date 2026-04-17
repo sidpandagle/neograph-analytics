@@ -50,7 +50,7 @@ export const CONTACT_INFO: ContactInfo = {
     },
     india: {
       name: 'Asia-Pacific Centre',
-      company: 'Healthcare Foresights Pvt. Ltd.',
+      company: 'CMI Market Research Pvt. Ltd.',
       addressLine1: 'B-701, Basileo, MS Kate Chowk',
       addressLine2: 'Pimple Gurav',
       city: 'Pune',
