@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Section, Container, Badge, StyledArticleContent, Button, Card, CardContent, Breadcrumb } from "@/components/ui";
-import { getPressReleases, getPressReleaseBySlug, isApiError } from "@/lib/api";
+import { getPressReleases, getPressReleaseBySlug, getReportBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 import { TrustedPartnersSidebar } from "@/components/contact";
@@ -84,6 +84,17 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
   }
 
   const pressRelease = response.data;
+
+  let relatedReportId: number | null = null;
+  if (pressRelease.reportUrl) {
+    const reportSlug = pressRelease.reportUrl.split('/').filter(Boolean).pop();
+    if (reportSlug) {
+      const reportResponse = await getReportBySlug(reportSlug);
+      if (!isApiError(reportResponse)) {
+        relatedReportId = reportResponse.data.id;
+      }
+    }
+  }
 
   const articleSchema = generateArticleSchema({
     type: 'NewsArticle',
@@ -189,24 +200,28 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
             <div className="space-y-6">
               <Card>
                 <CardContent className="space-y-3 pt-4">
-                  <Link href={`/request-sample?report=${encodeURIComponent(pressRelease.title)}`}>
-                    <Button
-                      className="w-full bg-[#E3F2FD] text-[#1565C0] hover:bg-[#BBDEFB] hover:text-[#0D47A1] border-[#90CAF9] hover:border-[#64B5F6]"
-                      variant="outline"
-                      size="lg"
-                    >
-                      Request Sample
-                    </Button>
-                  </Link>
-                  <Link href={`/request-sample?report=${encodeURIComponent(pressRelease.title)}&customize=true`}>
-                    <Button
-                      className="w-full mt-3 bg-green-50 text-green-700 hover:bg-green-100 hover:text-green-800 border-green-200 hover:border-green-300"
-                      variant="outline"
-                      size="lg"
-                    >
-                      Customization
-                    </Button>
-                  </Link>
+                  {relatedReportId && (
+                    <>
+                      <Link href={`/request-sample?reportId=${relatedReportId}`}>
+                        <Button
+                          className="w-full bg-[#E3F2FD] text-[#1565C0] hover:bg-[#BBDEFB] hover:text-[#0D47A1] border-[#90CAF9] hover:border-[#64B5F6]"
+                          variant="outline"
+                          size="lg"
+                        >
+                          Request Sample
+                        </Button>
+                      </Link>
+                      <Link href={`/request-customization?reportId=${relatedReportId}`}>
+                        <Button
+                          className="w-full mt-3 bg-green-50 text-green-700 hover:bg-green-100 hover:text-green-800 border-green-200 hover:border-green-300"
+                          variant="outline"
+                          size="lg"
+                        >
+                          Customization
+                        </Button>
+                      </Link>
+                    </>
+                  )}
                   {pressRelease.reportUrl && (
                     <Link href={pressRelease.reportUrl}>
                       <Button

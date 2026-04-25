@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/assets/images/logo.png"
-                alt="Healthcare Foresights - Predict. Research. Intelligence"
+                alt="Healthcare Foresights"
                 width={180}
                 height={50}
                 sizes="180px"
