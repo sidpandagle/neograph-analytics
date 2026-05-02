@@ -75,11 +75,11 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         onMouseEnter={handleMouseEnter}
         className={cn(
           "text-sm font-medium transition-colors relative pb-0.5",
-          "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-bright-500 after:transition-all after:duration-200",
+          "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[var(--accent)] after:transition-all after:duration-200",
           "flex items-center gap-1 cursor-pointer whitespace-nowrap",
           isActive
-            ? "text-[var(--primary)] after:w-full"
-            : "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--primary)] hover:after:w-full"
+            ? "text-[var(--foreground)] after:w-full"
+            : "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--foreground)] hover:after:w-full"
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
@@ -118,7 +118,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         className={cn(
           "fixed left-0 right-0 z-50",
           "lg:top-[62px]",
-          "bg-white border-t-2 border-t-bright-500 shadow-[0_8px_32px_0_rgba(15,23,42,0.12)]",
+          "bg-[var(--card)] theme-shadow border-t-2 border-t-[var(--accent)]",
           "transition-all duration-300 ease-out",
           "max-h-[calc(100vh-62px)] overflow-y-auto",
           isOpen
@@ -137,11 +137,12 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         <div className="p-6 max-w-7xl mx-auto">
           {/* Header row */}
           <div className="mb-4 flex items-center justify-between">
-            <span className="text-xs font-semibold text-stone-400 uppercase tracking-widest">Our Services</span>
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--muted-foreground)' }}>Our Services</span>
             <Link
               href="/services"
               onClick={() => setIsOpen(false)}
-              className="text-xs font-semibold text-ocean-600 hover:text-ocean-700 hover:underline underline-offset-4 transition-colors"
+              className="text-xs font-semibold hover:underline underline-offset-4 transition-colors"
+              style={{ color: 'var(--accent)' }}
               role="menuitem"
               tabIndex={isOpen ? 0 : -1}
             >
@@ -153,7 +154,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
               <div key={category} className="space-y-2">
-                <h3 className="text-xs font-semibold text-stone-400 uppercase tracking-widest pb-1 border-b border-stone-100">
+                <h3 className="text-xs font-semibold uppercase tracking-widest pb-1 border-b" style={{ color: 'var(--muted-foreground)', borderColor: 'var(--border)' }}>
                   {category}
                 </h3>
                 <div className="space-y-1">
@@ -164,18 +165,20 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "group block p-3 rounded-md",
-                        "border-l-2 border-l-transparent bg-stone-50",
-                        "hover:border-l-bright-500 hover:bg-white hover:shadow-sm",
+                        "border-l-2 border-l-transparent",
                         "transition-all duration-200",
-                        "focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+                        "focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
                       )}
+                      style={{ backgroundColor: 'var(--muted)' }}
+                      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--accent)'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--card)'; }}
+                      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--muted)'; }}
                       role="menuitem"
                       tabIndex={isOpen ? 0 : -1}
                     >
-                      <h4 className="font-semibold text-sm text-stone-800 group-hover:text-ocean-700 mb-0.5 transition-colors">
+                      <h4 className="font-semibold text-sm mb-0.5 transition-colors" style={{ color: 'var(--foreground)' }}>
                         {service.title}
                       </h4>
-                      <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                      <p className="text-xs line-clamp-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
                         {service.description}
                       </p>
                     </Link>

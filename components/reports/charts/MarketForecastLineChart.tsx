@@ -114,9 +114,9 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
             />
             <ReferenceLine
               x={baseYear.toString()}
-              stroke="hsl(var(--muted-foreground))"
+              stroke="var(--muted-foreground)"
               strokeDasharray="4 4"
-              label={{ value: 'Base', position: 'top', fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
+              label={{ value: 'Base', position: 'top', fontSize: 10, fill: 'var(--muted-foreground)' }}
             />
             <ChartTooltip
               cursor={false}

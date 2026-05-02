@@ -85,7 +85,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
+      <section className="relative overflow-hidden theme-hero py-20 md:py-28">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -93,18 +93,18 @@ export default function ServicesPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
 
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-6">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
               Our Services
             </span>
-            <h1 className="text-[2.75rem] md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] tracking-[-0.02em]">
+            <h1 className="text-[2.75rem] md:text-5xl lg:text-[3.5rem] theme-hero-text leading-[1.1] tracking-[-0.02em]">
               Comprehensive Healthcare<br className="hidden md:block" />{' '}
-              <span className="text-bright-400">Market Intelligence</span>
+              <span className="text-[var(--accent)]">Market Intelligence</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg theme-hero-muted max-w-2xl mx-auto leading-[1.8]">
               From syndicated reports to bespoke research solutions, we provide the insights you need
               to make confident strategic decisions in healthcare markets.
             </p>
@@ -113,13 +113,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Cards */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-[var(--background)]">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {services.map((svc) => (
               <div
                 key={svc.title}
-                className="flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-ocean-50 hover:border-ocean-200 hover:-translate-y-0.5 transition-all duration-200"
+                className="flex flex-col theme-card border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Accent stripe */}
                 <div className={`h-[3px] shrink-0 ${svc.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
@@ -207,7 +207,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA — dark navy */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
@@ -215,24 +215,24 @@ export default function ServicesPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/3 w-[500px] h-[400px] bg-ocean-500/[0.18] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
 
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-[2.75rem] text-white leading-[1.15] tracking-[-0.02em]">
-              Ready to Get <span className="text-bright-400">Started?</span>
+            <h2 className="text-3xl md:text-[2.75rem] theme-hero-text leading-[1.15] tracking-[-0.02em]">
+              Ready to Get <span className="text-[var(--accent)]">Started?</span>
             </h2>
-            <p className="text-lg text-white/55 leading-[1.8]">
+            <p className="text-lg theme-hero-muted leading-[1.8]">
               Whether you need a syndicated report or a comprehensive custom research project, we are here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-navy-950 bg-white hover:bg-white/95 shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]">
+                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-[var(--primary)] bg-[var(--primary-foreground)] hover:opacity-95 shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]">
                   Contact Our Team
                 </button>
               </Link>
               <Link href="/request-demo">
-                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-white/80 bg-white/[0.07] border border-white/[0.15] hover:bg-white/[0.12] hover:border-white/[0.25] hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]">
+                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]" style={{ color: 'hsl(var(--primary-foreground-hsl) / 0.84)', background: 'hsl(var(--primary-foreground-hsl) / 0.07)', border: '1px solid hsl(var(--primary-foreground-hsl) / 0.16)' }}>
                   Schedule a Demo
                 </button>
               </Link>

@@ -343,42 +343,33 @@ export default async function ReportPage({
             reportSlug={report.slug}
           >
             <article>
-              {/* ── Dark Forest Hero Header ── */}
-              <header className="relative overflow-hidden rounded-2xl mb-10" style={{ background: 'linear-gradient(145deg, #0F172A 0%, #172554 55%, #1e3a8a 100%)' }}>
-                {/* Crosshatch texture overlay */}
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 50%)',
-                    backgroundSize: '24px 24px',
-                  }}
-                />
-                {/* Ambient glow orbs */}
-                <div className="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)', transform: 'translate(30%, -30%)' }} />
-                <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(29,78,216,0.12) 0%, transparent 70%)', transform: 'translate(-30%, 30%)' }} />
+              {/* ── Report Hero Header ── */}
+              <header className="relative overflow-hidden rounded-2xl mb-10 theme-hero">
+                {/* Blueprint line grid overlay */}
+                <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
 
                 <div className="relative z-10 p-7 md:p-10">
                   {/* Category + Region chips */}
                   <div className="flex flex-wrap items-center gap-2 mb-5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest border" style={{ background: 'rgba(56,189,248,0.15)', color: '#7DD3FC', borderColor: 'rgba(56,189,248,0.30)' }}>
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#7DD3FC]" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest theme-accent-chip">
+                      <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent)' }} />
                       {report.category}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider" style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.60)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider theme-hero-panel">
                       {report.region}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.45)', border: '1px solid rgba(255,255,255,0.10)' }}>
+                    <span className="px-3 py-1 rounded-full text-xs font-medium theme-hero-panel">
                       {baseYearLabel} – {forecastEndYear}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h1 className="font-display text-2xl md:text-4xl font-bold leading-tight mb-4" style={{ color: '#fff', letterSpacing: '-0.02em', lineHeight: '1.2' }}>
+                  <h1 className="font-display text-2xl md:text-4xl font-bold leading-tight mb-4 theme-hero-text" style={{ letterSpacing: '-0.02em', lineHeight: '1.2' }}>
                     {report.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl" style={{ color: 'rgba(255,255,255,0.62)' }}>
+                  <p className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl theme-hero-muted">
                     {report.description}
                   </p>
 
@@ -387,13 +378,13 @@ export default async function ReportPage({
                     {metricCards.map((card) => (
                       <div
                         key={card.label}
-                        className="rounded-xl p-4"
-                        style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(8px)' }}
+                        className="rounded-xl p-4 theme-hero-panel"
+                        style={{ backdropFilter: 'blur(8px)' }}
                       >
-                        <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                        <p className="text-xs uppercase tracking-wider mb-2 theme-hero-faint">
                           {card.label}
                         </p>
-                        <p className="font-display text-2xl font-bold" style={{ color: '#fff', letterSpacing: '-0.01em' }}>
+                        <p className="font-display text-2xl font-bold theme-hero-text" style={{ letterSpacing: '-0.01em' }}>
                           {card.value}
                         </p>
                       </div>
@@ -401,16 +392,16 @@ export default async function ReportPage({
                   </div>
 
                   {/* Metadata strip */}
-                  <div className="flex flex-wrap gap-x-6 gap-y-1.5 pt-5" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+                  <div className="flex flex-wrap gap-x-6 gap-y-1.5 pt-5" style={{ borderTop: '1px solid hsl(var(--primary-foreground-hsl) / 0.14)' }}>
                     {[
                       ['Code', report.reportCode || `HF${report.id}`],
                       ['Published', report.date],
                       ['Pages', `${report.pages}+`],
                       ['Format', 'PDF + Excel'],
                     ].map(([label, val]) => (
-                      <span key={label} className="text-xs" style={{ color: 'rgba(255,255,255,0.40)' }}>
+                      <span key={label} className="text-xs theme-hero-faint">
                         {label}:{' '}
-                        <span style={{ color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{val}</span>
+                        <span className="theme-hero-text">{val}</span>
                       </span>
                     ))}
                   </div>

@@ -16,14 +16,7 @@ interface SegmentationChartProps {
 
 export const SegmentationChart = React.forwardRef<HTMLDivElement, SegmentationChartProps>(
   ({ title, segments, className }, ref) => {
-    const colors = [
-      'bg-navy-800',
-      'bg-ocean-700',
-      'bg-ocean-600',
-      'bg-ocean-500',
-      'bg-bright-500',
-      'bg-gray-300',
-    ];
+    const colors = Array.from({ length: 8 }, (_, index) => `hsl(var(--chart-${index + 1}))`);
 
     return (
       <div ref={ref} className={cn('space-y-6', className)}>
@@ -38,7 +31,10 @@ export const SegmentationChart = React.forwardRef<HTMLDivElement, SegmentationCh
                 <div key={index} className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-3">
-                      <div className={cn('w-3 h-3 rounded-full', colors[index % colors.length])}></div>
+                      <div
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: colors[index % colors.length] }}
+                      ></div>
                       <span className="font-medium text-[var(--foreground)]">
                         {segment.name}
                       </span>
@@ -57,11 +53,11 @@ export const SegmentationChart = React.forwardRef<HTMLDivElement, SegmentationCh
 
                   <div className="relative h-2 bg-[var(--muted)] rounded-full overflow-hidden">
                     <div
-                      className={cn(
-                        'absolute left-0 top-0 h-full rounded-full transition-all duration-500',
-                        colors[index % colors.length]
-                      )}
-                      style={{ width: `${shareValue}%` }}
+                      className="absolute left-0 top-0 h-full rounded-full transition-all duration-500"
+                      style={{
+                        width: `${shareValue}%`,
+                        backgroundColor: colors[index % colors.length],
+                      }}
                     ></div>
                   </div>
 

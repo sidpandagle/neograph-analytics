@@ -82,7 +82,7 @@ export const MarketGrowthChart: React.FC<MarketGrowthChartProps> = ({
             <p className="text-sm text-muted-foreground mb-1">
               CAGR (2025-2032)
             </p>
-            <p className="text-2xl font-bold text-blue-600">
+            <p className="text-2xl font-bold text-[var(--accent)]">
               {cagr}
             </p>
           </div>

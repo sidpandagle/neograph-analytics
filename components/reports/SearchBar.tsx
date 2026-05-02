@@ -11,6 +11,7 @@ type UIReport = ReturnType<typeof jsonReportToUIReport>;
 interface SearchBarProps {
   onSearchResults: (results: UIReport[] | null, isLoading: boolean) => void;
   placeholder?: string;
+  initialQuery?: string;
 }
 
 const allReports = allReportsData as JsonReport[];
@@ -29,8 +30,8 @@ function searchLocal(query: string): UIReport[] {
     .map((r, i) => jsonReportToUIReport(r, i));
 }
 
-export default function SearchBar({ onSearchResults, placeholder }: SearchBarProps) {
-  const [query, setQuery] = useState('');
+export default function SearchBar({ onSearchResults, placeholder, initialQuery = '' }: SearchBarProps) {
+  const [query, setQuery] = useState(initialQuery);
   const debouncedQuery = useDebounce(query, 300);
 
   useEffect(() => {
@@ -73,10 +74,10 @@ export default function SearchBar({ onSearchResults, placeholder }: SearchBarPro
             background: 'rgba(255,255,255,0.08)',
             border: '1px solid rgba(255,255,255,0.14)',
             color: '#F5F4F0',
-            caretColor: '#38BDF8',
+            caretColor: '#ec652b',
           }}
           onFocus={(e) => {
-            e.currentTarget.style.border = '1px solid rgba(56,189,248,0.5)';
+            e.currentTarget.style.border = '1px solid rgba(236,101,43,0.5)';
             e.currentTarget.style.background = 'rgba(255,255,255,0.11)';
           }}
           onBlur={(e) => {

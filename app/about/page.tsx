@@ -162,7 +162,7 @@ export default function AboutPage() {
       {/* Impact Stats — dark navy */}
       <section className="bg-navy-950 border-y border-navy-900/80">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/[0.06]">
+          <div className="grid grid-cols-2 lg:grid-cols-4  divide-white/[0.06]">
             {impactStats.map((stat) => (
               <div key={stat.val} className="px-6 md:px-10 py-12 text-center">
                 <div className="text-4xl md:text-5xl font-bold text-white tracking-tight tabular-nums">

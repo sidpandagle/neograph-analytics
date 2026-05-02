@@ -44,7 +44,7 @@ export const MarketSharePieChart: React.FC<MarketSharePieChartProps> = ({
   const chartConfig = segments.reduce((config, segment, index) => {
     config[`segment${index + 1}`] = {
       label: segment.name,
-      color: `hsl(var(--chart-${index + 1}))`,
+      color: `hsl(var(--chart-${(index % 8) + 1}))`,
     };
     return config;
   }, {} as ChartConfig);
@@ -147,7 +147,7 @@ export const MarketSharePieChart: React.FC<MarketSharePieChartProps> = ({
                 <div className="flex items-center gap-3">
                   <div 
                     className="w-4 h-4 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: `hsl(var(--chart-${index + 1}))` }}
+                    style={{ backgroundColor: `hsl(var(--chart-${(index % 8) + 1}))` }}
                   />
                   <span className="font-medium text-sm text-foreground">{segment.name}</span>
                 </div>

@@ -95,7 +95,7 @@ export default function SearchBar({
       <div className="relative">
         {/* Search Icon */}
         <div className={cn(
-          'absolute top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none',
+          'absolute top-1/2 -translate-y-1/2 pointer-events-none text-[var(--muted-foreground)]',
           isHeroVariant ? 'left-4 md:left-5' : 'left-3.5'
         )}>
           <svg
@@ -124,9 +124,9 @@ export default function SearchBar({
           onFocus={() => query && setIsOpen(true)}
           placeholder={placeholder}
           className={cn(
-            'w-full rounded-xl border border-slate-300 bg-white shadow-sm transition-all duration-200',
-            'focus:outline-none focus:ring-2 focus:ring-ocean-500 focus:border-ocean-500 focus:shadow-md',
-            'placeholder:text-slate-400 hover:border-slate-400',
+            'w-full rounded-xl bg-[var(--card)] text-[var(--foreground)] transition-all duration-200',
+            'border border-[var(--border)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:border-[var(--ring)]',
+            'placeholder:text-[var(--muted-foreground)] hover:border-[var(--muted-foreground)]',
             isHeroVariant
               ? 'pl-12 md:pl-14 pr-12 md:pr-14'
               : 'pl-10 pr-10',
@@ -144,7 +144,7 @@ export default function SearchBar({
               inputRef.current?.focus();
             }}
             className={cn(
-              'absolute top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors rounded-full p-1 hover:bg-slate-100',
+              'absolute top-1/2 -translate-y-1/2 text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors rounded-full p-1 hover:bg-[var(--muted)]',
               isHeroVariant ? 'right-4 md:right-5' : 'right-3.5'
             )}
             aria-label="Clear search"
@@ -169,15 +169,15 @@ export default function SearchBar({
 
       {/* Search Results Dropdown */}
       {isOpen && query && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden z-50 max-h-96 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[var(--card)] border border-[var(--border)] rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto theme-shadow">
           {results.length > 0 ? (
             <>
-              <div className="p-3 border-b border-slate-100 bg-slate-50">
-                <p className="text-xs font-medium text-slate-600">
+              <div className="p-3 border-b border-[var(--border)]" style={{ backgroundColor: 'var(--muted)' }}>
+                <p className="text-xs font-medium" style={{ color: 'var(--muted-foreground)' }}>
                   {results.length} result{results.length !== 1 ? 's' : ''} found
                 </p>
               </div>
-              <div className="divide-y divide-slate-100">
+              <div className="divide-y divide-[var(--border)]">
                 {results.map((report) => (
                   <Link
                     key={report.id}
@@ -186,20 +186,20 @@ export default function SearchBar({
                       setIsOpen(false);
                       setQuery('');
                     }}
-                    className="block p-4 hover:bg-slate-50 transition-colors text-left"
+                    className="block p-4 hover:bg-[var(--muted)] transition-colors text-left"
                   >
-                    <h3 className="font-semibold text-slate-900 text-sm mb-1 line-clamp-1">
+                    <h3 className="font-semibold text-sm mb-1 line-clamp-1" style={{ color: 'var(--foreground)' }}>
                       {report.title}
                     </h3>
-                    <p className="text-xs text-slate-600 line-clamp-2 mb-2">
+                    <p className="text-xs line-clamp-2 mb-2" style={{ color: 'var(--muted-foreground)' }}>
                       {report.description}
                     </p>
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-ocean-100 text-ocean-800">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium theme-chip">
                         {report.category}
                       </span>
-                      <span className="text-xs text-slate-500">{report.region}</span>
-                      <span className="text-xs font-semibold text-ocean-600">{report.price}</span>
+                      <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>{report.region}</span>
+                      <span className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>{report.price}</span>
                     </div>
                   </Link>
                 ))}
@@ -210,19 +210,21 @@ export default function SearchBar({
                   setIsOpen(false);
                   setQuery('');
                 }}
-                className="block p-3 text-center text-sm font-medium text-ocean-600 hover:bg-ocean-50 transition-colors border-t border-slate-200"
+                className="block p-3 text-center text-sm font-medium border-t border-[var(--border)] transition-colors hover:bg-[var(--muted)]"
+                style={{ color: 'var(--accent)' }}
               >
-                View all results for `{query}`
+                View all results for &ldquo;{query}&rdquo;
               </Link>
             </>
           ) : (
             <div className="p-8 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto text-slate-300 mb-3"
+                className="h-12 w-12 mx-auto mb-3"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                style={{ color: 'var(--border)' }}
               >
                 <path
                   strokeLinecap="round"
@@ -231,8 +233,8 @@ export default function SearchBar({
                   d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <p className="text-sm text-slate-600 font-medium mb-1">No results found</p>
-              <p className="text-xs text-slate-500">
+              <p className="text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>No results found</p>
+              <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
                 Try searching with different keywords
               </p>
             </div>

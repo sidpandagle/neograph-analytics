@@ -18,14 +18,14 @@ export default async function PressReleasesPage() {
   if (isApiError(response)) {
     console.error('Failed to fetch press releases:', response.message);
     return (
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
+      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
+        <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center space-y-5">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
             Press Releases
           </span>
-          <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">Press Releases</h1>
-          <p className="text-lg text-white/55 max-w-xl mx-auto leading-[1.8]">
+          <h1 className="text-[2.75rem] md:text-5xl theme-hero-text leading-[1.1] tracking-[-0.02em]">Press Releases</h1>
+          <p className="text-lg theme-hero-muted max-w-xl mx-auto leading-[1.8]">
             Unable to load press releases at this time. Please try again later.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default async function PressReleasesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -46,21 +46,21 @@ export default async function PressReleasesPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-5">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
               Press Releases
             </span>
-            <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
+            <h1 className="text-[2.75rem] md:text-5xl theme-hero-text leading-[1.1] tracking-[-0.02em]">
               News &{' '}
-              <span className="text-bright-400">Announcements</span>
+              <span className="text-[var(--accent)]">Announcements</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg theme-hero-muted max-w-2xl mx-auto leading-[1.8]">
               Latest research publications, industry announcements, and developments from NeoGraph Analytics.
             </p>
-            <div className="flex items-center justify-center gap-2 text-sm text-white/35">
-              <div className="w-1.5 h-1.5 rounded-full bg-ocean-400 shrink-0" />
+            <div className="flex items-center justify-center gap-2 text-sm theme-hero-faint">
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0" />
               {pressReleases.length} announcements published
             </div>
           </div>

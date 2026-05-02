@@ -12,8 +12,6 @@ import {
 import {
   ChartConfig,
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from '@/components/ui/chart'
 import type { SegmentItem } from '@/lib/jsonReports'
 
@@ -58,29 +56,6 @@ export const ComponentSharePieChart: React.FC<ComponentSharePieChartProps> = ({
           <div className="flex items-center justify-center">
             <ChartContainer config={chartConfig} className="aspect-square max-h-[260px] w-full">
               <PieChart>
-                <ChartTooltip
-                  cursor={false}
-                  content={
-                    <ChartTooltipContent
-                      hideLabel
-                      formatter={(value, _name, props) => (
-                        <div className="flex flex-col gap-1">
-                          <span className="font-semibold text-sm">
-                            {props.payload.segment}
-                          </span>
-                          <span className="text-muted-foreground text-xs">
-                            {Number(value).toFixed(1)}% market share
-                          </span>
-                          {props.payload.description && (
-                            <span className="text-xs text-muted-foreground max-w-[200px]">
-                              {props.payload.description}
-                            </span>
-                          )}
-                        </div>
-                      )}
-                    />
-                  }
-                />
                 <Pie
                   data={chartData}
                   dataKey="share"

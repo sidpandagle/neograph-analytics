@@ -48,6 +48,9 @@ export function generateChartColors(count: number): string[] {
     'hsl(var(--chart-3))',
     'hsl(var(--chart-4))',
     'hsl(var(--chart-5))',
+    'hsl(var(--chart-6))',
+    'hsl(var(--chart-7))',
+    'hsl(var(--chart-8))',
   ];
   
   // Repeat colors if count exceeds base colors

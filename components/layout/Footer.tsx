@@ -27,42 +27,25 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  {
-    href: "https://facebook.com/neographanalytics",
-    label: "Facebook",
-    Icon: Facebook,
-  },
-  {
-    href: "https://instagram.com/neographanalytics",
-    label: "Instagram",
-    Icon: Instagram,
-  },
-  {
-    href: "https://linkedin.com/company/neographanalytics",
-    label: "LinkedIn",
-    Icon: Linkedin,
-  },
-  {
-    href: "https://twitter.com/neographanalytics",
-    label: "X (Twitter)",
-    Icon: Twitter,
-  },
+  { href: "https://facebook.com/neographanalytics", label: "Facebook", Icon: Facebook },
+  { href: "https://instagram.com/neographanalytics", label: "Instagram", Icon: Instagram },
+  { href: "https://linkedin.com/company/neographanalytics", label: "LinkedIn", Icon: Linkedin },
+  { href: "https://twitter.com/neographanalytics", label: "X (Twitter)", Icon: Twitter },
 ];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 border-t border-white/[0.06]">
+    <footer className="theme-hero border-t" style={{ borderColor: 'var(--border)' }}>
       <div className="container mx-auto px-4 md:px-6 py-14 md:py-16">
 
-        {/* Main grid */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* Brand column */}
+          {/* Brand */}
           <div className="flex flex-col gap-5">
             <Logo variant="light" />
-            <p className="text-sm text-slate-500 leading-relaxed max-w-[220px]">
+            <p className="text-sm leading-relaxed max-w-[220px] theme-hero-muted">
               Comprehensive market intelligence and strategic insights for the global healthcare industry.
             </p>
             <div className="flex gap-3.5">
@@ -73,7 +56,8 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:bg-bright-500/15 hover:text-bright-400 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200"
+                  style={{ background: 'var(--primary)', opacity: 0.08, color: 'var(--primary)' }}
                 >
                   <Icon className="w-4 h-4" />
                 </Link>
@@ -83,16 +67,13 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
               Quick Links
             </h3>
             <ul className="space-y-2.5">
               {quickLinks.map(({ href, label }) => (
                 <li key={label}>
-                  <Link
-                    href={href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors duration-150"
-                  >
+                  <Link href={href} className="text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
                     {label}
                   </Link>
                 </li>
@@ -100,18 +81,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Consulting services */}
+          {/* Consulting */}
           <div>
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
               Consulting
             </h3>
             <ul className="space-y-2.5">
               {consultingLinks.map(({ href, label }) => (
                 <li key={label}>
-                  <Link
-                    href={href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors duration-150"
-                  >
+                  <Link href={href} className="text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
                     {label}
                   </Link>
                 </li>
@@ -121,23 +99,20 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
               Contact
             </h3>
             <div className="space-y-3">
-              <a
-                href={`mailto:${CONTACT_INFO.email}`}
-                className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-white transition-colors duration-150"
-              >
-                <Mail className="w-4 h-4 text-bright-400 shrink-0" />
+              <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center gap-2.5 text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
+                <Mail className="w-4 h-4 shrink-0 text-[var(--accent)]" />
                 {CONTACT_INFO.email}
               </a>
-              <div className="flex items-center gap-2.5 text-sm text-slate-400">
-                <Phone className="w-4 h-4 text-bright-400 shrink-0" />
+              <div className="flex items-center gap-2.5 text-sm theme-hero-muted">
+                <Phone className="w-4 h-4 shrink-0 text-[var(--accent)]" />
                 <span>USA: {CONTACT_INFO.offices.usa.phoneFormatted}</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-slate-400">
-                <Phone className="w-4 h-4 text-bright-400 shrink-0" />
+              <div className="flex items-center gap-2.5 text-sm theme-hero-muted">
+                <Phone className="w-4 h-4 shrink-0 text-[var(--accent)]" />
                 <span>India: {CONTACT_INFO.offices.india.phoneFormatted}</span>
               </div>
             </div>
@@ -146,17 +121,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">
+        <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderColor: 'hsl(var(--primary-foreground-hsl) / 0.08)' }}>
+          <p className="text-xs theme-hero-faint">
             &copy; {currentYear} NeoGraph Analytics Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             {legalLinks.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                className="text-xs text-slate-500 hover:text-slate-300 transition-colors duration-150"
-              >
+              <Link key={label} href={href} className="text-xs theme-hero-faint hover:opacity-100 transition-opacity duration-150">
                 {label}
               </Link>
             ))}

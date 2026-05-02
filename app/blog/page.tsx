@@ -16,16 +16,16 @@ export default async function BlogPage() {
   const response = await getBlogs({ status: 'published', limit: 100 });
 
   const errorHero = (
-    <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
+    <section className="relative overflow-hidden theme-hero py-20 md:py-24">
+      <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center space-y-5">
-        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
           Insights & Analysis
         </span>
-        <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
+        <h1 className="text-[2.75rem] md:text-5xl theme-hero-text leading-[1.1] tracking-[-0.02em]">
           Healthcare Insights & Analysis
         </h1>
-        <p className="text-lg text-white/55 max-w-xl mx-auto leading-[1.8]">
+        <p className="text-lg theme-hero-muted max-w-xl mx-auto leading-[1.8]">
           Unable to load blog posts at this time. Please try again later.
         </p>
       </div>
@@ -42,7 +42,7 @@ export default async function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -50,21 +50,21 @@ export default async function BlogPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-5">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
               Insights & Analysis
             </span>
-            <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
+            <h1 className="text-[2.75rem] md:text-5xl theme-hero-text leading-[1.1] tracking-[-0.02em]">
               Healthcare Insights &{' '}
-              <span className="text-bright-400">Analysis</span>
+              <span className="text-[var(--accent)]">Analysis</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg theme-hero-muted max-w-2xl mx-auto leading-[1.8]">
               Expert perspectives on healthcare market trends, emerging technologies, and industry transformations.
             </p>
-            <div className="flex items-center justify-center gap-2 text-sm text-white/35">
-              <div className="w-1.5 h-1.5 rounded-full bg-ocean-400 shrink-0" />
+            <div className="flex items-center justify-center gap-2 text-sm theme-hero-faint">
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0" />
               {blogs.length} articles published
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Fraunces, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -18,8 +18,15 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "600", "700", "900"],
+  style: ["normal", "italic"],
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  variable: "--font-ibm-plex-serif",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -74,13 +81,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <StructuredData data={generateOrganizationSchema()} />
         <StructuredData data={generateWebSiteSchema()} />
         <StructuredData data={generateLocalBusinessSchema()} />
       </head>
-      <body className={`${inter.variable} ${fraunces.variable} antialiased`} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${fraunces.variable} ${ibmPlexSerif.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

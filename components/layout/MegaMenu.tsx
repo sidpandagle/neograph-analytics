@@ -71,11 +71,11 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
         onMouseEnter={handleMouseEnter}
         className={cn(
           "text-sm font-medium transition-colors relative pb-0.5",
-          "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-bright-500 after:transition-all after:duration-200",
+          "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[var(--accent)] after:transition-all after:duration-200",
           "flex items-center gap-1 cursor-pointer whitespace-nowrap",
           isActive
-            ? "text-[var(--primary)] after:w-full"
-            : "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--primary)] hover:after:w-full"
+            ? "text-[var(--foreground)] after:w-full"
+            : "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--foreground)] hover:after:w-full"
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
@@ -114,7 +114,7 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
         className={cn(
           "fixed left-0 right-0 z-50",
           "lg:top-[62px]",
-          "bg-white border-t-2 border-t-bright-500 shadow-[0_8px_32px_0_rgba(15,23,42,0.12)]",
+          "bg-[var(--card)] theme-shadow border-t-2 border-t-[var(--accent)]",
           "transition-all duration-300 ease-out",
           isOpen
             ? "opacity-100 visible translate-y-0"
@@ -132,11 +132,12 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
       >
         <div className="p-6 max-w-7xl mx-auto">
           <div className="mb-4 flex items-center justify-between">
-            <span className="text-xs font-semibold text-stone-400 uppercase tracking-widest">Browse by Category</span>
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--muted-foreground)' }}>Browse by Category</span>
             <Link
               href="/reports"
               onClick={() => setIsOpen(false)}
-              className="text-xs font-semibold text-ocean-600 hover:text-ocean-700 hover:underline underline-offset-4 transition-colors"
+              className="text-xs font-semibold hover:underline underline-offset-4 transition-colors"
+              style={{ color: 'var(--accent)' }}
             >
               View all reports →
             </Link>
@@ -148,20 +149,21 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
                 href={`/reports?category=${category.slug}`}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "group block p-3 rounded-md",
-                  "border-l-2 border-l-transparent bg-stone-50",
-                  "hover:border-l-bright-500 hover:bg-white hover:shadow-sm",
+                  "group block p-3 rounded-md min-h-[72px]",
+                  "border-l-2 border-l-transparent",
                   "transition-all duration-200",
-                  "focus:outline-none focus:ring-2 focus:ring-[var(--primary)]",
-                  "min-h-[72px]"
+                  "focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
                 )}
+                style={{ backgroundColor: 'var(--muted)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--accent)'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--card)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--muted)'; }}
                 role="menuitem"
                 tabIndex={isOpen ? 0 : -1}
               >
-                <h3 className="font-semibold text-sm mb-1 text-stone-800 group-hover:text-ocean-700 transition-colors">
+                <h3 className="font-semibold text-sm mb-1 transition-colors" style={{ color: 'var(--foreground)' }}>
                   {category.name}
                 </h3>
-                <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                <p className="text-xs line-clamp-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
                   {category.description}
                 </p>
               </Link>

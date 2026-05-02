@@ -45,7 +45,7 @@ export const MarketSizeChart = React.forwardRef<HTMLDivElement, MarketSizeChartP
             <p className="text-sm text-muted-foreground mb-2">
               CAGR (2025-2032)
             </p>
-            <p className="text-3xl font-bold text-blue-600">
+            <p className="text-3xl font-bold text-[var(--accent)]">
               {cagr}
             </p>
           </div>
@@ -62,15 +62,11 @@ export const MarketSizeChart = React.forwardRef<HTMLDivElement, MarketSizeChartP
                 const height = (value / maxValue) * 100;
                 return (
                   <div key={index} className="flex-1 flex flex-col items-center">
-                    <div className="relative w-full group">
+                    <div className="relative w-full">
                       <div
-                        className="w-full bg-gradient-to-t from-navy-800 via-ocean-600 to-bright-500 rounded-t transition-all duration-300 hover:from-ocean-700 hover:via-ocean-600 hover:to-bright-400"
-                        style={{ height: `${height}%` }}
-                      >
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-[50%] group-hover:opacity-100 transition-opacity duration-200 bg-foreground text-white text-xs py-1 px-2 rounded whitespace-nowrap">
-                          ${value.toFixed(1)}B
-                        </div>
-                      </div>
+                        className="w-full rounded-t transition-all duration-300"
+                        style={{ height: `${height}%`, background: 'hsl(var(--chart-1))' }}
+                      />
                     </div>
                     <p className="text-xs text-muted-foreground mt-2">
                       {years[index]}
@@ -83,7 +79,7 @@ export const MarketSizeChart = React.forwardRef<HTMLDivElement, MarketSizeChartP
 
           <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-gradient-to-t from-navy-800 via-ocean-600 to-bright-500 rounded"></div>
+              <div className="w-4 h-4 rounded" style={{ background: 'hsl(var(--chart-1))' }}></div>
               <span>Revenue (USD Billion)</span>
             </div>
           </div>

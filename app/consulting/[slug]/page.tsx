@@ -44,7 +44,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
   return (
     <main>
       {/* Hero Section */}
-      <Section className="bg-gradient-to-b from-[var(--muted)] to-background">
+      <Section className="bg-[var(--muted)]">
         <Container>
           <div className="max-w-4xl mx-auto">
             <Link
@@ -146,7 +146,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-b from-background to-[var(--muted)]">
+      <Section className="bg-background">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

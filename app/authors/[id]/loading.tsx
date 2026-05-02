@@ -14,7 +14,7 @@ export default function AuthorLoading() {
       <div className="px-4 py-8 md:px-6 max-w-7xl mx-auto">
         {/* Author Profile Skeleton */}
         <section className="mb-12">
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] py-12 px-4 rounded-2xl border border-[var(--border)]">
+          <div className="bg-[#F8F9FA] py-12 px-4 rounded-2xl border border-[var(--border)]">
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
                 {/* Avatar Skeleton */}

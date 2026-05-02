@@ -12,8 +12,6 @@ import {
 import {
   ChartConfig,
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
 } from '@/components/ui/chart'
@@ -77,21 +75,6 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
               tickMargin={8}
               tick={{ fontSize: 12 }}
             />
-            <ChartTooltip
-              cursor={false}
-              content={
-                <ChartTooltipContent
-                  formatter={(value, name) => (
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-sm">
-                        {name === 'marketShare' ? 'Market Share' : 'Growth Rate'}:
-                      </span>
-                      <span className="font-bold">{Number(value).toFixed(1)}%</span>
-                    </div>
-                  )}
-                />
-              }
-            />
             <ChartLegend content={<ChartLegendContent />} />
             <Bar dataKey="marketShare" fill="var(--color-marketShare)" radius={[0, 4, 4, 0]}>
               <LabelList
@@ -133,7 +116,7 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
                   Share: <span className="font-bold text-foreground">{r.market_share.toFixed(1)}%</span>
                 </span>
                 <span className="text-muted-foreground">
-                  CAGR: <span className="font-bold text-blue-600">{r.growth_rate.toFixed(1)}%</span>
+                  CAGR: <span className="font-bold text-[var(--accent)]">{r.growth_rate.toFixed(1)}%</span>
                 </span>
               </div>
               {r.largest_country && (

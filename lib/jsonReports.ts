@@ -99,6 +99,11 @@ export interface JsonReport {
     meta_description: string;
     keywords: string[];
   };
+  executive_summary?: string;
+  key_highlights?: string[];
+  market_context?: string;
+  forecast_analysis?: string;
+  reader_takeaways?: string[];
 }
 
 // Type assertion for imported JSON

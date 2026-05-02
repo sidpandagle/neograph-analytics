@@ -77,55 +77,43 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
     <>
       <div
         ref={contentRef}
-        className="prose prose-lg max-w-none text-[#333333] styled-report-content"
+        className="prose prose-lg max-w-none styled-report-content"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
       <style jsx global>{`
         /* Typography overrides for report content */
         .styled-report-content {
-          color: #333333;
+          color: var(--foreground);
         }
 
-        /* H1 fallback (rarely used in marketDetails) */
+        /* H1 fallback */
         .styled-report-content h1 {
-          color: #3B82F6;
-          color: var(--blue-bright, #3B82F6);
+          color: var(--foreground);
           font-weight: 700;
           margin-top: 2.5rem;
         }
 
-        /* H2 - Major sections with bright teal */
+        /* H2 - Major sections */
         .styled-report-content h2 {
-          color: #3B82F6;
-          color: var(--blue-bright, #3B82F6);
+          color: var(--foreground);
           font-size: 1.25rem;
           font-weight: 700;
           margin-top: 2.5rem;
           margin-bottom: 1.5rem;
         }
 
-        /* H3 - Subsections with muted teal */
+        /* H3 - Subsections */
         .styled-report-content h3 {
-          color: #2563EB;
+          color: var(--primary);
           font-weight: 600;
           margin-top: 1rem;
           margin-bottom: 1rem;
         }
 
-        /* H4 - Minor sections with steel blue */
-        // .styled-report-content h4 {
-        //   color: #2563EB;
-        //   color: var(--blue-steel, #2563EB);
-        //   font-weight: 600;
-        //   margin-top: 1.5rem;
-        //   margin-bottom: 0.75rem;
-        // }
-
-        /* H5/H6 - Smallest headings with deep blue */
+        /* H5/H6 - Smallest headings */
         .styled-report-content h5,
         .styled-report-content h6 {
-          color: #1E40AF;
-          color: var(--blue-deep, #1E40AF);
+          color: var(--foreground);
           font-weight: 600;
           margin-top: 1.5rem;
           margin-bottom: 0.75rem;
@@ -142,48 +130,45 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
         }
 
         .styled-report-content p {
-          color: #333333;
+          color: var(--muted-foreground);
           font-size: 1rem;
           line-height: 1.75;
         }
 
         .styled-report-content ul,
         .styled-report-content ol {
-          color: #333333;
+          color: var(--foreground);
         }
 
         .styled-report-content li {
-          color: #333333;
+          color: var(--foreground);
         }
 
         .styled-report-content strong {
-          color: #1E40AF;
-          color: var(--blue-deep, #1E40AF);
+          color: var(--foreground);
           font-weight: 600;
         }
 
         .styled-report-content table {
-          color: #333333;
+          color: var(--foreground);
         }
 
-        /* Table header styling - faint teal background with dark text */
+        /* Table header styling */
         .styled-report-content th {
-          background-color: #E0F5F3;
-          background-color: var(--blue-subtle, #E0F5F3);
-          color: #1E40AF;
-          color: var(--blue-deep, #1E40AF);
+          background-color: var(--muted);
+          color: var(--foreground);
           font-weight: 600;
           text-align: left;
           padding: 12px 15px;
           font-size: 0.875rem;
-          border: 1px solid #b09ad5;
+          border: 1px solid var(--border);
         }
 
         .styled-report-content td {
-          color: #333333;
+          color: var(--foreground);
           padding: 10px 15px;
           font-size: 0.9375rem;
-          background-color: #ffffff;
+          background-color: var(--card);
         }
 
         /* Table hover effects with teal (higher specificity to override .prose styles) */
@@ -192,8 +177,7 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
         }
 
         .styled-report-content.prose tbody tr:hover {
-          background-color: #E0F5F3 !important;
-          background-color: var(--blue-subtle, #E0F5F3) !important;
+          background-color: var(--muted) !important;
         }
 
         /* Table header hover effect - enhance the gradient */
@@ -203,35 +187,31 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
 
         .styled-report-content.prose thead tr:hover th {
           transform: translateY(-1px);
-          box-shadow: 0 2px 8px rgba(41, 173, 164, 0.2);
+          box-shadow: 0 2px 8px hsl(var(--accent-hsl) / 0.18);
         }
 
-        /* Links with teal color */
+        /* Links */
         .styled-report-content a {
-          color: #2563EB;
+          color: var(--primary);
           text-decoration: underline;
-          text-decoration-color: #B0D9D5;
-          text-decoration-color: var(--blue-border, #B0D9D5);
+          text-decoration-color: hsl(var(--primary-hsl) / 0.35);
           transition: color 0.2s ease, text-decoration-color 0.2s ease;
         }
 
         .styled-report-content a:hover {
-          color: #3B82F6;
-          color: var(--blue-bright, #3B82F6);
-          text-decoration-color: #3B82F6;
-          text-decoration-color: var(--blue-bright, #3B82F6);
+          color: var(--accent);
+          text-decoration-color: hsl(var(--accent-hsl) / 0.45);
         }
 
-        /* Blockquotes with teal left border */
+        /* Blockquotes */
         .styled-report-content blockquote {
-          border-left: 4px solid #2563EB;
+          border-left: 4px solid var(--primary);
           padding-left: 1.25rem;
           margin-left: 0;
           margin-right: 0;
           font-style: italic;
-          color: var(--muted-foreground);
-          background: #E0F5F3;
-          background: var(--blue-subtle, #E0F5F3);
+          color: var(--foreground);
+          background: hsl(var(--primary-hsl) / 0.06);
           padding: 1rem 1.25rem;
           border-radius: 0 0.5rem 0.5rem 0;
         }
@@ -294,7 +274,7 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
           align-items: center;
           justify-content: center;
           gap: 0.5rem;
-          background: #2563A3;
+          background: var(--primary);
           color: white !important;
           padding: 0.75rem 1.25rem;
           border-radius: 0.75rem;
@@ -302,7 +282,7 @@ export const StyledReportContent: React.FC<StyledReportContentProps> = ({
           font-size: 0.875rem;
           text-decoration: none;
           transition: all 0.2s ease-in-out;
-          box-shadow: 0 4px 14px 0 rgba(37, 99, 163, 0.2);
+          box-shadow: 0 4px 14px 0 hsl(var(--primary-hsl) / 0.2);
           white-space: nowrap;
           transform: translateY(0);
           width: 100%;

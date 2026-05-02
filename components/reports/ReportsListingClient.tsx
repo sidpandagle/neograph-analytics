@@ -53,6 +53,15 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
     }
   }, [searchParams]);
 
+  const initialSearch = useMemo(() => searchParams.get('search') || '', [searchParams]);
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
+
+  useEffect(() => {
+    if (initialSearch && !searchQuery) {
+      setSearchQuery(initialSearch);
+    }
+  }, [initialSearch]);
+
   const handleSearchResults = useCallback((results: Report[] | null, loading: boolean) => {
     setSearchResults(results);
     if (!loading) setCurrentPage(1);
@@ -94,13 +103,12 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
     <>
       {/* ── Hero Banner ──────────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden pt-20 pb-16 px-6 line-grid mesh-gradient-dark"
-        style={{ background: '#0F172A' }}
+        className="relative overflow-hidden pt-20 pb-16 px-6 theme-hero theme-hero-grid"
       >
-        {/* Decorative lime glow */}
+        {/* Ambient glow */}
         <div
-          className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-[0.06] blur-3xl pointer-events-none"
-          style={{ background: '#38BDF8' }}
+          className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-[0.12] blur-3xl pointer-events-none"
+          style={{ background: 'var(--accent)' }}
         />
 
         <div className="relative max-w-7xl mx-auto">
@@ -108,27 +116,26 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             {/* Left: Headline */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-6">
-                <div className="h-px w-8 flex-shrink-0" style={{ background: '#38BDF8' }} />
+                <div className="h-px w-8 flex-shrink-0" style={{ background: 'var(--accent)' }} />
                 <p
                   className="text-xs font-bold tracking-[0.2em] uppercase"
-                  style={{ color: '#38BDF8' }}
+                  style={{ color: 'var(--accent)' }}
                 >
                   Market Intelligence
                 </p>
               </div>
               <h1
-                className="font-display font-bold leading-none mb-5"
+                className="font-display font-bold leading-none mb-5 theme-hero-text"
                 style={{
-                  color: '#F5F4F0',
                   fontSize: 'clamp(2.75rem, 5vw, 4.5rem)',
                   letterSpacing: '-0.03em',
                 }}
               >
                 Research
                 <br />
-                <span style={{ color: '#93C5FD' }}>Reports</span>
+                <span style={{ color: 'var(--accent)' }}>Reports</span>
               </h1>
-              <p style={{ color: '#6B9ED6', fontSize: '1rem', lineHeight: '1.7' }}>
+              <p className="theme-hero-muted" style={{ fontSize: '1rem', lineHeight: '1.7' }}>
                 {filteredReports.length.toLocaleString()}{' '}
                 {filteredReports.length === 1 ? 'report' : 'reports'} across{' '}
                 {categories.length} healthcare sectors
@@ -140,6 +147,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               <SearchBar
                 onSearchResults={handleSearchResults}
                 placeholder="Search by topic, technology, or region…"
+                initialQuery={initialSearch}
               />
             </div>
           </div>
@@ -148,8 +156,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
 
       {/* ── Filter Strip ─────────────────────────────────────────────────────── */}
       <div
-        className="sticky top-16 z-20 bg-white border-b"
-        style={{ borderColor: '#E7E5E4' }}
+        className="sticky top-16 z-20 bg-[var(--card)] border-b border-[var(--border)]"
       >
         <div className="max-w-7xl mx-auto px-6">
           <div
@@ -162,14 +169,14 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
               style={
                 !activeCategory
-                  ? { background: '#1D4ED8', color: '#fff' }
-                  : { background: '#F5F4F0', color: '#78716C' }
+                  ? { background: 'var(--primary)', color: '#ffffff' }
+                  : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
               }
             >
               All Reports
             </button>
 
-            <div className="h-5 w-px flex-shrink-0" style={{ background: '#D6D3D1' }} />
+            <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
 
             {/* Category pills */}
             {categories.map((cat) => (
@@ -177,17 +184,17 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
                 key={cat.id}
                 onClick={() => setActiveCategory((prev) => (prev === cat.name ? '' : cat.name))}
                 className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
-                style={
-                  activeCategory === cat.name
-                    ? { background: '#1D4ED8', color: '#fff' }
-                    : { background: '#F5F4F0', color: '#78716C' }
-                }
+style={
+                activeCategory === cat.name
+                  ? { background: 'var(--primary)', color: '#ffffff' }
+                  : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
+              }
               >
                 {cat.name}
               </button>
             ))}
 
-            <div className="h-5 w-px flex-shrink-0" style={{ background: '#D6D3D1' }} />
+            <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
 
             {/* Region select */}
             <div className="relative flex-shrink-0">
@@ -197,8 +204,8 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
                 className="appearance-none pl-3 pr-8 py-1.5 rounded-full text-xs font-semibold border cursor-pointer focus:outline-none transition-all duration-150"
                 style={
                   activeRegion
-                    ? { background: '#1D4ED8', color: '#fff', borderColor: '#1D4ED8' }
-                    : { background: '#F5F4F0', color: '#78716C', borderColor: '#E7E5E4' }
+                    ? { background: 'var(--primary)', color: '#ffffff', borderColor: 'var(--primary)' }
+                    : { background: 'var(--muted)', color: 'var(--muted-foreground)', borderColor: 'var(--border)' }
                 }
               >
                 <option value="">All Regions</option>
@@ -210,18 +217,18 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               </select>
               <ChevronDown
                 className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 pointer-events-none"
-                style={{ color: activeRegion ? '#fff' : '#A8A29E' }}
+                style={{ color: activeRegion ? 'var(--primary-foreground)' : 'var(--muted-foreground)' }}
               />
             </div>
 
             {/* Clear filters */}
             {hasFilters && (
               <>
-                <div className="h-5 w-px flex-shrink-0" style={{ background: '#D6D3D1' }} />
+                <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
                 <button
                   onClick={clearAll}
                   className="flex items-center gap-1 flex-shrink-0 text-xs font-medium transition-colors duration-150"
-                  style={{ color: '#A8A29E' }}
+                  style={{ color: 'var(--muted-foreground)' }}
                 >
                   <X className="w-3 h-3" />
                   Clear
@@ -233,15 +240,15 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
       </div>
 
       {/* ── Reports Grid ─────────────────────────────────────────────────────── */}
-      <section className="py-12 px-6" style={{ background: '#FAFAF8', minHeight: '60vh' }}>
+      <section className="py-12 px-6" style={{ background: 'var(--muted)', minHeight: '60vh' }}>
         <div className="max-w-7xl mx-auto">
           {paginatedReports.length > 0 ? (
             <>
               {/* Results meta bar */}
               <div className="flex items-center justify-between mb-8">
-                <p className="text-xs font-medium tracking-wide" style={{ color: '#A8A29E' }}>
+                <p className="text-xs font-medium tracking-wide" style={{ color: 'var(--muted-foreground)' }}>
                   Showing{' '}
-                  <span style={{ color: '#57534E' }}>
+                  <span style={{ color: 'var(--foreground)' }}>
                     {(currentPage - 1) * ITEMS_PER_PAGE + 1}–
                     {Math.min(currentPage * ITEMS_PER_PAGE, filteredReports.length)}
                   </span>{' '}
@@ -250,7 +257,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
                 {activeCategory && (
                   <div
                     className="flex items-center gap-2 text-xs px-3 py-1 rounded-full"
-                    style={{ background: '#EFF6FF', color: '#1E40AF' }}
+                    style={{ background: 'hsl(var(--primary-hsl) / 0.09)', color: 'var(--primary)' }}
                   >
                     <span className="font-medium">{activeCategory}</span>
                     <button
@@ -289,24 +296,24 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             <div className="flex flex-col items-center justify-center py-28 text-center">
               <div
                 className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6"
-                style={{ background: '#F5F4F0' }}
+                style={{ background: 'var(--card)' }}
               >
-                <Search className="w-8 h-8" style={{ color: '#D6D3D1' }} />
+                <Search className="w-8 h-8" style={{ color: 'var(--border)' }} />
               </div>
               <h3
                 className="font-display text-xl font-bold mb-2"
-                style={{ color: '#1C1917', letterSpacing: '-0.01em' }}
+                style={{ color: 'var(--foreground)', letterSpacing: '-0.01em' }}
               >
                 No reports found
               </h3>
-              <p className="text-sm mb-8 max-w-xs" style={{ color: '#78716C', lineHeight: '1.65' }}>
+              <p className="text-sm mb-8 max-w-xs" style={{ color: 'var(--muted-foreground)', lineHeight: '1.65' }}>
                 Try a different search term or broaden your filters
               </p>
               {hasFilters && (
                 <button
                   onClick={clearAll}
-                  className="px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all"
-                  style={{ background: '#1D4ED8' }}
+                  className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                  style={{ background: 'var(--accent)', color: 'var(--accent-foreground)' }}
                 >
                   Clear all filters
                 </button>
