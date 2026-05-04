@@ -78,15 +78,15 @@ export default function Navigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-[#e3e4e8] hover:border-[#ec652b]/40 hover:bg-[#f6f6f8] transition-colors"
+        className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/40 hover:bg-[var(--muted)] transition-colors"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         aria-expanded={isMobileMenuOpen}
       >
         <div className="relative w-4 h-4">
-          <span className={cn("absolute left-0 h-0.5 bg-[#232730] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 rotate-45" : "w-4 top-0.5")} />
-          <span className={cn("absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-[#232730] transition-all duration-300", isMobileMenuOpen ? "w-0 opacity-0" : "w-3 opacity-100")} />
-          <span className={cn("absolute left-0 h-0.5 bg-[#232730] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 -rotate-45" : "w-4 bottom-0.5")} />
+          <span className={cn("absolute left-0 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 rotate-45" : "w-4 top-0.5")} />
+          <span className={cn("absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-0 opacity-0" : "w-3 opacity-100")} />
+          <span className={cn("absolute left-0 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 -rotate-45" : "w-4 bottom-0.5")} />
         </div>
       </button>
 
@@ -114,7 +114,7 @@ export default function Navigation() {
               className={cn(
                 "py-3 px-4 text-base font-medium rounded-lg transition-colors",
                 "hover:bg-white/10",
-                pathname === item.href ? "text-[#ec652b]" : "text-white/80"
+                pathname === item.href ? "text-[var(--accent)]" : "text-white/80"
               )}
             >
               {item.name}
@@ -124,7 +124,7 @@ export default function Navigation() {
           <Link
             href="/about"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/about" ? "text-[#ec652b]" : "text-white/80")}
+            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/about" ? "text-[var(--accent)]" : "text-white/80")}
           >
             About Us
           </Link>
@@ -132,7 +132,7 @@ export default function Navigation() {
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/contact" ? "text-[#ec652b]" : "text-white/80")}
+            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/contact" ? "text-[var(--accent)]" : "text-white/80")}
           >
             Contact
           </Link>
@@ -143,7 +143,7 @@ export default function Navigation() {
               Consulting &amp; Services
             </span>
             <div className="mt-2 flex flex-col">
-              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-2 px-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/services" ? "text-[#ec652b]" : "text-white/70")}>
+              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-2 px-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/services" ? "text-[var(--accent)]" : "text-white/70")}>
                 All Services
               </Link>
               {consultingServices.map((service) => (
@@ -158,7 +158,7 @@ export default function Navigation() {
           <div className="mt-4 pt-4 border-t border-white/10">
             <span className="px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">Reports</span>
             <div className="mt-2 flex flex-col">
-              <Link href="/reports" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/reports" ? "text-[#ec652b]" : "text-white/80")}>
+              <Link href="/reports" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/reports" ? "text-[var(--accent)]" : "text-white/80")}>
                 All Reports
               </Link>
               {categories.map((category) => (
@@ -179,7 +179,7 @@ export default function Navigation() {
                 { href: "https://linkedin.com/company/neographanalytics", Icon: Linkedin, label: "LinkedIn" },
                 { href: "https://twitter.com/neographanalytics", Icon: Twitter, label: "X (Twitter)" },
               ].map(({ href, Icon, label }) => (
-                <Link key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#ec652b] transition-colors" aria-label={label}>
+                <Link key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[var(--accent)] transition-colors" aria-label={label}>
                   <Icon className="w-5 h-5" />
                 </Link>
               ))}

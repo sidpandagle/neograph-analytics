@@ -169,7 +169,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
               style={
                 !activeCategory
-                  ? { background: 'var(--primary)', color: '#ffffff' }
+                  ? { background: 'var(--primary)', color: 'var(--primary-foreground)' }
                   : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
               }
             >
@@ -184,11 +184,11 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
                 key={cat.id}
                 onClick={() => setActiveCategory((prev) => (prev === cat.name ? '' : cat.name))}
                 className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
-style={
-                activeCategory === cat.name
-                  ? { background: 'var(--primary)', color: '#ffffff' }
-                  : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
-              }
+                style={
+                  activeCategory === cat.name
+                    ? { background: 'var(--primary)', color: 'var(--primary-foreground)' }
+                    : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
+                }
               >
                 {cat.name}
               </button>
@@ -204,7 +204,7 @@ style={
                 className="appearance-none pl-3 pr-8 py-1.5 rounded-full text-xs font-semibold border cursor-pointer focus:outline-none transition-all duration-150"
                 style={
                   activeRegion
-                    ? { background: 'var(--primary)', color: '#ffffff', borderColor: 'var(--primary)' }
+                    ? { background: 'var(--primary)', color: 'var(--primary-foreground)', borderColor: 'var(--primary)' }
                     : { background: 'var(--muted)', color: 'var(--muted-foreground)', borderColor: 'var(--border)' }
                 }
               >

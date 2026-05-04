@@ -21,14 +21,14 @@ const SectionHeading = ({ id, num, children }: { id: string; num: number; childr
   <div className="flex items-start gap-4 mb-7">
     <span
       className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
-      style={{ background: 'rgba(17,26,74,0.08)', color: '#111a4a', border: '1px solid rgba(17,26,74,0.16)' }}
+      style={{ background: 'hsl(var(--primary-hsl) / 0.08)', color: 'var(--primary)', border: '1px solid hsl(var(--primary-hsl) / 0.16)' }}
     >
       {String(num).padStart(2, '0')}
     </span>
     <h2
       id={id}
       className="font-display text-2xl font-bold scroll-mt-24"
-      style={{ color: '#011821', letterSpacing: '-0.01em', lineHeight: '1.25' }}
+      style={{ color: 'var(--foreground)', letterSpacing: '-0.01em', lineHeight: '1.25' }}
     >
       {children}
     </h2>
@@ -36,7 +36,7 @@ const SectionHeading = ({ id, num, children }: { id: string; num: number; childr
 )
 
 const SubHeading = ({ children }: { children: React.ReactNode }) => (
-  <h3 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#57534E', letterSpacing: '0.06em' }}>
+  <h3 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--content-text)', letterSpacing: '0.06em' }}>
     {children}
   </h3>
 )
@@ -66,11 +66,11 @@ const DYNAMICS_TABS = [
   {
     key: 'opportunities',
     label: 'Opportunities',
-    dot: '#111a4a',
-    bg: 'rgba(17,26,74,0.05)',
-    border: 'rgba(17,26,74,0.15)',
-    text: '#111a4a',
-    accentBar: '#111a4a',
+    dot: 'var(--primary)',
+    bg: 'hsl(var(--primary-hsl) / 0.05)',
+    border: 'hsl(var(--primary-hsl) / 0.15)',
+    text: 'var(--primary)',
+    accentBar: 'var(--primary)',
   },
   {
     key: 'challenges',
@@ -102,12 +102,12 @@ function MarketDynamicsSection({ dynamics }: { dynamics: JsonReport['market_dyna
             style={
               active === tab.key
                 ? { background: tab.bg, color: tab.text, border: `1.5px solid ${tab.border}`, boxShadow: `0 0 0 3px ${tab.border}40` }
-                : { background: '#F5F4F0', color: '#78716C', border: '1.5px solid #E7E5E4' }
+                : { background: 'var(--content-surface)', color: 'var(--content-muted)', border: '1.5px solid var(--content-border)' }
             }
           >
             <span
               className="inline-block w-1.5 h-1.5 rounded-full mr-1.5"
-              style={{ background: active === tab.key ? tab.dot : '#A8A29E', verticalAlign: 'middle', marginTop: '-2px' }}
+              style={{ background: active === tab.key ? tab.dot : 'var(--content-muted)', verticalAlign: 'middle', marginTop: '-2px' }}
             />
             {tab.label}
           </button>
@@ -139,14 +139,14 @@ function MarketDynamicsSection({ dynamics }: { dynamics: JsonReport['market_dyna
 // ── segmentation ─────────────────────────────────────────────────────────────
 
 const SEGMENT_COLORS: Record<string, { dot: string; bg: string; border: string }> = {
-  'By Component': { dot: '#111a4a', bg: 'rgba(17,26,74,0.05)', border: 'rgba(17,26,74,0.15)' },
-  'By Type':      { dot: '#ec652b', bg: 'rgba(236,101,43,0.05)', border: 'rgba(236,101,43,0.18)' },
-  'By Application': { dot: '#111a4a', bg: 'rgba(17,26,74,0.04)', border: 'rgba(17,26,74,0.12)' },
-  'By End User':  { dot: '#d97706', bg: '#fffbeb', border: '#fde68a' },
+  'By Component': { dot: 'var(--primary)', bg: 'hsl(var(--primary-hsl) / 0.05)', border: 'hsl(var(--primary-hsl) / 0.15)' },
+  'By Type':      { dot: 'var(--accent)',  bg: 'hsl(var(--accent-hsl) / 0.05)',   border: 'hsl(var(--accent-hsl) / 0.18)' },
+  'By Application': { dot: 'var(--primary)', bg: 'hsl(var(--primary-hsl) / 0.04)', border: 'hsl(var(--primary-hsl) / 0.12)' },
+  'By End User':  { dot: '#d97706', bg: 'var(--content-niche-bg)', border: 'var(--content-niche-border)' },
 }
 
 function SegmentListCard({ title, items }: { title: string; items: string[] }) {
-  const colors = SEGMENT_COLORS[title] ?? { dot: '#111a4a', bg: 'rgba(17,26,74,0.05)', border: 'rgba(17,26,74,0.15)' }
+  const colors = SEGMENT_COLORS[title] ?? { dot: 'var(--primary)', bg: 'hsl(var(--primary-hsl) / 0.05)', border: 'hsl(var(--primary-hsl) / 0.15)' }
   return (
     <div
       className="rounded-xl p-4"
@@ -215,7 +215,7 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
       <div className="rounded-xl overflow-hidden border border-[var(--border)]">
         <table className="w-full text-sm">
           <thead>
-            <tr style={{ background: '#F5F4F0' }}>
+            <tr style={{ background: 'var(--content-surface)' }}>
               <th className="text-left py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Country</th>
               <th className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Share</th>
               <th className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Growth</th>
@@ -223,20 +223,20 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
           </thead>
           <tbody>
             {countries.map((c, i) => (
-              <tr key={i} className="border-t border-[var(--border)]" style={{ background: i % 2 === 0 ? '#fff' : '#FAFAF9' }}>
+              <tr key={i} className="border-t border-[var(--border)]" style={{ background: i % 2 === 0 ? 'var(--card)' : 'var(--content-surface-alt)' }}>
                 <td className="py-3 px-4 text-[var(--foreground)] font-medium">{c.country}</td>
                 <td className="py-3 px-4 text-right">
                   <div className="flex items-center justify-end gap-3">
                     <div className="w-20 h-1.5 rounded-full bg-[var(--border)]">
                       <div
                         className="h-1.5 rounded-full"
-                        style={{ width: `${(c.market_share / maxShare) * 100}%`, background: '#111a4a' }}
+                        style={{ width: `${(c.market_share / maxShare) * 100}%`, background: 'var(--primary)' }}
                       />
                     </div>
                     <span className="font-semibold text-[var(--foreground)]">{c.market_share.toFixed(1)}%</span>
                   </div>
                 </td>
-                <td className="py-3 px-4 text-right font-semibold" style={{ color: '#ec652b' }}>
+                <td className="py-3 px-4 text-right font-semibold" style={{ color: 'var(--accent)' }}>
                   +{c.growth_rate.toFixed(1)}%
                 </td>
               </tr>
@@ -261,26 +261,26 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
           <div
             key={i}
             className="rounded-xl p-4"
-            style={{ background: '#fff', border: '1px solid var(--border)' }}
+            style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
           >
             <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
               <div className="flex items-center gap-3">
                 <span
                   className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold flex-shrink-0"
-                  style={{ background: 'rgba(17,26,74,0.07)', color: '#111a4a' }}
+                  style={{ background: 'hsl(var(--primary-hsl) / 0.07)', color: 'var(--primary)' }}
                 >
                   {i + 1}
                 </span>
                 <h4 className="font-semibold text-sm text-[var(--foreground)]">{r.region}</h4>
                 {r.largest_country && (
-                  <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: '#F5F4F0', color: '#78716C', border: '1px solid #E7E5E4' }}>
+                  <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--content-surface)', color: 'var(--content-muted)', border: '1px solid var(--content-border)' }}>
                     Lead: {r.largest_country}
                   </span>
                 )}
               </div>
               <div className="flex gap-4 text-xs">
                 <span className="text-[var(--muted-foreground)]">
-                  CAGR: <span className="font-bold" style={{ color: '#ec652b' }}>{r.growth_rate.toFixed(1)}%</span>
+                  CAGR: <span className="font-bold" style={{ color: 'var(--accent)' }}>{r.growth_rate.toFixed(1)}%</span>
                 </span>
                 <span className="text-[var(--muted-foreground)]">
                   Share: <span className="font-bold text-[var(--foreground)]">{r.market_share.toFixed(1)}%</span>
@@ -289,15 +289,15 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
             </div>
 
             {/* Share progress bar */}
-            <div className="w-full h-1.5 rounded-full mb-3" style={{ background: '#F5F4F0' }}>
+            <div className="w-full h-1.5 rounded-full mb-3" style={{ background: 'var(--content-surface)' }}>
               <div
                 className="h-1.5 rounded-full transition-all duration-700"
-                style={{ width: `${(r.market_share / maxShare) * 100}%`, background: '#111a4a' }}
+                style={{ width: `${(r.market_share / maxShare) * 100}%`, background: 'var(--primary)' }}
               />
             </div>
 
             {r.description && (
-              <p className="text-xs leading-relaxed" style={{ color: '#78716C' }}>{r.description}</p>
+              <p className="text-xs leading-relaxed" style={{ color: 'var(--content-muted)' }}>{r.description}</p>
             )}
           </div>
         ))}
@@ -310,10 +310,10 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
 // ── competitive landscape ─────────────────────────────────────────────────────
 
 const POSITION_STYLE: Record<string, { bg: string; color: string; border: string }> = {
-  Leader:     { bg: 'rgba(236,101,43,0.07)', color: '#ec652b', border: 'rgba(236,101,43,0.22)' },
-  Challenger: { bg: 'rgba(17,26,74,0.06)', color: '#111a4a', border: 'rgba(17,26,74,0.16)' },
-  Follower:   { bg: '#f6f6f8', color: '#7c7f88', border: '#e3e4e8' },
-  Niche:      { bg: '#fffbeb', color: '#92400e', border: '#fde68a' },
+  Leader:     { bg: 'hsl(var(--accent-hsl) / 0.07)',   color: 'var(--accent)',           border: 'hsl(var(--accent-hsl) / 0.22)' },
+  Challenger: { bg: 'hsl(var(--primary-hsl) / 0.06)',  color: 'var(--primary)',           border: 'hsl(var(--primary-hsl) / 0.16)' },
+  Follower:   { bg: 'var(--muted)',                     color: 'var(--muted-foreground)',   border: 'var(--border)' },
+  Niche:      { bg: 'var(--content-niche-bg)',          color: 'var(--content-niche-text)', border: 'var(--content-niche-border)' },
 }
 
 function CompetitiveLandscapeSection({
@@ -334,8 +334,8 @@ function CompetitiveLandscapeSection({
             <div
               key={i}
               className="rounded-xl p-5"
-              style={{ background: '#fff', border: '1px solid var(--border)', transition: 'box-shadow 0.2s' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 16px rgba(17,26,74,0.10)' }}
+              style={{ background: 'var(--card)', border: '1px solid var(--border)', transition: 'box-shadow 0.2s' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = `0 4px 16px hsl(var(--primary-hsl) / 0.10)` }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
             >
               <div className="flex items-start justify-between flex-wrap gap-3 mb-3">
@@ -343,14 +343,14 @@ function CompetitiveLandscapeSection({
                   {/* Company initial avatar */}
                   <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0"
-                    style={{ background: 'rgba(17,26,74,0.07)', color: '#111a4a' }}
+                    style={{ background: 'hsl(var(--primary-hsl) / 0.07)', color: 'var(--primary)' }}
                   >
                     {p.company.charAt(0)}
                   </div>
                   <div>
                     <h4 className="font-semibold text-sm text-[var(--foreground)]">{p.company}</h4>
                     {p.headquarters && (
-                      <p className="text-xs" style={{ color: '#78716C' }}>{p.headquarters}</p>
+                      <p className="text-xs" style={{ color: 'var(--content-muted)' }}>{p.headquarters}</p>
                     )}
                   </div>
                 </div>
@@ -364,7 +364,7 @@ function CompetitiveLandscapeSection({
                     </span>
                   )}
                   {profile?.revenue && (
-                    <span className="text-xs font-semibold" style={{ color: '#ec652b' }}>
+                    <span className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>
                       {profile.revenue}
                     </span>
                   )}
@@ -372,7 +372,7 @@ function CompetitiveLandscapeSection({
               </div>
 
               {p.description && (
-                <p className="text-xs leading-relaxed mb-3" style={{ color: '#57534E' }}>
+                <p className="text-xs leading-relaxed mb-3" style={{ color: 'var(--content-text)' }}>
                   {p.description}
                 </p>
               )}
@@ -383,7 +383,7 @@ function CompetitiveLandscapeSection({
                     <span
                       key={j}
                       className="text-xs px-2 py-0.5 rounded-md"
-                      style={{ background: '#F5F4F0', color: '#57534E', border: '1px solid #E7E5E4' }}
+                      style={{ background: 'var(--content-surface)', color: 'var(--content-text)', border: '1px solid var(--content-border)' }}
                     >
                       {prod}
                     </span>
@@ -407,7 +407,7 @@ function RecentDevelopmentsSection({ developments }: { developments: JsonReport[
     <section className="mb-14">
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-[18px] top-0 bottom-0 w-px" style={{ background: '#111a4a' }} />
+        <div className="absolute left-[18px] top-0 bottom-0 w-px" style={{ background: 'var(--primary)' }} />
 
         <div className="space-y-6">
           {sorted.map((d, i) => (
@@ -416,7 +416,7 @@ function RecentDevelopmentsSection({ developments }: { developments: JsonReport[
               <div className="flex-shrink-0 flex flex-col items-center">
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold z-10"
-                  style={{ background: i === 0 ? '#111a4a' : 'rgba(17,26,74,0.06)', color: i === 0 ? '#fff' : '#111a4a', border: `2px solid ${i === 0 ? '#111a4a' : 'rgba(17,26,74,0.20)'}` }}
+                  style={{ background: i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.06)', color: i === 0 ? 'var(--primary-foreground)' : 'var(--primary)', border: `2px solid ${i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.20)'}` }}
                 >
                   {String(d.year).slice(2)}
                 </div>
@@ -425,13 +425,13 @@ function RecentDevelopmentsSection({ developments }: { developments: JsonReport[
               {/* Content card */}
               <div
                 className="flex-1 rounded-xl p-4 mb-1"
-                style={{ background: '#fff', border: '1px solid var(--border)' }}
+                style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
               >
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-bold" style={{ color: '#111a4a' }}>{d.year}</span>
+                  <span className="text-xs font-bold" style={{ color: 'var(--primary)' }}>{d.year}</span>
                   <span className="text-xs font-semibold text-[var(--foreground)]">{d.company}</span>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: '#57534E' }}>{d.event}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--content-text)' }}>{d.event}</p>
               </div>
             </div>
           ))}
@@ -453,9 +453,9 @@ function RegulatorySection({ items }: { items: string[] }) {
           <span
             key={i}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium"
-            style={{ background: '#F5F4F0', color: '#1C1917', border: '1px solid #D6D3D1' }}
+            style={{ background: 'var(--content-surface)', color: 'var(--content-text-darkest)', border: '1px solid var(--content-border-strong)' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#111a4a' }} />
+            <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--primary)' }} />
             {item}
           </span>
         ))}
@@ -481,15 +481,15 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
           >
             <button
               className="w-full flex items-center justify-between px-5 py-4 text-left transition-colors"
-              style={{ background: open === i ? 'rgba(17,26,74,0.04)' : '#fff' }}
+              style={{ background: open === i ? 'hsl(var(--primary-hsl) / 0.04)' : 'var(--card)' }}
               onClick={() => setOpen(open === i ? null : i)}
             >
               <span className="font-medium text-sm text-[var(--foreground)] pr-4">{faq.question}</span>
               <span
                 className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-sm font-bold transition-transform duration-200"
                 style={{
-                  background: open === i ? '#111a4a' : '#f6f6f8',
-                  color: open === i ? '#fff' : '#7c7f88',
+                  background: open === i ? 'var(--primary)' : 'var(--muted)',
+                  color: open === i ? 'var(--primary-foreground)' : 'var(--muted-foreground)',
                   transform: open === i ? 'rotate(45deg)' : 'none',
                 }}
               >
@@ -502,7 +502,7 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
             >
               <div
                 className="px-5 pb-4 pt-3 text-sm leading-relaxed"
-                style={{ color: '#57534E', background: '#FAFAF9', borderTop: '1px solid #E7E5E4' }}
+                style={{ color: 'var(--content-text)', background: 'var(--content-surface-alt)', borderTop: '1px solid var(--content-border)' }}
               >
                 {faq.answer}
               </div>
@@ -521,7 +521,7 @@ function ExecutiveSummarySection({ summary }: { summary: string }) {
   return (
     <div
       className="rounded-2xl overflow-hidden mb-10"
-      style={{ border: '1px solid #e3e4e8', background: '#ffffff' }}
+      style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
     >
       {/* <div
         className="flex items-center gap-3 px-6 py-4"
@@ -539,7 +539,7 @@ function ExecutiveSummarySection({ summary }: { summary: string }) {
           <p
             key={i}
             className="text-base leading-[1.8]"
-            style={{ color: i === 0 ? '#011821' : '#44403C', fontWeight: i === 0 ? 500 : 400 }}
+            style={{ color: i === 0 ? 'var(--foreground)' : 'var(--content-text-dark)', fontWeight: i === 0 ? 500 : 400 }}
           >
             {para}
           </p>
@@ -563,21 +563,21 @@ function KeyHighlightsSection({ highlights }: { highlights: string[] }) {
           <div
             key={i}
             className="rounded-xl p-4 flex gap-3"
-            style={{ background: '#fff', border: '1px solid var(--border)' }}
+            style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
           >
             <div
               className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mt-0.5"
-              style={{ background: 'rgba(17,26,74,0.07)', color: '#111a4a', border: '1px solid rgba(17,26,74,0.16)' }}
+              style={{ background: 'hsl(var(--primary-hsl) / 0.07)', color: 'var(--primary)', border: '1px solid hsl(var(--primary-hsl) / 0.16)' }}
             >
               {i + 1}
             </div>
             <div>
               {label && (
-                <p className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#111a4a' }}>
+                <p className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: 'var(--primary)' }}>
                   {label}
                 </p>
               )}
-              <p className="text-sm leading-relaxed" style={{ color: '#44403C' }}>{body}</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--content-text-dark)' }}>{body}</p>
             </div>
           </div>
         )
@@ -592,10 +592,10 @@ function MarketContextBlock({ context }: { context: string }) {
   return (
     <div
       className="rounded-xl p-5 mb-6"
-      style={{ background: '#FAFAF9', border: '1px solid #E7E5E4', borderLeft: '4px solid #78716C' }}
+      style={{ background: 'var(--content-surface-alt)', border: '1px solid var(--content-border)', borderLeft: '4px solid var(--content-muted)' }}
     >
-      <p className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: '#78716C' }}>Market Context</p>
-      <p className="text-sm leading-[1.85]" style={{ color: '#44403C' }}>{context}</p>
+      <p className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--content-muted)' }}>Market Context</p>
+      <p className="text-sm leading-[1.85]" style={{ color: 'var(--content-text-dark)' }}>{context}</p>
     </div>
   )
 }
@@ -606,15 +606,15 @@ function ForecastAnalysisBlock({ analysis }: { analysis: string }) {
   return (
     <div
       className="rounded-xl p-5 mb-6"
-      style={{ background: '#F0FDF4', border: '1px solid #BBF7D0', borderLeft: '4px solid #16A34A' }}
+      style={{ background: 'var(--content-success-bg)', border: '1px solid var(--content-success-border)', borderLeft: '4px solid var(--content-success-accent)' }}
     >
       <div className="flex items-center gap-2 mb-2">
         <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none">
-          <path d="M2 12l4-6 3 4 3-5 2 7" stroke="#16A34A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M2 12l4-6 3 4 3-5 2 7" stroke="var(--content-success-accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <span className="text-xs font-bold uppercase tracking-wider" style={{ color: '#15803D' }}>Forecast Analysis</span>
+        <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--content-success-text)' }}>Forecast Analysis</span>
       </div>
-      <p className="text-sm leading-[1.85]" style={{ color: '#166534' }}>{analysis}</p>
+      <p className="text-sm leading-[1.85]" style={{ color: 'var(--content-success-text-dark)' }}>{analysis}</p>
     </div>
   )
 }
@@ -623,7 +623,7 @@ function ForecastAnalysisBlock({ analysis }: { analysis: string }) {
 
 function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
   if (!takeaways.length) return null
-  const dotColors = ['#111a4a', '#16A34A', '#D97706', '#DC2626', '#ec652b']
+  const dotColors = ['var(--primary)', 'var(--content-success-accent)', '#D97706', '#DC2626', 'var(--accent)']
   return (
     <section className="mb-14">
       <div className="space-y-2">
@@ -636,7 +636,7 @@ function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
             <div
               key={i}
               className="rounded-xl p-4 flex gap-3"
-              style={{ background: '#fff', border: '1px solid var(--border)', borderLeft: `3px solid ${color}` }}
+              style={{ background: 'var(--card)', border: '1px solid var(--border)', borderLeft: `3px solid ${color}` }}
             >
               <div className="flex-shrink-0 w-2 h-2 rounded-full mt-2" style={{ background: color }} />
               <div>
@@ -648,7 +648,7 @@ function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
                     {audience}
                   </span>
                 )}
-                <p className="text-sm leading-relaxed" style={{ color: '#44403C' }}>{insight}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--content-text-dark)' }}>{insight}</p>
               </div>
             </div>
           )
@@ -697,7 +697,7 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
 
         <blockquote
           className="rounded-xl p-5 mb-6 text-base leading-relaxed"
-          style={{ background: 'rgba(17,26,74,0.04)', borderLeft: '4px solid #111a4a', color: '#011821', fontStyle: 'normal' }}
+          style={{ background: 'hsl(var(--primary-hsl) / 0.04)', borderLeft: '4px solid var(--primary)', color: 'var(--foreground)', fontStyle: 'normal' }}
         >
           {report.market_overview.summary}
         </blockquote>
@@ -710,11 +710,11 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
             <div
               key={label}
               className="rounded-xl p-4 flex items-start gap-3"
-              style={{ background: '#fff', border: '1px solid var(--border)' }}
+              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
             >
-              <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: '#111a4a' }} />
+              <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: 'var(--primary)' }} />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#78716C' }}>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: 'var(--content-muted)' }}>
                   {label}
                 </p>
                 <p className="font-semibold text-[var(--foreground)]">{value}</p>
@@ -731,9 +731,9 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
                 <span
                   key={i}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm"
-                  style={{ background: '#F5F4F0', color: '#1C1917', border: '1px solid #D6D3D1' }}
+                  style={{ background: 'var(--content-surface)', color: 'var(--content-text-darkest)', border: '1px solid var(--content-border-strong)' }}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#111a4a' }} />
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--primary)' }} />
                   {trend}
                 </span>
               ))}

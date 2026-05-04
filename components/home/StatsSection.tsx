@@ -17,9 +17,9 @@ const stats: Stat[] = [
 
 export default function StatsSection() {
   return (
-    <section className="border-y" style={{ backgroundColor: '#f6f6f8', borderColor: '#e3e4e8' }}>
+    <section className="border-y" style={{ backgroundColor: 'var(--muted)', borderColor: 'var(--border)' }}>
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-2 lg:grid-cols-4 " style={{ '--tw-divide-opacity': '1', borderColor: '#e3e4e8' } as React.CSSProperties}>
+        <div className="grid grid-cols-2 lg:grid-cols-4" style={{ borderColor: 'var(--border)' } as React.CSSProperties}>
           {stats.map((stat) => {
             const Icon = stat.icon;
             return (
@@ -30,18 +30,18 @@ export default function StatsSection() {
                   <div
                     className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{
-                      backgroundColor: 'rgba(17,26,74,0.06)',
-                      boxShadow: 'rgba(17, 26, 74, 0.08) 0px 0px 0px 1px',
+                      backgroundColor: 'hsl(var(--primary-hsl) / 0.06)',
+                      boxShadow: '0px 0px 0px 1px hsl(var(--primary-hsl) / 0.08)',
                     }}
                   >
-                    <Icon className="w-5 h-5" strokeWidth={1.5} style={{ color: '#111a4a' }} />
+                    <Icon className="w-5 h-5" strokeWidth={1.5} style={{ color: 'var(--primary)' }} />
                   </div>
                 </div>
 
                 {/* Number */}
                 <div
                   className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight tabular-nums leading-none mb-3"
-                  style={{ color: '#011821', letterSpacing: '-0.04em' }}
+                  style={{ color: 'var(--foreground)', letterSpacing: '-0.04em' }}
                 >
                   {stat.value}
                 </div>
@@ -49,13 +49,13 @@ export default function StatsSection() {
                 {/* Label */}
                 <div
                   className="text-xs font-semibold uppercase mb-2"
-                  style={{ color: '#ec652b', letterSpacing: '0.10em' }}
+                  style={{ color: 'var(--accent)', letterSpacing: '0.10em' }}
                 >
                   {stat.label}
                 </div>
 
                 {/* Description */}
-                <div className="text-xs leading-relaxed max-w-[160px] mx-auto" style={{ color: '#7c7f88' }}>
+                <div className="text-xs leading-relaxed max-w-[160px] mx-auto" style={{ color: 'var(--muted-foreground)' }}>
                   {stat.desc}
                 </div>
 

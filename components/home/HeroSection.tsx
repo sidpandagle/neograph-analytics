@@ -40,7 +40,7 @@ const dashboardCards = [
   },
 ];
 
-const cardShadow = 'rgba(17, 26, 74, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.08) 0px 1px 2px 0px, rgba(255, 255, 255, 0.7) 0px 0px 0px 1px inset';
+const cardShadow = 'var(--shadow-card)';
 
 export default function HeroSection() {
   return (

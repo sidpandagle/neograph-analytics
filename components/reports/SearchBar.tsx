@@ -53,7 +53,7 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            style={{ color: 'rgba(255,255,255,0.45)' }}
+            style={{ color: 'var(--on-dark-subtle)' }}
           >
             <path
               strokeLinecap="round"
@@ -71,18 +71,18 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
           placeholder={placeholder || 'Search reports…'}
           className="reports-search-input w-full pl-11 pr-12 py-3.5 text-sm rounded-xl transition-all focus:outline-none"
           style={{
-            background: 'rgba(255,255,255,0.08)',
-            border: '1px solid rgba(255,255,255,0.14)',
-            color: '#F5F4F0',
-            caretColor: '#ec652b',
+            background: 'var(--on-dark-surface)',
+            border: '1px solid var(--on-dark-border)',
+            color: 'var(--on-dark-text)',
+            caretColor: 'var(--accent)',
           }}
           onFocus={(e) => {
-            e.currentTarget.style.border = '1px solid rgba(236,101,43,0.5)';
-            e.currentTarget.style.background = 'rgba(255,255,255,0.11)';
+            e.currentTarget.style.border = `1px solid hsl(var(--accent-hsl) / 0.5)`;
+            e.currentTarget.style.background = 'var(--on-dark-surface-hover)';
           }}
           onBlur={(e) => {
-            e.currentTarget.style.border = '1px solid rgba(255,255,255,0.14)';
-            e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+            e.currentTarget.style.border = '1px solid var(--on-dark-border)';
+            e.currentTarget.style.background = 'var(--on-dark-surface)';
           }}
         />
 
@@ -91,7 +91,7 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
             onClick={() => setQuery('')}
             className="absolute right-4 top-1/2 -translate-y-1/2 transition-opacity opacity-60 hover:opacity-100"
             aria-label="Clear search"
-            style={{ color: 'rgba(255,255,255,0.7)' }}
+            style={{ color: 'var(--on-dark-muted)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -105,7 +105,7 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
         )}
       </div>
       {query && (
-        <p className="mt-2 text-xs" style={{ color: 'rgba(147,197,253,0.7)' }}>
+        <p className="mt-2 text-xs" style={{ color: 'var(--on-dark-hint)' }}>
           Press Enter or wait for results
         </p>
       )}

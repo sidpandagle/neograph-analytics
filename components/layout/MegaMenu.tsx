@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -18,27 +18,43 @@ interface MegaMenuProps {
 
 export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  // Cleanup timeout on unmount
   useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+    if (!isOpen) return;
+
+    const onMouseDown = (e: MouseEvent) => {
+      if (
+        containerRef.current?.contains(e.target as Node) ||
+        panelRef.current?.contains(e.target as Node)
+      ) return;
+      setIsOpen(false);
     };
-  }, []);
 
-  // Event handlers
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsOpen(true), 150);
+    const onFocusOut = (e: FocusEvent) => {
+      if (
+        containerRef.current?.contains(e.relatedTarget as Node) ||
+        panelRef.current?.contains(e.relatedTarget as Node)
+      ) return;
+      setIsOpen(false);
+    };
+
+    document.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("focusout", onFocusOut);
+    return () => {
+      document.removeEventListener("mousedown", onMouseDown);
+      document.removeEventListener("focusout", onFocusOut);
+    };
+  }, [isOpen]);
+
+  const scheduleClose = () => {
+    hoverTimeout.current = setTimeout(() => setIsOpen(false), 150);
   };
-
-  const handleMouseLeave = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsOpen(false), 200);
+  const cancelClose = () => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
   };
 
   const handleClick = () => {
@@ -60,15 +76,16 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
 
   return (
     <div
+      ref={containerRef}
       className="relative"
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={scheduleClose}
+      onMouseEnter={cancelClose}
       onKeyDown={handleKeyDown}
     >
       {/* Trigger Button */}
       <button
         ref={triggerRef}
         onClick={handleClick}
-        onMouseEnter={handleMouseEnter}
         className={cn(
           "text-sm font-medium transition-colors relative pb-0.5",
           "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[var(--accent)] after:transition-all after:duration-200",
@@ -111,6 +128,9 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
 
       {/* Mega Menu Panel */}
       <div
+        ref={panelRef}
+        onMouseEnter={cancelClose}
+        onMouseLeave={scheduleClose}
         className={cn(
           "fixed left-0 right-0 z-50",
           "lg:top-[62px]",
@@ -120,8 +140,6 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-2 pointer-events-none"
         )}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         role="menu"
         aria-label="Report categories"
         aria-hidden={!isOpen}

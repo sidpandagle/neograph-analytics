@@ -28,21 +28,63 @@
   /* Layout */
   --section-gap: 48px;
 
-  /* Legacy variable aliases (compatibility with non-migrated pages) */
+  /* Semantic tokens — used via var(--xxx) in components and utility classes */
+  --background: #ffffff;
+  --foreground: #011821;
   --primary: #111a4a;
   --primary-hover: #0d1438;
   --primary-light: #1a2566;
   --primary-dark: #0a0f2e;
+  --accent: #ec652b;
+  --accent-foreground: #ffffff;
   --accent-navy: #011821;
   --accent-ocean: #111a4a;
   --accent-bright: #ec652b;
   --secondary: #f6f6f8;
   --border: #e3e4e8;
   --border-light: #f0f1f3;
+  --input: #e3e4e8;
+  --ring: #111a4a;
   --card: #ffffff;
   --card-foreground: #011821;
+  --popover: #ffffff;
+  --popover-foreground: #011821;
   --muted: #f6f6f8;
   --muted-foreground: #7c7f88;
+  --destructive: #f04040;
+  --destructive-foreground: #ffffff;
+  --primary-foreground: #ffffff;
+
+  /* Report content semantic tokens — stone/warm neutral palette for report body styling */
+  --content-surface: #F5F4F0;
+  --content-surface-alt: #FAFAF9;
+  --content-border: #E7E5E4;
+  --content-border-strong: #D6D3D1;
+  --content-muted: #78716C;
+  --content-text: #57534E;
+  --content-text-dark: #44403C;
+  --content-text-darkest: #1C1917;
+  --content-niche-bg: #fffbeb;
+  --content-niche-border: #fde68a;
+  --content-niche-text: #92400e;
+  --content-success-bg: #F0FDF4;
+  --content-success-border: #BBF7D0;
+  --content-success-accent: #16A34A;
+  --content-success-text: #15803D;
+  --content-success-text-dark: #166534;
+
+  /* On-dark surface tokens — for elements on --primary or similar dark backgrounds */
+  --on-dark-text: rgba(245, 244, 240, 1);
+  --on-dark-muted: rgba(255, 255, 255, 0.55);
+  --on-dark-subtle: rgba(255, 255, 255, 0.45);
+  --on-dark-dim: rgba(255, 255, 255, 0.48);
+  --on-dark-surface: rgba(255, 255, 255, 0.08);
+  --on-dark-surface-hover: rgba(255, 255, 255, 0.11);
+  --on-dark-border: rgba(255, 255, 255, 0.14);
+  --on-dark-overlay: rgba(255, 255, 255, 0.18);
+  --on-dark-overlay-border: rgba(255, 255, 255, 0.35);
+  --on-dark-hint: rgba(147, 197, 253, 0.7);
+
   --gradient-primary: #111a4a;
   --gradient-accent: #ec652b;
   --gradient-warm: #ec652b;
@@ -89,19 +131,19 @@ body {
     box-shadow: var(--shadow-card);
   }
   .shadow-primary {
-    box-shadow: 0 4px 14px 0 rgba(17, 26, 74, 0.22);
+    box-shadow: 0 4px 14px 0 hsl(var(--primary-hsl) / 0.22);
   }
   .shadow-primary-lg {
-    box-shadow: 0 10px 30px -5px rgba(17, 26, 74, 0.28), 0 8px 12px -6px rgba(17, 26, 74, 0.16);
+    box-shadow: 0 10px 30px -5px hsl(var(--primary-hsl) / 0.28), 0 8px 12px -6px hsl(var(--primary-hsl) / 0.16);
   }
   .shadow-ocean {
-    box-shadow: 0 4px 14px 0 rgba(17, 26, 74, 0.22);
+    box-shadow: 0 4px 14px 0 hsl(var(--primary-hsl) / 0.22);
   }
   .shadow-soft {
-    box-shadow: 0 2px 10px 0 rgba(1, 24, 33, 0.08);
+    box-shadow: 0 2px 10px 0 hsl(var(--foreground-hsl) / 0.08);
   }
   .shadow-amber {
-    box-shadow: 0 4px 14px 0 rgba(236, 101, 43, 0.25);
+    box-shadow: 0 4px 14px 0 hsl(var(--accent-hsl) / 0.25);
   }
 
   /* Marquee scroll */
@@ -116,10 +158,10 @@ body {
 
   /* Glassmorphism — for deep-plum dark sections */
   .glass-dark {
-    background: rgba(17, 26, 74, 0.75);
+    background: hsl(var(--primary-hsl) / 0.75);
     backdrop-filter: blur(20px) saturate(1.5);
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--on-dark-border);
   }
 
   /* Blueprint line-grid */
@@ -132,7 +174,7 @@ body {
 
   /* Solid text — orange */
   .text-gradient-amber {
-    color: #ec652b;
+    color: var(--accent);
   }
 
   /* Float animations */
@@ -186,7 +228,7 @@ body {
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
   /* Search input placeholder */
-  .reports-search-input::placeholder { color: rgba(17, 26, 74, 0.30); }
+  .reports-search-input::placeholder { color: hsl(var(--primary-hsl) / 0.30); }
 
   .theme-hero {
     background: var(--secondary);
@@ -494,7 +536,7 @@ html[data-typography="scholarly"] h3 { font-weight: 500; line-height: 1.28; }
     @apply w-full;
     border-spacing: 0;
     border-radius: 6px;
-    background: white;
+    background: var(--card);
   }
 
   .prose thead {
@@ -521,7 +563,7 @@ html[data-typography="scholarly"] h3 { font-weight: 500; line-height: 1.28; }
     transition: background-color 0.15s ease;
   }
   .prose tbody tr:hover {
-    background-color: rgba(17, 26, 74, 0.03);
+    background-color: hsl(var(--primary-hsl) / 0.03);
   }
   .prose tbody tr:last-child {
     border: none;
@@ -570,7 +612,7 @@ html[data-typography="scholarly"] h3 { font-weight: 500; line-height: 1.28; }
   }
 
   .styled-report-content > ul:first-of-type {
-    background: #f6f6f8;
+    background: var(--muted);
     li {
       @apply border-b border-steel-gray;
       p { @apply ml-0 mr-2; }

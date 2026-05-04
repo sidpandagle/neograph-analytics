@@ -25,20 +25,20 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
         {/* Radial Twilight pricing header */}
         <div
           className="px-5 pt-6 pb-5 text-center relative overflow-hidden"
-          style={{ background: 'rgb(17, 26, 74)' }}
+          style={{ background: 'var(--primary)' }}
         >
 
-          <p className="text-xs uppercase tracking-widest mb-3 relative" style={{ color: 'rgba(255, 255, 255, 0.55)' }}>
+          <p className="text-xs uppercase tracking-widest mb-3 relative" style={{ color: 'var(--on-dark-muted)' }}>
             Single User License
           </p>
 
           <div className="relative mb-1">
             {hasDiscount && (
-              <p className="text-sm line-through mb-1" style={{ color: 'rgba(255, 255, 255, 0.55)' }}>
+              <p className="text-sm line-through mb-1" style={{ color: 'var(--on-dark-muted)' }}>
                 {price}
               </p>
             )}
-            <p className="text-4xl font-bold" style={{ color: '#ffffff', letterSpacing: '-0.02em' }}>
+            <p className="text-4xl font-bold" style={{ color: 'var(--primary-foreground)', letterSpacing: '-0.02em' }}>
               {displayPrice}
             </p>
           </div>
@@ -46,13 +46,13 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
           {hasDiscount && (
             <span
               className="inline-block px-2.5 py-1 rounded-full text-xs font-semibold mt-2"
-              style={{ background: 'rgba(255, 255, 255, 0.18)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.35)' }}
+              style={{ background: 'var(--on-dark-overlay)', color: 'var(--primary-foreground)', border: '1px solid var(--on-dark-overlay-border)' }}
             >
               20% off
             </span>
           )}
 
-          <p className="text-xs mt-3 relative" style={{ color: 'rgba(255, 255, 255, 0.48)' }}>
+          <p className="text-xs mt-3 relative" style={{ color: 'var(--on-dark-dim)' }}>
             Save more with multi-user license
           </p>
         </div>
