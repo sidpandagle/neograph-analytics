@@ -405,37 +405,36 @@ function RecentDevelopmentsSection({ developments }: { developments: JsonReport[
 
   return (
     <section className="mb-14">
-      <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute left-[18px] top-0 bottom-0 w-px" style={{ background: 'var(--primary)' }} />
-
-        <div className="space-y-6">
-          {sorted.map((d, i) => (
-            <div key={i} className="flex gap-5">
-              {/* Year bubble */}
-              <div className="flex-shrink-0 flex flex-col items-center">
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold z-10"
-                  style={{ background: i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.06)', color: i === 0 ? 'var(--primary-foreground)' : 'var(--primary)', border: `2px solid ${i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.20)'}` }}
-                >
-                  {String(d.year).slice(2)}
-                </div>
-              </div>
-
-              {/* Content card */}
+      <div className="space-y-6">
+        {sorted.map((d, i) => (
+          <div key={i} className="flex items-center gap-5">
+            {/* Year bubble */}
+            <div className="flex-shrink-0">
               <div
-                className="flex-1 rounded-xl p-4 mb-1"
-                style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+                className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
+                style={{
+                  background: i === 0 ? 'var(--primary)' : 'var(--card)',
+                  color: i === 0 ? 'var(--primary-foreground)' : 'var(--primary)',
+                  border: `2px solid ${i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.35)'}`,
+                }}
               >
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-bold" style={{ color: 'var(--primary)' }}>{d.year}</span>
-                  <span className="text-xs font-semibold text-[var(--foreground)]">{d.company}</span>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--content-text)' }}>{d.event}</p>
+                {String(d.year).slice(2)}
               </div>
             </div>
-          ))}
-        </div>
+
+            {/* Content card */}
+            <div
+              className="flex-1 rounded-xl p-4"
+              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+            >
+              <div className="flex items-center gap-2 mb-1.5">
+                <span className="text-xs font-bold" style={{ color: 'var(--primary)' }}>{d.year}</span>
+                <span className="text-xs font-semibold text-[var(--foreground)]">{d.company}</span>
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--content-text)' }}>{d.event}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
