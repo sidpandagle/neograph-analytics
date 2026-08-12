@@ -72,11 +72,11 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
               key={pageNumber}
               onClick={() => onPageChange(pageNumber)}
               className={`
-                min-w-[40px] px-3 py-2 text-sm rounded-lg transition-all
+                min-w-[40px] rounded-pill px-3 py-2 text-sm transition-colors duration-150
                 ${
                   isCurrentPage
-                    ? 'bg-[var(--primary)] text-white font-semibold'
-                    : 'bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--muted)] hover:border-[var(--primary)]'
+                    ? 'bg-[var(--cmi-primary)] font-semibold text-white'
+                    : 'border border-[var(--cmi-line)] bg-white text-[var(--cmi-ink)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]'
                 }
               `}
               aria-label={`Go to page ${pageNumber}`}

@@ -105,7 +105,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -113,16 +113,15 @@ export default function ContactPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-5">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--cmi-on-blue-dim)] px-4 py-1.5 rounded-pill bg-white/10">
               Get in Touch
             </span>
             <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
-              Contact <span className="text-bright-400">NeoGraph Analytics</span>
+              Contact <span className="text-[var(--cmi-sky)]">NeoGraph Analytics</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
               Have questions about our research? We are here to help. Reach out for inquiries, demos, or custom research needs.
             </p>
           </div>

@@ -210,7 +210,7 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
                 <CardContent className="space-y-3 pt-4">
                   <Link href={`/request-sample?report=${encodeURIComponent(pressRelease.title)}`}>
                     <Button
-                      className="w-full bg-[#E3F2FD] text-[#1565C0] hover:bg-[#BBDEFB] hover:text-[#0D47A1] border-[#90CAF9] hover:border-[#64B5F6]"
+                      className="w-full bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary)] border-[var(--cmi-line)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary-pressed)]"
                       variant="outline"
                       size="lg"
                     >

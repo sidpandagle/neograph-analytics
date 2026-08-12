@@ -82,39 +82,38 @@ export default function SearchBar({
   }, []);
 
   const isHeroVariant = variant === 'hero';
-  const inputSizeClasses = isHeroVariant
-    ? 'h-14 md:h-16 text-base md:text-lg'
-    : 'h-10 text-sm';
 
-  const containerClasses = isHeroVariant
-    ? 'w-full max-w-3xl'
-    : 'w-full';
+  const containerClasses = isHeroVariant ? 'w-full max-w-[520px]' : 'w-full';
+
+  const runSearch = () => {
+    if (!query.trim()) return;
+    router.push(`/reports?search=${encodeURIComponent(query)}`);
+    setIsOpen(false);
+    inputRef.current?.blur();
+  };
 
   return (
     <div ref={searchRef} className={cn('relative', containerClasses, className)}>
-      <div className="relative">
-        {/* Search Icon */}
-        <div className={cn(
-          'absolute top-1/2 -translate-y-1/2 pointer-events-none text-[var(--muted-foreground)]',
-          isHeroVariant ? 'left-4 md:left-5' : 'left-3.5'
-        )}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={cn(isHeroVariant ? 'h-5 w-5 md:h-6 md:w-6' : 'h-4 w-4')}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
+      {/* The pill: hairline track with the action button seated inside it. */}
+      <div
+        className={cn(
+          'flex items-center gap-2.5 rounded-pill bg-white border border-[var(--cmi-line)]',
+          'transition-colors duration-150 focus-within:border-[var(--cmi-primary)]',
+          isHeroVariant ? 'pl-[18px] pr-1.5 py-1.5' : 'pl-4 pr-1 py-1'
+        )}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={cn('shrink-0 text-[var(--cmi-meta)]', isHeroVariant ? 'h-[18px] w-[18px]' : 'h-4 w-4')}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
 
-        {/* Input Field */}
         <input
           ref={inputRef}
           type="text"
@@ -123,18 +122,14 @@ export default function SearchBar({
           onKeyDown={handleKeyDown}
           onFocus={() => query && setIsOpen(true)}
           placeholder={placeholder}
+          aria-label="Search reports"
           className={cn(
-            'w-full rounded-xl bg-[var(--card)] text-[var(--foreground)] transition-all duration-200',
-            'border border-[var(--border)] focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:border-[var(--ring)]',
-            'placeholder:text-[var(--muted-foreground)] hover:border-[var(--muted-foreground)]',
-            isHeroVariant
-              ? 'pl-12 md:pl-14 pr-12 md:pr-14'
-              : 'pl-10 pr-10',
-            inputSizeClasses
+            'reports-search-input min-w-0 flex-1 border-none bg-transparent text-[var(--cmi-ink)]',
+            'outline-none placeholder:text-[var(--cmi-meta)]',
+            isHeroVariant ? 'py-2 text-sm' : 'py-1.5 text-[13.5px]'
           )}
         />
 
-        {/* Clear Button */}
         {query && (
           <button
             onClick={() => {
@@ -143,33 +138,37 @@ export default function SearchBar({
               setIsOpen(false);
               inputRef.current?.focus();
             }}
-            className={cn(
-              'absolute top-1/2 -translate-y-1/2 text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors rounded-full p-1 hover:bg-[var(--muted)]',
-              isHeroVariant ? 'right-4 md:right-5' : 'right-3.5'
-            )}
+            className="shrink-0 rounded-full p-1 text-[var(--cmi-meta)] transition-colors hover:bg-[var(--cmi-surface)] hover:text-[var(--cmi-ink)]"
             aria-label="Clear search"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={cn(isHeroVariant ? 'h-5 w-5' : 'h-4 w-4')}
+              className="h-4 w-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeWidth={2}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         )}
+
+        <button
+          onClick={runSearch}
+          className={cn(
+            'shrink-0 rounded-pill bg-[var(--cmi-primary)] font-semibold text-white',
+            'transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)]',
+            isHeroVariant ? 'px-[22px] py-[11px] text-sm' : 'px-4 py-2 text-[13px]'
+          )}
+        >
+          Search
+        </button>
       </div>
 
       {/* Search Results Dropdown */}
       {isOpen && query && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-[var(--card)] border border-[var(--border)] rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto theme-shadow">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-[var(--cmi-line)] rounded-card overflow-hidden z-50 max-h-96 overflow-y-auto shadow-panel">
           {results.length > 0 ? (
             <>
               <div className="p-3 border-b border-[var(--border)]" style={{ backgroundColor: 'var(--muted)' }}>

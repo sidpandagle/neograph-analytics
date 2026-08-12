@@ -12,109 +12,143 @@ import { cn } from "@/lib/utils";
 import { ConsultingService } from "@/lib/api/consulting.types";
 
 const navItems = [
-  { name: "Home", href: "/" },
   { name: "Blog", href: "/blog" },
-  { name: "Press Releases", href: "/press-releases" },
+  { name: "Press", href: "/press-releases" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
-const navLinkBase =
-  "text-sm font-medium transition-colors whitespace-nowrap relative pb-0.5 " +
-  "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[var(--accent)] after:transition-all after:duration-200";
+/* The segmented rail: a soft track with a white puck on the active item. */
+const railItem =
+  "rounded-pill px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-150";
+const railActive = "bg-white font-semibold text-[var(--cmi-ink)]";
+const railIdle = "text-[var(--cmi-idle)] hover:bg-white hover:text-[var(--cmi-ink)]";
 
-const navLinkActive = "text-[var(--foreground)] after:w-full";
-const navLinkInactive = "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--foreground)] hover:after:w-full";
-
+/** Desktop navigation rail. */
 export default function Navigation() {
   const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const consultingServices = consultingServicesData as ConsultingService[];
+
+  return (
+    <nav className="mx-auto hidden items-center gap-1.5 rounded-pill bg-[var(--cmi-rail)] p-1.5 xl:flex">
+      <Link
+        href="/"
+        className={cn(railItem, pathname === "/" ? railActive : railIdle)}
+      >
+        Home
+      </Link>
+
+      <MegaMenu categories={categories} isActive={pathname.startsWith("/reports")} />
+      <ConsultingMenu
+        services={consultingServices}
+        isActive={pathname.startsWith("/consulting") || pathname.startsWith("/services")}
+      />
+
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className={cn(railItem, pathname.startsWith(item.href) ? railActive : railIdle)}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </nav>
+  );
+}
+
+/** Mobile toggle + drawer, rendered from the header's right-hand group. */
+export function MobileNav() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
   const consultingServices = consultingServicesData as ConsultingService[];
 
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    setIsOpen(false);
   }, [pathname]);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isMobileMenuOpen]);
+  }, [isOpen]);
+
+  const drawerLink = "rounded-pill px-4 py-2.5 text-[15px] font-medium transition-colors";
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-6">
-        {navItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={cn(navLinkBase, pathname === item.href ? navLinkActive : navLinkInactive)}
-          >
-            {item.name}
-          </Link>
-        ))}
-
-        <MegaMenu categories={categories} isActive={pathname.startsWith("/reports")} />
-        <ConsultingMenu services={consultingServices} isActive={pathname.startsWith("/consulting")} />
-
-        <Link
-          href="/about"
-          className={cn(navLinkBase, pathname === "/about" ? navLinkActive : navLinkInactive)}
-        >
-          About Us
-        </Link>
-
-        <Link
-          href="/contact"
-          className={cn(navLinkBase, pathname === "/contact" ? navLinkActive : navLinkInactive)}
-        >
-          Contact
-        </Link>
-      </nav>
-
-      {/* Mobile Menu Button */}
       <button
-        className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/40 hover:bg-[var(--muted)] transition-colors"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isMobileMenuOpen}
+        className="flex h-9 w-9 items-center justify-center rounded-pill border border-[var(--cmi-line)] transition-colors hover:border-[var(--cmi-primary)] xl:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
       >
-        <div className="relative w-4 h-4">
-          <span className={cn("absolute left-0 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 rotate-45" : "w-4 top-0.5")} />
-          <span className={cn("absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-0 opacity-0" : "w-3 opacity-100")} />
-          <span className={cn("absolute left-0 h-0.5 bg-[var(--color-charcoal-text)] transition-all duration-300", isMobileMenuOpen ? "w-4 top-1/2 -translate-y-1/2 -rotate-45" : "w-4 bottom-0.5")} />
+        <div className="relative h-4 w-4">
+          <span
+            className={cn(
+              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              isOpen ? "top-1/2 w-4 -translate-y-1/2 rotate-45" : "top-0.5 w-4"
+            )}
+          />
+          <span
+            className={cn(
+              "absolute left-0 top-1/2 h-0.5 -translate-y-1/2 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              isOpen ? "w-0 opacity-0" : "w-3 opacity-100"
+            )}
+          />
+          <span
+            className={cn(
+              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              isOpen ? "top-1/2 w-4 -translate-y-1/2 -rotate-45" : "bottom-0.5 w-4"
+            )}
+          />
         </div>
       </button>
 
-      {/* Mobile Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden" onClick={() => setIsMobileMenuOpen(false)} aria-hidden="true" />
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-sm xl:hidden"
+          onClick={() => setIsOpen(false)}
+          aria-hidden="true"
+        />
       )}
 
-      {/* Mobile Drawer */}
+      {/* Drawer — an ink panel sliding onto the desk. */}
       <div
         className={cn(
-          "fixed top-[62px] right-0 h-[calc(100vh-62px)] w-72 z-50 md:hidden",
-          "bg-[var(--primary)]",
-          "transform transition-transform duration-300 ease-out",
-          "overflow-y-auto"
+          "fixed right-3 top-[76px] z-50 h-[calc(100vh-96px)] w-[min(320px,calc(100vw-24px))] xl:hidden",
+          "overflow-y-auto rounded-panel bg-[var(--cmi-ink)] p-5",
+          "transition-[transform,opacity] duration-300 ease-out"
         )}
-        style={{ transform: isMobileMenuOpen ? "translateX(0)" : "translateX(100%)" }}
+        style={{
+          transform: isOpen ? "translateX(0)" : "translateX(calc(100% + 16px))",
+          opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? "auto" : "none",
+        }}
       >
-        <nav className="flex flex-col p-4">
+        <nav className="flex flex-col gap-1">
+          <Link
+            href="/"
+            className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+          >
+            Home
+          </Link>
+          <Link
+            href="/reports"
+            className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+          >
+            All Reports
+          </Link>
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              onClick={() => setIsMobileMenuOpen(false)}
               className={cn(
-                "py-3 px-4 text-base font-medium rounded-lg transition-colors",
-                "hover:bg-white/10",
-                pathname === item.href ? "text-[var(--accent)]" : "text-white/80"
+                drawerLink,
+                pathname.startsWith(item.href)
+                  ? "bg-[var(--cmi-primary)] text-white"
+                  : "text-white/85 hover:bg-white/10"
               )}
             >
               {item.name}
@@ -122,56 +156,53 @@ export default function Navigation() {
           ))}
 
           <Link
-            href="/about"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/about" ? "text-[var(--accent)]" : "text-white/80")}
+            href="/request-sample"
+            className="mt-2 rounded-pill bg-white px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
           >
-            About Us
+            Request Sample
           </Link>
 
-          <Link
-            href="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/contact" ? "text-[var(--accent)]" : "text-white/80")}
-          >
-            Contact
-          </Link>
-
-          {/* Consulting */}
-          <div className="mt-4 pt-4 border-t border-white/10">
-            <span className="px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">
+          <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
+            <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
               Consulting &amp; Services
             </span>
             <div className="mt-2 flex flex-col">
-              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-2 px-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/services" ? "text-[var(--accent)]" : "text-white/70")}>
+              <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10")}>
                 All Services
               </Link>
               {consultingServices.map((service) => (
-                <Link key={service.id} href={`/consulting/${service.slug}`} onClick={() => setIsMobileMenuOpen(false)} className="py-2 px-4 text-sm text-white/50 rounded-lg hover:bg-white/10 hover:text-white/80 transition-colors">
+                <Link
+                  key={service.id}
+                  href={`/consulting/${service.slug}`}
+                  className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
+                >
                   {service.title}
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Reports */}
-          <div className="mt-4 pt-4 border-t border-white/10">
-            <span className="px-4 text-xs font-semibold text-white/40 uppercase tracking-wider">Reports</span>
+          <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
+            <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+              Industries
+            </span>
             <div className="mt-2 flex flex-col">
-              <Link href="/reports" onClick={() => setIsMobileMenuOpen(false)} className={cn("py-3 px-4 text-base font-medium rounded-lg transition-colors hover:bg-white/10", pathname === "/reports" ? "text-[var(--accent)]" : "text-white/80")}>
-                All Reports
-              </Link>
               {categories.map((category) => (
-                <Link key={category.id} href={`/reports?category=${category.slug}`} onClick={() => setIsMobileMenuOpen(false)} className="py-2 px-4 text-sm text-white/50 rounded-lg hover:bg-white/10 hover:text-white/80 transition-colors">
+                <Link
+                  key={category.id}
+                  href={`/reports?category=${category.slug}`}
+                  className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
+                >
                   {category.name}
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Social */}
-          <div className="mt-6 pt-6 px-4 border-t border-white/10">
-            <span className="text-xs font-semibold text-white/40 uppercase tracking-wider">Follow Us</span>
+          <div className="mt-6 border-t border-[var(--cmi-footer-line)] px-4 pt-5">
+            <span className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+              Follow Us
+            </span>
             <div className="mt-3 flex gap-4">
               {[
                 { href: "https://facebook.com/neographanalytics", Icon: Facebook, label: "Facebook" },
@@ -179,8 +210,15 @@ export default function Navigation() {
                 { href: "https://linkedin.com/company/neographanalytics", Icon: Linkedin, label: "LinkedIn" },
                 { href: "https://twitter.com/neographanalytics", Icon: Twitter, label: "X (Twitter)" },
               ].map(({ href, Icon, label }) => (
-                <Link key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[var(--accent)] transition-colors" aria-label={label}>
-                  <Icon className="w-5 h-5" />
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cmi-footer-link)] transition-colors hover:text-white"
+                  aria-label={label}
+                >
+                  <Icon className="h-5 w-5" />
                 </Link>
               ))}
             </div>

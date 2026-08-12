@@ -21,12 +21,12 @@ const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(
     },
     ref
   ) => {
-    const baseStyles = 'bg-[var(--muted)] animate-pulse';
+    const baseStyles = 'bg-[var(--cmi-surface)] animate-pulse';
 
     const variants = {
-      text: 'h-4 w-full rounded',
+      text: 'h-4 w-full rounded-pill',
       circular: 'rounded-full',
-      rectangular: 'rounded-lg',
+      rectangular: 'rounded-tile',
     };
 
     const animations = {
@@ -90,7 +90,7 @@ const SkeletonCard = forwardRef<HTMLDivElement, SkeletonCardProps>(
       <div
         ref={ref}
         className={cn(
-          'border border-[var(--border)] rounded-xl p-6 space-y-4',
+          'border border-[var(--cmi-line)] rounded-card p-6.5 space-y-4',
           className
         )}
         {...props}

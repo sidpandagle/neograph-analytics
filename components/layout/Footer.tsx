@@ -3,13 +3,18 @@ import { Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-reac
 import Logo from "./Logo";
 import { CONTACT_INFO } from "@/lib/contact";
 
-const quickLinks = [
-  { href: "/reports", label: "Research Reports" },
-  { href: "/blog", label: "Blog" },
-  { href: "/press-releases", label: "Press Releases" },
-  { href: "/services", label: "Services" },
+const companyLinks = [
   { href: "/about", label: "About Us" },
+  { href: "/services", label: "Consulting" },
+  { href: "/request-demo", label: "Request a Demo" },
   { href: "/contact", label: "Contact" },
+];
+
+const researchLinks = [
+  { href: "/reports", label: "Research Reports" },
+  { href: "/press-releases", label: "Press Releases" },
+  { href: "/blog", label: "Blog" },
+  { href: "/request-sample", label: "Request Sample" },
 ];
 
 const consultingLinks = [
@@ -21,9 +26,9 @@ const consultingLinks = [
 ];
 
 const legalLinks = [
-  { href: "/legal/privacy-policy", label: "Privacy Policy" },
+  { href: "/legal/privacy-policy", label: "Privacy" },
   { href: "/legal/refund-policy", label: "Refund Policy" },
-  { href: "/legal/cancellation-policy", label: "Cancellation Policy" },
+  { href: "/legal/cancellation-policy", label: "Cancellation" },
 ];
 
 const socialLinks = [
@@ -33,22 +38,35 @@ const socialLinks = [
   { href: "https://twitter.com/neographanalytics", label: "X (Twitter)", Icon: Twitter },
 ];
 
+const columnHeading =
+  "text-[12px] font-bold uppercase tracking-[0.1em] text-white";
+const footerLink =
+  "text-[13.5px] text-[var(--cmi-footer-link)] transition-colors hover:text-white";
+
+/**
+ * Ink is reserved for the footer — the one dark panel on the desk,
+ * squared off at the bottom so it anchors the page.
+ */
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="theme-hero border-t" style={{ borderColor: 'var(--border)' }}>
-      <div className="container mx-auto px-4 md:px-6 py-14 md:py-16">
-
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-
+    <div className="desk mt-auto">
+      <footer className="rounded-panel rounded-b-none bg-[var(--cmi-ink)] px-6 pb-8 pt-9 md:px-11 md:pb-[30px] md:pt-11">
+        <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-[1.3fr_repeat(4,1fr)]">
           {/* Brand */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3">
             <Logo variant="light" />
-            <p className="text-sm leading-relaxed max-w-[220px] theme-hero-muted">
-              Comprehensive market intelligence and strategic insights for the global healthcare industry.
+            <p className="max-w-[240px] text-[13.5px] leading-[1.6] text-[var(--cmi-footer-link)]">
+              Research reports and advisory for the global healthcare industry.
             </p>
-            <div className="flex gap-3.5">
+            <a
+              href={`tel:${CONTACT_INFO.offices.usa.phone}`}
+              className="text-[13.5px] font-semibold text-[var(--cmi-sky)] transition-colors hover:text-white"
+            >
+              {CONTACT_INFO.offices.usa.phoneFormatted}
+            </a>
+            <div className="mt-1 flex gap-3">
               {socialLinks.map(({ href, label, Icon }) => (
                 <Link
                   key={label}
@@ -56,85 +74,82 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200"
-                  style={{ background: 'var(--primary)', opacity: 0.08, color: 'var(--primary)' }}
+                  className="flex h-8 w-8 items-center justify-center rounded-pill bg-white/[0.07] text-[var(--cmi-footer-link)] transition-colors duration-150 hover:bg-[var(--cmi-primary)] hover:text-white"
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="h-4 w-4" />
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Quick links */}
-          <div>
-            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
-              Quick Links
-            </h3>
-            <ul className="space-y-2.5">
-              {quickLinks.map(({ href, label }) => (
-                <li key={label}>
-                  <Link href={href} className="text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Company */}
+          <div className="flex flex-col gap-2.5">
+            <span className={columnHeading}>Company</span>
+            {companyLinks.map(({ href, label }) => (
+              <Link key={label} href={href} className={footerLink}>
+                {label}
+              </Link>
+            ))}
           </div>
 
-          {/* Consulting */}
-          <div>
-            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
-              Consulting
-            </h3>
-            <ul className="space-y-2.5">
-              {consultingLinks.map(({ href, label }) => (
-                <li key={label}>
-                  <Link href={href} className="text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Research */}
+          <div className="flex flex-col gap-2.5">
+            <span className={columnHeading}>Research</span>
+            {researchLinks.map(({ href, label }) => (
+              <Link key={label} href={href} className={footerLink}>
+                {label}
+              </Link>
+            ))}
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="mb-4 text-xs font-semibold uppercase theme-hero-faint" style={{ letterSpacing: '0.12em' }}>
-              Contact
-            </h3>
-            <div className="space-y-3">
-              <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center gap-2.5 text-sm theme-hero-muted hover:opacity-100 transition-opacity duration-150">
-                <Mail className="w-4 h-4 shrink-0 text-[var(--accent)]" />
-                {CONTACT_INFO.email}
-              </a>
-              <div className="flex items-center gap-2.5 text-sm theme-hero-muted">
-                <Phone className="w-4 h-4 shrink-0 text-[var(--accent)]" />
-                <span>USA: {CONTACT_INFO.offices.usa.phoneFormatted}</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-sm theme-hero-muted">
-                <Phone className="w-4 h-4 shrink-0 text-[var(--accent)]" />
-                <span>India: {CONTACT_INFO.offices.india.phoneFormatted}</span>
-              </div>
-            </div>
+          {/* Services */}
+          <div className="flex flex-col gap-2.5">
+            <span className={columnHeading}>Services</span>
+            {consultingLinks.map(({ href, label }) => (
+              <Link key={label} href={href} className={footerLink}>
+                {label}
+              </Link>
+            ))}
           </div>
 
+          {/* Support */}
+          <div className="flex flex-col gap-2.5">
+            <span className={columnHeading}>Support</span>
+            <a href={`mailto:${CONTACT_INFO.email}`} className={`${footerLink} flex items-center gap-2`}>
+              <Mail className="h-3.5 w-3.5 shrink-0 text-[var(--cmi-sky)]" />
+              <span className="truncate">{CONTACT_INFO.email}</span>
+            </a>
+            <span className={`${footerLink} flex items-center gap-2`}>
+              <Phone className="h-3.5 w-3.5 shrink-0 text-[var(--cmi-sky)]" />
+              USA {CONTACT_INFO.offices.usa.phoneFormatted}
+            </span>
+            <span className={`${footerLink} flex items-center gap-2`}>
+              <Phone className="h-3.5 w-3.5 shrink-0 text-[var(--cmi-sky)]" />
+              India {CONTACT_INFO.offices.india.phoneFormatted}
+            </span>
+            <Link href="/request-demo" className={footerLink}>
+              Request a Demo
+            </Link>
+          </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderColor: 'hsl(var(--primary-foreground-hsl) / 0.08)' }}>
-          <p className="text-xs theme-hero-faint">
+        <div className="mt-9 flex flex-col items-center justify-between gap-4 border-t border-[var(--cmi-footer-line)] pt-5 sm:flex-row">
+          <span className="text-[12.5px] text-[var(--cmi-footer-meta)]">
             &copy; {currentYear} NeoGraph Analytics Pvt. Ltd. All rights reserved.
-          </p>
-          <div className="flex items-center gap-5">
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             {legalLinks.map(({ href, label }) => (
-              <Link key={label} href={href} className="text-xs theme-hero-faint hover:opacity-100 transition-opacity duration-150">
+              <Link
+                key={label}
+                href={href}
+                className="text-[12.5px] text-[var(--cmi-footer-link)] transition-colors hover:text-white"
+              >
                 {label}
               </Link>
             ))}
           </div>
         </div>
-
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 }

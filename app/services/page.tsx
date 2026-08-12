@@ -85,7 +85,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden theme-hero py-20 md:py-28">
+      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -113,13 +113,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Cards */}
-      <section className="py-16 md:py-20 bg-[var(--background)]">
+      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {services.map((svc) => (
               <div
                 key={svc.title}
-                className="flex flex-col theme-card border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                className="flex flex-col theme-card border rounded-card overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Accent stripe */}
                 <div className={`h-[3px] shrink-0 ${svc.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
@@ -127,7 +127,7 @@ export default function ServicesPage() {
                 <div className="p-8 flex flex-col gap-5 flex-1">
                   {/* Icon + Title */}
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${svc.accent === 'amber' ? 'bg-amber-50 text-amber-600' : 'bg-ocean-50 text-ocean-700'}`}>
+                    <div className={`w-12 h-12 rounded-tile flex items-center justify-center shrink-0 ${svc.accent === 'amber' ? 'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary)]' : 'bg-[var(--cmi-surface)] text-[var(--cmi-primary-pressed)]'}`}>
                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d={svc.icon} />
                       </svg>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Research Process */}
-      <section className="py-16 md:py-20 bg-[var(--muted)]">
+      <section className="rounded-panel bg-[var(--cmi-surface)] px-6 py-7 md:px-11 md:py-11">
         <Container size="xl">
           <div className="text-center space-y-4 mb-12">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-600 px-3 py-1.5 rounded-full bg-ocean-50 border border-ocean-100">
@@ -207,7 +207,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA — dark navy */}
-      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{

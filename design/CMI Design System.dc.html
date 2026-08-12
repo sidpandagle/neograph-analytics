@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #EDF1F9; }
+  * { box-sizing: border-box; }
+  a { color: #1541E3; text-decoration: none; }
+  a:hover { color: #0E2FA8; }
+  button { font-family: inherit; cursor: pointer; }
+</style>
+</helmet>
+<div style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: #EDF1F9; padding: 32px 24px 60px; color: #0A1633;">
+  <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+
+    <header style="background: #1541E3; border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 14px;">
+      <span style="font-size: 12px; font-weight: 700; color: #A9C0FF; letter-spacing: 0.16em; text-transform: uppercase;">Design system v1.0</span>
+      <h1 style="font-family: 'Outfit', sans-serif; font-size: 46px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: #FFFFFF; margin: 0;">Custom Market Insights</h1>
+      <p style="font-size: 16px; line-height: 1.55; color: #C9D8FF; margin: 0; max-width: 560px;">A confident, data-forward system: one vivid blue, one soft sky, generous white panels on a cool grey desk. Built for research reports, dashboards and marketing pages.</p>
+    </header>
+
+    <section style="background: #FFFFFF; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Color</h2>
+        <p style="font-size: 14.5px; color: #5C6B8A; margin: 0;">Primary blue carries all action and emphasis. Sky is for data surfaces and illustration. Ink is reserved for footers and dark cards.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #1541E3;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Primary</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#1541E3 · buttons, links, KPI numbers</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #0E2FA8;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Primary pressed</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#0E2FA8 · hover &amp; active states</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #2C55EB;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Primary raised</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#2C55EB · cards inside blue panels</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #0A1633;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Ink</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#0A1633 · headings, footer</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #BFDCF7;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Sky</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#BFDCF7 · data panels, chart base</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #C9D8FF;"></div>
+          <div style="font-size: 14px; font-weight: 600;">On-blue text</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#C9D8FF · body copy on primary</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #F4F7FE; border: 1px solid #E3E9F7;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Surface</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#F4F7FE · chips, inner cards · line #E3E9F7</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="height: 108px; border-radius: 16px; background: #5C6B8A;"></div>
+          <div style="font-size: 14px; font-weight: 600;">Muted</div>
+          <div style="font-size: 12.5px; color: #8A97B2;">#5C6B8A body · #8A97B2 meta</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border-radius: 24px; padding: 40px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Typography</h2>
+          <p style="font-size: 14.5px; color: #5C6B8A; margin: 0;">Outfit for display and numbers, Plus Jakarta Sans for everything read at length.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Display / Outfit 700 · 54/56 · -3%</span>
+            <span style="font-family: 'Outfit', sans-serif; font-size: 54px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.04;">Market Intelligence</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">H2 / Outfit 700 · 36px</span>
+            <span style="font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -0.02em;">Latest market insights</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">H3 / Outfit 600 · 22px</span>
+            <span style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 600;">Global Myo-Inositol Market</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Body / Jakarta 400 · 15/24</span>
+            <span style="font-size: 15px; line-height: 1.6; color: #5C6B8A; max-width: 520px;">Reports cover revenue estimation and forecast, company profiles, the competitive landscape and recent trends, segmented by product, application and region.</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Eyebrow / Jakarta 700 · 12px · +14%</span>
+            <span style="font-size: 12px; font-weight: 700; color: #1541E3; letter-spacing: 0.14em; text-transform: uppercase;">Trending reports by industry</span>
+          </div>
+        </div>
+      </div>
+      <div style="background: #F4F7FE; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 600;">Geometry &amp; spacing</span>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 56px; height: 40px; background: #FFFFFF; border-radius: 24px;"></div><span style="font-size: 13.5px; color: #5C6B8A;">24px — page panels</span></div>
+          <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 56px; height: 40px; background: #FFFFFF; border-radius: 18px;"></div><span style="font-size: 13.5px; color: #5C6B8A;">18px — cards, header</span></div>
+          <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 56px; height: 40px; background: #FFFFFF; border-radius: 14px;"></div><span style="font-size: 13.5px; color: #5C6B8A;">14px — inner tiles</span></div>
+          <div style="display: flex; align-items: center; gap: 12px;"><div style="width: 56px; height: 40px; background: #FFFFFF; border-radius: 999px;"></div><span style="font-size: 13.5px; color: #5C6B8A;">Full — buttons, chips, nav</span></div>
+        </div>
+        <div style="height: 1px; background: #E3E9F7;"></div>
+        <span style="font-size: 13.5px; line-height: 1.6; color: #5C6B8A;">Scale: 4 · 8 · 12 · 18 · 26 · 44. Panels use 44px padding, cards 26px, tiles 16–18px, panel gap 20px.</span>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 26px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Components</h2>
+        <p style="font-size: 14.5px; color: #5C6B8A; margin: 0;">The pieces the landing page is assembled from.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+        <div style="border: 1px solid #E3E9F7; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 16px;">
+          <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Buttons</span>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button style="border: none; background: #1541E3; color: #FFFFFF; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 600;" style-hover="background: #0E2FA8;">Download sample</button>
+            <button style="background: #FFFFFF; border: 1px solid #E3E9F7; color: #0A1633; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 600;" style-hover="border-color: #1541E3;">Talk to an analyst</button>
+            <button style="border: none; background: transparent; color: #1541E3; padding: 14px 6px; font-size: 15px; font-weight: 600;">Read more →</button>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="font-size: 12px; font-weight: 700; color: #1541E3; background: #EDF1FE; padding: 6px 12px; border-radius: 999px;">CAGR 9.39%</span>
+            <span style="font-size: 12px; font-weight: 600; color: #0A1633; background: #F4F7FE; padding: 6px 12px; border-radius: 999px;">2026–2035</span>
+            <span style="font-size: 12px; font-weight: 600; color: #0A1633; background: #F4F7FE; padding: 6px 12px; border-radius: 999px;">Asia Pacific 45.1%</span>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #E3E9F7; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 16px;">
+          <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Search &amp; tabs</span>
+          <div style="display: flex; gap: 10px; background: #FFFFFF; border: 1px solid #E3E9F7; border-radius: 999px; padding: 5px 5px 5px 18px; align-items: center;">
+            <span style="font-size: 15px; color: #8A97B2;">⌕</span>
+            <span style="flex: 1; font-size: 14px; color: #8A97B2;">Search 500+ reports</span>
+            <button style="border: none; background: #1541E3; color: #FFFFFF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 600;">Search</button>
+          </div>
+          <div style="display: flex; gap: 6px; background: #F4F7FE; padding: 6px; border-radius: 999px; align-self: flex-start;">
+            <button style="border: none; background: #1541E3; color: #FFFFFF; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;">Healthcare</button>
+            <button style="border: none; background: transparent; color: #4C5B7A; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;">Chemicals</button>
+            <button style="border: none; background: transparent; color: #4C5B7A; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;">Technology</button>
+          </div>
+        </div>
+
+        <div style="border: 1px solid #E3E9F7; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span style="font-size: 11.5px; font-weight: 700; color: #5C6B8A; letter-spacing: 0.08em; text-transform: uppercase;">Food &amp; Beverages</span>
+            <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2;">CMI90719</span>
+          </div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 600; line-height: 1.25; margin: 0;">Global Myo-Inositol Market 2026–2035</h3>
+          <div style="display: flex; align-items: center; gap: 14px; background: #F9FBFF; border-radius: 14px; padding: 16px;">
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-size: 11px; font-weight: 600; color: #8A97B2;">2026</span>
+              <span style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700;">$1.31B</span>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; gap: 4px;">
+              <div style="flex: 1; height: 3px; background: #D8E2F5; border-radius: 999px;"></div>
+              <div style="flex: 2; height: 3px; background: #1541E3; border-radius: 999px;"></div>
+              <span style="font-size: 11px; color: #1541E3; font-weight: 700;">▸</span>
+            </div>
+            <div style="display: flex; flex-direction: column; text-align: right;">
+              <span style="font-size: 11px; font-weight: 600; color: #8A97B2;">2035</span>
+              <span style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; color: #1541E3;">$2.95B</span>
+            </div>
+          </div>
+          <span style="font-size: 12.5px; color: #5C6B8A;">Report card — the primary content unit</span>
+        </div>
+
+        <div style="border: 1px solid #E3E9F7; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2; letter-spacing: 0.1em; text-transform: uppercase;">Accordion</span>
+          <div style="background: #1541E3; border-radius: 14px; padding: 18px 22px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+              <span style="font-size: 15.5px; font-weight: 600; color: #FFFFFF;">What does a CMI report include?</span>
+              <span style="font-size: 13px; font-weight: 700; color: #FFFFFF;">—</span>
+            </div>
+            <p style="font-size: 14px; line-height: 1.6; color: #C9D8FF; margin: 0;">Revenue forecasts, company profiles, competitive landscape and trends, segmented by product, application and region.</p>
+          </div>
+          <div style="background: #F9FBFF; border: 1px solid #E3E9F7; border-radius: 14px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+            <span style="font-size: 15.5px; font-weight: 600;">Can I request a sample before buying?</span>
+            <span style="font-size: 13px; font-weight: 700;">+</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+        <div style="background: #1541E3; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
+          <span style="font-size: 11.5px; font-weight: 700; color: #A9C0FF; letter-spacing: 0.1em; text-transform: uppercase;">KPI row on primary</span>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">3,725+</span>
+              <span style="font-size: 12px; font-weight: 500; color: #A9C0FF;">Satisfied clients</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">500+</span>
+              <span style="font-size: 12px; font-weight: 500; color: #A9C0FF;">Research reports</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">25</span>
+              <span style="font-size: 12px; font-weight: 500; color: #A9C0FF;">Therapeutic areas</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <div style="background: #2C55EB; border-radius: 12px; padding: 13px 16px; display: flex; gap: 12px; align-items: center; flex: 1;">
+              <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">01</span>
+              <span style="font-size: 14px; color: #FFFFFF;">Numbered benefit row</span>
+            </div>
+          </div>
+        </div>
+        <div style="background: #BFDCF7; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-size: 11.5px; font-weight: 700; color: #34557F; letter-spacing: 0.1em; text-transform: uppercase;">Data surface</span>
+          <div style="background: #FFFFFF; border-radius: 14px; padding: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: end; height: 150px;">
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700;">$3.06B</span>
+              <div style="height: 55%; background: #BFDCF7; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2025</span>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700;">$3.24B</span>
+              <div style="height: 62%; background: #6E97F2; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2026</span>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700; color: #1541E3;">$5.59B</span>
+              <div style="height: 100%; background: #1541E3; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2035</span>
+            </div>
+          </div>
+          <span style="font-size: 12.5px; color: #34557F;">Charts sit on white inside a sky panel — never directly on the desk grey.</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px;">
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Layout rules</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        <div style="background: #F4F7FE; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600;">Panels on a desk</span>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5C6B8A; margin: 0;">Every section is a 24px-radius panel on #EDF1F9, max width 1240px, 20px between panels.</p>
+        </div>
+        <div style="background: #F4F7FE; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600;">Alternate weight</span>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5C6B8A; margin: 0;">Blue and white panels alternate; no more than two blue panels in a row, ink only for the footer.</p>
+        </div>
+        <div style="background: #F4F7FE; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600;">Numbers lead</span>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #5C6B8A; margin: 0;">Market sizes and CAGR set in Outfit 700; the growth figure always gets the primary blue.</p>
+        </div>
+      </div>
+      <a href="./CMI Landing Page.dc.html" style="font-size: 15px; font-weight: 600;">See the system applied → CMI landing page</a>
+    </section>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

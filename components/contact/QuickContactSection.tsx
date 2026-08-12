@@ -2,7 +2,7 @@ import { CONTACT_INFO } from '@/lib/contact';
 
 export default function QuickContactSection() {
   return (
-    <div className="bg-[#E8F1F8] rounded-lg p-4 space-y-3">
+    <div className="bg-[var(--cmi-surface)] rounded-soft p-4 space-y-3">
       <h2 className="text-xl font-bold text-[var(--foreground)]">
         Quick Contact
       </h2>

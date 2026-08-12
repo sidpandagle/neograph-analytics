@@ -25,35 +25,31 @@ export default function TrustedPartnersSection() {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="bg-[var(--background)] border-y py-14" style={{ borderColor: 'var(--border)' }}>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mb-10">
-        <div className="flex items-center gap-6">
-          <div className="h-[1px] flex-1" style={{ background: 'var(--border)' }} />
-          <p
-            className="text-[10px] font-semibold uppercase whitespace-nowrap"
-            style={{ color: 'var(--muted-foreground)', letterSpacing: '0.18em' }}
-          >
-            Our research shapes decisions at
-          </p>
-          <div className="h-[1px] flex-1" style={{ background: 'var(--border)' }} />
-        </div>
-      </div>
+    <section className="overflow-hidden rounded-panel bg-white px-0 py-8 md:py-10">
+      <p className="mb-6 px-7 text-center text-[11.5px] font-bold uppercase tracking-[0.14em] text-[var(--cmi-meta)] md:px-11">
+        Our research shapes decisions at
+      </p>
 
-      {/* Marquee */}
-      <div className="relative overflow-hidden">
-        <div className="flex animate-scroll-horizontal gap-5 w-max">
+      {/* Marquee, faded into the panel edges so it reads as continuous. */}
+      <div
+        className="relative"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)',
+        }}
+      >
+        <div className="flex w-max animate-scroll-horizontal gap-3">
           {duplicatedPartners.map((partner, index) => (
             <div
               key={`${partner.id}-${index}`}
-              className="flex-shrink-0 w-[152px] h-[72px] flex items-center justify-center px-5 bg-[var(--card)] rounded-xl grayscale opacity-55 transition-all duration-300 hover:grayscale-0 hover:opacity-100 border"
-              style={{ borderColor: 'var(--border)', boxShadow: '0px 0px 0px 1px hsl(var(--primary-hsl) / 0.04), rgba(0,0,0,0.04) 0px 1px 2px 0px' }}
+              className="flex h-[72px] w-[152px] flex-shrink-0 items-center justify-center rounded-tile bg-[var(--cmi-surface)] px-5 opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={partner.logo}
                 alt={`${partner.name} logo`}
                 width={110}
                 height={52}
-                className="object-contain max-w-full max-h-full"
+                className="max-h-full max-w-full object-contain"
               />
             </div>
           ))}

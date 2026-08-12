@@ -64,7 +64,7 @@ export default function NotFoundPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -72,7 +72,6 @@ export default function NotFoundPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-5">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-ocean-600/[0.18] border border-ocean-500/30 rounded-full mb-2">
@@ -82,9 +81,9 @@ export default function NotFoundPage() {
             </div>
             <p className="text-6xl font-bold text-white/20 leading-none tracking-tight">404</p>
             <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
-              Page <span className="text-bright-400">Not Found</span>
+              Page <span className="text-[var(--cmi-sky)]">Not Found</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
               The report or page you are looking for does not exist or may have been moved. Let us help you find what you need.
             </p>
           </div>

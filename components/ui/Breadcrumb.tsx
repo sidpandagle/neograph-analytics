@@ -18,7 +18,7 @@ export const Breadcrumb = React.forwardRef<HTMLElement, BreadcrumbProps>(
       <nav
         ref={ref}
         aria-label="Breadcrumb"
-        className={cn('flex items-center text-sm text-[var(--muted-foreground)]', className)}
+        className={cn('flex items-center text-[12.5px] text-[var(--cmi-meta)]', className)}
       >
         <ol className="flex items-center gap-2">
           {items.map((item, index) => {

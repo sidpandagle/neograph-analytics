@@ -18,7 +18,7 @@ export default async function PressReleasesPage() {
   if (isApiError(response)) {
     console.error('Failed to fetch press releases:', response.message);
     return (
-      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center space-y-5">
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
@@ -38,7 +38,7 @@ export default async function PressReleasesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden theme-hero py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -68,7 +68,7 @@ export default async function PressReleasesPage() {
       </section>
 
       {/* Press Releases Grid */}
-      <section className="py-14 md:py-20 bg-[var(--muted)]">
+      <section className="rounded-panel bg-[var(--cmi-surface)] px-6 py-7 md:px-11 md:py-11">
         <Container>
           <Grid cols={3}>
             {pressReleases.map((pr) => (

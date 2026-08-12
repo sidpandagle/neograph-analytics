@@ -1,32 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, IBM_Plex_Serif } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { StructuredData, generateOrganizationSchema, generateWebSiteSchema, generateLocalBusinessSchema } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const inter = Inter({
-  variable: "--font-inter",
+/* Outfit carries display type and every number. */
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
   preload: true,
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+/* Plus Jakarta Sans for everything read at length. */
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "600", "700", "900"],
-  style: ["normal", "italic"],
-});
-
-const ibmPlexSerif = IBM_Plex_Serif({
-  variable: "--font-ibm-plex-serif",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -88,12 +83,15 @@ export default function RootLayout({
         <StructuredData data={generateLocalBusinessSchema()} />
       </head>
       <body
-        className={`${inter.variable} ${fraunces.variable} ${ibmPlexSerif.variable} antialiased`}
+        className={`${outfit.variable} ${jakarta.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {/* The desk: every section below is a rounded panel floating on it. */}
+        <div className="flex min-h-screen flex-col pt-4 md:pt-5">
+          <Header />
+          <main className="desk flex-1 pb-5">{children}</main>
+          <Footer />
+        </div>
       </body>
       <GoogleAnalytics gaId="G-NJ1DNL58KB" />
     </html>

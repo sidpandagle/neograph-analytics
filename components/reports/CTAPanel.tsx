@@ -9,97 +9,79 @@ interface CTAPanelProps {
 }
 
 const CheckIcon = () => (
-  <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none">
+  <svg className="h-4 w-4 flex-shrink-0 text-[var(--cmi-primary)]" viewBox="0 0 16 16" fill="none" aria-hidden="true">
     <circle cx="8" cy="8" r="7.5" stroke="currentColor" strokeOpacity="0.3" />
     <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
+/** Sticky purchase panel — a blue price header over a white body. */
 export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
   ({ price, discounted_price, reportTitle, reportSlug }, ref) => {
     const displayPrice = discounted_price || price;
     const hasDiscount = Boolean(discounted_price);
 
     return (
-      <div ref={ref} className="rounded-2xl overflow-hidden theme-card theme-shadow border">
-        {/* Radial Twilight pricing header */}
-        <div
-          className="px-5 pt-6 pb-5 text-center relative overflow-hidden"
-          style={{ background: 'var(--primary)' }}
-        >
-
-          <p className="text-xs uppercase tracking-widest mb-3 relative" style={{ color: 'var(--on-dark-muted)' }}>
-            Single User License
+      <div
+        ref={ref}
+        className="overflow-hidden rounded-card border border-[var(--cmi-line)] bg-white"
+      >
+        <div className="bg-[var(--cmi-primary)] px-5 pb-5 pt-6 text-center">
+          <p className="mb-3 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+            Single user licence
           </p>
 
-          <div className="relative mb-1">
+          <div className="mb-1">
             {hasDiscount && (
-              <p className="text-sm line-through mb-1" style={{ color: 'var(--on-dark-muted)' }}>
-                {price}
-              </p>
+              <p className="mb-1 text-sm text-[var(--cmi-on-blue)] line-through">{price}</p>
             )}
-            <p className="text-4xl font-bold" style={{ color: 'var(--primary-foreground)', letterSpacing: '-0.02em' }}>
-              {displayPrice}
-            </p>
+            <p className="num text-[38px] leading-none text-white">{displayPrice}</p>
           </div>
 
           {hasDiscount && (
-            <span
-              className="inline-block px-2.5 py-1 rounded-full text-xs font-semibold mt-2"
-              style={{ background: 'var(--on-dark-overlay)', color: 'var(--primary-foreground)', border: '1px solid var(--on-dark-overlay-border)' }}
-            >
+            <span className="mt-3 inline-block rounded-pill bg-[var(--cmi-primary-raised)] px-3 py-1 text-xs font-semibold text-white">
               20% off
             </span>
           )}
 
-          <p className="text-xs mt-3 relative" style={{ color: 'var(--on-dark-dim)' }}>
-            Save more with multi-user license
+          <p className="mt-3 text-xs text-[var(--cmi-on-blue-dim)]">
+            Save more with a multi-user licence
           </p>
         </div>
 
-        {/* CTAs + included */}
-        <div className="p-5 space-y-3" style={{ background: 'var(--card)' }}>
-          <Link href={reportSlug ? `/checkout/${reportSlug}` : '/contact'} className="block">
-            <button
-              className="w-full py-3 px-4 rounded-xl font-semibold text-sm text-[var(--accent-foreground)] transition-all duration-200 bg-[var(--accent)] hover:opacity-90"
-              style={{ boxShadow: '0 4px 14px hsl(var(--accent-hsl) / 0.30)' }}
-            >
-              Buy Report Now
-            </button>
+        <div className="space-y-3 p-5">
+          <Link
+            href={reportSlug ? `/checkout/${reportSlug}` : '/contact'}
+            className="block w-full rounded-pill bg-[var(--cmi-primary)] px-4 py-3 text-center text-sm font-semibold text-white transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)] hover:text-white"
+          >
+            Buy report now
           </Link>
 
-          <Link href={`/request-sample${reportTitle ? `?report=${encodeURIComponent(reportTitle)}` : ''}`} className="block">
-            <button
-              className="w-full py-2.5 px-4 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-85"
-              style={{ background: 'var(--muted)', color: 'var(--primary)', border: '1px solid var(--border)' }}
-            >
-              Request Free Sample
-            </button>
+          <Link
+            href={`/request-sample${reportTitle ? `?report=${encodeURIComponent(reportTitle)}` : ''}`}
+            className="block w-full rounded-pill border border-[var(--cmi-line)] px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors duration-150 hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-ink)]"
+          >
+            Request free sample
           </Link>
 
-          {/* Included features */}
-          <div className="pt-3 mt-1" style={{ borderTop: '1px solid var(--border)' }}>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--muted-foreground)' }}>
-              What&apos;s Included
-            </p>
+          <div className="mt-1 border-t border-[var(--cmi-line)] pt-4">
+            <p className="eyebrow-muted mb-3">What&apos;s included</p>
             <ul className="space-y-2.5">
-              {['PDF & Excel Formats', 'Free Report Updates', 'Analyst Support (60 days)', 'Data Customization (20%)'].map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-sm text-[var(--foreground)]">
-                  <CheckIcon />
-                  {item}
-                </li>
-              ))}
+              {['PDF & Excel formats', 'Free report updates', 'Analyst support (60 days)', 'Data customization (20%)'].map(
+                (item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-[13.5px] text-[var(--cmi-ink)]">
+                    <CheckIcon />
+                    {item}
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
-          {/* Trust badges */}
-          <div
-            className="flex justify-center gap-4 pt-3 mt-1"
-            style={{ borderTop: '1px solid var(--border)' }}
-          >
-            {['Secure Checkout', 'Instant Access'].map((badge) => (
-              <span key={badge} className="flex items-center gap-1 text-xs" style={{ color: 'var(--muted-foreground)' }}>
-                <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent)' }} />
+          <div className="mt-1 flex justify-center gap-4 border-t border-[var(--cmi-line)] pt-4">
+            {['Secure checkout', 'Instant access'].map((badge) => (
+              <span key={badge} className="flex items-center gap-1.5 text-xs text-[var(--cmi-meta)]">
+                <span className="h-1.5 w-1.5 rounded-pill bg-[var(--cmi-primary)]" />
                 {badge}
               </span>
             ))}

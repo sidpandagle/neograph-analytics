@@ -82,28 +82,19 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({
       )}
     >
       <div className="flex flex-col flex-1 min-h-0">
-        <h3 className="text-sm font-semibold text-[var(--foreground)] mb-4 uppercase tracking-wide flex-shrink-0">
-          Report Details
-        </h3>
+        <h3 className="eyebrow-muted mb-4 flex-shrink-0">Report details</h3>
         <div className="flex-1 overflow-y-auto pb-4">
-          <ul className="space-y-3">
+          <ul className="space-y-1.5">
             {items.map((item) => (
-              <li
-                key={item.id}
-                className={cn(
-                  'transition-all duration-200'
-                )}
-              >
+              <li key={item.id}>
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => handleClick(e, item.id)}
                   className={cn(
-                    'block py-3 px-4 border-l-4 transition-all duration-200 rounded-md',
-                    'bg-white hover:bg-gray-50',
-                    'shadow-sm hover:shadow-md',
+                    'block rounded-tile px-4 py-2.5 text-[13.5px] transition-colors duration-150',
                     activeId === item.id
-                      ? 'border-[#8b5cf6] text-[var(--foreground)] font-medium bg-[#f3e9ff]'
-                      : 'border-[#e9d5ff] text-[var(--foreground)] hover:border-[#c084fc]'
+                      ? 'bg-[var(--cmi-primary)] font-semibold text-white'
+                      : 'bg-[var(--cmi-surface)] text-[var(--cmi-body)] hover:bg-white hover:text-[var(--cmi-primary)]'
                   )}
                 >
                   {item.title}
@@ -116,7 +107,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({
         {onShowFullTOC && (
           <button
             onClick={onShowFullTOC}
-            className="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-[var(--foreground)] bg-[var(--card)] border border-[var(--border)] rounded-md hover:bg-[var(--muted)] transition-colors duration-200 flex-shrink-0"
+            className="mt-4 inline-flex w-full flex-shrink-0 items-center justify-center gap-2 rounded-pill border border-[var(--cmi-line)] px-4 py-2.5 text-sm font-semibold text-[var(--cmi-ink)] transition-colors duration-150 hover:border-[var(--cmi-primary)]"
           >
             <svg
               className="w-4 h-4"

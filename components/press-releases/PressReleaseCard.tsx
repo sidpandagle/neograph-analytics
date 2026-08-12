@@ -24,7 +24,7 @@ export function PressReleaseCard({
 }: PressReleaseCardProps) {
   return (
     <Link href={`/press-releases/${slug}`} className="group flex flex-col h-full">
-      <div className="flex flex-col h-full theme-card border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+      <div className="flex flex-col h-full theme-card border rounded-card overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
         {/* Accent stripe — amber for press releases to differentiate from blog */}
         <div className="h-[3px] bg-[var(--accent)] shrink-0" />
 

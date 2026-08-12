@@ -101,226 +101,165 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
 
   return (
     <>
-      {/* ── Hero Banner ──────────────────────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden pt-20 pb-16 px-6 theme-hero theme-hero-grid"
-      >
-        {/* Ambient glow */}
-        <div
-          className="absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-[0.12] blur-3xl pointer-events-none"
-          style={{ background: 'var(--accent)' }}
-        />
+      {/* ── Hero panel ───────────────────────────────────────────────────────── */}
+      <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary)] p-7 md:p-11">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="min-w-0 flex-1">
+            <span className="eyebrow-on-blue">Market intelligence</span>
+            <h1 className="mt-3 text-[38px] leading-[1.04] text-white md:text-[54px]">
+              Research Reports
+            </h1>
+            <p className="mt-3 text-[15px] leading-[1.55] text-[var(--cmi-on-blue)]">
+              {filteredReports.length.toLocaleString()}{' '}
+              {filteredReports.length === 1 ? 'report' : 'reports'} across{' '}
+              {categories.length} healthcare sectors
+            </p>
+          </div>
 
-        <div className="relative max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-end gap-10">
-            {/* Left: Headline */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="h-px w-8 flex-shrink-0" style={{ background: 'var(--accent)' }} />
-                <p
-                  className="text-xs font-bold tracking-[0.2em] uppercase"
-                  style={{ color: 'var(--accent)' }}
-                >
-                  Market Intelligence
-                </p>
-              </div>
-              <h1
-                className="font-display font-bold leading-none mb-5 theme-hero-text"
-                style={{
-                  fontSize: 'clamp(2.75rem, 5vw, 4.5rem)',
-                  letterSpacing: '-0.03em',
-                }}
-              >
-                Research
-                <br />
-                <span style={{ color: 'var(--accent)' }}>Reports</span>
-              </h1>
-              <p className="theme-hero-muted" style={{ fontSize: '1rem', lineHeight: '1.7' }}>
-                {filteredReports.length.toLocaleString()}{' '}
-                {filteredReports.length === 1 ? 'report' : 'reports'} across{' '}
-                {categories.length} healthcare sectors
-              </p>
-            </div>
-
-            {/* Right: Search */}
-            <div className="w-full lg:w-[440px] flex-shrink-0">
-              <SearchBar
-                onSearchResults={handleSearchResults}
-                placeholder="Search by topic, technology, or region…"
-                initialQuery={initialSearch}
-              />
-            </div>
+          <div className="w-full flex-shrink-0 lg:w-[440px]">
+            <SearchBar
+              onSearchResults={handleSearchResults}
+              placeholder="Search by topic, technology, or region…"
+              initialQuery={initialSearch}
+            />
           </div>
         </div>
       </section>
 
-      {/* ── Filter Strip ─────────────────────────────────────────────────────── */}
-      <div
-        className="sticky top-16 z-20 bg-[var(--card)] border-b border-[var(--border)]"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="flex items-center gap-2.5 py-3 overflow-x-auto"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+      {/* ── Filters ──────────────────────────────────────────────────────────── */}
+      <section className="rounded-panel bg-white p-4 md:px-6 md:py-5">
+        <div className="no-scrollbar flex items-center gap-2.5 overflow-x-auto">
+          <button
+            onClick={() => setActiveCategory('')}
+            data-active={!activeCategory}
+            className="segmented-item flex-shrink-0 !py-2 !text-[13px]"
           >
-            {/* All button */}
+            All Reports
+          </button>
+
+          <div className="h-5 w-px flex-shrink-0 bg-[var(--cmi-line)]" />
+
+          {categories.map((cat) => (
             <button
-              onClick={() => setActiveCategory('')}
-              className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
-              style={
-                !activeCategory
-                  ? { background: 'var(--primary)', color: 'var(--primary-foreground)' }
-                  : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
-              }
+              key={cat.id}
+              onClick={() => setActiveCategory((prev) => (prev === cat.name ? '' : cat.name))}
+              data-active={activeCategory === cat.name}
+              className="segmented-item flex-shrink-0 !py-2 !text-[13px]"
             >
-              All Reports
+              {cat.name}
             </button>
+          ))}
 
-            <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
+          <div className="h-5 w-px flex-shrink-0 bg-[var(--cmi-line)]" />
 
-            {/* Category pills */}
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory((prev) => (prev === cat.name ? '' : cat.name))}
-                className="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 flex-shrink-0"
-                style={
-                  activeCategory === cat.name
-                    ? { background: 'var(--primary)', color: 'var(--primary-foreground)' }
-                    : { background: 'var(--muted)', color: 'var(--muted-foreground)' }
-                }
-              >
-                {cat.name}
-              </button>
-            ))}
-
-            <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
-
-            {/* Region select */}
-            <div className="relative flex-shrink-0">
-              <select
-                value={activeRegion}
-                onChange={(e) => setActiveRegion(e.target.value)}
-                className="appearance-none pl-3 pr-8 py-1.5 rounded-full text-xs font-semibold border cursor-pointer focus:outline-none transition-all duration-150"
-                style={
-                  activeRegion
-                    ? { background: 'var(--primary)', color: 'var(--primary-foreground)', borderColor: 'var(--primary)' }
-                    : { background: 'var(--muted)', color: 'var(--muted-foreground)', borderColor: 'var(--border)' }
-                }
-              >
-                <option value="">All Regions</option>
-                {REGIONS.map((r) => (
-                  <option key={r} value={r}>
-                    {r}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 pointer-events-none"
-                style={{ color: activeRegion ? 'var(--primary-foreground)' : 'var(--muted-foreground)' }}
-              />
-            </div>
-
-            {/* Clear filters */}
-            {hasFilters && (
-              <>
-                <div className="h-5 w-px flex-shrink-0" style={{ background: 'var(--border)' }} />
-                <button
-                  onClick={clearAll}
-                  className="flex items-center gap-1 flex-shrink-0 text-xs font-medium transition-colors duration-150"
-                  style={{ color: 'var(--muted-foreground)' }}
-                >
-                  <X className="w-3 h-3" />
-                  Clear
-                </button>
-              </>
-            )}
+          <div className="relative flex-shrink-0">
+            <select
+              value={activeRegion}
+              onChange={(e) => setActiveRegion(e.target.value)}
+              aria-label="Filter by region"
+              className={`cursor-pointer appearance-none rounded-pill border py-2 pl-4 pr-9 text-[13px] font-semibold transition-colors duration-150 focus:outline-none ${
+                activeRegion
+                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary)] text-white'
+                  : 'border-[var(--cmi-line)] bg-white text-[var(--cmi-idle)] hover:border-[var(--cmi-primary)]'
+              }`}
+            >
+              <option value="">All Regions</option>
+              {REGIONS.map((r) => (
+                <option key={r} value={r}>
+                  {r}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              className={`pointer-events-none absolute right-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 ${
+                activeRegion ? 'text-white' : 'text-[var(--cmi-meta)]'
+              }`}
+            />
           </div>
-        </div>
-      </div>
 
-      {/* ── Reports Grid ─────────────────────────────────────────────────────── */}
-      <section className="py-12 px-6" style={{ background: 'var(--muted)', minHeight: '60vh' }}>
-        <div className="max-w-7xl mx-auto">
-          {paginatedReports.length > 0 ? (
+          {hasFilters && (
             <>
-              {/* Results meta bar */}
-              <div className="flex items-center justify-between mb-8">
-                <p className="text-xs font-medium tracking-wide" style={{ color: 'var(--muted-foreground)' }}>
-                  Showing{' '}
-                  <span style={{ color: 'var(--foreground)' }}>
-                    {(currentPage - 1) * ITEMS_PER_PAGE + 1}–
-                    {Math.min(currentPage * ITEMS_PER_PAGE, filteredReports.length)}
-                  </span>{' '}
-                  of {filteredReports.length.toLocaleString()} reports
-                </p>
-                {activeCategory && (
-                  <div
-                    className="flex items-center gap-2 text-xs px-3 py-1 rounded-full"
-                    style={{ background: 'hsl(var(--primary-hsl) / 0.09)', color: 'var(--primary)' }}
-                  >
-                    <span className="font-medium">{activeCategory}</span>
-                    <button
-                      onClick={() => setActiveCategory('')}
-                      className="opacity-60 hover:opacity-100 transition-opacity"
-                    >
-                      <X className="w-3 h-3" />
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              {/* Grid */}
-              <div
-                id="reports-grid"
-                className="grid gap-5"
-                style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))' }}
+              <div className="h-5 w-px flex-shrink-0 bg-[var(--cmi-line)]" />
+              <button
+                onClick={clearAll}
+                className="flex flex-shrink-0 items-center gap-1 text-[13px] font-semibold text-[var(--cmi-body)] transition-colors duration-150 hover:text-[var(--cmi-primary)]"
               >
-                {paginatedReports.map((report, idx) => (
-                  <ReportCard
-                    key={report.id}
-                    report={report}
-                    index={(currentPage - 1) * ITEMS_PER_PAGE + idx + 1}
-                  />
-                ))}
-              </div>
-
-              <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={handlePageChange}
-              />
+                <X className="h-3.5 w-3.5" />
+                Clear
+              </button>
             </>
-          ) : (
-            /* Empty state */
-            <div className="flex flex-col items-center justify-center py-28 text-center">
-              <div
-                className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6"
-                style={{ background: 'var(--card)' }}
-              >
-                <Search className="w-8 h-8" style={{ color: 'var(--border)' }} />
-              </div>
-              <h3
-                className="font-display text-xl font-bold mb-2"
-                style={{ color: 'var(--foreground)', letterSpacing: '-0.01em' }}
-              >
-                No reports found
-              </h3>
-              <p className="text-sm mb-8 max-w-xs" style={{ color: 'var(--muted-foreground)', lineHeight: '1.65' }}>
-                Try a different search term or broaden your filters
-              </p>
-              {hasFilters && (
-                <button
-                  onClick={clearAll}
-                  className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
-                  style={{ background: 'var(--accent)', color: 'var(--accent-foreground)' }}
-                >
-                  Clear all filters
-                </button>
-              )}
-            </div>
           )}
         </div>
+      </section>
+
+      {/* ── Results ──────────────────────────────────────────────────────────── */}
+      <section className="rounded-panel bg-white p-7 md:p-11" style={{ minHeight: '50vh' }}>
+        {paginatedReports.length > 0 ? (
+          <>
+            <div className="mb-7 flex items-center justify-between gap-4">
+              <p className="text-[12.5px] text-[var(--cmi-body)]">
+                Showing{' '}
+                <span className="font-semibold text-[var(--cmi-ink)]">
+                  {(currentPage - 1) * ITEMS_PER_PAGE + 1}–
+                  {Math.min(currentPage * ITEMS_PER_PAGE, filteredReports.length)}
+                </span>{' '}
+                of {filteredReports.length.toLocaleString()} reports
+              </p>
+              {activeCategory && (
+                <div className="chip-primary">
+                  {activeCategory}
+                  <button
+                    onClick={() => setActiveCategory('')}
+                    className="opacity-60 transition-opacity hover:opacity-100"
+                    aria-label={`Clear ${activeCategory} filter`}
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div
+              id="reports-grid"
+              className="grid gap-[18px]"
+              style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))' }}
+            >
+              {paginatedReports.map((report, idx) => (
+                <ReportCard
+                  key={report.id}
+                  report={report}
+                  index={(currentPage - 1) * ITEMS_PER_PAGE + idx + 1}
+                />
+              ))}
+            </div>
+
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          </>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-soft bg-[var(--cmi-surface)]">
+              <Search className="h-8 w-8 text-[var(--cmi-meta)]" />
+            </div>
+            <h3 className="mb-2 font-display text-xl font-semibold text-[var(--cmi-ink)]">
+              No reports found
+            </h3>
+            <p className="mb-8 max-w-xs text-sm leading-[1.65] text-[var(--cmi-body)]">
+              Try a different search term or broaden your filters
+            </p>
+            {hasFilters && (
+              <button
+                onClick={clearAll}
+                className="rounded-pill bg-[var(--cmi-primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--cmi-primary-pressed)]"
+              >
+                Clear all filters
+              </button>
+            )}
+          </div>
+        )}
       </section>
     </>
   );
