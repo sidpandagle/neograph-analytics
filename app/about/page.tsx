@@ -61,7 +61,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -69,18 +69,17 @@ export default function AboutPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ocean-600/[0.16] rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-6">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-300/80 px-4 py-1.5 rounded-full border border-ocean-500/20 bg-ocean-600/[0.12]">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--cmi-on-blue-dim)] px-4 py-1.5 rounded-pill bg-white/10">
               About Us
             </span>
             <h1 className="text-[2.75rem] md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] tracking-[-0.02em]">
               Sustainable Healthcare Transformation<br className="hidden md:block" />{' '}
-              Through an <span className="text-bright-400">Integrated Approach</span>
+              Through an <span className="text-[var(--cmi-sky)]">Integrated Approach</span>
             </h1>
-            <p className="text-lg text-white/55 max-w-2xl mx-auto leading-[1.8]">
+            <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
               A specialized healthcare consulting firm offering comprehensive advisory services to providers,
               life sciences companies, payers, and health technology organizations worldwide.
             </p>
@@ -89,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Who We Are */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <Container size="lg">
           <div className="max-w-3xl mx-auto space-y-12">
             <div className="space-y-4">
@@ -122,7 +121,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-20 bg-[var(--muted)]">
+      <section className="rounded-panel bg-[var(--cmi-surface)] px-6 py-7 md:px-11 md:py-11">
         <Container size="xl">
           <div className="text-center space-y-4 mb-12">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean-600 px-3 py-1.5 rounded-full bg-ocean-50 border border-ocean-100">
@@ -141,7 +140,7 @@ export default function AboutPage() {
             {whyUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-slate-200 hover:-translate-y-0.5 transition-all duration-200"
+                className="bg-white border border-slate-100 rounded-card overflow-hidden hover:shadow-lg hover:border-slate-200 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <div className={`h-[3px] ${item.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
                 <div className="p-6">
@@ -160,8 +159,8 @@ export default function AboutPage() {
       </section>
 
       {/* Impact Stats — dark navy */}
-      <section className="bg-navy-950 border-y border-navy-900/80">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <section className="rounded-panel bg-[var(--cmi-primary)] px-6 py-7 md:px-11 md:py-11">
+        <div className="mx-auto max-w-desk">
           <div className="grid grid-cols-2 lg:grid-cols-4  divide-white/[0.06]">
             {impactStats.map((stat) => (
               <div key={stat.val} className="px-6 md:px-10 py-12 text-center">
@@ -178,7 +177,7 @@ export default function AboutPage() {
       </section>
 
       {/* Supporting text */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
         <Container size="lg">
           <div className="max-w-3xl mx-auto space-y-5 text-base text-slate-600 leading-[1.85]">
             <p>
@@ -192,7 +191,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA — dark navy */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-24">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
@@ -200,14 +199,13 @@ export default function AboutPage() {
             backgroundSize: '28px 28px',
           }}
         />
-        <div className="absolute top-0 left-1/3 w-[500px] h-[400px] bg-ocean-500/[0.18] rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-[2.75rem] text-white leading-[1.15] tracking-[-0.02em]">
-              Ready to Work With <span className="text-bright-400">NeoGraph Analytics?</span>
+              Ready to Work With <span className="text-[var(--cmi-sky)]">NeoGraph Analytics?</span>
             </h2>
-            <p className="text-lg text-white/55 leading-[1.8]">
+            <p className="text-lg text-[var(--cmi-on-blue)] leading-[1.8]">
               Join leading healthcare organizations that trust our research to drive their strategic initiatives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

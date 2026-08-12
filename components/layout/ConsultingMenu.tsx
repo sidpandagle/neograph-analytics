@@ -10,29 +10,22 @@ interface ConsultingMenuProps {
   isActive: boolean;
 }
 
+/** Services dropdown, grouped by practice area. */
 export default function ConsultingMenu({ services, isActive }: ConsultingMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!isOpen) return;
 
     const onMouseDown = (e: MouseEvent) => {
-      if (
-        containerRef.current?.contains(e.target as Node) ||
-        panelRef.current?.contains(e.target as Node)
-      ) return;
+      if (containerRef.current?.contains(e.target as Node)) return;
       setIsOpen(false);
     };
-
     const onFocusOut = (e: FocusEvent) => {
-      if (
-        containerRef.current?.contains(e.relatedTarget as Node) ||
-        panelRef.current?.contains(e.relatedTarget as Node)
-      ) return;
+      if (containerRef.current?.contains(e.relatedTarget as Node)) return;
       setIsOpen(false);
     };
 
@@ -45,36 +38,23 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
   }, [isOpen]);
 
   const scheduleClose = () => {
-    hoverTimeout.current = setTimeout(() => setIsOpen(false), 150);
+    hoverTimeout.current = setTimeout(() => setIsOpen(false), 160);
   };
   const cancelClose = () => {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
   };
 
-  // Group services by category
   const servicesByCategory = services.reduce((acc, service) => {
     const category = service.category as ServiceCategory;
-    if (!acc[category]) {
-      acc[category] = [];
-    }
+    if (!acc[category]) acc[category] = [];
     acc[category].push(service);
     return acc;
   }, {} as Record<ServiceCategory, ConsultingService[]>);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
       setIsOpen(false);
       triggerRef.current?.focus();
-    } else if (
-      (e.key === "Enter" || e.key === " ") &&
-      e.target === triggerRef.current
-    ) {
-      e.preventDefault();
-      setIsOpen(!isOpen);
     }
   };
 
@@ -86,125 +66,87 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
       onMouseEnter={cancelClose}
       onKeyDown={handleKeyDown}
     >
-      {/* Trigger Button */}
       <button
         ref={triggerRef}
-        onClick={handleClick}
+        onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "text-sm font-medium transition-colors relative pb-0.5",
-          "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[var(--accent)] after:transition-all after:duration-200",
-          "flex items-center gap-1 cursor-pointer whitespace-nowrap",
-          isActive
-            ? "text-[var(--foreground)] after:w-full"
-            : "text-[var(--muted-foreground)] after:w-0 hover:text-[var(--foreground)] hover:after:w-full"
+          "flex items-center gap-1 whitespace-nowrap rounded-pill px-4 py-2 text-sm transition-colors duration-150",
+          isActive || isOpen
+            ? "bg-white font-semibold text-[var(--cmi-ink)]"
+            : "font-medium text-[var(--cmi-idle)] hover:bg-white hover:text-[var(--cmi-ink)]"
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
-        aria-label="Browse services"
       >
         Consulting
         <svg
-          className={cn(
-            "w-4 h-4 transition-transform duration-200",
-            isOpen && "rotate-180"
-          )}
+          className={cn("h-3.5 w-3.5 transition-transform duration-200", isOpen && "rotate-180")}
           fill="none"
           stroke="currentColor"
+          strokeWidth={2.5}
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
-      {/* Backdrop Overlay - only on mobile */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 top-[64px]"
-          onClick={() => setIsOpen(false)}
-          aria-hidden="true"
-        />
-      )}
-
-      {/* Mega Menu Panel */}
       <div
-        ref={panelRef}
-        onMouseEnter={cancelClose}
-        onMouseLeave={scheduleClose}
         className={cn(
-          "fixed left-0 right-0 z-50",
-          "lg:top-[62px]",
-          "bg-[var(--card)] theme-shadow border-t-2 border-t-[var(--accent)]",
-          "transition-all duration-300 ease-out",
-          "max-h-[calc(100vh-62px)] overflow-y-auto",
+          "absolute left-1/2 top-[calc(100%+20px)] z-50 w-[min(940px,88vw)] -translate-x-1/2",
+          "max-h-[70vh] overflow-y-auto rounded-panel border border-[var(--cmi-line)] bg-white p-7 shadow-panel",
+          "transition-[opacity,transform] duration-200 ease-out",
           isOpen
-            ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible -translate-y-2 pointer-events-none"
+            ? "visible translate-y-0 opacity-100"
+            : "pointer-events-none invisible -translate-y-1.5 opacity-0"
         )}
         role="menu"
         aria-label="Services"
         aria-hidden={!isOpen}
-        style={{
-          WebkitOverflowScrolling: 'touch',
-        }}
       >
-        <div className="p-6 max-w-7xl mx-auto">
-          {/* Header row */}
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--muted-foreground)' }}>Our Services</span>
-            <Link
-              href="/services"
-              onClick={() => setIsOpen(false)}
-              className="text-xs font-semibold hover:underline underline-offset-4 transition-colors"
-              style={{ color: 'var(--accent)' }}
-              role="menuitem"
-              tabIndex={isOpen ? 0 : -1}
-            >
-              View all services →
-            </Link>
-          </div>
+        <div className="mb-4 flex items-center justify-between">
+          <span className="eyebrow-muted">Our services</span>
+          <Link
+            href="/services"
+            onClick={() => setIsOpen(false)}
+            className="text-[13.5px] font-semibold text-[var(--cmi-primary)]"
+            role="menuitem"
+            tabIndex={isOpen ? 0 : -1}
+          >
+            View all services →
+          </Link>
+        </div>
 
-          {/* Services by Category */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
-              <div key={category} className="space-y-2">
-                <h3 className="text-xs font-semibold uppercase tracking-widest pb-1 border-b" style={{ color: 'var(--muted-foreground)', borderColor: 'var(--border)' }}>
-                  {category}
-                </h3>
-                <div className="space-y-1">
-                  {categoryServices.map((service) => (
-                    <Link
-                      key={service.id}
-                      href={`/consulting/${service.slug}`}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "group block p-3 rounded-md",
-                        "border-l-2 border-l-transparent",
-                        "transition-all duration-200",
-                        "focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
-                      )}
-                      style={{ backgroundColor: 'var(--muted)' }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--accent)'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--card)'; }}
-                      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'transparent'; (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--muted)'; }}
-                      role="menuitem"
-                      tabIndex={isOpen ? 0 : -1}
-                    >
-                      <h4 className="font-semibold text-sm mb-0.5 transition-colors" style={{ color: 'var(--foreground)' }}>
-                        {service.title}
-                      </h4>
-                      <p className="text-xs line-clamp-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
-                        {service.description}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
+            <div key={category} className="space-y-2.5">
+              <h3 className="eyebrow-muted border-b border-[var(--cmi-line)] pb-2">
+                {category}
+              </h3>
+              <div className="space-y-2">
+                {categoryServices.map((service) => (
+                  <Link
+                    key={service.id}
+                    href={`/consulting/${service.slug}`}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "block rounded-tile border border-transparent bg-[var(--cmi-surface)] p-3.5",
+                      "transition-colors duration-150 hover:border-[var(--cmi-primary)] hover:bg-white"
+                    )}
+                    role="menuitem"
+                    tabIndex={isOpen ? 0 : -1}
+                  >
+                    <h4 className="font-display text-[14.5px] font-semibold text-[var(--cmi-ink)]">
+                      {service.title}
+                    </h4>
+                    <p className="mt-0.5 line-clamp-2 text-[12.5px] leading-[1.5] text-[var(--cmi-body)]">
+                      {service.description}
+                    </p>
+                  </Link>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

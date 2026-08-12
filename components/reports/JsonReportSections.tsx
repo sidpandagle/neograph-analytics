@@ -519,7 +519,7 @@ function ExecutiveSummarySection({ summary }: { summary: string }) {
   const paragraphs = summary.split('\n\n').filter(Boolean)
   return (
     <div
-      className="rounded-2xl overflow-hidden mb-10"
+      className="rounded-card overflow-hidden mb-10"
       style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
     >
       {/* <div

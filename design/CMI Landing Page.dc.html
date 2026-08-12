@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #EDF1F9; }
+  * { box-sizing: border-box; }
+  a { color: #1541E3; text-decoration: none; }
+  a:hover { color: #0E2FA8; }
+  input { font-family: inherit; }
+  button { font-family: inherit; cursor: pointer; }
+</style>
+</helmet>
+<div style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: #EDF1F9; padding: 20px 20px 0; color: #0A1633;">
+  <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+
+    <header style="background: #FFFFFF; border-radius: 18px; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="display: flex; align-items: baseline; gap: 8px;">
+        <span style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #1541E3;">Custom Market Insights</span>
+        <span style="font-size: 11px; font-weight: 600; color: #8A97B2; letter-spacing: 0.08em;">CMI</span>
+      </div>
+      <nav style="display: flex; align-items: center; gap: 6px; background: #F1F5FD; padding: 5px; border-radius: 999px;">
+        <a href="#home" style="padding: 8px 16px; border-radius: 999px; background: #FFFFFF; font-size: 14px; font-weight: 600; color: #0A1633;">Home</a>
+        <a href="#industries" style="padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: #4C5B7A;" style-hover="background: #FFFFFF;">Industry Store</a>
+        <a href="#reports" style="padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: #4C5B7A;" style-hover="background: #FFFFFF;">Reports</a>
+        <a href="#method" style="padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: #4C5B7A;" style-hover="background: #FFFFFF;">Methodology</a>
+        <a href="#faq" style="padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: #4C5B7A;" style-hover="background: #FFFFFF;">FAQ</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="tel:+17377342707" style="font-size: 13px; font-weight: 600; color: #4C5B7A;">+1 737 734 2707</a>
+        <a href="#cta" style="background: #1541E3; color: #FFFFFF; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;" style-hover="background: #0E2FA8; color: #FFFFFF;">Request Sample</a>
+      </div>
+    </header>
+
+    <section id="home" style="background: #1541E3; border-radius: 24px; padding: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; overflow: hidden;">
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <h1 style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 54px; line-height: 1.04; letter-spacing: -0.03em; color: #FFFFFF; margin: 0; text-wrap: pretty;">Market Intelligence,<br />Built to Order</h1>
+        <p style="font-size: 16px; line-height: 1.55; color: #C9D8FF; margin: 0; max-width: 440px;">One of the fastest-growing market research and advisory companies — 500+ research reports across 25 therapeutic areas and 17+ countries, delivered as PDF, PPT, Excel or interactive dashboards.</p>
+        <div style="display: flex; gap: 10px; background: #FFFFFF; border-radius: 999px; padding: 6px 6px 6px 18px; align-items: center; max-width: 460px;">
+          <span style="font-size: 15px; color: #8A97B2;">⌕</span>
+          <input type="text" placeholder="Search 500+ reports — e.g. neonatal infant care" value="{{ query }}" onChange="{{ onQuery }}" style="border: none; outline: none; flex: 1; font-size: 14px; color: #0A1633; background: transparent; padding: 8px 0;" />
+          <button onClick="{{ onSearch }}" style="border: none; background: #1541E3; color: #FFFFFF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 600;">Search</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, auto); gap: 28px; justify-content: start; padding-top: 6px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">3,725+</span>
+            <span style="font-size: 12px; font-weight: 500; color: #A9C0FF; letter-spacing: 0.04em;">Satisfied clients</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">500+</span>
+            <span style="font-size: 12px; font-weight: 500; color: #A9C0FF; letter-spacing: 0.04em;">Research reports</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF;">17+</span>
+            <span style="font-size: 12px; font-weight: 500; color: #A9C0FF; letter-spacing: 0.04em;">Countries covered</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #BFDCF7; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 16px; min-height: 420px; justify-content: center;">
+        <div style="background: #FFFFFF; border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 12px; font-weight: 600; color: #8A97B2; letter-spacing: 0.06em; text-transform: uppercase;">Report snapshot</span>
+            <span style="font-size: 12px; font-weight: 700; color: #1541E3; background: #EDF1FE; padding: 5px 10px; border-radius: 999px;">CAGR 6.21%</span>
+          </div>
+          <div style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; color: #0A1633; line-height: 1.25;">Global Neonatal Infant Care Market 2026–2035</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: end; height: 128px;">
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700; color: #0A1633;">$3.06B</span>
+              <div style="height: 55%; background: #BFDCF7; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2025</span>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700; color: #0A1633;">$3.24B</span>
+              <div style="height: 62%; background: #6E97F2; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2026</span>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; height: 100%;">
+              <span style="font-size: 13px; font-weight: 700; color: #1541E3;">$5.59B</span>
+              <div style="height: 100%; background: #1541E3; border-radius: 8px 8px 0 0;"></div>
+              <span style="font-size: 11px; color: #8A97B2; font-weight: 600;">2035</span>
+            </div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="background: #FFFFFF; border-radius: 14px; padding: 16px;">
+            <div style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700; color: #0A1633;">Asia Pacific</div>
+            <div style="font-size: 12px; color: #5C6B8A; margin-top: 4px;">Largest &amp; fastest-growing market — 45.5% share, 2025</div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 14px; padding: 16px;">
+            <div style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700; color: #0A1633;">320+ pages</div>
+            <div style="font-size: 12px; color: #5C6B8A; margin-top: 4px;">Segments, regions, competitive landscape</div>
+          </div>
+        </div>
+        <div style="background: #0A1633; border-radius: 14px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+          <span style="font-size: 13px; color: #C9D8FF; line-height: 1.4; max-width: 250px;">Exclusive, in-depth intelligence to grow your revenue.</span>
+          <a href="#cta" style="background: #FFFFFF; color: #0A1633; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 999px; white-space: nowrap;">Download sample</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border-radius: 24px; padding: 44px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <span style="font-size: 12px; font-weight: 700; color: #1541E3; letter-spacing: 0.14em; text-transform: uppercase;">Strategy execution</span>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 38px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: pretty;">Accelerate strategy execution and consistency in revenue growth</h2>
+        <p style="font-size: 15px; line-height: 1.6; color: #5C6B8A; margin: 0;">With insightful and precise consulting services you can keep a close eye on the market's shifting trends. CMI has a solution for every business issue you face.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px;">
+          <div style="background: #F4F7FE; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600;">Market Research</div>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #5C6B8A; margin: 0;">Quickly identify business opportunities by combining market intelligence with the right set of skills.</p>
+            <a href="#reports" style="font-size: 13.5px; font-weight: 600;">View more →</a>
+          </div>
+          <div style="background: #F4F7FE; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600;">Business Consulting</div>
+            <p style="font-size: 13.5px; line-height: 1.55; color: #5C6B8A; margin: 0;">For clients who want a better understanding of the market and a more secure position within it.</p>
+            <a href="#cta" style="font-size: 13.5px; font-weight: 600;">View more →</a>
+          </div>
+        </div>
+      </div>
+      <div style="background: #1541E3; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 600; color: #FFFFFF;">Market intelligence — key benefits</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">01</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Benchmark performance against industry peers</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">02</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Analyze competitor strategies and shifting market share</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">03</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Spot regional growth pockets and expansion opportunities</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">04</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Monitor emerging trends and market dynamics</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">05</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Rely on accurate, high-quality, research-backed intelligence</span>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; background: #2C55EB; border-radius: 12px; padding: 13px 16px;">
+            <span style="color: #BFDCF7; font-size: 13px; font-weight: 700;">06</span>
+            <span style="font-size: 14px; color: #FFFFFF; line-height: 1.45;">Access insights via PDF, PPT, Excel or interactive dashboards</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" style="background: #FFFFFF; border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 26px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 620px;">
+          <span style="font-size: 12px; font-weight: 700; color: #1541E3; letter-spacing: 0.14em; text-transform: uppercase;">Trending reports by industry</span>
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Latest market insights</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: #5C6B8A; margin: 0;">Healthcare, F&amp;B, energy &amp; power, chemicals and advanced materials — over 500 research reports spanning 25 therapeutic areas and 17+ countries.</p>
+        </div>
+        <a href="#industries" style="font-size: 14px; font-weight: 600;">Browse the industry store →</a>
+      </div>
+
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; background: #F4F7FE; padding: 6px; border-radius: 999px; align-self: flex-start;">
+        <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="5">
+          <button onClick="{{ tab.onSelect }}" style="border: none; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; background: {{ tab.bg }}; color: {{ tab.fg }};">{{ tab.label }}</button>
+        </sc-for>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+        <sc-for list="{{ reports }}" as="r" hint-placeholder-count="2">
+          <article style="border: 1px solid #E3E9F7; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 18px;" style-hover="border-color: #1541E3;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <span style="font-size: 11.5px; font-weight: 700; color: #5C6B8A; letter-spacing: 0.08em; text-transform: uppercase;">{{ r.category }}</span>
+              <span style="font-size: 11.5px; font-weight: 700; color: #8A97B2;">{{ r.code }}</span>
+            </div>
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 600; line-height: 1.25; margin: 0; text-wrap: pretty;">{{ r.title }}</h3>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 12px; font-weight: 700; color: #1541E3; background: #EDF1FE; padding: 6px 12px; border-radius: 999px;">CAGR {{ r.cagr }}</span>
+              <span style="font-size: 12px; font-weight: 600; color: #0A1633; background: #F4F7FE; padding: 6px 12px; border-radius: 999px;">{{ r.window }}</span>
+              <span style="font-size: 12px; font-weight: 600; color: #0A1633; background: #F4F7FE; padding: 6px 12px; border-radius: 999px;">{{ r.region }}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; background: #F9FBFF; border-radius: 14px; padding: 16px;">
+              <div style="display: flex; flex-direction: column;">
+                <span style="font-size: 11px; font-weight: 600; color: #8A97B2;">{{ r.baseYear }}</span>
+                <span style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700;">{{ r.baseSize }}</span>
+              </div>
+              <div style="flex: 1; display: flex; align-items: center; gap: 4px;">
+                <div style="flex: 1; height: 3px; background: #D8E2F5; border-radius: 999px;"></div>
+                <div style="flex: 2; height: 3px; background: #1541E3; border-radius: 999px;"></div>
+                <span style="font-size: 11px; color: #1541E3; font-weight: 700;">▸</span>
+              </div>
+              <div style="display: flex; flex-direction: column; text-align: right;">
+                <span style="font-size: 11px; font-weight: 600; color: #8A97B2;">{{ r.endYear }}</span>
+                <span style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; color: #1541E3;">{{ r.endSize }}</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 2px;">
+              <span style="font-size: 12.5px; color: #5C6B8A;">{{ r.pages }} pages · {{ r.price }} · {{ r.published }}</span>
+              <a href="#cta" style="font-size: 13.5px; font-weight: 600;">Read more →</a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="industries" style="background: #1541E3; border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 34px; font-weight: 700; color: #FFFFFF; margin: 0; letter-spacing: -0.02em;">Fourteen industries, one research desk</h2>
+        <p style="font-size: 15px; color: #C9D8FF; margin: 0;">Every report is backed by primary interviews, validated secondary data and CMI's own modelling.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+        <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="14">
+          <a href="#reports" style="background: #2C55EB; border-radius: 14px; padding: 18px; font-size: 14.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; gap: 10px;" style-hover="background: #FFFFFF; color: #1541E3;">
+            <span>{{ ind.name }}</span>
+            <span style="font-size: 12px; opacity: 0.7;">→</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="faq" style="background: #FFFFFF; border-radius: 24px; padding: 44px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 44px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Frequently asked questions</h2>
+        <p style="font-size: 15px; line-height: 1.6; color: #5C6B8A; margin: 0;">Got questions? We've got answers. For anything else, reach the research desk directly.</p>
+        <a href="mailto:support@custommarketinsights.com" style="font-size: 14px; font-weight: 600;">support@custommarketinsights.com</a>
+        <div style="background: #1541E3; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 18px; margin-top: 8px; position: relative; overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 8px; position: relative;">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #7CFFB2; box-shadow: 0 0 0 4px rgba(124, 255, 178, 0.25);"></span>
+            <span style="font-size: 12px; font-weight: 700; color: #C9D8FF; letter-spacing: 0.1em; text-transform: uppercase;">Research desk open</span>
+          </div>
+          <div style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 600; color: #FFFFFF; line-height: 1.25; position: relative;">Speak to the analyst who wrote the report</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; position: relative;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; color: #FFFFFF;">&lt; 24h</span>
+              <span style="font-size: 12px; color: #A9C0FF;">Reply time</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; color: #FFFFFF;">3,725+</span>
+              <span style="font-size: 12px; color: #A9C0FF;">Clients served</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; position: relative;">
+            <a href="tel:+17377342707" style="background: #FFFFFF; color: #0A1633; font-size: 14px; font-weight: 600; padding: 12px 18px; border-radius: 999px; text-align: center;" style-hover="background: #EDF1FE; color: #0A1633;">Call +1 737 734 2707</a>
+            <a href="#cta" style="border: 1px solid #4E77FF; color: #FFFFFF; font-size: 14px; font-weight: 600; padding: 12px 18px; border-radius: 999px; text-align: center;" style-hover="border-color: #FFFFFF; color: #FFFFFF;">Ask a custom research question</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border-radius: 14px; padding: 18px 22px; background: {{ f.bg }}; border: 1px solid {{ f.border }};">
+            <button onClick="{{ f.onToggle }}" style="border: none; background: transparent; padding: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left;">
+              <span style="font-size: 15.5px; font-weight: 600; color: {{ f.fg }};">{{ f.q }}</span>
+              <span style="font-size: 13px; font-weight: 700; color: {{ f.fg }};">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <p style="font-size: 14px; line-height: 1.6; color: {{ f.answerFg }}; margin: 12px 0 0;">{{ f.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="cta" style="background: #FFFFFF; border-radius: 24px; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 34px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 10px; max-width: 620px;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin: 0;">Request a free sample today</h2>
+        <p style="font-size: 15px; line-height: 1.6; color: #5C6B8A; margin: 0;">See the methodology, segmentation and data tables before you buy. Reports start at $3,090 and ship with 320+ pages of analysis plus analyst support.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
+        <span style="font-size: 12.5px; color: #8A97B2;">No obligation · Response within one business day</span>
+        <div style="display: flex; gap: 10px;">
+          <a href="#cta" style="background: #1541E3; color: #FFFFFF; padding: 15px 26px; border-radius: 999px; font-size: 15px; font-weight: 600;" style-hover="background: #0E2FA8; color: #FFFFFF;">Download sample PDF</a>
+          <a href="#cta" style="border: 1px solid #E3E9F7; color: #0A1633; padding: 15px 26px; border-radius: 999px; font-size: 15px; font-weight: 600;" style-hover="border-color: #1541E3;">Talk to an analyst</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background: #0A1633; border-radius: 24px 24px 0 0; padding: 44px 44px 30px; display: flex; flex-direction: column; gap: 34px;">
+      <div style="display: grid; grid-template-columns: 1.3fr repeat(4, 1fr); gap: 30px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: #FFFFFF;">Custom Market Insights</span>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #93A2C4; margin: 0;">Research reports and advisory for the world's largest industries.</p>
+          <a href="tel:+17377342707" style="font-size: 13.5px; font-weight: 600; color: #BFDCF7;">+1 737 734 2707</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.1em; text-transform: uppercase;">Company</span>
+          <a href="#home" style="font-size: 13.5px; color: #93A2C4;">About Us</a>
+          <a href="#home" style="font-size: 13.5px; color: #93A2C4;">Why Us</a>
+          <a href="#home" style="font-size: 13.5px; color: #93A2C4;">Our Team</a>
+          <a href="#home" style="font-size: 13.5px; color: #93A2C4;">Our Clients</a>
+          <a href="#home" style="font-size: 13.5px; color: #93A2C4;">Locations</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.1em; text-transform: uppercase;">Research</span>
+          <a href="#reports" style="font-size: 13.5px; color: #93A2C4;">Industry Store</a>
+          <a href="#reports" style="font-size: 13.5px; color: #93A2C4;">Press Releases</a>
+          <a href="#method" style="font-size: 13.5px; color: #93A2C4;">Research Methodology</a>
+          <a href="#reports" style="font-size: 13.5px; color: #93A2C4;">Case Studies</a>
+          <a href="#reports" style="font-size: 13.5px; color: #93A2C4;">Blog</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.1em; text-transform: uppercase;">Services</span>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Consultancy Services</a>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Custom Research</a>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Competitive Benchmarking</a>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Data Dashboards</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.1em; text-transform: uppercase;">Support</span>
+          <a href="mailto:support@custommarketinsights.com" style="font-size: 13.5px; color: #93A2C4;">Contact Support</a>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Request Sample</a>
+          <a href="#faq" style="font-size: 13.5px; color: #93A2C4;">FAQ</a>
+          <a href="#cta" style="font-size: 13.5px; color: #93A2C4;">Buying Options</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #1E2C50; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+        <span style="font-size: 12.5px; color: #6E7EA3;">© 2026 Custom Market Insights. All rights reserved.</span>
+        <div style="display: flex; gap: 18px;">
+          <a href="#home" style="font-size: 12.5px; color: #93A2C4;">Privacy</a>
+          <a href="#home" style="font-size: 12.5px; color: #93A2C4;">Terms</a>
+          <a href="#home" style="font-size: 12.5px; color: #93A2C4;">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;healthcare&quot;,&quot;consumer&quot;,&quot;chemicals&quot;,&quot;food&quot;,&quot;technology&quot;],&quot;default&quot;:&quot;healthcare&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;expandAllFaqs&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+const REPORTS = {
+  healthcare: [
+    { code: 'CMI90632', category: 'Healthcare', title: 'Global Neonatal Infant Care Market 2026–2035', cagr: '6.21%', window: '2026–2035', region: 'Asia Pacific leads', baseYear: '2026', baseSize: '$3.24B', endYear: '2035', endSize: '$5.59B', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' },
+    { code: 'CMI91720', category: 'Clinical Diagnostics', title: 'Precision Diagnostics & Medicine Market', cagr: 'On request', window: 'Base year 2025', region: 'Global coverage', baseYear: 'Segments', baseSize: '4', endYear: 'Regions', endSize: '5', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' }
+  ],
+  consumer: [
+    { code: 'CMI90884', category: 'Consumer Goods', title: 'Global Consumer Staples Market 2025–2034', cagr: '4.1%', window: '2025–2034', region: 'North America leads', baseYear: '2025', baseSize: '$4.99T', endYear: '2034', endSize: '$8.87T', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' },
+    { code: 'CMI91607', category: 'Electronic & Electrical', title: 'Cricket Bowling Machine Market', cagr: 'On request', window: 'Base year 2025', region: 'Global coverage', baseYear: 'Segments', baseSize: '3', endYear: 'Regions', endSize: '5', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' }
+  ],
+  chemicals: [
+    { code: 'CMI90855', category: 'Chemicals & Materials', title: 'Global Waste Plastic Brick Market 2026–2035', cagr: '8.37%', window: '2026–2035', region: 'Asia Pacific 42–46%', baseYear: '2026', baseSize: '$2.61B', endYear: '2035', endSize: '$5.39B', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' },
+    { code: 'CMI91373', category: 'Basic Chemicals', title: 'Isobutanol Market', cagr: 'On request', window: 'Base year 2025', region: 'Global coverage', baseYear: 'Segments', baseSize: '3', endYear: 'Regions', endSize: '5', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' }
+  ],
+  food: [
+    { code: 'CMI90719', category: 'Food & Beverages', title: 'Global Myo-Inositol Market 2026–2035', cagr: '9.39%', window: '2026–2035', region: 'Asia Pacific 45.1%', baseYear: '2026', baseSize: '$1.31B', endYear: '2035', endSize: '$2.95B', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' },
+    { code: 'CMI91814', category: 'Food & Beverages', title: 'Pork Meat Market', cagr: 'On request', window: 'Base year 2025', region: 'Global coverage', baseYear: 'Segments', baseSize: '3', endYear: 'Regions', endSize: '5', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' }
+  ],
+  technology: [
+    { code: 'CMI91775', category: 'Technology', title: 'Global Data Transmission Service Market 2026–2035', cagr: '6.3%', window: '2026–2035', region: 'North America 36%', baseYear: '2026', baseSize: '$51.8B', endYear: '2035', endSize: '$89.1B', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' },
+    { code: 'CMI91775', category: 'Communications Infrastructure', title: 'LEO and GEO Satellite Market', cagr: 'On request', window: 'Base year 2025', region: 'Global coverage', baseYear: 'Segments', baseSize: '3', endYear: 'Regions', endSize: '5', pages: '320+', price: '$3,090', published: 'Jul 4, 2026' }
+  ]
+};
+
+const TABS = [
+  { id: 'healthcare', label: 'Healthcare' },
+  { id: 'consumer', label: 'Consumer Goods' },
+  { id: 'chemicals', label: 'Chemicals & Materials' },
+  { id: 'food', label: 'Food & Beverages' },
+  { id: 'technology', label: 'Technology' }
+];
+
+const INDUSTRIES = ['Aerospace & Defense', 'Agriculture', 'Automotive', 'Chemicals & Materials', 'Consumer Goods', 'Energy & Power', 'Food & Beverages', 'Healthcare', 'Industrial Automation', 'Packaging & Transport', 'Semiconductors & Electronics', 'Specialty & Fine Chemicals', 'Technology', 'Water & Sludge Treatment'];
+
+const FAQS = [
+  { q: 'What does a CMI report include?', a: 'Every report covers revenue estimation and forecast, company profiles, the competitive landscape, growth factors and recent trends — segmented by product type, application, end use and region across North America, Europe, Asia Pacific, the Middle East & Africa and South & Central America.' },
+  { q: 'In which formats can I receive the insights?', a: 'Insights are delivered as PDF, PPT or Excel, or through interactive dashboards, so the data drops straight into your own reporting.' },
+  { q: 'Can I request a sample before buying?', a: 'Yes. Request a free sample PDF for any report and review the methodology, segmentation and sample data tables before committing.' },
+  { q: 'How much does a report cost?', a: 'Standard reports are priced at $3,090 and run 320+ pages. Tailored purchasing options are available for single sections, regional cuts or enterprise-wide licences.' },
+  { q: 'Do you take on custom research mandates?', a: 'Our consultancy practice builds bespoke studies, competitive benchmarking and market-entry work on top of the syndicated library — over 3,725 clients have used it to date.' },
+  { q: 'How current is the data?', a: 'Reports are re-based annually with the latest published year as the base year and a ten-year forecast window, with interim updates when market conditions shift materially.' }
+];
+
+class Component extends DCLogic {
+  state = { tab: this.props.defaultTab || 'healthcare', open: 0, query: '' };
+
+  renderVals() {
+    const tab = REPORTS[this.state.tab] ? this.state.tab : 'healthcare';
+    return {
+      query: this.state.query,
+      onQuery: (e) => this.setState({ query: e.target.value }),
+      onSearch: () => this.setState({ tab: 'healthcare' }),
+      tabs: TABS.map((t) => ({
+        label: t.label,
+        bg: t.id === tab ? '#1541E3' : 'transparent',
+        fg: t.id === tab ? '#FFFFFF' : '#4C5B7A',
+        onSelect: () => this.setState({ tab: t.id })
+      })),
+      reports: REPORTS[tab],
+      industries: INDUSTRIES.map((name) => ({ name })),
+      faqs: FAQS.map((f, i) => {
+        const open = this.props.expandAllFaqs ? true : this.state.open === i;
+        return {
+          q: f.q,
+          a: f.a,
+          open,
+          sign: open ? '—' : '+',
+          bg: open ? '#1541E3' : '#F9FBFF',
+          border: open ? '#1541E3' : '#E3E9F7',
+          fg: open ? '#FFFFFF' : '#0A1633',
+          answerFg: open ? '#C9D8FF' : '#5C6B8A',
+          onToggle: () => this.setState({ open: this.state.open === i ? -1 : i })
+        };
+      })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

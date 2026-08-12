@@ -1,4 +1,6 @@
-import { Card, CardContent } from "@/components/ui";
+'use client';
+
+import { useState } from 'react';
 
 interface FAQItem {
   question: string;
@@ -9,46 +11,60 @@ interface FAQProps {
   faqs: FAQItem[];
 }
 
+/**
+ * Accordion. The open panel takes the primary blue — the one place in
+ * long-form content where blue fills a whole surface.
+ */
 export default function FAQ({ faqs }: FAQProps) {
-  if (!faqs || faqs.length === 0) {
-    return null;
-  }
+  const [openIndex, setOpenIndex] = useState(0);
+
+  if (!faqs || faqs.length === 0) return null;
 
   return (
     <section id="faq" className="mb-12 scroll-mt-24">
-      <h2 className="text-2xl font-bold text-[var(--blue-deep)] mb-6">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <Card key={index} className="overflow-hidden">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 bg-[var(--primary)] text-white">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 12h14"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-semibold text-[var(--foreground)] text-lg mb-3">
-                    {faq.question}
-                  </p>
-                  <p className="text-[var(--muted-foreground)]">{faq.answer}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+      <h2 className="mb-6 text-[24px] md:text-[28px]">Frequently asked questions</h2>
+
+      <div className="flex flex-col gap-2.5">
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
+
+          return (
+            <div
+              key={index}
+              className={`rounded-tile border transition-colors duration-200 ${
+                isOpen
+                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary)]'
+                  : 'border-[var(--cmi-line)] bg-[var(--cmi-raisedsurface)]'
+              }`}
+            >
+              <button
+                onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                aria-expanded={isOpen}
+                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left md:px-[22px]"
+              >
+                <span
+                  className={`text-[15px] font-semibold md:text-[15.5px] ${
+                    isOpen ? 'text-white' : 'text-[var(--cmi-ink)]'
+                  }`}
+                >
+                  {faq.question}
+                </span>
+                <span
+                  className={`shrink-0 text-[13px] font-bold ${isOpen ? 'text-white' : 'text-[var(--cmi-ink)]'}`}
+                  aria-hidden="true"
+                >
+                  {isOpen ? '—' : '+'}
+                </span>
+              </button>
+
+              {isOpen && (
+                <p className="px-5 pb-4 text-sm leading-[1.6] text-[var(--cmi-on-blue)] md:px-[22px]">
+                  {faq.answer}
+                </p>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

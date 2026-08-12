@@ -2,34 +2,42 @@ import { HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
-  variant?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'outline';
+  /**
+   * Chips are always fully rounded. `primary` is the blue-tinted chip
+   * reserved for the figure that matters most (CAGR, growth).
+   */
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'outline' | 'onBlue' | 'ink';
   size?: 'sm' | 'md' | 'lg';
 }
 
 const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
   ({ className, variant = 'default', size = 'md', ...props }, ref) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-medium transition-colors duration-150 whitespace-nowrap';
+      'inline-flex items-center justify-center gap-1.5 rounded-pill font-semibold whitespace-nowrap transition-colors duration-150';
 
     const variants = {
       default:
-        'bg-slate-100 text-slate-700 hover:bg-slate-200 shadow-sm',
+        'bg-[var(--cmi-surface)] text-[var(--cmi-ink)]',
       primary:
-        'bg-ocean-600 text-white shadow-primary',
+        'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary)] font-bold',
       success:
-        'bg-blue-100 text-blue-700 border border-blue-200 shadow-sm',
+        'bg-[var(--content-success-bg)] text-[var(--content-success-text)]',
       warning:
-        'bg-amber-100 text-amber-700 border border-amber-200 shadow-sm',
+        'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary-pressed)]',
       danger:
-        'bg-red-100 text-red-700 border border-red-200 shadow-sm',
+        'bg-[#FEF0F2] text-[var(--destructive)]',
       outline:
-        'border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-ocean-500',
+        'border border-[var(--cmi-line)] text-[var(--cmi-body)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]',
+      onBlue:
+        'bg-[var(--cmi-primary-raised)] text-white',
+      ink:
+        'bg-[var(--cmi-ink)] text-white',
     };
 
     const sizes = {
-      sm: 'px-2 py-0.5 text-xs rounded-md',
-      md: 'px-2.5 py-0.5 text-sm rounded-md',
-      lg: 'px-3 py-1 text-base rounded-lg',
+      sm: 'px-2.5 py-1 text-[11px]',
+      md: 'px-3 py-1.5 text-[12px]',
+      lg: 'px-4 py-2 text-[13px]',
     };
 
     return (

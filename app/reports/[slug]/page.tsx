@@ -325,15 +325,12 @@ export default async function ReportPage({
       <StructuredData data={breadcrumbSchema} />
       {faqSchema && <StructuredData data={faqSchema} />}
 
-      <div className="bg-[var(--background)]">
-        <div className="border-b border-[var(--border)] bg-[var(--card)]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-4">
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
-        </div>
+      <div className="rounded-panel bg-white px-6 py-4 md:px-11">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
-          <ReportContentWrapper
+      <div className="rounded-panel bg-white p-6 md:p-11">
+        <ReportContentWrapper
             tableOfContents={sidebarTOC}
             fullReportTOC={report.fullReportTOC}
             hasFullContent={hasFullContent}
@@ -343,75 +340,55 @@ export default async function ReportPage({
             reportSlug={report.slug}
           >
             <article>
-              {/* ── Report Hero Header ── */}
-              <header className="relative overflow-hidden rounded-2xl mb-10 theme-hero">
-                {/* Blueprint line grid overlay */}
-                <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
+              {/* ── Report hero — a blue card at the head of the content ── */}
+              <header className="mb-10 rounded-card bg-[var(--cmi-primary)] p-6 md:p-9">
+                <div className="mb-5 flex flex-wrap items-center gap-2">
+                  <span className="rounded-pill bg-white px-3 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-primary)]">
+                    {report.category}
+                  </span>
+                  <span className="chip-on-blue">{report.region}</span>
+                  <span className="chip-on-blue">
+                    {baseYearLabel} – {forecastEndYear}
+                  </span>
+                </div>
 
-                <div className="relative z-10 p-7 md:p-10">
-                  {/* Category + Region chips */}
-                  <div className="flex flex-wrap items-center gap-2 mb-5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest theme-accent-chip">
-                      <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent)' }} />
-                      {report.category}
+                <h1 className="mb-4 text-[26px] leading-[1.15] text-white md:text-[38px]">
+                  {report.title}
+                </h1>
+
+                <p className="mb-8 max-w-2xl text-[15px] leading-[1.6] text-[var(--cmi-on-blue)] md:text-base">
+                  {report.description}
+                </p>
+
+                {/* Metric tiles — white on blue, numbers in Outfit */}
+                <div className="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
+                  {metricCards.map((card) => (
+                    <div key={card.label} className="rounded-tile bg-white p-4">
+                      <p className="mb-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-meta)]">
+                        {card.label}
+                      </p>
+                      <p className="num text-[22px] text-[var(--cmi-ink)]">{card.value}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-x-6 gap-y-1.5 border-t border-[var(--cmi-primary-line)] pt-5">
+                  {[
+                    ['Code', report.reportCode || `HF${report.id}`],
+                    ['Published', report.date],
+                    ['Pages', `${report.pages}+`],
+                    ['Format', 'PDF + Excel'],
+                  ].map(([label, val]) => (
+                    <span key={label} className="text-xs text-[var(--cmi-on-blue-dim)]">
+                      {label}: <span className="font-semibold text-white">{val}</span>
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider theme-hero-panel">
-                      {report.region}
-                    </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium theme-hero-panel">
-                      {baseYearLabel} – {forecastEndYear}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h1 className="font-display text-2xl md:text-4xl font-bold leading-tight mb-4 theme-hero-text" style={{ letterSpacing: '-0.02em', lineHeight: '1.2' }}>
-                    {report.title}
-                  </h1>
-
-                  {/* Description */}
-                  <p className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl theme-hero-muted">
-                    {report.description}
-                  </p>
-
-                  {/* Metric stat cards */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
-                    {metricCards.map((card) => (
-                      <div
-                        key={card.label}
-                        className="rounded-xl p-4 theme-hero-panel"
-                        style={{ backdropFilter: 'blur(8px)' }}
-                      >
-                        <p className="text-xs uppercase tracking-wider mb-2 theme-hero-faint">
-                          {card.label}
-                        </p>
-                        <p className="font-display text-2xl font-bold theme-hero-text" style={{ letterSpacing: '-0.01em' }}>
-                          {card.value}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Metadata strip */}
-                  <div className="flex flex-wrap gap-x-6 gap-y-1.5 pt-5" style={{ borderTop: '1px solid hsl(var(--primary-foreground-hsl) / 0.14)' }}>
-                    {[
-                      ['Code', report.reportCode || `HF${report.id}`],
-                      ['Published', report.date],
-                      ['Pages', `${report.pages}+`],
-                      ['Format', 'PDF + Excel'],
-                    ].map(([label, val]) => (
-                      <span key={label} className="text-xs theme-hero-faint">
-                        {label}:{' '}
-                        <span className="theme-hero-text">{val}</span>
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
               </header>
 
               <JsonReportSections report={jsonReport} />
             </article>
           </ReportContentWrapper>
-        </div>
       </div>
     </>
   );
@@ -448,7 +425,7 @@ export default async function ReportPage({
 //         />
         
 //       {/* Download Sample Report CTA */}
-//       <div className="rounded-2xl pt-6">
+//       <div className="rounded-card pt-6">
 //         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
 //           <p className="text-[var(--muted-foreground)] text-base sm:text-lg font-medium">
 //             To learn more about this report,

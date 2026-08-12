@@ -11,7 +11,7 @@ export const CustomizeReportCard = React.forwardRef<HTMLDivElement, CustomizeRep
     return (
       <div
         ref={ref}
-        className={`rounded-2xl p-5 theme-muted-card border ${className ?? ''}`}
+        className={`rounded-card p-5 theme-muted-card border ${className ?? ''}`}
       >
         {/* Icon */}
         <div

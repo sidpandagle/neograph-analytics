@@ -24,7 +24,7 @@ export function BlogCard({
 }: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group flex flex-col h-full">
-      <div className="flex flex-col h-full theme-card border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+      <div className="flex flex-col h-full theme-card border rounded-card overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
         {/* Accent stripe */}
         <div className="h-[3px] bg-[var(--primary)] shrink-0" />
 

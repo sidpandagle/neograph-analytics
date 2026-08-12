@@ -27,16 +27,20 @@ function getInitials(company: string): string {
     .slice(0, 2);
 }
 
-function StarRating({ rating, dark = false }: { rating: number; dark?: boolean }) {
+function StarRating({ rating, onBlue = false }: { rating: number; onBlue?: boolean }) {
   return (
-    <div className="flex items-center gap-0.5">
+    <div className="flex items-center gap-0.5" aria-label={`${rating} out of 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className="w-3.5 h-3.5"
+          className="h-3.5 w-3.5"
           fill="currentColor"
           viewBox="0 0 20 20"
-          style={{ color: i < rating ? 'var(--accent)' : dark ? 'var(--on-dark-overlay)' : 'var(--border)' }}
+          style={{
+            color: i < rating
+              ? onBlue ? 'var(--cmi-sky)' : 'var(--cmi-primary)'
+              : onBlue ? 'rgba(255,255,255,0.25)' : 'var(--cmi-base)',
+          }}
           aria-hidden="true"
         >
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -61,166 +65,95 @@ export default function TestimonialsSection() {
   const [featured, ...secondary] = currentTestimonials;
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: 'var(--muted)' }}>
+    <section className="flex flex-col gap-6.5 rounded-panel bg-white p-7 md:p-11">
+      <div className="flex flex-col items-center gap-2.5 text-center">
+        <span className="eyebrow">Client stories</span>
+        <h2 className="text-[26px] md:text-[34px]">Trusted by industry leaders</h2>
+        <p className="max-w-[620px] text-[15px] leading-[1.6] text-[var(--cmi-body)]">
+          What healthcare executives and research teams say about working with NeoGraph.
+        </p>
+      </div>
 
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="grid gap-[18px] lg:grid-cols-12">
+        {/* Featured quote takes the blue — emphasis follows the primary. */}
+        {featured && (
+          <figure className="flex flex-col rounded-card bg-[var(--cmi-primary)] p-6.5 md:p-8 lg:col-span-7">
+            <StarRating rating={featured.rating} onBlue />
+            <blockquote className="my-6 flex-1 text-[18px] leading-[1.55] text-white md:text-[20px]">
+              &ldquo;{featured.quote}&rdquo;
+            </blockquote>
+            <figcaption className="flex items-center gap-3.5 border-t border-[var(--cmi-primary-line)] pt-5">
+              <div className="num flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-[var(--cmi-primary-raised)] text-[13px] text-white">
+                {getInitials(featured.company)}
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-white">{featured.role}</p>
+                <p className="mt-0.5 truncate text-xs text-[var(--cmi-on-blue-dim)]">
+                  {featured.company} &middot; {featured.location}
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        )}
 
-        {/* Section header */}
-        <div className="text-center space-y-3 mb-14">
-          <span
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border"
-            style={{ color: 'var(--primary)', backgroundColor: 'hsl(var(--primary-hsl) / 0.05)', borderColor: 'hsl(var(--primary-hsl) / 0.12)' }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--accent)' }} />
-            Client Stories
-          </span>
-          <h2
-            className="text-3xl md:text-[2.6rem] lg:text-5xl tracking-[-0.03em] leading-[1.08]"
-            style={{ color: 'var(--foreground)' }}
-          >
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-base max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
-            What healthcare executives and research teams say about NeoGraph Analytics.
-          </p>
-        </div>
-
-        {/* Featured + secondary */}
-        <div className="grid lg:grid-cols-12 gap-6">
-
-          {/* Featured */}
-          {featured && (
-            <div
-              className="lg:col-span-7 relative bg-[var(--card)] border rounded-2xl p-8 md:p-10 overflow-hidden flex flex-col"
-              style={{ borderColor: 'var(--border)', boxShadow: 'var(--shadow-card)' }}
+        <div className="flex flex-col gap-[18px] lg:col-span-5">
+          {secondary.map((testimonial) => (
+            <figure
+              key={testimonial.id}
+              className="flex flex-1 flex-col rounded-card border border-[var(--cmi-line)] p-6"
             >
-              {/* Top accent */}
-              <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl" style={{ backgroundColor: 'var(--accent)' }} />
-
-              {/* Quote mark */}
-              <svg
-                className="w-16 h-16 mb-5 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 32 32"
-                style={{ color: 'hsl(var(--primary-hsl) / 0.10)' }}
-                aria-hidden="true"
-              >
-                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-              </svg>
-
-              <p
-                className="italic text-lg md:text-xl leading-[1.80] flex-1 mb-8"
-                style={{ color: 'var(--color-charcoal-text)', fontStyle: 'italic' }}
-              >
-                &ldquo;{featured.quote}&rdquo;
-              </p>
-
-              <StarRating rating={featured.rating} />
-
-              <div className="flex items-center gap-4 mt-6 pt-6 border-t" style={{ borderColor: 'var(--border-light)' }}>
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
-                  style={{ background: 'var(--primary)' }}
-                >
-                  {getInitials(featured.company)}
+              <StarRating rating={testimonial.rating} />
+              <blockquote className="my-4 flex-1 text-sm leading-[1.7] text-[var(--cmi-body)]">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <figcaption className="flex items-center gap-3 border-t border-[var(--cmi-line)] pt-4">
+                <div className="num flex h-9 w-9 shrink-0 items-center justify-center rounded-pill bg-[var(--cmi-surface)] text-[11px] text-[var(--cmi-primary)]">
+                  {getInitials(testimonial.company)}
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold" style={{ color: 'var(--foreground)' }}>{featured.role}</p>
-                  <p className="text-xs mt-0.5" style={{ color: 'var(--muted-foreground)' }}>
-                    {featured.company} &middot; {featured.location}
+                  <p className="truncate text-xs font-semibold text-[var(--cmi-ink)]">{testimonial.role}</p>
+                  <p className="mt-0.5 truncate text-[11px] text-[var(--cmi-meta)]">
+                    {testimonial.company} &middot; {testimonial.location}
                   </p>
                 </div>
-              </div>
-            </div>
-          )}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
 
-          {/* Secondary */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            {secondary.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="flex-1 bg-[var(--card)] border rounded-2xl p-6 overflow-hidden relative flex flex-col"
-                style={{ borderColor: 'var(--border)', boxShadow: 'var(--shadow-card)' }}
-              >
-                <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl" style={{ backgroundColor: 'var(--primary)', opacity: 0.5 }} />
+      {/* Pager */}
+      <div className="flex items-center justify-center gap-4">
+        <button
+          onClick={prevSlide}
+          className="flex h-10 w-10 items-center justify-center rounded-pill border border-[var(--cmi-line)] text-[var(--cmi-body)] transition-colors hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]"
+          aria-label="Previous testimonials"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </button>
 
-                <div className="flex items-start justify-between mb-4">
-                  <StarRating rating={testimonial.rating} />
-                  <svg
-                    className="w-7 h-7 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 32 32"
-                    style={{ color: 'var(--border)' }}
-                    aria-hidden="true"
-                  >
-                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                  </svg>
-                </div>
-
-                <p className="italic text-sm leading-[1.82] flex-1 mb-5" style={{ color: 'var(--muted-foreground)' }}>
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-
-                <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: 'var(--border-light)' }}>
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
-                    style={{ background: 'var(--primary)' }}
-                  >
-                    {getInitials(testimonial.company)}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-semibold truncate" style={{ color: 'var(--foreground)' }}>{testimonial.role}</p>
-                    <p className="text-[11px] truncate mt-0.5" style={{ color: 'var(--muted-foreground)' }}>
-                      {testimonial.company} &middot; {testimonial.location}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
+        <div className="flex gap-2">
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className="h-1.5 rounded-pill transition-all duration-300"
+              style={{
+                width: index === currentIndex ? '2rem' : '0.375rem',
+                backgroundColor: index === currentIndex ? 'var(--cmi-primary)' : 'var(--cmi-base)',
+              }}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-4 mt-12">
-          <button
-            onClick={prevSlide}
-            className="w-10 h-10 rounded-full border bg-[var(--card)] flex items-center justify-center transition-all duration-200"
-            style={{ borderColor: 'var(--border)', color: 'var(--muted-foreground)', boxShadow: 'var(--shadow-card)' }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLElement).style.color = 'var(--accent)'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.color = 'var(--muted-foreground)'; }}
-            aria-label="Previous testimonials"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-
-          <div className="flex gap-2">
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className="h-1.5 rounded-full transition-all duration-300"
-                style={{
-                  width: index === currentIndex ? '2rem' : '0.375rem',
-                  backgroundColor: index === currentIndex ? 'var(--accent)' : 'var(--border)',
-                }}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={nextSlide}
-            className="w-10 h-10 rounded-full border bg-[var(--card)] flex items-center justify-center transition-all duration-200"
-            style={{ borderColor: 'var(--border)', color: 'var(--muted-foreground)', boxShadow: 'var(--shadow-card)' }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLElement).style.color = 'var(--accent)'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.color = 'var(--muted-foreground)'; }}
-            aria-label="Next testimonials"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-
+        <button
+          onClick={nextSlide}
+          className="flex h-10 w-10 items-center justify-center rounded-pill border border-[var(--cmi-line)] text-[var(--cmi-body)] transition-colors hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]"
+          aria-label="Next testimonials"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </button>
       </div>
     </section>
   );
