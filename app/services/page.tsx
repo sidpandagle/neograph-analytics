@@ -231,11 +231,6 @@ export default function ServicesPage() {
                   Contact Our Team
                 </button>
               </Link>
-              <Link href="/request-demo">
-                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]" style={{ color: 'hsl(var(--primary-foreground-hsl) / 0.84)', background: 'hsl(var(--primary-foreground-hsl) / 0.07)', border: '1px solid hsl(var(--primary-foreground-hsl) / 0.16)' }}>
-                  Schedule a Demo
-                </button>
-              </Link>
             </div>
           </div>
         </div>

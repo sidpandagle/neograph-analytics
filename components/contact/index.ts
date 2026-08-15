@@ -1,2 +1,2 @@
 export { default as QuickContactSection } from './QuickContactSection';
-export { default as TrustedPartnersSidebar } from './TrustedPartnersSidebar';
+export { default as OfficeLocationsSidebar } from './OfficeLocationsSidebar';

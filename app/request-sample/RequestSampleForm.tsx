@@ -4,8 +4,7 @@ import { useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Section, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, Badge, Captcha, type CaptchaRef } from "@/components/ui";
 import { CountrySelect } from "@/components/ui/country-select";
-import { CONTACT_INFO } from "@/lib/contact";
-import { QuickContactSection, TrustedPartnersSidebar } from "@/components/contact";
+import { QuickContactSection, OfficeLocationsSidebar } from "@/components/contact";
 import { submitRequestSampleForm, isFormError } from "@/lib/api";
 import { getDefaultCountry, type Country } from "@/lib/data/countries";
 
@@ -327,15 +326,7 @@ export default function RequestSampleForm() {
                 <a href="/contact" className="text-[var(--primary)] hover:underline font-medium">
                   Contact us
                 </a>
-                {" "}or call{" "}
-                <a href={`tel:${CONTACT_INFO.offices.usa.phone}`} className="text-[var(--primary)] hover:underline font-medium">
-                  {CONTACT_INFO.offices.usa.phoneFormatted}
-                </a>
-                {" "}(USA) /{" "}
-                <a href={`tel:${CONTACT_INFO.offices.india.phone}`} className="text-[var(--primary)] hover:underline font-medium">
-                  {CONTACT_INFO.offices.india.phoneFormatted}
-                </a>
-                {" "}(India) - 24×7 Support
+                {" "}- 24×7 Support
               </p>
             </div>
           </div>
@@ -343,7 +334,7 @@ export default function RequestSampleForm() {
           {/* Right Column - Quick Contact & Trusted Partners (1/3 width) */}
           <div className="space-y-6">
             <QuickContactSection />
-            <TrustedPartnersSidebar />
+            <OfficeLocationsSidebar />
           </div>
         </div>
 
