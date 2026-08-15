@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
@@ -61,7 +62,12 @@ export default function Navigation() {
 export function MobileNav() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const consultingServices = consultingServicesData as ConsultingService[];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -106,125 +112,131 @@ export function MobileNav() {
         </div>
       </button>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-lg xl:hidden"
-          onClick={() => setIsOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+      {mounted &&
+        createPortal(
+          <>
+            {isOpen && (
+              <div
+                className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-lg xl:hidden"
+                onClick={() => setIsOpen(false)}
+                aria-hidden="true"
+              />
+            )}
 
-      {/* Drawer — an ink panel sliding onto the desk. */}
-      <div
-        className={cn(
-          "fixed right-3 top-[76px] z-50 h-[calc(100vh-96px)] w-[min(320px,calc(100vw-24px))] xl:hidden",
-          "overflow-y-auto rounded-panel bg-[var(--cmi-ink)] p-5",
-          "transition-[transform,opacity] duration-300 ease-out"
-        )}
-        style={{
-          transform: isOpen ? "translateX(0)" : "translateX(calc(100% + 16px))",
-          opacity: isOpen ? 1 : 0,
-          pointerEvents: isOpen ? "auto" : "none",
-        }}
-      >
-        <nav className="flex flex-col gap-1">
-          <Link
-            href="/"
-            className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+            {/* Drawer — an ink panel sliding onto the desk. */}
+            <div
+            className={cn(
+              "fixed right-3 top-[76px] z-50 h-[calc(100vh-96px)] w-[min(320px,calc(100vw-24px))] xl:hidden",
+              "overflow-y-auto rounded-panel bg-[var(--cmi-ink)] p-5",
+              "transition-[transform,opacity] duration-300 ease-out"
+            )}
+            style={{
+              transform: isOpen ? "translateX(0)" : "translateX(calc(100% + 16px))",
+              opacity: isOpen ? 1 : 0,
+              pointerEvents: isOpen ? "auto" : "none",
+            }}
           >
-            Home
-          </Link>
-          <Link
-            href="/reports"
-            className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
-          >
-            All Reports
-          </Link>
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                drawerLink,
-                pathname.startsWith(item.href)
-                  ? "bg-[var(--cmi-primary)] text-white"
-                  : "text-white/85 hover:bg-white/10"
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
-
-          <Link
-            href="/request-sample"
-            className="mt-2 rounded-pill bg-white px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
-          >
-            Request Sample
-          </Link>
-
-          <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
-            <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
-              Consulting &amp; Services
-            </span>
-            <div className="mt-2 flex flex-col">
-              <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10")}>
-                All Services
+            <nav className="flex flex-col gap-1">
+              <Link
+                href="/"
+                className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+              >
+                Home
               </Link>
-              {consultingServices.map((service) => (
+              <Link
+                href="/reports"
+                className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+              >
+                All Reports
+              </Link>
+              {navItems.map((item) => (
                 <Link
-                  key={service.id}
-                  href={`/consulting/${service.slug}`}
-                  className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    drawerLink,
+                    pathname.startsWith(item.href)
+                      ? "bg-[var(--cmi-primary)] text-white"
+                      : "text-white/85 hover:bg-white/10"
+                  )}
                 >
-                  {service.title}
+                  {item.name}
                 </Link>
               ))}
+    
+              <Link
+                href="/request-sample"
+                className="mt-2 rounded-pill bg-white px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
+              >
+                Request Sample
+              </Link>
+    
+              <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
+                <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+                  Consulting &amp; Services
+                </span>
+                <div className="mt-2 flex flex-col">
+                  <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10")}>
+                    All Services
+                  </Link>
+                  {consultingServices.map((service) => (
+                    <Link
+                      key={service.id}
+                      href={`/consulting/${service.slug}`}
+                      className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+    
+              <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
+                <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+                  Industries
+                </span>
+                <div className="mt-2 flex flex-col">
+                  {categories.map((category) => (
+                    <Link
+                      key={category.id}
+                      href={`/reports?category=${category.slug}`}
+                      className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+    
+              <div className="mt-6 border-t border-[var(--cmi-footer-line)] px-4 pt-5">
+                <span className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
+                  Follow Us
+                </span>
+                <div className="mt-3 flex gap-4">
+                  {[
+                    { href: "https://facebook.com/neographanalytics", Icon: Facebook, label: "Facebook" },
+                    { href: "https://instagram.com/neographanalytics", Icon: Instagram, label: "Instagram" },
+                    { href: "https://linkedin.com/company/neographanalytics", Icon: Linkedin, label: "LinkedIn" },
+                    { href: "https://twitter.com/neographanalytics", Icon: Twitter, label: "X (Twitter)" },
+                  ].map(({ href, Icon, label }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--cmi-footer-link)] transition-colors hover:text-white"
+                      aria-label={label}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </nav>
             </div>
-          </div>
-
-          <div className="mt-5 border-t border-[var(--cmi-footer-line)] pt-4">
-            <span className="px-4 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
-              Industries
-            </span>
-            <div className="mt-2 flex flex-col">
-              {categories.map((category) => (
-                <Link
-                  key={category.id}
-                  href={`/reports?category=${category.slug}`}
-                  className={cn(drawerLink, "text-sm text-[var(--cmi-footer-link)] hover:bg-white/10 hover:text-white")}
-                >
-                  {category.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-6 border-t border-[var(--cmi-footer-line)] px-4 pt-5">
-            <span className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
-              Follow Us
-            </span>
-            <div className="mt-3 flex gap-4">
-              {[
-                { href: "https://facebook.com/neographanalytics", Icon: Facebook, label: "Facebook" },
-                { href: "https://instagram.com/neographanalytics", Icon: Instagram, label: "Instagram" },
-                { href: "https://linkedin.com/company/neographanalytics", Icon: Linkedin, label: "LinkedIn" },
-                { href: "https://twitter.com/neographanalytics", Icon: Twitter, label: "X (Twitter)" },
-              ].map(({ href, Icon, label }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--cmi-footer-link)] transition-colors hover:text-white"
-                  aria-label={label}
-                >
-                  <Icon className="h-5 w-5" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </nav>
-      </div>
+          </>,
+          document.body
+        )}
     </>
   );
 }
