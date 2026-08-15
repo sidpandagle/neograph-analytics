@@ -108,7 +108,7 @@ export function MobileNav() {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-sm xl:hidden"
+          className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-lg xl:hidden"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />
