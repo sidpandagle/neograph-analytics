@@ -488,6 +488,7 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
                 className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-sm font-bold transition-transform duration-200"
                 style={{
                   background: open === i ? 'var(--primary)' : 'var(--muted)',
+                  border: open === i ? 'none' : '1px solid var(--border)',
                   color: open === i ? 'var(--primary-foreground)' : 'var(--muted-foreground)',
                   transform: open === i ? 'rotate(45deg)' : 'none',
                 }}
