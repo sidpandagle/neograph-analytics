@@ -4,7 +4,7 @@ import { Section, Container, Badge, StyledArticleContent, Button, Card, CardCont
 import { getPressReleases, getPressReleaseBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
-import { TrustedPartnersSidebar } from "@/components/contact";
+import { OfficeLocationsSidebar } from "@/components/contact";
 
 interface PressReleasePageProps {
   params: Promise<{
@@ -239,8 +239,8 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
                 </CardContent>
               </Card>
 
-              {/* Trusted Clients */}
-              <TrustedPartnersSidebar />
+              {/* Office Locations */}
+              <OfficeLocationsSidebar />
             </div>
           </div>
         </Container>

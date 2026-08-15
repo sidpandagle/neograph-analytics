@@ -42,7 +42,7 @@ export default function TrustedPartnersSection() {
           {duplicatedPartners.map((partner, index) => (
             <div
               key={`${partner.id}-${index}`}
-              className="flex h-[72px] w-[152px] flex-shrink-0 items-center justify-center rounded-tile bg-[var(--cmi-surface)] px-5 opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              className="flex h-[72px] w-[152px] flex-shrink-0 items-center justify-center rounded-tile border border-[var(--cmi-line)] bg-white px-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <Image
                 src={partner.logo}

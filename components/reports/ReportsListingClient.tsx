@@ -128,7 +128,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
 
       {/* ── Filters ──────────────────────────────────────────────────────────── */}
       <section className="rounded-panel bg-white p-4 md:px-6 md:py-5">
-        <div className="no-scrollbar flex items-center gap-2.5 overflow-x-auto">
+        <div className="flex flex-wrap items-center gap-2.5">
           <button
             onClick={() => setActiveCategory('')}
             data-active={!activeCategory}
@@ -136,8 +136,6 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
           >
             All Reports
           </button>
-
-          <div className="h-5 w-px flex-shrink-0 bg-[var(--cmi-line)]" />
 
           {categories.map((cat) => (
             <button
@@ -149,8 +147,6 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               {cat.name}
             </button>
           ))}
-
-          <div className="h-5 w-px flex-shrink-0 bg-[var(--cmi-line)]" />
 
           <div className="relative flex-shrink-0">
             <select

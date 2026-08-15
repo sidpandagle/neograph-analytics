@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { Section, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, Badge, Captcha, type CaptchaRef } from "@/components/ui";
 import { CountrySelect } from "@/components/ui/country-select";
 import { CONTACT_INFO } from "@/lib/contact";
-import { QuickContactSection, TrustedPartnersSidebar } from "@/components/contact";
+import { QuickContactSection, OfficeLocationsSidebar } from "@/components/contact";
 import { submitContactForm, isFormError } from "@/lib/api";
 import { getDefaultCountry, type Country } from "@/lib/data/countries";
 
@@ -305,7 +305,7 @@ export default function ContactPage() {
           {/* Right Column - Quick Contact & Trusted Partners (1/3 width) */}
           <div className="space-y-6">
             <QuickContactSection />
-            <TrustedPartnersSidebar />
+            <OfficeLocationsSidebar />
           </div>
         </div>
 
@@ -359,12 +359,6 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{CONTACT_INFO.offices.usa.name}</h3>
-                <a
-                  href={`tel:${CONTACT_INFO.offices.usa.phone}`}
-                  className="text-[var(--primary)] font-medium hover:underline block mb-2"
-                >
-                  {CONTACT_INFO.offices.usa.phoneFormatted}
-                </a>
                 <p className="text-xs text-[var(--muted-foreground)] mb-1">{CONTACT_INFO.offices.usa.company}</p>
                 <p className="text-xs text-[var(--muted-foreground)]">
                   {CONTACT_INFO.offices.usa.addressLine1}<br />
@@ -385,12 +379,6 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{CONTACT_INFO.offices.india.name}</h3>
-                <a
-                  href={`tel:${CONTACT_INFO.offices.india.phone}`}
-                  className="text-[var(--primary)] font-medium hover:underline block mb-2"
-                >
-                  {CONTACT_INFO.offices.india.phoneFormatted}
-                </a>
                 <p className="text-xs text-[var(--muted-foreground)] mb-1">{CONTACT_INFO.offices.india.company}</p>
                 <p className="text-xs text-[var(--muted-foreground)]">
                   {CONTACT_INFO.offices.india.addressLine1}<br />

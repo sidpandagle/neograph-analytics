@@ -62,7 +62,7 @@ Content is sourced from **static JSON files** in `/data/`:
 **Critical architectural layer** — all data access goes through `/lib/api/` rather than directly reading JSON:
 - `reports.ts` - Report fetching with API integration fallback to JSON
 - `categories.ts`, `blogs.ts`, `press-releases.ts`, `legal-pages.ts`, `authors.ts`, `consulting.ts`
-- `forms.ts` - Form submission handling (contact, request-sample, request-demo)
+- `forms.ts` - Form submission handling (contact, request-sample)
 - `orders.ts` - Checkout/order data
 - `mappers.ts` - Transforms API responses to UI-ready format
 - `config.ts` - API base URL configuration
@@ -84,7 +84,6 @@ Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` f
 - `/authors/[id]` - Author profile pages
 - `/contact` - Contact form page
 - `/request-sample` - Request sample form
-- `/request-demo` - Request demo page
 - `/checkout/[reportSlug]` - PayPal-powered checkout
 - `/order-success` - Post-purchase confirmation
 - `/llms.txt` - LLM crawler endpoint

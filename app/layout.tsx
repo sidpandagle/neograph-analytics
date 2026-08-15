@@ -87,7 +87,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {/* The desk: every section below is a rounded panel floating on it. */}
-        <div className="flex min-h-screen flex-col pt-4 md:pt-5">
+        <div className="flex min-h-screen flex-col">
           <Header />
           <main className="desk flex-1 pb-5">{children}</main>
           <Footer />
