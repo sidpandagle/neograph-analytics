@@ -4,6 +4,13 @@ import { notFound } from 'next/navigation';
 import { getAllConsultingServices, getConsultingServiceBySlug } from '@/lib/api/consulting';
 import { Section, Container, Card, CardHeader, CardTitle, CardContent, Button, Badge } from '@/components/ui';
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+
 interface ConsultingServicePageProps {
   params: Promise<{
     slug: string;
@@ -30,6 +37,9 @@ export async function generateMetadata({ params }: ConsultingServicePageProps): 
   return {
     title: `${service.title} | Consulting Services`,
     description: service.description,
+    alternates: {
+      canonical: `/consulting/${slug}`,
+    },
   };
 }
 

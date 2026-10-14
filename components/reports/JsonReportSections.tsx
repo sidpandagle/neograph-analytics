@@ -5,6 +5,7 @@ import { MarketForecastLineChart } from './charts/MarketForecastLineChart'
 import { ComponentSharePieChart } from './charts/ComponentSharePieChart'
 import { RegionalBarChart } from './charts/RegionalBarChart'
 import type { JsonReport, SegmentItem } from '@/lib/jsonReports'
+import { pct, barWidth, toNum, usableRows } from '@/lib/format'
 
 interface JsonReportSectionsProps {
   report: JsonReport
@@ -206,8 +207,11 @@ function MarketSegmentationSection({ segmentation }: { segmentation: JsonReport[
 // ── country table ─────────────────────────────────────────────────────────────
 
 function CountryTable({ countries }: { countries: JsonReport['country_analysis'] }) {
-  if (!countries.length) return null
-  const maxShare = Math.max(...countries.map((c) => c.market_share))
+  // Supabase rows can carry placeholders such as {"country": ""} with no metrics.
+  const rows = usableRows(countries ?? [], 'country', ['market_share', 'growth_rate'])
+  if (!rows.length) return null
+  const shares = rows.map((c) => toNum(c.market_share) ?? 0)
+  const maxShare = Math.max(...shares, 0) || 1
 
   return (
     <div className="mt-6">
@@ -222,7 +226,7 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
             </tr>
           </thead>
           <tbody>
-            {countries.map((c, i) => (
+            {rows.map((c, i) => (
               <tr key={i} className="border-t border-[var(--border)]" style={{ background: i % 2 === 0 ? 'var(--card)' : 'var(--content-surface-alt)' }}>
                 <td className="py-3 px-4 text-[var(--foreground)] font-medium">{c.country}</td>
                 <td className="py-3 px-4 text-right">
@@ -230,14 +234,14 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
                     <div className="w-20 h-1.5 rounded-full bg-[var(--border)]">
                       <div
                         className="h-1.5 rounded-full"
-                        style={{ width: `${(c.market_share / maxShare) * 100}%`, background: 'var(--primary)' }}
+                        style={{ width: `${barWidth(((toNum(c.market_share) ?? 0) / maxShare) * 100)}%`, background: 'var(--primary)' }}
                       />
                     </div>
-                    <span className="font-semibold text-[var(--foreground)]">{c.market_share.toFixed(1)}%</span>
+                    <span className="font-semibold text-[var(--foreground)]">{pct(c.market_share)}</span>
                   </div>
                 </td>
                 <td className="py-3 px-4 text-right font-semibold" style={{ color: 'var(--accent)' }}>
-                  +{c.growth_rate.toFixed(1)}%
+                  {toNum(c.growth_rate) === null ? '—' : `+${pct(c.growth_rate)}`}
                 </td>
               </tr>
             ))}
@@ -251,13 +255,14 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
 // ── regional analysis ─────────────────────────────────────────────────────────
 
 function RegionalSection({ regions, countries }: { regions: JsonReport['regional_analysis']; countries: JsonReport['country_analysis'] }) {
-  if (!regions.length) return null
-  const maxShare = Math.max(...regions.map((r) => r.market_share))
+  const regionRows = usableRows(regions ?? [], 'region', ['market_share', 'growth_rate'])
+  if (!regionRows.length) return null
+  const maxShare = Math.max(...regionRows.map((r) => toNum(r.market_share) ?? 0), 0) || 1
 
   return (
     <section className="mb-14">
       <div className="space-y-3 mb-6">
-        {regions.map((r, i) => (
+        {regionRows.map((r, i) => (
           <div
             key={i}
             className="rounded-xl p-4"
@@ -280,10 +285,10 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
               </div>
               <div className="flex gap-4 text-xs">
                 <span className="text-[var(--muted-foreground)]">
-                  CAGR: <span className="font-bold" style={{ color: 'var(--accent)' }}>{r.growth_rate.toFixed(1)}%</span>
+                  CAGR: <span className="font-bold" style={{ color: 'var(--accent)' }}>{pct(r.growth_rate)}</span>
                 </span>
                 <span className="text-[var(--muted-foreground)]">
-                  Share: <span className="font-bold text-[var(--foreground)]">{r.market_share.toFixed(1)}%</span>
+                  Share: <span className="font-bold text-[var(--foreground)]">{pct(r.market_share)}</span>
                 </span>
               </div>
             </div>
@@ -292,7 +297,7 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
             <div className="w-full h-1.5 rounded-full mb-3" style={{ background: 'var(--content-surface)' }}>
               <div
                 className="h-1.5 rounded-full transition-all duration-700"
-                style={{ width: `${(r.market_share / maxShare) * 100}%`, background: 'var(--primary)' }}
+                style={{ width: `${barWidth(((toNum(r.market_share) ?? 0) / maxShare) * 100)}%`, background: 'var(--primary)' }}
               />
             </div>
 

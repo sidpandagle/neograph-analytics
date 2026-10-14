@@ -7,6 +7,17 @@ import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from 
 import BlogSidebarForm from "@/components/blog/BlogSidebarForm";
 import { QuickContactSection } from "@/components/contact";
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+// `dynamicParams = false`: an unknown slug rendered on demand gets persisted to the
+// ISR cache with status 200 (a soft 404). Restricting to build-time params makes the
+// router return a real 404 instead.
+export const dynamicParams = false;
+
 interface BlogPageProps {
   params: Promise<{
     slug: string;

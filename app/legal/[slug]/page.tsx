@@ -4,6 +4,13 @@ import { getLegalPages, getLegalPageBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+
 interface LegalPageProps {
   params: Promise<{
     slug: string;

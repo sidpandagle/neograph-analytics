@@ -16,6 +16,7 @@ import {
   ChartLegendContent,
 } from '@/components/ui/chart'
 import type { RegionItem } from '@/lib/jsonReports'
+import { pct } from '@/lib/format'
 
 interface RegionalBarChartProps {
   regions: RegionItem[]
@@ -83,7 +84,7 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
                 offset={8}
                 className="fill-foreground"
                 fontSize={11}
-                formatter={(v: number) => `${v.toFixed(1)}%`}
+                formatter={(v: number) => pct(v)}
               />
             </Bar>
             <Bar dataKey="growthRate" fill="var(--color-growthRate)" radius={[0, 4, 4, 0]}>
@@ -93,7 +94,7 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
                 offset={8}
                 className="fill-foreground"
                 fontSize={11}
-                formatter={(v: number) => `${v.toFixed(1)}%`}
+                formatter={(v: number) => pct(v)}
               />
             </Bar>
           </BarChart>
@@ -113,10 +114,10 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
               </div>
               <div className="flex gap-4 text-sm">
                 <span className="text-muted-foreground">
-                  Share: <span className="font-bold text-foreground">{r.market_share.toFixed(1)}%</span>
+                  Share: <span className="font-bold text-foreground">{pct(r.market_share)}</span>
                 </span>
                 <span className="text-muted-foreground">
-                  CAGR: <span className="font-bold text-[var(--accent)]">{r.growth_rate.toFixed(1)}%</span>
+                  CAGR: <span className="font-bold text-[var(--accent)]">{pct(r.growth_rate)}</span>
                 </span>
               </div>
               {r.largest_country && (

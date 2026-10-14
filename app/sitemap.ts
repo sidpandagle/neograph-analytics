@@ -3,6 +3,13 @@ import { getReports } from '@/lib/api/reports';
 import { getBlogs } from '@/lib/api/blogs';
 import { getPressReleases } from '@/lib/api/press-releases';
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+
 const BASE_URL = 'https://www.neographanalytics.com';
 
 const STATIC_PAGES = [

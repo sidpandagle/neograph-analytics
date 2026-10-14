@@ -1,6 +1,16 @@
 import { Suspense } from "react";
 import { Section, Container } from "@/components/ui";
 import RequestSampleForm from "./RequestSampleForm";
+import type { Metadata } from "next";
+
+// Declares its own canonical rather than inheriting one. The route is disallowed
+// in robots.ts, so this exists to prevent a stray duplicate signal, not to rank.
+export const metadata: Metadata = {
+  title: "Request a Sample | NeoGraph Analytics",
+  description: "Request a sample of a NeoGraph Analytics research report.",
+  alternates: { canonical: "/request-sample" },
+  robots: { index: false, follow: true },
+};
 
 export default function RequestSamplePage() {
   return (
