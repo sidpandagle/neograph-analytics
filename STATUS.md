@@ -1,40 +1,49 @@
 # STATUS
 
 **Updated:** 2026-10-15
-**Budget:** 7d used            : 3% ceiling (70% pace) : 22.6% headroom           : +19.6 points  (ceiling is 70% of pace, not 70% absolute)
-**Mode:** P0 bundle built and verified; awaiting production build to confirm 404 status
+**Budget:** 7d used            : 4% ceiling (70% pace) : 23.0% headroom           : +19.0 points  (ceiling is 70% of pace)
+**Commits today:** 4 of 5 — one left, reserved for deploying the new report
+**Mode:** running
 
-## Now
-Second production build running after fixing a crash it exposed. On success:
-commit the P0 bundle as one PR.
+## Shipped and verified in production today
+1. **PR #4** — all 140 reports reachable (were 10); 130 soft 404s eliminated;
+   fabricated `aggregateRating` removed; canonical leak fixed; `revalidate` added
+   to 11 routes; old-brand `robots.txt` retired; build crash-proofed.
+2. **PR #5** — every fabricated figure replaced with database-derived values;
+   table of contents enabled and server-rendered (13 anchors); research
+   methodology rendered for the first time.
+3. **PR #6** — form endpoints validated, escaped and rate-limited.
+4. **Sitemap submitted** to Search Console. Read same-day: Success, 158 pages
+   discovered, up from 0 sitemaps and 7 indexed.
 
-## P0 bundle — complete, pending build confirmation
-1. All 140 reports render (were 10). New Supabase-first loader, JSON kept as fallback.
-2. Fabricated `aggregateRating` (4.7/45 reviews) removed — Google policy violation.
-3. JSON-LD `</script>` injection closed (and a silent no-op in my first fix caught).
-4. `public/robots.txt` pointing at the old `synapticresearch.com` brand moved aside.
-5. Site-wide canonical leak removed; per-route canonicals added to 13+ pages.
-6. `revalidate = 3600` added to 11 routes — fixes the 28-day stale production cache.
-7. `loading.tsx` moved off 4 dynamic detail routes — `/authors/99` now 404s correctly.
-8. `lib/format.ts` added; one malformed row can no longer abort the whole build.
+Production checks: `/reports/zzz-nope` -> 404; previously-dead reports -> 200 with
+real titles; homepage cache `Age: 1` (was 27.8 days); no fabricated values in the
+live HTML; 13 TOC anchors live.
+
+## In flight
+- **New report published to Supabase:** `ai-in-cancer-diagnostics-market`
+  (corpus now 141). Building so it prerenders — `dynamicParams = false` means a
+  new slug needs a deploy, which the last commit of the day will trigger.
 
 ## Blockers
-- **[H] Cloudflare API token.** Account ID captured (in `env`). Image hosting, OG
-  images and `cdn.neographanalytics.com` wait on this. Nothing else is blocked.
+None. Cloudflare is closed out: the domain runs on GoDaddy nameservers, not
+Cloudflare, so R2 custom domains are not available without migrating DNS on a live
+domain. Visuals ship as inline SVG instead — no hosting, no egress, no image
+transformations consumed.
 
-## Next (no input needed)
-1. Confirm 404 status on the production build; if reports/blog/press-releases still
-   return 200, resolve existence before streaming rather than after.
-2. Remove fabricated figures: invented telemedicine hero chart, "2,500+ reports"
-   (actual 140), About's client/specialist claims.
-3. Turn on the report TOC (`hasFullContent = false` disables it), render
-   `research_methodology`, add chart source captions and bylines.
-4. Harden form handlers (no validation, no escaping, no rate limit today).
-5. Submit the sitemap to Search Console — only after the 140 pages are live.
+## Next up (tomorrow's commit budget)
+1. `/consulting` and `/authors` return 404 while being linked internally and
+   listed in a sitemap.
+2. Author identity is positional (`id - 1` into an array), so adding a team member
+   silently repoints every author URL.
+3. Chart `<figure>/<figcaption>` with source notes; `charts[].data_source` is
+   populated and unused.
+4. Analyst prose is 12px at ~2.9:1 contrast (fails WCAG AA) with ~95-character
+   lines.
+5. `/reports` ships 502KB of HTML and paginates client-side, so Google only ever
+   sees page 1.
 
-## Key facts
-- Search Console: 0 sitemaps submitted, 7 pages indexed of 158, 6 clicks / 2.4k
-  impressions / position 31.8 over 90 days. Demand exists: "ai in oncology market"
-  506 impressions, 0 clicks.
-- Vercel auto-deploys from `main`, Hobby plan, all meters well inside free limits.
-  Tightest meter: Image Optimization 492/5,000 transformations — prefer inline SVG.
+## Content pipeline
+Oncology cluster planned (see BACKLOG). Report 1 of 5 published today. Next:
+Oncology Information Systems, Precision Oncology & Companion Diagnostics,
+Radiation Oncology, Cancer Immunotherapy.

@@ -188,3 +188,30 @@ Baseline to measure against (90 days to 2026-10-15): 6 clicks, 2,400 impressions
 - `/reports/ai-in-oncology-market`: 13 TOC anchors server-rendered, methodology
   section present, fabricated `ratingValue` confirmed absent.
 - Homepage cache `Age: 1` — the ISR fix is working end to end.
+
+## 2026-10-15 — first new report + segmentation recovery
+- Published `ai-in-cancer-diagnostics-market` to Supabase (corpus 140 -> 141).
+  Angle: published 2032 estimates span $1.7B-$17.9B, a 7x spread caused by scope
+  definition rather than growth assumptions. Grounded in the FDA AI-enabled device
+  register (1,524 authorisations through Q1 2026, 1,164 radiology), which is
+  countable, versus top-down figures that are not. Unit growth in the high teens
+  against low-double-digit revenue growth implies falling revenue per cleared device.
+- `regional_analysis` and `country_analysis` left empty deliberately: no defensible
+  public source for a regional split of this specific market. The conditional TOC
+  omits the section rather than showing invented shares. Having spent the day
+  removing fabricated figures, adding new ones would be incoherent.
+- Methodology states plainly that no primary interviews were conducted and that
+  intermediate years are a modelled curve, not observed data.
+- **Found while verifying it:** `MarketSegmentationSection` read four hardcoded keys
+  (`by_component`, `by_type`, `by_application`, `by_end_user`) and silently dropped
+  every other dimension, leaving a "Market Segmentation" heading above nothing.
+  Measured across the corpus: **48 of 141 reports affected, 238 segment entries that
+  never rendered** — `by_technology` (17 reports), `by_product_type` (13),
+  `by_modality`, `by_crop_type`, `by_indication`, `by_therapeutic_area` and 13 more.
+  Rewrote it to render whatever dimensions a row carries, deriving headings from the
+  key, and widened the `market_segmentation` type with an index signature.
+  Verified: agricultural-biotechnology now shows By Product / By Crop Type /
+  By Technology / By Application where it previously showed one.
+- Note on process: a verification run reported "no segmentation anywhere" on three
+  reports. That was a false negative — `next start` had raced the build and was
+  serving no build at all (curl status 000). Re-ran after restarting the server.
