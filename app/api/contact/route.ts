@@ -1,6 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import type { ContactFormData } from '@/lib/api/forms.types';
+import {
+  validate,
+  escapeHtml,
+  singleLine,
+  rateLimited,
+  clientKey,
+  badRequest,
+  tooManyRequests,
+  type FieldRule,
+} from '@/lib/api/form-guard';
+
+const RULES: FieldRule[] = [
+  { key: 'fullName', label: 'Name', required: true, max: 120 },
+  { key: 'email', label: 'Email', required: true, email: true, max: 160 },
+  { key: 'company', label: 'Company', max: 160 },
+  { key: 'phone', label: 'Phone', max: 40 },
+  { key: 'country', label: 'Country', max: 80 },
+  { key: 'subject', label: 'Subject', max: 60 },
+  { key: 'message', label: 'Message', required: true, max: 5000 },
+];
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,7 +28,17 @@ const FROM_EMAIL = 'support@neographanalytics.com';
 
 export async function POST(request: NextRequest) {
   try {
-    const data: ContactFormData = await request.json();
+    if (rateLimited(clientKey(request))) return tooManyRequests();
+
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch {
+      return badRequest(['Malformed request body.']);
+    }
+
+    const { ok, errors, values: data } = validate(body, RULES);
+    if (!ok) return badRequest(errors);
 
     const subjectMap: Record<string, string> = {
       general: 'General Inquiry',
@@ -20,27 +49,31 @@ export async function POST(request: NextRequest) {
       other: 'Other',
     };
 
-    const subjectLabel = subjectMap[data.subject] ?? data.subject;
+    // Never let a caller-supplied value reach a mail header unescaped or multiline.
+    // `??` would not fire here on an empty string, so use `||`.
+    const subjectLabel = subjectMap[data.subject] || singleLine(data.subject, 60) || 'Inquiry';
 
     await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
-      replyTo: data.email,
-      subject: `[Contact] ${subjectLabel} — ${data.fullName}`,
+      replyTo: data.email, // validated as a single-line address above
+      // A subject is plain text, not HTML: escaping here would literally print
+      // "&amp;" in the inbox. singleLine() is what matters, to block header injection.
+      subject: singleLine(`[Contact] ${subjectLabel} — ${data.fullName}`, 180),
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1e3a5f;">New Contact Form Submission</h2>
           <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 8px 0; color: #666; width: 140px;"><strong>Name</strong></td><td>${data.fullName}</td></tr>
-            <tr><td style="padding: 8px 0; color: #666;"><strong>Email</strong></td><td><a href="mailto:${data.email}">${data.email}</a></td></tr>
-            <tr><td style="padding: 8px 0; color: #666;"><strong>Company</strong></td><td>${data.company}</td></tr>
-            ${data.phone ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Phone</strong></td><td>${data.phone}</td></tr>` : ''}
-            <tr><td style="padding: 8px 0; color: #666;"><strong>Country</strong></td><td>${data.country}</td></tr>
-            <tr><td style="padding: 8px 0; color: #666;"><strong>Subject</strong></td><td>${subjectLabel}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666; width: 140px;"><strong>Name</strong></td><td>${escapeHtml(data.fullName)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;"><strong>Email</strong></td><td><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td></tr>
+            <tr><td style="padding: 8px 0; color: #666;"><strong>Company</strong></td><td>${escapeHtml(data.company)}</td></tr>
+            ${data.phone ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Phone</strong></td><td>${escapeHtml(data.phone)}</td></tr>` : ''}
+            <tr><td style="padding: 8px 0; color: #666;"><strong>Country</strong></td><td>${escapeHtml(data.country)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;"><strong>Subject</strong></td><td>${escapeHtml(subjectLabel)}</td></tr>
           </table>
           <div style="margin-top: 16px; padding: 16px; background: #f5f5f5; border-radius: 8px;">
             <strong style="color: #666;">Message</strong>
-            <p style="white-space: pre-wrap; margin: 8px 0 0;">${data.message}</p>
+            <p style="white-space: pre-wrap; margin: 8px 0 0;">${escapeHtml(data.message)}</p>
           </div>
         </div>
       `,
