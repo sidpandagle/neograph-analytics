@@ -7,11 +7,41 @@ import { Breadcrumb } from "@/components/ui";
 import { ReportContentWrapper } from "@/components/reports/ReportContentWrapper";
 import type { SidebarTOCItem } from "@/lib/toc-utils";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
-import { getJsonReportBySlug, getAllJsonReportSlugs, jsonReportToUIReport } from "@/lib/jsonReports";
+import { jsonReportToUIReport } from "@/lib/jsonReports";
+import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
 
+/**
+ * Reports are prerendered from Supabase (140 rows), not from the 10-row JSON
+ * snapshot.
+ *
+ * `dynamicParams = false` is deliberate. With it set to true, an unknown slug is
+ * rendered on demand, `notFound()` runs, and Next persists that render to the ISR
+ * cache with `"status":200` — verified in `.next/server/app/reports/<slug>.meta`.
+ * The result is a soft 404: Google indexes "Report Not Found" as a valid page.
+ * With it false, an unknown slug never reaches this component and the router
+ * returns a real 404.
+ *
+ * Trade-off: a report added to Supabase appears at the next build. Vercel builds
+ * on every push to main, so publishing a report still ships it.
+ */
+export const revalidate = 3600;
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return getAllJsonReportSlugs().map((slug) => ({ slug }));
+  const slugs = await getReportSlugs();
+
+  // With dynamicParams = false, a short list silently 404s real reports. If
+  // Supabase is unreachable at build time the loader falls back to the 10-row
+  // JSON snapshot, which would drop 130 live pages. Fail the build loudly instead.
+  if (slugs.length < 50) {
+    throw new Error(
+      `generateStaticParams: only ${slugs.length} report slugs resolved (expected 140+). ` +
+        `Refusing to build, as dynamicParams=false would turn every missing slug into a 404.`
+    );
+  }
+
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -20,7 +50,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const jsonReport = getJsonReportBySlug(slug);
+  const jsonReport = await getReportBySlugFull(slug);
 
   if (!jsonReport) return { title: "Report Not Found" };
 
@@ -116,7 +146,7 @@ export default async function ReportPage({
 }) {
   const { slug } = await params;
 
-  const jsonReport = getJsonReportBySlug(slug);
+  const jsonReport = await getReportBySlugFull(slug);
   if (!jsonReport) notFound();
 
   // Build the report object from JSON data

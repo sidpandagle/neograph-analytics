@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | NeoGraph Analytics",
   },
   description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
-  keywords: ["synaptic research", "neograph analytics", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
+  keywords: ["neograph analytics", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
   authors: [{ name: "NeoGraph Analytics Team" }],
   icons: {
     icon: "/favicon.svg",
@@ -65,9 +65,10 @@ export const metadata: Metadata = {
     site: '@NeoGraphAnalytics',
     creator: '@NeoGraphAnalytics',
   },
-  alternates: {
-    canonical: '/',
-  },
+  // No site-wide canonical. A canonical set on the root layout is inherited by
+  // every route that does not override it, which told Google that /consulting/*,
+  // /contact, /request-sample and /authors/* were all duplicates of the homepage.
+  // Each route declares its own canonical instead.
 };
 
 export default function RootLayout({

@@ -19,7 +19,11 @@ export const StructuredData: FC<StructuredDataProps> = ({ data }) => {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      // JSON.stringify does not escape '<'. Report prose is author-supplied, so a
+      // literal '</script>' would otherwise terminate this tag and inject markup.
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, '\\u003c'),
+      }}
     />
   );
 };
@@ -192,13 +196,9 @@ export const generateProductSchema = (params: {
         url: 'https://www.neographanalytics.com',
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      reviewCount: '45',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // No aggregateRating: we publish no on-page reviews, and emitting invented
+    // ratings violates Google's review-snippet policy (risking loss of all rich
+    // results sitewide). Reinstate only when real, per-report, on-page reviews exist.
   };
 };
 

@@ -7,6 +7,13 @@ import type { Metadata } from 'next';
 
 import { supabase } from '@/lib/supabase/client';
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const { data } = await supabase.from('neograph_team_members').select('id');
   return (data ?? []).map((_, index) => ({ id: (index + 1).toString() }));
@@ -45,6 +52,9 @@ export async function generateMetadata({
         title: `Healthcare Articles by ${author.name}`,
         description: `Browse healthcare market articles, insights, and research content published by ${author.name}.`,
         images: author.imageUrl ? [{ url: author.imageUrl }] : [],
+      },
+      alternates: {
+        canonical: `/authors/${id}`,
       },
     };
   } catch {

@@ -3,6 +3,13 @@ import { PressReleaseCard } from "@/components/press-releases/PressReleaseCard";
 import { getPressReleases, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
 
+
+// Content is served from Supabase and must not be cached forever. Without this,
+// App Router marks the route fully static (X-Nextjs-Stale-Time: 4294967294) and
+// Vercel serves the build-time HTML until the next deploy - which is why
+// production was serving 28-day-old pages.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Healthcare Press Releases & Industry News",
   description: "Stay updated with the latest healthcare press releases, research announcements, and industry developments.",

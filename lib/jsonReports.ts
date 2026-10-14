@@ -1,4 +1,5 @@
 import allReportsData from '@/data/all_reports.json';
+import { money } from '@/lib/format';
 
 export interface MarketForecastPoint {
   year: number;
@@ -153,8 +154,8 @@ export function jsonReportToUIReport(report: JsonReport, index: number) {
     reportCode: report.report_id,
     baseYear: String(report.base_year),
     forecastPeriod: report.forecast_period,
-    marketSize2024: `$${report.market_size.current_value.toFixed(1)}B`,
-    marketSize2032: `$${report.market_size.forecast_value.toFixed(1)}B`,
+    marketSize2024: money(report.market_size?.current_value),
+    marketSize2032: money(report.market_size?.forecast_value),
     cagr: `${report.market_size.cagr}%`,
     overview: report.market_overview.summary,
     keyFindings: report.market_overview.key_trends,
