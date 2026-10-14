@@ -468,6 +468,67 @@ function RegulatorySection({ items }: { items: string[] }) {
   )
 }
 
+// ── research methodology ──────────────────────────────────────────────────────
+
+/**
+ * How the report was built.
+ *
+ * `research_methodology` is populated on every row and was never rendered — it
+ * shipped inside the flight payload and was discarded. For a research
+ * publication this is the section that separates "we researched this" from
+ * "trust us", so it belongs on the page, not in the data.
+ */
+function MethodologySection({ method }: { method: JsonReport['research_methodology'] }) {
+  if (!method) return null
+  const primary = method.primary_research ?? []
+  const secondary = method.secondary_research ?? []
+  const validation = method.data_validation
+  if (!primary.length && !secondary.length && !validation) return null
+
+  const columns: Array<{ label: string; items: string[] }> = []
+  if (primary.length) columns.push({ label: 'Primary research', items: primary })
+  if (secondary.length) columns.push({ label: 'Secondary research', items: secondary })
+
+  return (
+    <section className="mb-14">
+      <div className="grid gap-5 sm:grid-cols-2">
+        {columns.map((col) => (
+          <div
+            key={col.label}
+            className="rounded-xl p-5"
+            style={{ background: 'var(--content-surface)', border: '1px solid var(--content-border)' }}
+          >
+            <h3
+              className="mb-3 text-xs font-semibold uppercase tracking-[0.06em]"
+              style={{ color: 'var(--content-muted)' }}
+            >
+              {col.label}
+            </h3>
+            <ul className="flex flex-col gap-2.5">
+              {col.items.map((item, i) => (
+                <li key={i} className="flex gap-2.5 text-[15px] leading-[1.6] text-[var(--foreground)]">
+                  <span
+                    className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                    style={{ background: 'var(--primary)' }}
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {validation && (
+        <p className="mt-4 text-[15px] leading-[1.6]" style={{ color: 'var(--content-body, var(--foreground))' }}>
+          <span className="font-semibold text-[var(--foreground)]">Validation: </span>
+          {validation}
+        </p>
+      )}
+    </section>
+  )
+}
+
 // ── FAQs ──────────────────────────────────────────────────────────────────────
 
 function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
@@ -836,6 +897,13 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
       )}
 
       {/* ── Reader Takeaways ── */}
+      {report.research_methodology && (
+        <>
+          <SectionHeading id="methodology" num={nextSection()}>Research Methodology</SectionHeading>
+          <MethodologySection method={report.research_methodology} />
+        </>
+      )}
+
       {report.reader_takeaways && report.reader_takeaways.length > 0 && (
         <section className="mb-14">
           <SectionHeading id="takeaways" num={nextSection()}>Strategic Takeaways</SectionHeading>

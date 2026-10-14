@@ -32,8 +32,12 @@ Priority order. `[P0]` = site is broken / losing traffic. `[P1]` = high value.
       segmentation share, regional bars, country comparison, competitive position.
       Recharts is already a dependency.
 - [ ] Per-report OG images (1200x630) generated from market metrics.
-- [ ] `cdn.neographanalytics.com` is declared in `next.config.ts` but **does not
-      resolve**. [H] Needs Cloudflare token + account ID; then R2 bucket + DNS.
+- [x] ~~`cdn.neographanalytics.com` + R2~~ **DROPPED 2026-10-15.** The domain is on
+      GoDaddy nameservers, not Cloudflare, and R2 custom domains require the zone to
+      be on Cloudflare. Not worth migrating DNS on a live domain. Visuals ship as
+      inline SVG instead (no hosting, no egress, no image-optimization quota).
+- [ ] Repoint author/team avatar `<img>` srcs from the non-resolving CDN host to
+      local assets in `public/`. They are broken images today.
 
 ## P2 — technical
 - [ ] JSON-LD audit (Dataset/Report, FAQPage, BreadcrumbList) — 6 ld+json blocks
@@ -64,8 +68,8 @@ _(nothing yet)_
       Derive the count from data; drop unsubstantiated claims.
 
 ### P0 — SEO discovery
-- [ ] **Submit sitemap to Search Console** — zero submitted today. Do this only
-      AFTER the 140 report pages resolve, or we feed Google 130 soft-404s.
+- [x] **Submit sitemap to Search Console** — DONE 2026-10-15 after the fix
+      deployed. Google read it same-day: Status Success, 158 pages discovered.
 - [ ] Only 7 pages indexed of 158. Re-check coverage ~2 weeks after the fix ships.
 - [ ] Demand exists and is unconverted: "ai in oncology market" 506 impressions /
       0 clicks, "ai oncology analytical solution market" 217/0, "ai in cancer
@@ -165,3 +169,35 @@ _(nothing yet)_
       non-resolving CDN, so they are broken images today. `logo.png` is 185KB.
 - [ ] Generate Supabase types (`supabase gen types typescript`) to turn the
       `.toFixed()` bug class into compile errors.
+
+## Content plan — oncology cluster (added 2026-10-15)
+Evidence: Search Console shows real, unconverted oncology demand while the corpus
+holds only **2 oncology reports**, both AI-framed (`ai-in-oncology-market`,
+`ai-in-oncology-for-analytical-solutions-market`), both ranking around position 30.
+
+Demand (90 days, impressions / clicks):
+- `ai in oncology market` 506 / 0
+- `ai oncology analytical solution market` 217 / 0
+- `ai in cancer diagnostic market` 181 / 0
+- `oncology consulting` 84 / 0, `oncology consulting services` 36 / 0,
+  `oncology consulting firms` 31 / 0, `private oncology strategy consultant` 48 / 0
+- `oncology information systems market` 40 / 0, `oncology analytics` 29 / 0
+
+Reading: Google already associates the domain with AI-oncology but has nothing
+deep enough to rank. Two reports cannot carry a topic cluster. The consulting-intent
+queries point at `/consulting/*`, which until today canonicalised to the homepage —
+that fix alone may move them.
+
+Proposed reports, in priority order (each needs primary sources and its own visuals):
+1. **AI in Cancer Diagnostics Market** — 181 impressions, no dedicated report.
+2. **Oncology Information Systems Market** — 40 impressions, exact-match gap.
+3. **Precision Oncology & Companion Diagnostics Market** — adjacent, high value.
+4. **Radiation Oncology / Radiotherapy Market** — no coverage at all.
+5. **Cancer Immunotherapy Market** — anchors the cluster commercially.
+
+Each must interlink with the two existing oncology reports and with the oncology
+consulting service page, so the cluster reinforces itself rather than competing.
+
+Corpus shape for reference: 140 reports across 6 industries — Biotechnology 38,
+Healthcare IT 38, Life Sciences 23, Pharmaceuticals 20, Medical Devices 16,
+Medical Imaging 5. Medical Imaging is thin relative to demand.
