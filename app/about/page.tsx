@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui";
+import { getHomeFacts } from "@/lib/api/home";
 
 
 // Content is served from Supabase and must not be cached forever. Without this,
@@ -57,14 +58,23 @@ const whyUs = [
   },
 ];
 
-const impactStats = [
-  { val: '500+', label: 'Projects Delivered' },
-  { val: '1,000+', label: 'Healthcare Clients' },
-  { val: '50+', label: 'Specialists on Team' },
-  { val: '10+', label: 'Years Experience' },
-];
+/*
+ * These were previously hardcoded as "500+ Projects Delivered", "1,000+ Healthcare
+ * Clients", "50+ Specialists on Team" and "10+ Years Experience" — none of which
+ * can be substantiated, and the team claim contradicts the 3 members actually
+ * published. They are now counts computed from the published corpus, which a
+ * reader can verify by browsing the reports.
+ */
+export default async function AboutPage() {
+  const { reportCount, industryCount, countryCount, companyCount } = await getHomeFacts();
 
-export default function AboutPage() {
+  const impactStats = [
+    { val: reportCount ? String(reportCount) : '—', label: 'Reports Published' },
+    { val: industryCount ? String(industryCount) : '—', label: 'Industries Covered' },
+    { val: countryCount ? String(countryCount) : '—', label: 'Countries Analysed' },
+    { val: companyCount ? String(companyCount) : '—', label: 'Companies Profiled' },
+  ];
+
   return (
     <>
       {/* Hero */}

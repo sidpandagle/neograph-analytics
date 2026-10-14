@@ -9,6 +9,7 @@ import type { SidebarTOCItem } from "@/lib/toc-utils";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
 import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
+import { buildReportTOC } from "@/lib/reportToc";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
 
 /**
@@ -159,7 +160,10 @@ export default async function ReportPage({
   ];
 
   const hasFullContent = false;
-  const sidebarTOC: SidebarTOCItem[] = [];
+
+  // Built on the server so the reading navigation is in the first paint, works
+  // without JS, and does not shift the layout on hydration.
+  const sidebarTOC: SidebarTOCItem[] = buildReportTOC(jsonReport);
 
   const baseYearLabel = String(jsonReport.base_year);
   const forecastEndYear = jsonReport.forecast_period.split('-')[1];

@@ -83,3 +83,80 @@ Crash-proofing (found by a failing production build):
   aborting the export. One malformed row can no longer kill the whole build.
 - Audited all 140 rows for malformed numerics: exactly 1 was bad. Corrected that
   row in Supabase (dropped the empty entry; the 4 real countries are untouched).
+
+## 2026-10-15 — PR #4 merged
+- Commits `12c0abe` (code) and `9eddb89` (autopilot docs), merged as `a83c3bc`.
+  Both authored as Siddhant Pandagle <siddhant.pandagle1998@gmail.com>.
+- Verified before commit: `next build` passes (187 pages); unknown slugs return
+  404 on reports/blog/press-releases/authors; previously-broken reports resolve.
+- Caught during staging: I had overwritten the existing `app/contact/layout.tsx`
+  (it already had title/description/keywords) instead of adding to it. Restored
+  from git and reapplied as an additive change — canonical only, plus correcting
+  a stale "contact synaptic research" keyword. That prompted a repo-wide sweep
+  which found two more stale brand keyword lists in `app/layout.tsx` and
+  `app/page.tsx`.
+- Awaiting the Vercel deploy. Production still served the pre-merge build at the
+  time of checking (homepage `Age: 2399980`, `/reports/zzz-nope` still 200).
+
+## 2026-10-15 — deploy verified + sitemap submitted
+Production after PR #4 deployed:
+- `/reports/zzz-nope` -> **404** (was 200, a soft 404).
+- `/reports/genomics-market`, `/reports/telemedicine-market` -> **200 with real
+  titles** (were the "Report Not Found" shell).
+- Homepage cache `Age` dropped from 2,399,980s (27.8 days) to ~331s.
+- Sitemap: 158 URLs; 5 randomly sampled report URLs all returned 200.
+- Sitemap submitted to Search Console (by Siddhant; the typing action was blocked
+  for me by the permission classifier). Google read it the same day:
+  **Status Success, 158 pages discovered** — up from 0 sitemaps and 7 indexed.
+- Browser session closed; back to headless-only per AUTOPILOT.md.
+
+Baseline to measure against (90 days to 2026-10-15): 6 clicks, 2,400 impressions,
+0.2% CTR, average position 31.8, 7 pages indexed. Re-check coverage ~2026-10-29.
+
+## 2026-10-15 — Cloudflare verified, and why the CDN plan is being dropped
+- Token now valid: `verify` -> active. (First value supplied was a `cfut_` dashboard
+  /OAuth token, which the REST API rejects with 6111; replaced with a real API token.)
+- **`neographanalytics.com` is not on Cloudflare.** Its nameservers are
+  `ns55/ns56.domaincontrol.com` (GoDaddy); the token's zone list contains only
+  `pixelforgestudio.in`. The site itself is served by Vercel.
+- R2 is not enabled on the account (`10042: Please enable R2 through the Dashboard`).
+- Consequence: R2 custom domains require the zone to be on Cloudflare, so
+  `cdn.neographanalytics.com` cannot be wired up without moving the domain's DNS
+  off GoDaddy — a disruptive change to a live production domain, for a benefit we
+  do not actually need.
+
+**Decision: drop the CDN dependency rather than migrate DNS.**
+- All report visuals ship as **inline SVG** committed to the repo: zero hosting,
+  zero egress, zero Vercel image-optimization transformations (the tightest free
+  meter at 492/5,000), crisp at any DPI, diffable in review, and no broken-image
+  risk. This was already the interim plan; it is now the permanent one.
+- The broken `cdn.neographanalytics.com` references on author/team avatars will be
+  repointed at local assets in `public/`.
+- `next.config.ts` keeps the remotePattern (harmless) until those refs are gone.
+- Cloudflare credentials stay in `env` unused. No further human action needed.
+
+## 2026-10-15 — real figures, reading navigation, methodology
+- `lib/api/home.ts`: homepage facts computed from Supabase (report / industry /
+  country / company counts, plus a featured-report snapshot). Two narrow queries,
+  not one wide one, because egress is metered.
+- `HeroSection` is now async and renders only real values. Removed "2,500+
+  research reports" (actual 140), "1,000+ Satisfied clients", "50+ Countries", and
+  the invented telemedicine snapshot ($286B/$331B/$842B at 16.8% CAGR — the real
+  row is $111B -> $300.47B at 11.7%, and the report it linked to was one of the
+  130 that 404'd). Bars are now scaled from `market_forecast`, with a caption
+  stating which year is actual and which are forecast, and the currency and unit.
+- `app/about/page.tsx`: replaced "500+ Projects Delivered / 1,000+ Healthcare
+  Clients / 50+ Specialists on Team / 10+ Years Experience" with counts derived
+  from the corpus. The team claim contradicted the 3 members actually published.
+- Reading navigation was disabled twice over: `hasFullContent = false` gated the
+  aside, and the page passed `tableOfContents={[]}` — truthy, so the
+  `useGeneratedTOC` fallback never ran either. Added `lib/reportToc.ts` to build
+  the TOC on the server (present in first paint, works without JS, no layout
+  shift from col-span-9 to col-span-6 on hydration). Verified: 13 anchors, all
+  resolving to real ids on the page.
+- Added a Research Methodology section. `research_methodology` is populated on
+  every row and was previously serialised into the payload and discarded.
+- Research notes for a planned AI-in-cancer-diagnostics report saved under
+  `research/`. Published estimates for that market differ by ~7x purely on scope
+  definition; the FDA AI-device list (1,524 devices, 76% radiology) is public and
+  countable, and no one publishes an oncology-specific cut of it.

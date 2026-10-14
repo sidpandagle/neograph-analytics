@@ -11,7 +11,8 @@ import { useGeneratedTOC } from '@/hooks/useGeneratedTOC';
 interface ReportContentWrapperProps {
   tableOfContents?: SidebarTOCItem[];  // For sidebar navigation (optional, will be auto-generated if not provided)
   fullReportTOC?: TOCItem[];           // For full report TOC modal
-  hasFullContent: boolean;
+  /** Retained for callers; reading navigation is now driven by the TOC itself. */
+  hasFullContent?: boolean;
   price: string;
   discounted_price: string;
   reportTitle?: string;
@@ -22,7 +23,6 @@ interface ReportContentWrapperProps {
 export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
   tableOfContents,
   fullReportTOC,
-  hasFullContent,
   price,
   discounted_price,
   reportTitle,
@@ -35,8 +35,16 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
   // Auto-generate TOC from h2 headings if not provided
   const generatedTOC = useGeneratedTOC('article');
 
-  // Use provided TOC or fall back to auto-generated TOC
-  const activeTOC = tableOfContents || generatedTOC;
+  // Use the provided TOC only if it actually has entries. The report page passes
+  // an empty array, which is truthy and so defeated this fallback entirely.
+  const activeTOC =
+    tableOfContents && tableOfContents.length > 0 ? tableOfContents : generatedTOC;
+
+  // Show reading navigation whenever there is something to navigate. This used to
+  // be gated on `hasFullContent`, which the report page hardcodes to false — so on
+  // an 11-section document the only sticky element was the price panel, and the
+  // working TOC built from the section headings was never rendered.
+  const showTOC = activeTOC.length > 0;
 
   // Transform full report TOC data into chapters
   const chapters = fullReportTOC ? groupTableOfContents(fullReportTOC) : [];
@@ -86,8 +94,8 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      {/* Left Sidebar - TOC Navigation (only when full content is available) */}
-      {hasFullContent && (
+      {/* Left Sidebar - reading navigation */}
+      {showTOC && (
         <aside className="hidden lg:block lg:col-span-3 2xl:col-span-2">
           <div className="sticky top-24">
             {activeTOC && activeTOC.length > 0 && (
@@ -103,7 +111,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       )}
 
       {/* Main Content Area */}
-      <main className={hasFullContent ? 'lg:col-span-6 2xl:col-span-8' : 'lg:col-span-9 2xl:col-span-8'}>
+      <main className={showTOC ? 'lg:col-span-6 2xl:col-span-8' : 'lg:col-span-9 2xl:col-span-8'}>
         {showFullTOC ? (
           <FullReportTOC
             chapters={chapters}
@@ -115,7 +123,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       </main>
 
       {/* Right Sidebar - CTA Panel */}
-      <aside className={hasFullContent ? 'lg:col-span-3 2xl:col-span-2' : 'lg:col-span-3 2xl:col-span-4'}>
+      <aside className={showTOC ? 'lg:col-span-3 2xl:col-span-2' : 'lg:col-span-3 2xl:col-span-4'}>
         <div className="sticky top-24 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} />
           <CustomizeReportCard reportTitle={reportTitle} />
