@@ -71,11 +71,18 @@ export interface JsonReport {
     opportunities: string[];
     challenges: string[];
   };
+  /**
+   * Segmentation dimensions vary by market: by_component/by_type/by_application/
+   * by_end_user are common, but rows also use by_product, by_crop_type,
+   * by_technology, by_modality and others. The index signature keeps those from
+   * being dropped on the way to the renderer.
+   */
   market_segmentation: {
     by_component?: (SegmentItem | string)[];
     by_type?: (SegmentItem | string)[];
     by_application?: (SegmentItem | string)[];
     by_end_user?: (SegmentItem | string)[];
+    [dimension: string]: (SegmentItem | string)[] | undefined;
   };
   regional_analysis: RegionItem[];
   country_analysis: CountryItem[];

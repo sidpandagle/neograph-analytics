@@ -179,27 +179,57 @@ function splitSegmentField(items: (SegmentItem | string)[]) {
   return { segments, strings }
 }
 
+/** `by_crop_type` -> "By Crop Type". Turns any segmentation key into a heading. */
+function segmentLabel(key: string): string {
+  return key
+    .replace(/^by_/, '')
+    .split('_')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+    .replace(/^/, 'By ')
+}
+
+/**
+ * Renders every segmentation dimension present on the row.
+ *
+ * This previously read four hardcoded keys — by_component, by_type, by_application
+ * and by_end_user. Rows in Supabase use whatever dimensions suit the market:
+ * by_product and by_crop_type in agricultural biotechnology, by_technology
+ * elsewhere, by_modality in the cancer diagnostics report. Any other key was
+ * silently dropped, leaving a "Market Segmentation" heading above nothing.
+ */
 function MarketSegmentationSection({ segmentation }: { segmentation: JsonReport['market_segmentation'] }) {
-  const comp = splitSegmentField(segmentation.by_component ?? [])
-  const byType = splitSegmentField(segmentation.by_type ?? [])
-  const byApp = splitSegmentField(segmentation.by_application ?? [])
-  const byEnd = splitSegmentField(segmentation.by_end_user ?? [])
+  const entries = Object.entries(
+    (segmentation ?? {}) as Record<string, (SegmentItem | string)[] | undefined>
+  )
+    .filter(([, value]) => Array.isArray(value) && value.length > 0)
+    .map(([key, value]) => ({
+      key,
+      label: segmentLabel(key),
+      ...splitSegmentField(value as (SegmentItem | string)[]),
+    }))
+
+  if (!entries.length) return null
+
+  // A dimension carrying shares is worth a chart; the rest render as lists.
+  const charted = entries.filter((e) => e.segments.length > 0)
+  const listed = entries.filter((e) => e.segments.length === 0 && e.strings.length > 0)
 
   return (
     <section className="mb-14">
-      {comp.segments.length > 0 && (
-        <div className="mb-8">
-          <ComponentSharePieChart title="By Component" segments={comp.segments} />
+      {charted.map((entry) => (
+        <div key={entry.key} className="mb-8">
+          <ComponentSharePieChart title={entry.label} segments={entry.segments} />
+        </div>
+      ))}
+      {listed.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {listed.map((entry) => (
+            <SegmentListCard key={entry.key} title={entry.label} items={entry.strings} />
+          ))}
         </div>
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {comp.strings.length > 0 && comp.segments.length === 0 && (
-          <SegmentListCard title="By Component" items={comp.strings} />
-        )}
-        {byType.strings.length > 0 && <SegmentListCard title="By Type" items={byType.strings} />}
-        {byApp.strings.length > 0 && <SegmentListCard title="By Application" items={byApp.strings} />}
-        {byEnd.strings.length > 0 && <SegmentListCard title="By End User" items={byEnd.strings} />}
-      </div>
     </section>
   )
 }
