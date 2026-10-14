@@ -160,3 +160,31 @@ Baseline to measure against (90 days to 2026-10-15): 6 clicks, 2,400 impressions
   `research/`. Published estimates for that market differ by ~7x purely on scope
   definition; the FDA AI-device list (1,524 devices, 76% radiology) is public and
   countable, and no one publishes an oncology-specific cut of it.
+
+## 2026-10-15 — form endpoint hardening
+- Added `lib/api/form-guard.ts`: schema validation with length caps, HTML escaping,
+  single-line coercion for mail headers, a per-instance sliding-window rate limit
+  (5/min) and shared 400/429 responses.
+- Applied to `api/contact`, `api/request-sample`, `api/not-found-inquiry`. All three
+  previously took `await request.json()` with only a TypeScript annotation as
+  validation, interpolated values straight into HTML email, and set `replyTo` from
+  the request body — so a message body containing a link arrived in the support
+  inbox as a working link apparently sent by support@neographanalytics.com, with
+  Reply-To pointing at the sender. Missing fields rendered the literal "undefined".
+- Caught two mistakes in my own first pass: HTML-escaping the plain-text mail
+  subject (would print "&amp;" in the inbox), and `??` where the fallback can never
+  fire on an empty string. Both corrected before building.
+- Verified with invalid payloads only, so no email was sent: empty body, bad
+  address, missing required field, malformed JSON, array body and oversized field
+  all return 400 with specific messages; the 6th request from one client returns
+  429 with Retry-After.
+- **Known limitation, deliberately not hidden:** the rate limit is per-instance and
+  in-memory. On serverless each instance has its own counter, so it throttles a
+  single caller but not a distributed flood. A real limit needs a shared store
+  (e.g. Upstash); that is a service decision, so it is logged rather than assumed.
+
+## 2026-10-15 — PR #5 verified in production
+- Homepage: no fabricated values remain live. Real counts and $300.5B rendering.
+- `/reports/ai-in-oncology-market`: 13 TOC anchors server-rendered, methodology
+  section present, fabricated `ratingValue` confirmed absent.
+- Homepage cache `Age: 1` — the ISR fix is working end to end.
