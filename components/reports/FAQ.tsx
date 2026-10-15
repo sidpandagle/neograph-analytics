@@ -33,7 +33,7 @@ export default function FAQ({ faqs }: FAQProps) {
               key={index}
               className={`rounded-tile border transition-colors duration-200 ${
                 isOpen
-                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary)]'
+                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary-fill)]'
                   : 'border-[var(--cmi-line)] bg-[var(--cmi-raisedsurface)]'
               }`}
             >

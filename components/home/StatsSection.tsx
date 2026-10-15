@@ -28,7 +28,7 @@ const practices = [
  */
 export default function StatsSection() {
   return (
-    <section className="grid gap-8 rounded-panel bg-white p-7 md:p-11 lg:grid-cols-[1.05fr_1fr] lg:gap-11">
+    <section className="grid gap-8 rounded-panel bg-[var(--card)] p-7 md:p-11 lg:grid-cols-[1.05fr_1fr] lg:gap-11">
       <div className="flex flex-col gap-5">
         <span className="eyebrow">Strategy execution</span>
         <h2 className="text-[28px] leading-[1.1] md:text-[38px]">
@@ -58,7 +58,7 @@ export default function StatsSection() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 rounded-[20px] bg-[var(--cmi-primary)] p-6 md:p-[30px]">
+      <div className="flex flex-col gap-4 rounded-[20px] bg-[var(--cmi-primary-fill)] p-6 md:p-[30px]">
         <div className="font-display text-[20px] font-semibold text-white md:text-[22px]">
           Market intelligence — key benefits
         </div>

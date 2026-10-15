@@ -75,8 +75,8 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
                 min-w-[40px] rounded-pill px-3 py-2 text-sm transition-colors duration-150
                 ${
                   isCurrentPage
-                    ? 'bg-[var(--cmi-primary)] font-semibold text-white'
-                    : 'border border-[var(--cmi-line)] bg-white text-[var(--cmi-ink)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]'
+                    ? 'bg-[var(--cmi-primary-fill)] font-semibold text-[var(--primary-foreground)]'
+                    : 'border border-[var(--cmi-line)] bg-[var(--card)] text-[var(--cmi-ink)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]'
                 }
               `}
               aria-label={`Go to page ${pageNumber}`}

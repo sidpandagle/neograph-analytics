@@ -37,9 +37,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-[var(--cmi-primary)] text-white hover:bg-[var(--cmi-primary-pressed)]',
+        'bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] hover:bg-[var(--cmi-primary-pressed)]',
       secondary:
-        'bg-white text-[var(--cmi-ink)] border border-[var(--cmi-line)] hover:border-[var(--cmi-primary)]',
+        'bg-[var(--card)] text-[var(--cmi-ink)] border border-[var(--cmi-line)] hover:border-[var(--cmi-primary)]',
       outline:
         'bg-transparent text-[var(--cmi-ink)] border border-[var(--cmi-line)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]',
       ghost:
@@ -47,7 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       danger:
         'bg-[var(--destructive)] text-white hover:brightness-95',
       onBlue:
-        'bg-white text-[var(--cmi-ink)] hover:bg-[var(--cmi-chip-blue)]',
+        'bg-[var(--card)] text-[var(--cmi-ink)] hover:bg-[var(--cmi-chip-blue)]',
       outlineOnBlue:
         'bg-transparent text-white border border-[var(--cmi-primary-line)] hover:border-white',
     };

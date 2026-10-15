@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
   const [featured, ...secondary] = currentTestimonials;
 
   return (
-    <section className="flex flex-col gap-6.5 rounded-panel bg-white p-7 md:p-11">
+    <section className="flex flex-col gap-6.5 rounded-panel bg-[var(--card)] p-7 md:p-11">
       <div className="flex flex-col items-center gap-2.5 text-center">
         <span className="eyebrow">Client stories</span>
         <h2 className="text-[26px] md:text-[34px]">Trusted by industry leaders</h2>
@@ -77,13 +77,13 @@ export default function TestimonialsSection() {
       <div className="grid gap-[18px] lg:grid-cols-12">
         {/* Featured quote takes the blue — emphasis follows the primary. */}
         {featured && (
-          <figure className="flex flex-col rounded-card bg-[var(--cmi-primary)] p-6.5 md:p-8 lg:col-span-7">
+          <figure className="flex flex-col rounded-card bg-[var(--cmi-primary-fill)] p-6.5 md:p-8 lg:col-span-7">
             <StarRating rating={featured.rating} onBlue />
             <blockquote className="my-6 flex-1 text-[18px] leading-[1.55] text-white md:text-[20px]">
               &ldquo;{featured.quote}&rdquo;
             </blockquote>
             <figcaption className="flex items-center gap-3.5 border-t border-[var(--cmi-primary-line)] pt-5">
-              <div className="num flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-[var(--cmi-primary-raised)] text-[13px] text-white">
+              <div className="num flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-[var(--cmi-primary-raised)] text-[13px] text-[var(--primary-foreground)]">
                 {getInitials(featured.company)}
               </div>
               <div className="min-w-0">

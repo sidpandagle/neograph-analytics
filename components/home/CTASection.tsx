@@ -6,7 +6,7 @@ import Link from 'next/link';
  */
 export default function CTASection() {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-8 rounded-panel bg-white p-7 md:p-10">
+    <section className="flex flex-wrap items-center justify-between gap-8 rounded-panel bg-[var(--card)] p-7 md:p-10">
       <div className="flex max-w-[620px] flex-col gap-2.5">
         <h2 className="text-[26px] md:text-[32px]">Request a free sample today</h2>
         <p className="text-[15px] leading-[1.6] text-[var(--cmi-body)]">
@@ -22,7 +22,7 @@ export default function CTASection() {
         <div className="flex flex-wrap gap-2.5">
           <Link
             href="/request-sample"
-            className="rounded-pill bg-[var(--cmi-primary)] px-[26px] py-[15px] text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)] hover:text-white"
+            className="rounded-pill bg-[var(--cmi-primary-fill)] px-[26px] py-[15px] text-[15px] font-semibold text-[var(--primary-foreground)] transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)] hover:text-[var(--primary-foreground)]"
           >
             Download sample PDF
           </Link>

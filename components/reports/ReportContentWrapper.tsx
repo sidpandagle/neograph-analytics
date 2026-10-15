@@ -47,8 +47,25 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
   // working TOC built from the section headings was never rendered.
   const showTOC = activeTOC.length > 0;
 
-  // Transform full report TOC data into chapters
-  const chapters = fullReportTOC ? groupTableOfContents(fullReportTOC) : [];
+  /* `fullReportTOC` is hardcoded to undefined in lib/api/reports.ts, which is
+     the Supabase path every report actually takes -- only the unused legacy
+     API mapper ever populated it. So `chapters` was always [], and the
+     "Table of Contents" button opened a panel containing a heading, a Back
+     button, and nothing else, on all 142 reports.
+
+     No report carries a richer chapter structure anywhere in the data, so the
+     full view cannot be deeper than the sections themselves. It is built from
+     the same sections the sidebar uses, numbered sequentially, which turns a
+     blank panel into a working index -- and is the only index available at
+     widths where the sidebar rail is hidden. */
+  const chapters = fullReportTOC
+    ? groupTableOfContents(fullReportTOC)
+    : activeTOC.map((item, i) => ({
+        id: item.id,
+        title: item.title,
+        number: String(i + 1),
+        children: [],
+      }));
 
   // Handle scroll to top when full TOC is opened
   useEffect(() => {

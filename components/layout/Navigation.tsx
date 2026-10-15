@@ -22,8 +22,8 @@ const navItems = [
 /* The segmented rail: a soft track with a white puck on the active item. */
 const railItem =
   "rounded-pill px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-150";
-const railActive = "bg-white font-semibold text-[var(--cmi-ink)]";
-const railIdle = "text-[var(--cmi-idle)] hover:bg-white hover:text-[var(--cmi-ink)]";
+const railActive = "bg-[var(--card)] font-semibold text-[var(--cmi-ink)]";
+const railIdle = "text-[var(--cmi-idle)] hover:bg-[var(--card)] hover:text-[var(--cmi-ink)]";
 
 /** Desktop navigation rail. */
 export default function Navigation() {
@@ -94,19 +94,19 @@ export function MobileNav() {
         <div className="relative h-4 w-4">
           <span
             className={cn(
-              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink-surface)] transition-all duration-300",
               isOpen ? "top-1/2 w-4 -translate-y-1/2 rotate-45" : "top-0.5 w-4"
             )}
           />
           <span
             className={cn(
-              "absolute left-0 top-1/2 h-0.5 -translate-y-1/2 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              "absolute left-0 top-1/2 h-0.5 -translate-y-1/2 rounded-pill bg-[var(--cmi-ink-surface)] transition-all duration-300",
               isOpen ? "w-0 opacity-0" : "w-3 opacity-100"
             )}
           />
           <span
             className={cn(
-              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink)] transition-all duration-300",
+              "absolute left-0 h-0.5 rounded-pill bg-[var(--cmi-ink-surface)] transition-all duration-300",
               isOpen ? "top-1/2 w-4 -translate-y-1/2 -rotate-45" : "bottom-0.5 w-4"
             )}
           />
@@ -118,7 +118,7 @@ export function MobileNav() {
           <>
             {isOpen && (
               <div
-                className="fixed inset-0 z-40 bg-[var(--cmi-ink)]/25 backdrop-blur-lg xl:hidden"
+                className="fixed inset-0 z-40 bg-[var(--cmi-ink-surface)]/25 backdrop-blur-lg xl:hidden"
                 onClick={() => setIsOpen(false)}
                 aria-hidden="true"
               />
@@ -128,7 +128,7 @@ export function MobileNav() {
             <div
             className={cn(
               "fixed right-3 top-[76px] z-50 h-[calc(100vh-96px)] w-[min(320px,calc(100vw-24px))] xl:hidden",
-              "overflow-y-auto rounded-panel bg-[var(--cmi-ink)] p-5",
+              "overflow-y-auto rounded-panel bg-[var(--cmi-ink-surface)] p-5",
               "transition-[transform,opacity] duration-300 ease-out"
             )}
             style={{
@@ -146,13 +146,13 @@ export function MobileNav() {
             <nav className="flex flex-col gap-1">
               <Link
                 href="/"
-                className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+                className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]" : "text-white/85 hover:bg-white/10 hover:text-white")}
               >
                 Home
               </Link>
               <Link
                 href="/reports"
-                className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+                className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]" : "text-white/85 hover:bg-white/10 hover:text-white")}
               >
                 All Reports
               </Link>
@@ -163,8 +163,8 @@ export function MobileNav() {
                   className={cn(
                     drawerLink,
                     pathname.startsWith(item.href)
-                      ? "bg-[var(--cmi-primary)] text-white"
-                      : "text-white/85 hover:bg-white/10"
+                      ? "bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]"
+                      : "text-white/85 hover:bg-white/10 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -173,7 +173,7 @@ export function MobileNav() {
     
               <Link
                 href="/request-sample"
-                className="mt-2 rounded-pill bg-white px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
+                className="mt-2 rounded-pill bg-[var(--card)] px-4 py-3 text-center text-sm font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
               >
                 Request Sample
               </Link>
@@ -183,7 +183,7 @@ export function MobileNav() {
                   Consulting &amp; Services
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10")}>
+                  <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10 hover:text-white")}>
                     All Services
                   </Link>
                   {consultingServices.map((service) => (

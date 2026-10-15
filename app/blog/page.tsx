@@ -23,7 +23,7 @@ export default async function BlogPage() {
   const response = await getBlogs({ status: 'published', limit: 100 });
 
   const errorHero = (
-    <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+    <section className="relative overflow-hidden rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
       <div className="absolute inset-0 theme-hero-grid opacity-75 pointer-events-none" />
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center space-y-5">
         <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full theme-hero-panel">
@@ -49,7 +49,7 @@ export default async function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{

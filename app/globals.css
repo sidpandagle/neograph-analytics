@@ -9,15 +9,29 @@
 
 :root {
   /* ── Raw palette ───────────────────────────────────────────── */
-  --cmi-primary: #1541E3;          /* buttons, links, KPI numbers   */
+  --cmi-primary: #1541E3;          /* link + accent TEXT            */
+  /* --cmi-primary was both the fill behind white text and the colour of link
+     text on the page. In dark mode those need opposite luminances: white on a
+     fill needs L <= 0.175, while text on the navy desk needs L >= 0.19. No
+     single blue satisfies both, so the fill half gets its own token. Identical
+     in light mode, so nothing moves today. */
+  --cmi-primary-fill: #1541E3;     /* panel + button FILL           */
   --cmi-primary-pressed: #0E2FA8;  /* hover & active                */
   --cmi-primary-raised: #2C55EB;   /* cards inside blue panels      */
   --cmi-primary-line: #4E77FF;     /* borders on blue               */
-  --cmi-ink: #0A1633;              /* headings, footer              */
+  --cmi-ink: #0A1633;              /* darkest INK, i.e. text            */
+  /* --cmi-ink was doing two jobs: the darkest text colour (47 call sites)
+     and the dark panel surface behind the footer and drawer (14 call sites).
+     In dark mode those must move in opposite directions -- the text goes
+     light, the panel stays dark -- so the surface gets its own token. Same
+     value in light mode, so this changes nothing today. */
+  --cmi-ink-surface: #0A1633;      /* the one dark panel on the desk    */              /* headings, footer              */
   --cmi-sky: #BFDCF7;              /* data panels, chart base       */
   --cmi-sky-ink: #34557F;          /* text on sky                   */
   --cmi-on-blue: #C9D8FF;          /* body copy on primary          */
-  --cmi-on-blue-dim: #A9C0FF;      /* eyebrows/labels on primary    */
+  /* #A9C0FF measured 4.03:1 on the #1541E3 panel it is used on -- under AA
+     for the 12px licence and meta labels that carry it. */
+  --cmi-on-blue-dim: #C2D3FF;      /* 4.85:1 on the blue panel      */      /* eyebrows/labels on primary    */
   --cmi-desk: #EDF1F9;             /* page background               */
   --cmi-surface: #F4F7FE;          /* chips, inner cards            */
   --cmi-raisedsurface: #F9FBFF;    /* tiles inside cards            */
@@ -41,7 +55,7 @@
   --cmi-chart-base: var(--cmi-base);
   --cmi-footer-line: #1E2C50;
   --cmi-footer-link: #93A2C4;
-  --cmi-footer-meta: #6E7EA3;
+  --cmi-footer-meta: #7A89AE;      /* 4.40 -> 5.12:1 on the ink panel */
   --cmi-signal: #7CFFB2;           /* "desk open" status dot        */
 
   /* ── Semantic tokens (consumed via var() across components) ─── */
@@ -122,7 +136,12 @@
   --content-niche-text: #0E2FA8;
   --content-success-bg: #ECFDF3;
   --content-success-border: #BBF7D0;
-  --content-success-accent: #12B76A;
+  /* #12B76A was 2.62:1 on white and 2.49:1 on the success tint. */
+  --content-success-accent: #057A48;  /* 5.41 / 5.13                */
+  /* Segment-label amber. It was a hardcoded #D97706 in the component, which
+     meant it could not follow the theme: dark enough for light mode is too
+     dark for dark mode, and vice versa. */
+  --label-amber: #A14A06;          /* 6.00:1 on white               */
   --content-success-text: #027A48;
   --content-success-text-dark: #05603A;
 
@@ -230,7 +249,7 @@
   a:hover { color: var(--primary-hover); }
 
   ::selection {
-    background: var(--cmi-primary);
+    background: var(--cmi-primary-fill);
     color: #FFFFFF;
   }
 
@@ -279,7 +298,7 @@
   }
 
   .panel-blue {
-    background: var(--cmi-primary);
+    background: var(--cmi-primary-fill);
     border-radius: var(--radius-panel);
     padding: var(--panel-pad);
     color: #FFFFFF;
@@ -418,13 +437,16 @@
     white-space: nowrap;
   }
   .segmented-item:hover { background: #FFFFFF; color: var(--cmi-ink); }
+  /* The fill token, not the link token: --cmi-primary goes light in dark mode
+     and this white label measured 2.97:1 on it. --primary-foreground is the
+     colour contracted to sit on a fill in either theme. */
   .segmented-item[data-active="true"] {
-    background: var(--cmi-primary);
-    color: #FFFFFF;
+    background: var(--cmi-primary-fill);
+    color: var(--primary-foreground);
   }
   .segmented-item[data-active="true"]:hover {
     background: var(--cmi-primary-pressed);
-    color: #FFFFFF;
+    color: var(--primary-foreground);
   }
 
   /* The growth rail on report cards: base year → forecast year. */
@@ -471,8 +493,8 @@
   .shadow-ocean { box-shadow: var(--shadow-blue); }
   .shadow-amber { box-shadow: var(--shadow-blue); }
 
-  .gradient-primary { background: var(--cmi-primary); }
-  .gradient-accent { background: var(--cmi-primary); }
+  .gradient-primary { background: var(--cmi-primary-fill); }
+  .gradient-accent { background: var(--cmi-primary-fill); }
   .gradient-warm { background: var(--cmi-primary-raised); }
   .text-gradient-amber { color: var(--cmi-primary); }
 
@@ -830,8 +852,11 @@
   top: -3rem;
   z-index: 100;
   border-radius: 0 0 0.5rem 0.5rem;
-  background: var(--cmi-primary, #1e3a5f);
-  color: #fff;
+  background: var(--cmi-primary-fill, #1e3a5f);
+  /* --cmi-primary goes light in dark mode, so a hardcoded white label on it
+     measured 3.23:1 there. --primary-foreground is white in light mode and
+     dark here, which is exactly the contract this needs. */
+  color: var(--primary-foreground, #fff);
   padding: 0.625rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -842,4 +867,158 @@
   top: 0;
   outline: 2px solid #fff;
   outline-offset: -4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK MODE
+   ───────────────────────────────────────────────────────────────
+   Applied by a `dark` class on <html>, set before first paint by the
+   inline script in app/layout.tsx, which follows the OS setting unless
+   the reader has chosen otherwise.
+
+   Every value below was chosen by measured contrast against the surface
+   it is actually used on, not by inverting the light palette. The text
+   ramp keeps the same three steps and the same ~220deg hue family as
+   light mode:
+
+     foreground on background   16.21:1
+     body       on background   11.92:1   on card 10.75  on surface 10.00
+     muted      on background    7.54:1   on card  6.80  on surface  6.33
+     primary    on background    5.83:1   on card  5.26  on surface  4.89
+     primary-foreground on primary        5.83:1
+
+   Two tokens could not simply be flipped. --cmi-ink was both the darkest
+   text and the dark panel surface; the surface half now lives in
+   --cmi-ink-surface and stays dark here. --cmi-primary was both a button
+   fill carrying white text and a link colour on the page: in dark mode no
+   single blue can do both (white-on-it needs luminance <= 0.175, it-on-navy
+   needs >= 0.19), so the fill goes light and --primary-foreground goes dark
+   to sit on it.
+   ═══════════════════════════════════════════════════════════════ */
+
+.dark {
+  /* ── Surfaces ── */
+  --background: #0B1120;
+  --cmi-desk: #0B1120;
+  --card: #131C30;
+  --popover: #131C30;
+  --cmi-surface: #18223A;
+  --content-surface: #18223A;
+  --muted: #18223A;
+  --secondary: #18223A;
+  --blue-subtle: #18223A;
+  --cmi-raisedsurface: #1E2944;
+  --content-surface-alt: #1E2944;
+  --cmi-rail: #18223A;
+  --border-light: #18223A;
+  --cmi-base: #2A3655;
+  /* the footer/drawer panel stays the darkest thing on the page */
+  --cmi-ink-surface: #070C17;
+
+  /* ── Lines. Two tiers: a quiet one for decorative separation, a
+        stronger one where a boundary has to be identifiable (3.12:1). ── */
+  --border: #2F3C5C;
+  --cmi-line: #2F3C5C;
+  --content-border: #2F3C5C;
+  --input: #4E6291;
+  --content-border-strong: #4E6291;
+  --cmi-footer-line: #1E2C50;
+
+  /* ── Text ── */
+  --foreground: #E9EEFA;
+  --card-foreground: #E9EEFA;
+  --popover-foreground: #E9EEFA;
+  --content-text-darkest: #E9EEFA;
+  --blue-deep: #E9EEFA;
+  --cmi-ink: #E9EEFA;
+  --cmi-body: #C3CEE6;
+  --content-text: #C3CEE6;
+  --muted-foreground: #C3CEE6;
+  --blue-steel: #C3CEE6;
+  --content-text-dark: #D6DEF0;
+  --cmi-meta: #97A4C2;
+  --content-muted: #97A4C2;
+  --cmi-idle: #97A4C2;
+  --cmi-footer-link: #97A4C2;
+  --cmi-footer-meta: #8290B0;
+
+  /* ── Blues ── */
+  /* #5B8DEF measured 4.47:1 against --content-surface-alt, a hair under AA,
+     so the whole blue steps up one notch. */
+  --primary: #6694F1;
+  --accent: #6694F1;
+  --cmi-primary: #6694F1;
+  --blue-primary: #6694F1;
+  --ring: #6694F1;
+  /* The fill stays deep in dark mode, which is what lets every white label
+     sitting on a blue panel stay white -- the hero, the price panel, the
+     badges. Measured: white on #3356DE = 5.95:1, and the panel still separates
+     from the desk at 3.16:1. */
+  --cmi-primary-fill: #2744C6;
+  --primary-foreground: #FFFFFF;
+  /* Fill variants, so they track --cmi-primary-fill rather than the link
+     colour. White on #4766E4 = 5.08:1, on #2744C6 = 7.00:1. */
+  --cmi-primary-raised: #4766E4;
+  --cmi-primary-pressed: #2744C6;
+  --primary-hover: #7FA8F5;
+  --primary-dark: #4878DC;
+  --cmi-primary-line: #5B8DEF;
+  --cmi-mid: #6E97F2;
+  --cmi-sky: #2A4A6B;
+  --cmi-chip-blue: #1B2947;
+  --content-niche-bg: #1B2947;
+  --content-niche-border: #35508C;
+  --content-niche-text: #9DBAFF;
+  --cmi-on-blue: #D7E2FF;
+  --cmi-on-blue-dim: #B4C8FF;
+
+  /* ── Semantic ── */
+  --destructive: #FF6B80;
+  --content-success-bg: #10291E;
+  --content-success-border: #1F5B3F;
+  --content-success-text: #6EE7A8;
+  --content-success-text-dark: #A7F3CF;
+  --content-success-accent: #34D399;
+  --label-amber: #F0A868;
+
+  /* ── Elevation reads differently on a dark desk: shadows stop
+        working, so panels separate by surface contrast instead. ── */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.45);
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.5), 0 24px 60px rgba(0, 0, 0, 0.45);
+  --shadow-blue: 0 6px 20px rgba(91, 141, 239, 0.25);
+
+  --muted-foreground-hsl: 220 35% 83%;
+
+  /* Tailwind's semantic colour classes (bg-card, bg-muted, border-border,
+     text-foreground ...) resolve through this parallel hsl token set, not
+     through the hex tokens above. Overriding only the hex ones left every
+     `bg-card` and `bg-muted` element painting pure white on a dark page --
+     measured 1.16:1 for foreground text on them. Both sets must move. */
+  --background-hsl: 223 49% 8%;  /* #0B1120 */
+  --foreground-hsl: 222 63% 95%;  /* #E9EEFA */
+  --card-hsl: 221 43% 13%;  /* #131C30 */
+  --card-foreground-hsl: 222 63% 95%;  /* #E9EEFA */
+  --popover-hsl: 221 43% 13%;  /* #131C30 */
+  --popover-foreground-hsl: 222 63% 95%;  /* #E9EEFA */
+  --primary-hsl: 220 82% 65%;  /* #5B8DEF */
+  --primary-foreground-hsl: 223 49% 8%;  /* #0B1120 */
+  --secondary-hsl: 222 41% 16%;  /* #18223A */
+  --secondary-foreground-hsl: 222 63% 95%;  /* #E9EEFA */
+  --muted-hsl: 222 41% 16%;  /* #18223A */
+  --accent-hsl: 220 82% 65%;  /* #5B8DEF */
+  --accent-foreground-hsl: 223 49% 8%;  /* #0B1120 */
+  --destructive-hsl: 351 100% 71%;  /* #FF6B80 */
+  --destructive-foreground-hsl: 223 49% 8%;  /* #0B1120 */
+  --border-hsl: 223 32% 27%;  /* #2F3C5C */
+  --input-hsl: 222 30% 44%;  /* #4E6291 */
+  --ring-hsl: 220 82% 65%;  /* #5B8DEF */
+}
+
+/* The desk colour lives on <body>, so it has to move too. */
+.dark body {
+  background: var(--background);
+  color: var(--foreground);
 }

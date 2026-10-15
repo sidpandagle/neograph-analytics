@@ -76,7 +76,7 @@ const DYNAMICS_TABS = [
   {
     key: 'challenges',
     label: 'Challenges',
-    dot: '#d97706',
+    dot: 'var(--label-amber)',
     bg: '#fffbeb',
     border: '#fde68a',
     text: '#b45309',
@@ -181,7 +181,7 @@ const SEGMENT_COLORS: Record<string, { dot: string; bg: string; border: string }
   'By Component': { dot: 'var(--primary)', bg: 'hsl(var(--primary-hsl) / 0.05)', border: 'hsl(var(--primary-hsl) / 0.15)' },
   'By Type':      { dot: 'var(--accent)',  bg: 'hsl(var(--accent-hsl) / 0.05)',   border: 'hsl(var(--accent-hsl) / 0.18)' },
   'By Application': { dot: 'var(--primary)', bg: 'hsl(var(--primary-hsl) / 0.04)', border: 'hsl(var(--primary-hsl) / 0.12)' },
-  'By End User':  { dot: '#d97706', bg: 'var(--content-niche-bg)', border: 'var(--content-niche-border)' },
+  'By End User':  { dot: 'var(--label-amber)', bg: 'var(--content-niche-bg)', border: 'var(--content-niche-border)' },
 }
 
 function SegmentListCard({ title, items }: { title: string; items: string[] }) {
@@ -779,7 +779,7 @@ function ForecastAnalysisBlock({ analysis }: { analysis: string }) {
 
 function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
   if (!takeaways.length) return null
-  const dotColors = ['var(--primary)', 'var(--content-success-accent)', '#D97706', '#DC2626', 'var(--accent)']
+  const dotColors = ['var(--primary)', 'var(--content-success-accent)', 'var(--label-amber)', '#DC2626', 'var(--accent)']
   return (
     <section className="mb-14">
       <div className="space-y-2">

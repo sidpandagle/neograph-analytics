@@ -16,11 +16,11 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, hover = false, tone = "plain", ...props }, ref) => {
     const tones = {
-      plain: "bg-white border border-[var(--cmi-line)] text-[var(--cmi-ink)]",
+      plain: "bg-[var(--card)] border border-[var(--cmi-line)] text-[var(--cmi-ink)]",
       surface: "bg-[var(--cmi-surface)] border border-transparent text-[var(--cmi-ink)]",
       tile: "bg-[var(--cmi-raisedsurface)] border border-[var(--cmi-line)] text-[var(--cmi-ink)]",
-      blue: "bg-[var(--cmi-primary)] border border-transparent text-white",
-      ink: "bg-[var(--cmi-ink)] border border-transparent text-white",
+      blue: "bg-[var(--cmi-primary-fill)] border border-transparent text-[var(--primary-foreground)]",
+      ink: "bg-[var(--cmi-ink-surface)] border border-transparent text-white",
       sky: "bg-[var(--cmi-sky)] border border-transparent text-[var(--cmi-ink)]",
     }
 

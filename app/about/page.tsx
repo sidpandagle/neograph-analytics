@@ -78,7 +78,7 @@ export default async function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink-surface)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -105,7 +105,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Mission & Who We Are */}
-      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <Container size="lg">
           <div className="max-w-3xl mx-auto space-y-12">
             <div className="space-y-4">
@@ -157,7 +157,7 @@ export default async function AboutPage() {
             {whyUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-white border border-slate-100 rounded-card overflow-hidden hover:shadow-lg hover:border-slate-200 hover:-translate-y-0.5 transition-all duration-200"
+                className="bg-[var(--card)] border border-slate-100 rounded-card overflow-hidden hover:shadow-lg hover:border-slate-200 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <div className={`h-[3px] ${item.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
                 <div className="p-6">
@@ -176,7 +176,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Impact Stats — dark navy */}
-      <section className="rounded-panel bg-[var(--cmi-primary)] px-6 py-7 md:px-11 md:py-11">
+      <section className="rounded-panel bg-[var(--cmi-primary-fill)] px-6 py-7 md:px-11 md:py-11">
         <div className="mx-auto max-w-desk">
           <div className="grid grid-cols-2 lg:grid-cols-4  divide-white/[0.06]">
             {impactStats.map((stat) => (
@@ -194,7 +194,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Supporting text */}
-      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <Container size="lg">
           <div className="max-w-3xl mx-auto space-y-5 text-base text-slate-600 leading-[1.85]">
             <p>
@@ -208,7 +208,7 @@ export default async function AboutPage() {
       </section>
 
       {/* CTA — dark navy */}
-      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink-surface)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
@@ -227,7 +227,7 @@ export default async function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-navy-950 bg-white hover:bg-white/95 shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[170px]">
+                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-navy-950 bg-[var(--card)] hover:bg-[var(--cmi-surface)] shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[170px]">
                   Contact Us
                 </button>
               </Link>

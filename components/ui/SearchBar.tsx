@@ -102,7 +102,7 @@ export default function SearchBar({
       {/* The pill: hairline track with the action button seated inside it. */}
       <div
         className={cn(
-          'flex items-center gap-2.5 rounded-pill bg-white border border-[var(--cmi-line)]',
+          'flex items-center gap-2.5 rounded-pill bg-[var(--card)] border border-[var(--cmi-line)]',
           'transition-colors duration-150 focus-within:border-[var(--cmi-primary)]',
           isHeroVariant ? 'pl-[18px] pr-1.5 py-1.5' : 'pl-4 pr-1 py-1'
         )}
@@ -162,7 +162,7 @@ export default function SearchBar({
         <button
           onClick={runSearch}
           className={cn(
-            'shrink-0 rounded-pill bg-[var(--cmi-primary)] font-semibold text-white',
+            'shrink-0 rounded-pill bg-[var(--cmi-primary-fill)] font-semibold text-[var(--primary-foreground)]',
             'transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)]',
             isHeroVariant ? 'px-[22px] py-[11px] text-sm' : 'px-4 py-2 text-[13px]'
           )}
@@ -173,7 +173,7 @@ export default function SearchBar({
 
       {/* Search Results Dropdown */}
       {isOpen && query && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-[var(--cmi-line)] rounded-card overflow-hidden z-50 max-h-96 overflow-y-auto shadow-panel">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[var(--card)] border border-[var(--cmi-line)] rounded-card overflow-hidden z-50 max-h-96 overflow-y-auto shadow-panel">
           {results.length > 0 ? (
             <>
               <div className="p-3 border-b border-[var(--border)]" style={{ backgroundColor: 'var(--muted)' }}>

@@ -92,7 +92,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -120,7 +120,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Cards */}
-      <section className="rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {services.map((svc) => (
@@ -214,7 +214,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA — dark navy */}
-      <section className="relative overflow-hidden rounded-panel bg-white px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
