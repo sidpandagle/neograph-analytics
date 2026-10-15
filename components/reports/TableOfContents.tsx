@@ -132,7 +132,14 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({
                   className={cn(
                     'block rounded-tile px-4 py-2 text-[13.5px] transition-colors duration-150',
                     activeId === item.id
-                      ? 'bg-[var(--cmi-primary)] font-semibold text-white'
+                      /* hover:text-white is load-bearing. globals.css has a
+                         global `a:hover { color: var(--primary-hover) }` whose
+                         specificity (0,1,1) beats Tailwind's `text-white`
+                         (0,1,0), so hovering the active pill repainted its
+                         label #0E2FA8 on the #1541E3 background -- 1.46:1,
+                         down from 7.25:1, i.e. invisible. The hover variant
+                         is (0,2,0) and wins it back. */
+                      ? 'bg-[var(--cmi-primary)] font-semibold text-white hover:text-white'
                       : 'bg-[var(--cmi-surface)] text-[var(--cmi-body)] hover:bg-white hover:text-[var(--cmi-primary)]'
                   )}
                 >

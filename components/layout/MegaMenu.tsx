@@ -98,7 +98,15 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
         className={cn(
           "absolute left-1/2 top-[calc(100%+20px)] z-50 w-[min(920px,88vw)] -translate-x-1/2",
           "rounded-panel border border-[var(--cmi-line)] bg-white p-7 shadow-panel",
-          "transition-[opacity,transform] duration-200 ease-out",
+          /* The panel used to fade its opacity 0 -> 1 over 200ms. An opaque
+             white panel is only opaque at the end of that; for the whole
+             animation it is a translucent sheet over the page, so the
+             headings and sidebar pills underneath read straight through it
+             and the menu looks broken every time it opens. Only the
+             transform is animated now, so the background is opaque from the
+             first frame. Opacity still switches, but instantly, together
+             with visibility. */
+          "transition-transform duration-200 ease-out",
           isOpen
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-1.5 opacity-0"

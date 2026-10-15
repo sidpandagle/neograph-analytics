@@ -146,13 +146,13 @@ export function MobileNav() {
             <nav className="flex flex-col gap-1">
               <Link
                 href="/"
-                className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+                className={cn(drawerLink, pathname === "/" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10 hover:text-white")}
               >
                 Home
               </Link>
               <Link
                 href="/reports"
-                className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10")}
+                className={cn(drawerLink, pathname === "/reports" ? "bg-[var(--cmi-primary)] text-white" : "text-white/85 hover:bg-white/10 hover:text-white")}
               >
                 All Reports
               </Link>
@@ -164,7 +164,7 @@ export function MobileNav() {
                     drawerLink,
                     pathname.startsWith(item.href)
                       ? "bg-[var(--cmi-primary)] text-white"
-                      : "text-white/85 hover:bg-white/10"
+                      : "text-white/85 hover:bg-white/10 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -183,7 +183,7 @@ export function MobileNav() {
                   Consulting &amp; Services
                 </span>
                 <div className="mt-2 flex flex-col">
-                  <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10")}>
+                  <Link href="/services" className={cn(drawerLink, "text-sm text-white/70 hover:bg-white/10 hover:text-white")}>
                     All Services
                   </Link>
                   {consultingServices.map((service) => (
