@@ -5,6 +5,7 @@ import { TableOfContents } from './TableOfContents';
 import { FullReportTOC } from './FullReportTOC';
 import { CTAPanel } from './CTAPanel';
 import { CustomizeReportCard } from './CustomizeReportCard';
+import { cn } from '@/lib/utils';
 import { groupTableOfContents, SidebarTOCItem, TOCItem } from '@/lib/toc-utils';
 import { useGeneratedTOC } from '@/hooks/useGeneratedTOC';
 
@@ -93,10 +94,24 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    /* A 12-column grid can only express the rails as 3/6/3, which on a 1392px
+       grid makes each rail 324px. The TOC rail never needs that: its longest
+       label, "Frequently Asked Questions", measures 201px, and with the 32px
+       item padding the widest it ever needs is 233px -- so 91px of every row
+       was empty. Explicit tracks let the rail take what it needs and hand the
+       remainder to the centre column, which is where the analysis lives.
+       The CTA rail keeps 324px; its price panel and buttons use the width. */
+    <div
+      className={cn(
+        'grid grid-cols-1 gap-8',
+        showTOC
+          ? 'lg:grid-cols-[260px_minmax(0,1fr)_324px]'
+          : 'lg:grid-cols-[minmax(0,1fr)_324px]'
+      )}
+    >
       {/* Left Sidebar - reading navigation */}
       {showTOC && (
-        <aside className="hidden min-w-0 lg:block lg:col-span-3">
+        <aside className="hidden min-w-0 lg:block">
           <div className="sticky top-24">
             {activeTOC && activeTOC.length > 0 && (
               <TableOfContents
@@ -111,7 +126,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       )}
 
       {/* Main Content Area */}
-      <div className={showTOC ? 'min-w-0 lg:col-span-6' : 'min-w-0 lg:col-span-9'}>
+      <div className="min-w-0">
         {showFullTOC ? (
           <FullReportTOC
             chapters={chapters}
@@ -123,7 +138,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       </div>
 
       {/* Right Sidebar - CTA Panel */}
-      <aside className="min-w-0 lg:col-span-3">
+      <aside className="min-w-0">
         <div className="sticky top-24 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} />
           <CustomizeReportCard reportTitle={reportTitle} />

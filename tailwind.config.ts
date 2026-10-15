@@ -213,7 +213,13 @@ export default {
       },
 
       maxWidth: {
-        desk: '1240px',
+        /* Must read the same custom property as the .desk class in globals.css.
+           This was a hardcoded 1240px while --desk-max steps up to 1400px at
+           1536px and 1520px at 1800px, so the header -- the only consumer of
+           this token -- stayed 280px narrower than the page content under it
+           on a wide display. The horizontal padding already matches .desk
+           (20px, 14px under 900px), so aligning max-width aligns the edges. */
+        desk: 'var(--desk-max)',
         '8xl': '88rem',
         '9xl': '96rem',
       },

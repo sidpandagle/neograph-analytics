@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { MarketForecastLineChart } from './charts/MarketForecastLineChart'
 import { ComponentSharePieChart } from './charts/ComponentSharePieChart'
 import { RegionalBarChart } from './charts/RegionalBarChart'
@@ -90,14 +90,43 @@ function MarketDynamicsSection({ dynamics }: { dynamics: JsonReport['market_dyna
   const [active, setActive] = useState<DynamicsKey>('drivers')
   const tabInfo = DYNAMICS_TABS.find((t) => t.key === active)!
   const items = dynamics[active]
+  const tabRefs = useRef<Partial<Record<DynamicsKey, HTMLButtonElement | null>>>({})
+
+  /* The roving tabIndex below puts every inactive tab at -1, which is correct
+     for the WAI-ARIA tabs pattern but only half of it: the pattern then owes
+     the user arrow-key movement between tabs. Without this handler three of
+     the four tabs were reachable by mouse alone, and the markup read as MORE
+     accessible than plain buttons because the roles and aria-selected were
+     all present. Automated checkers pass it either way. */
+  function onTablistKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+    const keys = DYNAMICS_TABS.map((t) => t.key)
+    const i = keys.indexOf(active)
+    let next: number
+    switch (e.key) {
+      case 'ArrowRight': next = (i + 1) % keys.length; break
+      case 'ArrowLeft':  next = (i - 1 + keys.length) % keys.length; break
+      case 'Home':       next = 0; break
+      case 'End':        next = keys.length - 1; break
+      default: return
+    }
+    e.preventDefault()
+    setActive(keys[next])
+    tabRefs.current[keys[next]]?.focus()
+  }
 
   return (
     <section className="mb-14">
       {/* Pill tabs */}
-      <div role="tablist" aria-label="Market dynamics" className="flex flex-wrap gap-2 mb-5">
+      <div
+        role="tablist"
+        aria-label="Market dynamics"
+        onKeyDown={onTablistKeyDown}
+        className="flex flex-wrap gap-2 mb-5"
+      >
         {DYNAMICS_TABS.map((tab) => (
           <button
             key={tab.key}
+            ref={(el) => { tabRefs.current[tab.key] = el }}
             role="tab"
             id={`dynamics-tab-${tab.key}`}
             aria-selected={active === tab.key}
@@ -249,8 +278,6 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
   // Supabase rows can carry placeholders such as {"country": ""} with no metrics.
   const rows = usableRows(countries ?? [], 'country', ['market_share', 'growth_rate'])
   if (!rows.length) return null
-  const shares = rows.map((c) => toNum(c.market_share) ?? 0)
-  const maxShare = Math.max(...shares, 0) || 1
 
   return (
     <div className="mt-6">
@@ -273,14 +300,14 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
                     <div className="w-20 h-1.5 rounded-full bg-[var(--border)]">
                       <div
                         className="h-1.5 rounded-full"
-                        style={{ width: `${barWidth(((toNum(c.market_share) ?? 0) / maxShare) * 100)}%`, background: 'var(--primary)' }}
+                        style={{ width: `${barWidth(toNum(c.market_share) ?? 0)}%`, background: 'var(--primary)' }}
                       />
                     </div>
                     <span className="font-semibold text-[var(--foreground)]">{pct(c.market_share)}</span>
                   </div>
                 </td>
                 <td className="py-3 px-4 text-right font-semibold" style={{ color: 'var(--accent)' }}>
-                  {toNum(c.growth_rate) === null ? '—' : `+${pct(c.growth_rate)}`}
+                  {toNum(c.growth_rate) === null ? '—' : `${(toNum(c.growth_rate) ?? 0) >= 0 ? '+' : ''}${pct(c.growth_rate)}`}
                 </td>
               </tr>
             ))}
@@ -296,7 +323,6 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
 function RegionalSection({ regions, countries }: { regions: JsonReport['regional_analysis']; countries: JsonReport['country_analysis'] }) {
   const regionRows = usableRows(regions ?? [], 'region', ['market_share', 'growth_rate'])
   if (!regionRows.length) return null
-  const maxShare = Math.max(...regionRows.map((r) => toNum(r.market_share) ?? 0), 0) || 1
 
   return (
     <section className="mb-14">
@@ -336,7 +362,7 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
             <div className="w-full h-1.5 rounded-full mb-3" style={{ background: 'var(--content-surface)' }}>
               <div
                 className="h-1.5 rounded-full transition-all duration-700"
-                style={{ width: `${barWidth(((toNum(r.market_share) ?? 0) / maxShare) * 100)}%`, background: 'var(--primary)' }}
+                style={{ width: `${barWidth(toNum(r.market_share) ?? 0)}%`, background: 'var(--primary)' }}
               />
             </div>
 
