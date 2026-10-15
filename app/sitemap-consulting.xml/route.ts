@@ -8,13 +8,9 @@ export async function GET() {
     // Get dynamic consulting services from JSON
     const consultingServices = await getAllConsultingServices();
 
-    // Consulting hub page
-    const consultingHubPage = {
-      url: `${BASE_URL}/consulting`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    };
+    // No hub entry: /consulting has no page of its own and now redirects to
+    // /services, which sitemap-pages already lists. Advertising a redirect
+    // here would just hand crawlers a URL that never resolves to content.
 
     // Dynamic consulting service pages from /consulting/[slug]
     const dynamicConsultingPages = consultingServices.map((service) => ({
@@ -24,7 +20,7 @@ export async function GET() {
       priority: 0.7,
     }));
 
-    const allPages = [consultingHubPage, ...dynamicConsultingPages];
+    const allPages = dynamicConsultingPages;
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

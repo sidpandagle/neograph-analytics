@@ -58,7 +58,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
         <Container>
           <div className="max-w-4xl mx-auto">
             <Link
-              href="/consulting"
+              href="/services"
               className="inline-flex items-center text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] mb-6 transition-colors"
             >
               <svg
@@ -168,7 +168,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button size="lg">Request Consultation</Button>
-              <Link href="/consulting">
+              <Link href="/services">
                 <Button size="lg" variant="outline">View All Services</Button>
               </Link>
             </div>
