@@ -69,7 +69,7 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
             <ul className="space-y-2.5">
               {['PDF & Excel formats', 'Free report updates', 'Analyst support (60 days)', 'Data customization (20%)'].map(
                 (item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-[13.5px] text-[var(--cmi-ink)]">
+                  <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-[var(--cmi-ink)]">
                     <CheckIcon />
                     {item}
                   </li>

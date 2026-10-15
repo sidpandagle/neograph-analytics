@@ -94,10 +94,15 @@ function MarketDynamicsSection({ dynamics }: { dynamics: JsonReport['market_dyna
   return (
     <section className="mb-14">
       {/* Pill tabs */}
-      <div className="flex flex-wrap gap-2 mb-5">
+      <div role="tablist" aria-label="Market dynamics" className="flex flex-wrap gap-2 mb-5">
         {DYNAMICS_TABS.map((tab) => (
           <button
             key={tab.key}
+            role="tab"
+            id={`dynamics-tab-${tab.key}`}
+            aria-selected={active === tab.key}
+            aria-controls="dynamics-panel"
+            tabIndex={active === tab.key ? 0 : -1}
             onClick={() => setActive(tab.key)}
             className="px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
             style={
@@ -117,6 +122,10 @@ function MarketDynamicsSection({ dynamics }: { dynamics: JsonReport['market_dyna
 
       {/* Content panel */}
       <div
+        role="tabpanel"
+        id="dynamics-panel"
+        aria-labelledby={`dynamics-tab-${active}`}
+        tabIndex={0}
         className="rounded-xl p-5"
         style={{ background: tabInfo.bg, border: `1px solid ${tabInfo.border}`, borderLeft: `4px solid ${tabInfo.accentBar}` }}
       >
@@ -575,6 +584,9 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
             style={{ border: '1px solid var(--border)' }}
           >
             <button
+              id={`faq-q-${i}`}
+              aria-expanded={open === i}
+              aria-controls={`faq-a-${i}`}
               className="w-full flex items-center justify-between px-5 py-4 text-left transition-colors"
               style={{ background: open === i ? 'hsl(var(--primary-hsl) / 0.04)' : 'var(--card)' }}
               onClick={() => setOpen(open === i ? null : i)}
@@ -593,8 +605,15 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
               </span>
             </button>
             <div
+              id={`faq-a-${i}`}
+              role="region"
+              aria-labelledby={`faq-q-${i}`}
               className="overflow-hidden transition-all duration-300"
-              style={{ maxHeight: open === i ? '500px' : '0', opacity: open === i ? 1 : 0 }}
+              style={{
+                maxHeight: open === i ? '500px' : '0',
+                opacity: open === i ? 1 : 0,
+                visibility: open === i ? 'visible' : 'hidden',
+              }}
             >
               <div
                 className="px-5 pb-4 pt-3 text-sm leading-relaxed"

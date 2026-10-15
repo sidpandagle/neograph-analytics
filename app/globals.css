@@ -785,3 +785,25 @@
   .legal-content strong { font-weight: 700; color: var(--foreground); }
   .legal-content > p:first-child { font-size: 1.0625rem; color: var(--cmi-body); }
 }
+
+/* Keyboard users land on the mega-menu's 30-odd links before any page content.
+   This gives them one tab-stop past it. Visible only while focused. */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: var(--cmi-primary, #1e3a5f);
+  color: #fff;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 150ms ease-out;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}

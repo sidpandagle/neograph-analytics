@@ -10,7 +10,7 @@ import { Container } from "@/components/ui";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Healthcare Research & Consulting Services | NeoGraph Analytics",
+  title: "Research & Consulting Services",
   description: "Explore healthcare research services including market analysis, custom reports, consulting, forecasting, and strategic insights.",
   keywords: ["healthcare research services", "healthcare consulting", "custom healthcare reports", "market analysis services"],
   alternates: {

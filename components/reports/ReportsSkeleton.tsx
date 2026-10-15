@@ -33,7 +33,7 @@ export default function ReportsSkeleton() {
           </aside>
 
           {/* Main Content */}
-          <main>
+          <div>
             {/* Search Bar Skeleton */}
             <div className="mb-6">
               <Skeleton className="h-12 w-full rounded-lg" />
@@ -89,7 +89,7 @@ export default function ReportsSkeleton() {
                 </Card>
               ))}
             </Grid>
-          </main>
+          </div>
         </div>
       </Container>
     </Section>

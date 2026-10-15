@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 // Declares its own canonical rather than inheriting one. The route is disallowed
 // in robots.ts, so this exists to prevent a stray duplicate signal, not to rank.
 export const metadata: Metadata = {
-  title: "Request a Sample | NeoGraph Analytics",
+  title: "Request a Sample",
   description: "Request a sample of a NeoGraph Analytics research report.",
   alternates: { canonical: "/request-sample" },
   robots: { index: false, follow: true },

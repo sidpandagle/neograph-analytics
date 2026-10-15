@@ -76,13 +76,14 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({
 
   return (
     <nav
+      aria-label="Report details"
       className={cn(
         'flex flex-col max-h-[calc(100vh-8rem)]',
         className
       )}
     >
       <div className="flex flex-col flex-1 min-h-0">
-        <h3 className="eyebrow-muted mb-4 flex-shrink-0">Report details</h3>
+        <div className="eyebrow-muted mb-4 flex-shrink-0">Report details</div>
         <div className="flex-1 overflow-y-auto pb-4">
           <ul className="space-y-1.5">
             {items.map((item) => (

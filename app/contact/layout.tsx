@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact NeoGraph Analytics | Research & Business Inquiries",
+  title: "Contact Us | Research Inquiries",
   description: "Contact NeoGraph Analytics for healthcare research inquiries, report access, partnerships, or consulting support.",
   keywords: ["contact neograph analytics", "healthcare research contact", "healthcare consulting inquiry"],
   // Without an explicit canonical this page inherited the root layout's, which

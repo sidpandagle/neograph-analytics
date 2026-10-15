@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Healthcare Insights Blog | Trends, News & Analysis",
+  title: "Healthcare Insights: Trends & Analysis",
   description: "Read expert blogs on healthcare trends, innovations, policy updates, market developments, and industry insights.",
   keywords: ["healthcare blog", "healthcare insights", "healthcare trends", "medical industry news", "healthcare analysis"],
   alternates: {

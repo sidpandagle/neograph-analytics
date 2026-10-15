@@ -89,6 +89,7 @@ export function MobileNav() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
+        aria-controls="mobile-drawer"
       >
         <div className="relative h-4 w-4">
           <span
@@ -134,7 +135,13 @@ export function MobileNav() {
               transform: isOpen ? "translateX(0)" : "translateX(calc(100% + 16px))",
               opacity: isOpen ? 1 : 0,
               pointerEvents: isOpen ? "auto" : "none",
+              // pointerEvents only stops the mouse. Without visibility the closed
+              // drawer's links stay in the tab order and are read by screen
+              // readers, and visibility still animates with the transform.
+              visibility: isOpen ? "visible" : "hidden",
             }}
+            aria-hidden={!isOpen}
+            id="mobile-drawer"
           >
             <nav className="flex flex-col gap-1">
               <Link

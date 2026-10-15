@@ -96,7 +96,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       {/* Left Sidebar - reading navigation */}
       {showTOC && (
-        <aside className="hidden lg:block lg:col-span-3 2xl:col-span-2">
+        <aside className="hidden min-w-0 lg:block lg:col-span-3">
           <div className="sticky top-24">
             {activeTOC && activeTOC.length > 0 && (
               <TableOfContents
@@ -111,7 +111,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       )}
 
       {/* Main Content Area */}
-      <main className={showTOC ? 'lg:col-span-6 2xl:col-span-8' : 'lg:col-span-9 2xl:col-span-8'}>
+      <div className={showTOC ? 'min-w-0 lg:col-span-6' : 'min-w-0 lg:col-span-9'}>
         {showFullTOC ? (
           <FullReportTOC
             chapters={chapters}
@@ -120,10 +120,10 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
         ) : (
           children
         )}
-      </main>
+      </div>
 
       {/* Right Sidebar - CTA Panel */}
-      <aside className={showTOC ? 'lg:col-span-3 2xl:col-span-2' : 'lg:col-span-3 2xl:col-span-4'}>
+      <aside className="min-w-0 lg:col-span-3">
         <div className="sticky top-24 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} />
           <CustomizeReportCard reportTitle={reportTitle} />

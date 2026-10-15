@@ -61,7 +61,7 @@ export async function generateMetadata({
   const region = jsonReport.regional_analysis[0]?.region ?? 'Global';
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords,
     openGraph: {
