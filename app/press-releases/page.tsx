@@ -11,7 +11,9 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Healthcare Press Releases & Industry News",
+  // 41 chars + the 21-char layout template (" | NeoGraph Analytics") came to
+  // 62, past the ~60 Google renders. 32 + 21 = 53.
+  title: "Healthcare Press Releases & News",
   description: "Stay updated with the latest healthcare press releases, research announcements, and industry developments.",
   keywords: ["healthcare press releases", "healthcare news", "industry announcements", "healthcare market updates"],
   alternates: {

@@ -24,8 +24,11 @@
   --cmi-chip-blue: #EDF1FE;        /* blue-tinted chip              */
   --cmi-rail: #F1F5FD;             /* segmented nav track           */
   --cmi-line: #E3E9F7;             /* hairline borders              */
-  --cmi-body: #5C6B8A;             /* body copy                     */
-  --cmi-meta: #8A97B2;             /* meta / captions               */
+  /* Same measured ramp as the --content-* family below, which these two
+     started out sharing values with. --cmi-meta at #8A97B2 was 2.59:1 on
+     the page background and also styled the /reports search placeholder. */
+  --cmi-body: #4F5B76;             /* body copy      6.00:1         */
+  --cmi-meta: #636D80;             /* meta/captions  4.60:1         */
   --cmi-idle: #4C5B7A;             /* inactive nav text             */
   --cmi-mid: #6E97F2;              /* mid-tone bar                  */
   --cmi-base: #D8E2F5;             /* rail / axis                   */
@@ -67,7 +70,7 @@
   --popover: #FFFFFF;
   --popover-foreground: #0A1633;
   --muted: #F4F7FE;
-  --muted-foreground: #5C6B8A;
+  --muted-foreground: #4F5B76;
   --destructive: #E0364F;
   --destructive-foreground: #FFFFFF;
 
@@ -100,9 +103,19 @@
   --content-surface-alt: #F9FBFF;
   --content-border: #E3E9F7;
   --content-border-strong: #D8E2F5;
-  --content-muted: #8A97B2;
-  --content-text: #5C6B8A;
-  --content-text-dark: #4C5B7A;
+  /* The grey ramp is defined by measured contrast against the lightest
+     surface it is ever used on (--background, #EDF1F9), not by eye.
+     --content-muted was #8A97B2 = 2.59:1 there, which fails WCAG AA for
+     normal text (4.5:1) and fails even the 3:1 large-text floor, while
+     carrying 12px analyst prose. Each step below only darkens, preserves
+     hue 220.5deg exactly, and keeps ~1.3x separation from its neighbour so
+     the three levels stay tellable apart.
+       --content-muted      4.60:1  labels, captions, source notes
+       --content-text       6.00:1  body prose
+       --content-text-dark  8.09:1  emphasis within prose */
+  --content-muted: #636D80;
+  --content-text: #4F5B76;
+  --content-text-dark: #3C4861;
   --content-text-darkest: #0A1633;
   --content-niche-bg: #EDF1FE;
   --content-niche-border: #C9D8FF;
@@ -156,7 +169,7 @@
     --secondary-foreground-hsl: 222 67% 12%;
 
     --muted-hsl: 222 83% 98%;
-    --muted-foreground-hsl: 220 20% 45%;
+    --muted-foreground-hsl: 222 20% 39%;  /* matches --cmi-body, 5.98:1 on the page bg */
 
     --accent-hsl: 227 83% 49%;
     --accent-foreground-hsl: 0 0% 100%;
@@ -587,6 +600,18 @@
 @layer base {
   .prose {
     color: var(--foreground);
+  }
+
+  /* The centre column reaches ~690px on a wide display, which at 15.5px runs
+     prose to roughly 89 characters a line -- well past the 50-75 that
+     readability work converges on, and the kind of thing that makes a long
+     analytical passage tiring to follow. The cap applies to p and li only, so
+     tables, charts and figures still use the full column. Note `ch` is the
+     width of "0", which in a proportional face is wider than the average
+     character, so 64ch lands nearer 75 characters than 64. */
+  .prose p,
+  .prose li {
+    max-width: 64ch;
   }
 
   .prose p {

@@ -341,7 +341,7 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
             </div>
 
             {r.description && (
-              <p className="text-xs leading-relaxed" style={{ color: 'var(--content-muted)' }}>{r.description}</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--content-muted)' }}>{r.description}</p>
             )}
           </div>
         ))}
@@ -416,7 +416,7 @@ function CompetitiveLandscapeSection({
               </div>
 
               {p.description && (
-                <p className="text-xs leading-relaxed mb-3" style={{ color: 'var(--content-text)' }}>
+                <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--content-text)' }}>
                   {p.description}
                 </p>
               )}

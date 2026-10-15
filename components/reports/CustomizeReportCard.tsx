@@ -26,7 +26,7 @@ export const CustomizeReportCard = React.forwardRef<HTMLDivElement, CustomizeRep
         <h3 className="font-semibold text-sm text-[var(--foreground)] mb-1.5">
           Need a Tailored Report?
         </h3>
-        <p className="text-xs leading-relaxed mb-4" style={{ color: 'var(--muted-foreground)' }}>
+        <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted-foreground)' }}>
           Add regions, segments, or data points — with 20% free customization included.
         </p>
 

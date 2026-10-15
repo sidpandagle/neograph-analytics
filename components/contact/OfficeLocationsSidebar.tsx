@@ -12,7 +12,7 @@ export default function OfficeLocationsSidebar() {
       {offices.map((office) => (
         <div key={office.name} className="space-y-1 rounded-lg bg-gray-50 p-3">
           <p className="text-sm font-semibold text-[var(--foreground)]">{office.name}</p>
-          <p className="text-xs leading-relaxed text-[var(--muted-foreground)]">
+          <p className="text-sm leading-relaxed text-[var(--muted-foreground)]">
             {office.addressLine1}
             {office.addressLine2 && <>, {office.addressLine2}</>}
             <br />
