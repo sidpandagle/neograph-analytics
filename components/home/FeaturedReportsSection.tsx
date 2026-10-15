@@ -55,8 +55,13 @@ export default async function FeaturedReportsSection() {
           <span className="eyebrow">Trending reports by industry</span>
           <h2 className="text-[28px] md:text-[36px]">Latest market insights</h2>
           <p className="text-[15px] leading-[1.6] text-[var(--cmi-body)]">
-            Oncology, medical devices, diagnostics, digital health and life sciences —
-            over 2,500 research reports spanning 20+ sectors and 50+ countries.
+            {/* This read "over 2,500 research reports spanning 20+ sectors and
+                50+ countries" while the hero, one scroll above, correctly said
+                142 across 6 verticals. Three different corpus sizes were
+                visible on one page. The hero already states the real count
+                from a live query, so this sentence states no number at all
+                rather than inventing a second source of truth. */}
+            Oncology, medical devices, diagnostics, digital health and life sciences.
           </p>
         </div>
         <Link href="/reports" className="text-sm font-semibold text-[var(--cmi-primary)]">
