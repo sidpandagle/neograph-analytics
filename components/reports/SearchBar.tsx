@@ -34,6 +34,13 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
   const [query, setQuery] = useState(initialQuery);
   const debouncedQuery = useDebounce(query, 300);
 
+  // initialQuery now arrives after hydration (the URL is read behind its own
+  // Suspense boundary), and useState only reads it on the first render. Seed
+  // the field once, without clobbering anything the visitor has typed.
+  useEffect(() => {
+    if (initialQuery) setQuery((current) => current || initialQuery);
+  }, [initialQuery]);
+
   useEffect(() => {
     if (!debouncedQuery.trim()) {
       onSearchResults(null, false);

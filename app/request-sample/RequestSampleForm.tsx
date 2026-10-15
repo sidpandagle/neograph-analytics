@@ -1,18 +1,27 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useRef, useCallback, Suspense } from "react";
+import UrlParams from "@/components/common/UrlParams";
 import { Section, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Button, Badge, Captcha, type CaptchaRef } from "@/components/ui";
 import { CountrySelect } from "@/components/ui/country-select";
 import { QuickContactSection, OfficeLocationsSidebar } from "@/components/contact";
 import { submitRequestSampleForm, isFormError } from "@/lib/api";
 import { getDefaultCountry, type Country } from "@/lib/data/countries";
 
+const SAMPLE_PARAMS = ['report'] as const;
+
 export default function RequestSampleForm() {
-  const searchParams = useSearchParams();
-  const reportTitle = searchParams.get("report") || "";
   const defaultCountry = getDefaultCountry();
   const captchaRef = useRef<CaptchaRef>(null);
+
+  const applyUrlParams = useCallback((values: Record<string, string | null>) => {
+    const report = values.report;
+    if (report) {
+      setFormData((current) =>
+        current.reportTitle ? current : { ...current, reportTitle: report }
+      );
+    }
+  }, []);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -23,7 +32,7 @@ export default function RequestSampleForm() {
     countryCode: defaultCountry.code,
     dialCode: defaultCountry.dialCode,
     jobTitle: "",
-    reportTitle: reportTitle,
+    reportTitle: "",
     additionalInfo: "",
   });
   const [, setCaptchaValid] = useState(false);
@@ -111,6 +120,10 @@ export default function RequestSampleForm() {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <UrlParams keys={SAMPLE_PARAMS} onParams={applyUrlParams} />
+      </Suspense>
+
       <Section padding="lg" background="muted">
         <Container size="lg">
           <div className="text-center space-y-4">

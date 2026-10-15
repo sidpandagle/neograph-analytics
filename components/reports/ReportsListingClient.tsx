@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect, useCallback } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useMemo, useEffect, useCallback, Suspense } from 'react';
+import UrlParams from '@/components/common/UrlParams';
 import { Search, X, ChevronDown } from 'lucide-react';
 import ReportCard from './ReportCard';
 import Pagination from './Pagination';
@@ -29,6 +29,8 @@ interface ReportsListingClientProps {
 
 const ITEMS_PER_PAGE = 12;
 
+const LISTING_PARAMS = ['category', 'search'] as const;
+
 const REGIONS = [
   'Global',
   'North America',
@@ -39,28 +41,22 @@ const REGIONS = [
 ];
 
 export default function ReportsListingClient({ reports }: ReportsListingClientProps) {
-  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState('');
   const [activeRegion, setActiveRegion] = useState('');
   const [searchResults, setSearchResults] = useState<Report[] | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  useEffect(() => {
-    const categoryParam = searchParams.get('category');
-    if (categoryParam) {
-      const cat = categories.find((c) => c.slug === categoryParam);
+  // The server renders the unfiltered first page -- which is what belongs at
+  // the canonical /reports anyway -- and the URL is applied on hydration.
+  const applyUrlParams = useCallback((values: Record<string, string | null>) => {
+    const { category, search } = values;
+    if (category) {
+      const cat = categories.find((c) => c.slug === category);
       if (cat) setActiveCategory(cat.name);
     }
-  }, [searchParams]);
-
-  const initialSearch = useMemo(() => searchParams.get('search') || '', [searchParams]);
-  const [searchQuery, setSearchQuery] = useState(initialSearch);
-
-  useEffect(() => {
-    if (initialSearch && !searchQuery) {
-      setSearchQuery(initialSearch);
-    }
-  }, [initialSearch]);
+    if (search) setSearchQuery((current) => current || search);
+  }, []);
 
   const handleSearchResults = useCallback((results: Report[] | null, loading: boolean) => {
     setSearchResults(results);
@@ -101,6 +97,10 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
 
   return (
     <>
+      <Suspense fallback={null}>
+        <UrlParams keys={LISTING_PARAMS} onParams={applyUrlParams} />
+      </Suspense>
+
       {/* ── Hero panel ───────────────────────────────────────────────────────── */}
       <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary)] p-7 md:p-11">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -120,7 +120,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             <SearchBar
               onSearchResults={handleSearchResults}
               placeholder="Search by topic, technology, or region…"
-              initialQuery={initialSearch}
+              initialQuery={searchQuery}
             />
           </div>
         </div>
