@@ -79,6 +79,7 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
+        aria-controls="reports-megamenu"
       >
         Reports
         <svg
@@ -102,6 +103,7 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-1.5 opacity-0"
         )}
+        id="reports-megamenu"
         role="menu"
         aria-label="Report categories"
         aria-hidden={!isOpen}
@@ -130,9 +132,9 @@ export default function MegaMenu({ categories, isActive }: MegaMenuProps) {
               role="menuitem"
               tabIndex={isOpen ? 0 : -1}
             >
-              <h3 className="font-display text-[15px] font-semibold text-[var(--cmi-ink)]">
+              <div className="font-display text-[15px] font-semibold text-[var(--cmi-ink)]">
                 {category.name}
-              </h3>
+              </div>
               <p className="mt-1 line-clamp-2 text-[12.5px] leading-[1.5] text-[var(--cmi-body)]">
                 {category.description}
               </p>

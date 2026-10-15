@@ -27,7 +27,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.neographanalytics.com'),
   title: {
-    default: "NeoGraph Analytics | Healthcare Market Insights & Research Reports",
+    default: "NeoGraph Analytics | Healthcare Market Research",
     template: "%s | NeoGraph Analytics",
   },
   description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
@@ -88,9 +88,10 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {/* The desk: every section below is a rounded panel floating on it. */}
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="desk flex-1 pb-5">{children}</main>
+          <main id="main-content" className="desk flex-1 pb-5">{children}</main>
           <Footer />
         </div>
       </body>

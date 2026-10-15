@@ -52,7 +52,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
   }
 
   return (
-    <main>
+    <div>
       {/* Hero Section */}
       <Section className="bg-[var(--muted)]">
         <Container>
@@ -175,6 +175,6 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
           </div>
         </Container>
       </Section>
-    </main>
+    </div>
   );
 }

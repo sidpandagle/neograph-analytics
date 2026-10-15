@@ -20,7 +20,7 @@ import {
 } from '@/components/home';
 
 export const metadata: Metadata = {
-  title: "NeoGraph Analytics | Healthcare Market Insights & Research Reports",
+  title: { absolute: "NeoGraph Analytics | Healthcare Market Research" },
   description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
   keywords: ["neograph analytics", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
   alternates: {

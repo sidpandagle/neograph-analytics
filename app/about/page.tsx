@@ -11,7 +11,7 @@ import { getHomeFacts } from "@/lib/api/home";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "About NeoGraph Analytics | Healthcare Consulting Experts",
+  title: "About Us | Healthcare Research Team",
   description: "NeoGraph Analytics is a specialized healthcare consulting firm offering comprehensive advisory services to healthcare providers, life sciences companies, payers, and health technology organizations.",
   keywords: ["about neograph analytics", "healthcare consulting firm", "healthcare advisory services", "healthcare transformation", "healthcare analytics"],
   alternates: {

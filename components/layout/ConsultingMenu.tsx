@@ -77,6 +77,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
+        aria-controls="services-menu"
       >
         Consulting
         <svg
@@ -100,6 +101,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-1.5 opacity-0"
         )}
+        id="services-menu"
         role="menu"
         aria-label="Services"
         aria-hidden={!isOpen}
@@ -120,9 +122,9 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
             <div key={category} className="space-y-2.5">
-              <h3 className="eyebrow-muted border-b border-[var(--cmi-line)] pb-2">
+              <div className="eyebrow-muted border-b border-[var(--cmi-line)] pb-2">
                 {category}
-              </h3>
+              </div>
               <div className="space-y-2">
                 {categoryServices.map((service) => (
                   <Link
@@ -136,9 +138,9 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
                     role="menuitem"
                     tabIndex={isOpen ? 0 : -1}
                   >
-                    <h4 className="font-display text-[14.5px] font-semibold text-[var(--cmi-ink)]">
+                    <div className="font-display text-[14.5px] font-semibold text-[var(--cmi-ink)]">
                       {service.title}
-                    </h4>
+                    </div>
                     <p className="mt-0.5 line-clamp-2 text-[12.5px] leading-[1.5] text-[var(--cmi-body)]">
                       {service.description}
                     </p>

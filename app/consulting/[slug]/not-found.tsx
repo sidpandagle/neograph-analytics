@@ -3,7 +3,7 @@ import { Section, Container, Button } from '@/components/ui';
 
 export default function ConsultingServiceNotFound() {
   return (
-    <main>
+    <div>
       <Section className="min-h-[60vh] flex items-center justify-center">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
@@ -23,6 +23,6 @@ export default function ConsultingServiceNotFound() {
           </div>
         </Container>
       </Section>
-    </main>
+    </div>
   );
 }
