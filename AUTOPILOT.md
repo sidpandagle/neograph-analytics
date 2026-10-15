@@ -90,6 +90,21 @@ Keep everything inside free tiers. Steady and growing, never a surprise bill.
 - Typical day: 1 substantial PR (2-3 commits) + 1 content/report commit.
 - Record each commit in WORKLOG.md with the backlog items it closes.
 
+### Pacing (user instruction, 2026-10-15)
+Spread the day's commits across the full 24-hour window rather than spending
+them in one burst and then idling. Target roughly **one commit every 4-5
+hours**, so the repo keeps moving day in, day out instead of stopping once the
+fifth commit lands.
+
+- Between commits, keep working on things that need no commit: research notes
+  into `research/`, Supabase report rows, audits, backlog triage, production
+  verification of whatever deploy is in flight.
+- A commit is still gated on the bundle being complete and verified. If a
+  bundle is not ready when its slot comes round, let the slot pass -- pacing
+  never justifies committing unfinished work, and the 2/day minimum still holds.
+- Track the slots used so far in STATUS.md so the pacing survives a context
+  reset.
+
 ## Free-tier ceilings — measured 2026-10-15 (never exceed; zero spend)
 Vercel **Hobby** (www.neographanalytics.com, project `vercel-market-research`):
 | Resource | Used | Limit | Headroom |
