@@ -82,7 +82,7 @@
   --panel-gap: 20px;
   --panel-pad: 44px;
   --card-pad: 26px;
-  --desk-max: 1240px;
+  --desk-max: 1240px;      /* widened on large screens, see below */
 
   /* ── Elevation — the system stays flat; depth comes from
         panel/desk contrast, not heavy shadows. ───────────────── */
@@ -232,6 +232,17 @@
    PANEL SYSTEM
    Every section is a rounded panel floating on the desk.
    ═══════════════════════════════════════════════════════════════ */
+
+/* On a 1900px display the 1240px desk left ~330px of dead space on each side
+   while the report page's three columns fought over what was left. Step the
+   desk up so wide screens are actually used. The steps stop at 1520px: past
+   that the centre column's measure gets too long to read comfortably. */
+@media (min-width: 1536px) {
+  :root { --desk-max: 1400px; }
+}
+@media (min-width: 1800px) {
+  :root { --desk-max: 1520px; }
+}
 
 @layer components {
   /* The vertical stack of panels, centred on the desk. */

@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
         destination: 'https://www.neographanalytics.com/:path*',
         permanent: true,
       },
+      {
+        // There is no /consulting page, only /consulting/[slug]. /services is
+        // the hub that the navigation already points at, so send the bare
+        // path there instead of leaving an advertised URL returning 404.
+        source: '/consulting',
+        destination: '/services',
+        permanent: true,
+      },
     ];
   },
 };

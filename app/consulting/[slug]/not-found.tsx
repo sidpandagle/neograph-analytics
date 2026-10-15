@@ -13,7 +13,7 @@ export default function ConsultingServiceNotFound() {
               The consulting service you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <div className="flex gap-4 justify-center">
-              <Link href="/consulting">
+              <Link href="/services">
                 <Button size="lg">View All Services</Button>
               </Link>
               <Link href="/">

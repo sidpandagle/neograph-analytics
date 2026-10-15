@@ -29,18 +29,6 @@ export async function GET() {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/request-sample`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/consulting`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
       url: `${BASE_URL}/reports`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'daily',
