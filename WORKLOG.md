@@ -215,3 +215,148 @@ Baseline to measure against (90 days to 2026-10-15): 6 clicks, 2,400 impressions
 - Note on process: a verification run reported "no segmentation anywhere" on three
   reports. That was a false negative — `next start` had raced the build and was
   serving no build at all (curl status 000). Re-ran after restarting the server.
+
+---
+
+## 2026-10-15 (later) — testing cycle added; structure, SSR and layout fixes
+
+User asked for a testing cycle after commits, run headless against production or
+locally. Built one: it fetches 13 routes and checks heading order, landmarks,
+ARIA wiring, form labelling, title/description length, canonicals and JSON-LD
+validity. No browser is opened. It runs against `.next/server/app/*.html` before
+a commit and against production after the deploy.
+
+### PR #8 — document structure, landmarks, titles, sidebar widths
+- The Reports and Consulting dropdowns marked every category and service label
+  as `<h3>`/`<h4>`. That put **28 headings before the `<h1>` on all 13 pages**.
+  They are navigation link text, not document structure.
+- Four components nested a second `<main>` inside the root layout's.
+- No skip link anywhere: a keyboard user tabbed ~30 menu links on every page.
+- Every title exceeded the ~60 characters Google renders. `/services` and
+  `/request-sample` named the brand themselves while the layout template
+  appended it again, publishing `... | NeoGraph Analytics | NeoGraph Analytics`.
+  `/reports` also carried two leftovers of an old brand find/replace
+  ("in-depth neograph analytics reports").
+- The market-dynamics pills are a tablist and the FAQ is a disclosure; neither
+  announced itself. The collapsed FAQ answer and the closed mobile drawer were
+  hidden only by opacity and pointer-events, so their links stayed in the tab
+  order and were read aloud. `visibility` removes them from both and still
+  animates.
+
+### PR #9 — `/reports` and `/request-sample` server-rendered nothing
+The biggest find of the cycle. `/reports` served 495KB containing **no `<h1>`,
+no report titles and no links to any report** — header, footer and a skeleton.
+`/request-sample` had no heading and none of its eight fields.
+
+Not a bug in either page: a statically rendered route opts out of SSR up to the
+nearest Suspense boundary above any `useSearchParams()` call, and the only
+boundary above was the one wrapping the whole page. One line cost both pages
+their entire server-rendered output. The params now come from `UrlParams`, which
+renders `null` behind its own boundary.
+
+`SearchBar` needed a sync effect: `initialQuery` now arrives after hydration and
+`useState` only reads it once, so a `?search=` link would have left the field
+empty.
+
+### PR #10 — wide-screen layout and the `/consulting` 404
+User sent two screenshots. First: the report rails looked congested. Measured
+cause — both were `col-span-2` of 12 at 2xl, which wrapped "Buy report now" and
+most two-word TOC labels. Fixed to 3/6/3 in PR #8.
+
+Second: with the rails fixed the centre column looked small and the page ignored
+the sides of the screen. Measured cause — `--desk-max: 1240px`, leaving ~330px
+dead on each side of a 1900px display. The cap now steps to 1400px at 1536px and
+1520px at 1800px: centre column 540px -> 680px, rails 254px -> 324px. Stopped at
+1520px on purpose; past that the measure gets too long to read.
+
+`/consulting` returned 404 while being advertised in **both** sitemaps and linked
+from three places on the consulting detail pages. There is no hub there, only
+`/consulting/[slug]`, and `/services` is the hub the navigation already points
+at — so the bare path now redirects there. `/request-sample` left the sitemap
+too: it was `noindex` *and* robots-disallowed while being advertised.
+
+`/authors` also 404s, but nothing links to it and it is in no sitemap. Left as a
+legitimate 404.
+
+### Process notes
+- A check reported `/consulting` still 404ing after the fix. False negative: a
+  stale `next start` from an earlier session was holding :3100 and serving old
+  code. Confirmed by PID and command line that the process was mine and from
+  this repo before stopping it. Same class of mistake as the segmentation false
+  negative earlier in the day — **verify the server is the one you just built.**
+- Two rules in the audit script were themselves wrong: it counted `&amp;` as
+  five characters when measuring title length, and flagged buttons as icon-only
+  when they had visible text. Both corrected before trusting the output.
+
+### Content — report 2 of the oncology cluster
+`oncology-information-systems-market` published to Supabase (corpus **142**).
+
+Thesis: base-year estimates spread **2.74x** ($3.10B-$8.49B) while published
+CAGRs spread only **1.27x** (6.67%-8.5%). Forecasters agree about growth and
+disagree about what the market is, so a headline 2032 number reports the
+analyst's scope decision rather than a finding.
+
+Grounded by dividing published sizes by the IAEA DIRAC register (~8,700
+radiotherapy centres worldwide, corroborated at 8,925 geo-verified centres by a
+2025 *Radiotherapy and Oncology* analysis): the high estimates imply **~$976,000
+per centre per year**, which rules out a radiotherapy-only reading. That is
+checkable arithmetic rather than an assertion.
+
+Held to the same discipline as the previous report:
+- `regional_analysis` and `country_analysis` left empty — no defensible source.
+- **No vendor share percentages.** Current OIS share is not publicly disclosed;
+  the ARIA and MOSAIQ installed-base figures still in circulation are from 2011
+  and 2013, and a 2018 Varian linac count measures machines, not installations.
+  The competitive section names players and says plainly that share is unknown.
+- `recent_developments` left empty rather than filled with unsourced items.
+- Segmentation uses plain strings, not `{name, market_share}` objects, so the
+  renderer lists the dimensions without attaching invented percentages.
+- Methodology records that the per-centre figure is a plausibility test, not a
+  market estimate, and that DIRAC describes itself as incomplete.
+
+Notes: `research/oncology-information-systems-notes.md`.
+
+### Also staged
+`lib/api/authors.ts` selected `*` across the whole team table on every author
+page render to return a single author — bios and image URLs included — which is
+waste on metered egress. Now fetches one row and four columns.
+
+The positional-identity problem is documented rather than redesigned: author
+URLs are `/authors/1..N` by row order, because the table's real ids are strings
+(`tm001`) and cannot be the numeric route param. Removing a team member would
+silently repoint every author after them. Not worth a URL redesign — `MeetTheTeam`
+is dead code, nothing links to author pages, and they are in no sitemap.
+
+### Meta titles — a pattern pass over all 142 rows (no commit needed)
+Surveyed `meta_title` across the corpus: **141 of 142 exceeded** the ~60
+characters Google renders, mean 92.4, max 137. Three distinct defects were
+behind that, not one:
+
+1. **26 titles claimed both "Global" and a region** — "Global Asia Pacific
+   Biosimilars Market", "Global Europe Continuous Glucose Monitoring Market".
+   The slug (`asia-pacific-biosimilars-market`) settles which is correct. The
+   script drops the leading "Global" *only* where the slug corroborates the
+   region, so it cannot guess wrong.
+2. A boilerplate tail `| Market Research Report 2032` was appended to titles
+   that already ended in 2032, printing the year twice. 23 rows.
+3. Long forms — "Market Size, Share and Trends Analysis Report 2032" (61 rows)
+   and five other variants — condensed.
+
+Result, verified by reading the rows back:
+
+```
+mean length        92.4 -> 56.4
+max  length         137 -> 77
+over 60 characters  141 -> 45
+'Global <Region>'    26 -> 0
+'2032' twice         34 -> 0
+```
+
+The 45 still over 60 are long subject names ("Graphene-Enhanced Composites for
+Aerospace Market Size & Forecast 2032") that cannot shorten further without
+losing meaning. `meta_description` was left alone: only 14 rows exceed 160
+characters and each needs an editorial judgement rather than a substitution.
+
+Dry-run first, applied second; the script writes nothing without `--apply`.
+Because report pages carry `revalidate = 3600`, these reach production through
+ISR without waiting for a deploy.
