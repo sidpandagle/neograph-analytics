@@ -23,7 +23,7 @@ interface ReportCardProps {
 /** The report card — the primary content unit of the listing pages. */
 export default function ReportCard({ report }: ReportCardProps) {
   return (
-    <article className="group flex h-full flex-col gap-4 rounded-card border border-[var(--cmi-line)] bg-white p-5 transition-colors duration-200 hover:border-[var(--cmi-primary)] md:p-6.5">
+    <article className="group flex h-full flex-col gap-4 rounded-card border border-[var(--cmi-line)] bg-[var(--card)] p-5 transition-colors duration-200 hover:border-[var(--cmi-primary)] md:p-6.5">
       <div className="flex items-center justify-between gap-3">
         <span className="truncate text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-body)]">
           {report.category}

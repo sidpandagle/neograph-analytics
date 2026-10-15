@@ -4,7 +4,7 @@ export default function OfficeLocationsSidebar() {
   const offices = [CONTACT_INFO.offices.usa, CONTACT_INFO.offices.india];
 
   return (
-    <div className="bg-white rounded-lg p-4 border border-[var(--border)] space-y-4">
+    <div className="bg-[var(--card)] rounded-lg p-4 border border-[var(--border)] space-y-4">
       <h2 className="text-xl font-bold text-[var(--foreground)]">
         Our Offices
       </h2>

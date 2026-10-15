@@ -1,6 +1,6 @@
 export default function StatsSectionSkeleton() {
   return (
-    <section className="grid gap-8 rounded-panel bg-white p-7 md:p-11 lg:grid-cols-[1.05fr_1fr] lg:gap-11">
+    <section className="grid gap-8 rounded-panel bg-[var(--card)] p-7 md:p-11 lg:grid-cols-[1.05fr_1fr] lg:gap-11">
       <div className="flex flex-col gap-5">
         <div className="h-3 w-40 animate-pulse rounded-pill bg-[var(--cmi-surface)]" />
         <div className="space-y-3">

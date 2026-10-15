@@ -48,7 +48,7 @@ export default async function FeaturedReportsSection() {
   if (reports.length === 0) return null;
 
   return (
-    <section className="flex flex-col gap-6.5 rounded-panel bg-white p-7 md:p-11">
+    <section className="flex flex-col gap-6.5 rounded-panel bg-[var(--card)] p-7 md:p-11">
       {/* Header */}
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div className="flex max-w-[620px] flex-col gap-3">
@@ -117,7 +117,7 @@ export default async function FeaturedReportsSection() {
 
                 <div className="flex flex-1 items-center gap-1" aria-hidden="true">
                   <div className="h-[3px] flex-1 rounded-pill bg-[var(--cmi-base)]" />
-                  <div className="h-[3px] flex-[2] rounded-pill bg-[var(--cmi-primary)]" />
+                  <div className="h-[3px] flex-[2] rounded-pill bg-[var(--cmi-primary-fill)]" />
                   <span className="text-[11px] font-bold text-[var(--cmi-primary)]">▸</span>
                 </div>
 

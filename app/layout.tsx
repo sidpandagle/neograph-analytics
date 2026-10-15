@@ -79,6 +79,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Theme, applied before first paint.
+
+          This has to be an inline, synchronous script in <head>: anything that
+          waits for React would paint the light theme first and then repaint,
+          which is the white flash every dark-mode reader knows. It reads the
+          stored choice, falls back to the OS setting when there isn't one, and
+          is wrapped in try/catch because localStorage throws outright in
+          private mode and with site data blocked -- in which case the page
+          simply renders light rather than failing to render at all.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}if(t==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          }}
+        />
         <StructuredData data={generateOrganizationSchema()} />
         <StructuredData data={generateWebSiteSchema()} />
         <StructuredData data={generateLocalBusinessSchema()} />

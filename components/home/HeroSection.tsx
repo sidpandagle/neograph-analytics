@@ -41,7 +41,7 @@ export default async function HeroSection() {
   const unitShort = snapshot?.unit === 'Billion' ? 'B' : snapshot?.unit === 'Million' ? 'M' : '';
 
   return (
-    <section className="grid items-center gap-8 overflow-hidden rounded-panel bg-[var(--cmi-primary)] p-7 md:p-11 lg:grid-cols-2 lg:gap-10">
+    <section className="grid items-center gap-8 overflow-hidden rounded-panel bg-[var(--cmi-primary-fill)] p-7 md:p-11 lg:grid-cols-2 lg:gap-10">
       {/* ── Left: the claim ─────────────────────────────────────── */}
       <div className="flex flex-col gap-6">
         <h1 className="animate-reveal-up-d1 text-[38px] font-bold leading-[1.04] tracking-[-0.03em] text-white sm:text-[46px] lg:text-[54px]">
@@ -85,7 +85,7 @@ export default async function HeroSection() {
       <div className="animate-reveal-up-d3 flex min-h-[420px] flex-col justify-center gap-4 rounded-[20px] bg-[var(--cmi-sky)] p-5 md:p-6.5">
         {/* Report snapshot — real figures from the featured report */}
         {snapshot ? (
-          <div className="flex flex-col gap-3.5 rounded-tile bg-white p-4 md:p-5">
+          <div className="flex flex-col gap-3.5 rounded-tile bg-[var(--card)] p-4 md:p-5">
             <div className="flex items-center justify-between gap-3">
               <span className="text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[var(--cmi-meta)]">
                 Report snapshot
@@ -143,7 +143,7 @@ export default async function HeroSection() {
         {/* Two supporting tiles — also from the featured report */}
         {snapshot && (
           <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-tile bg-white p-4">
+            <div className="rounded-tile bg-[var(--card)] p-4">
               <div className="num text-[17px] text-[var(--cmi-ink)]">
                 {snapshot.topRegion?.region ?? snapshot.industry}
               </div>
@@ -155,7 +155,7 @@ export default async function HeroSection() {
                   : 'Leading segment'}
               </p>
             </div>
-            <div className="rounded-tile bg-white p-4">
+            <div className="rounded-tile bg-[var(--card)] p-4">
               <div className="num text-[17px] text-[var(--cmi-ink)]">
                 {snapshot.companiesProfiled} companies
               </div>
@@ -168,13 +168,13 @@ export default async function HeroSection() {
         )}
 
         {/* Ink strip — the one dark note in the hero */}
-        <div className="flex items-center justify-between gap-3 rounded-tile bg-[var(--cmi-ink)] p-4 md:px-[18px]">
+        <div className="flex items-center justify-between gap-3 rounded-tile bg-[var(--cmi-ink-surface)] p-4 md:px-[18px]">
           <span className="max-w-[250px] text-[13px] leading-[1.4] text-[var(--cmi-on-blue)]">
             Exclusive, in-depth intelligence to grow your revenue.
           </span>
           <Link
             href="/request-sample"
-            className="shrink-0 rounded-pill bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
+            className="shrink-0 rounded-pill bg-[var(--card)] px-4 py-2.5 text-[13px] font-semibold text-[var(--cmi-ink)] transition-colors hover:bg-[var(--cmi-chip-blue)] hover:text-[var(--cmi-ink)]"
           >
             Download sample
           </Link>

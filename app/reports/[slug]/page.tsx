@@ -359,11 +359,11 @@ export default async function ReportPage({
       <StructuredData data={breadcrumbSchema} />
       {faqSchema && <StructuredData data={faqSchema} />}
 
-      <div className="rounded-panel bg-white px-6 py-4 md:px-11">
+      <div className="rounded-panel bg-[var(--card)] px-6 py-4 md:px-11">
         <Breadcrumb items={breadcrumbItems} />
       </div>
 
-      <div className="rounded-panel bg-white p-6 md:p-11">
+      <div className="rounded-panel bg-[var(--card)] p-6 md:p-11">
         <ReportContentWrapper
             tableOfContents={sidebarTOC}
             fullReportTOC={report.fullReportTOC}
@@ -375,9 +375,9 @@ export default async function ReportPage({
           >
             <article>
               {/* ── Report hero — a blue card at the head of the content ── */}
-              <header className="mb-10 rounded-card bg-[var(--cmi-primary)] p-6 md:p-9">
+              <header className="mb-10 rounded-card bg-[var(--cmi-primary-fill)] p-6 md:p-9">
                 <div className="mb-5 flex flex-wrap items-center gap-2">
-                  <span className="rounded-pill bg-white px-3 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-primary)]">
+                  <span className="rounded-pill bg-[var(--card)] px-3 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-primary)]">
                     {report.category}
                   </span>
                   <span className="chip-on-blue">{report.region}</span>
@@ -397,7 +397,7 @@ export default async function ReportPage({
                 {/* Metric tiles — white on blue, numbers in Outfit */}
                 <div className="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
                   {metricCards.map((card) => (
-                    <div key={card.label} className="rounded-tile bg-white p-4">
+                    <div key={card.label} className="rounded-tile bg-[var(--card)] p-4">
                       <p className="mb-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--cmi-meta)]">
                         {card.label}
                       </p>
@@ -445,7 +445,7 @@ export default async function ReportPage({
 
 //     {/* Market Analysis Charts */}
 //     <div className="space-y-6">
-//       <div className="bg-white rounded-lg shadow-sm border border-[var(--border)] p-6">
+//       <div className="bg-[var(--card)] rounded-lg shadow-sm border border-[var(--border)] p-6">
 //         <h3 className="text-xl font-semibold text-[var(--foreground)] mb-4">
 //           Market Size by Segment (2020-2024)
 //         </h3>
@@ -478,7 +478,7 @@ export default async function ReportPage({
 //       </div>
 //       </div>
 
-//       <div className="bg-white rounded-lg shadow-sm border border-[var(--border)] p-6">
+//       <div className="bg-[var(--card)] rounded-lg shadow-sm border border-[var(--border)] p-6">
 //         <h3 className="text-xl font-semibold text-[var(--foreground)] mb-4">
 //           Market Distribution by Segment
 //         </h3>

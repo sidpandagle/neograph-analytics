@@ -7,7 +7,7 @@ import categories from '@/data/categories.json';
  */
 export default function IndustryCategoriesSection() {
   return (
-    <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary)] p-7 md:p-11">
+    <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary-fill)] p-7 md:p-11">
       <div className="flex flex-col items-center gap-2.5 text-center">
         <h2 className="text-[26px] text-white md:text-[34px]">
           Every healthcare sector, one research desk
@@ -23,7 +23,7 @@ export default function IndustryCategoriesSection() {
           <Link
             key={category.id}
             href={`/reports?category=${category.slug}`}
-            className="group flex items-center justify-between gap-2.5 rounded-tile bg-[var(--cmi-primary-raised)] p-4 text-[14.5px] font-semibold text-white transition-colors duration-150 hover:bg-white hover:text-[var(--cmi-primary)] md:p-[18px]"
+            className="group flex items-center justify-between gap-2.5 rounded-tile bg-[var(--cmi-primary-raised)] p-4 text-[14.5px] font-semibold text-[var(--primary-foreground)] transition-colors duration-150 hover:bg-[var(--card)] hover:text-[var(--cmi-primary)] md:p-[18px]"
           >
             <span className="min-w-0 truncate">{category.name}</span>
             <span className="shrink-0 text-xs opacity-70 transition-transform duration-150 group-hover:translate-x-0.5">

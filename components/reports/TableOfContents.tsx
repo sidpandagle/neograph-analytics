@@ -139,8 +139,8 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({
                          label #0E2FA8 on the #1541E3 background -- 1.46:1,
                          down from 7.25:1, i.e. invisible. The hover variant
                          is (0,2,0) and wins it back. */
-                      ? 'bg-[var(--cmi-primary)] font-semibold text-white hover:text-white'
-                      : 'bg-[var(--cmi-surface)] text-[var(--cmi-body)] hover:bg-white hover:text-[var(--cmi-primary)]'
+                      ? 'bg-[var(--cmi-primary-fill)] font-semibold text-[var(--primary-foreground)] hover:text-[var(--primary-foreground)]'
+                      : 'bg-[var(--cmi-surface)] text-[var(--cmi-body)] hover:bg-[var(--card)] hover:text-[var(--cmi-primary)]'
                   )}
                 >
                   {item.title}

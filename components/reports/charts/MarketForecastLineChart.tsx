@@ -88,7 +88,11 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
           </div>
           <div className="bg-muted p-4 rounded-lg">
             <p className="text-xs text-muted-foreground mb-1">CAGR ({forecastPeriod})</p>
-            <p className="text-xl font-bold text-[hsl(var(--chart-2))]">{cagr}%</p>
+            {/* --chart-2 is a series fill, picked to sit next to other fills, not to be
+                read as text: on bg-muted it measures 2.66:1. The CAGR is a headline
+                figure, so it uses the text accent, which is contrast-managed in both
+                themes. */}
+            <p className="text-xl font-bold text-[var(--cmi-primary)]">{cagr}%</p>
           </div>
         </div>
 

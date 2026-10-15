@@ -13,7 +13,7 @@ export default function QuickContactSection() {
           href={CONTACT_INFO.whatsapp.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow group"
+          className="flex items-center gap-3 p-3 bg-[var(--card)] rounded-lg hover:shadow-md transition-shadow group"
         >
           <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
             <svg
@@ -35,7 +35,7 @@ export default function QuickContactSection() {
         {/* Email */}
         <a
           href={`mailto:${CONTACT_INFO.email}`}
-          className="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow group"
+          className="flex items-center gap-3 p-3 bg-[var(--card)] rounded-lg hover:shadow-md transition-shadow group"
         >
           <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
             <svg

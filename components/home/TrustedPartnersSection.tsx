@@ -25,7 +25,7 @@ export default function TrustedPartnersSection() {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="overflow-hidden rounded-panel bg-white px-0 py-8 md:py-10">
+    <section className="overflow-hidden rounded-panel bg-[var(--card)] px-0 py-8 md:py-10">
       <p className="mb-6 px-7 text-center text-[11.5px] font-bold uppercase tracking-[0.14em] text-[var(--cmi-meta)] md:px-11">
         Our research shapes decisions at
       </p>
@@ -42,7 +42,7 @@ export default function TrustedPartnersSection() {
           {duplicatedPartners.map((partner, index) => (
             <div
               key={`${partner.id}-${index}`}
-              className="flex h-[72px] w-[152px] flex-shrink-0 items-center justify-center rounded-tile border border-[var(--cmi-line)] bg-white px-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+              className="flex h-[72px] w-[152px] flex-shrink-0 items-center justify-center rounded-tile border border-[var(--cmi-line)] bg-[var(--card)] px-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <Image
                 src={partner.logo}

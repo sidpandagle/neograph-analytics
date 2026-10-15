@@ -30,11 +30,11 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     ref
   ) => {
     const backgrounds = {
-      default: 'bg-white text-[var(--cmi-ink)]',
-      card: 'bg-white text-[var(--cmi-ink)]',
+      default: 'bg-[var(--card)] text-[var(--cmi-ink)]',
+      card: 'bg-[var(--card)] text-[var(--cmi-ink)]',
       muted: 'bg-[var(--cmi-surface)] text-[var(--cmi-ink)]',
-      blue: 'bg-[var(--cmi-primary)] text-white',
-      ink: 'bg-[var(--cmi-ink)] text-white',
+      blue: 'bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]',
+      ink: 'bg-[var(--cmi-ink-surface)] text-white',
       sky: 'bg-[var(--cmi-sky)] text-[var(--cmi-ink)]',
       bare: 'bg-transparent',
     };

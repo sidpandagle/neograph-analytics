@@ -63,7 +63,7 @@ export default function SearchBar<T extends SearchableReport>({
   return (
     <div className="w-full">
       {/* White pill, so it reads clearly against the blue panel behind it. */}
-      <div className="flex items-center gap-2.5 rounded-pill bg-white py-2 pl-[18px] pr-2.5 transition-shadow focus-within:ring-2 focus-within:ring-white/40">
+      <div className="flex items-center gap-2.5 rounded-pill bg-[var(--card)] py-2 pl-[18px] pr-2.5 transition-shadow focus-within:ring-2 focus-within:ring-white/40">
         <svg
           className="h-[18px] w-[18px] shrink-0 text-[var(--cmi-meta)]"
           fill="none"

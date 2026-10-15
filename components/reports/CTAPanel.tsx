@@ -39,9 +39,9 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
     return (
       <div
         ref={ref}
-        className="overflow-hidden rounded-card border border-[var(--cmi-line)] bg-white"
+        className="overflow-hidden rounded-card border border-[var(--cmi-line)] bg-[var(--card)]"
       >
-        <div className="bg-[var(--cmi-primary)] px-5 pb-5 pt-6 text-center">
+        <div className="bg-[var(--cmi-primary-fill)] px-5 pb-5 pt-6 text-center">
           <p className="mb-3 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[var(--cmi-on-blue-dim)]">
             Single user licence
           </p>
@@ -54,7 +54,7 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
           </div>
 
           {hasDiscount && percentOff !== null && (
-            <span className="mt-3 inline-block rounded-pill bg-[var(--cmi-primary-raised)] px-3 py-1 text-xs font-semibold text-white">
+            <span className="mt-3 inline-block rounded-pill bg-[var(--cmi-primary-raised)] px-3 py-1 text-xs font-semibold text-[var(--primary-foreground)]">
               {percentOff}% off
             </span>
           )}
@@ -67,7 +67,7 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
         <div className="space-y-3 p-5">
           <Link
             href={reportSlug ? `/checkout/${reportSlug}` : '/contact'}
-            className="block w-full rounded-pill bg-[var(--cmi-primary)] px-4 py-3 text-center text-sm font-semibold text-white transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)] hover:text-white"
+            className="block w-full rounded-pill bg-[var(--cmi-primary-fill)] px-4 py-3 text-center text-sm font-semibold text-[var(--primary-foreground)] transition-colors duration-150 hover:bg-[var(--cmi-primary-pressed)] hover:text-[var(--primary-foreground)]"
           >
             Buy report now
           </Link>
@@ -96,7 +96,7 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
           <div className="mt-1 flex justify-center gap-4 border-t border-[var(--cmi-line)] pt-4">
             {['Secure checkout', 'Instant access'].map((badge) => (
               <span key={badge} className="flex items-center gap-1.5 text-xs text-[var(--cmi-meta)]">
-                <span className="h-1.5 w-1.5 rounded-pill bg-[var(--cmi-primary)]" />
+                <span className="h-1.5 w-1.5 rounded-pill bg-[var(--cmi-primary-fill)]" />
                 {badge}
               </span>
             ))}

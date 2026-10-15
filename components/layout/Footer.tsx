@@ -51,7 +51,7 @@ export default function Footer() {
 
   return (
     <div className="desk mt-auto">
-      <footer className="rounded-panel rounded-b-none bg-[var(--cmi-ink)] px-6 pb-8 pt-9 md:px-11 md:pb-[30px] md:pt-11">
+      <footer className="rounded-panel rounded-b-none bg-[var(--cmi-ink-surface)] px-6 pb-8 pt-9 md:px-11 md:pb-[30px] md:pt-11">
         <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-[1.3fr_repeat(4,1fr)]">
           {/* Brand */}
           <div className="flex flex-col gap-3">
@@ -67,7 +67,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-8 w-8 items-center justify-center rounded-pill bg-white/[0.07] text-[var(--cmi-footer-link)] transition-colors duration-150 hover:bg-[var(--cmi-primary)] hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-pill bg-white/[0.07] text-[var(--cmi-footer-link)] transition-colors duration-150 hover:bg-[var(--cmi-primary-fill)] hover:text-[var(--primary-foreground)]"
                 >
                   <Icon className="h-4 w-4" />
                 </Link>

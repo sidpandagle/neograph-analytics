@@ -102,7 +102,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
       </Suspense>
 
       {/* ── Hero panel ───────────────────────────────────────────────────────── */}
-      <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary)] p-7 md:p-11">
+      <section className="flex flex-col gap-7 rounded-panel bg-[var(--cmi-primary-fill)] p-7 md:p-11">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="min-w-0 flex-1">
             <span className="eyebrow-on-blue">Market intelligence</span>
@@ -128,7 +128,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
       </section>
 
       {/* ── Filters ──────────────────────────────────────────────────────────── */}
-      <section className="rounded-panel bg-white p-4 md:px-6 md:py-5">
+      <section className="rounded-panel bg-[var(--card)] p-4 md:px-6 md:py-5">
         <div className="flex flex-wrap items-center gap-2.5">
           <button
             onClick={() => setActiveCategory('')}
@@ -156,8 +156,8 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               aria-label="Filter by region"
               className={`cursor-pointer appearance-none rounded-pill border py-2 pl-4 pr-9 text-[13px] font-semibold transition-colors duration-150 focus:outline-none ${
                 activeRegion
-                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary)] text-white'
-                  : 'border-[var(--cmi-line)] bg-white text-[var(--cmi-idle)] hover:border-[var(--cmi-primary)]'
+                  ? 'border-[var(--cmi-primary)] bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]'
+                  : 'border-[var(--cmi-line)] bg-[var(--card)] text-[var(--cmi-idle)] hover:border-[var(--cmi-primary)]'
               }`}
             >
               <option value="">All Regions</option>
@@ -190,7 +190,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
       </section>
 
       {/* ── Results ──────────────────────────────────────────────────────────── */}
-      <section className="rounded-panel bg-white p-7 md:p-11" style={{ minHeight: '50vh' }}>
+      <section className="rounded-panel bg-[var(--card)] p-7 md:p-11" style={{ minHeight: '50vh' }}>
         {paginatedReports.length > 0 ? (
           <>
             <div className="mb-7 flex items-center justify-between gap-4">
@@ -250,7 +250,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             {hasFilters && (
               <button
                 onClick={clearAll}
-                className="rounded-pill bg-[var(--cmi-primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--cmi-primary-pressed)]"
+                className="rounded-pill bg-[var(--cmi-primary-fill)] px-6 py-3 text-sm font-semibold text-[var(--primary-foreground)] transition-colors hover:bg-[var(--cmi-primary-pressed)]"
               >
                 Clear all filters
               </button>

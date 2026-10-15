@@ -29,9 +29,9 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       outline:
         'border border-[var(--cmi-line)] text-[var(--cmi-body)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]',
       onBlue:
-        'bg-[var(--cmi-primary-raised)] text-white',
+        'bg-[var(--cmi-primary-raised)] text-[var(--primary-foreground)]',
       ink:
-        'bg-[var(--cmi-ink)] text-white',
+        'bg-[var(--cmi-ink-surface)] text-white',
     };
 
     const sizes = {

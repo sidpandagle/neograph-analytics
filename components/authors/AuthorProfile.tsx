@@ -75,7 +75,7 @@ export default function AuthorProfile({ author, totalReports }: AuthorProfilePro
               )}
 
               {/* Stats Card */}
-              <Card className="border-none shadow-sm bg-white/80">
+              <Card className="border-none shadow-sm bg-[var(--card)]">
                 <CardContent className="p-4">
                   <div className="flex items-center gap-3">
                     <svg

@@ -105,7 +105,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink)] px-6 py-7 md:px-11 md:py-11">
+      <section className="relative overflow-hidden rounded-panel bg-[var(--cmi-ink-surface)] px-6 py-7 md:px-11 md:py-11">
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{

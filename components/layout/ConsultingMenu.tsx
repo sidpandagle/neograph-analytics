@@ -72,8 +72,8 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
         className={cn(
           "flex items-center gap-1 whitespace-nowrap rounded-pill px-4 py-2 text-sm transition-colors duration-150",
           isActive || isOpen
-            ? "bg-white font-semibold text-[var(--cmi-ink)]"
-            : "font-medium text-[var(--cmi-idle)] hover:bg-white hover:text-[var(--cmi-ink)]"
+            ? "bg-[var(--card)] font-semibold text-[var(--cmi-ink)]"
+            : "font-medium text-[var(--cmi-idle)] hover:bg-[var(--card)] hover:text-[var(--cmi-ink)]"
         )}
         aria-haspopup="true"
         aria-expanded={isOpen}
@@ -95,7 +95,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
       <div
         className={cn(
           "absolute left-1/2 top-[calc(100%+20px)] z-50 w-[min(940px,88vw)] -translate-x-1/2",
-          "max-h-[70vh] overflow-y-auto rounded-panel border border-[var(--cmi-line)] bg-white p-7 shadow-panel",
+          "max-h-[70vh] overflow-y-auto rounded-panel border border-[var(--cmi-line)] bg-[var(--card)] p-7 shadow-panel",
           /* The panel used to fade its opacity 0 -> 1 over 200ms. An opaque
              white panel is only opaque at the end of that; for the whole
              animation it is a translucent sheet over the page, so the
@@ -141,7 +141,7 @@ export default function ConsultingMenu({ services, isActive }: ConsultingMenuPro
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "block rounded-tile border border-transparent bg-[var(--cmi-surface)] p-3.5",
-                      "transition-colors duration-150 hover:border-[var(--cmi-primary)] hover:bg-white"
+                      "transition-colors duration-150 hover:border-[var(--cmi-primary)] hover:bg-[var(--card)]"
                     )}
                     role="menuitem"
                     tabIndex={isOpen ? 0 : -1}
