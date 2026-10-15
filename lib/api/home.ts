@@ -172,3 +172,53 @@ export async function getHomeFacts(featuredSlug?: string): Promise<HomeFacts> {
     return empty;
   }
 }
+
+/**
+ * Minimal index for the hero typeahead.
+ *
+ * The hero search filtered `data/all_reports.json`, a 10-row snapshot, while
+ * its own placeholder read "Search 142 reports". Typing a topic the
+ * publication genuinely covers returned nothing, which reads as "we don't
+ * cover that" rather than "the search is broken".
+ *
+ * Only the three columns the typeahead matches on are selected, so this is a
+ * few KB rather than the full corpus, and the page is ISR-cached so it is not
+ * fetched per visitor.
+ */
+export interface SearchIndexEntry {
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  region: string;
+}
+
+export async function getSearchIndex(): Promise<SearchIndexEntry[]> {
+  const { data, error } = await supabase
+    .from(TABLE)
+    .select('slug,title,industry,meta_description,regional_analysis')
+    .order('title');
+
+  /* Returning [] quietly on error makes a broken query look like an empty
+     corpus: the hero renders "No results found" for every term and nothing
+     anywhere says why. An earlier revision of this function selected a
+     non-existent `seo` column and failed exactly that way. */
+  if (error) {
+    console.error('[getSearchIndex] query failed:', error.message);
+    return [];
+  }
+  if (!data) return [];
+
+  return data.map((r) => {
+    const regions = Array.isArray(r.regional_analysis)
+      ? (r.regional_analysis as Array<{ region?: string }>)
+      : [];
+    return {
+      slug: String(r.slug ?? ''),
+      title: String(r.title ?? ''),
+      category: String(r.industry ?? ''),
+      description: String(r.meta_description ?? ''),
+      region: regions[0]?.region ?? 'Global',
+    };
+  });
+}

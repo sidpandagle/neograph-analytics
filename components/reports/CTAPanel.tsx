@@ -21,6 +21,21 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
     const displayPrice = discounted_price || price;
     const hasDiscount = Boolean(discounted_price);
 
+    /* The badge read a hardcoded "20% off". $2,495 off $2,995 is 16.69%, so it
+       overstated the saving by 3.31 points -- a true 20% would be $2,396, $99
+       lower than what is actually charged. A false discount figure sitting
+       beside the Buy button on 142 pages is a pricing claim, not a styling
+       detail, so it is computed from the two prices actually shown. It is
+       omitted rather than rounded to 0% if the numbers do not parse. */
+    const toAmount = (v: string) => {
+      const n = Number(v.replace(/[^0-9.]/g, ''));
+      return Number.isFinite(n) && n > 0 ? n : null;
+    };
+    const full = toAmount(price);
+    const cut = toAmount(discounted_price);
+    const percentOff =
+      full && cut && cut < full ? Math.round((1 - cut / full) * 100) : null;
+
     return (
       <div
         ref={ref}
@@ -38,9 +53,9 @@ export const CTAPanel = React.forwardRef<HTMLDivElement, CTAPanelProps>(
             <p className="num text-[38px] leading-none text-white">{displayPrice}</p>
           </div>
 
-          {hasDiscount && (
+          {hasDiscount && percentOff !== null && (
             <span className="mt-3 inline-block rounded-pill bg-[var(--cmi-primary-raised)] px-3 py-1 text-xs font-semibold text-white">
-              20% off
+              {percentOff}% off
             </span>
           )}
 

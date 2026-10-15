@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { SearchBar } from '@/components/ui';
-import { getHomeFacts } from '@/lib/api/home';
+import { getHomeFacts, getSearchIndex } from '@/lib/api/home';
 
 /*
  * Every figure in this hero is read from Supabase.
@@ -20,7 +20,10 @@ function compact(n: number): string {
 }
 
 export default async function HeroSection() {
-  const { reportCount, industryCount, countryCount, snapshot } = await getHomeFacts();
+  const [{ reportCount, industryCount, countryCount, snapshot }, searchIndex] = await Promise.all([
+    getHomeFacts(),
+    getSearchIndex(),
+  ]);
 
   const heroStats = [
     { val: reportCount ? String(reportCount) : '—', label: 'Research reports' },
@@ -56,6 +59,7 @@ export default async function HeroSection() {
 
         <div className="animate-reveal-up-d3">
           <SearchBar
+            reports={searchIndex}
             variant="hero"
             placeholder={
               reportCount

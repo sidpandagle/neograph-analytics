@@ -2,35 +2,46 @@
 
 import { useState, useEffect } from 'react';
 import { useDebounce } from '@/hooks/useDebounce';
-import allReportsData from '@/data/all_reports.json';
-import { jsonReportToUIReport } from '@/lib/jsonReports';
-import type { JsonReport } from '@/lib/jsonReports';
 
-type UIReport = ReturnType<typeof jsonReportToUIReport>;
+/* This used to filter `data/all_reports.json`, a 10-row snapshot bundled into
+   the client, while the server was passing all 142 reports to the listing.
+   The moment a visitor typed anything, the 142-row set was discarded for the
+   10-row one -- so searching hid 93% of the catalogue and a report that
+   exists and is linked from the homepage came back as "No reports found".
+   Filtering the set the page was already given fixes that and drops 206,690
+   bytes of JSON from the client bundle. */
 
-interface SearchBarProps {
-  onSearchResults: (results: UIReport[] | null, isLoading: boolean) => void;
+export interface SearchableReport {
+  title: string;
+  category: string;
+  description: string;
+  summary: string;
+}
+
+interface SearchBarProps<T extends SearchableReport> {
+  reports: T[];
+  onSearchResults: (results: T[] | null, isLoading: boolean) => void;
   placeholder?: string;
   initialQuery?: string;
 }
 
-const allReports = allReportsData as JsonReport[];
-
-function searchLocal(query: string): UIReport[] {
+function searchIn<T extends SearchableReport>(reports: T[], query: string): T[] {
   const q = query.toLowerCase().trim();
   if (!q) return [];
-  return allReports
-    .filter(
-      (r) =>
-        r.title.toLowerCase().includes(q) ||
-        r.industry.toLowerCase().includes(q) ||
-        r.market_overview.summary.toLowerCase().includes(q) ||
-        (r.seo.meta_description ?? '').toLowerCase().includes(q)
-    )
-    .map((r, i) => jsonReportToUIReport(r, i));
+  return reports.filter((r) =>
+    r.title.toLowerCase().includes(q) ||
+    r.category.toLowerCase().includes(q) ||
+    r.description.toLowerCase().includes(q) ||
+    r.summary.toLowerCase().includes(q)
+  );
 }
 
-export default function SearchBar({ onSearchResults, placeholder, initialQuery = '' }: SearchBarProps) {
+export default function SearchBar<T extends SearchableReport>({
+  reports,
+  onSearchResults,
+  placeholder,
+  initialQuery = '',
+}: SearchBarProps<T>) {
   const [query, setQuery] = useState(initialQuery);
   const debouncedQuery = useDebounce(query, 300);
 
@@ -46,9 +57,8 @@ export default function SearchBar({ onSearchResults, placeholder, initialQuery =
       onSearchResults(null, false);
       return;
     }
-    const results = searchLocal(debouncedQuery);
-    onSearchResults(results, false);
-  }, [debouncedQuery, onSearchResults]);
+    onSearchResults(searchIn(reports, debouncedQuery), false);
+  }, [debouncedQuery, reports, onSearchResults]);
 
   return (
     <div className="w-full">
