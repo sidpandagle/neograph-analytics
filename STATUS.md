@@ -1,8 +1,9 @@
 # STATUS
 
-**Updated:** 2026-10-15 07:10 UTC
+**Updated:** 2026-10-15 17:40 UTC
 **Budget:** 7d used 5% | pace 39.4% | ceiling (70% of pace) 27.6% | headroom +22.6 points
-**Commits today:** 3 of 5 used — slots at 03:30, 03:50, 04:25 UTC. Two left; next ~08:30.
+**Commits today:** 5 of 5 used — slots at 03:30, 03:50, 04:25, 07:33, 17:40 UTC.
+Next window opens 2026-10-16 00:00 UTC.
 **Pacing:** commits spread across the 24h window, roughly one every 4-5 hours
 (user instruction 2026-10-15). Between slots: research, Supabase content, audits,
 production verification. A slot passes unused rather than forcing out an
@@ -75,7 +76,11 @@ inline SVG — no hosting, no egress, no image transformations consumed.
    `meta_description` still over 160 on 14 rows; needs editorial judgement.
 3. Chart `<figure>`/`<figcaption>` with source notes; `charts[].data_source` is
    populated and unused.
-4. Analyst prose at 12px, ~2.9:1 contrast (fails WCAG AA), ~95-character lines.
+4. ~~Analyst prose at 12px, ~2.9:1 contrast, ~95-char lines~~ **DONE** — the
+   grey ramp is now defined by measured contrast against the page background
+   (#EDF1F9), the worst surface it sits on. `--cmi-meta`/`--content-muted` were
+   2.59:1 there, failing even the 3:1 large-text floor. Now 4.60 / 6.00 / 8.09,
+   hue preserved, darkening only. Prose measure capped at 64ch (~75 chars).
 5. `/reports` ships ~508KB, nearly all RSC payload for 142 reports. Select only
    the columns the cards need.
 6. Re-check Search Console coverage ~2026-10-29 against the baseline (6 clicks,
