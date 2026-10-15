@@ -118,6 +118,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
 
           <div className="w-full flex-shrink-0 lg:w-[440px]">
             <SearchBar
+              reports={reports}
               onSearchResults={handleSearchResults}
               placeholder="Search by topic, technology, or region…"
               initialQuery={searchQuery}

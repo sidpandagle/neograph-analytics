@@ -5,41 +5,46 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useDebounce } from '@/hooks/useDebounce';
-import allReportsData from '@/data/all_reports.json';
-import { jsonReportToUIReport } from '@/lib/jsonReports';
-import type { JsonReport } from '@/lib/jsonReports';
+import type { SearchIndexEntry } from '@/lib/api/home';
 
-type UIReport = ReturnType<typeof jsonReportToUIReport>;
+/* This filtered `data/all_reports.json` -- a 10-row snapshot -- while its own
+   placeholder read "Search 142 reports". Typing a topic the publication
+   genuinely covers returned nothing, which reads as "we don't cover that"
+   rather than "the search is broken". The index is now passed in from the
+   server, which selects only the columns matched or displayed here. */
 
-const allReports = allReportsData as JsonReport[];
+const PRICE = '$2,995';
 
-function searchLocal(query: string, limit = 5): UIReport[] {
+function searchLocal(reports: SearchIndexEntry[], query: string, limit = 5): SearchIndexEntry[] {
   const q = query.toLowerCase().trim();
   if (!q) return [];
-  const matches = allReports.filter(
-    (r) =>
-      r.title.toLowerCase().includes(q) ||
-      r.industry.toLowerCase().includes(q) ||
-      r.market_overview.summary.toLowerCase().includes(q) ||
-      (r.seo.meta_description ?? '').toLowerCase().includes(q)
-  );
-  return matches.slice(0, limit).map((r, i) => jsonReportToUIReport(r, i));
+  return reports
+    .filter(
+      (r) =>
+        r.title.toLowerCase().includes(q) ||
+        r.category.toLowerCase().includes(q) ||
+        r.description.toLowerCase().includes(q)
+    )
+    .slice(0, limit);
 }
 
 interface SearchBarProps {
+  /** Minimal corpus index, supplied by the server. */
+  reports?: SearchIndexEntry[];
   variant?: 'hero' | 'header';
   placeholder?: string;
   className?: string;
 }
 
 export default function SearchBar({
+  reports = [],
   variant = 'hero',
   placeholder = 'Search reports, categories, regions...',
   className
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [results, setResults] = useState<UIReport[]>([]);
+  const [results, setResults] = useState<SearchIndexEntry[]>([]);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
@@ -51,8 +56,8 @@ export default function SearchBar({
       setResults([]);
       return;
     }
-    setResults(searchLocal(debouncedQuery));
-  }, [debouncedQuery]);
+    setResults(searchLocal(reports, debouncedQuery));
+  }, [debouncedQuery, reports]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -179,7 +184,7 @@ export default function SearchBar({
               <div className="divide-y divide-[var(--border)]">
                 {results.map((report) => (
                   <Link
-                    key={report.id}
+                    key={report.slug}
                     href={`/reports/${report.slug}`}
                     onClick={() => {
                       setIsOpen(false);
@@ -198,7 +203,7 @@ export default function SearchBar({
                         {report.category}
                       </span>
                       <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>{report.region}</span>
-                      <span className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>{report.price}</span>
+                      <span className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>{PRICE}</span>
                     </div>
                   </Link>
                 ))}

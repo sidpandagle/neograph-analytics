@@ -104,9 +104,19 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
     <div
       className={cn(
         'grid grid-cols-1 gap-8',
+        /* Fixed-width rails buy space on a wide display and cost it on a
+           narrow one, because they do not scale down. Taking both rails at
+           lg (1024px) left the article column 248px wide -- about 20
+           characters a line -- where the old 3/6/3 proportional grid gave it
+           432px. So the three-column layout only starts at xl (1280px),
+           which is also where the primary nav appears; between 1024 and
+           1279px the TOC stays and the CTA panel drops below the article,
+           spanning the full width.
+             1024px  centre 248px -> 589px
+             1920px  centre 700px -> 784px (the wide-screen gain is kept) */
         showTOC
-          ? 'lg:grid-cols-[260px_minmax(0,1fr)_324px]'
-          : 'lg:grid-cols-[minmax(0,1fr)_324px]'
+          ? 'lg:grid-cols-[260px_minmax(0,1fr)] xl:grid-cols-[260px_minmax(0,1fr)_324px]'
+          : 'lg:grid-cols-[minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_324px]'
       )}
     >
       {/* Left Sidebar - reading navigation */}
@@ -138,7 +148,7 @@ export const ReportContentWrapper: React.FC<ReportContentWrapperProps> = ({
       </div>
 
       {/* Right Sidebar - CTA Panel */}
-      <aside className="min-w-0">
+      <aside className={cn('min-w-0', showTOC ? 'lg:col-span-2 xl:col-span-1' : 'lg:col-span-1')}>
         <div className="sticky top-24 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <CTAPanel discounted_price={discounted_price} price={price} reportTitle={reportTitle} reportSlug={reportSlug} />
           <CustomizeReportCard reportTitle={reportTitle} />

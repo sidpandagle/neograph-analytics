@@ -282,13 +282,28 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
   return (
     <div className="mt-6">
       <SubHeading>Country-Level Analysis</SubHeading>
-      <div className="rounded-xl overflow-hidden border border-[var(--border)]">
+      {/* overflow-hidden clipped this table rather than scrolling it: at 390px
+          the 357px table sat in a 312px box, so 45px -- the whole Growth
+          column -- was unreachable, and the page itself did not scroll
+          sideways either. The two numeric columns are the reason the table
+          exists. tabIndex makes the scroll area keyboard-reachable (WCAG
+          2.1.1); tabular-nums keeps the right-aligned figures in line, since
+          the proportional face sets "1" at 5.35px against "0" at 10.14px. */}
+      <div
+        tabIndex={0}
+        role="region"
+        aria-label="Country-level analysis"
+        className="rounded-xl overflow-x-auto border border-[var(--border)]"
+      >
         <table className="w-full text-sm">
+          <caption className="sr-only">
+            Market share and growth rate by country
+          </caption>
           <thead>
             <tr style={{ background: 'var(--content-surface)' }}>
-              <th className="text-left py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Country</th>
-              <th className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Share</th>
-              <th className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Growth</th>
+              <th scope="col" className="text-left py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Country</th>
+              <th scope="col" className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Share</th>
+              <th scope="col" className="text-right py-3 px-4 font-semibold text-[var(--foreground)] text-xs uppercase tracking-wider">Growth</th>
             </tr>
           </thead>
           <tbody>
@@ -303,10 +318,10 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
                         style={{ width: `${barWidth(toNum(c.market_share) ?? 0)}%`, background: 'var(--primary)' }}
                       />
                     </div>
-                    <span className="font-semibold text-[var(--foreground)]">{pct(c.market_share)}</span>
+                    <span className="font-semibold tabular-nums text-[var(--foreground)]">{pct(c.market_share)}</span>
                   </div>
                 </td>
-                <td className="py-3 px-4 text-right font-semibold" style={{ color: 'var(--accent)' }}>
+                <td className="py-3 px-4 text-right font-semibold tabular-nums" style={{ color: 'var(--accent)' }}>
                   {toNum(c.growth_rate) === null ? '—' : `${(toNum(c.growth_rate) ?? 0) >= 0 ? '+' : ''}${pct(c.growth_rate)}`}
                 </td>
               </tr>
@@ -804,12 +819,18 @@ function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
 export function JsonReportSections({ report }: JsonReportSectionsProps) {
   resetSectionIndex()
 
-  const forecastStart = report.forecast_period.split('-')[0]
   const forecastEnd = report.forecast_period.split('-')[1]
 
-  const baseYearPoint = report.market_forecast.find(
-    (p) => p.year === report.base_year || p.year === parseInt(forecastStart)
-  )
+  /* The `|| p.year === parseInt(forecastStart)` fallback that used to be here
+     made the card labelled "Base Year (2023)" display the 2024 figure, because
+     market_forecast begins at the forecast start and carries no base-year
+     point. The page then stated two different base-year valuations about 200px
+     apart -- the hero's "Revenue, 2023" and this card -- on 141 of 142 reports,
+     differing by up to 34% (healthcare-ai: $13.37B in the hero, $17.92B here).
+     The larger one sat directly above the CAGR. market_size.current_value is
+     what the hero reads, so it is the single source of truth for the base
+     year; a forecast point is used only when it genuinely is the base year. */
+  const baseYearPoint = report.market_forecast.find((p) => p.year === report.base_year)
   const displayCurrentValue = baseYearPoint?.value ?? report.market_size.current_value
 
   return (
