@@ -1129,3 +1129,52 @@ publisher carries no services line at all.
   subscribers or units** — reported as a result rather than filled with an
   estimate — and the category's largest public disclosure is about to disappear
   into a take-private.
+
+### Round 4, batch 4A — the last five drafts. The 40-topic queue is complete.
+Ten reports published, thirty drafted and held. Three of these five turn on
+*composition* rather than on the size of the spread, which is a different class
+of finding from the earlier rounds:
+
+- **Psychedelic therapeutics.** Both publishers read list **gamma-hydroxybutyrate
+  as a substance type**, and one makes it the largest segment at 34.2%. GHB is
+  sodium oxybate — a narcolepsy drug. Jazz's oxybate franchise (~$1,846M) plus
+  J&J's Spravato ($1,696M) is **$3,542M = 113.5% of one publisher's entire 2025
+  base**, which leaves psilocybin and MDMA an implied value **below zero**. The
+  same publisher undersizes its own GHB segment by 1.73x. The residual was then
+  ruled out two more ways: **$264,900 per Oregon administration session**
+  against measured session prices of $275-1,300, and $3.30-8.93M per registered
+  study across 432 psilocybin and MDMA trials.
+- **Nuclear medicine isotopes.** Published figures are **bimodal with nothing in
+  the gap** — $0.7-1.8B and $5.9-11.8B. The NEA's own supply table (six
+  reactors, 26,200 6-day Ci/week ≈ 95% of world supply) puts the lower cluster at
+  **$672 per 6-day curie, inside the NEA's own required-price band of
+  $536-1,033**, while the upper cluster implies 2.9-4.0x the NEA's
+  radiopharmacy-stage cost. Lantheus discloses both tiers in one statement —
+  TechneLite $86.8M against Pylarify $989.1M, 11.4:1 — which identifies the
+  upper cluster as the *drug product* market this report deliberately excludes,
+  and it lands within 4% of our own already-published
+  `radiopharmaceuticals-market`.
+- **Ophthalmic therapeutics.** Disclosed anti-VEGF revenue is **21.1x** one
+  company's entire branded glaucoma portfolio, which refutes a publisher's
+  "anti-glaucoma is the largest class" while leaving its total intact — so the
+  report publishes that publisher's total and rate and **none of its
+  structure**, and says so. The rate is chosen on disclosed trajectory: the US
+  branded intravitreal market shrank 15% through 2025 and one supplier guides
+  -20 to -25% for 2026.
+- **Fertility services.** The cleanest grounding in four rounds, because Progyny
+  publishes revenue *and* cycles in one release: **$19,824 per cycle**, inside
+  the published US list range. Billing **every** cycle in four public
+  registries (2.13M) at that US rate — rigged in the published figure's favour —
+  reaches only **52.4% of the published market**, so at most half of it is
+  clinical services. Growth is also not where the forecasts say: **42.4% of US
+  cycles are banking cycles**, UK egg freezing is up 47%, and one operator's
+  female-only utilisation *fell*.
+- **Medical device cybersecurity.** The spine is a contradiction *inside one
+  house*: Fortune Business Insights updated two reports **on the same day** with
+  $1.46B and $7.29B for the same base year, both scope tables printed. Per US
+  hospital that is $91,000 a year against $456,000-$776,000, where all
+  cybersecurity is traditionally ≤6% of IT budget.
+
+Gaps recorded rather than papered over: no CISA advisory count (the page is
+client-rendered), no Colorado programme count, no absolute cycle count for one
+operator, and Curium and Cardinal's nuclear line are not separately disclosed.

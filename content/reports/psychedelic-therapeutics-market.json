@@ -1,0 +1,273 @@
+{
+  "report_id": "psychedelic-therapeutics-market",
+  "slug": "psychedelic-therapeutics-market",
+  "title": "Psychedelic Therapeutics Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 3.6,
+    "forecast_value": 8.5,
+    "cagr": 15.4
+  },
+  "market_overview": {
+    "summary": "No psilocybin or MDMA product holds a marketing authorisation anywhere, and FDA issued a complete response letter on midomafetamine on 9 August 2024 after a 10-to-1 negative advisory committee vote. Yet both publishers whose scope tables we read directly define this market to include gamma-hydroxybutyrate and ketamine, and one makes GHB its largest substance segment at 34.2%. GHB is sodium oxybate, a narcolepsy drug. Two disclosed franchises in those two substances - Jazz Pharmaceuticals' oxybate at roughly $1,846 million and Johnson & Johnson's Spravato at $1,696 million - total $3,542 million, which is 113.5% of that publisher's entire 2025 market. The published figure carried here, $3.60 billion in 2026 reaching $8.50 billion by 2032 at 15.4%, is therefore a category containing a narcolepsy drug and an antidepressant, and almost none of it is psychedelics.",
+    "key_trends": [
+      "Published 2025 bases span 2.37x, from $3.12 billion to $7.4 billion, while published CAGRs cluster tightly at 13.68% to 15.4% - a shared model with a disputed starting level",
+      "Both publishers read directly list the same four substance types: gamma-hydroxybutyrate, ketamine, MDMA and psilocybin, and one puts GHB first at 34.2%",
+      "Jazz Pharmaceuticals' oxybate franchise, at roughly $1,846 million for 2025, is 1.73 times the GHB segment that same publisher sizes at $1,067 million",
+      "Spravato, the one approved product in this space, grew 57.4% to $1,696 million in 2025 and reached $503 million in the fourth quarter alone",
+      "ClinicalTrials.gov lists 307 psilocybin studies, of which 102 are recruiting and only 15 have ever been Phase 3, plus 125 MDMA studies",
+      "Oregon's regulated programme served 5,935 clients across 5,375 administration sessions in 2025 - the largest legal non-clinical psilocybin market in the United States, and a rounding error against any published market size",
+      "Compass Pathways' COMP360 met the primary endpoint in both Phase 3 trials, is under rolling NDA review, and received an FDA National Priority Voucher in April 2026"
+    ],
+    "market_stage": "Emerging",
+    "adoption_level": "No approved psychedelic product; access via trials, state programmes and off-label ketamine"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Treatment-resistant depression and PTSD populations that exhaust existing options, which is the clinical gap every programme in this field is addressing",
+      "Two positive Phase 3 readouts for COMP360 psilocybin, with the 25 mg arm showing 39% of participants achieving a clinically meaningful MADRS reduction by Week 6 and holding it through Week 26",
+      "Regulatory momentum on the psilocybin side specifically: Breakthrough Therapy designation since 2018, a rolling NDA review, and an FDA National Priority Voucher issued in April 2026",
+      "State-level legal frameworks - Oregon's regulated services model and Colorado's healing centres under Proposition 122 - which allow supervised administration without a marketing authorisation",
+      "Spravato's commercial proof that a supervised, in-clinic psychiatric administration model can scale: $1,696 million of revenue in 2025 at 57.4% growth"
+    ],
+    "restraints": [
+      "No psilocybin or MDMA product is approved anywhere, so approved-product revenue for classic psychedelics is approximately zero",
+      "FDA's complete response letter of 9 August 2024 required an additional Phase 3 trial for midomafetamine, resetting the most advanced MDMA programme by years",
+      "Functional unblinding, which the advisory committee identified as the structural methodological problem: participants can tell whether they received a psychedelic, so placebo-controlled design is contested",
+      "The administration model is expensive - monitored sessions of several hours with trained facilitators - which constrains throughput regardless of drug cost",
+      "Oregon's own register shows how small supervised access is in practice: 5,935 clients in a full year across the whole state programme",
+      "Published market sizes in this field are dominated by a narcolepsy drug and an off-label anaesthetic, which makes it hard for sponsors and investors to benchmark anything"
+    ],
+    "opportunities": [
+      "A first psilocybin approval, which would convert a register of trials into a priced market and is the binary event every forecast in this field is implicitly valuing",
+      "Non-hallucinogenic analogues that retain the plasticity-promoting mechanism without the monitored session, which would remove the throughput constraint entirely",
+      "Shorter-acting compounds that cut session length and therefore the cost per administration",
+      "Reimbursement pathways modelled on Spravato's REMS and in-clinic billing, which is the closest existing template for a supervised psychiatric administration",
+      "Indications beyond depression and PTSD - alcohol and substance use disorder, anorexia, cluster headache - where trial activity is growing and no standard of care exists"
+    ],
+    "challenges": [
+      "Every published market size for this field counts substances that are not psychedelics, and the two largest are disclosed by companies that do not describe themselves as being in this market",
+      "The residual after removing esketamine works as neither revenue nor research spend: $3.30 million to $8.93 million per registered psilocybin or MDMA study, in a field with 15 Phase 3 trials ever",
+      "Scheduling under the Controlled Substances Act constrains research supply, manufacturing and eventual distribution independently of FDA approval",
+      "No Colorado client or centre count was obtainable in this research pass, so the second state programme cannot be sized at all"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Psilocybin and psilocybin analogues",
+      "MDMA and entactogens",
+      "LSD and lysergamides",
+      "Ketamine and esketamine",
+      "DMT and short-acting tryptamines",
+      "Ibogaine and other alkaloids",
+      "Non-hallucinogenic plasticity-promoting analogues"
+    ],
+    "by_application": [
+      "Treatment-resistant depression",
+      "Major depressive disorder with acute suicidal ideation",
+      "Post-traumatic stress disorder",
+      "Alcohol and substance use disorder",
+      "Anxiety and existential distress in life-limiting illness",
+      "Eating disorders",
+      "Cluster headache and chronic pain"
+    ],
+    "by_end_user": [
+      "Academic medical centres running registrational and investigator-initiated trials",
+      "Interventional psychiatry and infusion clinics",
+      "State-licensed psilocybin service centres and healing centres",
+      "Veterans Affairs and military health systems",
+      "Specialist mental health hospitals"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 3.6 },
+    { "year": 2027, "value": 4.16 },
+    { "year": 2028, "value": 4.8 },
+    { "year": 2029, "value": 5.53 },
+    { "year": 2030, "value": 6.39 },
+    { "year": 2031, "value": 7.37 },
+    { "year": 2032, "value": 8.5 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Johnson & Johnson",
+      "headquarters": "United States",
+      "market_position": "Holds the only approved product in this category, and does not describe itself as being in it",
+      "description": "Spravato (esketamine) worldwide net sales were $1,696 million in 2025 against $1,077 million in 2024, up 57.4% reported and 59.9% operational, with the United States at $1,485 million and the fourth quarter alone at $503 million - a run rate above $2 billion. That single product is 54.4% of the lowest published base for this whole market. Whether a publisher includes esketamine explains most of the spread between published estimates. Market share is not disclosed."
+    },
+    {
+      "company": "Jazz Pharmaceuticals",
+      "headquarters": "Ireland",
+      "market_position": "The largest revenue line inside the published definition, for a drug that is not a psychedelic",
+      "description": "Its oxybate franchise - Xywav at approximately $1.7 billion for 2025, up 12%, with about 16,175 active patients at year end, plus Xyrem at roughly $146 million from $233.8 million - totals around $1,846 million. Gamma-hydroxybutyrate is sodium oxybate, a CNS depressant marketed for narcolepsy and idiopathic hypersomnia, and it is the largest substance segment in one publisher's model at 34.2%. Jazz's disclosed oxybate revenue is 1.73 times that publisher's entire GHB segment. Market share is not disclosed, and Jazz does not present itself as a psychedelics company."
+    },
+    {
+      "company": "Compass Pathways",
+      "headquarters": "United Kingdom and United States",
+      "market_position": "The most advanced classic psychedelic programme in the world; pre-revenue",
+      "description": "COMP360 psilocybin for treatment-resistant depression has held FDA Breakthrough Therapy designation since 2018. Both pivotal trials met their primary endpoint: COMP005 with 258 participants on a single 25 mg dose versus placebo, and COMP006 with 581 participants on fixed repeat dosing, announced 17 February 2026 at p<0.001 and a 3.8-point MADRS difference at Week 6. Twenty-six-week data published 7 July 2026 showed 39% of the 25 mg arm achieving a clinically meaningful response by Week 6 and maintaining it through Week 26. FDA granted a rolling NDA review and issued a National Priority Voucher in April 2026. No approved product and therefore no product revenue."
+    },
+    {
+      "company": "Lykos Therapeutics",
+      "headquarters": "United States",
+      "market_position": "The programme that came closest and was rejected",
+      "description": "Its midomafetamine-assisted therapy for PTSD received a complete response letter from FDA on 9 August 2024, stating the application could not be approved on the data submitted and requiring an additional Phase 3 trial plus further safety and efficacy study. FDA's Psychopharmacologic Drugs Advisory Committee had voted 10 to 1 against recommendation in June 2024, citing possible selection bias and functional unblinding. The company called the additional-trial request deeply disappointing. No approved product and no product revenue."
+    },
+    {
+      "company": "MindMed",
+      "headquarters": "United States",
+      "market_position": "Clinical-stage, lysergamide route",
+      "description": "Develops LSD-based candidates for generalised anxiety disorder and major depressive disorder, a different chemical class from the psilocybin programmes and a longer session duration. Named in one publisher's leader list for this market despite holding no approved product. Clinical stage only; no product revenue and no market share."
+    },
+    {
+      "company": "atai Life Sciences",
+      "headquarters": "Germany and United States",
+      "market_position": "Platform holder across several compounds; pre-revenue",
+      "description": "Holds interests across multiple psychedelic and related programmes rather than a single lead asset, including a stake in Compass Pathways, which makes it the closest thing to a diversified position in a field with no approvals. No approved product, no product revenue and no market share."
+    },
+    {
+      "company": "Oregon Psilocybin Services",
+      "headquarters": "United States",
+      "market_position": "The largest legal non-clinical psilocybin market in the United States, and a rounding error",
+      "description": "Not a company but the relevant denominator. Oregon's state-regulated programme served 5,935 clients in 2025 across 4,628 individual and 747 group administration sessions, with 13 reports of emergency services contacted and 51 complaints received. That is the measured size of legal supervised psilocybin access in the largest such market in the country, and it is why the residual between published market sizes and disclosed esketamine revenue cannot be the state programmes."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Lykos Therapeutics",
+      "year": 2024,
+      "event": "Received an FDA complete response letter on 9 August 2024 for midomafetamine-assisted therapy for PTSD, requiring an additional Phase 3 trial, after FDA's Psychopharmacologic Drugs Advisory Committee voted 10 to 1 against recommendation in June 2024 over selection bias and functional unblinding."
+    },
+    {
+      "company": "Compass Pathways",
+      "year": 2026,
+      "event": "Announced on 17 February 2026 that COMP006, its 581-participant Phase 3 trial of COMP360 psilocybin in treatment-resistant depression, met its primary endpoint with a 3.8-point MADRS difference at Week 6 and a p-value below 0.001."
+    },
+    {
+      "company": "Compass Pathways",
+      "year": 2026,
+      "event": "Reported 26-week COMP006 data on 7 July 2026: 39% of the 25 mg arm achieved a MADRS reduction of at least 25% by Week 6 and maintained durable response through Week 26, against 25% after a single dose in COMP005, with serious adverse events of 5.7% at 25 mg against 6.3% at 1 mg."
+    },
+    {
+      "company": "Johnson & Johnson",
+      "year": 2026,
+      "event": "Reported Spravato worldwide net sales of $1,696 million for 2025, up 57.4%, with $503 million in the fourth quarter alone - a single approved product worth 54.4% of the lowest published estimate for this entire market."
+    },
+    {
+      "company": "Jazz Pharmaceuticals",
+      "year": 2026,
+      "event": "Reported on 24 February 2026 that Xywav reached approximately $1.7 billion for 2025 with about 16,175 active patients, while Xyrem fell to roughly $146 million - an oxybate franchise of about $1,846 million that two market-research houses count as the psychedelic category's largest substance segment."
+    },
+    {
+      "company": "Oregon Health Authority",
+      "year": 2026,
+      "event": "Published its 2025 Year End Data Summary for Oregon Psilocybin Services, recording 5,935 clients, 4,628 individual and 747 group administration sessions, 13 reports of emergency services being contacted and 51 complaints."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA Breakthrough Therapy designation, granted to COMP360 psilocybin for treatment-resistant depression in 2018 - an incentive to expedite development and review, not an approval",
+    "FDA rolling review of a new drug application, granted for COMP360, which allows sections to be submitted as completed rather than in one package",
+    "FDA National Priority Voucher, issued for COMP360 psilocybin in treatment-resistant depression in April 2026",
+    "FDA complete response letter practice, exercised on midomafetamine on 9 August 2024 with a demand for an additional Phase 3 trial - the clearest statement available of the evidentiary bar for a psychedelic indication",
+    "Schedule I classification under the Controlled Substances Act, which governs research supply, manufacturing and handling of psilocybin, MDMA and LSD independently of any FDA decision",
+    "Oregon Measure 109 and the Oregon Psilocybin Services regulated model, under which licensed service centres and facilitators administer psilocybin to clients outside any marketing authorisation, and which publishes annual client and session counts",
+    "Colorado Proposition 122 and its healing centre framework, which launched in 2024 and covers natural medicines beyond psilocybin - no client or centre count was obtainable for this edition",
+    "The Spravato risk evaluation and mitigation strategy, which is the existing regulatory template for supervised in-clinic administration of a dissociative psychiatric drug"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on clinical trial registers, a state regulatory data summary, company filings and earnings releases, and publisher pages read directly, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "ClinicalTrials.gov API v2, retrieved 16 October 2026: psilocybin 307 registered studies with 102 recruiting and 15 Phase 3; MDMA 125 studies; esketamine 355 studies",
+      "Oregon Health Authority, Oregon Psilocybin Services 2025 Year End Data Summary: 5,935 clients, 4,628 individual and 747 group administration sessions, 13 emergency service reports, 51 complaints",
+      "Johnson & Johnson Q4 and Full-Year 2025 results: Spravato worldwide $1,696 million against $1,077 million, up 57.4%, with Q4 at $503 million",
+      "Jazz Pharmaceuticals full year and fourth quarter 2025 results of 24 February 2026 and Form 10-K: Xywav approximately $1.7 billion with 16,175 active patients, Xyrem approximately $146 million",
+      "FDA complete response letter on midomafetamine, 9 August 2024, following a 10-to-1 Psychopharmacologic Drugs Advisory Committee vote against in June 2024",
+      "Compass Pathways Form 424B5 and investor releases: Breakthrough Therapy designation 2018, COMP005 n=258, COMP006 n=581, primary endpoint met 17 February 2026, 26-week data 7 July 2026, National Priority Voucher April 2026",
+      "Coherent Market Insights, Psychedelic Drugs Market (CMI-185, 250+ pages, published 10 April 2025): $3.12 billion for 2025 to $8.50 billion by 2032 at 15.4%, with GHB at 34.2% of substance type",
+      "Roots Analysis, Global Psychedelic Therapeutics Market, last updated September 2026: $3.19 billion for 2025 to $12.89 billion by 2035 at 15%, with the same four substance types",
+      "NeoGraph Analytics, Phage Therapy Market, whose per-registered-trial method for a pre-approval field is reused here"
+    ],
+    "data_validation": "The headline figures are Coherent Market Insights' own published 2025 estimate of $3.12 billion, its own published 2032 value of $8.50 billion and its own stated 15.4% rate; the 2026 base and intermediate years are interpolation on that rate, not separate observations. That series was chosen because it is one of only two read directly from a publisher's page, because its 2032 endpoint matches this report's horizon so the terminal value is the publisher's own, and because it is the lowest base in the set and therefore the only one within reach of the disclosed record. It is published with the composition stated in every prose field, because the composition is the finding. Both publishers read directly define the market to include gamma-hydroxybutyrate and ketamine alongside MDMA and psilocybin, and one makes GHB its largest substance segment at 34.2%. GHB is sodium oxybate, a CNS depressant marketed for narcolepsy. Two disclosed franchises in those two non-psychedelic substances - Jazz Pharmaceuticals' oxybate at roughly $1,846 million and Johnson & Johnson's Spravato at $1,696 million - total $3,542 million, which is 113.5% of Coherent Market Insights' entire 2025 base and 111.0% of Roots Analysis's, leaving the psilocybin and MDMA segments of those models with a negative implied value. A second test shows the published model also undercounts its own largest segment: 34.2% of $3.12 billion is $1,067 million against Jazz's disclosed $1,846 million, a factor of 1.73, and Jazz is not the only oxybate seller. A third test rules out the state programmes as the residual: the $1,424 million that remains after removing Spravato from the lowest base, divided across Oregon's 5,935 clients, is $239,900 per client, or $264,900 across its 5,375 administration sessions, against measured clinical session prices of roughly $275 to $1,300 - out by a factor of 200 to 960. A fourth rules out the pipeline, using the method NeoGraph's phage-therapy report applied to a comparable pre-approval field: the residual divided across the 432 registered psilocybin and MDMA studies is $3.30 million to $8.93 million per study, in a population where only 102 of 307 psilocybin studies are recruiting and only 15 have ever been Phase 3, and where the most advanced programme's entire pivotal effort is two trials totalling 839 participants. These are scope and plausibility tests, not market estimates. The Spravato figures were reconciled by us from a product sales schedule whose PDF layout did not convert cleanly, with all four stated percentages checked against their own numerators and denominators. Jazz's Xyrem figure came from a trade-press summary. Oregon's client and session counts are from the state's own summary, but its centre and facilitator counts are December 2024 trade reporting, and no Colorado count was obtainable at all. Session prices come from a clinic-pricing website that states 376 clinics in its title and 1,800 in its text, so they are used for order of magnitude only and no clinic count is published. No vendor share, regional split, country split or psilocybin-specific market size appears anywhere in this report."
+  },
+  "faqs": [
+    {
+      "question": "Is there an approved psychedelic therapeutic?",
+      "answer": "Not for psilocybin or MDMA, anywhere. FDA issued a complete response letter on midomafetamine on 9 August 2024, requiring an additional Phase 3 trial, after its advisory committee voted 10 to 1 against. Esketamine, marketed as Spravato, is approved and is often counted in this market - it generated $1,696 million worldwide in 2025 - but it is an NMDA-receptor antagonist rather than a classic psychedelic."
+    },
+    {
+      "question": "How big is the psychedelic therapeutics market?",
+      "answer": "The published figure carried here is $3.60 billion in 2026 reaching $8.50 billion by 2032 at 15.4%, and it should be read with care, because it is a category that includes gamma-hydroxybutyrate and ketamine. Two disclosed franchises in those substances - Jazz's oxybate at roughly $1,846 million and J&J's Spravato at $1,696 million - total $3,542 million, which is 113.5% of that publisher's entire 2025 base. The market for psilocybin and MDMA specifically has approximately zero approved-product revenue."
+    },
+    {
+      "question": "Why does a psychedelics market report include a narcolepsy drug?",
+      "answer": "Because both publishers whose scope tables we read list gamma-hydroxybutyrate as a substance type, and one makes it the largest at 34.2%. GHB is sodium oxybate, sold by Jazz Pharmaceuticals as Xyrem and Xywav for narcolepsy and idiopathic hypersomnia. It is a CNS depressant, not a serotonergic psychedelic, and one of the publishers lists Jazz in its competitor set. On that publisher's own 34.2% share the GHB segment is $1,067 million, while Jazz's disclosed oxybate revenue is about $1,846 million - so the model both includes the wrong substance and sizes it 1.73 times too small."
+    },
+    {
+      "question": "How much clinical evidence exists for psilocybin and MDMA?",
+      "answer": "ClinicalTrials.gov lists 307 psilocybin studies as of 16 October 2026, of which 102 are recruiting and only 15 have ever been Phase 3, plus 125 MDMA studies. The most advanced programme is Compass Pathways' COMP360, whose two pivotal trials of 258 and 581 participants both met their primary endpoints, with 26-week data showing 39% of the 25 mg arm holding a clinically meaningful response. FDA granted a rolling NDA review and issued a National Priority Voucher in April 2026."
+    },
+    {
+      "question": "Can the legal state programmes explain the published market sizes?",
+      "answer": "No, by three orders of magnitude. Oregon's regulated programme - the largest legal non-clinical psilocybin market in the United States - served 5,935 clients in 2025 across 5,375 administration sessions. The residual after removing Spravato from the lowest published base, spread across those sessions, would be $264,900 per session, against measured clinical session prices of roughly $275 to $1,300. Oregon's whole programme is of the order of $12 million. No Colorado client or centre count was obtainable for this edition."
+    },
+    {
+      "question": "Could the residual be research spending rather than revenue?",
+      "answer": "Not at this scale. Dividing the residual across the 432 registered psilocybin and MDMA studies gives $3.30 million to $8.93 million per study, in a field where only 15 psilocybin trials have ever reached Phase 3 and most registrations are academic investigator-initiated work. The most advanced registrational programme in the world consists of two trials with 839 participants between them. That is a programme costing a few hundred million dollars in total, not billions a year."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because neither source read directly publishes regional values - one names five regions with no shares and the other four with none - and because the two revenue lines that dominate the published definition belong to a narcolepsy drug and an antidepressant whose geographies have nothing to do with psychedelic access. A regional table here would describe neither the substances nor the market. The section is omitted."
+    }
+  ],
+  "seo": {
+    "meta_title": "Psychedelic Therapeutics Market Size to 2032",
+    "meta_description": "No psilocybin or MDMA product is approved. Yet a narcolepsy drug and an antidepressant total 113.5% of the published market. What the registers actually show.",
+    "keywords": [
+      "psychedelic therapeutics market",
+      "psilocybin market size",
+      "MDMA therapy market",
+      "COMP360 psilocybin",
+      "Spravato esketamine revenue",
+      "Oregon psilocybin services",
+      "midomafetamine complete response letter"
+    ]
+  },
+  "executive_summary": "Start with what is approved. No psilocybin product holds a marketing authorisation anywhere in the world. No MDMA product does either: FDA issued a complete response letter on midomafetamine on 9 August 2024, demanding an additional Phase 3 trial, after its Psychopharmacologic Drugs Advisory Committee voted 10 to 1 against recommendation over selection bias and functional unblinding. Approved-product revenue for classic psychedelics is therefore approximately zero.\n\nNow read the published market sizes. They run from $3.12 billion to $7.4 billion for 2025 - a 2.37x spread - on CAGRs that cluster unusually tightly at 13.68% to 15.4%. The two publishers whose scope tables we could read directly list the same four substance types: gamma-hydroxybutyrate, ketamine, MDMA and psilocybin. One of them makes gamma-hydroxybutyrate its largest substance segment, at 34.2%, and names Jazz Pharmaceuticals in its competitor set.\n\nGamma-hydroxybutyrate is sodium oxybate. It is a CNS depressant marketed as Xyrem and Xywav for narcolepsy and idiopathic hypersomnia. It is not a psychedelic by any pharmacological definition, and nobody prescribes it to alter consciousness. Jazz disclosed roughly $1.7 billion of Xywav revenue for 2025 with about 16,175 active patients, plus $146 million of Xyrem - about $1,846 million in all. Johnson & Johnson disclosed Spravato at $1,696 million, up 57.4%, with $503 million in the fourth quarter alone.\n\nAdd those two and you get $3,542 million, which is 113.5% of the whole published market of the first publisher and 111.0% of the second's. Two disclosed franchises - one narcolepsy drug and one antidepressant - exceed the entire category, which leaves the psilocybin and MDMA segments of those models with a negative implied value in a market named after them. And the same publisher's GHB segment, at 34.2% of $3.12 billion, is $1,067 million against Jazz's disclosed $1,846 million: it includes the wrong substance and then sizes it 1.73 times too small.\n\nNor can the residual be anything real. Spread the $1,424 million that remains after removing Spravato across Oregon's 5,935 regulated-programme clients and you get $239,900 per client, or $264,900 per administration session against measured clinical session prices of $275 to $1,300 - out by a factor of 200 to 960. Spread it across the 432 registered psilocybin and MDMA studies and you get $3.30 million per study, in a field where only 15 psilocybin trials have ever been Phase 3 and where the most advanced registrational programme in the world consists of two trials with 839 participants between them.\n\nWhat is real is a register. 307 psilocybin studies, 102 recruiting, 15 ever Phase 3. 125 MDMA studies. 5,935 Oregon clients in 2025. Two positive Phase 3 readouts for COMP360, a rolling NDA review and an FDA National Priority Voucher in April 2026. Track those, not the forecast.",
+  "key_highlights": [
+    "No psilocybin or MDMA product holds a marketing authorisation anywhere; FDA issued a complete response letter on midomafetamine on 9 August 2024 after a 10-to-1 negative advisory committee vote",
+    "Both publishers read directly define this market to include gamma-hydroxybutyrate - sodium oxybate, a narcolepsy drug - and one makes it the largest substance segment at 34.2%",
+    "Jazz Pharmaceuticals' oxybate franchise at roughly $1,846 million plus J&J's Spravato at $1,696 million totals $3,542 million, which is 113.5% of one publisher's entire 2025 market",
+    "That publisher's own GHB segment is $1,067 million against Jazz's disclosed $1,846 million - it includes the wrong substance and then undersizes it by 1.73x",
+    "The residual after removing Spravato would be $264,900 per Oregon administration session, against measured clinical session prices of $275 to $1,300",
+    "The same residual is $3.30 million to $8.93 million per registered psilocybin or MDMA study, in a field with 15 Phase 3 psilocybin trials ever",
+    "Compass Pathways' COMP360 met the primary endpoint in both Phase 3 trials, holds a rolling NDA review and received an FDA National Priority Voucher in April 2026 - and has no product revenue"
+  ],
+  "market_context": "Two things are happening at once in this field, and the published market sizes conflate them.\n\nThe first is a genuine clinical programme. Psilocybin for treatment-resistant depression has moved through Breakthrough Therapy designation in 2018 to two positive Phase 3 readouts - 258 participants on a single dose, 581 on fixed repeat dosing - with 26-week durability data and a rolling NDA review under way. The methodological problem that sank the MDMA application has not gone away: FDA's advisory committee objected in June 2024 that participants can tell whether they received a psychedelic, which makes a placebo-controlled design hard to defend, and the agency's complete response letter of 9 August 2024 asked for another trial. Whether psilocybin's larger, better-designed programme clears that bar is the only question that matters for this market's future.\n\nThe second is a commercial reality that has already arrived under a different name. Spravato, an approved dissociative administered in-clinic under a risk management programme, generated $1,696 million in 2025 at 57.4% growth. It proves that supervised, monitored psychiatric administration can scale and be reimbursed - which is the business model every psilocybin programme is heading toward. It also distorts every published figure in this category, because its revenue alone is more than half the lowest published base.\n\nThe third thing in these models is not happening at all. Gamma-hydroxybutyrate is a narcolepsy drug, and it is in two of these reports as a psychedelic because it is a scheduled CNS-active substance with a recreational history. NeoGraph's phage-therapy-market report documented the same failure mode in a different field - a pre-approval market whose published size turned out to be describing food-safety products - and the arithmetic used to detect it is the same here.",
+  "forecast_analysis": "The curve starts at $3.60 billion for 2026, derived by advancing Coherent Market Insights' own published 2025 estimate of $3.12 billion one year at its own stated 15.4% rate, and reaches the publisher's own published 2032 value of $8.50 billion. Intermediate years are interpolation. The implied rate between our endpoints is 15.39% against a stated 15.4%.\n\nWe publish the lowest base in the set because it is the only one within reach of the disclosed record, and we publish it with the composition attached, because the composition is what a reader needs. $3.12 billion for 2025 is less than the $3,542 million that two disclosed non-psychedelic franchises generated in the same year. That does not make the figure too high. It makes it too low for its own definition - the model includes a narcolepsy franchise it sizes at 58% of one company's disclosed revenue for it. Both defects point the same way: the number tells you nothing about psychedelics.\n\nFor the substances this report is actually named after, there is no base to forecast from, and we decline to construct one. The honest shape of the next six years is not a 15.4% compound curve. It is a step function with a date attached: if a psilocybin NDA is approved, a supervised-administration market priced like Spravato's begins, and the relevant benchmark is $1,696 million of esketamine revenue reached in six years from approval. If it is not approved, or if FDA applies the unblinding objection it applied to MDMA, there is no revenue underneath any of these forecasts at all.\n\nReaders should treat every figure on this chart as a category artefact and track the register instead: the Phase 3 count, the NDA status, and Oregon's annual client numbers, which are the only measured quantity of legal psilocybin administration anywhere in the United States.",
+  "reader_takeaways": [
+    "Check the substance list before using any psychedelics market size: two of the published models count gamma-hydroxybutyrate, a narcolepsy drug, and one makes it the largest segment",
+    "Two disclosed franchises - Jazz's oxybate and J&J's Spravato, $3,542 million together - exceed the entire published market of both publishers read directly, so the psilocybin and MDMA segments have a negative implied value",
+    "Treat classic psychedelics as pre-revenue: no psilocybin or MDMA product is approved anywhere, and FDA demanded another Phase 3 for midomafetamine on 9 August 2024",
+    "Use the registers, not the forecasts: 307 psilocybin studies with 102 recruiting and 15 ever Phase 3, 125 MDMA studies, and 5,935 Oregon clients in 2025",
+    "Read Spravato as the template and the benchmark - $1,696 million in 2025 at 57.4% growth is what a supervised in-clinic psychiatric administration market looks like once it is approved",
+    "Expect a step change on a psilocybin approval decision rather than the smooth 15.4% curve any published series implies"
+  ]
+}

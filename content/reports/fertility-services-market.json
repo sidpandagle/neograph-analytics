@@ -1,0 +1,272 @@
+{
+  "report_id": "fertility-services-market",
+  "slug": "fertility-services-market",
+  "title": "Fertility Services Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 58.21,
+    "forecast_value": 115.82,
+    "cagr": 12.15
+  },
+  "market_overview": {
+    "summary": "This is the best-instrumented market in our recent research: four national registries count cycles and clinics, and one listed US company publishes its own ART cycle volume beside its own revenue, split between services and drugs. Progyny's FY2025 figures give a measured $19,824 of revenue per cycle - $12,782 services and $7,041 drugs - which falls inside published US list prices of $15,000 to $30,000. Multiply the 2,128,848 cycles in the published registries by the US services rate and you get $27.21 billion, at most 52.4% of the largest published total. So the published fertility services market is not a clinic-revenue market: roughly half of it is drugs, surrogacy, donor gametes, banking and testing. On that published series this is a $58.21 billion market in 2026 reaching $115.82 billion by 2032 at 12.15%.",
+    "key_trends": [
+      "Published 2025 totals span only 1.32x, from $39.27 billion to $51.9 billion, while published CAGRs span 1.82x, from 6.67% to 12.15%",
+      "Progyny's own disclosure gives a measured revenue per ART cycle of $19,824 - $12,782 of services and $7,041 of drugs, a 64.5 to 35.5 split",
+      "Billing every cycle in the published registries at the US services rate accounts for at most 52.4% of the largest published total, so about half the headline is not clinical services",
+      "42.4% of US ART cycles in 2022 - 184,423 of 435,426 - were egg or embryo banking cycles in which everything was frozen for later and no pregnancy was attempted",
+      "UK egg freezing cycles rose 47% in one year, from 4,700 in 2022 to 6,900 in 2023, reaching 7% of all UK cycles",
+      "Treatment volume in mature markets is flat to negative: Progyny's female-only utilisation fell to 1.04% from 1.07%, and Monash IVF's domestic stimulated cycles fell 5.0% against an Australian industry down 1.7%",
+      "The NHS-funded share of UK IVF cycles fell from 35% in 2019 to 27% in 2023, which moves demand to self-pay rather than creating it",
+      "Two forecasts of 2025 made in 2018 and 2019 put IVF services at $23.2 billion and above $17.3 billion - approximately right for IVF, against current fertility services figures 1.7 to 3.0 times higher on a wider definition"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "ART accounted for about 2.6% of all US infants born in 2022"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Elective fertility preservation, which is the fastest-moving component: 42.4% of US ART cycles in 2022 were banking cycles, and UK egg freezing rose 47% in a single year",
+      "Employer-sponsored fertility benefits, where Progyny grew from 473 to 555 clients and about 6.7 million covered members while per-member utilisation stayed flat",
+      "Rising maternal age at first birth across high-income countries, which raises both infertility prevalence and demand for preservation",
+      "Freezing technology and vitrification success rates, which made frozen embryo transfer the dominant pathway across Europe and created the banking business entirely",
+      "Preimplantation genetic testing and donor gamete services, which add revenue per cycle without adding cycles",
+      "Public funding withdrawal in some markets, which converts subsidised demand into self-pay revenue - the NHS share of UK cycles fell from 35% to 27% between 2019 and 2023"
+    ],
+    "restraints": [
+      "Treatment cycle volume in mature markets is flat or falling: Monash IVF's domestic stimulated cycles fell 5.0% in FY25 against an Australian industry down 1.7%, and its FY26 revenue came in below FY25",
+      "Utilisation is not rising where it is measured - Progyny's female-only utilisation fell from 1.07% to 1.04% even as its cycle count grew",
+      "Cost is the binding constraint on access, at a measured $19,824 of revenue per cycle under a negotiated benefits arrangement and $15,000 to $30,000 at US list",
+      "Clinic capacity is embryologist and laboratory time, which does not scale quickly: 953 cycles per reporting US clinic and 785 per European centre",
+      "Public reimbursement is shrinking rather than expanding in the markets that had it, and only 27% of UK cycles were NHS-funded in 2023",
+      "Price transparency is poor enough that the UK competition authority's reported position is that an average cycle cost cannot be determined because clinics do not collect the information"
+    ],
+    "opportunities": [
+      "Egg and embryo banking as a standalone cash-pay business rather than a step within treatment, which is where the double-digit growth in the published forecasts can legitimately live",
+      "Benefits management on the employer side, where coverage expansion rather than clinical demand drives volume",
+      "Markets outside the published registries - China, India, Latin America and the Middle East are absent from every public cycle count we could locate",
+      "Lower-intervention and lower-cost cycle protocols, which address the cost constraint directly rather than around it",
+      "Integrated genetic testing and donor services, which raise revenue per cycle in a market where cycle counts in mature geographies are not growing"
+    ],
+    "challenges": [
+      "The published headline is roughly twice what clinical services can account for, so a reader cannot use it to size clinic revenue",
+      "No single-year world cycle total exists: the four public registries we could use report 2022, 2023, 2020 and 2020, and omit China, India, Latin America and the Middle East",
+      "Only two measured revenue-per-cycle figures exist anywhere - one US benefits manager's and one academic patient survey in the UK - and neither is a price",
+      "Monash IVF reports percentage changes in stimulated cycles without the absolute count, so the one listed clinic operator outside the US cannot be converted into a per-cycle rate"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "IVF with intracytoplasmic sperm injection",
+      "IVF without ICSI",
+      "Intrauterine insemination",
+      "Frozen embryo transfer",
+      "Egg and embryo banking and fertility preservation",
+      "Donor egg and donor sperm services",
+      "Surrogacy and gestational carrier arrangements",
+      "Preimplantation genetic testing",
+      "Fertility pharmacy and medication management"
+    ],
+    "by_application": [
+      "Female factor infertility",
+      "Male factor infertility",
+      "Unexplained infertility",
+      "Elective fertility preservation",
+      "Oncofertility preservation before gonadotoxic treatment",
+      "Single-parent and same-sex family building",
+      "Genetic disease avoidance"
+    ],
+    "by_end_user": [
+      "Fertility clinics and ART centres",
+      "Hospital reproductive medicine departments",
+      "Ambulatory surgical centres",
+      "Cryobanks and gamete banks",
+      "Employer-sponsored fertility benefit plans",
+      "Clinical research institutes"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 58.21 },
+    { "year": 2027, "value": 65.28 },
+    { "year": 2028, "value": 73.21 },
+    { "year": 2029, "value": 82.11 },
+    { "year": 2030, "value": 92.09 },
+    { "year": 2031, "value": 103.27 },
+    { "year": 2032, "value": 115.82 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Progyny, Inc.",
+      "headquarters": "United States",
+      "market_position": "The only company that publishes its own cycle volume beside its own revenue",
+      "description": "A fertility benefits manager rather than a clinic operator. FY2025 revenue was $1,288.7 million, up 10% and up 20% excluding a large client under a transition-of-care agreement, split between fertility benefit services at $830.9 million and pharmacy benefit services at $457.7 million, on 65,006 ART cycles against 61,114 the prior year. That disclosure is the measured anchor for this entire report: $12,782 of services and $7,041 of drugs per cycle, $19,824 all-in. Clients rose from 473 to 555 and membership reached about 6.7 million, while all-member utilisation was flat at 1.32% and female-only utilisation fell to 1.04% from 1.07% - growth from signing clients, not from the market. Market share is not disclosed."
+    },
+    {
+      "company": "Monash IVF Group",
+      "headquarters": "Australia",
+      "market_position": "Listed clinic operator outside the US, with declining volume",
+      "description": "Reported FY25 revenue of A$271.9 million, up 6.7%, with underlying EBITDA of A$66.3 million at a 24.4% margin and underlying NPAT of A$27.4 million, down 8.1%, and declared no final FY25 dividend. Domestic stimulated cycles fell 5.0% against an Australian industry down 1.7%, with over 90% of the decline in Victoria, and international cycles fell 6.4%. FY26 revenue of A$269.5 million came in below FY25, with statutory NPAT down 67.6%. The company reports cycle changes in percentage terms without the absolute count, so no per-cycle rate can be derived from it. Market share is not disclosed."
+    },
+    {
+      "company": "US Fertility",
+      "headquarters": "United States",
+      "market_position": "One of the largest US clinic networks; privately held",
+      "description": "Operates one of the largest physician-led fertility practice networks in the United States, formed by consolidating established regional practices. Privately held with no revenue disclosure, which is the norm in this industry: CDC counts 457 reporting US clinics and almost none of them publish financials. Market share is not disclosed."
+    },
+    {
+      "company": "Virtus Health",
+      "headquarters": "Australia",
+      "market_position": "The other half of the Australian duopoly; taken private",
+      "description": "Historically the larger of Australia's two listed fertility groups before being acquired and delisted, which removed the second public per-cycle disclosure from this industry. Its departure matters for measurement: Australia is one of the few markets where industry-level stimulated cycle changes are published, and only one operator still reports against them. No revenue disclosure and no market share."
+    },
+    {
+      "company": "Kindbody",
+      "headquarters": "United States",
+      "market_position": "Employer-channel clinic operator; privately held",
+      "description": "Combines clinic ownership with direct employer contracting, competing with benefits managers on one side and traditional clinics on the other. Privately held, no revenue disclosure and no market share. Named here because the employer channel is where measured volume growth has actually come from - Progyny's client count rose 17.3% in 2025 while its per-member utilisation did not."
+    },
+    {
+      "company": "Cooper Surgical and Vitrolife",
+      "headquarters": "United States and Sweden",
+      "market_position": "Suppliers to the clinics rather than providers of services",
+      "description": "Supply the culture media, consumables, incubators and time-lapse systems that ART laboratories run on. They are named here because they sit outside this market's definition on every published scope table, and because the embryology laboratory capacity they equip is the practical constraint on how many cycles a clinic can run - 953 cycles per reporting US clinic and 785 per European centre. No fertility-services market share is disclosed or claimed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Human Fertilisation and Embryology Authority",
+      "year": 2025,
+      "event": "Published Fertility treatment 2023: trends and figures in June 2025, recording 52,400 patients and over 77,500 IVF cycles in the UK, egg freezing up 47% to 6,900 cycles, and the NHS-funded share of cycles down to 27% from 35% in 2019."
+    },
+    {
+      "company": "Monash IVF Group",
+      "year": 2025,
+      "event": "Reported FY25 results on 22 August 2025: revenue A$271.9 million up 6.7%, underlying NPAT A$27.4 million down 8.1%, no final dividend, and domestic stimulated cycles down 5.0% against an Australian industry down 1.7%."
+    },
+    {
+      "company": "ESHRE",
+      "year": 2025,
+      "event": "Published version 10 of its ART fact sheet in 2025, with 923,318 treatment cycles from 1,440 clinics across 41 European countries for 2020 and preliminary counts of 1,156,316 cycles from 1,473 centres across 36 countries for 2023."
+    },
+    {
+      "company": "IMARC Group",
+      "year": 2026,
+      "event": "Released its fertility services market report on 3 February 2026 at $51.9 billion for 2025 and $150.2 billion by 2034, with a scope table that explicitly includes surrogacy as a procedure, egg and embryo banking as a service and cryobanks as an end user."
+    },
+    {
+      "company": "Progyny, Inc.",
+      "year": 2026,
+      "event": "Announced FY2025 results on 27 February 2026: revenue $1,288.7 million on 65,006 ART cycles, with fertility benefit services at $830.9 million and pharmacy benefit services at $457.7 million - the only public disclosure in this industry that pairs revenue with cycle volume."
+    },
+    {
+      "company": "Monash IVF Group",
+      "year": 2026,
+      "event": "Reported FY26 revenue of A$269.5 million, below the prior year, with statutory net profit of A$8.3 million, down 67.6%, and underlying net profit of A$16.1 million - a declining top line at the one listed clinic operator outside the United States."
+    }
+  ],
+  "regulatory_landscape": [
+    "The US Fertility Clinic Success Rate and Certification Act, under which ART clinics report cycle-level data to the CDC - the reason a national cycle count exists at all, with 457 clinics reporting for 2022",
+    "The UK Human Fertilisation and Embryology Act and the HFEA licensing regime, which licenses every clinic and publishes annual patient, cycle and funding statistics including the NHS-funded share by nation",
+    "National ART registry reporting across Europe through the ESHRE European IVF Monitoring Consortium, whose country coverage varies year to year - 41 reporting countries for 2020 against 36 for 2023, which is why its cycle counts cannot be read as a growth series",
+    "NHS commissioning policy for IVF in the United Kingdom, which varies by nation and has reduced the publicly funded share of cycles from 35% in 2019 to 27% in 2023",
+    "State-level fertility coverage mandates in the United States, which determine whether an employer plan must include fertility benefits and therefore where measured utilisation exists",
+    "Jurisdictional law on surrogacy and gamete donation, which differs fundamentally between countries and is what makes the surrogacy component of the published market definition hard to size anywhere"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on national ART registries, company filings and earnings releases, and publisher pages read directly, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "US Centers for Disease Control and Prevention, ART Surveillance, most recent data year 2022: 435,426 cycles, 251,542 unique patients, 457 reporting clinics, 94,039 live-birth deliveries, 98,289 infants, 184,423 banking cycles",
+      "ESHRE ART fact sheet version 10 (2025) and European IVF Monitoring Consortium data: 923,318 cycles from 1,440 clinics in 41 countries for 2020, and preliminary 1,156,316 cycles from 1,473 centres in 36 countries for 2023",
+      "HFEA, Fertility treatment 2023: trends and figures, published June 2025: 52,400 patients, over 77,500 IVF cycles, egg freezing 6,900, NHS-funded share 27%",
+      "Progyny, Inc. fourth quarter and full year 2025 results, announced 27 February 2026: revenue $1,288.7 million, fertility benefit services $830.9 million, pharmacy benefit services $457.7 million, 65,006 ART cycles",
+      "Monash IVF Group FY25 results announcement, 22 August 2025, and FY26 results: revenue A$271.9 million then A$269.5 million, domestic stimulated cycles down 5.0%",
+      "IMARC Group, Fertility Services Market, released 3 February 2026: $51.9 billion for 2025 to $150.2 billion by 2034 at 12.15%",
+      "Progressive Markets (August 2018) and Global Market Insights (2019) forecasts of IVF services in 2025, at $23,242.2 million and above $17.3 billion respectively, used for a retrospective accuracy test",
+      "Published United States IVF cycle cost guidance of approximately $15,000 to $30,000 all-in including procedures, bloodwork, medications and embryo genetic testing",
+      "Queen Mary University of London survey of 304 UK fertility patients: average expenditure of GBP 11,950 per cycle, GBP 6,990 self-funded at NHS facilities against GBP 12,977 in private clinics",
+      "Internal Revenue Service yearly average currency exchange rates for 2025, GBP 0.759 and AUD 1.551 per US dollar, used for every conversion in this report"
+    ],
+    "data_validation": "The headline figures are IMARC Group's own published 2025 value of $51.9 billion and its own stated 12.15% rate; the 2026 base and 2032 endpoint are interpolation on that published rate, not separate observations. That series was chosen because it is the only one in the set read directly from the publisher's own page with a stated release date, and because its scope table is explicit enough to be audited - it names surrogacy as a procedure, egg and embryo banking as a service and cryobanks as an end user. The grounding uses a measured rather than assumed revenue per cycle. Progyny disclosed FY2025 fertility benefit services revenue of $830.9 million, pharmacy benefit services revenue of $457.7 million and 65,006 ART cycles in the same release, which gives $12,782 of services, $7,041 of drugs and $19,824 all-in per cycle, split 64.5% to 35.5%. That $19,824 falls inside published US list prices of $15,000 to $30,000, which validates the anchor. Applying it to the CDC's 435,426 US cycles for 2022 gives total US ART spend of $8.63 billion including drugs, or $5.57 billion of clinical services, against $6.53 billion to $13.06 billion at the list-price range. The decisive test then takes the 2,128,848 cycles in the four public registries we could locate - the US for 2022, Europe for 2023, Japan and Australasia for 2020 - and bills every one of them at the US services rate, an assumption deliberately rigged in the published figures' favour because a cycle in Spain, Czechia, India or Japan costs a fraction of a US cycle. That upper bound is $27.21 billion, which is 52.4% of IMARC's $51.9 billion; at the US all-in rate including drugs it is $42.20 billion, or 81.3%. At most half of the published total can be ART clinical services, and on any realistic weighting considerably less, with the balance in fertility drugs, surrogacy, donor gametes, banking and genetic testing. Per-clinic arithmetic points the same way: measured US spend over 457 reporting clinics is $18.9 million each, while the published total spread over the 1,930 US and European clinics in the registries is $26.9 million each, despite European centres running 18% fewer cycles at lower prices. These are scope, composition and plausibility tests, not market estimates. The registry sum spans four different data years and omits China, India, Latin America and the Middle East, so it is a floor and every per-cycle figure derived from it is a ceiling. Progyny is a benefits manager negotiating rates for about 6.7 million covered members rather than a price-setter, and its cycle count mixes fresh IVF, freeze-all cycles, frozen embryo transfers and egg freezing, so its per-cycle figure is a blended revenue rate and not a price. Monash IVF reports cycle changes without the absolute count, so no second measured per-cycle rate exists. The US list-price range comes from a consumer health guide rather than a primary cost study, the UK figures from a 304-patient survey, and the UK competition authority's reported position is that an average cycle cost cannot be determined because clinics do not collect it. No vendor share, regional split or country split is published anywhere in this report, and the registry cycle counts by country are deliberately not converted into revenue by region because only two measured per-cycle rates exist in the world."
+  },
+  "faqs": [
+    {
+      "question": "How big is the fertility services market?",
+      "answer": "On the published series carried here, $58.21 billion in 2026 reaching $115.82 billion by 2032 at 12.15%. Published 2025 estimates run from $39.27 billion to $51.9 billion, a narrow 1.32x spread. The important caveat is composition: billing every cycle in the public registries at the measured US services rate accounts for at most 52.4% of the largest published total, so roughly half the headline is fertility drugs, surrogacy, donor gametes, banking and genetic testing rather than clinical services."
+    },
+    {
+      "question": "What is the actual revenue per IVF cycle?",
+      "answer": "Progyny is the only company that publishes revenue and cycle volume in the same release. For 2025 it reported $830.9 million of fertility benefit services revenue, $457.7 million of pharmacy benefit services revenue and 65,006 ART cycles - $12,782 of services, $7,041 of drugs and $19,824 all-in per cycle, a 64.5 to 35.5 split. That falls inside published US list prices of $15,000 to $30,000. It is a benefits manager's negotiated blended rate across fresh IVF, freeze-all cycles, frozen transfers and egg freezing, not the price of an IVF cycle."
+    },
+    {
+      "question": "How many IVF cycles are performed each year?",
+      "answer": "The public registries we could locate total 2,128,848 cycles: 435,426 in the United States for 2022 across 457 reporting clinics, 1,156,316 in Europe for 2023 across 1,473 centres, 449,900 in Japan and 87,206 in Australia and New Zealand for 2020. That is four different data years and it excludes China, India, Latin America and the Middle East entirely, so it is a floor on world volume rather than a world total. The UK had over 77,500 cycles for 52,400 patients in 2023."
+    },
+    {
+      "question": "Does the published market size make sense per cycle?",
+      "answer": "Only if you read it as more than clinical services. Billing all 2,128,848 registry cycles at the measured US services rate of $12,782 gives $27.21 billion, which is 52.4% of the largest published total - and that assumes every cycle in Europe, Japan and Australasia is priced like an American one, which they are not. At the US all-in rate including drugs it reaches 81.3%. The published definitions say what fills the gap: the scope table we read lists surrogacy, egg and embryo banking and cryobanks."
+    },
+    {
+      "question": "Where is the growth actually coming from?",
+      "answer": "From freezing, not from treatment. 184,423 of the 435,426 US ART cycles in 2022 - 42.4% - were egg or embryo banking cycles in which everything was frozen for later and no pregnancy was attempted. UK egg freezing rose 47% in one year to 7% of all cycles. Meanwhile treatment volume in mature markets is flat or falling: Progyny's female-only utilisation fell from 1.07% to 1.04%, and Monash IVF's domestic stimulated cycles fell 5.0% against an Australian industry down 1.7%, with its FY26 revenue below FY25."
+    },
+    {
+      "question": "How accurate have past forecasts of this market been?",
+      "answer": "Unusually, we can check. A 2018 forecast put IVF services at $23.2 billion by 2025 and a 2019 one at above $17.3 billion. The current IVF-services estimate for 2024 is $28.35 billion, so the 2018 forecast was approximately right about IVF services. What has changed by 1.7 to 3.0 times is the definition: today's fertility services totals of $39 billion to $52 billion carry surrogacy, donor gametes, banking, cryobanks and drugs alongside the procedure. The growth in the headline is substantially growth in the scope."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because converting the registry cycle counts into revenue by region would require a per-cycle price for each country, and only two measured rates exist anywhere - one US benefits manager's and one UK patient survey. The publisher we read directly names five regions and publishes no values, and no other source gives any. The UK competition authority's reported position is that an average UK cycle cost cannot even be determined, because clinics do not collect the information. A regional revenue table would be invented, so the section is omitted."
+    }
+  ],
+  "seo": {
+    "meta_title": "Fertility Services Market Size & Forecast to 2032",
+    "meta_description": "Progyny's own disclosure gives $19,824 of revenue per ART cycle. Against 2.13m registry cycles, half the published market is not clinical services at all.",
+    "keywords": [
+      "fertility services market",
+      "IVF market size",
+      "ART cycles per year",
+      "revenue per IVF cycle",
+      "CDC ART surveillance",
+      "egg freezing market",
+      "fertility benefits Progyny"
+    ]
+  },
+  "executive_summary": "Most markets in this corpus have to be grounded against a register that only approximately fits. This one does not. Four national authorities count ART cycles and clinics, and one listed company publishes its own cycle volume beside its own revenue, split between services and drugs. Revenue per cycle is therefore directly measurable rather than inferred, and that is what settles the question.\n\nProgyny reported FY2025 revenue of $1,288.7 million on 65,006 ART cycles, split between $830.9 million of fertility benefit services and $457.7 million of pharmacy benefit services. That is $12,782 of services and $7,041 of drugs per cycle, $19,824 all-in, in a ratio of 64.5 to 35.5. The all-in figure falls squarely inside published US list prices of $15,000 to $30,000 for a cycle including procedures, bloodwork, medications and embryo genetic testing. The anchor validates.\n\nApply it. The CDC counted 435,426 ART cycles at 457 reporting US clinics in 2022, producing 94,039 live-birth deliveries and about 2.6% of all American infants. At the measured rate, total US ART spend is $8.63 billion including drugs, or $5.57 billion of clinical services - against $6.53 billion to $13.06 billion at list. Now take the four public registries together: 435,426 US cycles for 2022, 1,156,316 European cycles for 2023, 449,900 Japanese and 87,206 Australasian for 2020, a floor of 2,128,848. Bill every single one at the American services rate, an assumption deliberately rigged in the published figures' favour, and you get $27.21 billion. That is 52.4% of the largest published total of $51.9 billion.\n\nAt most half of the published fertility services market can be ART clinical services, and realistically much less, since a cycle in Spain, Czechia, India or Japan costs a fraction of an American one - UK survey data put a private cycle at about $15,740 all-in and a self-funded cycle at an NHS facility at $9,210. The published scope tables say what fills the gap if you read them: the one we read directly lists surrogacy as a procedure, egg and embryo banking as a service and cryobanks as an end user, and Progyny measures drugs at 35.5% of per-cycle spend.\n\nTwo retrospective forecasts confirm the diagnosis. In 2018 a publisher projected IVF services at $23.2 billion by 2025; in 2019 another put it above $17.3 billion. The current IVF-services estimate for 2024 is $28.35 billion - so those forecasts were approximately right about IVF. What has grown 1.7 to 3.0 times is the word fertility.\n\nAnd the growth that is real is not where the label suggests. 42.4% of US ART cycles in 2022 were banking cycles in which everything was frozen and no pregnancy was attempted; UK egg freezing rose 47% in a year. Meanwhile Progyny's female-only utilisation fell and Monash IVF's domestic cycles dropped 5.0% against an industry down 1.7%, with FY26 revenue below FY25. The double-digit forecast is a bet on freezing, surrogacy and drugs, not on treatment.",
+  "key_highlights": [
+    "Progyny's own disclosure gives a measured $19,824 of revenue per ART cycle - $12,782 services and $7,041 drugs - which falls inside published US list prices of $15,000 to $30,000",
+    "The CDC counted 435,426 ART cycles at 457 reporting US clinics in 2022, giving total US ART spend of $8.63 billion at the measured rate",
+    "The four public registries total 2,128,848 cycles; billing all of them at the US services rate gives $27.21 billion, or 52.4% of the largest published total",
+    "42.4% of US ART cycles in 2022 - 184,423 of 435,426 - were egg or embryo banking cycles in which no pregnancy was attempted",
+    "UK egg freezing rose 47% in one year to 6,900 cycles, while the NHS-funded share of UK IVF cycles fell from 35% in 2019 to 27% in 2023",
+    "Progyny's cycles grew 6.4% but its female-only utilisation fell from 1.07% to 1.04% - the growth came from signing clients, 473 to 555",
+    "Monash IVF's domestic stimulated cycles fell 5.0% against an Australian industry down 1.7%, and its FY26 revenue of A$269.5 million was below FY25",
+    "Forecasts made in 2018 and 2019 put IVF services at $23.2 billion and above $17.3 billion for 2025 - approximately right, against fertility services figures now 1.7 to 3.0 times higher on a wider definition"
+  ],
+  "market_context": "Assisted reproduction is a counted industry, which is unusual in healthcare and is the consequence of a specific legislative choice. The US Fertility Clinic Success Rate and Certification Act requires clinics to report cycle-level outcomes to the CDC; the UK's Human Fertilisation and Embryology Act licenses every clinic and publishes annual statistics; European national registries feed a consortium report. The result is that anyone can look up how many cycles were performed, at how many clinics, with what outcome. Almost no other healthcare market offers that.\n\nWhat the registries show is a business changing shape underneath a stable headline. In 2022, 42.4% of American ART cycles were egg or embryo banking - everything frozen, no transfer, no pregnancy attempted in that cycle. That is not infertility treatment. It is fertility preservation, bought largely with cash by people who are not infertile, and it is growing fast: UK egg freezing rose 47% in a single year to 7% of all cycles. At the same time, treatment volume in mature markets is flat or declining, and public funding is retreating - the NHS share of UK cycles fell from 35% to 27% in four years, which converts subsidised demand into self-pay revenue without adding a patient.\n\nThat shift explains why the published market definitions have widened. A category drawn around IVF procedures is growing at low single digits in the countries that count it. A category drawn around surrogacy, donor gametes, cryobanks, genetic testing and fertility pharmacy - which is what the scope table we read directly actually says - is growing at double digits. Both can be true. Only one of them is what a reader searching for the fertility services market probably has in mind, and the arithmetic in this report separates them.",
+  "forecast_analysis": "The curve starts at $58.21 billion for 2026, derived by advancing IMARC's own published 2025 figure of $51.9 billion one year at IMARC's own stated 12.15% rate, and compounds at that rate to $115.82 billion by 2032. Intermediate years are interpolation. The implied rate between our endpoints is 12.15%, identical to the published one.\n\nWe publish the highest rate in the set, which is the opposite of our usual conclusion, and the registers are the reason. 42.4% of American ART cycles are already banking cycles, and UK egg freezing grew 47% in a single year. Fertility preservation is a discretionary, cash-pay, fast-growing business, and when you add surrogacy, donor gametes, genetic testing and a pharmacy component that Progyny measures at 35.5% of per-cycle spend, a double-digit blend is defensible. What is not defensible is reading that rate as the growth of IVF treatment.\n\nBecause on the treatment side the disclosed record points the other way. Progyny's cycles grew 6.4% while all-member utilisation stayed flat at 1.32% and female-only utilisation fell from 1.07% to 1.04% - its revenue growth came from raising client count from 473 to 555, which is distribution, not demand. Monash IVF's domestic stimulated cycles fell 5.0% against an Australian industry down 1.7%, its international cycles fell 6.4%, it paid no final FY25 dividend, and its FY26 revenue came in below FY25 with statutory profit down 67.6%. The one listed clinic operator outside the United States is shrinking.\n\nSo the honest shape is a fast-growing preservation and ancillary business carrying a flat-to-declining treatment business, with the mix shifting steadily toward the former. The risks are specific and both sit on the preservation side: it is discretionary spending exposed to household finances, and it is the component for which no registry publishes revenue. Readers should treat the 12.15% as a blend, and track the two numbers that are actually measured - CDC's banking-cycle share and Progyny's revenue per cycle.",
+  "reader_takeaways": [
+    "Use $19,824 of revenue per ART cycle as the benchmark - $12,782 services and $7,041 drugs - because it is measured from one company's own revenue and cycle disclosure rather than assumed",
+    "Treat any fertility services total as roughly twice the clinical-services market: billing all 2.13 million registry cycles at the US rate accounts for at most 52.4% of the largest published figure",
+    "Read the growth as freezing rather than treatment: 42.4% of US cycles are banking cycles and UK egg freezing rose 47% in a year, while utilisation and cycle counts in mature markets are flat or falling",
+    "Check the scope table before using a number - the one read directly for this report lists surrogacy, egg and embryo banking and cryobanks, which is why it is not a clinic-revenue figure",
+    "Note what the retrospective says: 2018 and 2019 forecasts of IVF services in 2025 were approximately right, and the headline has grown mostly by widening the definition",
+    "Watch public funding as a revenue driver rather than a demand driver - the NHS share of UK cycles fell from 35% to 27%, which moves spending to households without adding patients"
+  ]
+}
