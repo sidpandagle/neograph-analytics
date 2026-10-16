@@ -16,6 +16,7 @@
  *   node scripts/blog-db.mjs list
  *   node scripts/blog-db.mjs check content/blogs/*.json [--online]
  *   node scripts/blog-db.mjs publish content/blogs/*.json
+ *   node scripts/blog-db.mjs check content/press-releases/*.json --press --online
  *
  * Publishing is paired with a deploy, exactly as for reports: the blog route
  * sets `dynamicParams = false`, so a row that was not in the last build's
@@ -25,7 +26,10 @@ import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import path from 'path';
 
-const TABLE = 'neograph_blogs';
+/* The press-release table has the same columns and the same route behaviour, so
+   `--press` switches tables rather than duplicating this file. */
+const PRESS = process.argv.includes('--press');
+const TABLE = PRESS ? 'neograph_press_releases' : 'neograph_blogs';
 const PAIRED = ['p', 'h2', 'h3', 'ul', 'ol', 'li', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'strong', 'em', 'a', 'blockquote'];
 
 function loadEnv() {
@@ -109,7 +113,7 @@ export function checkDraft(d, { reportSlugs, blogSlugs } = {}) {
     }
   }
 
-  if (blogSlugs?.has(d.slug)) warnings.push('slug already in neograph_blogs — publish will overwrite that row');
+  if (blogSlugs?.has(d.slug)) warnings.push(`slug already in ${TABLE} — publish will overwrite that row`);
 
   return { errors, warnings };
 }
@@ -123,7 +127,7 @@ async function main() {
     const { data, error } = await client().from(TABLE).select('id,slug,title,date').order('id', { ascending: false });
     if (error) { console.error(error.message); process.exit(1); }
     data.forEach((r) => console.log(`${String(r.id).padStart(3)}  ${r.date.padEnd(20)} ${r.slug}`));
-    console.log(`${data.length} articles`);
+    console.log(`${data.length} rows in ${TABLE}`);
     return;
   }
 
@@ -169,11 +173,11 @@ async function main() {
       console.log(error ? `x ${d.slug}: ${error.message}` : `+ ${d.slug} (id ${id})`);
     }
     const { count } = await sb.from(TABLE).select('id', { count: 'exact', head: true });
-    console.log(`${count} articles now`);
+    console.log(`${count} rows in ${TABLE} now`);
     return;
   }
 
-  console.log('usage: node scripts/blog-db.mjs <list|check|publish> [files] [--online]');
+  console.log('usage: node scripts/blog-db.mjs <list|check|publish> [files] [--online] [--press]');
   process.exit(2);
 }
 

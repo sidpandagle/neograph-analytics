@@ -879,3 +879,22 @@ KRW 1,421.779, EUR 0.886, CNY 7.129, JPY 149.632 per USD).
 Method note the agent left for the next pass rather than repeating blind: the
 WHO PQS prequalified-equipment catalogue cannot be used as a count, because its
 own guidance says reference codes are never reassigned.
+
+### A press release, and the publish order it exposed
+`content/press-releases/neograph-publishes-methodology-and-twenty-grounded-reports.json`
+— the methodology, the five grounding results that contradict the literature
+outright, the base-versus-rate pattern, and an explicit section on what the
+reports deliberately omit. Including the one report published with no revenue
+base at all: phage therapy, where nothing holds marketing authorisation in the
+US, EU or UK.
+
+`blog-db.mjs` now takes `--press` and switches tables rather than being
+duplicated; the press-release table has the same columns and the same
+`dynamicParams = false` behaviour.
+
+The draft **fails its own check**, correctly: it links
+`/reports/plasma-fractionation-market` and `/reports/proteomics-market`, neither
+of which is in the live corpus yet. That is the link checker doing its job, and
+it establishes the order inside a deploy — **reports first, then anything that
+links to them** — which is now written into the authoring brief. Its title also
+measured 89 characters and is now 57.

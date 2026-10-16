@@ -157,6 +157,13 @@ nothing. Supabase-only edits to rows that are **already** built (meta fields,
 corrections to prose) are different and reach production through ISR with no
 deploy at all.
 
+**Order within a deploy: reports first, then anything that links to them.**
+`scripts/blog-db.mjs check --online` verifies every internal `/reports/<slug>`
+link against the live corpus, so an article or press release that cites a report
+fails its own check until that report is published. That is the intended
+behaviour, not an obstacle — publish the reports, then re-run the check, then
+publish the article.
+
 ## Reference
 
 `content/reports/_reference-oncology-information-systems-market.json` is a
