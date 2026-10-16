@@ -37,9 +37,9 @@ export function PressReleaseCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-base font-semibold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors line-clamp-2 leading-snug mb-3">
+          <h2 className="text-base font-semibold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors line-clamp-2 leading-snug mb-3">
             {title}
-          </h3>
+          </h2>
 
           {/* Excerpt */}
           <p className="text-sm text-[var(--muted-foreground)] line-clamp-3 flex-1 leading-relaxed">

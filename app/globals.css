@@ -115,8 +115,20 @@
   --secondary: #F4F7FE;
   --border: #E3E9F7;
   --border-light: #F1F5FD;
-  --input: #E3E9F7;
+  /* The border of a form field is the affordance — WCAG 1.4.11 asks 3:1 of it,
+     unlike a decorative rule. #E3E9F7 measured 1.07:1 against the desk and
+     1.22:1 on a card, i.e. all but invisible. #7684A6 measures 3.30:1 on the
+     desk and 3.74:1 on a card and stays in the blue-grey family. */
+  --input: #7684A6;
   --ring: #1541E3;
+  /* Focus ring, two-tone on purpose. Measured against the three surfaces a
+     focusable control actually sits on — white card #FFFFFF, blue panel
+     #1541E3, ink footer #0B1220 — no single colour clears WCAG 1.4.11's 3:1
+     on all three: ink gives 18.72 / 2.58 / 1.00 and white gives 1.00 / 7.25 /
+     18.72. A pair always has one ring that contrasts, and the two rings sit at
+     18.72:1 against each other. */
+  --focus-ring: #0B1220;
+  --focus-ring-inner: #FFFFFF;
   --card: #FFFFFF;
   --card-foreground: #0A1633;
   --popover: #FFFFFF;
@@ -315,9 +327,21 @@
     color: #FFFFFF;
   }
 
+  /* The ring was `2px solid var(--primary)` — #1541E3 — which is the exact fill
+     of the hero and CTA panels, so on the primary buttons keyboard focus was
+     invisible at 1.00:1, and 2.58:1 on the ink footer.
+
+     `!important` is deliberate and is the point of the rule: Tailwind's
+     `focus:outline-none` appears at 33 call sites with higher specificity than
+     a bare `:focus-visible`, and only one of those call sites supplies a
+     focus-visible style of its own. Without it, a third of the interactive
+     controls on the site have no visible keyboard focus. The outline survives
+     an `overflow: hidden` ancestor; the box-shadow is the inner ring and may be
+     clipped, which is why the outer ring is the one carrying contrast. */
   :focus-visible {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--focus-ring) !important;
     outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--focus-ring-inner) !important;
     border-radius: 4px;
   }
 }
@@ -1017,7 +1041,9 @@
   --border: #2F3C5C;
   --cmi-line: #2F3C5C;
   --content-border: #2F3C5C;
-  --input: #4E6291;
+  /* 3.80:1 on the desk and 3.43:1 on a card. The previous #4E6291 cleared the
+     desk at 3.12:1 but fell to 2.81:1 on a card, where most fields sit. */
+  --input: #5A6FA3;
   --content-border-strong: #4E6291;
   --cmi-footer-line: #1E2C50;
 
@@ -1047,6 +1073,9 @@
   --cmi-primary: #6694F1;
   --blue-primary: #6694F1;
   --ring: #6694F1;
+  /* Inverted in dark mode: the outer ring is paper, the inner is ink. */
+  --focus-ring: #FFFFFF;
+  --focus-ring-inner: #0B1220;
   /* The fill stays deep in dark mode, which is what lets every white label
      sitting on a blue panel stay white -- the hero, the price panel, the
      badges. Measured: white on #3356DE = 5.95:1, and the panel still separates

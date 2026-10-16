@@ -1,3 +1,16 @@
+/**
+ * Country + dial-code picker.
+ *
+ * This component predates the token system and was written against raw Tailwind
+ * palette classes — `border-gray-300`, `hover:border-purple-500`,
+ * `focus:ring-purple-500`, `text-gray-900`, `bg-purple-100`. Purple appears
+ * nowhere else on the site, and the fixed greys do not follow the theme: in
+ * dark mode `text-gray-900` (#111827) on `--card` (#131C30) measures
+ * **1.02:1**, so the selected country was effectively invisible on the contact
+ * and request-sample forms. Every class here now reads a token, which also
+ * means the field border picks up `--input` and its 3.30:1 (light) / 3.80:1
+ * (dark) against the page.
+ */
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -75,20 +88,20 @@ export function CountrySelect({
         type="button"
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
-        className={`w-full px-4 py-2 text-left border border-gray-300 rounded-md bg-[var(--card)]
-          hover:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500
+        className={`w-full px-4 py-2 text-left border border-[var(--input)] rounded-md bg-[var(--card)]
+          hover:border-[var(--cmi-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]
           focus:border-transparent transition-all duration-200 flex items-center justify-between
-          ${disabled ? "bg-gray-100 cursor-not-allowed" : "cursor-pointer"}
-          ${isOpen ? "ring-2 ring-purple-500 border-transparent" : ""}`}
+          ${disabled ? "bg-[var(--muted)] cursor-not-allowed" : "cursor-pointer"}
+          ${isOpen ? "ring-2 ring-[var(--primary)] border-transparent" : ""}`}
       >
         <div className="flex items-center gap-2">
           <span className="text-xl pb-1">{selectedCountry.flag}</span>
-          <span className="text-gray-900">
+          <span className="text-[var(--foreground)]">
             {selectedCountry.name} ({selectedCountry.dialCode})
           </span>
         </div>
         <ChevronDown
-          className={`w-5 h-5 text-gray-400 transition-transform duration-200
+          className={`w-5 h-5 text-[var(--muted-foreground)] transition-transform duration-200
             ${isOpen ? "transform rotate-180" : ""}`}
         />
       </button>
@@ -96,19 +109,19 @@ export function CountrySelect({
       {/* Dropdown */}
       {isOpen && (
         <div
-          className="absolute z-50 w-full mt-1 bg-[var(--card)] border border-gray-200 rounded-md
+          className="absolute z-50 w-full mt-1 bg-[var(--card)] border border-[var(--border)] rounded-md
           shadow-lg max-h-60 overflow-hidden"
         >
           {/* Search Input */}
-          <div className="p-2 border-b border-gray-200 sticky top-0 bg-[var(--card)]">
+          <div className="p-2 border-b border-[var(--border)] sticky top-0 bg-[var(--card)]">
             <input
               ref={searchInputRef}
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search countries..."
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md
-                focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-md
+                focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
             />
           </div>
 
@@ -120,12 +133,12 @@ export function CountrySelect({
                   key={country.code}
                   type="button"
                   onClick={() => handleSelect(country)}
-                  className={`w-full px-4 py-2 text-left hover:bg-purple-50 flex items-center
+                  className={`w-full px-4 py-2 text-left hover:bg-[var(--muted)] flex items-center
                     gap-2 transition-colors duration-150
                     ${
                       selectedCountry.code === country.code
-                        ? "bg-purple-100 text-purple-700"
-                        : "text-gray-900"
+                        ? "bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)]"
+                        : "text-[var(--foreground)]"
                     }`}
                 >
                   <span className="text-xl pb-1">{country.flag}</span>
@@ -135,7 +148,7 @@ export function CountrySelect({
                 </button>
               ))
             ) : (
-              <div className="px-4 py-3 text-sm text-gray-500 text-center">
+              <div className="px-4 py-3 text-sm text-[var(--muted-foreground)] text-center">
                 No countries found
               </div>
             )}

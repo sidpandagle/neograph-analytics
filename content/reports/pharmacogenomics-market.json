@@ -1,0 +1,246 @@
+{
+  "report_id": "pharmacogenomics-market",
+  "slug": "pharmacogenomics-market",
+  "title": "Pharmacogenomics Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 6.82,
+    "forecast_value": 10.01,
+    "cagr": 6.6
+  },
+  "market_overview": {
+    "summary": "Pharmacogenomics has the most checkable evidence base of any market in this corpus and one of the widest spreads: published 2025 sizings run from $5.7 billion to $19.24 billion, a 3.38x gap, and 2032 endpoints from $10.0 billion to $42.29 billion. The FDA publishes the register that settles it. Its Table of Pharmacogenomic Biomarkers in Drug Labeling, current as of 12 August 2026, contains 692 rows covering 439 distinct drug products — the number every forecast cites. But only about 53 active ingredients carry CPIC Level A guidance, the tier payers actually recognise, which is 12.1% of the 439. Dividing the highest published base by Medicare's $917.08 rate for the multi-gene panel code implies 20.98 million panels a year, or 30.3% of every Medicare beneficiary annually, for a genotype that never changes. We publish the lowest published series and name payer non-coverage as the restraint the forecasts omit.",
+    "key_trends": [
+      "The FDA labelling register keeps growing and keeps being misread: 692 table rows covering 439 distinct drug products as of 12 August 2026, of which only a subset direct any prescribing action at all",
+      "Payer coverage is narrowing, not widening: NGS MAC's local coverage determination L39995, effective 12 July 2025, requires a panel of at least six genes including CYP2C19 and CYP2D6 with duplication and deletion analysis, and there is still no Medicare national coverage determination for pharmacogenomic panels",
+      "Commercial policy is narrower than Medicare: Cigna's pharmacogenetic testing policy lists CPT 81225 (CYP2C19) as not medically necessary, and a CareSource Medicaid policy classes several high-volume CYP tests as experimental and investigational",
+      "Oncology companion diagnostics are being counted as pharmacogenomics in some published series and not in others — QYResearch sizes theranostics and companion diagnostics alone at $12.59 billion for 2024, more than three of the whole-market estimates",
+      "One publisher revised its own historical base by 22% between editions, from $7.3 billion to $5.7 billion for the same year 2025, which is an admission that the base was modelled rather than measured",
+      "FDA's laboratory-developed tests rule was vacated on 31 March 2025 and not appealed, so pharmacogenomic panels remain CLIA-regulated services — removing a compliance cost several 2024-vintage forecasts had priced in, while changing nothing about reimbursement"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Concentrated in psychiatry and oncology; not routine"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A growing, checkable regulatory evidence base: 439 distinct drug products now carry pharmacogenomic information in FDA labelling, up from counts in the low hundreds a decade ago",
+      "Psychiatry, where response and tolerability to antidepressants and antipsychotics vary with CYP2D6 and CYP2C19 metabolism, and where cash-pay and commercial panel volume exists independently of Medicare",
+      "Known high-consequence pairs where testing is already standard of care: HLA-B before abacavir, DPYD before capecitabine and fluorouracil, TPMT and NUDT15 before thiopurines, CYP2C19 before clopidogrel",
+      "Falling genotyping cost, which makes a six-or-more gene panel cheaper to run than sequential single-gene tests and is the reason CPT 81418 panel billing has displaced gene-by-gene billing",
+      "Pre-emptive panel programmes in integrated health systems, where one genotype is stored and queried at each subsequent prescription rather than ordered per drug"
+    ],
+    "restraints": [
+      "Payer non-coverage is the binding constraint and no published forecast prices it: there is no Medicare national coverage determination for pharmacogenomic panel testing, coverage is set jurisdiction by jurisdiction, and the 2025 NGS MAC determination narrowed rather than widened the qualifying panel definition",
+      "The actionable subset of the FDA register is roughly an eighth of the headline count: about 53 active ingredients carry CPIC Level A guidance against 439 drug products with pharmacogenomic labelling, a ratio of 12.1%",
+      "A genotype does not change, so there is no repeat-testing revenue — the lifetime addressable volume per patient is one panel, which caps the market in a way recurring-test markets are not capped",
+      "Clinical decision support is the real bottleneck: a stored genotype creates no value unless the prescribing system surfaces it at the moment of prescription, and most electronic health records do not",
+      "Scope confusion with oncology companion diagnostics inflates the apparent market and has drawn entrants into a germline-testing business much smaller than the headline suggested"
+    ],
+    "opportunities": [
+      "Pre-emptive panel testing in closed health systems, where the payer and the provider are the same organisation and can capture the downstream cost offset that a fee-for-service payer cannot",
+      "Expansion of CPIC Level A guidance, which is the mechanism that converts an FDA labelling entry into a covered test under MolDX criteria — each new Level A pair enlarges the reimbursable market directly",
+      "Integration into electronic prescribing, where the value accrues to the software layer rather than the laboratory and is not counted in any published market size",
+      "Non-US systems with single-payer economics and national genomic programmes, where the cost-offset argument can be made to the entity that bears the cost",
+      "CLIA-route service offerings, made cheaper to pursue by the March 2025 vacatur of FDA's laboratory-developed tests rule, though the vacatur creates no payment"
+    ],
+    "challenges": [
+      "The highest published base, $19.24 billion for 2025, implies 20.98 million panel tests a year at Medicare's $917.08 rate — 30.3% of every Medicare beneficiary annually, for a test that need never be repeated",
+      "Its 2032 endpoint of $42.29 billion implies 46.11 million panels a year, about two-thirds of the entire Medicare population every year, which rules it out as reimbursed-testing revenue",
+      "A 4.23x spread at 2032 makes the published market unusable for planning without reconstruction from a register",
+      "Evidence generation is thin relative to the claims: ClinicalTrials.gov returns 737 registered studies for 'pharmacogenomic' out of a register of over 600,000, which is a small base from which to move coverage policy",
+      "No vendor discloses pharmacogenomic testing revenue separately, so there is no company-level denominator against which any published total can be checked"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Genotyping",
+      "SNP identification",
+      "Pharmacogenetic testing services",
+      "Software and clinical decision support"
+    ],
+    "by_application": [
+      "Psychiatry and neurology",
+      "Oncology",
+      "Cardiovascular disease",
+      "Infectious disease",
+      "Pain management"
+    ],
+    "by_end_user": [
+      "Clinical and reference laboratories",
+      "Hospitals and clinics",
+      "Pharmaceutical companies",
+      "Academic and research institutions"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 6.82 },
+    { "year": 2027, "value": 7.27 },
+    { "year": 2028, "value": 7.75 },
+    { "year": 2029, "value": 8.26 },
+    { "year": 2030, "value": 8.81 },
+    { "year": 2031, "value": 9.39 },
+    { "year": 2032, "value": 10.01 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 6.6% CAGR between P&S Intelligence's published 2025 base and 2032 endpoint)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Laboratory Corporation of America Holdings",
+      "headquarters": "Burlington, North Carolina, United States",
+      "market_position": "One of the two national reference laboratories through which most US pharmacogenomic panel volume is billed. Does not break out pharmacogenomic testing revenue in its segment reporting, so no share can be stated and we assign none.",
+      "description": "Offers multi-gene pharmacogenomic panels billed under CPT 81418 alongside single-gene codes, with coverage determined jurisdiction by jurisdiction under Medicare Administrative Contractor local coverage determinations rather than a national policy."
+    },
+    {
+      "company": "Quest Diagnostics Incorporated",
+      "headquarters": "Secaucus, New Jersey, United States",
+      "market_position": "The other national reference laboratory with scale in pharmacogenomic panel testing. No pharmacogenomic revenue split is disclosed.",
+      "description": "Runs pharmacogenomic panels as CLIA-regulated laboratory services. Its position depends more on payer contracting and clinical-decision-support integration than on assay technology, which is commoditised."
+    },
+    {
+      "company": "Myriad Genetics, Inc.",
+      "headquarters": "Salt Lake City, Utah, United States",
+      "market_position": "The most visible specialist in psychiatric pharmacogenomics, the single application where panel testing has achieved meaningful commercial volume. Reports product-level revenue in its filings but publishes no market share.",
+      "description": "GeneSight psychotropic panel, positioned on CYP2D6 and CYP2C19 metabolism and antidepressant selection. Psychiatry is the application where cash-pay and commercial volume exists independently of Medicare coverage, which is why it dominates the germline pharmacogenomic testing that actually happens."
+    },
+    {
+      "company": "Thermo Fisher Scientific Inc.",
+      "headquarters": "Waltham, Massachusetts, United States",
+      "market_position": "Supplies the genotyping platforms and pharmacogenomic assay panels that laboratories run, rather than the testing service. Reports no pharmacogenomics line, so its position is not sizeable from filings.",
+      "description": "Provides targeted genotyping arrays and PCR-based pharmacogenomic panels. Positioned upstream of the testing market: its revenue grows with panel volume regardless of which laboratory performs the test."
+    },
+    {
+      "company": "Illumina, Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "Present where pharmacogenomics is delivered by sequencing rather than targeted genotyping. FY2025 revenue was $4.34 billion across all applications with no pharmacogenomic split disclosed.",
+      "description": "Sequencing platforms and consumables used for pharmacogene panels and for extracting pharmacogenomic calls from broader genomic data. Relevant to the market's long-run direction, since a single sequencing run can yield a pharmacogenomic profile as a by-product."
+    },
+    {
+      "company": "OneOme, LLC",
+      "headquarters": "Minneapolis, Minnesota, United States",
+      "market_position": "Private; revenue not disclosed. Competes on the clinical-decision-support layer rather than the assay, which is where this market's value increasingly sits.",
+      "description": "RightMed pharmacogenomic panel and associated prescribing-support software, developed with Mayo Clinic. Named because a stored genotype creates no clinical value unless the prescribing system surfaces it, and that layer is not counted in any published market size."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "U.S. Food and Drug Administration",
+      "year": 2026,
+      "event": "Updated the Table of Pharmacogenomic Biomarkers in Drug Labeling, with content current as of 12 August 2026; enumeration on 16 October 2026 counted 692 table rows covering 439 distinct drug products, with the table noting that labelling for some but not all listed products includes specific actions to be taken based on the biomarker."
+    },
+    {
+      "company": "National Government Services (NGS Medicare Administrative Contractor)",
+      "year": 2025,
+      "event": "Issued local coverage determination L39995 for pharmacogenomic testing, effective 12 July 2025, covering panel testing in Minnesota, Wisconsin, Illinois, New York and New England only where the panel includes at least six genes including CYP2C19 and CYP2D6 with duplication and deletion analysis."
+    },
+    {
+      "company": "Clinical Pharmacogenetics Implementation Consortium",
+      "year": 2026,
+      "event": "Updated its gene-drug pair level assignments on 28 July 2026; a 2026 analysis of that list evaluated 53 active ingredients carrying CPIC Level A guidance, the evidence tier that MolDX criteria require for coverage of gene-specific pharmacogenomic testing."
+    },
+    {
+      "company": "Association for Molecular Pathology",
+      "year": 2025,
+      "event": "Obtained an order from U.S. District Judge Sean D. Jordan on 31 March 2025 vacating FDA's laboratory-developed tests final rule in its entirety, on the ground that such tests are not devices under the Federal Food, Drug, and Cosmetic Act; FDA did not appeal, leaving pharmacogenomic panels regulated as CLIA laboratory services under CMS."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA Table of Pharmacogenomic Biomarkers in Drug Labeling (content current as of 12 August 2026): 692 rows covering 439 distinct drug products. The table's own scope note states that a single representative product is listed per dosage form, salt or combination, and that labelling for some but not all listed products includes specific actions to be taken based on the biomarker information. It is a labelling register, not a testing mandate.",
+    "Clinical Laboratory Improvement Amendments (CLIA), administered by CMS: pharmacogenomic panels are laboratory-developed tests validated and run in CLIA-certified laboratories, with CAP accreditation the practical additional requirement for payer acceptance.",
+    "No Medicare national coverage determination exists for pharmacogenomic panel testing. Coverage is set by Medicare Administrative Contractor local coverage determinations. NGS MAC's L39995, effective 12 July 2025, covers panel testing in Minnesota/Wisconsin/Illinois and New York/New England only where the panel includes at least six genes including CYP2C19 and CYP2D6 with duplication and deletion analysis; under MolDX criteria, gene-specific testing is covered only where the gene-drug pair carries CPIC Level A or B evidence or appears in FDA labelling.",
+    "CPT 81418 is the multi-gene pharmacogenomic panel code, defined as a drug metabolism or pharmacogenomics genomic sequence analysis panel that must include testing of at least six genes. Its Medicare clinical laboratory fee schedule national rate is $917.08.",
+    "Commercial and Medicaid coverage is narrower than Medicare. Cigna's pharmacogenetic testing policy lists CPT 81225 (CYP2C19) among codes considered not medically necessary, and a CareSource Ohio Medicaid policy classes several high-volume CYP tests as experimental and investigational.",
+    "FDA's laboratory-developed tests final rule was vacated in its entirety on 31 March 2025 and not appealed within the 60-day window, so the CLIA regime administered by CMS remains operative. This removes a prospective compliance cost from pharmacogenomic testing without changing its reimbursement."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "U.S. FDA, Table of Pharmacogenomic Biomarkers in Drug Labeling, content current as of 08/12/2026; enumerated 16 October 2026: 692 rows, 439 distinct drug products",
+      "CPT 81418 Medicare clinical laboratory fee schedule national rate of $917.08, as reproduced in Kentucky's 2026 Clinical Diagnostic Laboratory Fee Schedule and West Virginia Medicaid's schedule effective 01/04/2025-31/03/2026",
+      "NGS MAC local coverage determination L39995, pharmacogenomic testing, effective 12 July 2025",
+      "Clinical Pharmacogenetics Implementation Consortium level assignments, list updated 28 July 2026; 53 active ingredients with CPIC Level A guidance per a 2026 analysis",
+      "CMS Medicare enrolment 2025 — approximately 69.3 million beneficiaries, about 20.3% of the US population (via USAFacts aggregation of CMS data)",
+      "P&S Intelligence, Pharmacogenomics Market Size & Share Analysis (2025-2032), report 12295, December 2024 — $6.1B (2024), $6.4B (2025), $10.0B (2032), 6.6%",
+      "IMARC Group, Pharmacogenomics Market Report 2026-2034, report SR112026A4396, last updated 02 June 2026 — $9.2B (2025) to $17.6B (2034), 7.25%",
+      "Global Market Insights, pharmacogenomics market, 2025-2034 and 2026-2035 editions — $7.3B and $5.7B for the same year 2025",
+      "Cigna coverage policy MM 0500, Pharmacogenetic Testing; CareSource Ohio Medicaid policy AD-1342 (effective 01/04/2024)",
+      "ClinicalTrials.gov API v2, query.term='pharmacogenomic', retrieved 16 October 2026: 737 registered studies",
+      "Association for Molecular Pathology v. FDA, order vacating the laboratory-developed tests final rule, 31 March 2025"
+    ],
+    "data_validation": "The headline uses one house's own published base and its own published endpoint: P&S Intelligence states $6.4 billion for 2025, $10.0 billion for 2032 and 6.6% over 2025-2032, and that series closes on itself (6.4 x 1.066^7 = 10.01). The 2026 base of $6.82 billion is derived by advancing the 2025 figure one year at the same rate, and is labelled as interpolation. Two grounding calculations were run against public registers. First, the FDA Table of Pharmacogenomic Biomarkers in Drug Labeling, content current as of 12 August 2026, was enumerated on 16 October 2026 and contains 692 rows covering 439 distinct drug products; against that, roughly 53 active ingredients carry CPIC Level A guidance, the tier MolDX coverage criteria require, which is 12.1% of the 439 — the gap between the register the forecasts cite and the subset payers reimburse. Second, published market sizes were divided by Medicare's $917.08 clinical laboratory fee schedule rate for CPT 81418, the multi-gene pharmacogenomic panel code, to obtain implied annual panel volumes: $6.4 billion implies 6.98 million panels, $9.2 billion implies 10.03 million, and $19.24 billion implies 20.98 million. Against approximately 69.3 million Medicare beneficiaries and a US population near 341 million, 20.98 million panels a year is 30.3% of every beneficiary annually for a genotype that never changes and need never be repeated, which rules that figure out as reimbursed-testing revenue; 6.98 million panels is 2.0% of the US population per year, which is demanding but reachable given cash-pay psychiatric volume. These are plausibility and ratio tests, not market estimates: they rule the high end out and the low end in without establishing the correct size. The divisor is one US payer's rate for one code, reproduced from state fee-schedule documents rather than the CMS quarterly file; the 53-ingredient CPIC count and the Medicare enrolment figure are from secondary sources; and no register publishes global pharmacogenomic test volume. Regional, country and segment shares are published as empty or as plain strings because the single source offering them presents no method; no vendor market share is published because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the pharmacogenomics market?",
+      "answer": "We publish $6.82 billion for 2026, rising to $10.01 billion by 2032 at 6.6%. Both ends come from P&S Intelligence's own published series ($6.4 billion for 2025 and $10.0 billion for 2032), with the 2026 base derived by advancing its 2025 figure one year at its own rate. Published 2025 estimates run from $5.7 billion to $19.24 billion, a 3.38x spread, and 2032 endpoints from $10.0 billion to $42.29 billion."
+    },
+    {
+      "question": "How many drugs actually have pharmacogenomic labelling?",
+      "answer": "We counted the FDA's own table, with content current as of 12 August 2026, on 16 October 2026: 692 rows covering 439 distinct drug products. That is the register every published forecast's narrative rests on. The table's own note says labelling for some but not all listed products includes specific actions to be taken based on the biomarker, so the count is of labelling mentions, not of tests anyone is required to order."
+    },
+    {
+      "question": "Why is the market so much smaller than the number of labelled drugs suggests?",
+      "answer": "Because payers reimburse a much narrower subset. About 53 active ingredients carry CPIC Level A guidance — the evidence tier MolDX coverage criteria require — against 439 drug products with pharmacogenomic labelling, a ratio of 12.1%. There is no Medicare national coverage determination for pharmacogenomic panels at all; coverage is set jurisdiction by jurisdiction, and the 2025 NGS MAC determination narrowed the qualifying panel definition rather than widening it."
+    },
+    {
+      "question": "Can the high published estimates be ruled out?",
+      "answer": "Yes, arithmetically. Medicare's clinical laboratory fee schedule rate for CPT 81418, the multi-gene pharmacogenomic panel code, is $917.08. A $19.24 billion market at that rate implies 20.98 million panels a year — 30.3% of every Medicare beneficiary, annually, for a genotype that never changes and need never be repeated. The $42.29 billion 2032 endpoint implies 46.11 million panels, about two-thirds of the entire Medicare population every year. Those figures are only consistent with a scope that folds in oncology companion diagnostics or pharma research genotyping."
+    },
+    {
+      "question": "Is oncology companion diagnostic testing part of pharmacogenomics?",
+      "answer": "It depends on the publisher, which is most of the problem. QYResearch sizes theranostics and companion diagnostics alone at $12.59 billion for 2024 — more than three of the whole-market pharmacogenomics estimates. Testing a tumour for a target before prescribing a targeted drug is reimbursed and high-volume; testing a patient's inherited metabolism to choose a dose mostly is not. Folding the first into the second is what produces the $15-19 billion bases."
+    },
+    {
+      "question": "Why is psychiatry the dominant application?",
+      "answer": "Because it is the one place where germline pharmacogenomic panels have demand that does not depend on Medicare coverage. Antidepressant and antipsychotic response varies with CYP2D6 and CYP2C19 metabolism, prescribers face a long trial-and-error process without the test, and patients will pay cash for it. Elsewhere the high-consequence pairs — HLA-B before abacavir, DPYD before fluoropyrimidines, TPMT before thiopurines — are already standard of care and generate low-value single-gene volume rather than panel volume."
+    },
+    {
+      "question": "What would actually make this market grow faster?",
+      "answer": "Three specific things, none of them a trend. More gene-drug pairs reaching CPIC Level A, which converts labelling entries into covered tests under MolDX criteria. Clinical decision support embedded in electronic prescribing, so a stored genotype is surfaced at the moment of prescription — value that accrues to software and is counted in no published market size. And payers that bear long-run costs, such as integrated health systems or single-payer national services, adopting pre-emptive panel testing, because a fee-for-service payer cannot capture the downstream offset that justifies the test."
+    }
+  ],
+  "seo": {
+    "meta_title": "Pharmacogenomics Market Size & Forecast to 2032",
+    "meta_description": "Pharmacogenomics: $6.82B in 2026 to $10.01B by 2032 at 6.6%. The FDA's 692-row labelling table and Medicare's panel rate test the published range.",
+    "keywords": [
+      "pharmacogenomics market",
+      "pharmacogenomic testing market size",
+      "FDA pharmacogenomic biomarkers table",
+      "CPT 81418 reimbursement",
+      "CPIC level A gene drug pairs",
+      "pharmacogenomics coverage"
+    ]
+  },
+  "executive_summary": "Pharmacogenomics is the market where the checkable evidence and the published forecasts point in opposite directions. Estimates for 2025 run from $5.7 billion to $19.24 billion — a 3.38x spread — and 2032 endpoints from $10.0 billion to $42.29 billion, a 4.23x spread. One publisher revised its own figure for 2025 from $7.3 billion to $5.7 billion between editions, a 22% restatement of a historical year. We publish the lowest published series, P&S Intelligence's: $6.82 billion in 2026 rising to $10.01 billion by 2032 at 6.6%, with both ends from that house's own numbers. Two registers decide the question. The FDA's Table of Pharmacogenomic Biomarkers in Drug Labeling, content current as of 12 August 2026, contains 692 rows covering 439 distinct drug products when enumerated — the count every forecast's narrative invokes. Against it, roughly 53 active ingredients carry CPIC Level A guidance, the evidence tier MolDX coverage criteria demand: 12.1% of the 439. And Medicare's clinical laboratory fee schedule rate for CPT 81418, the multi-gene panel code, is $917.08, so a $19.24 billion market implies 20.98 million panels a year — 30.3% of every Medicare beneficiary, annually, for a genotype that never changes. Payer non-coverage is the restraint. There is no Medicare national coverage determination for pharmacogenomic panels at all, the 2025 NGS MAC determination narrowed the qualifying panel definition rather than widening it, and commercial policy is narrower still. Every published CAGR in this market is a bet that coverage loosens, and none of them says so.",
+  "key_highlights": [
+    "Headline: $6.82 billion in 2026 to $10.01 billion in 2032 at 6.6%, both ends from P&S Intelligence's own published series",
+    "Published 2025 estimates span 3.38x ($5.7B-$19.24B) and 2032 endpoints span 4.23x ($10.0B-$42.29B)",
+    "The FDA's Table of Pharmacogenomic Biomarkers in Drug Labeling, current as of 12 August 2026, contains 692 rows covering 439 distinct drug products — counted directly",
+    "About 53 active ingredients carry CPIC Level A guidance, the tier payers recognise: 12.1% of the 439 labelled drugs the forecasts cite",
+    "At Medicare's $917.08 rate for CPT 81418, a $19.24 billion market implies 20.98 million panels a year — 30.3% of every Medicare beneficiary annually, for a genotype that never changes",
+    "There is no Medicare national coverage determination for pharmacogenomic panels; NGS MAC's L39995, effective 12 July 2025, narrowed the qualifying panel definition",
+    "One publisher restated its own 2025 figure from $7.3 billion to $5.7 billion between editions — a 22% revision of a historical year"
+  ],
+  "market_context": "Pharmacogenomics sits at the junction of two systems that do not talk to each other. On one side is the regulatory record, which is unusually good: the FDA maintains and publishes a labelling table that anyone can count, and CPIC publishes graded gene-drug pair assignments with explicit evidence tiers. On the other side is reimbursement, where there is no national Medicare policy, coverage varies by Medicare Administrative Contractor jurisdiction, and commercial payers routinely class high-volume CYP tests as not medically necessary or investigational. The market exists in the gap. It is not technology-limited — genotyping a panel of pharmacogenes is cheap and commoditised, and the assay vendors are the same companies that supply every other genomics market. It is not evidence-limited in the narrow sense either, since the high-consequence pairs are established and already standard of care. It is limited by who pays, and by the structural problem that the benefit of a pharmacogenomic test accrues over a patient's lifetime while the cost falls on whoever happens to be the payer that year. That is why psychiatry, where the patient often pays, is the one application with real commercial volume, and why integrated health systems are the setting where pre-emptive testing actually happens.",
+  "forecast_analysis": "We publish 6.6%, the lowest rate in the set, applied to the lowest dated base, and even that is a forecast about coverage policy rather than about technology. P&S Intelligence's series closes on itself — $6.4 billion for 2025 compounded at 6.6% over seven years gives $10.01 billion against its published $10.0 billion for 2032 — which is why we can use both of its endpoints rather than extrapolating one. The houses publishing 10.4% and 11.9% are making the same bet at higher conviction, and the grounding arithmetic shows how high. At Medicare's $917.08 panel rate, the top of the published range requires 20.98 million panel tests a year today and 46.11 million by 2032, against a Medicare population of roughly 69.3 million and a US population near 341 million. No repeat testing is clinically indicated, so those volumes have to come from new patients, and the policy record runs the other way: the NGS MAC determination effective 12 July 2025 tightened the panel definition, and commercial policies have not broadened. The identifiable upside is not a rate at all but a set of discrete events — new CPIC Level A pairs, each of which enlarges the reimbursable set directly; clinical decision support reaching the point of prescription; and payers who bear lifetime cost adopting pre-emptive panels. Readers should treat 6.6% as the no-policy-change path and model the alternatives as step functions, not as a steeper curve.",
+  "reader_takeaways": [
+    "Count the FDA table yourself before accepting a forecast's premise. It holds 692 rows and 439 distinct drug products as of 12 August 2026 — a labelling register, not a testing mandate, and most entries direct no action.",
+    "The reimbursable market is roughly an eighth of the labelled market. About 53 active ingredients carry CPIC Level A guidance against 439 labelled drug products, and MolDX coverage criteria follow CPIC, not FDA labelling alone.",
+    "Divide any published size by Medicare's $917.08 panel rate before believing it. The top of the published range implies testing 30% of all Medicare beneficiaries every year, for a genotype that never changes.",
+    "Check whether a published figure folds in oncology companion diagnostics. One publisher sizes that sub-scope alone at $12.59 billion, more than three of the whole-market estimates.",
+    "Watch coverage policy, not technology. There is no Medicare national coverage determination for these panels, the most recent local determination narrowed rather than widened eligibility, and every published CAGR is a bet that this reverses."
+  ]
+}

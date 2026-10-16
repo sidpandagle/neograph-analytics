@@ -1,0 +1,245 @@
+{
+  "report_id": "biologics-cdmo-market",
+  "slug": "biologics-cdmo-market",
+  "title": "Biologics CDMO Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 20.87,
+    "forecast_value": 39.03,
+    "cagr": 11.0
+  },
+  "market_overview": {
+    "summary": "Biologics contract development and manufacturing is the rare market where the published base-year figures nearly agree and the published growth rates do not. At 2025, estimates run from $18.8 billion to $25.32 billion, a spread of only 1.35x; the stated CAGRs run from 7.14% to 15.5%, a spread of 2.17x in the rate itself. Run the extremes forward from a common $23 billion base and 2034 lands anywhere between $42.8 billion and $80.7 billion. The suppliers settle part of it. Lonza's Integrated Biologics division reported CHF 3.65 billion for 2025, Samsung Biologics KRW 4,557 billion and WuXi Biologics RMB 21.8 billion; converted at the IRS 2025 yearly average rates that is $10.66 billion, which is between 42% and 57% of every published total in the set. Samsung Biologics also publishes installed capacity in litres, which lets the published totals be tested against the physical plant that would have to exist to earn them.",
+    "key_trends": [
+      "The contested dimension is growth, not size: published 2025 bases span only 1.35x ($18.8B to $25.32B) while published CAGRs span 2.17x (7.14% to 15.5%), which is the reverse of the usual pattern in market research",
+      "Three listed companies are most of the market: Lonza Integrated Biologics CHF 3.65bn, Samsung Biologics KRW 4,557bn and WuXi Biologics RMB 21.8bn sum to $10.66bn at IRS 2025 average rates, or 56.7% of P&S Intelligence's $18.8bn total for the same year, on a page that calls the market fragmented",
+      "Capacity is still being built rather than filled: Lonza spent CHF 1.3 billion of capex in 2025, 19.6% of sales, and consolidated the Vacaville large-scale mammalian site for the first time, while Samsung Biologics brought Plant 5 (180,000 litres) on stream at Bio Campus II",
+      "Utilisation, where disclosed, is the swing factor in reported growth: Samsung Biologics attributed its 30.3% revenue increase to Plants 1 through 3 running full and Plant 4 reaching full utilisation in the third quarter of 2025",
+      "Backlog is long and disclosed in one case only: WuXi Biologics reported a total backlog of US$23.7 billion at end-2025, of which US$4.5 billion is due within three years, which implies most contracted work sits beyond the three-year horizon",
+      "Scope ambiguity is concentrated in the service lines rather than the bioreactors: P&S Intelligence reports drug substance at about 80% of its 2024 market and commercial manufacturing at 75%, so a house that adds fill-finish, analytical and regulatory services gets both a larger base and a faster rate"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Outsourcing is standard for emerging biotech and increasingly used by large pharma for surge and modality-specific capacity"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Monoclonal antibody and antibody-drug-conjugate pipelines continue to require mammalian capacity at commercial scale, which P&S Intelligence reports as roughly 65% of its 2024 market by cell line type",
+      "Emerging biotech sponsors without their own plant outsource the whole chain, which is why WuXi Biologics signed 209 new integrated projects in 2025 to reach 945 cumulative",
+      "Capacity additions are being absorbed quickly where they are well located and well qualified: Samsung Biologics' Plant 4 reached full utilisation in the third quarter of 2025, the year it was ramping",
+      "Geographic diversification of supply after the 2024-2025 policy debate over Chinese biomanufacturing has pushed sponsors to dual-source, which supports capacity investment in the US, Europe and Singapore simultaneously",
+      "Regulatory throughput is itself a service being bought: WuXi Biologics reported expanding its regulatory submission capacity to support roughly 200 INDs and 20 BLAs or MAAs a year, and completed 28 process performance qualifications in 2025"
+    ],
+    "restraints": [
+      "Revenue per litre of installed capacity is finite and checkable: Samsung Biologics earned about $5,298 per litre of its 605,000 litres of fully-utilised Plants 1 to 4 in 2025, which means the higher published market totals require three to five million litres of fully-utilised third-party capacity to exist",
+      "Capital intensity is high and front-loaded: Lonza's 2025 capex of CHF 1.3 billion was 19.6% of sales, so a CDMO funds the plant years before the revenue arrives",
+      "Nameplate capacity is not utilised capacity, and utilisation outside the top tier is not disclosed by anyone, so the industry's own occupancy rate is unmeasurable from public filings",
+      "Qualification and technology transfer timelines mean a new facility cannot respond to demand within a planning cycle; Lonza's Vacaville site required an FDA audit before commercial contracts could be signed against it",
+      "Customer concentration risk runs both ways: a single large commercial programme moving in or out of a plant moves a CDMO's segment revenue by double digits, which is visible in the 26.6% and 30.3% growth rates Lonza and Samsung Biologics reported for 2025"
+    ],
+    "opportunities": [
+      "Drug product and fill-finish is the faster-growing category in P&S Intelligence's own segmentation and the part of the chain least covered by the disclosed revenue of the top three",
+      "Viral vector and other modalities carry the highest projected growth rate in the published segmentations, and are the capacity type in shortest supply at commercial scale",
+      "Clinical-stage manufacturing grows faster than commercial in the published segmentations, which favours CDMOs that can carry a programme from IND to BLA without a technology transfer",
+      "Backlog disclosure is a competitive asset: WuXi Biologics' US$23.7 billion figure is the only public forward-revenue measure in the sector and sets a disclosure standard competitors may be pushed toward",
+      "Regional capacity in Singapore, Qatar and continental Europe is being built explicitly as supply-chain insurance rather than on cost, which supports pricing that pure cost competition would not"
+    ],
+    "challenges": [
+      "The published market sizes cannot all be right: three companies at 42% to 57% of the total, with Fujifilm Diosynth, Catalent, Thermo Fisher Pharma Services, Boehringer Ingelheim BioXcellence, AGC Biologics and Siegfried all unaccounted, is inconsistent with a market described as fragmented",
+      "None of the private or divisional players publishes a biologics-CDMO-only revenue line, so the sector's true concentration cannot be measured from public filings",
+      "Currency moves materially change reported growth: Lonza reported 19.2% group sales growth as reported against 21.7% at constant exchange rates for the same year",
+      "No register publishes global installed third-party bioreactor capacity, so the physical denominator for any capacity-based analysis has to be assembled company by company",
+      "Biosimilar programme work is asserted to be inside or outside scope by different publishers and quantified by none of them"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Drug Substance",
+      "Drug Product",
+      "Fill-Finish",
+      "Analytical and Regulatory Services"
+    ],
+    "by_application": [
+      "Monoclonal Antibodies",
+      "Antibody-Drug Conjugates",
+      "Recombinant Proteins",
+      "Viral Vectors and Cell Therapy Intermediates",
+      "Biosimilars"
+    ],
+    "by_end_user": [
+      "Emerging Biotechnology Sponsors",
+      "Large Pharmaceutical Companies",
+      "Biosimilar Developers",
+      "Academic and Government Programmes"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 20.87 },
+    { "year": 2027, "value": 23.17 },
+    { "year": 2028, "value": 25.71 },
+    { "year": 2029, "value": 28.54 },
+    { "year": 2030, "value": 31.68 },
+    { "year": 2031, "value": 35.17 },
+    { "year": 2032, "value": 39.03 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Lonza Group",
+      "headquarters": "Basel, Switzerland",
+      "market_position": "Largest disclosed biologics CDMO revenue in the set. Its Integrated Biologics division reported CHF 3.65 billion for 2025, up 26.6%, with core EBITDA of CHF 1.29 billion at a 35.3% margin. Share is not disclosed by the company and the denominator is in dispute.",
+      "description": "Runs mammalian and microbial drug substance, drug product and bioconjugate capacity across Switzerland, the US, Singapore and China. Consolidated the Vacaville large-scale mammalian site for the first time in 2025, passed an FDA audit there and signed a fifth major commercial contract against it. Spent CHF 1.3 billion of capex in 2025, 19.6% of group sales, and guided to 11-12% constant-currency sales growth for 2026."
+    },
+    {
+      "company": "Samsung Biologics",
+      "headquarters": "Incheon, South Korea",
+      "market_position": "Holds the largest single installed bioreactor capacity publicly disclosed by any CDMO, at roughly 845,000 litres globally. Reported KRW 4,557 billion of CDMO revenue for 2025, up 30.3%. Share is not disclosed.",
+      "description": "The only major CDMO that publishes installed capacity in litres, which makes its revenue density checkable: KRW 4,557 billion against the 605,000 litres of Plants 1 to 4 that it stated were fully utilised works out at about $5,298 per litre per year at the IRS 2025 average won rate. Plant 5 at Bio Campus II adds 180,000 litres and a 60,000-litre site at Rockville, Maryland extends the footprint to the US. Guided to 15-20% revenue growth for 2026 excluding Maryland."
+    },
+    {
+      "company": "WuXi Biologics",
+      "headquarters": "Wuxi, China",
+      "market_position": "Reported RMB 21.8 billion of revenue for 2025, up 16.7%, and is the only player publishing a forward backlog figure, at US$23.7 billion. Share is not disclosed.",
+      "description": "Operates an integrated discovery-to-commercial model and reports project counts rather than litres: 209 new integrated projects signed in 2025 for 945 cumulative, 28 process performance qualifications completed and 34 scheduled for 2026. IFRS gross margin reached 46.0% and net profit RMB 5.7 billion. Capacity expansion is described qualitatively across Europe, the US, Singapore and Qatar; no litre figure is published."
+    },
+    {
+      "company": "Fujifilm Diosynth Biotechnologies",
+      "headquarters": "Tokyo, Japan (operations in US, UK, Denmark)",
+      "market_position": "Large-scale mammalian and microbial capacity across four countries, with major additions at Holly Springs, North Carolina. Revenue is reported inside Fujifilm's Bio CDMO business and not as a standalone biologics-CDMO line, so it cannot be added to the disclosed sum.",
+      "description": "One of the largest capacity owners not represented in the disclosed-revenue sum above, which is part of why three companies cannot in fact be 57% of this market. Runs microbial fermentation, mammalian cell culture and viral vector capacity, and has been among the most aggressive capacity investors of the 2020s."
+    },
+    {
+      "company": "Catalent",
+      "headquarters": "Somerset, New Jersey, United States",
+      "market_position": "Taken private by Novo Holdings, which ends the public segment disclosure that previously made its biologics revenue checkable. No current market share is disclosed.",
+      "description": "Historically the largest independent drug product and fill-finish provider, which is the part of the chain least covered by the three companies whose revenue is disclosed above. Its move into private ownership removed one of the few public datapoints on drug product CDMO revenue, which materially worsens the measurability of this market."
+    },
+    {
+      "company": "Thermo Fisher Scientific (Pharma Services)",
+      "headquarters": "Waltham, Massachusetts, United States",
+      "market_position": "Pharma Services spans biologics drug substance, sterile fill-finish and clinical supply, and is reported inside a wider Laboratory Products and Biopharma Services segment rather than as a biologics CDMO line.",
+      "description": "Acquired large-scale biologics capacity through the Patheon transaction and subsequent builds. Because its disclosure aggregates biologics CDMO work with analytical instruments, clinical trial supply and other services, no biologics-CDMO-only revenue figure is derivable from its filings, which is a recurring obstacle to sizing this market from the supply side."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Lonza Group",
+      "year": 2026,
+      "event": "Reported full-year 2025 results on 28 January 2026: Integrated Biologics sales of CHF 3.65 billion, up 26.6%, with core EBITDA of CHF 1.29 billion at a 35.3% margin; group sales from continuing operations of CHF 6.53 billion; capex of CHF 1.3 billion at 19.6% of sales; and 2026 guidance of 11-12% constant-currency sales growth."
+    },
+    {
+      "company": "Samsung Biologics",
+      "year": 2026,
+      "event": "Reported fourth-quarter and fiscal-year 2025 results on 21 January 2026: CDMO revenue of KRW 4,557 billion, up 30.3%, and operating profit of KRW 2,069.2 billion, up 56.6%, attributed to Plants 1 to 3 running at full utilisation and Plant 4 reaching full utilisation in the third quarter of 2025."
+    },
+    {
+      "company": "Samsung Biologics",
+      "year": 2025,
+      "event": "Brought Plant 5 at Bio Campus II into service, adding 180,000 litres and taking disclosed Songdo capacity to 785,000 litres, with a further 60,000 litres at Rockville, Maryland for a global total of roughly 845,000 litres."
+    },
+    {
+      "company": "WuXi Biologics",
+      "year": 2026,
+      "event": "Reported record 2025 annual results: revenue of RMB 21.8 billion, up 16.7%, IFRS gross margin of 46.0% and net profit of RMB 5.7 billion, with a disclosed total backlog of US$23.7 billion of which US$4.5 billion falls due within three years."
+    },
+    {
+      "company": "Lonza Group",
+      "year": 2025,
+      "event": "Consolidated the Vacaville, California large-scale mammalian manufacturing site for the first time, completed an FDA audit of it and signed a fifth major commercial contract against the facility."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA pre-approval inspection and process performance qualification: a CDMO facility cannot carry a commercial product until the process has been qualified at that site and the site has passed inspection, which is why Lonza reported an FDA audit of Vacaville as a milestone and WuXi Biologics reports process performance qualification counts (28 completed in 2025, 34 scheduled for 2026) as an operating metric.",
+    "ICH Q7 and the EU GMP Annex 1 revision on the manufacture of sterile medicinal products, which governs the fill-finish and aseptic processing end of the biologics chain and drove capital spending on isolator-based filling lines across the sector.",
+    "Post-approval change management under ICH Q12 and the FDA's comparability expectations: moving a licensed biologic between CDMO sites requires analytical comparability and a regulatory filing, which is the technical reason customer relationships in this market are long-dated and the reason backlog extends beyond three years.",
+    "US biosecurity and supply-chain policy debate over Chinese biomanufacturing during 2024-2025, which did not take effect as a prohibition but changed sourcing behaviour toward dual-sourcing across jurisdictions and underwrote capacity investment in the US, Europe and Singapore simultaneously.",
+    "Biosimilar approval pathways under the US Biologics Price Competition and Innovation Act and the EU biosimilar guidelines, which create a distinct class of CDMO demand that publishers assert is inside or outside their market scope without quantifying it."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Enumeration and conversion of disclosed 2025 segment revenue for the three largest listed biologics CDMOs, using a single named and dated conversion basis",
+      "Derivation of revenue per litre of installed bioreactor capacity from the one company that publishes both revenue and litres, and inversion of that ratio against each published market total"
+    ],
+    "secondary_research": [
+      "Lonza Group Full-Year Results 2025, reported 28 January 2026 (Integrated Biologics sales CHF 3.65 billion, +26.6%; core EBITDA CHF 1.29 billion, 35.3% margin; group capex CHF 1.3 billion at 19.6% of sales)",
+      "Samsung Biologics Fourth Quarter and Fiscal Year 2025 Financial Results, 21 January 2026 (CDMO revenue KRW 4,557 billion, +30.3%; Songdo Plants 1-5 capacity 785,000 litres; global capacity ~845,000 litres; Plant 4 at full utilisation from Q3 2025)",
+      "WuXi Biologics Record 2025 Annual Results, year ended 31 December 2025 (revenue RMB 21.8 billion, +16.7%; backlog US$23.7 billion; 945 cumulative integrated projects; 28 PPQs completed in 2025)",
+      "P&S Intelligence, Biologics CDMO Market Size & Share Analysis, report 12310, 270 pages, published August 2025 ($17.1B 2024, $18.8B 2025, $39.0B 2032, 11.0% CAGR 2025-2032; drug substance ~80%, mammalian ~65%, commercial 75%, North America 40%)",
+      "IRS Yearly Average Currency Exchange Rates, 2025 annual averages, retrieved 16 October 2026 (CHF 0.831, KRW 1,421.779, CNY 7.129 per US dollar)",
+      "DelveInsight, Biologics CDMO - Market Insights, Competitive Landscape, and Market Forecast to 2034 ($23.00B 2025 to $62.00B 2034, 11.7% CAGR 2026-2034)",
+      "Lucintel, Biologics CDMO Market Report: Trends, Forecast and Competitive Analysis to 2031 (7.5% CAGR 2025-2031)"
+    ],
+    "data_validation": "Two independent plausibility tests were run against disclosed company figures rather than against another forecast. First, the 2025 segment revenue of the three largest listed biologics CDMOs was summed and converted at the IRS 2025 yearly average exchange rates: Lonza Integrated Biologics CHF 3.65bn divided by 0.831 gives $4,392M, Samsung Biologics KRW 4,557bn divided by 1,421.779 gives $3,205M, and WuXi Biologics RMB 21.8bn divided by 7.129 gives $3,058M, for a total of $10,655M. That is 56.7% of P&S Intelligence's $18.8bn for 2025, 46.3% of DelveInsight's $23.0bn and 42.1% of Mordor Intelligence's $25.32bn, which is inconsistent with P&S's own description of the market as fragmented given that Fujifilm Diosynth, Catalent, Thermo Fisher Pharma Services, Boehringer Ingelheim BioXcellence, AGC Biologics and Siegfried are all absent from the sum. Second, Samsung Biologics' disclosed revenue divided by the 605,000 litres of Plants 1 to 4 that it stated were at full utilisation gives about $5,298 per litre per year; inverting that, the published market totals require between 3.55 million and 4.78 million litres of fully-utilised third-party capacity to exist, against roughly 845,000 litres at the single largest capacity owner in the world. These are plausibility and ratio tests, not market estimates. They rule the $18.8bn base in as a drug-substance-weighted reading and rule the $25bn-plus bases out as pure bioreactor revenue, but they do not establish a correct market size: the divisor is one company's revenue density for a high-titre monoclonal antibody book at full utilisation, and no register publishes global installed third-party bioreactor capacity.",
+    "limitations": "No vendor market share is published or derived. Regional and country splits are omitted because no named source gives them for a market whose three largest suppliers are Swiss, Korean and Chinese. Mordor Intelligence's figures were read from a search-result summary after the publisher page returned 404, and the Business Research Company and Nova One Advisor figures were read from syndicated reprints and search summaries rather than primary releases."
+  },
+  "faqs": [
+    {
+      "question": "How large is the biologics CDMO market?",
+      "answer": "We publish $20.87 billion for 2026, rising to $39.03 billion by 2032 at an 11.0% CAGR. That is P&S Intelligence's series, whose stated 2025 base of $18.8 billion we advanced one year at its own stated rate. Other published 2025 bases run as high as $25.32 billion. We chose the lowest base in the set because it is the only one that survives a revenue-per-litre test against the capacity that physically exists."
+    },
+    {
+      "question": "Why do published biologics CDMO forecasts disagree so much?",
+      "answer": "Unusually, they disagree about growth rather than size. Published 2025 bases span only 1.35x, from $18.8 billion to $25.32 billion, while published CAGRs span 2.17x, from 7.14% to 15.5%. Run the extremes forward from a common $23 billion base and 2034 lands anywhere between $42.8 billion and $80.7 billion. The scope clue is on P&S Intelligence's own page: drug substance is about 80% of its market and commercial manufacturing 75%, so a publisher that adds fill-finish, analytical and regulatory services gets both a bigger base and a faster rate, because those service lines grow faster than bioreactor hours."
+    },
+    {
+      "question": "Who are the largest biologics CDMOs and what share do they hold?",
+      "answer": "None of them discloses a market share, and the denominator is exactly what is in dispute, so we do not publish shares. What is disclosed is revenue. For 2025 Lonza's Integrated Biologics division reported CHF 3.65 billion, Samsung Biologics KRW 4,557 billion and WuXi Biologics RMB 21.8 billion. Converted at the IRS 2025 yearly average rates that is $10.66 billion in total, which is between 42% and 57% of the published whole-market figures, with Fujifilm Diosynth, Catalent, Thermo Fisher Pharma Services and Boehringer Ingelheim BioXcellence all unaccounted for."
+    },
+    {
+      "question": "How much biologics manufacturing capacity exists, and how much revenue does a litre earn?",
+      "answer": "Samsung Biologics is the only major CDMO that publishes installed capacity in litres: roughly 785,000 litres at Songdo across Plants 1 to 5 and about 845,000 litres globally including Rockville, Maryland. It also stated that Plants 1 to 4, totalling about 605,000 litres, were at full utilisation in 2025. Its KRW 4,557 billion of revenue against that capacity works out at roughly $5,298 per litre per year. No register publishes a global total of third-party capacity, so the industry-wide denominator has to be assembled company by company."
+    },
+    {
+      "question": "Is the biologics CDMO market fragmented?",
+      "answer": "P&S Intelligence's page says it is, and that statement is hard to reconcile with the same page's market size. Three companies with disclosed revenue account for 56.7% of its $18.8 billion 2025 total, before Fujifilm Diosynth, Catalent, Thermo Fisher Pharma Services, Boehringer Ingelheim BioXcellence, AGC Biologics and Siegfried are counted at all. Either the characterisation is wrong or the total is too low. The honest answer is that the top tier is concentrated and the long tail of clinical-stage and regional providers is genuinely fragmented, and the published totals do not distinguish the two."
+    },
+    {
+      "question": "What is the single most important thing the published forecasts leave out?",
+      "answer": "Utilisation. Growth in this sector is reported revenue growth, and reported revenue growth is driven as much by filling existing plant as by building new plant. Samsung Biologics attributed its 30.3% increase in 2025 to Plant 4 reaching full utilisation, and Lonza spent CHF 1.3 billion of capex at 19.6% of sales in the same year, which is the behaviour of a company still building. Nameplate capacity is public for one company and utilisation for none of the others, so the occupancy rate that actually determines near-term growth is not measurable from public filings."
+    }
+  ],
+  "seo": {
+    "meta_title": "Biologics CDMO Market Size & Forecast 2026-2032",
+    "meta_description": "Biologics CDMO market at $20.87B in 2026, reaching $39.03B by 2032 at 11.0% CAGR. Published CAGRs span 7.14% to 15.5%; three CDMOs disclose 57% of it.",
+    "keywords": [
+      "biologics CDMO market",
+      "contract development and manufacturing organization",
+      "biologics manufacturing capacity",
+      "Lonza Samsung Biologics WuXi Biologics",
+      "drug substance outsourcing",
+      "bioreactor capacity litres"
+    ]
+  },
+  "executive_summary": "Biologics contract development and manufacturing reverses the usual pattern in market research. Published base-year figures nearly agree, at $18.8 billion to $25.32 billion for 2025, a spread of just 1.35x. Published growth rates do not: they run from 7.14% to 15.5%, a 2.17x spread in the rate, and running those extremes forward from a common $23 billion base puts 2034 anywhere between $42.8 billion and $80.7 billion. We publish P&S Intelligence's series, advanced one year on its own stated rate: $20.87 billion for 2026 to $39.03 billion by 2032 at 11.0%. Two tests against disclosed supplier figures are why. First, the three largest listed biologics CDMOs reported 2025 segment revenue of CHF 3.65 billion (Lonza Integrated Biologics), KRW 4,557 billion (Samsung Biologics) and RMB 21.8 billion (WuXi Biologics); converted at the IRS 2025 yearly average rates that is $10.66 billion, or 56.7% of P&S's whole-market total for the same year, on a page that calls the market fragmented and before Fujifilm Diosynth, Catalent, Thermo Fisher Pharma Services and Boehringer Ingelheim are counted. Second, Samsung Biologics publishes installed capacity in litres as well as revenue, so revenue density is directly computable: KRW 4,557 billion against the 605,000 litres it stated were fully utilised is about $5,298 per litre per year. Inverted, the higher published totals require between 3.55 million and 4.78 million litres of fully-utilised third-party capacity, against roughly 845,000 litres at the largest capacity owner in the world. That rules the low base in as a drug-substance reading and rules the high bases out as pure bioreactor revenue. Neither test is a market estimate.",
+  "key_highlights": [
+    "Published 2025 bases span only 1.35x ($18.8B to $25.32B) while published CAGRs span 2.17x (7.14% to 15.5%) - the growth rate, not the size, is the contested dimension",
+    "Lonza Integrated Biologics CHF 3.65bn, Samsung Biologics KRW 4,557bn and WuXi Biologics RMB 21.8bn sum to $10.66bn at IRS 2025 average rates, or 56.7% of P&S Intelligence's $18.8bn total for the same year",
+    "Samsung Biologics earned roughly $5,298 per litre of the 605,000 litres it stated were fully utilised in 2025, which means the $25bn-plus published bases require 4.8 million litres of fully-utilised third-party capacity to exist",
+    "Lonza spent CHF 1.3 billion of capex in 2025, 19.6% of sales, and Samsung Biologics brought a 180,000-litre Plant 5 on stream: this sector is still building capacity, not filling it",
+    "WuXi Biologics is the only player publishing forward backlog, at US$23.7 billion, of which only US$4.5 billion falls due within three years",
+    "Catalent's move into private ownership under Novo Holdings removed one of the few public datapoints on drug product and fill-finish CDMO revenue, which worsened the measurability of the market"
+  ],
+  "market_context": "Biologics CDMO sits between two systems that are each better measured than it is. Upstream is the biologics pipeline, which is countable through regulatory filings: WuXi Biologics alone reported capacity to support roughly 200 INDs and 20 BLAs or MAAs a year. Downstream is the commercial biologic itself, whose revenue is disclosed by the sponsor, not the manufacturer. The CDMO sits in the middle and is paid for plant time, tech transfer, analytical work and regulatory support, none of which the sponsor breaks out and most of which the CDMO reports only inside a wider division. That is why the three companies whose revenue is disclosed account for most of the published market: they are the exception, not the sample. The structural question this market poses is whether outsourcing penetration is still rising or whether the growth is simply the biologics pipeline itself moving through plants that already exist, and no public dataset separates the two.",
+  "forecast_analysis": "An 11.0% CAGR to 2032 is a deliberate choice of the middle of a contested range rather than a view that the middle is more likely. The published rates cluster in three groups: 7.1% to 7.5% (Mordor Intelligence, Lucintel), 9.1% to 11.7% (Precedence Research, P&S Intelligence, DelveInsight), and 14.4% to 15.5% (Research and Markets, The Business Research Company, Nova One Advisor). The low cluster implies a market growing with the biologics pipeline; the high cluster implies outsourcing penetration rising sharply at the same time. The capacity arithmetic argues against the high cluster: at Samsung Biologics' disclosed revenue density of about $5,298 per litre, a market reaching the high-cluster endpoints would need several million litres of fully-utilised third-party capacity by the early 2030s, and the sector is currently spending heavily to build plant rather than running short of it - Lonza's 2025 capex was 19.6% of sales. The forecast published here is P&S Intelligence's, whose base, endpoint and rate are the only ones in the set that reconcile with each other to within a rounding unit: 18.8 x 1.11^7 = 39.04 against a published 39.0.",
+  "reader_takeaways": [
+    "Read any biologics CDMO forecast for its growth rate first, not its base: the bases agree within 1.35x and the rates disagree by 2.17x, which is the opposite of the usual failure mode",
+    "Three disclosed revenue lines - Lonza Integrated Biologics, Samsung Biologics and WuXi Biologics - total $10.66 billion for 2025 and are between 42% and 57% of every published market total, so test any size claim against them before accepting it",
+    "Samsung Biologics' litre disclosure is the most useful public number in this sector: about $5,298 of revenue per litre of fully-utilised capacity per year, which converts any market size claim into a claim about how much plant exists",
+    "Treat a market described as fragmented with suspicion when three companies are more than half of the stated total and six more large capacity owners are unaccounted for",
+    "Catalent going private and the absence of a biologics-CDMO-only line at Thermo Fisher and Fujifilm mean this market is getting harder to measure from the supply side, not easier"
+  ]
+}

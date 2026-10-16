@@ -1,0 +1,279 @@
+{
+  "report_id": "ophthalmic-therapeutics-market",
+  "slug": "ophthalmic-therapeutics-market",
+  "title": "Ophthalmic Therapeutics Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 51.4,
+    "forecast_value": 66.02,
+    "cagr": 4.26
+  },
+  "market_overview": {
+    "summary": "Published estimates of this market agree unusually closely on size - $34.90 billion to $49.3 billion for 2025, only 1.41x - and are irreconcilable on structure. One source read directly does not list anti-VEGF as a drug class at all and says anti-glaucoma is the largest; another names anti-VEGF correctly and then publishes a United States total of $10.0 billion that three disclosed anti-VEGF brands would fill 71% of on their own. Four companies disclose $14.96 billion of ophthalmic revenue, $12.85 billion of it anti-VEGF, and every trajectory in that class is negative or substitutional: Roche's pharma chief said the US branded intravitreal market shrank 15% through 2025. On the only published rate consistent with that, this is a $51.40 billion market in 2026 reaching $66.02 billion by 2032 at 4.26%.",
+    "key_trends": [
+      "Published 2025 totals span only 1.41x while published CAGRs span 2.09x - the disagreement has moved from size to growth, and the growth question is settled by disclosed brand revenue",
+      "Roche's pharmaceuticals head stated the branded intravitreal injection market in the United States shrank by 15% through 2025, while Vabysmo gained share within it",
+      "Regeneron's US Eylea franchise fell 27% to $4.4 billion in 2025; Bayer's rest-of-world Eylea fell 5.9% to EUR 3,110 million and is guided down 20% to 25% for 2026",
+      "Growth inside the class is substitutional: Eylea HD rose 36% to $1.6 billion in the US while legacy Eylea fell, and the 8 mg presentation was about 38% of Bayer's Eylea by the fourth quarter",
+      "Five aflibercept biosimilars are FDA-approved and three of them launch in the fourth quarter of 2026 or later, so the 2025 declines are the start of erosion rather than the end",
+      "Novartis no longer breaks out Lucentis, Beovu or Xiidra in its full-year results, which is the clearest statement available of where the class that Lucentis created has gone",
+      "Disclosed anti-VEGF revenue is 21 times the leading branded glaucoma portfolio, which refutes the claim that anti-glaucoma is the largest ophthalmic drug class by revenue"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal; growth constrained by biosimilar pricing rather than by uptake"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Ageing populations in every high-income market, which raises the prevalence of age-related macular degeneration, diabetic macular oedema and glaucoma simultaneously",
+      "Extended-interval anti-VEGF dosing - Eylea HD and Eylea 8 mg, Vabysmo's treat-and-extend label - which reduces injection burden and sustains branded volume against biosimilars",
+      "Diabetes prevalence driving diabetic macular oedema and diabetic retinopathy into treatment at younger ages than age-related disease",
+      "Emerging-market access expansion, where generic glaucoma and anti-infective drops are the volume and where the published forecasts locate most of their growth",
+      "A genuinely new dry-eye and ocular-surface category - with branded entrants outside the legacy cyclosporine franchises - that is not yet subject to generic erosion"
+    ],
+    "restraints": [
+      "The largest class by revenue is contracting: the US branded intravitreal market shrank 15% through 2025 on Roche's own account",
+      "Five approved aflibercept biosimilars, two already launched in the US, with Yesafili priced at $1,445 and Pavblu launched at roughly a 10% discount",
+      "Bayer guides its own ex-US Eylea franchise down 20% to 25% for 2026, which is the originator's statement of how much erosion is still to come",
+      "Ranibizumab has already been through this: Novartis's Lucentis fell 39% year on year in the second quarter of 2025 and is no longer separately disclosed",
+      "The high-volume classes - glaucoma, anti-infective, anti-allergy - are overwhelmingly generic, dispensed at single-digit dollars per bottle, so volume growth there does not convert into revenue growth",
+      "Intravitreal injection capacity is retina-specialist time, which does not scale with the number of eligible patients"
+    ],
+    "opportunities": [
+      "Gene therapy and long-acting intraocular delivery, which substitute a single procedure for a lifetime of injections and reprice the whole treatment episode",
+      "Geographic atrophy and dry age-related macular degeneration, where there was no pharmacological option at all until recently",
+      "Myopia control in children, a class that several publishers now list as a distinct disease segment and which has no established revenue base",
+      "Biosimilar manufacturing itself, which is where anti-VEGF class volume is migrating and where five approved aflibercept products are now competing",
+      "Ocular surface and neurotrophic disease, small indications with high per-patient value and no generic competition"
+    ],
+    "challenges": [
+      "No published source gets both the size and the structure of this market right, so a reader cannot take a class ranking from any of them",
+      "Novartis's ophthalmology revenue is absent from every disclosed sum because the company no longer breaks it out, so the disclosed total is a floor rather than a measurement",
+      "Biosimilar interchangeability designations are reported inconsistently across legal and trade sources, which makes substitution rates hard to forecast",
+      "Published whole-market CAGRs of 7.6% and 8.9% require the largest class to be growing, and the disclosed record says it is shrinking"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Anti-VEGF intravitreal agents",
+      "Anti-glaucoma agents",
+      "Anti-inflammatory agents including corticosteroids and NSAIDs",
+      "Anti-infective agents",
+      "Anti-allergy agents",
+      "Dry eye and ocular surface therapies",
+      "Intravitreal implants and sustained-release delivery",
+      "Over-the-counter lubricants and artificial tears"
+    ],
+    "by_application": [
+      "Neovascular age-related macular degeneration",
+      "Diabetic macular oedema and diabetic retinopathy",
+      "Retinal vein occlusion",
+      "Glaucoma and ocular hypertension",
+      "Dry eye disease",
+      "Ocular infection, inflammation and uveitis",
+      "Allergic conjunctivitis",
+      "Myopia progression"
+    ],
+    "by_end_user": [
+      "Retina specialist practices and injection clinics",
+      "Hospital ophthalmology departments",
+      "Community ophthalmology and optometry practices",
+      "Hospital and retail pharmacies",
+      "Online pharmacies"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 51.4 },
+    { "year": 2027, "value": 53.59 },
+    { "year": 2028, "value": 55.87 },
+    { "year": 2029, "value": 58.25 },
+    { "year": 2030, "value": 60.73 },
+    { "year": 2031, "value": 63.32 },
+    { "year": 2032, "value": 66.02 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Regeneron Pharmaceuticals",
+      "headquarters": "United States",
+      "market_position": "Holds the largest single disclosed US ophthalmic franchise, and the largest disclosed decline",
+      "description": "Reported combined EYLEA HD and EYLEA US net sales of $4.4 billion for 2025, down 27%, of which EYLEA HD was $1.6 billion, up 36%. The two halves of that number are the market's structure in miniature: the new extended-interval presentation is growing fast and is cannibalising the original, while biosimilars take the base. Regeneron holds US rights only; Bayer holds the rest of the world. Market share is not disclosed."
+    },
+    {
+      "company": "Bayer AG",
+      "headquarters": "Germany",
+      "market_position": "Holds Eylea outside the United States, and has guided its own decline",
+      "description": "Reported Eylea sales of EUR 3,110 million for 2025 against EUR 3,306 million in 2024, down 5.9% as reported, attributing the fall to pricing pressure from biosimilar entry partly offset by volume on the 8 mg presentation, which was about 26% of Eylea sales for the year and roughly 38% in the fourth quarter. Bayer guides Eylea down 20% to 25% for 2026 - the originator's own statement of how much erosion is still ahead. Market share is not disclosed."
+    },
+    {
+      "company": "Roche Holding AG",
+      "headquarters": "Switzerland",
+      "market_position": "The only company taking share in a contracting class",
+      "description": "Reported Vabysmo sales of CHF 4,102 million for 2025, up about 12%, with the fourth quarter around 8% below analyst consensus. Roche's pharmaceuticals head attributed the shortfall to the United States, stating that the branded intravitreal injection market there shrank by 15% through 2025 while Vabysmo still gained share - the single most useful sentence anyone published about this market in 2025. Vabysmo is an anti-VEGF-A and anti-Ang-2 bispecific and is also covered in NeoGraph's bispecific-antibodies-market report. Market share is not disclosed."
+    },
+    {
+      "company": "AbbVie Inc.",
+      "headquarters": "United States",
+      "market_position": "The largest non-retinal ophthalmic portfolio, and the reference point for glaucoma economics",
+      "description": "Its FY2025 Form 10-K reports Ozurdex at $493 million, Other Eye Care at $1,009 million and separate lines for Lumigan/Ganfort and Alphagan/Combigan; summing the lines gives approximately $2.11 billion for 2025 against roughly $2.24 billion in 2024, which is our arithmetic rather than a reported total. Its branded glaucoma portfolio of roughly $608 million is the figure that refutes the claim that anti-glaucoma is the largest ophthalmic drug class by revenue - disclosed anti-VEGF revenue is 21 times larger. Market share is not disclosed."
+    },
+    {
+      "company": "Novartis AG",
+      "headquarters": "Switzerland",
+      "market_position": "Created the class and no longer reports it",
+      "description": "Lucentis made intravitreal anti-VEGF therapy a market. Novartis no longer breaks out Lucentis, Beovu or Xiidra in its full-year results, which means none clears the threshold for its top-brand table; the only figure located is Lucentis at $173 million in the second quarter of 2025, down 39% on generic competition. Novartis's ophthalmology revenue is therefore absent from the disclosed sum in this report, which is why that sum is described as a floor. Market share is not disclosed."
+    },
+    {
+      "company": "Amgen Inc.",
+      "headquarters": "United States",
+      "market_position": "First aflibercept biosimilar to reach the US market",
+      "description": "Launched Pavblu in October 2024, the first Eylea biosimilar in the United States, after the Federal Circuit declined to enjoin it, at roughly a 10% discount to the originator. One source states FDA has not designated it interchangeable, and sources conflict on that point. Amgen does not disclose Pavblu revenue separately, so the biosimilar side of this market is visible in the originators' declines rather than in the entrants' sales. Market share is not disclosed."
+    },
+    {
+      "company": "Biocon Biologics",
+      "headquarters": "India",
+      "market_position": "Second aflibercept biosimilar launch, and the first public price point",
+      "description": "Launched Yesafili in the United States in August 2026 at $1,445, with interchangeability resting on Phase 3 comparability data. That price is the clearest public marker of where anti-VEGF unit economics are heading, and it is the mechanism behind Bayer's 20% to 25% decline guidance. No disclosed Yesafili revenue and no market share."
+    },
+    {
+      "company": "Samsung Bioepis and Sandoz",
+      "headquarters": "South Korea and Switzerland",
+      "market_position": "Approved but largely unlaunched aflibercept biosimilars",
+      "description": "Opuviz, from Samsung Bioepis with Biogen, was approved in May 2024 with interchangeability; Enzeevu, from Sandoz, was approved in August 2024 with FDA provisionally determining interchangeability and a launch expected in the fourth quarter of 2026, alongside Formycon and Klinge's Ahzantive under litigation settlements. Three of the five approved aflibercept biosimilars therefore launch in late 2026 or later, which is why the 2025 declines understate the eventual erosion. No disclosed revenue and no market share."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Amgen",
+      "year": 2024,
+      "event": "Launched Pavblu in October 2024 as the first Eylea biosimilar on the US market, at roughly a 10% discount, after the Federal Circuit denied Regeneron's request to enjoin the launch."
+    },
+    {
+      "company": "Regeneron Pharmaceuticals",
+      "year": 2026,
+      "event": "Reported on 30 January 2026 that combined EYLEA HD and EYLEA US net sales fell 27% to $4.4 billion for 2025, while EYLEA HD alone rose 36% to $1.6 billion - growth and decline inside the same franchise."
+    },
+    {
+      "company": "Roche Holding AG",
+      "year": 2026,
+      "event": "Reported Vabysmo at CHF 4,102 million for 2025, up about 12% but roughly 8% below consensus in the fourth quarter, with the company's pharmaceuticals head stating that the US branded intravitreal injection market shrank 15% through 2025."
+    },
+    {
+      "company": "Bayer AG",
+      "year": 2026,
+      "event": "Reported Eylea at EUR 3,110 million for 2025, down 5.9%, with the 8 mg presentation at about 38% of Eylea sales in the fourth quarter, and guided Eylea sales down 20% to 25% for 2026 on biosimilar pricing pressure."
+    },
+    {
+      "company": "Biocon Biologics",
+      "year": 2026,
+      "event": "Launched Yesafili in the United States in August 2026 at a price of $1,445, becoming the second aflibercept biosimilar on the US market."
+    },
+    {
+      "company": "IMARC Group",
+      "year": 2026,
+      "event": "Updated its ophthalmic drugs market report on 26 June 2026, cutting its own forecast CAGR from 4.44% to 4.26% - the only cross-edition revision in this research batch that moved in the direction the disclosed record actually went."
+    }
+  ],
+  "regulatory_landscape": [
+    "The US biosimilar pathway under section 351(k) of the Public Health Service Act, under which five aflibercept biosimilars have been approved and which governs whether a product is designated interchangeable and therefore substitutable at the pharmacy or buy-and-bill level",
+    "FDA interchangeability determination, which sources report inconsistently for Pavblu and Enzeevu and which materially changes substitution rates - the designations should be checked against FDA's Purple Book rather than trade coverage",
+    "Patent and exclusivity litigation around aflibercept, which has determined launch timing more than approval has: Pavblu launched in October 2024 only after the Federal Circuit declined to enjoin it, while Ahzantive and Enzeevu launch in the fourth quarter of 2026 under settlements",
+    "FDA label extensions that sustain branded volume against biosimilars, including EYLEA HD approval for retinal vein occlusion with dosing up to every eight weeks and an every-four-week option across approved indications",
+    "National pricing and reimbursement regimes for intravitreal injections, which Bayer cited by name - Canada, the United Kingdom and Japan - as the source of the price declines in its 2025 Eylea revenue"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on company filings and earnings releases, publisher pages read directly, and regulatory and legal-practice reporting on biosimilar status, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Regeneron Pharmaceuticals fourth quarter and full year 2025 results, released 30 January 2026: US EYLEA HD and EYLEA net sales $4.4 billion, down 27%; EYLEA HD $1.6 billion, up 36%",
+      "Bayer AG Annual Report 2025 and FY2025 investor call of 4 March 2026: Eylea EUR 3,110 million against EUR 3,306 million, down 5.9% reported, with 8 mg at about 38% of Q4 sales and 2026 guidance of minus 20% to minus 25%",
+      "Roche Holding AG full year 2025 results: Vabysmo CHF 4,102 million, up about 12%, with the statement that the US branded intravitreal injection market shrank 15% through 2025",
+      "AbbVie Inc. Form 10-K for the year ended 31 December 2025: Ozurdex $493 million, Other Eye Care $1,009 million, plus Lumigan/Ganfort and Alphagan/Combigan lines",
+      "Novartis AG full year 2025 results (Form 6-K): Lucentis, Beovu and Xiidra not separately disclosed; Lucentis $173 million in Q2 2025, down 39%",
+      "IMARC Group, Ophthalmic Drugs Market (SR112026A5287), last updated 26 June 2026: $49.3 billion for 2025 to $72.6 billion by 2034 at 4.26%",
+      "Market Glass, Inc., Ophthalmic Drugs - Global Strategic Business Report (478 pages, ID 5985637, October 2026): $36.7 billion for 2025 to $61.1 billion by 2032 at 7.6%, with the United States at $10.0 billion in 2025",
+      "FDA approval and US launch record for the five aflibercept biosimilars - Pavblu, Opuviz, Ahzantive, Enzeevu and Yesafili - including Yesafili's August 2026 launch price of $1,445",
+      "Internal Revenue Service yearly average currency exchange rates for 2025, EUR 0.886 and CHF 0.831 per US dollar, used for every conversion in this report",
+      "NeoGraph Analytics, Bispecific Antibodies Market, which covers Vabysmo in its capacity as a bispecific and defines the overlap declared in this report"
+    ],
+    "data_validation": "The headline figures are IMARC Group's own published 2025 value of $49.3 billion and its own stated 4.26% rate; the 2026 base and the 2032 endpoint are interpolation on that published rate, not separate observations. That series was chosen because its rate is the only published one consistent with the disclosed trajectory of the market's largest class, and because its total survives the disclosure test. The grounding sums the four disclosed ophthalmic revenue lines at the IRS 2025 yearly average rates of EUR 0.886 and CHF 0.831: Regeneron's US Eylea franchise $4,400 million, Bayer's rest-of-world Eylea EUR 3,110 million or $3,510 million, Roche's Vabysmo CHF 4,102 million or $4,936 million, and AbbVie's eye care portfolio at approximately $2,110 million, which is our own sum of four Form 10-K product lines rather than a reported total. The sum is $14,956 million, of which $12,846 million is the three anti-VEGF brands. That is 30.3% of IMARC's total and 40.8% of Market Glass's, both survivable, so a second test discriminates: the United States is a measured 55.6% of the Eylea franchise, since Regeneron's US-only $4,400 million and Bayer's rest-of-world $3,510 million are the two disclosed halves of one brand. Applying that share to the disclosed anti-VEGF total gives roughly $7,142 million of US anti-VEGF revenue, which is 71.4% of Market Glass's own published US ophthalmic drugs total of $10.0 billion, leaving about $2.9 billion for every US glaucoma, anti-infective, anti-inflammatory, anti-allergy and dry-eye product and the whole over-the-counter artificial tears category that publisher says is in scope. A third test addresses structure rather than size: disclosed anti-VEGF revenue of $12,846 million is 21.1 times AbbVie's branded glaucoma portfolio of roughly $608 million, which makes the claim that anti-glaucoma is the largest drug class untenable by revenue, however true it is by prescription count. We therefore publish IMARC's total and rate and none of its structural rankings. These are scope, structure and plausibility tests, not market estimates. AbbVie's eye-care total is our arithmetic from 10-K lines read via a search summary. The 55.6% US share is measured for Eylea and assumed for the rest of the class. Novartis's ophthalmology revenue is absent from the sum entirely, so the disclosed total is a floor. Roche's growth rate and the US intravitreal contraction figure were read from trade coverage rather than Roche's own release. And dividing company revenue into a published market total compares differently constructed numbers. No vendor share, regional split or country split is published anywhere in this report."
+  },
+  "faqs": [
+    {
+      "question": "How big is the ophthalmic therapeutics market?",
+      "answer": "On the published series this report judges most defensible, $51.40 billion in 2026 reaching $66.02 billion by 2032 at 4.26%. Published 2025 estimates run from $34.90 billion to $49.3 billion, a spread of only 1.41x - unusually narrow. The disagreement in this market is not about size. It is about growth, and about what is inside the total."
+    },
+    {
+      "question": "Why publish 4.26% when other sources say 7.6% or 8.9%?",
+      "answer": "Because the largest class in this market is shrinking, and the companies in it say so. Roche's pharmaceuticals head stated the US branded intravitreal injection market contracted 15% through 2025. Regeneron's US Eylea franchise fell 27% to $4.4 billion. Bayer's rest-of-world Eylea fell 5.9% and is guided down 20% to 25% for 2026. Novartis's Lucentis fell 39% in a quarter. A 7.6% or 8.9% whole-market rate requires anti-VEGF to be growing; 4.26% requires only that generics, over-the-counter and emerging-market volume offset a declining branded class, which is a coherent story."
+    },
+    {
+      "question": "How much of this market is anti-VEGF?",
+      "answer": "Three brands disclose $12.85 billion between them - Regeneron's US Eylea franchise at $4.4 billion, Bayer's rest-of-world Eylea at EUR 3,110 million, and Roche's Vabysmo at CHF 4,102 million - before counting Lucentis, Beovu, Susvimo or any biosimilary. That is 26% of the largest published total and 35% of the smallest, from three products. We do not publish a class share, because disclosed brand revenue and a modelled market total are differently constructed numbers."
+    },
+    {
+      "question": "Is anti-glaucoma really the largest drug class, as one publisher says?",
+      "answer": "Not by revenue. Disclosed anti-VEGF revenue from three brands is $12.85 billion. The leading branded glaucoma portfolio, AbbVie's Lumigan, Ganfort, Alphagan and Combigan lines, is roughly $608 million by our arithmetic from its 10-K - a ratio of 21 to 1 - and the rest of glaucoma therapy is generic latanoprost, timolol, dorzolamide and brimonidine dispensed at single-digit dollars per bottle. Glaucoma is almost certainly the largest class by prescription count. A dollar-denominated market report has to rank by revenue."
+    },
+    {
+      "question": "What is the biosimilar situation for Eylea?",
+      "answer": "Five aflibercept biosimilars are FDA-approved. Pavblu from Amgen launched in October 2024 at roughly a 10% discount, after the Federal Circuit declined to enjoin it. Yesafili from Biocon launched in August 2026 at $1,445. Opuviz from Samsung Bioepis was approved in May 2024, and Ahzantive and Enzeevu are expected to launch in the fourth quarter of 2026 under litigation settlements. Three of the five therefore launch in late 2026 or later, which means the declines already disclosed are the start of erosion rather than the end of it. Sources conflict on interchangeability status for Pavblu and Enzeevu, and should be checked against FDA's Purple Book."
+    },
+    {
+      "question": "How does this report relate to the bispecific antibodies report?",
+      "answer": "Roche's Vabysmo is an anti-VEGF-A and anti-Ang-2 bispecific antibody and is covered in that capacity in NeoGraph's bispecific-antibodies-market report, which records its CHF 4,102 million of FY2025 revenue inside a disclosed bispecific total of $14.45 billion. That finding is cited here and not re-presented. In this report Vabysmo appears only as one of four disclosed ophthalmic revenue lines used in the grounding arithmetic."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because the one regional figure any source in the set publishes - a United States total of $10.0 billion for 2025 - is used in this report specifically to show that it is too small to hold the anti-VEGF class on its own publisher's definition. Three disclosed anti-VEGF brands would be about 71% of it. Publishing a regional table built from a figure we use as a counterexample would be indefensible, so the section is omitted."
+    }
+  ],
+  "seo": {
+    "meta_title": "Ophthalmic Therapeutics Market Size to 2032",
+    "meta_description": "Four companies disclose $14.96bn of ophthalmic revenue, $12.85bn of it anti-VEGF - and the US branded intravitreal market shrank 15% in 2025. What that implies.",
+    "keywords": [
+      "ophthalmic therapeutics market",
+      "ophthalmic drugs market size",
+      "anti-VEGF market",
+      "Eylea biosimilar",
+      "Vabysmo revenue",
+      "glaucoma drug market",
+      "intravitreal injection market"
+    ]
+  },
+  "executive_summary": "Published estimates of this market agree on size to within 1.41x - $34.90 billion to $49.3 billion for 2025 - which is the narrowest spread in this research batch. That agreement is real and it is also beside the point, because the publishers who agree about the total are irreconcilable about what is in it, and in ophthalmology the structure is checkable brand by brand.\n\nTwo sources were read directly from their own pages. IMARC's drug-class taxonomy is anti-glaucoma, anti-infection, anti-inflammation, anti-allergy and others - anti-VEGF is not a listed class, which puts Eylea, Vabysmo, Lucentis and Beovu inside 'others' - and it states that anti-glaucoma is the largest class. Market Glass names anti-VEGF agents correctly as a class of its own, and then publishes a United States total of $10.0 billion for 2025.\n\nFour companies disclose enough to test both claims. Regeneron's US Eylea and Eylea HD net sales were $4.4 billion in 2025, down 27%. Bayer, which holds the rest of the world, reported Eylea at EUR 3,110 million, down 5.9%. Roche reported Vabysmo at CHF 4,102 million, up about 12%. AbbVie's eye care lines sum to roughly $2.11 billion. That is $14.96 billion in total at the IRS 2025 yearly average rates, of which $12.85 billion is three anti-VEGF brands - before Lucentis, Beovu or any biosimilar. Novartis no longer breaks out its ophthalmology products at all, so the sum is a floor.\n\nThe Eylea franchise is split by geography between two disclosing companies, which hands over a measured US weighting: $4.4 billion US against $3.51 billion rest-of-world, so the United States is 55.6% of that brand. Apply it to the disclosed anti-VEGF total and US anti-VEGF revenue is about $7.14 billion - 71% of Market Glass's entire published US ophthalmic drugs market, leaving $2.9 billion for all US glaucoma, anti-infective, anti-allergy and dry-eye products and the whole over-the-counter artificial tears category that publisher says is in scope. And disclosed anti-VEGF revenue is 21 times AbbVie's branded glaucoma portfolio of roughly $608 million, which makes anti-glaucoma the largest class by prescription count and nowhere near it by revenue. Neither published structure survives.\n\nWhat does survive is IMARC's total and, more importantly, its rate. Roche's pharmaceuticals head said the branded intravitreal injection market in the United States shrank 15% through 2025. Bayer guides its own franchise down 20% to 25% for 2026. Three of the five approved aflibercept biosimilars have not launched yet. Every growing number in the disclosed record - Eylea HD up 36%, Eylea 8 mg at 38% of Bayer's fourth quarter, Vabysmo taking share - is substitution inside a contracting class. 4.26% is the only published rate that does not require the largest class in ophthalmology to be growing.",
+  "key_highlights": [
+    "Published 2025 totals span only 1.41x, from $34.90 billion to $49.3 billion, while published CAGRs span 2.09x - the disagreement is about growth, not size",
+    "Four companies disclose $14.96 billion of ophthalmic revenue for 2025, $12.85 billion of it from three anti-VEGF brands, with Novartis absent because it no longer breaks its products out",
+    "The US is a measured 55.6% of the Eylea franchise, because Regeneron's US-only $4.4 billion and Bayer's rest-of-world $3.51 billion are two disclosed halves of one brand",
+    "Applying that share, three anti-VEGF brands would be 71% of Market Glass's entire published US ophthalmic drugs market of $10.0 billion",
+    "Disclosed anti-VEGF revenue is 21 times AbbVie's branded glaucoma portfolio of roughly $608 million, which refutes the claim that anti-glaucoma leads by revenue",
+    "Roche's pharmaceuticals head stated the US branded intravitreal injection market shrank 15% through 2025, while Vabysmo gained share within it",
+    "Three of the five approved aflibercept biosimilars launch in the fourth quarter of 2026 or later, so the 2025 declines understate the erosion still to come"
+  ],
+  "market_context": "Ophthalmology is two businesses that share an organ. One is a high-volume, low-price topical business - glaucoma drops, antibiotic and steroid drops, antihistamines, artificial tears - dispensed through pharmacies, overwhelmingly generic, and counted in hundreds of millions of prescriptions. The other is a low-volume, high-price injectable business: anti-VEGF agents delivered into the vitreous by a retina specialist, reimbursed under medical benefit, counted in millions of injections. By prescription count the first dwarfs the second. By revenue the second dwarfs the first, and the gap is roughly twenty to one at the brand level.\n\nThat split is why published class rankings in this market are unreliable. A total built from pharmacy dispensing data will rank glaucoma first because glaucoma is where the scripts are; a total built from brand revenue will rank anti-VEGF first because that is where the dollars are. One source read directly for this report does the former and says so; the other names anti-VEGF as a class and then publishes a US total too small to hold it. A reader needs to know which construction a figure came from, and neither publisher says.\n\nThe structural event is biosimilar entry into the injectable half. Ranibizumab went first - Novartis's Lucentis fell 39% year on year in a single quarter of 2025 and is no longer disclosed - and aflibercept is going now, with five approved biosimilars, two launched and a published price of $1,445. The originators' response has been to extend the dosing interval: Eylea HD and Eylea 8 mg hold price by reducing injection frequency, and Vabysmo competes on the same axis. That is a defensible commercial strategy and it is not market growth. NeoGraph's bispecific-antibodies-market report covers Vabysmo from the format side; this report covers the class it is competing in.",
+  "forecast_analysis": "The curve starts at $51.40 billion for 2026, derived by advancing IMARC's own published 2025 figure of $49.3 billion one year at IMARC's own stated 4.26% rate, and compounds at that rate to $66.02 billion by 2032. Intermediate years are interpolation. The implied rate between our endpoints is 4.26%, identical to the published one.\n\nWe publish the lowest rate in the set deliberately, and the disclosed record is the reason. The largest class in this market by revenue contracted in its largest geography in 2025 - 15% on Roche's own account - and the originator holding the rest-of-world rights has guided its franchise down 20% to 25% for 2026. Three of the five approved aflibercept biosimilars have not launched yet. Against that, a whole-market rate of 7.6% or 8.9% would require the remaining classes to grow enough to absorb the decline and still deliver high single digits, in categories whose volume is generic and whose price per unit is a few dollars.\n\nIt is worth noting which way the publishers themselves moved. IMARC cut its own forecast rate from 4.44% to 4.26% between editions - the only cross-edition revision in this batch that went in the direction the evidence went. Everywhere else in this research round, houses revised upward while the industries they were describing decelerated.\n\nThe risk to this forecast is not that 4.26% is too high or too low in aggregate but that the aggregate hides a composition shift. The realistic path is a declining branded injectable line, a rising biosimilar line at a third to a half of the price, and steady low-single-digit growth in topical and over-the-counter volume - which can net to 4% while the revenue pool reorganises completely. Readers should treat the line as a trend and track the anti-VEGF brand disclosures quarter by quarter, because those are the only hard numbers in this market and they are all moving.",
+  "reader_takeaways": [
+    "Ask how a class ranking was constructed before using it: pharmacy-dispensing data puts glaucoma first, brand revenue puts anti-VEGF first by roughly twenty to one, and publishers do not say which they did",
+    "Use the Eylea franchise as the US weighting benchmark - $4.4 billion US against $3.51 billion rest-of-world is a measured 55.6%, not an assumption",
+    "Reject any US ophthalmic drugs total that three anti-VEGF brands would fill most of; $10.0 billion for 2025 does not accommodate the class plus the generics and OTC the same scope claims",
+    "Treat anti-VEGF growth as substitution, not expansion: Eylea HD up 36% and Eylea 8 mg at 38% of Bayer's fourth quarter are the same patients on fewer injections",
+    "Expect further erosion rather than a trough - three of five approved aflibercept biosimilars launch in late 2026 or later, and Bayer has guided minus 20% to minus 25% for its own franchise",
+    "Read Novartis's silence as information: a company that no longer breaks out the product which created this class is telling you where the class went"
+  ]
+}

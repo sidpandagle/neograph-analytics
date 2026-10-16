@@ -80,7 +80,7 @@ export default function AuthorReportsListing({ reports, authorName }: AuthorRepo
       {/* Reports Grid */}
       <div className="grid grid-cols-1 gap-6 mb-8">
         {paginatedReports.map((report) => (
-          <ReportCard key={report.id} report={report} />
+          <ReportCard key={report.id} report={report} headingLevel="h3" />
         ))}
       </div>
 

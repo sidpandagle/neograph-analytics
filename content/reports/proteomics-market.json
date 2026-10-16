@@ -1,0 +1,256 @@
+{
+  "report_id": "proteomics-market",
+  "slug": "proteomics-market",
+  "title": "Proteomics Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 35.03,
+    "forecast_value": 72.93,
+    "cagr": 13.0
+  },
+  "market_overview": {
+    "summary": "Published proteomics market estimates agree unusually well — $31.0 billion to $41.97 billion for 2025, a spread of only 1.35x — and that agreement is misleading rather than reassuring. All of them are counting protein-related laboratory and service spend, and one publisher defines its consumables category to include buffers, chromatography columns and electrophoresis gels. We publish the narrowest stated scope, BCC Research's: $35.03 billion in 2026 rising to $72.93 billion by 2032 at 13.0%. The finding is the gap underneath it. The entire disclosed FY2025 revenue of the next-generation proteomics platform sector — Quanterix, SomaLogic, Standard BioTools and Seer combined — is $340.5 million, which is 0.83% of a $41.2 billion published headline. A reader who treats the headline as an addressable market for a proteomics platform is out by roughly 100x.",
+    "key_trends": [
+      "Affinity proteomics has consolidated into sequencing companies: Illumina agreed to buy SomaLogic for $350 million cash plus up to $75 million in milestones (announced 23 June 2025, completed 30 January 2026), and Olink already sits inside Thermo Fisher",
+      "The pure-play sector is tiny relative to its publicity: Quanterix $138.9 million, SomaLogic approximately $99.7 million, Standard BioTools $85.3 million and Seer $16.6 million in FY2025 — $340.5 million in total",
+      "Mass spectrometry remains the technical centre of gravity but is reported inside diversified instrument segments: Thermo Fisher's Analytical Instruments was $7.55 billion and Bruker's BSI CALID $1.21 billion in FY2025, neither with a proteomics split",
+      "Instrument demand is flat to down: Thermo Fisher's Analytical Instruments segment grew 1% reported and was flat organically in FY2025, and Bruker's whole company declined 4% organically",
+      "Plasma proteomics for biomarker discovery is the application pulling platform adoption, which is why the acquirers are sequencing and diagnostics companies rather than instrument makers",
+      "Regulatory demand is arriving from an unexpected direction: FDA's 10 April 2025 roadmap encourages new approach methodologies in investigational new drug applications, which makes proteomic safety readouts a submission-relevant rather than purely exploratory measurement"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Ubiquitous as a method, early as a platform market"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Plasma and tissue biomarker discovery in drug development, which is the application that justifies high-plex platform purchases rather than incremental mass-spectrometry capacity",
+      "A very wide consumables base: antibodies, assay kits, protein chips, buffers, chromatography columns and electrophoresis gels are recurring purchases independent of platform cycles, and are what makes the published market large",
+      "Multiomics bundling by sequencing companies, with Illumina acquiring SomaLogic and Thermo Fisher holding Olink — proteomic content sold alongside genomic content to the same customer",
+      "FDA's April 2025 new approach methodologies roadmap, which encourages non-animal, human-relevant data including molecular safety readouts in IND submissions and gives proteomic assays a regulatory use case",
+      "Falling cost per protein measured as high-plex affinity panels compete with mass spectrometry on depth-per-dollar rather than on absolute coverage"
+    ],
+    "restraints": [
+      "The addressable platform market is roughly 100x smaller than the published headline: $340.5 million of disclosed pure-play revenue against a $41.2 billion published total, which has repeatedly led investors and entrants to misjudge the opportunity",
+      "Instrument capital spend is flat: Thermo Fisher's Analytical Instruments segment was flat organically in FY2025 and Bruker declined 4% organically, both on academic, government and biopharma budget pressure",
+      "Pure-play economics are poor at current scale — Seer reported FY2025 revenue of $16.6 million against operating expenses of $86.5 million, and Standard BioTools has been cutting over $40 million of annualised costs to reach positive adjusted EBITDA",
+      "No reimbursement for proteomic profiling: with narrow exceptions there is no CPT-coded, payer-funded proteomic test, so clinical volume cannot underwrite platform growth",
+      "Reference-standard and reproducibility problems: affinity and mass-spectrometry platforms do not produce interchangeable protein quantities, which slows the standardisation clinical adoption would require"
+    ],
+    "opportunities": [
+      "Clinical proteomic testing under CLIA, a route made cheaper by the March 2025 vacatur of FDA's laboratory-developed tests rule — SomaLogic's Boulder site is already CLIA- and CAP-certified",
+      "Regulatory-grade safety and toxicology readouts under FDA's new approach methodologies programme, which converts exploratory proteomics into submission-supporting data",
+      "Population-scale plasma proteomics attached to biobank cohorts, where a single customer buys hundreds of thousands of assays and changes a platform company's revenue scale in one contract",
+      "Consolidation at low valuations: Illumina paid $350 million cash for SomaLogic, roughly equal to the whole pure-play sector's disclosed annual revenue, which sets a cheap benchmark for further acquisition",
+      "Proteogenomics — pairing proteomic readouts with existing genomic data — where the incremental sale is content on an installed sequencing base rather than new capital equipment"
+    ],
+    "challenges": [
+      "The published market measures activity, not an addressable market, and no publisher says so: one house's consumables definition includes buffers and gels, which is why its total reaches 92.5% of Thermo Fisher's entire company revenue",
+      "One publisher's proteomics instruments line alone, $8.0 billion for 2025, exceeds the $7.55 billion FY2025 revenue of Thermo Fisher's whole Analytical Instruments segment, a business spanning chromatography, microscopy and chemical analysis across every application",
+      "Disclosure is disappearing as the sector consolidates: Olink inside Thermo Fisher's Life Sciences Solutions, SomaLogic inside Illumina, Akoya inside Quanterix — none separately reported",
+      "Platform companies compete against incumbent mass spectrometry that customers already own and have already paid for, so the sale is a displacement rather than an addition",
+      "Scope dependence is extreme: BCC's explicit exclusion of protein structural analysis and protein-expression products accounts for much of the $10 billion gap between its 2025 figure and the next house's"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Instruments and software",
+      "Consumables and reagents",
+      "Services"
+    ],
+    "by_application": [
+      "Mass spectrometry platforms",
+      "Affinity and biochip platforms",
+      "Protein separation and electrophoresis",
+      "Bioinformatics and computational analysis"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biopharmaceutical companies",
+      "Academic and research institutions",
+      "Clinical and reference laboratories",
+      "Contract research organisations"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 35.03 },
+    { "year": 2027, "value": 39.58 },
+    { "year": 2028, "value": 44.73 },
+    { "year": 2029, "value": 50.55 },
+    { "year": 2030, "value": 57.12 },
+    { "year": 2031, "value": 64.54 },
+    { "year": 2032, "value": 72.93 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 13.0% CAGR from BCC Research's published 2025 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Thermo Fisher Scientific Inc.",
+      "headquarters": "Waltham, Massachusetts, United States",
+      "market_position": "The largest supplier by a wide margin, and the reason the published market sizes are hard to credit. Its entire Analytical Instruments segment was $7.55 billion in FY2025 — less than the $8.0 billion one publisher assigns to proteomics instruments alone, in a segment where proteomics is a minority application. No proteomics split is disclosed and we assign no share.",
+      "description": "FY2025 revenue $44.56 billion, up 4% and 2% organically. Analytical Instruments $7.55 billion, up 1% and flat organically. Life Sciences Solutions $10.37 billion, up 8% and 3% organically, which contains the Olink affinity-proteomics business acquired in 2024 without a separate revenue line."
+    },
+    {
+      "company": "Bruker Corporation",
+      "headquarters": "Billerica, Massachusetts, United States",
+      "market_position": "The principal independent mass-spectrometry competitor in proteomics through the timsTOF line, reported inside the BSI CALID segment with no proteomics split. Position characterised from segment performance only.",
+      "description": "FY2025 revenue $3.44 billion, up 2% reported and down 4% organically. BSI CALID, which contains mass spectrometry, was $1.21 billion, up 11% — the only growing segment. BSI NANO $1.08 billion, down 2%; BioSpin $878.8 million, down 3%."
+    },
+    {
+      "company": "Illumina, Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "Entered proteomics by acquisition rather than development, and at a price that tells you how small the addressable platform market is: $350 million in cash for SomaLogic, roughly equal to the entire disclosed FY2025 revenue of the pure-play proteomics sector.",
+      "description": "FY2025 revenue $4.34 billion, flat year-over-year. Completed the SomaLogic acquisition on 30 January 2026 for $350 million cash plus up to $75 million in near-term milestones and royalties, acquiring an aptamer-based platform, a kitted-panel consumables stream, about 250 employees and a CLIA- and CAP-certified laboratory in Boulder, Colorado. Expects the business to be non-GAAP operating profitable in 2027."
+    },
+    {
+      "company": "Quanterix Corporation",
+      "headquarters": "Billerica, Massachusetts, United States",
+      "market_position": "The largest independent high-sensitivity protein-detection company by disclosed revenue, at $138.9 million in FY2025 — which is 0.34% of one published $41.2 billion market, our own division of a reported figure by a published total.",
+      "description": "FY2025 total revenue $138.9 million, up about 1% from $137.4 million. Simoa single-molecule immunoassay platforms, heavily used in neurology biomarker work. The figure includes $21.9 million of Akoya spatial product revenue from the acquisition close date; legacy product revenue fell 11%, and collaboration and licence revenue fell 66% to $1.5 million."
+    },
+    {
+      "company": "Standard BioTools Inc.",
+      "headquarters": "South San Francisco, California, United States",
+      "market_position": "Reshaped itself out of proteomics during the period: divested SomaLogic to Illumina and now reports $85.3 million of continuing-operations revenue from microfluidics and mass cytometry, with roughly $550 million of cash for redeployment.",
+      "description": "FY2025 continuing-operations revenue $85.3 million, reported 24 February 2026; fourth-quarter revenue $23.8 million, down 4%, with consumables down 17% to $9.0 million and instruments up 10% to $8.5 million. Over $40 million of annualised cost savings fully operationalised, targeting positive adjusted EBITDA exiting 2026."
+    },
+    {
+      "company": "Seer, Inc.",
+      "headquarters": "Redwood City, California, United States",
+      "market_position": "The clearest illustration of the sector's economics at current scale: FY2025 revenue of $16.6 million against operating expenses of $86.5 million, on an installed base of 82 instruments.",
+      "description": "Proteograph nanoparticle-based unbiased proteomics, used upstream of mass spectrometry. FY2025 revenue $16.6 million, up 17%, comprising $11.2 million product and $4.9 million service, at a 51% gross margin, after installing 33 instruments during the year."
+    },
+    {
+      "company": "Nautilus Biotechnology, Inc.",
+      "headquarters": "Seattle, Washington, United States",
+      "market_position": "Pre-commercial; no meaningful product revenue to disclose. Named because the sector's published market size is routinely cited as the opportunity such companies are addressing, and the disclosed figures show that opportunity is two orders of magnitude smaller.",
+      "description": "Single-molecule protein-analysis platform in development, aiming at broad proteome coverage without mass spectrometry."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Illumina, Inc.",
+      "year": 2026,
+      "event": "Completed the acquisition of SomaLogic from Standard BioTools on 30 January 2026 for $350 million in cash plus up to $75 million in near-term performance milestones and royalties, acquiring an aptamer-based proteomics platform and a CLIA- and CAP-certified laboratory in Boulder, Colorado."
+    },
+    {
+      "company": "Thermo Fisher Scientific Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $44.56 billion on 29 January 2026, with the Analytical Instruments segment at $7.55 billion, up 1% and flat organically, and Life Sciences Solutions at $10.37 billion, up 8% — the segment that contains the Olink proteomics business without a separate revenue line."
+    },
+    {
+      "company": "Standard BioTools Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 continuing-operations revenue of $85.3 million on 24 February 2026, against preliminary combined-company revenue of about $185 million including SomaLogic, and disclosed roughly $550 million of cash and investments after the divestiture."
+    },
+    {
+      "company": "Seer, Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $16.6 million on 26 February 2026, up 17%, against operating expenses of $86.5 million, having installed 33 Proteograph instruments during the year to reach an installed base of 82."
+    },
+    {
+      "company": "Bruker Corporation",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $3.44 billion on 12 February 2026, with the BSI CALID segment containing mass spectrometry up 11% to $1.21 billion — the only growing segment in a company that declined 4% organically."
+    }
+  ],
+  "regulatory_landscape": [
+    "No FDA marketing pathway applies to the bulk of proteomics products, which are sold research-use-only. The exception is a clinical proteomic test, which must either obtain device authorisation or be offered as a laboratory-developed test.",
+    "Clinical Laboratory Improvement Amendments (CLIA), administered by CMS, with CAP accreditation as the practical additional requirement: this is the operative regime for clinical proteomic testing, and SomaLogic's Boulder facility holds both certifications.",
+    "FDA's laboratory-developed tests final rule was vacated in its entirety by U.S. District Judge Sean D. Jordan on 31 March 2025, on the ground that LDTs are not devices under the Federal Food, Drug, and Cosmetic Act and that Congress assigned oversight to CMS under CLIA. FDA did not appeal within the 60-day window.",
+    "FDA's Biomarker Qualification Program, operating under section 507 of the Food and Drug Administration Safety and Innovation Act framework as extended by the 21st Century Cures Act, is the route by which a proteomic biomarker becomes usable across multiple drug development programmes without re-justification in each IND.",
+    "FDA's 10 April 2025 roadmap on phasing out animal testing requirements for monoclonal antibodies and other drugs encourages new approach methodologies, including molecular and in-silico toxicity readouts, in investigational new drug applications. It encourages rather than requires their use, and it does not qualify any specific proteomic assay.",
+    "EU In Vitro Diagnostic Regulation 2017/746 governs any proteomic product placed on the EU market for a diagnostic purpose, with conformity assessment obligations scaling by risk class."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "BCC Research, Proteomics: Technologies and Global Markets, report BIO034G, published May 2025 — $27.6B (2024), $31.0B (2025), $57.2B (2030), 13.0%",
+      "Global Market Insights, proteomics market, report GMI5391, February 2026 — $41.2B (2025), $45.7B (2026), $126.3B (2035), 12.0%; instruments $8B in 2025",
+      "Thermo Fisher Scientific Inc., Form 8-K Exhibit 99.1, fourth-quarter and full-year 2025 results, 29 January 2026 (SEC EDGAR, CIK 97745)",
+      "Bruker Corporation, fourth-quarter and full-year 2025 financial results, 12 February 2026",
+      "Quanterix Corporation, Form 10-K for FY2025 (SEC EDGAR, CIK 1503274)",
+      "Standard BioTools Inc., Form 8-K Exhibit 99.1, Q4 and FY2025 financial results, 24 February 2026 (SEC EDGAR, CIK 1162194)",
+      "Seer, Inc., fourth-quarter and full-year 2025 financial results, 26 February 2026",
+      "Illumina, Inc., announcement of the SomaLogic acquisition, 23 June 2025; completion 30 January 2026",
+      "IMARC Group, proteomics market — $36.3B (2023) to $126.2B (2032), 14.4%",
+      "Precedence Research via BioSpace — $31.55B (2023) to $110.13B (2032), 14.9%",
+      "Association for Molecular Pathology v. FDA, order vacating the laboratory-developed tests final rule, 31 March 2025",
+      "U.S. FDA roadmap on phasing out animal testing requirements for monoclonal antibodies and other drugs, 10 April 2025"
+    ],
+    "data_validation": "The headline is one publisher's own base advanced at its own rate, labelled as interpolation: BCC Research's $31.0 billion for 2025 becomes $35.03 billion for 2026 and $72.93 billion for 2032 at 13.0%. The internal check is that the modelled 2030 point, $57.12 billion, sits 0.14% from BCC's separately published $57.2 billion for 2030. BCC was chosen because it publishes the narrowest stated scope and is the only house in the set to publish an explicit exclusion list (protein structural analysis and protein-expression products are out of scope), which makes it the most checkable, and because it carries the lowest base among dated full-scope series. Three grounding calculations were run against audited and reported FY2025 revenue. First, one publisher's proteomics instruments line of $8.0 billion for 2025 is 1.06x Thermo Fisher Scientific's entire Analytical Instruments segment revenue of $7.55 billion, a business spanning chromatography, mass spectrometry, microscopy and chemical analysis across all applications. Second, that publisher's $41.2 billion total is 3.75x the combined $10.99 billion of Thermo Fisher's Analytical Instruments segment and the whole of Bruker, and 92.5% of Thermo Fisher's entire $44.56 billion company revenue. Third, the summed disclosed FY2025 revenue of the next-generation proteomics platform sector — Quanterix $138.9 million, SomaLogic approximately $99.7 million derived as the difference between Standard BioTools' preliminary combined-company revenue of about $185 million and its $85.3 million of continuing operations, Standard BioTools continuing $85.3 million, and Seer $16.6 million — is $340.5 million, or 0.83% of the $41.2 billion headline, a factor of 121. Illumina's $350 million cash price for SomaLogic is roughly equal to that whole sum. These are scope and plausibility tests, not market estimates: they establish that the published figures measure protein-related laboratory and service spend rather than a purchasable platform market, and they do not establish the correct figure for either reading. The SomaLogic line is our own subtraction between two of one company's disclosures; Olink, Nautilus, Bruker's proteomics line and all private vendors sit outside the $340.5 million sum, so it is a floor. Regional, country and segment shares are published as empty or as plain strings because the only source offering them presents no method, and no vendor market share is published because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the proteomics market?",
+      "answer": "We publish $35.03 billion for 2026, rising to $72.93 billion by 2032 at 13.0%, derived from BCC Research's published $31.0 billion for 2025 and its own 13.0% rate. Published 2025 estimates run from $31.0 billion to $41.97 billion — a narrow 1.35x spread. The important qualification is what that figure counts: protein-related instruments, services and a consumables category that one publisher defines to include buffers, chromatography columns and electrophoresis gels."
+    },
+    {
+      "question": "Why do the publishers agree with each other here when they disagree elsewhere?",
+      "answer": "Because they are all doing the same sum. Each adds up protein-related laboratory and service spend across pharma, academia and diagnostics. Agreeing on the answer to the same wide question is not the same as the question being the right one. None of them sizes the next-generation proteomics platform market separately, and that is the market the sector's investment narrative concerns."
+    },
+    {
+      "question": "How big is the addressable market for a proteomics platform company?",
+      "answer": "Far smaller than the headline. The entire disclosed FY2025 revenue of the publicly reporting pure-play sector — Quanterix $138.9 million, SomaLogic approximately $99.7 million, Standard BioTools continuing operations $85.3 million and Seer $16.6 million — is $340.5 million. That is 0.83% of a $41.2 billion published total, a factor of 121. The figure is a floor, since Olink, Bruker's proteomics line and private vendors are not in it, but it would have to be wrong by two orders of magnitude for the published totals to be describing the same thing."
+    },
+    {
+      "question": "Can the $41 billion figure be checked against anything?",
+      "answer": "Yes, and it does not survive. That publisher puts proteomics instruments alone at $8.0 billion for 2025. Thermo Fisher Scientific's entire Analytical Instruments segment — chromatography, mass spectrometry, electron microscopy and chemical analysis, sold into pharma, academia, semiconductors, forensics and environmental testing — was $7.55 billion in FY2025. The proteomics instrument line is being valued at more than the whole instrument business of the world's largest analytical-instrument company, in which proteomics is a minority application."
+    },
+    {
+      "question": "What does Illumina's purchase of SomaLogic tell us about the market's size?",
+      "answer": "A great deal. Illumina paid $350 million in cash plus up to $75 million in milestones for one of the two leading affinity-proteomics platforms, with the deal announced in June 2025 and completed on 30 January 2026. The cash consideration is roughly equal to the entire disclosed annual revenue of the pure-play proteomics sector, and 0.85% of a $41.2 billion published market. Acquirers price what they can sell, not what the market reports say exists."
+    },
+    {
+      "question": "Which company leads proteomics?",
+      "answer": "Thermo Fisher Scientific, by a wide margin, through mass spectrometry and the Olink affinity platform — but it discloses no proteomics split, so no share can be stated and we assign none. Among independents, Bruker's timsTOF line competes in mass spectrometry (inside a $1.21 billion BSI CALID segment) and Quanterix is the largest disclosing pure-play at $138.9 million of FY2025 revenue."
+    },
+    {
+      "question": "What would make proteomics grow faster than 13%?",
+      "answer": "Three identifiable things, none of them an extrapolation. Population-scale plasma proteomics on biobank cohorts, where one contract changes a platform company's revenue scale. Reimbursed clinical proteomic testing, which barely exists today and which the March 2025 vacatur of FDA's laboratory-developed test rule makes cheaper to pursue but does not fund. And regulatory adoption of proteomic safety readouts under FDA's April 2025 new approach methodologies roadmap, which encourages but does not require their use in IND submissions."
+    }
+  ],
+  "seo": {
+    "meta_title": "Proteomics Market Size, Share & Forecast to 2032",
+    "meta_description": "Proteomics market at $35.03B in 2026, reaching $72.93B by 2032 at 13.0% — and why the disclosed pure-play platform sector is 121x smaller than the headline.",
+    "keywords": [
+      "proteomics market",
+      "proteomics market size",
+      "mass spectrometry proteomics",
+      "affinity proteomics",
+      "SomaLogic Illumina acquisition",
+      "plasma proteomics"
+    ]
+  },
+  "executive_summary": "Proteomics is the market in this corpus where the publishers agree and are collectively measuring the wrong thing. Estimates for 2025 run from BCC Research's $31.0 billion to $41.97 billion — a spread of only 1.35x, and published CAGRs cluster between 12.0% and 16.55%. We publish BCC's series, the narrowest stated scope and the only one with an explicit exclusion list: $35.03 billion in 2026 to $72.93 billion by 2032 at 13.0%, interpolated from BCC's own base and rate and checked against BCC's own 2030 figure to within 0.14%. What the agreement conceals is visible the moment the totals meet audited revenue. One publisher puts proteomics instruments alone at $8.0 billion for 2025; Thermo Fisher Scientific's entire Analytical Instruments segment, spanning chromatography, mass spectrometry, microscopy and chemical analysis across every application, was $7.55 billion in FY2025. The same publisher's $41.2 billion total is 3.75x the combined revenue of that segment and the whole of Bruker, and 92.5% of Thermo Fisher's entire company. Meanwhile the whole disclosed revenue of the next-generation proteomics platform sector — Quanterix, SomaLogic, Standard BioTools and Seer — is $340.5 million, or 0.83% of the headline. Illumina's cash price for SomaLogic, $350 million, is roughly the whole of it. The published figures are a measure of how much protein work the world does, including buffers and gels. They are not an addressable market, and nobody writing them says so.",
+  "key_highlights": [
+    "Headline: $35.03 billion in 2026 to $72.93 billion in 2032 at 13.0%, interpolated from BCC Research's own published 2025 base and rate",
+    "Published 2025 estimates span only 1.35x ($31.0B-$41.97B) — agreement that reflects a shared method, not a measured market",
+    "One publisher's proteomics instruments line, $8.0 billion for 2025, exceeds Thermo Fisher's entire $7.55 billion Analytical Instruments segment across all applications",
+    "That publisher's $41.2 billion total is 3.75x Thermo Fisher Analytical Instruments plus the whole of Bruker, and 92.5% of Thermo Fisher's entire $44.56 billion company revenue",
+    "Disclosed FY2025 revenue of the pure-play platform sector is $340.5 million — 0.83% of the headline, a factor of 121",
+    "Illumina paid $350 million cash for SomaLogic, roughly equal to the entire disclosed revenue of that sector",
+    "One publisher's consumables category, 69.4% of its total, is defined to include buffers, chromatography columns and electrophoresis gels"
+  ],
+  "market_context": "Proteomics has two meanings and one market size, which is the source of nearly every error made about it. In the first meaning, proteomics is what laboratories do to proteins: run them on gels, separate them on columns, quantify them with antibodies, identify them on mass spectrometers. On that reading a $31-41 billion global figure is defensible, because it is counting a very large base of recurring laboratory supplies and services — and one publisher says so explicitly, defining its consumables category to include buffers and electrophoresis gels. In the second meaning, proteomics is a class of new high-plex platforms intended to do for proteins what sequencing did for nucleic acids. That is what the sector's venture funding, its acquisitions and its press releases are about, and it is measurable: $340.5 million of disclosed FY2025 revenue across Quanterix, SomaLogic, Standard BioTools and Seer. The two readings differ by about 100x. The supplier structure reinforces the point: the companies that actually hold the revenue — Thermo Fisher, Bruker, Danaher, Agilent — report proteomics nowhere, because for them it is an application of instruments sold into many markets. The companies that are proteomics report revenue in the tens of millions.",
+  "forecast_analysis": "Our 13.0% is the bottom of the published range, applied to the lowest dated full-scope base, and the resulting series reproduces BCC Research's own 2030 figure to within 0.14% — so it is faithful to its source. Whether it is a useful forecast depends entirely on which market the reader has in mind. For protein-related tools and consumables spend, 13.0% is a claim that a very broad laboratory-supply base compounds at roughly twice nominal GDP, in a period when the largest supplier's instrument segment grew 1% reported and was flat organically, and the second-largest declined 4% organically. That is a forecast about recovering research budgets and about consumables pull-through, and it is the same bet the single-cell and spatial forecasts make. For the platform sector, the published rate is close to meaningless: a 13% rate on a $340.5 million disclosed base gives $728 million by 2032, which is a different report. The two identifiable things that could break the pattern are both step changes rather than rates — population-scale plasma proteomics contracts attached to biobank cohorts, and regulatory uptake of proteomic readouts under FDA's April 2025 new approach methodologies roadmap, which encourages their inclusion in IND submissions without requiring it or qualifying any specific assay. Readers should hold the two numbers separately and never apply a published CAGR across the boundary.",
+  "reader_takeaways": [
+    "Decide which proteomics you mean before quoting a size. Protein-related tools and consumables spend is $31-42 billion; the disclosed next-generation platform sector is $340.5 million. The gap is about 100x and no published report flags it.",
+    "Test any proteomics headline against instrument-company revenue. A $41.2 billion market implies an instruments line larger than Thermo Fisher's entire Analytical Instruments segment, which covers far more than proteomics.",
+    "Read the consumables definition. When buffers, chromatography columns and electrophoresis gels are inside it, the total is measuring laboratory activity, not a platform opportunity.",
+    "Use the acquisition prices as the reality check. Illumina paid $350 million in cash for SomaLogic — roughly the whole pure-play sector's annual revenue, and under 1% of the published market.",
+    "Expect the sector to keep consolidating into sequencing and diagnostics companies, which also means the public disclosure this analysis depends on will keep shrinking."
+  ]
+}

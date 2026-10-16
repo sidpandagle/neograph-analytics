@@ -264,6 +264,24 @@ async function main() {
     return;
   }
 
+  if (cmd === 'audit') {
+    // SEO field lengths across the whole corpus. Two short text columns only.
+    const { data, error } = await client()
+      .from('neograph_reports').select('slug,meta_title,meta_description');
+    if (error) { console.error(error.message); process.exit(1); }
+    const longTitle = data.filter((r) => (r.meta_title ?? '').length > 60);
+    const longDesc = data.filter((r) => (r.meta_description ?? '').length > 160);
+    const shortDesc = data.filter((r) => (r.meta_description ?? '').length < 70);
+    console.log(`rows: ${data.length}`);
+    console.log(`meta_title  > 60 : ${longTitle.length}`);
+    longTitle.forEach((r) => console.log(`  ${String((r.meta_title ?? '').length).padStart(3)}  ${r.slug}`));
+    console.log(`meta_desc  > 160 : ${longDesc.length}`);
+    longDesc.forEach((r) => console.log(`  ${String((r.meta_description ?? '').length).padStart(3)}  ${r.slug}`));
+    console.log(`meta_desc   < 70 : ${shortDesc.length}`);
+    shortDesc.forEach((r) => console.log(`  ${String((r.meta_description ?? '').length).padStart(3)}  ${r.slug}`));
+    return;
+  }
+
   if (cmd === 'industries') {
     const { data, error } = await client().from('neograph_reports').select('industry');
     if (error) { console.error(error.message); process.exit(1); }
@@ -335,7 +353,7 @@ async function main() {
     return;
   }
 
-  console.log('usage: node scripts/report-db.mjs <count|slugs|dump|check|publish> [args]');
+  console.log('usage: node scripts/report-db.mjs <count|slugs|industries|audit|dump|check|publish> [args]');
   process.exit(2);
 }
 

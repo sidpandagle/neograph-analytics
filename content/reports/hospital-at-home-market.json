@@ -1,0 +1,258 @@
+{
+  "report_id": "hospital-at-home-market",
+  "slug": "hospital-at-home-market",
+  "title": "Hospital-at-Home Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 9.27,
+    "forecast_value": 22.47,
+    "cagr": 15.9
+  },
+  "executive_summary": "Published estimates of the hospital-at-home market disagree about its size by more than six times and about its growth rate by more than two -- and this is the rare market in which the growth disagreement is as real as the scope disagreement. Base-year values for 2025 run from $5.62 billion to $37.18 billion, a 6.62x spread; excluding one explicitly narrower technology sub-scope, $8.0 billion to $37.18 billion is still 4.65x. Published compound rates run from 7.8% to 18.10%, a 2.32x spread. The house with the largest base has the slowest growth and the house with the smallest comparable base has one of the fastest. Those are not two views of one market; they are a mature services market and an emerging technology market sharing a name.\n\nOne house states its boundary in the negative, which is what makes this report possible. Astute Analytica defines its scope as acute, inpatient-level care delivered at home as a substitute for hospital admission -- programme services, enabling platforms and monitoring technology -- and explicitly excludes routine home health, hospice and standard outpatient telehealth. Nobody else excludes anything, and Meticulous Research's own segmentation lists post-acute care and chronic care alongside acute care as service types. The $27 to $37 billion figures are reachable only by letting post-acute and chronic home care inside the boundary.\n\nThe United States runs this as an explicit Medicare waiver and counts both the sites and the patients, which makes the arithmetic checkable. CMS reported in December 2024 that 366 hospitals had participated in the Acute Hospital Care at Home initiative, serving over 31,000 patients in home settings as of October 2024; 373 hospitals across 140 health systems in 37 states had been approved as of January 2026. Taking CMS national health expenditures of $1,634.7 billion for hospital care over the 35,658,583 admissions in the 2024 AHA Annual Survey gives an upper bound of $45,843 per inpatient episode. Even the smallest comparable published figure then implies about 202,000 acute-at-home episodes worldwide every year -- roughly 6.5 times the entire cumulative US programme experience, annually. The largest implies 811,000 a year, about 26 times it. Only the narrowest published scope produces numbers the register can support.",
+  "market_context": "Hospital-at-home is not a technology and barely a product. It is a reimbursement permission. The clinical model dates to the mid-1990s, when Johns Hopkins Medicine first adopted it, and Johns Hopkins reports savings of 19% to 30% against in-hospital care. What changed in 2020 was not the medicine but the payment: CMS created the Acute Hospital Care at Home waiver in November 2020, allowing Medicare-certified hospitals to deliver inpatient-level care in the home, for patients admitted from the emergency department or transferred from inpatient beds.\n\nThat waiver is the market, in the United States at least, and it is countable. CMS's first approved list in April 2021 recorded 53 systems and 116 hospitals in 29 states. By October 2024, 366 hospitals had participated, serving over 31,000 patients in home settings. CMS's September 2024 study to Congress covered 332 participating hospitals across 38 states from November 2020 through July 2024 and found lower mortality and lower post-discharge spending than traditional inpatient care, with positive patient and caregiver feedback. As of January 2026, 373 hospitals across 140 health systems in 37 states had been approved; the AMA, writing in March 2026, recorded 366 programmes across 139 health systems in 37 states. Approved hospitals report through the CMS QualityNet portal.\n\nIndividual programme scale puts the market sizes in perspective. Mass General Brigham operates one of the largest programmes in the country, treating an average of 50 to 60 patients a day across five hospitals and having treated over 7,000 patients since January 2022; an earlier snapshot recorded nearly 1,000 admissions in a year at a capacity of 33 concurrent patients, with a plan to reach 45. At $45,843 per episode an upper bound, a 1,000-admission programme bills about $46 million a year. Several published market sizes imply that every approved programme in the country averages more than twice that."
+  ,
+  "forecast_analysis": "The curve shown here is modelled at a constant 15.9% rate. Astute Analytica publishes $8.0 billion for 2025 and $35 billion for 2035 with a stated 15.9% CAGR over 2026-2035, and those endpoints are internally consistent: $8.0 billion to $35 billion over ten years implies 15.91%. The 2026 base of $9.27 billion is the published 2025 value advanced one year at that rate, and the 2032 endpoint of $22.47 billion continues it. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen because it is the only one that defines its boundary by saying what it excludes -- routine home health, hospice and standard outpatient telehealth -- and the only one whose implied episode counts and per-programme revenues the CMS register can support. It is also the low end of the comparable range, and this report says so plainly: readers who have been quoted $27 to $37 billion have been quoted a home-care market with a hospital-at-home label.\n\nThe risk the forecast cannot price is statutory, and it runs through the middle of the forecast window. Section 6210 of the Consolidated Appropriations Act, 2026 extended the AHCAH waivers and flexibilities to 30 September 2030, after the government spending package passed on 3 February 2026 and was signed in early February; CMS confirmed the extension in a fact sheet dated 17 March 2026. The extension also decoupled the programme's authority from government-funding deadlines, which ended a cycle of short-term extensions -- a March 2025 extension had carried the programme only to 30 September 2025, and the waivers lapsed during the subsequent partial government shutdown.\n\nSo the restraint is not imminent expiry. It is that this programme has already lapsed once within the last eighteen months, for reasons unrelated to its clinical performance, and that its authority is a five-year statutory window rather than a permanent benefit category. Every published forecast in this market runs past 30 September 2030. None of them discloses what happens on 1 October 2030. A health system building capacity on a 16% compound forecast is building it on a waiver with an end date inside the forecast period.",
+  "market_overview": {
+    "summary": "On the only scope in this set that states what it excludes, the hospital-at-home market is $9.27 billion in 2026, projected to $22.47 billion by 2032 at a 15.9% CAGR. Published base-year estimates for 2025 spread 6.62x, from $5.62 billion to $37.18 billion, and published growth rates spread 2.32x, from 7.8% to 18.10% -- so unlike most markets, the houses here disagree about growth as sharply as about size. Against the CMS Acute Hospital Care at Home register, which recorded 373 approved hospitals in January 2026 and over 31,000 patients served by October 2024, even the smallest comparable figure implies about 202,000 acute-at-home episodes worldwide a year, roughly 6.5 times the whole cumulative US programme experience.",
+    "key_trends": [
+      "Base-year estimates for 2025 spread 6.62x ($5.62 billion to $37.18 billion) and published CAGRs spread 2.32x (7.8% to 18.10%) -- the houses disagree about growth, not only about scope",
+      "Only one house states its boundary in the negative: Astute Analytica explicitly excludes routine home health, hospice and standard outpatient telehealth, while Meticulous Research's own segmentation lists post-acute and chronic care as service types",
+      "CMS recorded 366 hospitals having participated in the Acute Hospital Care at Home initiative and over 31,000 patients served in home settings as of October 2024; 373 hospitals across 140 health systems in 37 states had been approved as of January 2026",
+      "Taking CMS hospital care spending of $1,634.7 billion over 35,658,583 admissions gives an upper bound of $45,843 per inpatient episode, against which the largest published figure implies 811,000 acute-at-home episodes a year worldwide",
+      "Section 6210 of the Consolidated Appropriations Act, 2026 extended the waivers to 30 September 2030 and decoupled the programme from government-funding deadlines, after a March 2025 extension carried it only to 30 September 2025 and the waivers lapsed during a partial government shutdown",
+      "CMS's September 2024 study of 332 participating hospitals across 38 states found lower mortality and lower post-discharge spending than traditional inpatient care"
+    ],
+    "market_stage": "Emerging",
+    "adoption_level": "373 approved US hospitals across 140 health systems in 37 states; over 31,000 patients served in the first four years"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Statutory certainty for the first time: section 6210 of the Consolidated Appropriations Act, 2026 extended the Acute Hospital Care at Home waivers to 30 September 2030 and decoupled them from government-funding deadlines, ending a cycle of short-term extensions",
+      "Published clinical evidence from the payer itself: CMS's September 2024 study of 332 participating hospitals across 38 states found lower mortality and lower post-discharge spending than traditional inpatient care, with positive patient and caregiver feedback",
+      "A cost argument of long standing: Johns Hopkins, which first adopted the model in the mid-1990s, reports savings of 19% to 30% against in-hospital care",
+      "Inpatient capacity constraints: 907,216 staffed beds served 35,658,583 admissions in the 2024 AHA Annual Survey, and substituting at home releases the scarcest asset a hospital has",
+      "An approved base already in place to grow into: 373 hospitals across 140 health systems in 37 states have been approved, so expansion can come from utilisation at existing programmes rather than new approvals"
+    ],
+    "restraints": [
+      "The waiver expires on 30 September 2030, inside the forecast period of every published estimate in this market, and none of them discloses what happens the next day",
+      "The programme has already lapsed once: a March 2025 extension carried it only to 30 September 2025 and the waivers lapsed during the subsequent partial government shutdown, for reasons unrelated to clinical performance",
+      "Programme volumes are small against the forecasts: over 31,000 patients in the first four years across the whole United States, while the smallest comparable published figure implies about 202,000 episodes a year worldwide",
+      "Narrow eligibility: the waiver permits care only for patients admitted from the emergency department or transferred from inpatient beds, which excludes direct-to-home admission",
+      "Per-programme economics are thin at low census: Mass General Brigham, one of the largest programmes in the country, averages 50 to 60 patients a day, and most approved programmes are far smaller",
+      "Published sizes differing by more than six times, with growth rates differing by more than two, make this an unreliable basis for capital planning"
+    ],
+    "opportunities": [
+      "Utilisation growth inside the 373 already-approved programmes, which needs no new regulatory approval and no new site build",
+      "Command-centre platforms and remote monitoring, named in Astute Analytica's own offering segmentation and the part of the market that scales without clinical headcount",
+      "Logistics and supply, the least contested part of the value chain and the operational bottleneck most programmes report first",
+      "Non-US health systems with established home-hospital traditions in Spain, Catalonia, Australia and the United Kingdom, where the service exists without a waiver and is not counted in the US register",
+      "Payer-led programmes outside Medicare fee-for-service, where eligibility is a contract term rather than a waiver condition and direct-to-home admission is possible"
+    ],
+    "challenges": [
+      "No participant discloses hospital-at-home revenue: Medically Home, DispatchHealth, Inbound Health and SENA Health are private, and Contessa sits inside Amedisys with no segment disclosure",
+      "The CMS patient count of over 31,000 is cumulative from November 2020 to October 2024 and is the most recent figure we could locate, so current annual volume is not publicly measurable",
+      "Counting rules differ even between recent sources: 373 hospitals across 140 health systems (January 2026) against 366 programmes across 139 health systems (March 2026), which are different retrieval dates and probably different units",
+      "Clinical staffing at home is the binding constraint on census, and it does not benefit from the economies that make inpatient units efficient",
+      "Scope inconsistency means most published hospital-at-home figures are home-care figures, which misdirects investment toward services the waiver does not cover"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Care delivery services",
+      "Enablement platforms and command centres",
+      "Remote monitoring devices",
+      "Logistics and supply",
+      "Software and integration"
+    ],
+    "by_application": [
+      "Acute hospital substitution",
+      "Post-acute and transitional care",
+      "Chronic exacerbation management",
+      "Palliative care",
+      "Cardiology",
+      "Respiratory",
+      "Infectious disease",
+      "Post-surgical recovery"
+    ],
+    "by_end_user": [
+      "Hospitals and health systems",
+      "Payers and insurers",
+      "Home health providers",
+      "Government and national health systems",
+      "At-risk provider groups"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 9.27 },
+    { "year": 2027, "value": 10.74 },
+    { "year": 2028, "value": 12.45 },
+    { "year": 2029, "value": 14.43 },
+    { "year": 2030, "value": 16.73 },
+    { "year": 2031, "value": 19.39 },
+    { "year": 2032, "value": 22.47 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR from the published 2025 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Mass General Brigham",
+      "headquarters": "United States",
+      "market_position": "Operator of one of the largest hospital-at-home programmes in the United States",
+      "description": "Runs Home Hospital across five hospitals, treating an average of 50 to 60 patients a day with inpatient-level care at home and having treated over 7,000 patients since January 2022. An earlier snapshot recorded nearly 1,000 admissions in a year at a capacity of 33 concurrent patients, with a plan to expand to 45 daily. The system has since extended the model into dementia and behavioural health trials. It is a provider rather than a vendor, so it has no market share in the commercial sense, and its scale is cited here as an upper reference point rather than a typical programme."
+    },
+    {
+      "company": "Johns Hopkins Medicine",
+      "headquarters": "United States",
+      "market_position": "Originator of the clinical model, and the source of its cost evidence",
+      "description": "First adopted hospital at home in the mid-1990s in Baltimore, three decades before the Medicare waiver made it reimbursable at scale. Johns Hopkins reports savings of 19% to 30% compared with in-hospital care, which remains the most-cited economic case for the model. As an academic health system it is a provider rather than a market participant with a share."
+    },
+    {
+      "company": "Medically Home",
+      "headquarters": "United States",
+      "market_position": "Enablement platform and command-centre vendor",
+      "description": "Supplies the technology, command centre and logistics layer that lets a health system run acute care at home rather than building it itself -- the enablement category that Astute Analytica's segmentation separates from care delivery services. Privately held, publishes no financials, and no revenue or share figure exists for it."
+    },
+    {
+      "company": "Contessa Health (Amedisys)",
+      "headquarters": "United States",
+      "market_position": "Joint-venture operator model inside a home health parent",
+      "description": "Builds hospital-at-home and skilled-nursing-at-home programmes with health systems under joint-venture and risk-sharing structures. Reported within Amedisys with no hospital-at-home segment disclosure, so neither its revenue nor its share can be stated. Its position illustrates why the market is hard to size: the same parent sells routine home health, which is exactly what the one credible scope definition excludes."
+    },
+    {
+      "company": "DispatchHealth",
+      "headquarters": "United States",
+      "market_position": "In-home acute care provider operating across the waiver boundary",
+      "description": "Delivers in-home urgent and acute care, including hospital-at-home programmes run with health system partners. Privately held with no published financials. Because much of its activity sits outside the waiver's requirement that patients be admitted from the emergency department or transferred from inpatient beds, its revenue would not map cleanly onto this market's scope even if it were disclosed."
+    },
+    {
+      "company": "Inbound Health",
+      "headquarters": "United States",
+      "market_position": "Challenger enablement and risk-bearing operator",
+      "description": "Builds and operates hospital-at-home and skilled-nursing-at-home programmes for health systems and payers, taking on parts of the clinical and financial risk. Privately held, discloses no revenue, and no share figure exists for it."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2026,
+      "event": "Confirmed in a fact sheet dated 17 March 2026 that section 6210 of the Consolidated Appropriations Act, 2026 extended the waivers and flexibilities associated with the Acute Hospital Care at Home initiative until 30 September 2030. The spending package passed on 3 February 2026 and was signed into law in early February. The extension decoupled the programme's statutory authority from government-funding deadlines, ending a cycle of short-term extensions."
+    },
+    {
+      "company": "American Medical Association",
+      "year": 2026,
+      "event": "Reported on 2 March 2026 that 366 programmes across 139 health systems in 37 states had been approved to provide acute hospital care at home, following the five-year extension. A separate January 2026 count put the figure at 373 hospitals across 140 health systems in 37 states; the two differ by retrieval date and probably by counting unit."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2024,
+      "event": "Published 'Lessons from CMS' Acute Hospital Care at Home Initiative' on 17 December 2024, recording that 366 hospitals had participated in the initiative, serving over 31,000 patients in home settings as of October 2024, and that the accompanying study covered patients served by 332 participating hospitals across 38 states from November 2020 through July 2024."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2024,
+      "event": "Released the Report on the Study of the Acute Hospital Care at Home Initiative on 30 September 2024, as required by the Consolidated Appropriations Act, 2023. The study found lower mortality rates and lower post-discharge spending for at-home acute care than for traditional inpatient care, together with positive feedback from patients and caregivers."
+    },
+    {
+      "company": "Mass General Brigham",
+      "year": 2026,
+      "event": "Launched Home Hospital trials extending the model into dementia and behavioural health, reported on 19 August 2026, from a programme already averaging 50 to 60 patients a day across five hospitals."
+    }
+  ],
+  "regulatory_landscape": [
+    "CMS Acute Hospital Care at Home waiver, created November 2020 under section 1135 and hospital conditions of participation flexibilities, permitting Medicare-certified hospitals to furnish inpatient-level care in the home",
+    "Section 6210 of the Consolidated Appropriations Act, 2026, which extended the AHCAH waivers and flexibilities to 30 September 2030 and decoupled the programme's authority from government-funding deadlines",
+    "Eligibility condition under the waiver: patients may be admitted only from the emergency department or transferred from an inpatient bed, which excludes direct-to-home admission",
+    "CMS QualityNet reporting obligations, through which approved hospitals submit programme information",
+    "Consolidated Appropriations Act, 2023, which extended the programme and required CMS to study and report on it by 30 September 2024",
+    "Medicare hospital conditions of participation at 42 CFR Part 482, including the nursing services and physical environment requirements that the waiver specifically relaxes",
+    "State hospital licensure and scope-of-practice law, which governs whether an at-home inpatient bed is recognised at all and is not harmonised across the states in which the 373 approved hospitals operate"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of government registers, government statistics and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "CMS, 'Lessons from CMS' Acute Hospital Care at Home Initiative', CMS Newsroom blog, 17 December 2024: 366 hospitals had participated, serving over 31,000 patients in home settings as of October 2024; the study covered 332 participating hospitals across 38 states from November 2020 through July 2024",
+      "CMS, 'Fact Sheet: Report on the Study of the Acute Hospital Care at Home Initiative', 30 September 2024, required by the Consolidated Appropriations Act, 2023: lower mortality and lower post-discharge spending than traditional inpatient care",
+      "CMS, approved list of hospitals under the Acute Hospital Care at Home programme as of 5 April 2021: 53 systems and 116 hospitals in 29 states",
+      "Chartis, '10 years of continuous hospital at home funding: Congress extends waiver': 373 hospitals across 140 health systems and 37 states approved as of January 2026; extension through 2030 with passage of the spending package on 3 February 2026; the March 2025 extension had been a stopgap to 30 September 2025",
+      "American Medical Association, 'Lawmakers extend CMS hospital-at-home waiver for five years', 2 March 2026: 366 programmes across 139 health systems in 37 states approved; and 'Hospital at home saves lives and money: CMS report', recording 358 approved hospitals across 137 health systems in 39 states since November 2020",
+      "AMA National Advocacy Update, 6 February 2026: extension to 30 September 2030 under section 6210 of the Consolidated Appropriations Act, 2026",
+      "Federal Register notice 2026-07583: approved hospitals submit information through the CMS QualityNet portal, and the waiver permits care only for patients admitted from the emergency department or transferred from inpatient beds",
+      "CMS, National Health Expenditure Fact Sheet (2024 data): hospital care $1,634.7 billion; physician and clinical services $1,109.7 billion; total NHE $5.3 trillion. American Hospital Association, Fast Facts on U.S. Hospitals, 2024 AHA Annual Survey: 6,100 hospitals, 5,121 community hospitals, 907,216 staffed beds, 35,658,583 admissions",
+      "AHA Center for Health Innovation Market Scan, 9 April 2024: over 7,000 patients treated since January 2022 across five Mass General Brigham hospitals; Johns Hopkins savings of 19% to 30% against in-hospital care; model first adopted in the mid-1990s by Johns Hopkins Medicine. Becker's Hospital Review: Mass General Brigham averaging 50 to 60 patients a day",
+      "Astute Analytica, hospital at home market, report AA09261984, page last updated 10 September 2026: $8.0 billion (2025) to $35 billion (2035) at 15.9% CAGR 2026-2035, historic period 2020-2024, scope explicitly excluding routine home health, hospice and standard outpatient telehealth",
+      "Meticulous Research report 6707 published June 2026 ($27.30 billion 2026 to $159.70 billion 2036 at 17.6%), Roots Analysis ($29.0 billion 2026 to $199.1 billion 2040 at 14.8%), The Insight Partners via a GII Korea listing ($37.18 billion 2025 to $72.84 billion 2034 at 7.8%), Global Reports Store via a DistilInfo summary of 20 April 2026 ($5.62 billion 2025 to $17.95 billion 2032 at 18.10%, technology scope) and MarketDigits via GlobeNewswire 16 November 2023 ($14.11 billion 2023 to $36.85 billion 2030 at 14.7%) -- the last three reached us through third-party summaries rather than primary releases and are flagged as such"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Two plausibility tests were run against the CMS Acute Hospital Care at Home register. The episode denominator is CMS hospital care spending of $1,634.7 billion for 2024 divided by the 35,658,583 admissions in the 2024 AHA Annual Survey, giving $45,843 per admission; this is an upper bound on an average inpatient episode because NHE hospital care spending also includes hospital outpatient activity while the denominator counts only admissions, which makes both tests more severe rather than less. First, dividing the published figures by $45,843 implies about 202,211 acute-at-home episodes a year worldwide at the scope published here, 595,509 at Meticulous Research's $27.30 billion and 811,027 at The Insight Partners' $37.18 billion, against a US programme that served over 31,000 patients in total across its first four years -- so even the smallest comparable figure requires roughly 6.5 times the whole cumulative US experience every year, and the largest about 26 times it. Second, dividing by the 373 approved US programmes gives $24,852,547 per programme at the scope published here, $73,190,349 at Meticulous and $99,678,284 at The Insight Partners, all upper bounds because they place global numerators over a US-only denominator; for comparison, a 1,000-admission programme bills about $46 million a year at the episode figure above, and Mass General Brigham, one of the largest programmes in the country, averages 50 to 60 patients a day. Neither test establishes the correct market size and neither is offered as an estimate; each is a division of two differently scoped published numbers and is labelled as such. The $45,843 figure is a denominator for a plausibility test and not a hospital-at-home episode price. The 31,000-patient figure is cumulative from November 2020 to October 2024 and is the most recent CMS count located. The 2026 base and 2032 endpoint are Astute Analytica's published 2025 value advanced at its published 15.9% rate, not separately published observations."
+  },
+  "faqs": [
+    {
+      "question": "How big is the hospital-at-home market?",
+      "answer": "$9.27 billion in 2026 rising to $22.47 billion by 2032 at 15.9%, on the only scope in this set that states what it excludes. Published base-year estimates for 2025 range from $5.62 billion to $37.18 billion, a 6.62x spread, and growth rates from 7.8% to 18.10%. Readers who have been quoted $27 to $37 billion have been quoted a home-care market with a hospital-at-home label, because every house except one lets post-acute and chronic home care inside the boundary."
+    },
+    {
+      "question": "Has the Medicare hospital-at-home waiver expired?",
+      "answer": "No. Section 6210 of the Consolidated Appropriations Act, 2026 extended the Acute Hospital Care at Home waivers to 30 September 2030, after the spending package passed on 3 February 2026; CMS confirmed this in a fact sheet dated 17 March 2026, and the extension decoupled the programme from government-funding deadlines. But the programme has already lapsed once: a March 2025 extension carried it only to 30 September 2025 and the waivers lapsed during the subsequent partial government shutdown. Every published forecast runs past 30 September 2030 and none says what happens then."
+    },
+    {
+      "question": "How can you check whether a hospital-at-home market size is plausible?",
+      "answer": "Divide it by the number of acute-at-home episodes it would require. CMS hospital care spending of $1,634.7 billion over 35,658,583 admissions gives an upper bound of $45,843 per inpatient episode. The figure published here implies about 202,000 episodes a year worldwide; the largest published figure implies 811,000. The entire US Acute Hospital Care at Home programme served over 31,000 patients across its first four years. Non-US programmes are real and in places older, so a global figure above the US count is expected -- twenty-six times it, annually, is not."
+    },
+    {
+      "question": "How many hospitals are approved for hospital-at-home?",
+      "answer": "373 hospitals across 140 health systems in 37 states as of January 2026; the AMA, writing in March 2026, recorded 366 programmes across 139 health systems in 37 states. The two differ by retrieval date and probably by counting unit, and neither should be read as a trend. For context, CMS's first approved list in April 2021 recorded 53 systems and 116 hospitals in 29 states, and 366 hospitals had participated by October 2024 while serving over 31,000 patients in total."
+    },
+    {
+      "question": "Who leads the hospital-at-home market?",
+      "answer": "The question does not have a commercial answer yet. The visible leaders are providers, not vendors: Mass General Brigham averages 50 to 60 patients a day across five hospitals and Johns Hopkins originated the model in the mid-1990s. On the supply side, Medically Home, DispatchHealth, Inbound Health and SENA Health are private and disclose nothing, and Contessa sits inside Amedisys with no segment breakout. No participant discloses hospital-at-home revenue, so any share percentage you are shown is unsourced."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because the United States is the only jurisdiction with a complete public register of approved programmes, and no comparable register exists anywhere else. That asymmetry is enough to test a global figure for plausibility and nowhere near enough to apportion one. A US-only market size is especially tempting here and especially unavailable: no named source publishes one on this scope, and we will not derive one by splitting a global figure."
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates for 2025 spread 6.62x ($5.62 billion to $37.18 billion) and published CAGRs spread 2.32x (7.8% to 18.10%) -- the growth disagreement is as real as the scope disagreement",
+    "Only one house states its boundary in the negative, excluding routine home health, hospice and standard outpatient telehealth; the headline here uses that scope",
+    "CMS recorded 366 hospitals participating and over 31,000 patients served in home settings as of October 2024; 373 hospitals across 140 health systems in 37 states were approved as of January 2026",
+    "An upper-bound episode value of $45,843 (CMS hospital care spending over AHA admissions) means the largest published figure implies 811,027 acute-at-home episodes a year -- about 26 times the whole cumulative US programme experience",
+    "Per approved programme, the published figures imply $24.9 million to $99.7 million a year, against a 1,000-admission programme that bills about $46 million",
+    "Section 6210 of the Consolidated Appropriations Act, 2026 extended the waivers to 30 September 2030 -- inside the forecast period of every published estimate, and none of them says what happens next",
+    "The waivers lapsed once already, during a partial government shutdown after a March 2025 extension carried the programme only to 30 September 2025"
+  ],
+  "reader_takeaways": [
+    "Before accepting a hospital-at-home market size, check whether the scope excludes routine home health, hospice and outpatient telehealth -- only one published series does, and it is the smallest comparable figure in the set",
+    "Use the CMS register as your own sanity check: divide any figure you are given by about $45,843 per episode and ask whether the implied global episode count is credible against a US programme that served 31,000 patients in four years",
+    "Treat 30 September 2030 as a hard planning date: the waiver extension runs out inside every published forecast period, and the programme has already lapsed once for non-clinical reasons",
+    "Plan for utilisation growth, not approvals: 373 programmes are already approved, and the binding constraint on volume is clinical staffing and census, not permission",
+    "Treat any vendor share percentage for this market as unsourced, because Medically Home, DispatchHealth and Inbound Health are private and Contessa is reported inside Amedisys with no breakout"
+  ],
+  "seo": {
+    "meta_title": "Hospital-at-Home Market Size & Forecast 2032",
+    "meta_description": "Hospital-at-home estimates spread 6.6x. Divided by CMS's 373 approved programmes and 31,000 patients served, only the narrowest scope survives.",
+    "keywords": [
+      "hospital at home market",
+      "hospital at home market size",
+      "acute hospital care at home waiver",
+      "hospital at home forecast 2032",
+      "CMS AHCAH waiver 2030",
+      "home hospital program",
+      "acute care at home technology"
+    ]
+  }
+}

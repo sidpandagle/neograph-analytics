@@ -1,0 +1,258 @@
+{
+  "report_id": "advanced-wound-care-market",
+  "slug": "advanced-wound-care-market",
+  "title": "Advanced Wound Care Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 14.39,
+    "forecast_value": 22.33,
+    "cagr": 7.6
+  },
+  "executive_summary": "Published estimates of this market run from $13.37 billion to $24.4 billion for 2025 -- a 1.83x spread. For once that is not a disagreement, and one of the publishers resolves it outright.\n\nPS Market Research publishes the whole wound care market at $24.4 billion for 2025 and states, on its own page, that advanced products are 60% of it. Apply its own share to its own total and you get $14.64 billion of advanced wound care -- within 9.5% of MarketsandMarkets' independently built advanced-only figure of $13.37 billion. The gap between the two headline numbers is the gauze: traditional dressings, bandages, tape, sponges and abdominal pads, plus wound closure. Both houses are measuring consistently once you know which they are quoting. This report publishes the advanced reading, and states the all-wound-care figure alongside it rather than making readers look elsewhere.\n\nThe disclosed record supports the advanced figure rather than breaking it, which is unusual. Four companies disclose an advanced wound care revenue line for 2025: Smith+Nephew's Advanced Wound Management at $1,934 million, Solventum's Advanced Wound Care business at $1,883 million, Convatec's Advanced Wound Care at $753 million, and Mölnlycke at $2,375 million of whole-company revenue. Those sum to $6,945 million -- 51.9% of the published advanced market and 28.5% of the all-wound-care figure. Both ratios are the right shape, and both corroborate the 60% bridge.\n\nThe near-term risk is not in any of these estimates. CMS set a single payment rate of $127.14 per square centimetre for most skin substitutes from 1 January 2026. Convatec has already guided its InnovaMatrix revenue down from $69 million to about $20 million -- a 71% fall -- and booked a $72 million impairment. Skin substitutes are one of the three product families in every published advanced segmentation, and none of the five published CAGRs we surveyed was written with this in it.",
+  "market_context": "Advanced wound care is three different businesses sold to the same clinician. Dressings -- foam, film, hydrocolloid, alginate, antimicrobial, superabsorbent -- are a consumable with a few dollars of content per application. Therapy devices, principally negative pressure wound therapy, are a rented or single-use system with a service component: Smith+Nephew's PICO and RENASYS and Solventum's V.A.C. and Prevena lines sit here, and NPWT volume is what Solventum credits for its 2025 wound growth. Biologics -- skin substitutes, growth factors, collagen-based products -- are a reimbursed procedure product priced per square centimetre, and they behave nothing like the other two.\n\nThat third family is where the category's economics have just changed. CMS's CY2026 Physician Fee Schedule final rule set a single rate for most skin substitutes, reclassified most of them as incident-to supplies, and stopped paying for discarded quantities. It then withdrew the restrictive Local Coverage Determinations on 24 December 2025, widening access while cutting price. Convatec's chief financial officer put the reduction at about 80% for its own product.\n\nThe boundary question that moves published market sizes is different and simpler: whether traditional gauze and bandages are in the total. One publisher measures both and says advanced is 60%, which is the number that reconciles the literature.",
+  "forecast_analysis": "The headline comes from MarketsandMarkets, read from the publisher's own press-release page on 16 October 2026: $13.37 billion for 2025, $19.32 billion for 2030, a 7.6% CAGR. The 2026 base here is derived by advancing that published 2025 figure one year at the house's own stated rate (13.37 x 1.076 = 14.39), and the 2032 endpoint continues it (14.39 x 1.076^6 = 22.33). Both are interpolation and are labelled as such. Internal check: the implied rate between our endpoints is 7.60%, and interpolating forward lands 2030 on 19.29 against the published 19.32 -- a 0.15% difference.\n\nThis series was chosen because it is advanced-only by construction, with dressings, NPWT, debridement devices, biological skin substitutes and topical agents in its segmentation and no traditional category at all. PS Market Research's own 60% advanced share applied to its own 2026 total of $25.6 billion gives $15.36 billion, within 6.7% of our base -- two independently constructed estimates of the same scope agreeing inside 7%.\n\nTreat the upper half of the published CAGR range with caution for the next two years. The published rates we surveyed -- 4.8%, 5.6%, 5.6%, 6.6% and 7.6% -- predate the CMS skin substitute repricing, and one supplier has already guided the affected line down 71% for 2026. Price cut and coverage expansion pull in opposite directions here, and no published forecast has yet priced either.",
+  "market_overview": {
+    "summary": "Scoped explicitly to advanced wound care -- dressings, negative pressure wound therapy, debridement devices, biological skin substitutes and topical agents, excluding traditional gauze and wound closure -- the market is $14.39 billion in 2026, projected to $22.33 billion by 2032 at a 7.6% CAGR. The all-wound-care figure including traditional products is $25.6 billion for 2026 on PS Market Research's published series. The 1.83x gap between the two readings is the gauze, and it is quantified by one of the publishers itself, which states advanced at 60% of its own 2025 total.",
+    "key_trends": [
+      "Published 2025 estimates spread 1.83x ($13.37B advanced-only to $24.4B all wound care), and one publisher's own 60% advanced share reconciles the two to within 9.5%",
+      "Four companies disclose $6,945M of advanced wound care revenue for 2025, 51.9% of the published advanced market and 28.5% of all wound care",
+      "CMS set a single payment rate of $127.14 per square centimetre for most skin substitutes from 1 January 2026 and stopped paying for discarded quantities",
+      "Convatec has guided InnovaMatrix revenue from $69M in 2025 to about $20M in 2026, a 71% fall, and booked a $72M impairment on the CMS change",
+      "Negative pressure wound therapy is the growth engine in the disclosed record: Solventum credits NPWT volume and double-digit Prevena growth for its 2025 wound performance",
+      "The IDF counts 589 million adults with diabetes in 2025, rising to a projected 853 million by 2050, which is the demand driver nobody disputes"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in hospitals and wound care centres; expanding in homecare"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Diabetes prevalence: the IDF Diabetes Atlas 11th edition counts 589 million adults aged 20-79 with diabetes in 2025, 11.1% of adults, projected to 853 million by 2050",
+      "252 million people with diabetes are undiagnosed on the IDF's count, which is a pipeline of late-presenting complications including foot ulceration",
+      "Negative pressure wound therapy volume growth, cited by Solventum for its 2025 Advanced Wound Care performance alongside double-digit Prevena growth",
+      "Pressure injury prevention as a distinct product category, where Smith+Nephew's LEAF Patient Monitoring System is expanding the market rather than taking share",
+      "Shift of wound care into homecare and ambulatory settings, where single-use systems such as PICO displace capital equipment",
+      "CMS's withdrawal of its Local Coverage Determinations for skin substitutes on 24 December 2025, which widens national Medicare access to these products"
+    ],
+    "restraints": [
+      "The CMS skin substitute repricing: a single rate of $127.14 per square centimetre from 1 January 2026, with discarded quantities no longer separately billable",
+      "One supplier has already guided the affected revenue line down 71% for 2026 and impaired a $72M intangible, so the effect is realised rather than forecast",
+      "Advanced dressings are a commodity at the low end: Coloplast's Advanced Wound Dressings declined 6% in 2024/25, partly on a voluntary product return in China",
+      "Organic growth at the disclosing companies is low: Convatec's Advanced Wound Care was -0.4% organic in 2025 and Solventum's Q4 wound business +1.7% organic",
+      "Tariff, logistics and supply-agreement costs, which Solventum cites as pressure on segment operating margin"
+    ],
+    "opportunities": [
+      "Pressure injury prevention, where the product category barely exists yet and the clinical case is strongest",
+      "Low- and middle-income countries, home to 81% of people with diabetes on the IDF's count and almost entirely outside the advanced product base",
+      "Volume expansion from the Local Coverage Determination withdrawal, which could partly offset the skin substitute price cut -- a trade nobody has yet measured",
+      "Evidence generation: Convatec expects randomised controlled trials for InnovaMatrix to publish later in 2026, and reimbursement now rewards evidence over product count",
+      "Consolidation of the long tail -- Integra, Organogenesis, MiMedx, Essity/BSN, Urgo, Hartmann -- which holds roughly half the advanced market between them"
+    ],
+    "challenges": [
+      "No vendor share is disclosed by any player, and Coloplast does not even disclose the revenue of its Wound & Tissue Repair business in dollars",
+      "Published market sizes differ by scope rather than measurement: the advanced-versus-all-wound-care boundary moves the number by 1.83x",
+      "Published CAGRs predate the single largest reimbursement change in the category's recent history and none prices it",
+      "Diabetic foot ulcer incidence, the most-cited demand metric, is contested in the literature between 1.9% annual and 34% lifetime, so demand modelling rests on a disputed denominator"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Advanced dressings (foam, film, hydrocolloid, alginate, antimicrobial, hydrogel, collagen, superabsorbent)",
+      "Negative pressure wound therapy systems",
+      "Biological skin substitutes and cellular tissue products",
+      "Debridement devices",
+      "Topical agents and growth factors"
+    ],
+    "by_application": [
+      "Diabetic foot ulcers",
+      "Pressure injuries",
+      "Venous leg ulcers",
+      "Surgical and traumatic wounds",
+      "Burns"
+    ],
+    "by_end_user": [
+      "Hospitals",
+      "Wound care centres",
+      "Ambulatory surgical centres",
+      "Homecare"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 14.39 },
+    { "year": 2027, "value": 15.48 },
+    { "year": 2028, "value": 16.66 },
+    { "year": 2029, "value": 17.93 },
+    { "year": 2030, "value": 19.29 },
+    { "year": 2031, "value": 20.76 },
+    { "year": 2032, "value": 22.33 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Smith+Nephew (Advanced Wound Management)",
+      "headquarters": "United Kingdom",
+      "market_position": "Largest disclosed advanced wound franchise",
+      "description": "Disclosed Advanced Wound Management revenue of $1,934 million for 2025, up 6.7% reported and 5.6% underlying, with trading profit up 12.0% at a 24.9% margin. The only player organised explicitly into the three families this market consists of: Advanced Wound Care (foam dressings and films growing, infection management weaker), Advanced Wound Bioactives (SANTYL and skin substitutes, with a soft Q4 attributed to softness in skin substitutes ahead of the 2026 reimbursement changes) and Advanced Wound Devices (PICO and RENASYS negative pressure, plus the LEAF pressure injury monitoring system). The segment identification is our inference from an unlabelled table in the 20-F whose three segment figures sum exactly to group revenue."
+    },
+    {
+      "company": "Solventum",
+      "headquarters": "United States",
+      "market_position": "Comparable scale, NPWT-led",
+      "description": "Disclosed Advanced Wound Care net sales of $1,883 million for 2025 inside a MedSurg segment of $4,817 million and total company net sales of $8,325 million. Growth was led by negative pressure wound therapy volume, with double-digit growth in Prevena and continued expansion of the V.A.C. Peel and Place dressing; the Acera acquisition joins this business. Q4 was $483 million, up 3.8% reported but only 1.7% organic, and the company cites tariff, logistics and supply-agreement costs as margin pressure."
+    },
+    {
+      "company": "Mölnlycke Health Care",
+      "headquarters": "Sweden",
+      "market_position": "Major private player, segment undisclosed",
+      "description": "Reported whole-company net sales of EUR 2,104 million for 2025, up 4% with 4% organic growth, and EBITDA of EUR 596 million at a 28% margin. Converted at the IRS 2025 yearly average rate of EUR 0.886 per US dollar, that is $2,375 million. The figure is whole-company and also contains Operating Room Solutions, so it is wider than advanced wound care; no wound-care-only revenue line is published."
+    },
+    {
+      "company": "Convatec",
+      "headquarters": "United Kingdom",
+      "market_position": "Fourth disclosing player; most exposed to the CMS change",
+      "description": "Disclosed Advanced Wound Care revenue of $753 million for 2025, up 1.4% reported but down 0.4% organic, within group revenue of $2,439 million. Excluding InnovaMatrix the line was $684 million, up 6.2% reported and 4.1% organic -- so the whole organic decline sits in one skin substitute product. InnovaMatrix fell 29.7% to $69 million in 2025 and is guided to about $20 million for 2026 on the CMS repricing, a 71% fall, with a $72 million impairment of the Triad Life Sciences intangible already booked. Randomised controlled trials for the product are expected later in 2026."
+    },
+    {
+      "company": "Coloplast (Wound & Tissue Repair)",
+      "headquarters": "Denmark",
+      "market_position": "Major player, revenue not disclosed",
+      "description": "Reported 8% organic growth in Wound & Tissue Repair for 2024/25 within group revenue of DKK 27,874 million, but did not disclose the business area's revenue in the material available to us, so it is absent from this report's four-company sum. Kerecis grew 20% at a 14% EBIT margin before PPA amortisation, while Advanced Wound Dressings declined 6% following a voluntary return of all Biatain Adhesive dressings in China worth about DKK 60 million of Q4 revenue."
+    },
+    {
+      "company": "Integra LifeSciences, Organogenesis, MiMedx, Essity/BSN Medical, Urgo, Hartmann",
+      "headquarters": "Various",
+      "market_position": "The unmeasured remainder",
+      "description": "Roughly half the advanced market sits outside the four disclosures summed in this report, and most of these companies do not publish a comparable advanced wound care revenue line. Several of the biologics specialists among them are directly exposed to the CMS skin substitute repricing. No share is asserted for any of them."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "US Centers for Medicare & Medicaid Services",
+      "year": 2025,
+      "event": "Issued the CY2026 Physician Fee Schedule final rule on 31 October 2025 setting a single payment rate for most skin substitutes at $127.28 per square centimetre, corrected in November 2025 to $127.14, effective 1 January 2026, reclassifying most products as incident-to supplies and ending separate payment for discarded quantities; then fully withdrew its Local Coverage Determinations for skin substitutes on 24 December 2025."
+    },
+    {
+      "company": "Convatec",
+      "year": 2026,
+      "event": "Reported FY2025 Advanced Wound Care revenue of $753 million, down 0.4% organic, with InnovaMatrix down 29.7% to $69 million; guided FY2026 InnovaMatrix revenue to about $20 million on the CMS repricing, a roughly 2% group revenue headwind, and booked a $72 million non-cash impairment of the Triad Life Sciences intangible."
+    },
+    {
+      "company": "Smith+Nephew",
+      "year": 2026,
+      "event": "Reported FY2025 Advanced Wound Management revenue growth of 6.7% reported and 5.6% underlying with trading profit up 12.0% at a 24.9% margin, attributing a soft fourth quarter in Advanced Wound Bioactives to the GRAFIX PLUS launch comparator and to softness in skin substitutes ahead of the implementation of the 2026 reimbursement changes."
+    },
+    {
+      "company": "Solventum",
+      "year": 2026,
+      "event": "Reported FY2025 Advanced Wound Care net sales of $1,883 million, with growth led by negative pressure wound therapy volume including double-digit Prevena growth and expansion of the V.A.C. Peel and Place dressing, and placed the Acera acquisition inside the Advanced Wound Care business."
+    },
+    {
+      "company": "International Diabetes Federation",
+      "year": 2025,
+      "event": "Published the 11th edition of the IDF Diabetes Atlas on 7 April 2025, counting 589 million adults aged 20-79 with diabetes, 252 million of them undiagnosed, with global diabetes-related health expenditure passing one trillion US dollars for the first time in 2024 and a projection of 853 million adults by 2050."
+    },
+    {
+      "company": "Coloplast",
+      "year": 2025,
+      "event": "Reported 8% organic growth in Wound & Tissue Repair for 2024/25 with Kerecis up 20%, offset by a 6% decline in Advanced Wound Dressings following a voluntary product return of all Biatain Adhesive dressings in China costing about DKK 60 million of fourth-quarter revenue."
+    }
+  ],
+  "regulatory_landscape": [
+    "CMS CY2026 Medicare Physician Fee Schedule final rule, which sets a single payment rate of $127.14 per square centimetre for most skin substitutes from 1 January 2026 and reclassifies them as incident-to supplies",
+    "CMS withdrawal of the Local Coverage Determinations for skin substitutes on 24 December 2025, which restores national Medicare access to products previously restricted by contractor policy",
+    "Section 351 of the Public Health Service Act, under which biologics-licensed tissue products retain separate product-specific payment outside the single skin substitute rate",
+    "FDA regulation of wound dressings as Class I or Class II devices under 21 CFR Part 878, with most clearing by 510(k), while cellular and tissue-based products follow the HCT/P or biologics pathway",
+    "EU Medical Device Regulation 2017/745, which raised the classification of several wound dressing types and requires clinical evaluation for each",
+    "CMS hospital-acquired condition and pressure injury reporting requirements, which make prevention a reimbursement exposure for providers rather than a discretionary purchase"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of SEC and 20-F filings, company results releases, the CMS Physician Fee Schedule final rule, the IDF Diabetes Atlas and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Smith & Nephew plc, FY2025 Form 20-F: group revenue $6,164M with Advanced Wound Management identified at $1,934M, +6.7% reported, trading margin 24.9%",
+      "Solventum Corporation, Q4 2025 results (exhibit 99.1 to a Form 8-K, 26 February 2026) and FY2025 Form 10-K: Advanced Wound Care $1,883M within MedSurg of $4,817M",
+      "Convatec Group plc, FY25 Results (24 February 2026): Advanced Wound Care $753M, InnovaMatrix $69M falling to about $20M guided for 2026, $72M Triad impairment",
+      "Mölnlycke Health Care, Annual Report 2025: whole-company net sales EUR 2,104M, +4%, EBITDA EUR 596M at a 28% margin",
+      "Coloplast A/S, Full-Year Financial Results 2024/25: Wound & Tissue Repair +8% organic, Kerecis +20%, Advanced Wound Dressings -6%, group revenue DKK 27,874M",
+      "CMS CY2026 Medicare Physician Fee Schedule final rule (31 October 2025) and its November 2025 correcting amendment: skin substitute payment of $127.28 corrected to $127.14 per square centimetre, effective 1 January 2026",
+      "International Diabetes Federation, IDF Diabetes Atlas 11th edition (7 April 2025): 589 million adults aged 20-79 with diabetes, 11.1% prevalence, 252 million undiagnosed, 853 million projected by 2050",
+      "Published market estimates from MarketsandMarkets and PS Market Research (both read from the publishers' own pages, 16 October 2026), Meticulous Research, Allied Market Research and SNS Insider",
+      "IRS yearly average currency exchange rates for 2025 (EUR 0.886 per US dollar), used for the Mölnlycke conversion"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates, attributed by name, and presented as published estimates rather than verified measurements. Three grounding tests were run. First, the scope bridge: PS Market Research's own stated 60% advanced share applied to its own $24.4 billion 2025 all-wound-care total gives $14.64 billion of advanced wound care, within 9.5% of MarketsandMarkets' independently built advanced-only figure of $13.37 billion, which establishes that the 1.83x spread between the two readings is traditional gauze and wound closure rather than disagreement. Second, four disclosed advanced wound care revenue lines for 2025 were summed -- Smith+Nephew $1,934M, Solventum $1,883M, Convatec $753M and Mölnlycke $2,375M converted at the IRS 2025 average rate, totalling $6,945M -- giving 51.9% of the published advanced market and 28.5% of the all-wound-care figure, both of which are the expected shape and corroborate the 60% bridge. Third, the published advanced market was divided by diabetic foot ulcer volume implied by the IDF's 589 million adults with diabetes at the low end of a published 1.9%-2.6% annual incidence range, giving roughly $1,135 per new ulcer a year before any other wound type, which rules out reading this market as the cost of treating chronic wounds and rules it in as the product spend. These tests do not establish the correct market size for either scope. Mölnlycke's figure is whole-company and includes Operating Room Solutions, so it is wider than wound care; the Smith+Nephew segment identification is our inference from an unlabelled table whose three figures sum exactly to group revenue; Coloplast is absent from the sum because it does not disclose the business area's revenue in dollars; the diabetic foot ulcer incidence rate rests on studies mostly conducted in the 1990s and is contested in the literature between 1.9% annual and 34% lifetime, with one published commentary citing Scottish national data at about 4.7% past-or-present prevalence; the skin substitute payment rate is printed as both $127.28 and $127.14 by different sources and we did not read the Federal Register correcting document itself; and dividing company revenue by a third party's market total compares differently constructed numbers. No vendor market share is published because none is disclosed, and no regional or country split is published because no named source gives a numeric share of the global total."
+  },
+  "faqs": [
+    {
+      "question": "How big is the advanced wound care market?",
+      "answer": "$14.39 billion in 2026, projected to $22.33 billion by 2032 at 7.6%, derived from MarketsandMarkets' published $13.37 billion for 2025 and $19.32 billion for 2030. Including traditional gauze, bandages and wound closure, the whole wound care market is $25.6 billion for 2026 on PS Market Research's published series. We publish the advanced reading and say so."
+    },
+    {
+      "question": "Why do published estimates differ by 1.83x?",
+      "answer": "Because some count the gauze and some do not, and one publisher settles it. PS Market Research publishes all wound care at $24.4 billion for 2025 and states advanced at 60% of it -- $14.64 billion, within 9.5% of MarketsandMarkets' advanced-only $13.37 billion. The gap is traditional dressings, bandages, tape, sponges, abdominal pads and wound closure, not a disagreement about the advanced category."
+    },
+    {
+      "question": "What is in advanced wound care and what is not?",
+      "answer": "In: advanced dressings (foam, film, hydrocolloid, alginate, antimicrobial, superabsorbent), negative pressure wound therapy, debridement devices, biological skin substitutes and topical agents. Out: gauze, bandages, fixation tape, sponges, abdominal pads and wound closure products such as sutures and staples. The three advanced families behave very differently -- dressings are a consumable, NPWT a system with a service element, and biologics a reimbursed per-square-centimetre product."
+    },
+    {
+      "question": "How does the CMS skin substitute change affect this market?",
+      "answer": "CMS set a single payment rate of $127.14 per square centimetre for most skin substitutes from 1 January 2026, reclassified most as incident-to supplies and stopped paying for discarded quantities. Convatec's chief financial officer put the cut at about 80% for its own product, guided InnovaMatrix revenue from $69 million down to about $20 million, and the company booked a $72 million impairment. Smith+Nephew separately cited softness in skin substitutes ahead of the change. None of the published CAGRs we surveyed prices this."
+    },
+    {
+      "question": "How much is spent per wound?",
+      "answer": "The published advanced market works out at roughly $1,135 per new diabetic foot ulcer a year, using the IDF's 589 million adults with diabetes and the low end of a published 1.9%-2.6% annual ulcer incidence range -- and that is before any pressure injury, venous leg ulcer, burn or surgical wound is treated. Spread across all wound types the figure falls well below that. It is a product-spend number, not a cost-of-care number: treating a diabetic foot ulcer costs many thousands of dollars per episode in total."
+    },
+    {
+      "question": "Who leads the advanced wound care market?",
+      "answer": "On disclosed revenue, Mölnlycke at $2,375 million of whole-company sales, Smith+Nephew's Advanced Wound Management at $1,934 million and Solventum's Advanced Wound Care at $1,883 million are the largest, with Convatec at $753 million. None discloses a market share. Coloplast is a major player that does not disclose the revenue of the relevant business at all, so it is absent from those comparisons."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no publisher in the set gives a numeric regional share of the global total. Both MarketsandMarkets and PS Market Research name North America as largest in 2024, which is a ranking, not a measurement. The one geographic figure we do use is the IDF's finding that 81% of adults with diabetes live in low- and middle-income countries, which is a disease statistic rather than a market split and is used as such."
+    }
+  ],
+  "key_highlights": [
+    "Published 2025 estimates spread 1.83x, from $13.37B advanced-only to $24.4B for all wound care",
+    "One publisher's own 60% advanced share applied to its own total gives $14.64B -- within 9.5% of another house's independently built advanced-only figure",
+    "Four companies disclose $6,945M of advanced wound care revenue for 2025: 51.9% of the advanced market and 28.5% of all wound care",
+    "CMS set a single rate of $127.14 per square centimetre for most skin substitutes from 1 January 2026 and ended payment for discarded quantities",
+    "Convatec has guided InnovaMatrix revenue from $69M to about $20M for 2026, a 71% fall, with a $72M impairment already booked",
+    "The published advanced market is roughly $1,135 per new diabetic foot ulcer a year, before any other wound type",
+    "The IDF counts 589 million adults with diabetes in 2025, 252 million of them undiagnosed, projected to 853 million by 2050"
+  ],
+  "reader_takeaways": [
+    "Establish first whether a quoted wound care figure includes gauze: advanced is 60% of the whole category on the one publisher that measures both",
+    "Treat published CAGRs above about 6% as pre-dating the CMS skin substitute repricing, which one supplier has already translated into a guided 71% revenue fall",
+    "Model the three advanced families separately -- dressings, NPWT and biologics have different prices, different buyers and now very different reimbursement",
+    "Half the advanced market sits with companies that disclose no comparable revenue line, including Coloplast, so any concentration figure is an estimate",
+    "The demand case rests on a disputed denominator: diabetic foot ulcer rates in the literature range from 1.9% annual to 34% lifetime, so test any volume model against which figure it used"
+  ],
+  "seo": {
+    "meta_title": "Advanced Wound Care Market Size and Forecast to 2032",
+    "meta_description": "Advanced wound care is $14.39B in 2026. The 1.83x spread in published estimates is gauze -- and one publisher's own 60% share proves it. With the CMS repricing.",
+    "keywords": [
+      "advanced wound care market",
+      "advanced wound care market size",
+      "negative pressure wound therapy market",
+      "skin substitutes reimbursement",
+      "advanced wound dressings",
+      "diabetic foot ulcer market",
+      "wound care market size"
+    ]
+  }
+}

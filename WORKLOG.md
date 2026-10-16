@@ -562,3 +562,956 @@ into the user Python site-packages to read the CMS CLIA statistics PDF. Nothing
 in the project or in global config was touched and nothing was removed, but it
 is a change outside this repo and the standing rule is not to make them. The
 brief for round 2 forbids installing anything.
+
+### SEO field lengths, all 152 rows (was R-3)
+`report-db.mjs audit` (new) measured the corpus: **45 titles over 60 characters**
+and **14 descriptions over 160**. The earlier title pass had cut the mean from
+92.4 to 56.4 but left a 61-77 character tail that no pattern substitution
+reaches — the template itself had to shorten.
+
+`scripts/fix-meta-lengths.mjs` (dry run by default, `--apply` to write):
+
+- **Titles** try progressively shorter templates against the market name taken
+  from the row's own title, and take the first that fits 60. Seven rows said
+  "... Industry Size & Analysis 2032" rather than "... Market ...", so the name
+  extractor had to terminate on both words — without that they were unfixable
+  mechanically.
+- **Descriptions** are rebuilt from the row's structured figures rather than
+  trimmed, because several restated numbers that no longer match the columns the
+  page renders, and `united-states-cell-gene-therapy-manufacturing-market` was
+  **truncated mid-sentence** at "is expected to ". A description built from
+  `market_size`, `base_year` and `forecast_period` cannot drift from the page.
+  Descriptions that open analytically rather than formulaically — the OIS row
+  leads with its 2.74x spread — are shortened in place instead.
+- No marketing tail was appended. "Sources and methodology inside" would be a
+  claim about the page's contents, and these are legacy rows whose depth varies;
+  the figures are the part that is certainly true.
+
+55 rows written. Re-audit: **titles over 60 = 0, descriptions over 160 = 0,
+descriptions under 70 = 0.** Supabase-only, so this reaches production through
+ISR without spending a deploy.
+
+### Keyboard focus was invisible on a third of the controls (was R-0e)
+The global ring was `2px solid var(--primary)` — #1541E3 — which is the exact
+fill of the hero and CTA panels. Measured contrast of the ring against the three
+surfaces a focusable control actually sits on:
+
+```
+                  ring #1541E3   ink #0B1220   paper #FFFFFF
+white card          7.25:1        18.72:1        1.00:1
+blue panel          1.00:1         2.58:1        7.25:1
+ink footer          2.58:1         1.00:1       18.72:1
+```
+
+No single colour clears WCAG 1.4.11's 3:1 on all three, which is why this was
+never fixable by swapping the token. The ring is now two-tone — ink outline plus
+a paper inner ring, inverted in dark mode — so one of the two always contrasts,
+and the two sit at 18.72:1 against each other. Worst case across the three
+surfaces goes from **1.00:1 to 7.25:1**.
+
+The larger half of the finding was not in the original filing: **`focus:outline-none`
+appears at 33 call sites** and exactly one of them supplies a focus-visible
+style of its own. Those classes outspecify a bare `:focus-visible`, so a third
+of the interactive controls had no keyboard focus indicator at all regardless of
+the token. The rule therefore carries `!important` on the outline and the inner
+ring — deliberate, documented in place, and the whole point of the rule.
+
+The outline survives an `overflow: hidden` ancestor while the box-shadow can be
+clipped, so the outer ring is the one carrying contrast.
+
+Verified in the built CSS; the contrast figures are computed from the token
+values, not yet observed in a browser (browser tools open at 21:00 IST).
+
+### Round 2, batch 2B — five Healthcare IT reports drafted (held, not published)
+All five pass `check`. Held on the branch rather than published, because
+`dynamicParams = false` on the report route means a row in Supabase that was not
+in the last build's `generateStaticParams()` **404s**, while `/reports` — ISR,
+hourly — would already be listing a card pointing at it. That is PR #4's
+soft-404 defect with the sign flipped. The rule is now written into the
+authoring brief: publish only when a merge slot can follow within the hour.
+
+The batch's findings are unusually good:
+
+- **RWE**: IQVIA's 2026 segment reorganisation accidentally disclosed its
+  real-world line at **$674M in 2025 revenue** — 21.7% of one published whole
+  global market, while IQVIA's whole Technology & Analytics segment ($6,626M) is
+  **3.31x another publisher's entire $2.0B world**.
+- **Interoperability**: a **14.6x** spread at 2025 ($5.8B to $84.58B) with
+  nothing in between, and **Credence Research publishes both ends** — ~$10.63B
+  and ~$349.9B by 2032, a 33-fold gap inside one catalogue. Per Designated QHIN
+  (11, Sequoia Project), the high estimate implies $9.4B each, **15.5x Epic's
+  entire 2025 revenue**.
+- **Decentralised trials**: four houses agree to 1.07x, which the report reads as
+  a shared derivation rather than corroboration. Only **37 of 607,160**
+  ClinicalTrials.gov studies text-match "decentralized clinical trial", and the
+  only pure-play (Science 37) sold for ~$38M after booking $70.1M — 0.37% of the
+  market named after it. The FDA dropped "decentralized clinical trials" for
+  "decentralized elements" in September 2024, which is the regulator conceding
+  the same scope point.
+- **Hospital-at-home**: 373 approved hospitals across 140 systems (January
+  2026), against **31,000 patients in four years** of the CMS programme, while
+  published sizes imply 202,211 to 811,027 episodes a year.
+- **RCM**: published as `revenue-cycle-management-market`, **not** as the
+  automation slug it was queued under. The report's finding is that no
+  defensible standalone size for RCM automation exists — the one
+  automation-specific figure is **29.0x Waystar's entire FY2025 revenue** — so a
+  title promising an automation market size would have reproduced the defect the
+  report is about. The superseded draft is kept at
+  `content/reports/_superseded-...json`; nothing was deleted.
+
+One correction to my own brief, which the research pass caught: I told it the
+CMS hospital-at-home waiver was near statutory expiry. **Section 6210 of the
+Consolidated Appropriations Act, 2026 extended it to 30 September 2030**
+(corroborated by Chartis and the AMA). The real restraint is that the waiver
+**already lapsed once**, in the 2025 shutdown, and that 30 September 2030 falls
+inside every published forecast period while none of them says what happens on
+1 October 2030.
+
+### Two queue items closed by measurement rather than by code
+- **R-0d** (`.prose` never applies to a report page) is true and correct as it
+  stands. `StyledReportContent.tsx` post-processes an **HTML blob** — wrapping
+  images, lazy loading, reserving intrinsic dimensions — and the report page has
+  no HTML blob: every section comes from structured Supabase columns through
+  `JsonReportSections`, which styles its own prose against the measured
+  `--content-*` contrast ramp. The only HTML field left in the type graph is an
+  optional `marketDetails` that no row populates and no component reads. The
+  component keeps its 381 lines and now carries a header saying exactly when it
+  would be wired back in. Nothing deleted, nothing wired in for the sake of it.
+- **R-8** (avatars point at a non-resolving CDN) is stale. `image_url` is
+  **empty on all three** `neograph_team_members` rows, `imageUrl` is empty in
+  the JSON, and both render sites guard on it — initials fallback in
+  `MeetTheTeam`, conditional OG image on `/authors/[id]`. No broken image is
+  served. The only surviving reference to `cdn.neographanalytics.com` is the
+  `remotePatterns` entry in `next.config.ts`, which costs nothing while the host
+  is NXDOMAIN.
+- **R-2** remeasured rather than closed: `/reports` is **508KB -> 284KB** after
+  the card projection, still the heaviest route. The rest is 152 cards of real
+  data, so the next move is pagination or streaming, not column trimming.
+
+### Round 2, batch 2A — five Life Sciences reports drafted (held with 2B)
+All five pass `check`. Held for the next merge slot for the same reason as 2B.
+
+Two of the five are built on the kind of arithmetic that is hard to argue with:
+
+- **Proteomics** — one publisher's proteomics *instruments* line alone ($8.0B)
+  is **1.06x Thermo Fisher's entire Analytical Instruments segment** ($7.55B,
+  all applications), and its $41.2B total is **3.75x** that segment plus all of
+  Bruker. Meanwhile disclosed pure-play revenue (Quanterix, SomaLogic, Standard
+  BioTools, Seer) sums to **$340.5M — a factor of 121 below the headline.**
+  Illumina paid ~$350M in cash for SomaLogic, roughly the whole pure-play
+  sector's annual revenue.
+- **Pharmacogenomics** — the FDA's Table of Pharmacogenomic Biomarkers in Drug
+  Labeling enumerated on 16 Oct 2026: **692 rows, 439 distinct drug products**,
+  against ~**53** active ingredients with CPIC Level A guidance. Forecasts cite
+  the 439; payers pay for the 53. The high estimate divided by Medicare's
+  $917.08 CLFS rate for CPT 81418 implies **20.98M panels a year — 30.3% of
+  every Medicare beneficiary, annually, for a genotype that never changes.**
+
+Also worth recording:
+
+- **Spatial biology** spreads **16.9x**, and the two extremes claim the *same*
+  narrow scope. One house's subset figure exceeds its own superset figure by
+  5.4x. Here the narrow totals are too *low* — 10x plus Akoya alone are 67.9% of
+  the lowest published total, before Bruker's NanoString — which is why the
+  report publishes the wide scope.
+- **Single-cell sequencing**: the published 12.2% rate needs $1.51B of net new
+  revenue by 2030, **3.9x the market leader's entire Single Cell line** — in a
+  year when that line fell 2% and its instruments fell 36%.
+- **Organoids / organ-on-chip**: the forecast needs $1,710.3M of net new revenue
+  against **one** accepted ISTAND letter of intent (step 1 of 3) and **zero**
+  qualified organ-chip drug development tools as of the FDA's 22 Sep 2026 page.
+  The prose is careful that the April 2025 roadmap *encourages* new-approach
+  data — it mandates no model and qualifies none — and that FDAMA 3.0 passed
+  each chamber separately and **is not law**.
+
+### `/design-system`: two `<h1>`s and no canonical (was R-6)
+The second `<h1>` was a **type specimen** — the sample that shows what an h1
+looks like — so the page had two top-level headings and a document outline that
+claimed two documents. The specimen only has to look like an h1; it is now a
+`<p>` with the same classes. The h2-h6 specimens below it are left as they are:
+they produce an odd outline but not a competing root, and the page is an
+internal tool.
+
+The page is a client component and so cannot export metadata, which is why it
+had no canonical. A new `app/design-system/layout.tsx` supplies one plus an
+explicit `noindex, nofollow`. The robots.txt disallow alone was not enough: a
+disallowed URL can still be indexed from external links precisely because the
+crawler never fetches the page to find a meta robots tag, while a direct request
+does see it.
+
+Verified in the built HTML: h1 count 2 -> 1, canonical present,
+`noindex, nofollow` present.
+
+### `/reports` payload: 508KB -> 184KB (was R-2)
+Two passes. First the Supabase projection (`getReportCards()`), which stopped
+pulling `market_dynamics`, `company_profiles`, `research_methodology`, `faqs`
+and the rest for a card that shows four fields: 508KB -> 284KB.
+
+Then the server-to-client boundary. `ReportsListingClient` declares thirteen
+fields in its own interface, but it was being handed the full `Report` shape, so
+`meta_title`, `meta_keywords`, `baseYear`, `forecastPeriod`, the formatted
+market-size strings, `cagr`, `reportCode`, `discounted_price` and three empty
+arrays rode along in the RSC payload **unread, once per card, 152 times**. The
+page now maps to exactly those thirteen. `description` and `summary` also held
+the same string twice per card, so the duplicate is dropped — `ReportCard`
+renders `summary || description` and the client filter reads both, so neither
+changes behaviour.
+
+284KB -> **184KB**, 12 cards on page one, filter and search unchanged. Total
+from the original measurement: **508KB -> 184KB, -64%**, while the corpus grew
+from 142 to 152. Pagination is not worth the complexity at this size.
+
+### `scripts/audit-html.mjs` — the headless audit, committed this time
+The 2026-10-15 session ran an HTML audit as throwaway shell and lost it with the
+session, so every later session re-derived the same checks by hand. It is a
+committed tool now: 13 routes, read from `.next/server/app/*.html` or from
+production with `--prod`, exit code = error count so it can gate a commit. No
+browser, so it runs at any hour.
+
+Checks: exactly one `<h1>` and no headings above it, heading-level skips,
+empty headings, one `<main>`, skip link, title ≤60 (entities decoded first),
+description 70-160, canonical present and on-site, every `ld+json` block parses,
+`<img>` without `alt`, buttons and links with no accessible name, form controls
+with no label, `<figure>` without `<figcaption>`, `<html lang>`.
+
+The two rules the predecessor got wrong are explicitly not repeated: it counted
+`&amp;` as five characters when measuring titles, and it called buttons
+icon-only when they had visible text. The accessible-name check reads text
+content, and a `noindex` page is no longer asked for a canonical.
+
+First run: **1 error, 7 warnings over 13 pages.** All but one are now fixed:
+
+- `/methodology` rendered a **63-character title** — my own page from this
+  morning. The root layout appends " | NeoGraph Analytics" (21 chars), so the
+  page name has to carry the subject alone. Now "Methodology".
+- **Heading outlines jumped h1 -> h3** on `/reports`, `/blog` and
+  `/press-releases`: the page `h1` is the only heading above the grid, and every
+  card title was an `h3`. A screen-reader user navigating by heading cannot tell
+  a skipped level from missed content. `ReportCard` now takes a `headingLevel`
+  prop defaulting to `h2`; the author page, where the grid sits under a section
+  `h2`, passes `h3`. `BlogCard` and `PressReleaseCard` go to `h2`.
+- **h2 -> h4 inside report pages**: the per-region and per-company item
+  headings were `h4` directly under a section `h2`. Both are `h3` now.
+- `/request-sample` had a 57-character description; it now says what a sample
+  actually contains.
+
+Re-run: **13 of 13 pages error-free, 0 errors, 1 warning** — `/design-system`'s
+66-character description, left as it is because the page is an internal tool
+carrying `noindex, nofollow`.
+
+### Two analysis articles, drafted from the reports' own evidence
+The blog corpus was six generic pieces with invented bylines ("Dr. Sarah
+Johnson" appears nowhere in `team-members`). Rather than add more of the same,
+these two are written out of the research notes behind this month's reports, with
+every figure traceable to a named filing and every claim linked to the report it
+came from. Byline is "NeoGraph Analytics Research Desk" — the honest one.
+
+1. **"When the sellers' own filings exceed the market they sell into"** — the
+   bottom-up inversion in CAR-T ($5.53B of disclosed product revenue against
+   published bases of $3.87-4.6B), GLP-1 ($71.94B disclosed, above three of five
+   published sizes, one of which is smaller than a quarter of Zepbound) and
+   bispecifics (two published estimates below Hemlibra and Vabysmo alone, and
+   74% of disclosed revenue non-oncology). Also retires the circulating "CD19 =
+   86.5% of CAR-T" claim: the two BCMA products are 42% of the disclosed total.
+2. **"Why two forecasts of the same market differ by ten times"** — the
+   base-versus-rate table across ten markets. Point-of-care spreads 11.0x on the
+   base and 1.37x on the rate; radiopharmaceuticals invert it at 1.78x and 3.35x.
+   Includes the three cases worth remembering: one publisher at both extremes
+   (Credence, 33x apart in one catalogue), a subset exceeding its own superset by
+   5.4x, and four houses agreeing to 1.07x about a category only 37 of 607,160
+   registered studies name.
+
+`scripts/blog-db.mjs` carries the checks that matter for an HTML article:
+balanced tags (the page injects content with `dangerouslySetInnerHTML`, so a
+stray `</table>` breaks everything below it), no `<h1>` inside the body, no
+U+FFFD, a date and read-time in the corpus's format, and — with `--online` —
+**every internal `/reports/<slug>` link verified against the live corpus**, since
+a dead link in an analysis piece lands exactly where a reader is most likely to
+click. Both drafts pass.
+
+Held for the same deploy as round 2's reports: `/blog/[slug]` also sets
+`dynamicParams = false`.
+
+### Round 3, batch 3B — five supply-side reports drafted (held)
+All five pass `check`. Held with round 2 for the same deploy.
+
+This batch is the strongest yet on grounding, because the suppliers are listed
+and report by segment, in four currencies — converted at the **IRS yearly
+average rates for 2025**, named and dated in every methodology block (CHF 0.831,
+KRW 1,421.779, EUR 0.886, CNY 7.129, JPY 149.632 per USD).
+
+- **Plasma fractionation**: CSL Behring $11,158M + Grifols Biopharma €6,487M +
+  Octapharma €3.47bn = **$22,396M, which is 80.9% of one published whole market**
+  — and adding a single Takeda immunoglobulin line reaches **96.4% of it.** That
+  publisher's figure is a floor, not a market. Per litre of US plasma: ~$358.
+  The structural find the forecasts miss: Grifols closed 29 US collection
+  centres in April 2026 **while reporting rising collection** — growth has moved
+  to yield per donation, not centre count.
+- **Sterile injectables**: a **13.6x** spread at 2025, with the *same publisher*
+  holding both ends ($46.43B and $632.46B). Fresenius Kabi Pharma plus Hikma
+  Injectables are 12.1% of the generic reading and **0.95% of the $591B
+  reading** — two of the largest generic injectable suppliers in the world
+  cannot be under 1% of their own market, so the high series is list-price
+  injectable *drug* revenue. Separately: the three shortage registers disagree
+  **2.44x** (FDA 93, USP 75, ASHP 227), and Hikma's disclosed Injectables margin
+  fell 36.3% -> 30.0% on ~12% revenue growth, which is the shortage economics in
+  a single disclosure.
+- **Biologics CDMO**: Lonza + Samsung Biologics + WuXi Biologics = **$10,655M =
+  56.7% of a published market the same page calls "fragmented."** Samsung's
+  revenue over its stated 605,000 L of capacity is **$5,298 per litre per year**,
+  so a $25B+ base needs 4.8 million litres of fully-utilised third-party
+  capacity against ~845,000 L at the world's largest owner.
+- **Vaccine cold chain**: 11.2x on size *and* 12.0x on rate. Against UNICEF's
+  2.787bn doses (2024) the published markets imply $1.48, $12.67 and $16.63 per
+  dose, and the top figure is **8.26x UNICEF's entire $5.610B procurement
+  budget, vaccines included.** The chosen publisher's own series also fails its
+  own arithmetic (its rate compounds to 65.01, not the 66.3 it prints), so the
+  report uses their rate and says why it does not use their endpoint.
+- **Pharmacy automation**: Omnicell's $1,185M is **16.5% of one whole published
+  market** — the cleanest single-vendor ratio in three rounds, because Omnicell
+  is a pure play. The per-store anchor (~$39,100 per US retail pharmacy per
+  year) is the one grounding calculation in this batch that **confirms** the
+  published range rather than contradicting it, which is worth recording: the
+  method is not only capable of producing contradictions. One publisher's 2032
+  forecast is 9.3% *below* another's 2025 actual, because it publishes no base
+  year at all.
+
+Method note the agent left for the next pass rather than repeating blind: the
+WHO PQS prequalified-equipment catalogue cannot be used as a count, because its
+own guidance says reference codes are never reassigned.
+
+### A press release, and the publish order it exposed
+`content/press-releases/neograph-publishes-methodology-and-twenty-grounded-reports.json`
+— the methodology, the five grounding results that contradict the literature
+outright, the base-versus-rate pattern, and an explicit section on what the
+reports deliberately omit. Including the one report published with no revenue
+base at all: phage therapy, where nothing holds marketing authorisation in the
+US, EU or UK.
+
+`blog-db.mjs` now takes `--press` and switches tables rather than being
+duplicated; the press-release table has the same columns and the same
+`dynamicParams = false` behaviour.
+
+The draft **fails its own check**, correctly: it links
+`/reports/plasma-fractionation-market` and `/reports/proteomics-market`, neither
+of which is in the live corpus yet. That is the link checker doing its job, and
+it establishes the order inside a deploy — **reports first, then anything that
+links to them** — which is now written into the authoring brief. Its title also
+measured 89 characters and is now 57.
+
+### `/llms.txt` was describing 8% of the publication, and advertising 404s
+Two defects in one endpoint, both found while checking whether new content
+reaches it.
+
+**It read the bundled snapshots, not the corpus.** `data/reports.json` holds 12
+rows and `data/blogs.json` 6, against 152 reports live. A crawler asking this
+endpoint what the publication covers was told about **12 of 152 reports** — the
+same defect class as the listing search that filtered a 10-row snapshot, and
+with the same cause: a JSON file left in place after the data moved to Supabase.
+
+**It advertised URLs that do not exist.** A `/categories/<slug>` link for each of
+the twelve entries in `categories.json`, printed twice over — **24 dead links**,
+against a route that does not exist (`/categories/biotechnology` -> 404,
+verified). Six of those twelve categories match no report at all. It also
+advertised `/consulting`, which 308s to `/services`. Feeding a crawler a list of
+dead links is the soft-404 problem aimed at machines instead of people.
+
+Rewritten: Supabase first with the snapshots as the fallback that keeps the
+endpoint answering if the database is unreachable (and the footer now says which
+source produced the output). Categories are derived from the corpus, so one with
+no reports cannot be advertised, and category links point at
+`/reports?category=<slug>`, which is what the listing actually reads. The report
+index is complete rather than a sample of 15 — one line each is a few hundred
+bytes, and a crawler asking what we cover should be told. Analysis articles and
+press releases are included, and the methodology is stated in full near the top.
+
+Measured on a clean local server: **21KB -> 85KB, 12 -> 152 report URLs, 24 -> 0
+`/categories/` links**, `Content source: live corpus`, and the million-unit
+reports render correctly (`$66.5M base year -> $167.9M forecast`).
+
+**Process note, the same trap as PR #10's false negative.** The first
+verification showed the *old* output. Cause: a `next start -p 3100` from this
+repo, launched at 02:24 today by an earlier session, still holding the port and
+serving stale code. Confirmed by PID and command line that it was mine and from
+this repo, then **left running** and the check repeated on **port 3101** — the
+instruction is to not disturb anything on this machine, and a second port costs
+nothing. Verify the server is the one you just built.
+
+### Titles composed at render time were still too long (`lib/seo.ts`)
+The corpus rows were fixed in place this afternoon, but article and press-release
+pages compose their metadata in `generateMetadata` from an excerpt plus a
+template, so the rendered `<title>` can break the limit even when the stored
+fields are clean. Extending `audit-html.mjs` to cover two detail pages caught it
+immediately:
+
+```
+"The Future of Personalized Medicine | Healthcare Insights | NeoGraph Analytics"  78
+"Digital Health Investment Surpasses $30 Billion in 2025 | NeoGraph Analytics"     76
+press-release meta description                                                    195
+```
+
+`lib/seo.ts` holds the rule now. `pageTitle()` tries the full template, then
+drops suffixes one at a time, and takes the first form that fits 60 — returning
+`{ absolute }` so the root layout cannot append the brand a second time, which
+is how an earlier title came to read "... | NeoGraph Analytics | NeoGraph
+Analytics". `pageDescription()` cuts at the last sentence boundary inside 160,
+or a word boundary, never mid-word and never leaving a dangling comma.
+
+Applied to `/blog/[slug]` and `/press-releases/[slug]`. The audit now covers 16
+routes including a million-unit report, a blog article and a press release:
+**16 of 16 error-free.**
+
+### Round 3, batch 3A — five device reports drafted (held)
+All five pass. Twenty reports are now drafted and waiting on one deploy.
+
+- **Hearing aids** is the best-grounded report in three rounds, because it
+  resolves a contradiction instead of just finding one. EHIMA members sold
+  **23.16M units in 2025**; the published market over those units is **$380 per
+  aid**, which is a factory-gate price, while a 1,100-respondent buyer survey
+  measures $1,347 per aid at retail — so consumer spend on the same units is
+  **~$31.2B, 3.5x the headline**. Demant proves both tiers inside one company:
+  2025 retail revenue (DKK 10,724M, +8%) now **exceeds** its external wholesale
+  revenue (DKK 9,841M, -2%). Four manufacturers disclose 1.34x the whole
+  published market, and stripping retail out lands them back at ~$8-9B. The
+  coherence failure is the finding: units decelerating 7.7% -> 4.0% -> 2.1%,
+  measured prices down 42% since 2018 (OTC $502 a pair against $3,432
+  prescription), manufacturers growing 2-3% — against published CAGRs of
+  5.6-11.7%.
+- **Sleep apnoea**: three disclosures sum to **104.5% of one publisher's entire
+  global market** — ResMed alone is 65.0% of another's — before Philips
+  Respironics, Löwenstein, BMC, oral appliances and the diagnostics half one of
+  them explicitly includes. The headline uses MarketsandMarkets' endpoints at
+  the rate they *imply* (7.6%), not the 10.9% its page states, because 10.9%
+  compounds to $14.4B against its own $11.6B forecast; a reprint of the same
+  report states 7.6%, which corroborates the endpoints. Also flagged: the
+  425M-patient prevalence denominator everyone divides by was ResMed-funded and
+  rests on reliable data from 16 countries.
+- **Surgical navigation**: a **9.99x** spread, the widest the corpus has seen,
+  and cleanly bimodal — 6.5-6.9% against 14-15.2%, split by whether robotics is
+  counted. One publisher issues both halves and labels them. The ceiling test is
+  decisive: the high figure would be 88.5% of Stryker's *entire* MedSurg &
+  Neurotechnology segment and 1.40x Medtronic's *entire* Neuroscience portfolio.
+- **Insulin delivery**: Insulet's $2.7B of Omnipod revenue is **3.0x one
+  publisher's entire $900M global pump-consumables segment**. Revenue per
+  patient is directly checkable here — $4,500 per Omnipod user, $2,865 per Beta
+  Bionics user — which inverts to **1.6-2.6M pump users worldwide**, or
+  0.27-0.44% of the IDF's 589M adults with diabetes.
+- **Proton therapy**: $13.1M per operating centre per year against a $33-160M,
+  20-to-30-year asset, which rules out a capital-only reading; a bottom-up build
+  from IBA's own disclosed unit economics lands within 10-20% of the lowest
+  dated published figure. PTCOG's register was unreachable all pass (503), so
+  the ~125-centre count comes from a 2026 peer-reviewed review citing it, and
+  says so.
+
+Two more published series that fail their own arithmetic, bringing this month's
+tally to four: MarketsandMarkets' sleep-apnoea rate (10.9% stated, 7.65%
+implied) and GMI's proton-therapy rate (10.8% stated, 10.3% implied).
+
+### Report pages were 152 dead ends
+Measured: **0 occurrences of `href="/reports/` in the built HTML of a report
+page.** Not one report linked to another. The `// TODO: Fetch related reports`
+in `app/reports/[slug]/page.tsx` had been open long enough for the corpus to
+reach 152. That costs a reader the obvious next step and costs the site the
+internal links a crawler follows to find depth — on a domain whose indexed count
+has been the standing problem.
+
+`lib/api/relatedReports.ts` scores every other report on shared industry (+3),
+shared topic words (+2 each, with report-title stopwords removed) and a baseline
++1, penalises regional clones (-2) so four copies of one topic cannot fill the
+list, and breaks ties by order-of-magnitude size distance so the suggested
+report is a comparable one. Deterministic throughout — these pages are
+prerendered, and two builds of the same corpus must produce the same page.
+
+One narrow select for the whole corpus, memoised for the process: a build
+renders 152 report pages in one process, so without the memo this would run 152
+times per build for the same rows.
+
+**The finding that shaped it.** The first version put *earth observation, 5G
+smart grid, green hydrogen, vertical farming and quantum sensors* under
+`liquid-biopsy-market`. Cause: 26 rows in the corpus are not healthcare at all,
+and the stored `industry` does not separate them — `liquid-biopsy-market` and
+`agritech-vertical-farming-led-market` are both "Life Sciences". Same industry,
+similar market size, nothing else in common. There is now a hard cluster
+boundary on the slug prefix (agritech, climate-tech, space-economy,
+quantum-technology, digital-infrastructure, advanced-materials,
+synthetic-biology): a healthcare report never lists a non-healthcare one, and
+vice versa, whatever the column says.
+
+Built HTML across 152 report pages: **mean 5.4 outbound report links, minimum 2,
+zero dead ends.** Spot checks read correctly — BCI next to neuromodulation,
+wearables and surgical robotics; OIS next to the two AI-in-oncology reports and
+clinical decision support; the climate cluster staying inside itself.
+
+### 26 of 152 reports are not healthcare (filed as R-10, needs Siddhant)
+Found while building the related-reports boundary. By slug prefix:
+`agritech-*` 4, `climate-tech-*` 4, `space-economy-*` 4, `quantum-technology-*`
+4, `advanced-materials-*` 4, `digital-infrastructure-*` 3, `synthetic-biology-*`
+3 — lunar mining, undersea cable, green hydrogen, ceramic defence materials.
+
+They are also filed under the same `industry` values as the healthcare rows,
+which is why the first related-reports pass offered earth observation and
+vertical farming to a reader of the liquid-biopsy report.
+
+Two defensible answers — keep them and widen the positioning, or move them
+behind a separate section — and the choice is Siddhant's, not mine. What I have
+done meanwhile is make the page stop asserting something untrue: the listing
+read "{n} healthcare sectors" and now reads "{n} research sectors", which holds
+either way. The `relatedReports` cluster boundary already keeps the two sets
+from appearing next to each other.
+
+### Two defects Siddhant reported from screenshots
+**Header dropdowns painted behind page content.** The Consulting mega-menu was
+underneath the hero search bar and the chart card. The menu panels already set
+`z-50`, which is why this looks impossible until you notice the `<header>`
+carries `backdrop-blur-xl`: a `backdrop-filter` **creates a stacking context**,
+so `z-50` only ranked the panel *inside the header*, while the header itself sat
+at `z-index: auto` in the root context. Any later page element that makes its
+own stacking context — the hero's search suggestions are `z-50`, the panels
+carry shadows and transforms — therefore painted over it.
+
+Fixing it on the menus would have been a patch per menu. The header wrapper is
+now `relative z-[60]`, which lifts the whole subtree, including the mobile
+drawer and its scrim, above page content on **every** page at once. 60 sits
+above the `z-50` used inside pages and below the `z-100` skip link, which must
+stay on top. Verified present in the built HTML of six routes.
+
+**The FAQ +/x toggle sat low and left in its circle.** It was the text character
+`+`, rotated 45 degrees to read as a cross. A glyph is centred by its line box,
+not by the plus's crossing point, and the rotation then turns it about that same
+off-centre origin — so both states were off, and the cross worse than the plus.
+It is now two SVG strokes on a 16-unit viewBox, centred by geometry and rotated
+about the SVG's own centre, so both states land dead centre regardless of font.
+
+Both are structural fixes verified in the built HTML and in the stacking rules;
+the visual confirmation in a browser comes after 21:00 IST, when that window
+opens.
+
+### Round 4, batch 4B — five reports drafted (held)
+The first attempt at round 4 was killed mid-run by an expired login, leaving one
+notes file behind. The retry was told to reuse it rather than redo it, **and to
+verify it before relying on it** — which earned its keep: of the two
+load-bearing sources, IDEXX's SEC exhibit confirmed to the dollar, but a "45% of
+revenue from reference laboratories" claim **was not on the publisher's page on
+re-reading**. It was withdrawn, the withdrawal documented in the notes, and the
+scope finding rebuilt on a different source plus the structural fact that one
+publisher carries no services line at all.
+
+- **Veterinary diagnostics**: IDEXX's disclosed CAG Diagnostics recurring
+  revenue is **92.6% of one publisher's entire global market**, and IDEXX's
+  total revenue **exceeds that market by 17%**.
+- **Orthopaedic implants**: five disclosed segment revenues sum to **$34,369M =
+  120.8% of one publisher's whole global market**; two companies alone are
+  62.2% of it. The per-procedure test lands at $3,040, inside the measured
+  $1,797-$12,093 implant cost range — so the *procedure* arithmetic is sound
+  while the *market total* is not.
+- **Advanced wound care** is the second report in two rounds that **resolves**
+  its spread rather than only finding it: one publisher's own stated 60%
+  advanced share applied to its own $24.4B all-wound-care figure gives $14.64B,
+  within **9.5%** of another publisher's independent advanced-only $13.37B. The
+  1.83x gap is the gauze, proven from inside one publisher's own two numbers.
+  It also catches a shock no published CAGR has priced: CMS's $127.14/cm² skin
+  substitute rate from 1 January 2026 has already produced a guided **71% fall**
+  at one supplier and a booked $72M impairment.
+- **Rehabilitation robotics** is the thinnest, and says so in its first
+  paragraph: **all three listed pure-plays sum to $75.7M, 5.0% of the published
+  market**, and disclosed powered-exoskeleton revenue is 2.98% of one
+  publisher's own exoskeleton segment — about 234 devices at the CMS K1007 rate
+  against an implied 7,850. What the other 95% must be is named (the stationary
+  clinical platform tier, all private) and deliberately not sized. One of the
+  three listed companies **left the category mid-forecast** — merged into an AI
+  infrastructure business in May 2026, unit put up for sale in October — and no
+  published forecast mentions it.
+- **Femtech**: a **7.5x** base spread against a 1.32x CAGR spread. Three
+  disclosed segments are 45.7% of the narrow reading and **5.3% of the widest**,
+  which would need a ~$70B remainder that only consumer menstrual care could
+  supply. Published at the narrow reading with the exclusions named. The
+  structural finding: **no femtech app or platform company discloses revenue,
+  subscribers or units** — reported as a result rather than filled with an
+  estimate — and the category's largest public disclosure is about to disappear
+  into a take-private.
+
+### Round 4, batch 4A — the last five drafts. The 40-topic queue is complete.
+Ten reports published, thirty drafted and held. Three of these five turn on
+*composition* rather than on the size of the spread, which is a different class
+of finding from the earlier rounds:
+
+- **Psychedelic therapeutics.** Both publishers read list **gamma-hydroxybutyrate
+  as a substance type**, and one makes it the largest segment at 34.2%. GHB is
+  sodium oxybate — a narcolepsy drug. Jazz's oxybate franchise (~$1,846M) plus
+  J&J's Spravato ($1,696M) is **$3,542M = 113.5% of one publisher's entire 2025
+  base**, which leaves psilocybin and MDMA an implied value **below zero**. The
+  same publisher undersizes its own GHB segment by 1.73x. The residual was then
+  ruled out two more ways: **$264,900 per Oregon administration session**
+  against measured session prices of $275-1,300, and $3.30-8.93M per registered
+  study across 432 psilocybin and MDMA trials.
+- **Nuclear medicine isotopes.** Published figures are **bimodal with nothing in
+  the gap** — $0.7-1.8B and $5.9-11.8B. The NEA's own supply table (six
+  reactors, 26,200 6-day Ci/week ≈ 95% of world supply) puts the lower cluster at
+  **$672 per 6-day curie, inside the NEA's own required-price band of
+  $536-1,033**, while the upper cluster implies 2.9-4.0x the NEA's
+  radiopharmacy-stage cost. Lantheus discloses both tiers in one statement —
+  TechneLite $86.8M against Pylarify $989.1M, 11.4:1 — which identifies the
+  upper cluster as the *drug product* market this report deliberately excludes,
+  and it lands within 4% of our own already-published
+  `radiopharmaceuticals-market`.
+- **Ophthalmic therapeutics.** Disclosed anti-VEGF revenue is **21.1x** one
+  company's entire branded glaucoma portfolio, which refutes a publisher's
+  "anti-glaucoma is the largest class" while leaving its total intact — so the
+  report publishes that publisher's total and rate and **none of its
+  structure**, and says so. The rate is chosen on disclosed trajectory: the US
+  branded intravitreal market shrank 15% through 2025 and one supplier guides
+  -20 to -25% for 2026.
+- **Fertility services.** The cleanest grounding in four rounds, because Progyny
+  publishes revenue *and* cycles in one release: **$19,824 per cycle**, inside
+  the published US list range. Billing **every** cycle in four public
+  registries (2.13M) at that US rate — rigged in the published figure's favour —
+  reaches only **52.4% of the published market**, so at most half of it is
+  clinical services. Growth is also not where the forecasts say: **42.4% of US
+  cycles are banking cycles**, UK egg freezing is up 47%, and one operator's
+  female-only utilisation *fell*.
+- **Medical device cybersecurity.** The spine is a contradiction *inside one
+  house*: Fortune Business Insights updated two reports **on the same day** with
+  $1.46B and $7.29B for the same base year, both scope tables printed. Per US
+  hospital that is $91,000 a year against $456,000-$776,000, where all
+  cybersecurity is traditionally ≤6% of IT budget.
+
+Gaps recorded rather than papered over: no CISA advisory count (the page is
+client-rendered), no Colorado programme count, no absolute cycle count for one
+operator, and Curium and Cardinal's nuclear line are not separately disclosed.
+
+### `scripts/contrast-audit.mjs`, and the two defects it found
+Contrast claims on this project have to carry a number, so the measurement is
+now a committed script: it reads the hex tokens out of `app/globals.css` (the
+`:root` block for light, `.dark` for dark) and measures the pairs the components
+actually use. Exit code is the failure count.
+
+**The audit's own first run was wrong twice, and both corrections are written
+into the file** — the standing rule here is that reviewer output is a hypothesis:
+
+1. It measured each stroke of the two-tone focus ring separately and reported
+   the ink stroke failing on the blue panel at 2.58:1, when the paper stroke
+   beside it is at 7.25:1 — which is the entire reason the ring is two-tone. A
+   ring now passes if *either* stroke clears 3:1.
+2. It failed `--border` against `--card` at 1.22:1. WCAG 1.4.11 does not ask
+   3:1 of a decorative rule — a card outline is not a boundary a user must
+   perceive, and the card has its own background. Those pairs are now printed
+   for information with no threshold.
+
+What survived as real:
+
+- **Form field borders were effectively invisible.** The fields use
+  `--border` — 1.07:1 against the desk, 1.22:1 on a card in light mode — while
+  a `--input` token exists for exactly this and was used nowhere. A field border
+  *is* the affordance, which is the case 1.4.11 covers. `--input` is now
+  #7684A6 light (3.30:1 on the desk, 3.74:1 on a card) and #5A6FA3 dark (3.80
+  and 3.43); the previous dark value cleared the desk at 3.12 but fell to 2.81
+  on a card, where most fields sit. 23 field borders repointed across contact,
+  request-sample, the blog form and the 404 page.
+- **`country-select.tsx` ignored the theme entirely.** It predates the token
+  system: `border-gray-300`, `hover:border-purple-500`, `focus:ring-purple-500`,
+  `text-gray-900`, `bg-purple-100`. Purple appears nowhere else on the site, and
+  in dark mode `text-gray-900` (#111827) on `--card` (#131C30) measures
+  **1.02:1** — the selected country was invisible on both live forms. Every
+  class now reads a token.
+
+Audit after the fixes: **0 failing pairs in both themes**, 16 of 16 pages still
+error-free in the HTML audit.
+
+### The JSON-LD audit (BACKLOG P2), and two defects across every page
+Eight `ld+json` blocks render on a report page and nothing had checked their
+*contents*. Two real defects, both on every page of their kind:
+
+- **`Dataset.license` pointed at `/legal/terms-of-use`, which 404s.** The legal
+  pages are privacy, refund and cancellation; there is no terms-of-use. So 152
+  report pages each declared a licence URL that does not resolve. The field is
+  now absent rather than wrong — asserting no licence beats asserting a broken
+  one — and R-11 records that it returns if a terms-of-use page is ever written,
+  which is Siddhant's call because it is legal copy.
+- **`datePublished` was not a date.** Report rows store only a year, so the
+  schema said `"2026"`; blog and press-release rows store a human date, so they
+  said `"December 18, 2025"`. schema.org Date wants a calendar date and a
+  validator drops what it cannot read rather than reporting it. `schemaDate()`
+  normalises both — a year-only row becomes 1 January of that year, which is the
+  honest reading of "we know the year and not the day".
+
+The audit now checks structured-data *content*, not just that it parses:
+calendar dates on `datePublished`/`dateModified`/`uploadDate`, breadcrumb
+positions starting at 1 and incrementing, every breadcrumb item named, and
+**FAQPage parity — the schema may not claim more questions than the page
+renders**, which is the mismatch that costs a rich result for a whole domain.
+
+Checked and correct, so left alone: breadcrumb positions (1,2,3 with names),
+FAQPage parity (6 = 6), `Dataset.temporalCoverage` (`2026/2032`),
+`variableMeasured` carrying the real figures with the right unit suffix.
+
+### Per-report social cards (BACKLOG P1 visuals)
+Every report shared one stock photo as its `og:image`, so 152 distinct reports
+unfurled identically in Slack, LinkedIn and X. `app/reports/[slug]/opengraph-image.tsx`
+renders the report's own figures instead: industry, market name, base-year
+value, forecast value and rate, 1200x630.
+
+Generated at build time next to the page, so there is no image host, no egress
+and no transformation quota — the constraint that keeps Cloudflare and Supabase
+inside their free tiers. No external font is fetched either: a build that reaches
+out to Google Fonts 152 times is slow and fails closed on a flaky network.
+
+The page's `generateMetadata` had an explicit `images: [...]` entry, which
+**overrides** the file-based convention — the cards generated but nothing used
+them until that was removed.
+
+**The bug worth recording.** The title trimmer looked right and did nothing:
+cards kept rendering "North America Cell & Gene Therapy Manufacturing Market —
+Growth Drivers, Restraints and Future Outlook 2032" across four lines, into the
+figures row. The regex `/\bMarket\b/i` had been written through a tool that
+turned the backslash-b escapes into **literal backspace characters (U+0008)**,
+so the pattern was `\x08Market\x08` and matched nothing. It was invisible in the
+editor and in `grep`; `cat -A` showed it as `^HMarket^H`, and the giveaway was
+that the rendered PNG came back **byte-identical** after a rebuild. The pattern
+is now built from a character class, which cannot be mangled the same way, and
+the title falls back to itself when no "Market" appears at all.
+
+Verified: 1200x630 PNG per report, correct units on the million-unit rows
+($66.5M -> $167.9M), and `og:image` / `twitter:image` now point at each report's
+own card.
+
+Also tidied: the six `next start` servers this session left on ports 3101-3106
+are stopped, each confirmed by command line as mine and from this repo first.
+The one on :3100 from an earlier session is left alone.
+
+### `AGENTS.md` rewritten, and the data sources finally documented
+Two BACKLOG items, both stale documentation that was actively misleading.
+
+`AGENTS.md` opened with "Content is sourced from **static JSON files**" and
+"Static JSON Data: simplifies content management without a database" — the site
+has run on Supabase for some time. It also told an agent to run the dev server
+on **port 3000**, which belongs to Siddhant's own work; claimed dark mode
+switches on `prefers-color-scheme`, which appears nowhere in `globals.css`; and
+documented a `slugify()` export from `lib/utils.ts` that does not exist.
+
+It now carries what an agent actually needs: the canonical-data table, the
+publish/deploy sequencing rule, the egress discipline, the checker commands, the
+list of routes that exist (and the two that do not — `/consulting` 308s and
+`/categories/*` 404s, which `/llms.txt` was advertising 24 times), and the house
+rules about deleting nothing and attaching numbers to findings.
+
+The data reconciliation, as a table rather than a mystery:
+
+```
+neograph_reports (Supabase)   152   canonical
+data/all_reports.json          10   fallback behind lib/supabaseReports.ts
+data/reports.json              12   stale snapshot, feeds nothing load-bearing
+data/all_reports bulk.json    107   historical, unused
+data/all_reports old.json     104   historical, unused
+data/categories.json           12   slug map; 6 entries match no report
+```
+
+The snapshots stay. They are what stops a Supabase outage rendering an empty
+site, and that is now written down so the next pass does not "tidy" them away.
+
+Six BACKLOG items closed in place with what was actually done, including one
+closed as **not a defect** after measurement: the avatar CDN finding, where
+`image_url` is empty on all three team rows and both render sites guard on it,
+so nothing broken is served.
+
+### Browser verification (window opened 21:00 IST)
+Three fixes confirmed in Chrome against the local build at 1512x950, measured
+rather than eyeballed.
+
+**Header dropdown stacking.** With the Consulting menu open, `elementFromPoint`
+at the panel's centre, both lower corners and the point overlapping the hero
+search area each returns an element **inside the panel and inside the z-60
+header wrapper**. The live DOM also confirms the root cause: the `<header>`
+computes `backdrop-filter: blur(24px)`, which creates a stacking context, and
+the highest z-index anywhere outside the header is the skip link at 100 —
+intentionally above — then 50.
+
+A false negative worth recording: the first three probes said the hero was on
+top. The menu had closed. Each `evaluate_script` run was clicking the trigger
+again and toggling it shut, so the probes ran against
+`visibility: hidden; opacity: 0`. Reading `aria-expanded` before clicking fixed
+it. Same family as the stale-server false pass — confirm the state you think
+you are measuring.
+
+**FAQ toggle centring.** Glyph centre against circle centre:
+**offsetX 0.00px, offsetY 0.00px** in both states, with the open state showing
+`matrix(0.707107, …)` — the 45-degree rotation about the SVG's own centre.
+
+**Focus ring.** Tabbed to "Buy report now" on the blue CTA panel in dark mode:
+`:focus-visible` matches, `outline: 2px solid rgb(255,255,255)` at 2px offset
+with a `rgb(11,18,32)` inner ring from the box-shadow. Both strokes present, the
+white one at 7.70:1 against that fill — where the old single-colour ring
+measured 1.00:1 on the same button.
+
+Also seen working in the browser: the related-research block renders six sourced
+neighbours with size and CAGR under each report.
+
+Filed while looking: related-report card titles carry the full stored
+boilerplate ("Global Cell & Gene Therapy Manufacturing Market — Growth Drivers,
+Restraints and Future Outlook 2032"), where the social card already trims to
+"… Market". Cosmetic, queued as R-12 rather than fixed at 23:30 with a deploy
+pending.
+
+### One title trim, shared (R-12)
+The related-report cards printed the stored title in full — "Global Cell & Gene
+Therapy Manufacturing Market — Growth Drivers, Restraints and Future Outlook
+2032" — six times per page, while the social card already trimmed to "… Market".
+`marketName()` now lives in `lib/seo.ts` and both call it, so the two cannot
+drift. Built HTML: "Global Gene Therapy Market", "CAR-T Cell Therapy Market".
+
+The helper carries the warning with it: build the pattern from a character
+class, not a word-boundary escape, because an earlier copy had its escapes
+turned into literal backspace characters and silently did nothing.
+
+### The homepage made the same overstatement as the listing
+The hero read "152 research reports across 6 **healthcare and life sciences**
+verticals" while 26 of those rows are agritech, climate tech, space economy,
+quantum technology, digital infrastructure, advanced materials or synthetic
+biology. Now "152 research reports across 6 research verticals", which is true
+whichever way Siddhant decides R-10. Verified in the built homepage.
+
+### Core Web Vitals, measured (BACKLOG P2)
+First trace of a report page, local production build, no throttling:
+
+```
+LCP            1,572 ms   (TTFB 28 ms, render delay 1,544 ms — 98.2%)
+LCP element    the server-rendered <h1>: text, already in the HTML
+CLS            0.00
+DOM            771 elements, depth 16 — not the problem
+layout updates 678 ms, 179 ms, 680 ms, each over 1102 of 1102 nodes
+```
+
+The shape of this is unusual and worth stating plainly: the largest element is
+text that is **already in the delivered HTML**, so nothing is waiting on the
+network — 98% of LCP is the main thread, and two ~680ms full-page layout passes
+account for most of it. On a desktop with no throttling.
+
+Filed as **R-13** with the suspects ranked (Recharts measuring its container,
+the TOC `IntersectionObserver`, the header's `backdrop-filter`) rather than
+guessed at: isolating it needs a trace with the charts removed, which is not
+something to start twenty minutes before a deploy.
+
+CLS at 0.00 is worth recording as a pass — the chart containers and the sticky
+rails hold their space.
+
+### The slow paint is in production, and it is not the charts
+Traced `/methodology` in **production**: **LCP 3,921ms, TTFB 45ms, CLS 0.03.**
+The page has no charts, no `IntersectionObserver` and six headings, and its LCP
+element is text already in the delivered HTML — so 3,876ms of that is the main
+thread, not the network.
+
+That rules out the first suspect from the report-page trace. The chartless page
+is **worse** than the report page (1,572ms), so Recharts is not what is costing
+the time; something in the shared shell is. Measured so far: the HubSpot/GTM
+script takes 288ms of main thread. Remaining suspects are the header's
+`backdrop-filter`, the theme-toggle hydration and the font load.
+
+R-13 is raised to **high** on that evidence. Deferring the fix rather than
+guessing at it twenty minutes before a deploy: the next pass isolates it by
+tracing with the third-party script blocked, which is one line of CDP and
+answers the question outright.
+
+### Correcting the performance finding before it became a wrong one
+The trace attributed **288ms of main thread to Google Tag Manager**. The
+production HTML ships **no external scripts at all** — 14 script tags, every one
+a first-party chunk — so that time came from the measuring browser, which is a
+real Chrome profile with extensions installed, not from the site.
+
+Which means an unknown share of the 3.9s render delay is the profile rather than
+the page, and R-13 drops back to medium and **"not yet attributable"** until it
+is re-measured in a clean profile. The one conclusion that survives the caveat
+is the differential: the chartless page is slower than the report page, so
+Recharts is not the cause whatever the absolute numbers turn out to be.
+
+This is the third time today that a measurement needed the measurement checked:
+the stale `next start` serving old code, the menu probes running against a
+toggled-shut menu, and now an extension's work counted as the site's. The rule
+earns its place — reproduce cleanly before fixing.
+
+### And a correction to the correction
+Re-measured in an **isolated browser context**, which is the clean-profile check
+the last entry said was needed:
+
+```
+                        everyday profile      isolated context
+/methodology LCP            3,921 ms              1,316 ms
+TTFB                           45 ms                 89 ms
+CLS                             0.03                 0.035
+```
+
+So most of the 3.9s was the profile, as suspected. But two things came out of
+the clean run that the "no external scripts" check had got wrong:
+
+1. **Google Analytics is on the site after all.** `app/layout.tsx:114` renders
+   `GoogleAnalytics` from `@next/third-parties/google`, which injects gtag
+   **client-side** — so it is absent from the static HTML I grepped, and present
+   in the live DOM. Checking the delivered HTML was the wrong instrument.
+2. **FCP and LCP are the same event at 1,316ms.** Nothing paints at all for 1.3
+   seconds on a server-rendered text page whose TTFB is 89ms. That part is the
+   site, not the profile, and it is what R-13 now describes.
+
+Three instruments, three different answers, and only the third one was sound.
+Worth the entry even though the finding shrank: the first number would have sent
+the next session optimising charts that are not the problem.
+
+### One more measurement, and an attempt that did not work
+Tried to isolate gtag by patching `document.createElement` in an init script
+before navigation. **It did not block it** — the script was still in the DOM
+afterwards (`@next/third-parties` sets `src` by a path the patch did not cover),
+so that experiment is inconclusive and is recorded as such rather than as a
+result.
+
+The run was still worth having, because of the gap it shows:
+
+```
+TTFB                187 ms
+DOMContentLoaded    484 ms
+first paint       1,436 ms
+first contentful  1,436 ms   (same event as LCP)
+CLS                 0.035
+```
+
+**Roughly 950ms passes between the DOM being ready and anything appearing on
+screen.** That is the shape to chase next — a stylesheet applied late, the
+pre-paint theme script, the font load, or a long task holding the first frame —
+and it is a different question from the one R-13 started as. Next pass blocks
+gtag at the network layer rather than in page script, where it cannot be routed
+around.
+
+## 2026-10-17 — the deploy, and the defect it exposed on the way
+
+Published 30 reports, 2 articles and the press release to Supabase (corpus
+**152 -> 182**), then built — and the spot check found the new report pages
+carrying **no related-research block at all**, while the old ones had theirs.
+
+Three wrong explanations before the right one, each discarded on evidence:
+
+1. *A transient Supabase failure under build load.* Added a retry and a longer
+   memo TTL. Rebuilt: unchanged.
+2. *Stale build artefacts.* File timestamps showed both files written in the
+   same build, six seconds apart.
+3. *Bad data.* A direct query returned 182 rows, found the new slug, and counted
+   27 same-industry candidates. The data was fine.
+
+Instrumenting the build settled it: **the corpus query returned 152 rows inside
+the build while returning 182 outside it.** Next's Data Cache wraps `fetch`, and
+supabase-js issues its queries through it — a fetch with no cache hint is cached
+**indefinitely**, so this query was served from the *previous build's* entry.
+`generateStaticParams` had fresh data, so all 182 pages were generated; each of
+the 30 new ones then looked itself up in a 152-row corpus, failed to find
+itself, and rendered nothing. No error, no empty section — a missing block on
+exactly the new pages.
+
+The first fix was wrong and the build said so plainly: `cache: 'no-store'` made
+the route dynamic, and with `dynamicParams = false` every page logged "Dynamic
+server usage" and **all 182** shipped without the block — worse than the defect.
+The fix is a 60-second `revalidate` on that one query, which keeps the route
+static and makes any build a minute after a publish see the new rows.
+
+Verified after the fix: **182 of 182 pages have a related list** (0 with none, 0
+query failures), the new reports render their figures with the right unit
+(`$963.7M -> $1,177.8M` on the isotope report), each carries its chart source
+caption and its own social card, 16 of 16 audited routes are clean and contrast
+has 0 failing pairs.
+
+Worth keeping in mind for any future corpus-wide read used during a build: it
+needs a revalidate, or the build will cheerfully serve yesterday's corpus.

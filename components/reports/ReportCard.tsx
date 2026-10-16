@@ -18,10 +18,19 @@ interface ReportCardReport {
 interface ReportCardProps {
   report: ReportCardReport;
   index?: number;
+  /**
+   * The card title's heading level. `h2` is right on a listing page, where the
+   * page's `h1` is the only heading above the grid — the cards were `h3`, which
+   * left the outline jumping h1 -> h3 and a screen-reader user navigating by
+   * heading unable to tell whether a level had been skipped or content missed.
+   * Pass `h3` where the grid sits under a section `h2`, as on an author page.
+   */
+  headingLevel?: 'h2' | 'h3';
 }
 
 /** The report card — the primary content unit of the listing pages. */
-export default function ReportCard({ report }: ReportCardProps) {
+export default function ReportCard({ report, headingLevel = 'h2' }: ReportCardProps) {
+  const Heading = headingLevel;
   return (
     <article className="group flex h-full flex-col gap-4 rounded-card border border-[var(--cmi-line)] bg-[var(--card)] p-5 transition-colors duration-200 hover:border-[var(--cmi-primary)] md:p-6.5">
       <div className="flex items-center justify-between gap-3">
@@ -35,14 +44,14 @@ export default function ReportCard({ report }: ReportCardProps) {
         )}
       </div>
 
-      <h3 className="font-display text-[18px] font-semibold leading-[1.25] md:text-[20px]">
+      <Heading className="font-display text-[18px] font-semibold leading-[1.25] md:text-[20px]">
         <Link
           href={`/reports/${report.slug}`}
           className="line-clamp-3 text-[var(--cmi-ink)] transition-colors hover:text-[var(--cmi-primary)]"
         >
           {report.title}
         </Link>
-      </h3>
+      </Heading>
 
       <p className="line-clamp-3 flex-1 text-[13.5px] leading-[1.6] text-[var(--cmi-body)]">
         {report.summary || report.description}

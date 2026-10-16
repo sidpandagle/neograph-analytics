@@ -1,0 +1,247 @@
+{
+  "report_id": "rehabilitation-robotics-market",
+  "slug": "rehabilitation-robotics-market",
+  "title": "Rehabilitation Robotics Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 1.77,
+    "forecast_value": 4.56,
+    "cagr": 17.1
+  },
+  "executive_summary": "This is the thinnest evidence base of any market in this corpus, and the honest way to open a report on it is to say so. Published estimates put the 2025 base anywhere from $717 million to $5.13 billion -- a 7.15x spread -- and the published growth rates from 6.32% to 22.4%, with the house carrying the largest base publishing the smallest rate.\n\nThe category has three listed pure-plays that disclose revenue outright, which makes a published billion-dollar market immediately testable. Myomo reported $40.9 million for 2025. Lifeward, formerly ReWalk Robotics, reported about $22.0 million, down 14%. Ekso Bionics reported $12,799 thousand, down 29%. Together: $75.7 million -- 5.0% of the $1.51 billion Mordor Intelligence publishes for the same year, and 10.6% of the lowest published figure in the set.\n\nThe brief for a finding like this is to say what the other 95% would have to consist of, and the publisher's own segmentation answers it. Mordor states that stationary platforms are 65.3% of its 2025 market and upper-limb systems 54.6%. All three listed companies sell the opposite: wearable lower-limb exoskeletons, a wearable arm orthosis and an antigravity treadmill. The money, on the publisher's own account, is in stationary clinical gait and upper-limb therapy platforms sold into rehabilitation centres -- a tier owned by Hocoma, Motek, Tyromotion, Fourier Intelligence, Motorika, CYBERDYNE and Wandercraft, none of which is a US-listed pure-play and none of which we could find a revenue figure for. We name them and decline to size them.\n\nOne more fact belongs in any summary of this market. Ekso Bionics was merged into an AI infrastructure business called ChronoScale in May 2026, and the Ekso business unit was put up for sale on 1 October 2026. One of the three listed pure-plays ceased to be one during the first year of every forecast above. No published forecast mentions it.",
+  "market_context": "Rehabilitation robotics is two businesses that share a name and almost nothing else.\n\nThe first is a personal device, bought for an individual patient and reimbursed. CMS issued HCPCS code K1007 for the ReWalk personal exoskeleton effective 1 October 2020 -- the first such code for an exoskeleton -- and added exoskeletons to the Medicare brace benefit category on 1 January 2024, payable as a lump sum. The final amount, set in April 2024, was about $91,031 per device. That is an unusually transparent price for a medical device, and it makes the personal tier countable in a way almost nothing else in this corpus is.\n\nThe second is capital equipment: a stationary gait trainer or upper-limb therapy platform installed in a rehabilitation centre, costing six figures, bought on a hospital capital cycle and sold largely by private European, Japanese and Chinese manufacturers. On Mordor Intelligence's own figures this is where two thirds of the market sits.\n\nThe listed companies are all in the first business. The published market is mostly the second. That mismatch is the single most important thing to understand before quoting any figure in this category, and it explains why a sector whose entire public float discloses $75.7 million of revenue carries forecasts of $4 billion and more.",
+  "forecast_analysis": "The headline comes from Mordor Intelligence, read from the publisher's own page on 16 October 2026: $1.51 billion for 2025, $1.77 billion for 2026, $3.89 billion for 2031, a 17.10% CAGR for 2026-2031. The 2026 base is Mordor's own published figure. The 2032 endpoint continues its own rate one year past its own horizon (1.77 x 1.1710^6 = 4.56); interpolating forward lands 2031 on 3.90 against the published 3.89, and the implied rate between our endpoints is 17.09%.\n\nIt was chosen because it is the only source in the set we could read from the publisher's own page, the only one that states both what is in scope and what is out -- clinical and supervised care settings in, surgical robots and consumer fitness devices out -- and the only one that publishes the segment shares that make it possible to say where the market we cannot see is supposed to be.\n\nThat 17.10% should be read as a forecast about the undisclosed capital-equipment tier, not as a description of the visible industry. In 2025 Ekso Bionics shrank 29% and Lifeward shrank 14%; Myomo grew and guides 2026 to $45-47 million on a $40.9 million base. Lifeward's ReWalk Personal units rose 22% while that revenue line was flat at $8.5 million, which is volume growth with falling realised price -- the opposite of what a 17% revenue CAGR assumes. 360iResearch's $717 million for 2025, less than half Mordor's, is the low end of the published range, and it is the reading the disclosed record sits less awkwardly against.",
+  "market_overview": {
+    "summary": "On Mordor Intelligence's published series -- rehabilitation robots that assist, guide or measure patient movement in clinical and supervised care settings, excluding surgical robots and consumer fitness devices -- the market is $1.77 billion in 2026, projected to $4.56 billion by 2032 at a 17.10% CAGR. The lowest published estimate puts 2025 at $717 million against Mordor's $1.51 billion. All three listed pure-plays in the category sum to $75.7 million of 2025 revenue, 5.0% of Mordor's figure, so roughly 95% of this market is held by companies that disclose nothing. This report publishes the series and states that limitation rather than concealing it.",
+    "key_trends": [
+      "Published 2025 estimates spread 7.15x ($717M to $5.13B) and published CAGRs 3.54x (6.32% to 22.4%), with the largest base carrying the smallest rate",
+      "All three listed pure-plays sum to $75.7M for 2025: 5.0% of the published market we adopt and 10.6% of the lowest published figure",
+      "Two thirds of the published market is stationary equipment on the publisher's own segmentation (65.3%), while every listed company sells wearables",
+      "Ekso Bionics was merged into ChronoScale, an AI infrastructure business, in May 2026, and the Ekso unit was put up for sale on 1 October 2026",
+      "Lifeward's ReWalk Personal units rose 22% in 2025 while that revenue line stayed flat at $8.5M -- volume growth with falling realised price",
+      "CMS pays a lump sum of about $91,031 per personal exoskeleton under HCPCS K1007, one of the few published administered prices in medical devices"
+    ],
+    "market_stage": "Emerging",
+    "adoption_level": "Early; concentrated in specialist rehabilitation centres and a small reimbursed personal segment"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A published Medicare lump-sum payment of about $91,031 per personal exoskeleton under HCPCS K1007, with exoskeletons inside the brace benefit category since 1 January 2024",
+      "Unit demand that is growing even where revenue is not: Lifeward's ReWalk Personal units rose 22% in 2025 and its Q4 sales rose 20%",
+      "Geriatric patients are 61.4% of the published market on Mordor's own segmentation, tying demand to a demographic trend that does not reverse",
+      "Therapist labour scarcity, which is the operational case for a platform that can deliver repetitions without one-to-one supervision",
+      "Wearable soft robots, which Mordor projects to grow at 29.6% to 2031, a lower-cost form factor than powered rigid exoskeletons"
+    ],
+    "restraints": [
+      "Two of the three listed pure-plays shrank in 2025 -- Ekso Bionics by 29% and Lifeward by 14% -- against published CAGRs of 16% to 22%",
+      "Capital budgets: two thirds of the market is stationary six-figure equipment bought on a hospital capital cycle, not a consumable",
+      "Balance-sheet fragility at the visible companies: Lifeward ended 2025 with $2.2 million of unrestricted cash and a $19.9 million net loss",
+      "Reimbursement outside the US personal exoskeleton code is largely undefined, so most of the world has no payment pathway for these devices",
+      "Flat revenue on rising units indicates price erosion in the one segment where a published price exists"
+    ],
+    "opportunities": [
+      "The undisclosed capital-equipment tier, where two thirds of the published revenue sits and where no listed pure-play currently competes at scale",
+      "Upper-limb therapy, 54.6% of the published market on Mordor's segmentation and the segment the listed exoskeleton companies barely address",
+      "Homecare, where a reimbursed personal device changes the delivery model rather than adding to a clinic's capital stock",
+      "Consolidation: the sale of the Ekso Bionics business unit announced on 1 October 2026 puts an established clinical and personal portfolio on the market",
+      "Distribution rather than manufacture, the route Ekso took in December 2025 by becoming exclusive US distributor of MediTouch's BalanceTutor system"
+    ],
+    "challenges": [
+      "Roughly 95% of the published market is held by companies that disclose no revenue, so no published figure in this category can be independently validated",
+      "The listed pure-plays are not representative of the market they are taken to represent: they sell wearables into a market that is two thirds stationary",
+      "The category is published under at least four mutually inconsistent names, from therapy rehabilitation robots at $926M by 2032 to robotic rehabilitation assistive technologies at $5.13B in 2025",
+      "Capital markets have begun exiting: one of three listed pure-plays was reverse-merged out of the industry inside the first forecast year"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Exoskeleton robots",
+      "Therapeutic robots",
+      "Assistive robots",
+      "Wearable soft robots"
+    ],
+    "by_application": [
+      "Neurological disorders",
+      "Orthopaedic injury and post-surgical rehabilitation",
+      "Sports injury",
+      "Upper-limb therapy",
+      "Lower-limb and gait training"
+    ],
+    "by_end_user": [
+      "Rehabilitation centres",
+      "Hospitals and clinics",
+      "Homecare",
+      "Specialty orthopaedic and sports-medicine centres"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 1.77 },
+    { "year": 2027, "value": 2.07 },
+    { "year": 2028, "value": 2.43 },
+    { "year": 2029, "value": 2.84 },
+    { "year": 2030, "value": 3.33 },
+    { "year": 2031, "value": 3.9 },
+    { "year": 2032, "value": 4.56 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Myomo",
+      "headquarters": "United States",
+      "market_position": "Largest listed pure-play by revenue; the only one growing",
+      "description": "Reported full-year 2025 revenue of $40.9 million with a fourth quarter of $11.4 million, and guided 2026 to $43-46 million, later raised to $45-47 million. Its MyoPro is a powered arm orthosis sold direct to patients with insurance billing, not a K1007 exoskeleton, so it addresses the upper-limb segment that Mordor puts at 54.6% of the market. Its FY2024 revenue was not obtained in this research pass, so no 2025 growth rate is stated here."
+    },
+    {
+      "company": "Lifeward (formerly ReWalk Robotics)",
+      "headquarters": "Israel / United States",
+      "market_position": "Second listed pure-play; shrinking at group level",
+      "description": "Reported about $22.0 million of 2025 revenue, down 14% from $25.7 million. The ReWalk Personal exoskeleton line was flat at $8.5 million even though units rose 22%, which is the clearest evidence in this market of volume growth with falling realised price. AlterG antigravity treadmills fell 18% to $12.9 million and MyoCycle fell 50% to $0.6 million. Gross margin improved to 38.2% from 32% and the net loss narrowed 31% to $19.9 million, but the company ended 2025 with $2.2 million of unrestricted cash. Figures were read from third-party summaries because the company's own investor page returned HTTP 403."
+    },
+    {
+      "company": "Ekso Bionics (now within ChronoScale, unit for sale)",
+      "headquarters": "United States",
+      "market_position": "Third listed pure-play; has left the category",
+      "description": "Reported revenue of $12,799 thousand for 2025 against $17,925 thousand for 2024, a 29% decline, with gross margin held at 53% and a net loss of $11,695 thousand. In December 2025 Applied Digital proposed spinning out its cloud business and combining it with Ekso to launch ChronoScale; the separation completed on 5 May 2026, and on 1 October 2026 ChronoScale announced the sale of the Ekso Bionics business unit. Ekso's former investor URL now redirects to ChronoScale's. In December 2025 it had become exclusive US distributor of MediTouch's BalanceTutor rehabilitation system."
+    },
+    {
+      "company": "Hocoma and Motek (DIH Holding), Tyromotion, Motorika, Reha Technology",
+      "headquarters": "Switzerland, Netherlands, Austria, Israel",
+      "market_position": "The stationary clinical tier, undisclosed",
+      "description": "The Lokomat and Armeo class of stationary gait and upper-limb therapy platform is where Mordor's own segmentation puts 65.3% of this market. These suppliers are private, non-US-listed or carry the business inside a larger group, and we obtained no revenue figure for any of them in this research pass. They are named here as the tier the published market must largely consist of, and deliberately not sized."
+    },
+    {
+      "company": "Fourier Intelligence, CYBERDYNE, Wandercraft, B-Temia",
+      "headquarters": "China, Japan, France, Canada",
+      "market_position": "The non-US exoskeleton and platform suppliers, undisclosed",
+      "description": "CYBERDYNE is listed in Japan and Wandercraft is venture-funded and private; Fourier Intelligence anchors a substantial and fast-moving Chinese manufacturing base. Several sell clinical gait exoskeletons at capital prices rather than personal devices at the K1007 lump sum, which is part of why the implied unit count from that reimbursement rate is an upper bound. No revenue figure for any of them was obtained and none is asserted."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "ChronoScale (formerly Ekso Bionics Holdings)",
+      "year": 2026,
+      "event": "Announced on 1 October 2026 the sale of the Ekso Bionics business unit, alongside agreements bringing total contracted run-rate revenue to $1 billion, having completed the separation of Applied Digital's cloud business into ChronoScale on 5 May 2026 -- removing one of the three listed rehabilitation robotics pure-plays from the category."
+    },
+    {
+      "company": "Applied Digital",
+      "year": 2025,
+      "event": "Proposed on 29 December 2025 to spin out its cloud business and combine it with Ekso Bionics to launch ChronoScale; Ekso Bionics separately priced a $5.852 million private placement on 21 January 2026."
+    },
+    {
+      "company": "Lifeward",
+      "year": 2026,
+      "event": "Reported full-year 2025 revenue of about $22.0 million, down 14%, with the ReWalk Personal exoskeleton line flat at $8.5 million despite a 22% rise in units sold, AlterG down 18% to $12.9 million, gross margin up to 38.2% from 32%, and $2.2 million of unrestricted cash at 31 December 2025."
+    },
+    {
+      "company": "Myomo",
+      "year": 2026,
+      "event": "Reported full-year 2025 revenue of $40.9 million on 9 March 2026 with a fourth quarter of $11.4 million, guided 2026 revenue to $43-46 million, and subsequently raised that guidance to $45-47 million."
+    },
+    {
+      "company": "Ekso Bionics",
+      "year": 2025,
+      "event": "Became the exclusive United States distributor of MediTouch's BalanceTutor rehabilitation system in December 2025, adding a distributed product line in the same year its own device revenue fell 29%."
+    },
+    {
+      "company": "US Centers for Medicare & Medicaid Services",
+      "year": 2024,
+      "event": "Added exoskeletons to the Medicare brace benefit category effective 1 January 2024, reimbursed on a lump-sum basis, and set the final payment amount for HCPCS code K1007 in April 2024 at about $91,031 per device, applied retroactively to 1 April 2024, after a contractor had initially proposed $94,617."
+    }
+  ],
+  "regulatory_landscape": [
+    "HCPCS Level II code K1007, issued for personal exoskeletons effective 1 October 2020, the first such code for an exoskeleton medical device",
+    "Medicare brace benefit category, which from 1 January 2024 covers personal exoskeletons on a lump-sum basis at a final 2024 amount of about $91,031 per device",
+    "FDA 510(k) clearance for powered exoskeletons and powered orthoses, which establishes the regulated indications these devices may be marketed and billed for",
+    "Absence of a defined reimbursement pathway for rehabilitation robots in most markets outside the United States, so clinical platforms are bought from hospital capital budgets rather than paid for per patient",
+    "Medicare inpatient rehabilitation facility payment rules, which set the therapy-intensity requirements that make throughput-raising equipment economically relevant to a provider"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of SEC filings, company results releases, CMS coding and payment records and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Ekso Bionics Holdings, Inc., Form 10-K for the year ended 31 December 2025: revenue $12,799 thousand against $17,925 thousand, a 29% decline, net loss $11,695 thousand",
+      "Lifeward Ltd., Q4 and full-year 2025 results (18 March 2026): revenue about $22.0 million, ReWalk Personal $8.5 million flat on units up 22%, AlterG $12.9 million, $2.2 million unrestricted cash",
+      "Myomo, Inc., Q4 and full-year 2025 results (9 March 2026): revenue $40.9 million, Q4 $11.4 million, 2026 guidance $43-46 million later raised to $45-47 million",
+      "ChronoScale investor relations press release record (read 16 October 2026): the 29 December 2025 spin-out proposal, the 5 May 2026 separation and the 1 October 2026 sale of the Ekso Bionics business unit",
+      "CMS HCPCS Level II code K1007, effective 1 October 2020; exoskeletons added to the Medicare brace benefit category effective 1 January 2024; final payment amount of about $91,031 set in April 2024 after a proposed $94,617",
+      "Mordor Intelligence, Rehabilitation Robots Market (read from the publisher's own page, 16 October 2026), with published 2025 segment shares including stationary platforms 65.30% and exoskeleton robots 47.35%",
+      "Published market estimates from 360iResearch, Straits Research, Meticulous Research, Spherical Insights and Global Market Insights"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates, attributed by name, and presented as published estimates rather than verified measurements. Three grounding tests were run. First, the revenue of every listed pure-play in the category was summed -- Myomo $40.9M, Lifeward $22.0M and Ekso Bionics $12.8M, totalling $75.7M for 2025 -- and divided by each publisher's base-year total, giving 5.0% of Mordor's $1.51 billion and 10.6% of 360iResearch's $717 million. Second, because that leaves roughly 95% unaccounted for, the publisher's own segmentation was used to locate it: stationary platforms are stated at 65.30% of the 2025 market and upper-limb systems at 54.60%, while all three listed companies sell wearable or treadmill products, which places the remainder in a private, mostly non-US stationary capital-equipment tier that is named in this report and deliberately not sized. Third, the publisher's own exoskeleton segment share of 47.35% was applied to its 2025 total and divided by the CMS K1007 lump-sum amount of about $91,031, implying roughly 7,850 personal exoskeletons a year, against disclosed powered exoskeleton revenue of $21.3 million -- Lifeward's ReWalk Personal plus Ekso's whole company -- which is 2.98% of that segment and equivalent to about 234 devices. These tests do not establish that the published figures are wrong: an undisclosed tier cannot be measured, only named, and this report asserts no market size of its own. Ekso's figure is whole-company revenue including clinical devices and services rather than an exoskeleton-only line, and was read from a search summary of the 10-K; Lifeward's figures were read from third-party summaries because its own investor page returned HTTP 403; Myomo's FY2024 revenue was not obtained, so no 2025 growth rate for it is published; the K1007 amount was read from trade-press and company accounts rather than the CMS DMEPOS fee schedule, sources differ between $91,031 and $91,032, and the amount may have been revised since 2024; the exoskeleton segment also contains clinical systems priced well above the lump sum, so the implied unit count is an upper bound; and dividing company revenue by a third party's market total compares differently constructed numbers. No vendor market share is published because none is disclosed, and no regional or country split is published, because a single house's apportionment of a market that is 95% undisclosed is not a measurement."
+  },
+  "faqs": [
+    {
+      "question": "How big is the rehabilitation robotics market?",
+      "answer": "$1.77 billion in 2026 on Mordor Intelligence's published series, projected to $4.56 billion by 2032 at 17.10%. But published 2025 estimates range from $717 million to $5.13 billion, a 7.15x spread, and all three listed pure-plays in the category disclose only $75.7 million of revenue between them. This is the thinnest evidence base in our corpus and the report says so rather than concealing it."
+    },
+    {
+      "question": "Why is the published market 20 times the revenue of every listed company in it?",
+      "answer": "Because the listed companies sell the wrong product. Mordor's own segmentation puts stationary platforms at 65.3% of the 2025 market and upper-limb systems at 54.6%, while Ekso and Lifeward sell wearable lower-limb exoskeletons, Myomo sells a wearable arm orthosis and AlterG is an antigravity treadmill. The money, on the publisher's own account, is in stationary clinical gait and upper-limb therapy platforms."
+    },
+    {
+      "question": "So who holds the other 95%?",
+      "answer": "On the segmentation above it has to be the stationary clinical equipment tier: Hocoma and Motek (DIH Holding), Tyromotion, Motorika, Reha Technology, plus Fourier Intelligence, CYBERDYNE, Wandercraft and B-Temia. These are private, non-US-listed, or hold the business inside a larger group. We obtained no revenue figure for any of them, so we name them and decline to size them. That absence is the finding; filling it with an estimate would destroy it."
+    },
+    {
+      "question": "What does a personal exoskeleton cost?",
+      "answer": "Medicare pays a lump sum under HCPCS code K1007, set in April 2024 at about $91,031 per device after a contractor initially proposed $94,617. Exoskeletons entered the brace benefit category on 1 January 2024. Applying that rate to Mordor's own exoskeleton segment implies roughly 7,850 devices a year, against disclosed powered exoskeleton revenue of $21.3 million -- about 234 devices. Clinical gait exoskeletons cost considerably more than the lump sum, so 7,850 is an upper bound."
+    },
+    {
+      "question": "Is the published 17% growth rate credible?",
+      "answer": "It is a forecast about the undisclosed capital-equipment tier, not a description of the visible industry. In 2025 Ekso Bionics shrank 29% and Lifeward shrank 14%; Myomo grew and guides 2026 to $45-47 million on a $40.9 million base. Lifeward's ReWalk Personal units rose 22% while that revenue line was flat at $8.5 million, which is volume growth with price erosion -- the opposite of what a 17% revenue CAGR assumes."
+    },
+    {
+      "question": "What happened to Ekso Bionics?",
+      "answer": "Applied Digital proposed in December 2025 to spin out its cloud business and combine it with Ekso Bionics to launch ChronoScale, an AI infrastructure company. The separation completed on 5 May 2026 and on 1 October 2026 ChronoScale announced the sale of the Ekso Bionics business unit. Ekso's former investor URL now redirects to ChronoScale's. One of the three listed pure-plays left the category during the first year of every forecast in the published literature, and none of those forecasts mentions it."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Mordor publishes a North America share of 39.60% for 2025, but that is one house's apportionment of a market roughly 95% of which is held by companies that disclose nothing, with no method stated. Publishing a regional table on that basis would give a precision the underlying evidence cannot support, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "All three listed pure-plays sum to $75.7M of 2025 revenue -- 5.0% of the published market we adopt and 10.6% of the lowest published estimate",
+    "Published 2025 bases spread 7.15x ($717M to $5.13B) and published CAGRs 3.54x (6.32% to 22.4%)",
+    "Two thirds of the published market is stationary equipment (65.3% on the publisher's own figures) while every listed company sells wearables",
+    "Disclosed powered exoskeleton revenue of $21.3M is 2.98% of the publisher's own exoskeleton segment -- about 234 devices against an implied 7,850",
+    "Ekso Bionics shrank 29% in 2025, was merged into ChronoScale in May 2026, and the unit was put up for sale on 1 October 2026",
+    "Lifeward's ReWalk Personal units rose 22% while that revenue line stayed flat at $8.5M, and the company ended 2025 with $2.2M of unrestricted cash",
+    "CMS pays about $91,031 per personal exoskeleton under HCPCS K1007, one of the few published administered device prices anywhere in medtech"
+  ],
+  "reader_takeaways": [
+    "Treat any rehabilitation robotics market size as unvalidatable: roughly 95% of it sits with companies that disclose no revenue at all",
+    "Do not use the listed pure-plays as a proxy for this market -- they sell wearables into a market that is two thirds stationary capital equipment",
+    "If you are sizing the opportunity, size the stationary clinical platform tier, because that is where the published revenue is said to be",
+    "Model price erosion explicitly: the one segment with a published price shows units up 22% on flat revenue",
+    "Check the vintage of any forecast against the fact that one of three listed pure-plays exited the industry in 2026 -- none of the published forecasts has been revised for it"
+  ],
+  "seo": {
+    "meta_title": "Rehabilitation Robotics Market Size and Forecast to 2032",
+    "meta_description": "Every listed rehabilitation robotics pure-play discloses $75.7M between them -- 5% of the published market. Where the other 95% has to be, with the arithmetic.",
+    "keywords": [
+      "rehabilitation robotics market",
+      "rehabilitation robots market size",
+      "exoskeleton market",
+      "K1007 exoskeleton reimbursement",
+      "gait training robot",
+      "Ekso Bionics Lifeward Myomo revenue",
+      "upper limb rehabilitation robot"
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "report_id": "pharmacy-automation-market",
+  "slug": "pharmacy-automation-market",
+  "title": "Pharmacy Automation Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 7.64,
+    "forecast_value": 10.9,
+    "cagr": 6.1
+  },
+  "market_overview": {
+    "summary": "Published sizings of pharmacy automation agree about the present and contradict each other about the future. For 2025 they run $7.2 billion to $9.0 billion, just 1.25x; for 2032 they run $7.87 billion to $18 billion, 2.29x - and Meticulous Research's 2032 forecast of $7.87 billion is 9.3% below IMARC's figure for 2025. Meticulous publishes no base year at all; back-solving from its own rate and endpoint gives $4.67 billion for 2025, a third below the consensus. The supply side settles the growth question. Omnicell, the listed pure-play, reported $1,185 million for 2025 - 16.5% of IMARC's whole market - on 7% growth with fourth-quarter growth of 2% and GAAP net income down from $13 million to $2 million. A 12.2% market whose pure-play grows 7% and whose Q4 grows 2% is not a 12.2% market.",
+    "key_trends": [
+      "The spread is in the endpoints, not the bases: 1.25x at 2025 ($7.2 billion to $9.0 billion) against 2.29x at 2032 ($7.87 billion to $18 billion), and one house's 2032 forecast is below another's 2025 actual",
+      "One published forecast has no base year: Meticulous Research prints a 7.6% CAGR and a $7.87 billion 2032 endpoint but no starting value, and back-solving gives $4.67 billion for 2025, 35% below IMARC's figure for the same year",
+      "Omnicell alone is 16.5% of the published market at $1,185 million for 2025, and adding Becton Dickinson's Medication Management Solutions takes two companies to an upper bound of 65.1% - although that BD segment includes Alaris infusion pumps and is wider than pharmacy automation",
+      "Revenue is moving from hardware to software and service: Omnicell attributed its 2025 growth to connected devices and technical service offerings along with SaaS, Expert Services and consumables, and Global Market Insights reports products at 67.6% of its component market",
+      "The hospital denominator is flat: AHA Fast Facts recorded 6,100 US hospitals and 5,121 community hospitals from the 2024 survey, against 6,093 and 5,112 from the 2023 survey - a seven-hospital change",
+      "Automated dispensing cabinets are a mature, competitively evaluated product class rather than an emerging one: BD Pyxis MedStation ES won a 2025 Best in KLAS award in that category, and BD launched a next-generation Pyxis Pro platform in the same fiscal year"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Automated dispensing is near-universal in US hospitals; retail and central-fill automation is the remaining penetration opportunity"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Pharmacist labour cost and availability make automation a substitution decision rather than a quality one, which is why the published driver lists across every house in the set name labour-cost reduction first",
+      "Software and service attach rates are rising faster than hardware: Omnicell's 2025 growth came from connected devices and technical service offerings alongside SaaS, Expert Services and consumables, which is the part of the market a hardware-only sizing misses",
+      "Central fill and mail-order dispensing concentrate volume into a small number of high-throughput sites where automation economics are strongest, and the category is published as its own sub-market",
+      "The retail pharmacy denominator is large: roughly 51,300 US retail pharmacies by our division of NCPA's 18,988 independents by its own stated 37% share, which at IMARC's figures implies about $39,100 of annualised spend per store per year",
+      "Replacement cycles sustain demand independently of penetration: a dispensing cabinet or counting robot has a five-to-ten-year service life, so a near-universal installed base generates recurring capital demand"
+    ],
+    "restraints": [
+      "The installed base is already near-universal in hospitals and the denominator is flat: 6,100 US hospitals from the 2024 AHA survey against 6,093 from the 2023 survey means growth comes from replacement, software attach and price rather than penetration",
+      "The pure-play's own numbers contradict the high growth rates: Omnicell grew 7% in 2025 with fourth-quarter revenue up only 2% and GAAP net income down from $13 million to $2 million",
+      "Independent pharmacy, 18,988 stores and about 37% of US retail pharmacies, operates at prescription-dominated margins that make a six-figure capital item hard to justify at a single site",
+      "Two companies are an upper bound of 65.1% of the published market, which leaves Swisslog Healthcare, ScriptPro, ARxIUM, Capsa, Yuyama, Willach and the central-fill specialists sharing a third of it",
+      "No public register counts hospital or retail pharmacies directly: AHA counts hospitals, NCPA counts independents and a percentage, so every denominator in this market has to be derived"
+    ],
+    "opportunities": [
+      "Autonomous medication management is the stated product direction rather than faster dispensing: Omnicell framed its Titan XT launch explicitly as a step toward it, which repositions the category from hardware replacement to workflow software",
+      "Robotics-plus-software partnerships rather than integrated hardware stacks: Swisslog Healthcare and BD entered a co-marketing agreement in December 2024 pairing Swisslog robotics with BD Pyxis Logistics software",
+      "Retail and out-patient pharmacy is the segment with genuine penetration headroom, and it is the largest end-user segment at 51.2% of IMARC's 2025 market",
+      "Central fill automation is published as a distinct sub-market growing faster than the whole, which suggests volume concentration is the structural trend rather than per-store automation",
+      "Consumables and recurring service revenue carry better economics than hardware and are counted by some publishers and not others, which is where the component-scope spread originates"
+    ],
+    "challenges": [
+      "A forecast published without a base-year value cannot be audited, and when Meticulous Research's base is reverse-engineered from its own rate and endpoint it lands 35% below IMARC's and 48% below HTF's",
+      "BD does not disclose a pharmacy-automation-only line - its Medication Management Solutions segment includes Alaris infusion pumps - so the second-largest player in this market cannot be measured against it",
+      "BD's planned combination of its Biosciences and Diagnostic Solutions business with Waters Corporation around the end of the first quarter of calendar 2026 will change its segment reporting, which risks removing even the aggregated figure",
+      "IMARC's statement that the United States holds 84.50% of the total market share does not say whether that is of the global or North American market, which is a material ambiguity in the only country-level figure published anywhere in the set",
+      "Published figures fail their own arithmetic: IMARC's $7.2 billion base and $12.4 billion endpoint imply 6.23% against a stated 6.10%"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Automated Medication Dispensing Systems",
+      "Automated Storage and Retrieval Systems",
+      "Automated Packaging and Labeling Systems",
+      "Medication Compounding Systems",
+      "Tabletop Tablet Counters",
+      "Pharmacy Management Software and SaaS"
+    ],
+    "by_application": [
+      "Drug Dispensing and Packaging",
+      "Drug Storage",
+      "Inventory Management",
+      "Sterile and Hazardous Compounding"
+    ],
+    "by_end_user": [
+      "Hospital and In-Patient Pharmacies",
+      "Retail Community Pharmacies",
+      "Out-Patient and Clinic Pharmacies",
+      "Central Fill and Mail-Order Facilities",
+      "Long-Term Care Pharmacies"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 7.64 },
+    { "year": 2027, "value": 8.11 },
+    { "year": 2028, "value": 8.6 },
+    { "year": 2029, "value": 9.12 },
+    { "year": 2030, "value": 9.67 },
+    { "year": 2031, "value": 10.26 },
+    { "year": 2032, "value": 10.9 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Omnicell",
+      "headquarters": "Fort Worth, Texas, United States",
+      "market_position": "The listed pure-play and the cleanest measurable figure in this market: FY2025 revenue of about $1,185 million, up 7%, which is 16.5% of IMARC's $7.2 billion whole-market total for 2025. Omnicell discloses no market share itself.",
+      "description": "Reported FY2025 revenue above the midpoint of guidance on 5 February 2026, with product bookings and annual recurring revenue also above guidance, and attributed growth to connected devices and technical service offerings alongside SaaS, Expert Services and consumables. The deceleration is visible in the same release: fourth-quarter revenue of $314 million was up only 2% year on year, and GAAP net income fell to $2 million, or $0.04 per diluted share, from $13 million and $0.27. Launched the Titan XT next-generation dispensing system, framed as a step toward autonomous medication management."
+    },
+    {
+      "company": "Becton Dickinson (Pyxis)",
+      "headquarters": "Franklin Lakes, New Jersey, United States",
+      "market_position": "The largest player in hospital automated dispensing by installed base, with Medication Management Solutions revenue of roughly $3.5 billion for fiscal 2025. That segment includes BD Alaris infusion pumps and wider medication-management software, so it substantially overstates BD's pharmacy-automation content and no share is derivable from it.",
+      "description": "BD Pyxis MedStation ES won a 2025 Best in KLAS award for Automated Dispensing Cabinets - an award category that exists only because the product class is mature and competitively evaluated at essentially every US hospital - and BD launched the next-generation BD Pyxis Pro Medication Dispensing platform in fiscal 2025. BD stated it was on track to combine its Biosciences and Diagnostic Solutions business with Waters Corporation around the end of the first quarter of calendar 2026, which will change its segment reporting and may remove even the aggregated figure."
+    },
+    {
+      "company": "Swisslog Healthcare",
+      "headquarters": "Buchs, Switzerland",
+      "market_position": "A leading provider of robotic medication management and pharmacy logistics systems for hospitals. Privately held within the KUKA group; no revenue or share is disclosed.",
+      "description": "Entered a co-marketing agreement with BD announced on 9 December 2024, pairing Swisslog robotics with BD Pyxis Logistics smart medication management software to automate pharmacy inventory management in US hospitals. The structure of that deal - robotics from one vendor, inventory software from another - is the clearest signal in this market that the competitive unit is becoming the workflow rather than the machine."
+    },
+    {
+      "company": "ScriptPro",
+      "headquarters": "Mission, Kansas, United States",
+      "market_position": "A major supplier of robotic prescription dispensing systems and pharmacy management software to US retail and out-patient pharmacies. Privately held; no revenue or share is disclosed.",
+      "description": "Sits in the retail and out-patient segment that IMARC puts at 51.2% of the 2025 market - the part with genuine penetration headroom, since the hospital installed base is close to universal. Sells the counting and vial-filling robot together with the management software, which is the integrated model that the Swisslog-BD partnership is an alternative to."
+    },
+    {
+      "company": "ARxIUM",
+      "headquarters": "Winnipeg, Manitoba, Canada",
+      "market_position": "Supplier of high-throughput central fill, IV compounding and unit-dose packaging automation for health systems and mail-order pharmacies. Privately held; no revenue or share is disclosed.",
+      "description": "Concentrated in the central fill and high-volume packaging segment, which is published as its own faster-growing sub-market and which reflects the structural direction of travel: automating a small number of very high throughput sites rather than every retail counter. Its absence from the public record, along with Swisslog's and ScriptPro's, is why two disclosed companies appear to be nearly two-thirds of this market."
+    },
+    {
+      "company": "Capsa Healthcare",
+      "headquarters": "Columbus, Ohio, United States",
+      "market_position": "Supplier of medication carts, automated dispensing cabinets and pharmacy storage and workflow systems across acute and long-term care. Privately held; no revenue or share is disclosed.",
+      "description": "Operates in the long-term care and acute-care medication storage segment, where the economics are driven by nursing workflow rather than pharmacist labour substitution. Represents the long tail of this market that the published totals must contain but that no disclosed figure can reach, and which is therefore the main source of uncertainty in any concentration estimate."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Omnicell",
+      "year": 2026,
+      "event": "Reported fiscal year and fourth quarter 2025 results on 5 February 2026: full-year revenue of about $1,185 million, up 7% or $73 million, above the guidance midpoint, with fourth-quarter revenue of $314 million up just 2% year on year and GAAP net income of $2 million or $0.04 per diluted share, down from $13 million and $0.27 in 2024."
+    },
+    {
+      "company": "Omnicell",
+      "year": 2025,
+      "event": "Launched Titan XT, a next-generation dispensing system that management framed as a step toward autonomous medication management - a repositioning of the category from hardware replacement toward workflow software."
+    },
+    {
+      "company": "Becton Dickinson",
+      "year": 2025,
+      "event": "Launched the next-generation BD Pyxis Pro Medication Dispensing platform in fiscal 2025, and BD Pyxis MedStation ES won a 2025 Best in KLAS award for Automated Dispensing Cabinets."
+    },
+    {
+      "company": "Swisslog Healthcare",
+      "year": 2024,
+      "event": "Announced a co-marketing agreement with BD on 9 December 2024 pairing Swisslog robotic medication management with BD Pyxis Logistics smart medication management software to automate pharmacy inventory management in US hospitals."
+    },
+    {
+      "company": "National Community Pharmacists Association",
+      "year": 2026,
+      "event": "Released the 2026 NCPA Digest on 4 October 2026, counting 18,988 independent community pharmacies - essentially unchanged from 18,960 in 2025 - and describing independents as nearly 37% of all US retail pharmacies, with independent pharmacy a $103 billion market in 2025 of which more than 96% of sales came from prescriptions."
+    },
+    {
+      "company": "Becton Dickinson",
+      "year": 2026,
+      "event": "Stated it was on track to combine its Biosciences and Diagnostic Solutions business with Waters Corporation around the end of the first quarter of calendar 2026, a transaction that will change BD's segment reporting and may remove the only aggregated public figure covering the Pyxis franchise."
+    }
+  ],
+  "regulatory_landscape": [
+    "USP General Chapter 797 on pharmaceutical compounding of sterile preparations and General Chapter 800 on hazardous drugs handling, which set the engineering controls, containment and workflow requirements that make automated compounding and repackaging equipment a compliance purchase rather than a convenience one.",
+    "The Drug Supply Chain Security Act (DSCSA) interoperable, electronic, package-level traceability requirements, which oblige dispensers to verify and trace product identifiers and therefore make serialisation-capable inventory automation a condition of lawful dispensing rather than an efficiency option.",
+    "DEA controlled substance recordkeeping and security requirements under 21 CFR Part 1301 and Part 1304, which govern automated dispensing systems holding Schedule II-V medications and are the principal reason hospital dispensing cabinets are access-controlled and audit-logged devices.",
+    "State boards of pharmacy rules on remote and automated dispensing, including telepharmacy and automated dispensing machines at remote sites, which vary by state and determine whether a given automation deployment is permissible at all in a particular jurisdiction.",
+    "FDA oversight of pharmacy compounding under sections 503A and 503B of the Federal Food, Drug, and Cosmetic Act, which distinguishes patient-specific compounding from outsourcing facility production and therefore sets which automated compounding configurations a given site may operate."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Comparison of the listed pure-play's disclosed revenue and growth rate against each published market size and CAGR, including quarterly deceleration and net income",
+      "Construction of two countable denominators - US retail pharmacies derived from the NCPA Digest and US hospitals from AHA Fast Facts - and derivation of annualised automation spend per site using one publisher's own disclosed segment shares"
+    ],
+    "secondary_research": [
+      "Omnicell, Inc., Fiscal Year and Fourth Quarter 2025 Financial Results, 5 February 2026 - FY2025 revenue approximately $1,185 million (+7%, +$73 million), Q4 revenue $314 million (+2%), GAAP net income $2 million or $0.04 per diluted share against $13 million and $0.27 in 2024; growth attributed to connected devices, technical services, SaaS, Expert Services and consumables; Titan XT launch",
+      "Becton, Dickinson and Company fiscal 2025 annual report - Medication Management Solutions revenue of approximately $3.5 billion (read from a revenue-by-segment chart, not a 10-K segment table); BD Pyxis Pro launch and BD Pyxis MedStation ES 2025 Best in KLAS award for Automated Dispensing Cabinets",
+      "NCPA 2026 Digest, released 4 October 2026 - 18,988 independent community pharmacies, nearly 37% of all US retail pharmacies, independent pharmacy a $103 billion market in 2025; NCPA 2025 Digest, 18,960 as of July 2025 and nearly 36%",
+      "American Hospital Association, Fast Facts on U.S. Hospitals, 2026 edition from the 2024 AHA Annual Survey - 6,100 total US hospitals, 5,121 community hospitals, 1,797 rural; 2025 edition from the 2023 survey, 6,093 and 5,112",
+      "IMARC Group, Pharmacy Automation Market, report SR112026A1864, last updated 9 June 2026 - $7.2 billion (2025) to $12.4 billion (2034) at a stated 6.10% CAGR for 2026-2034; North America 54.4% of 2025, automated medication dispensing systems 24.8%, retail pharmacies 51.2%",
+      "Credence Research, Pharmacy Automation Market - $6,297 million (2024) to approximately $13.38 billion (2032) at 9.88%, with medication dispensing cabinets the largest product share in 2024 at 32.6%",
+      "Global Market Insights, Pharmacy Automation Market, report GMI7439, published November 2023 - $6.4 billion (2022) to $13.6 billion (2032) at 7.9%, with products at 67.6% of the 2022 component market and North America at 48.6%",
+      "Meticulous Research pharmacy automation press release, published 2 July 2024 - $7.87 billion by 2032 at 7.6% for 2025-2032, with no base-year value published",
+      "Swisslog Healthcare and BD co-marketing agreement, announced 9 December 2024, pairing Swisslog robotics with BD Pyxis Logistics software for US hospital pharmacy inventory management"
+    ],
+    "data_validation": "Three tests were run against disclosed revenue and countable denominators rather than against another forecast. First, Omnicell's disclosed FY2025 revenue of about $1,185 million is 16.5% of IMARC's $7.2 billion whole market for 2025, 13.2% of HTF Market Intelligence's $9.0 billion, and 15.1% of Meticulous Research's 2032 endpoint of $7.87 billion; adding Becton Dickinson's Medication Management Solutions revenue of roughly $3.5 billion gives an upper bound of 65.1% of IMARC's total for two companies, with Swisslog Healthcare, ScriptPro, ARxIUM, Capsa and the central-fill specialists unaccounted for. The 65.1% is explicitly a ceiling and not a measurement, because BD's segment includes Alaris infusion pumps and wider medication-management software and was read from a revenue chart rather than a segment table. Second, using IMARC's own disclosed segment shares - retail pharmacies 51.2% and North America 54.4% - against a denominator of roughly 51,319 US retail pharmacies derived by dividing NCPA's 18,988 independents by its own stated 37% share gives about $39,100 of annualised automation spend per store per year, and the same arithmetic on HTF's $9.0 billion gives about $48,900. A counting and dispensing robot is a six-figure capital item with a five-to-ten-year life, so both figures are in the right order of magnitude, and this anchor confirms rather than refutes the published range. Third, Omnicell's revenue against the 6,100 US hospitals recorded by AHA Fast Facts gives $194,262 per hospital per year, which is an overstatement because Omnicell is global with a large retail and central-fill business, but the direction establishes that hospital dispensing is a near-universal installed base in a flat denominator - 6,100 hospitals from the 2024 survey against 6,093 from the 2023 survey. An installed base near saturation in a flat denominator grows by replacement, software attach and price, which is the structural case for the 6.10% low end over the 12.2% high end, corroborated by Omnicell growing 7% with fourth-quarter growth of 2% and net income falling from $13 million to $2 million. These are plausibility and ratio tests, not market estimates. The US retail pharmacy total is our own division of an NCPA count by an NCPA percentage that moved from nearly 36% to nearly 37% between editions, giving totals between 51,319 and 52,744.",
+    "limitations": "No public register counts hospital or retail pharmacies directly - AHA counts hospitals and NCPA counts independents plus a percentage - so every denominator used here is derived and labelled as such. BD does not disclose a pharmacy-automation-only line, and its planned Waters transaction will change its segment reporting. Swisslog Healthcare, ScriptPro, ARxIUM and Capsa are private and disclose nothing. Meticulous Research publishes no base-year value, so its $4.67 billion implied 2025 base is our own back-solve from its stated rate and endpoint. No vendor market share, regional split or country split is published."
+  },
+  "faqs": [
+    {
+      "question": "How large is the pharmacy automation market?",
+      "answer": "We publish $7.64 billion for 2026 rising to $10.90 billion by 2032 at 6.10%. That is IMARC's series, whose stated 2025 base of $7.2 billion we advanced one year at its own stated rate. Published 2025 bases across the set run $7.2 billion to $9.0 billion, a spread of only 1.25x. The 2032 endpoints are a different matter: they run from $7.87 billion to $18 billion, a 2.29x spread, and the low endpoint is below the high house's figure for the present day."
+    },
+    {
+      "question": "Why do the 2032 forecasts differ by 2.29x when the 2025 figures agree?",
+      "answer": "Because one of them has no disclosed starting point. Meticulous Research publishes a 7.6% CAGR for 2025-2032 and a $7.87 billion endpoint but no base-year value. Back-solving from its own rate and endpoint, 7.87 divided by 1.076 to the seventh power gives $4.67 billion for 2025 - 35% below IMARC's figure and 48% below HTF Market Intelligence's. A forecast published without a base cannot be audited, and when the base is reverse-engineered it turns out the house is not forecasting the same market as everyone else."
+    },
+    {
+      "question": "What share of the pharmacy automation market does Omnicell hold?",
+      "answer": "Omnicell does not disclose a share, and we do not publish one, but it is the cleanest ratio available in this market because Omnicell does essentially nothing else. Its FY2025 revenue of about $1,185 million is 16.5% of IMARC's $7.2 billion for the same year and 13.2% of HTF's $9.0 billion. Adding Becton Dickinson's Medication Management Solutions revenue of roughly $3.5 billion gives two companies an upper bound of 65.1% of IMARC's total - a ceiling rather than a measurement, because BD's segment includes Alaris infusion pumps and much else besides pharmacy automation."
+    },
+    {
+      "question": "How much does a pharmacy spend on automation per year?",
+      "answer": "About $39,100 per US retail pharmacy per year on IMARC's figures. The arithmetic: $7.2 billion for 2025, times IMARC's own retail pharmacy share of 51.2% and North America share of 54.4%, divided by roughly 51,319 US retail pharmacies, a total we derived by dividing NCPA's count of 18,988 independents by its own stated 37% share. Running the same arithmetic on HTF's $9.0 billion gives about $48,900. Both are plausible as annualised hardware, software, service and consumable spend against a six-figure capital item with a five-to-ten-year life, which is why this test confirms rather than refutes the published range."
+    },
+    {
+      "question": "Is a 12.2% growth rate credible for pharmacy automation?",
+      "answer": "The evidence is against it. Automated dispensing is already near-universal in US hospitals - BD Pyxis MedStation ES won a 2025 Best in KLAS award in a category that exists because the product class is mature - and the denominator is flat, with AHA recording 6,100 US hospitals from the 2024 survey against 6,093 from the 2023 survey. An installed base near saturation in a flat denominator grows by replacement, software attach and price. The listed pure-play corroborates it: Omnicell grew 7% in 2025, its fourth quarter grew 2%, and GAAP net income fell from $13 million to $2 million. A 12.2% market whose pure-play grows 7% is not a 12.2% market."
+    },
+    {
+      "question": "Where is the remaining growth in pharmacy automation?",
+      "answer": "In software and in retail. Omnicell attributed its 2025 growth to connected devices and technical service offerings alongside SaaS, Expert Services and consumables - not to new cabinet placements - and framed its Titan XT launch as a step toward autonomous medication management. Global Market Insights puts products at 67.6% of its component market, which means roughly a third is already services and software and is where the attach rate can rise. Retail pharmacies are IMARC's largest end-user segment at 51.2% and the one with genuine penetration headroom, and central fill automation is published as a faster-growing sub-market because it concentrates volume into a small number of high-throughput sites."
+    }
+  ],
+  "seo": {
+    "meta_title": "Pharmacy Automation Market Size & Forecast 2026-2032",
+    "meta_description": "Pharmacy automation at $7.64B in 2026 reaching $10.9B by 2032 at 6.10% CAGR. Omnicell alone is 16.5% of the published market and grew just 7% in 2025.",
+    "keywords": [
+      "pharmacy automation market",
+      "automated dispensing cabinets",
+      "Omnicell BD Pyxis",
+      "central fill pharmacy automation",
+      "pharmacy robotics",
+      "medication management systems"
+    ]
+  },
+  "executive_summary": "Pharmacy automation is a market whose published figures agree about the present and contradict each other about the future. For 2025 the estimates span just 1.25x, from $7.2 billion to $9.0 billion; for 2032 they span 2.29x, from $7.87 billion to $18 billion - and Meticulous Research's 2032 endpoint of $7.87 billion is 9.3% below IMARC's figure for 2025. The explanation is that Meticulous publishes no base year at all. Back-solving from its own 7.6% rate and its own endpoint gives $4.67 billion for 2025, 35% below IMARC's and 48% below HTF Market Intelligence's. The supply side resolves the growth question rather than the size question. Omnicell, the listed pure-play, reported FY2025 revenue of about $1,185 million - 16.5% of IMARC's whole market - on 7% growth, with fourth-quarter revenue up only 2% and GAAP net income falling from $13 million to $2 million. Adding Becton Dickinson's Medication Management Solutions at roughly $3.5 billion gives two companies an upper bound of 65.1%, although that segment includes Alaris infusion pumps and overstates BD's pharmacy-automation content. The denominators confirm the low end. AHA recorded 6,100 US hospitals from its 2024 survey against 6,093 from 2023, and automated dispensing is already standard in them; an installed base near saturation in a flat denominator grows by replacement, software attach and price. We publish $7.64 billion for 2026 to $10.90 billion by 2032 at 6.10%.",
+  "key_highlights": [
+    "Published 2025 bases span only 1.25x ($7.2 billion to $9.0 billion) while 2032 endpoints span 2.29x ($7.87 billion to $18 billion), and the lowest 2032 forecast is below the highest house's figure for 2025",
+    "Meticulous Research publishes a 7.6% CAGR and a $7.87 billion 2032 endpoint with no base-year value; back-solving gives $4.67 billion for 2025, 35% below IMARC's figure for the same year",
+    "Omnicell's $1,185 million for FY2025 is 16.5% of IMARC's whole market - the cleanest ratio in this category, because Omnicell does essentially nothing else",
+    "Omnicell grew 7% in 2025 with fourth-quarter growth of 2% and GAAP net income down from $13 million to $2 million, which is not the behaviour of a pure-play in a 12.2% market",
+    "IMARC's segment shares against roughly 51,319 derived US retail pharmacies give about $39,100 of annualised automation spend per store per year - an anchor that confirms the published range rather than refuting it",
+    "The hospital denominator is flat at 6,100 US hospitals from the 2024 AHA survey against 6,093 from 2023, so hospital dispensing automation grows by replacement and software attach rather than penetration"
+  ],
+  "market_context": "Pharmacy automation is a labour-substitution market dressed as a technology market. The purchase decision in a hospital is driven by DEA recordkeeping, USP 797 and 800 compliance and pharmacist time; the purchase decision in a retail store is driven by prescription volume per labour hour. Neither is a technology adoption curve, and that is why this category behaves unlike the rest of Healthcare IT. Its two denominators are both effectively fixed: AHA counted 6,100 US hospitals in its 2024 survey against 6,093 in 2023, and NCPA counted 18,988 independent pharmacies in 2026 against 18,960 in 2025. The installed base in hospitals is close to universal - a Best in KLAS award category for automated dispensing cabinets exists precisely because every hospital already has them and evaluates them against each other. What is actually changing is where the revenue sits inside a deployment. Omnicell's growth came from connected devices, technical services, SaaS, Expert Services and consumables rather than new placements, and the Swisslog-BD partnership pairs one vendor's robots with another's inventory software. The competitive unit is becoming the workflow, not the machine.",
+  "forecast_analysis": "We publish 6.10%, which is IMARC's own stated rate, and we prefer it to the publisher's own 2034 endpoint because the two disagree: 7.2 x 1.061^9 = $12.27 billion against a published $12.4 billion, an implied 6.23%. Advancing the 2025 base one year gives 7.2 x 1.061 = $7.64 billion for 2026, and interpolating on the same rate gives 7.64 x 1.061^6 = $10.90 billion for 2032, inside the publisher's series rather than at its endpoint. Choosing the low end of a 6.10% to 12.2% published range is a judgement, and three pieces of evidence support it. The hospital installed base is near-universal in a denominator that moved by seven hospitals between two AHA surveys, so penetration growth is largely exhausted there. The listed pure-play grew 7% in 2025 with fourth-quarter growth of 2% and net income down from $13 million to $2 million, which is incompatible with a market compounding at 12.2%. And the per-store arithmetic, at roughly $39,100 a year at IMARC's figures and $48,900 at HTF's, is already a demanding number for an independent pharmacy that NCPA describes as taking more than 96% of its sales from prescriptions. The upside risk to 6.10% is not hardware; it is the software and service attach rate, which Global Market Insights' 67.6% product share implies is already a third of the market and which Omnicell says is where its growth came from."
+  ,
+  "reader_takeaways": [
+    "Check whether a pharmacy automation forecast publishes a base-year value: Meticulous Research does not, and its implied base of $4.67 billion for 2025 is a third below the consensus, which is why its 2032 endpoint sits below another house's present",
+    "Use Omnicell's disclosed revenue as the first test on any size claim - $1,185 million for FY2025, or 16.5% of the figure we publish - because it is a pure-play and its ratio is therefore interpretable",
+    "Read Omnicell's 2% fourth-quarter growth and $2 million of GAAP net income as evidence against the double-digit CAGRs: a pure-play cannot grow slower than its own market indefinitely",
+    "Treat the hospital opportunity as replacement rather than penetration: AHA counted 6,100 US hospitals in the 2024 survey against 6,093 in 2023, and automated dispensing is already standard in them",
+    "The growth that is left is in software, services and consumables attach, not in new machine placements - which is exactly the component split that publishers disagree about including"
+  ]
+}

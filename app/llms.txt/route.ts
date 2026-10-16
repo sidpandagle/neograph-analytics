@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const content = generateLLMTxt();
+    const content = await generateLLMTxt();
 
     return new NextResponse(content, {
       status: 200,

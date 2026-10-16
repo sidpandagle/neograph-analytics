@@ -9,9 +9,12 @@ import type { SidebarTOCItem } from "@/lib/toc-utils";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
 import { marketValue } from "@/lib/format";
+import { schemaDate } from "@/lib/seo";
 import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
 import { buildReportTOC } from "@/lib/reportToc";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
+import { RelatedReports } from "@/components/reports/RelatedReports";
+import { getRelatedReports } from "@/lib/api/relatedReports";
 
 /**
  * Reports are prerendered from Supabase (140 rows), not from the 10-row JSON
@@ -70,14 +73,10 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime: new Date(Number(jsonReport.published_year), 0, 1).toISOString(),
-      images: [
-        {
-          url: "/assets/images/mr.webp",
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      /* No `images` here on purpose. Setting it would override the file-based
+         `opengraph-image.tsx` in this folder, which renders the report's own
+         figures; every report previously shared one stock photo, so 152
+         distinct reports unfurled identically in Slack, LinkedIn and X. */
     },
     twitter: {
       card: 'summary_large_image',
@@ -299,12 +298,17 @@ export default async function ReportPage({
     },
   ];
 
-  // Fetch related reports
-  // TODO: Fetch related reports from API when relatedReportIds are provided
-  // const relatedReports: Report[] = [];
+  /* Related reports, scored on shared industry and topic words. The TODO this
+     replaces had been open long enough for the corpus to reach 152 reports with
+     no link between any of them. */
+  const relatedReports = await getRelatedReports(report.slug);
 
   const reportUrl = `https://www.neographanalytics.com/reports/${report.slug}`;
   const reportKeywords = report.meta_keywords?.split(',').map(k => k.trim()).filter(Boolean);
+
+  /* Rows carry only a publication year, so these schemas were emitting
+     "datePublished": "2026". `schemaDate` turns that into a calendar date. */
+  const reportDate = schemaDate(report.date);
 
   // Generate structured data schemas
   const articleSchema = generateArticleSchema({
@@ -312,7 +316,7 @@ export default async function ReportPage({
     title: report.title,
     description: report.description,
     url: reportUrl,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
     author: report.authors && report.authors.length > 0 ? report.authors.map((author) => author.name) : undefined,
     keywords: reportKeywords,
   });
@@ -326,14 +330,14 @@ export default async function ReportPage({
     category: report.category,
     reportCode: report.reportCode || `HF${report.id}`,
     keywords: reportKeywords,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
   });
 
   const datasetSchema = generateDatasetSchema({
     name: `${report.title} - Market Data`,
     description: `Market research dataset for ${report.title}. Includes market size, CAGR, and forecast data for ${report.forecastPeriod || `${baseYearLabel}–${forecastEndYear}`}.`,
     url: reportUrl,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
     keywords: reportKeywords,
     temporalCoverage: report.forecastPeriod
       ? report.forecastPeriod.replace('-', '/')
@@ -423,6 +427,8 @@ export default async function ReportPage({
               </header>
 
               <JsonReportSections report={jsonReport} />
+              {/* A report page used to end with no link to any other report. */}
+              <RelatedReports reports={relatedReports} />
             </article>
           </ReportContentWrapper>
       </div>

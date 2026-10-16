@@ -18,7 +18,10 @@ npm start
 npm run lint
 ```
 
-The dev server runs on `http://localhost:3000` with Turbopack for ultra-fast HMR.
+The dev server runs with Turbopack. **Use port 3100 or above** — `npm run dev -- -p 3100`.
+Port 3000 belongs to Siddhant's own work and must stay free. A stale `next start`
+holding a port and serving old code has caused two false passes; confirm ownership
+with `netstat -ano | grep ":3100"` before trusting local output.
 
 ## Environment Variables
 
@@ -41,7 +44,10 @@ NEXT_PUBLIC_PAYPAL_CLIENT_ID    # PayPal checkout integration
 
 ### Data Architecture
 
-Content is sourced from **static JSON files** in `/data/`:
+Content is canonically in **Supabase**; the files in `/data/` are snapshots kept as
+the fallback that stops an outage rendering an empty site. `neograph_reports` holds
+152 rows against `data/all_reports.json`'s 10 and `data/reports.json`'s 12 — publish
+to Supabase, not to the files. `AGENTS.md` carries the full table. The files:
 - `reports.json` - Research reports with slug-based routing and extended metadata
 - `blogs.json` - Blog posts with author/date metadata
 - `categories.json` - Content categories
@@ -142,7 +148,9 @@ CSS custom properties in `app/globals.css` provide automatic dark mode:
 --background, --foreground, --primary, --card, --muted, etc.
 ```
 
-Use via Tailwind: `bg-[var(--primary)]`. Dark mode switches automatically via `prefers-color-scheme`.
+Use via Tailwind: `bg-[var(--primary)]`. Dark mode is **class/attribute driven** (a
+`.dark` block in `globals.css`), not `prefers-color-scheme` — there is no such block.
+`scripts/contrast-audit.mjs` measures the token pairs in both themes.
 
 ### Typography & Fonts
 
@@ -150,7 +158,10 @@ Use via Tailwind: `bg-[var(--primary)]`. Dark mode switches automatically via `p
 
 ### Utility Functions
 
-- `lib/utils.ts` - `cn()`, `formatDate()`, `slugify()`, `truncate()`
+- `lib/utils.ts` - `cn()`, `formatDate()`, `truncate()` (there is no `slugify`)
+- `lib/format.ts` - JSONB-safe formatters. **Use `marketValue()` / `unitSuffix()`**:
+  not every report is in billions, and a hardcoded "B" renders $66.5M as $66.5B
+- `lib/seo.ts` - `pageTitle()` (<=60 chars), `pageDescription()` (<=160), `schemaDate()`
 - `lib/toc-utils.ts`, `lib/html-toc-utils.ts` - Table of contents parsing from JSON/HTML
 - `lib/chartUtils.ts` - Chart data processing
 - `lib/jsonReports.ts` - JSON report file utilities
@@ -220,3 +231,26 @@ Only add `"use client"` when you need:
 - Props interfaces export alongside components
 - Use `type` for component props, `interface` for extensible objects
 - All `@/` imports use TypeScript path mapping
+
+## Publishing content is paired with a deploy
+
+`app/reports/[slug]/page.tsx` and `app/blog/[slug]/page.tsx` set
+`dynamicParams = false`. A Supabase row that was not in the last build's
+`generateStaticParams()` **404s**, while `/reports` — ISR, hourly — already shows
+a card for it. Publish only when a deploy can follow within the hour, reports
+before the articles that link to them. `DEPLOY-RUNBOOK.md` has the sequence.
+Edits to rows that are already built (meta fields, prose) reach production
+through ISR with no deploy.
+
+## Checkers
+
+```bash
+node scripts/report-db.mjs check content/reports/*.json   # drafts, offline
+node scripts/audit-html.mjs [--prod]                      # 16 routes, headless
+node scripts/contrast-audit.mjs                           # token contrast, both themes
+node scripts/report-db.mjs audit                          # SEO lengths corpus-wide
+```
+
+Supabase egress is metered and the report rows carry large JSONB columns: never
+`select('*')` for a list view, and memoise any query that would otherwise run
+once per page in a 152-page build.

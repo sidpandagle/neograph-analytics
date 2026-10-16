@@ -146,6 +146,24 @@ ignored: a "confirm each is sourced" warning means go back to the notes file.
 
 Only the session owner publishes. A research pass stops at a passing `check`.
 
+**Publishing is paired with a deploy, in that order and close together.**
+`app/reports/[slug]/page.tsx` sets `dynamicParams = false`, so a slug that
+exists in Supabase but was not in the last build's `generateStaticParams()`
+returns a hard 404 — while `/reports` (ISR, hourly) will already be listing a
+card that links to it. That is the soft-404 class of defect PR #4 existed to
+fix, pointed the other way. So: publish only when a merge slot is available to
+follow it within the hour; otherwise hold the drafts on the branch, which costs
+nothing. Supabase-only edits to rows that are **already** built (meta fields,
+corrections to prose) are different and reach production through ISR with no
+deploy at all.
+
+**Order within a deploy: reports first, then anything that links to them.**
+`scripts/blog-db.mjs check --online` verifies every internal `/reports/<slug>`
+link against the live corpus, so an article or press release that cites a report
+fails its own check until that report is published. That is the intended
+behaviour, not an obstacle — publish the reports, then re-run the check, then
+publish the article.
+
 ## Reference
 
 `content/reports/_reference-oncology-information-systems-market.json` is a

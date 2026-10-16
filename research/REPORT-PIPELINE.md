@@ -25,36 +25,48 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 8 | bispecific-antibodies-market | Biotechnology | 1B | published |
 | 9 | glp-1-receptor-agonists-market | Pharmaceuticals | 1B | published |
 | 10 | phage-therapy-market | Biotechnology | 1B | published |
-| 11 | single-cell-sequencing-market | Life Sciences | 2A | queued |
-| 12 | spatial-biology-market | Life Sciences | 2A | queued |
-| 13 | proteomics-market | Life Sciences | 2A | queued |
-| 14 | pharmacogenomics-market | Life Sciences | 2A | queued |
-| 15 | organoid-and-organ-on-chip-market | Life Sciences | 2A | queued |
-| 16 | decentralized-clinical-trials-market | Healthcare IT | 2B | queued |
-| 17 | real-world-evidence-market | Healthcare IT | 2B | queued |
-| 18 | health-data-interoperability-market | Healthcare IT | 2B | queued |
-| 19 | revenue-cycle-management-automation-market | Healthcare IT | 2B | queued |
-| 20 | hospital-at-home-market | Healthcare IT | 2B | queued |
-| 21 | proton-therapy-market | Medical Devices | 3A | queued |
-| 22 | surgical-navigation-market | Medical Devices | 3A | queued |
-| 23 | insulin-delivery-systems-market | Medical Devices | 3A | queued |
-| 24 | sleep-apnea-devices-market | Medical Devices | 3A | queued |
-| 25 | hearing-aids-market | Medical Devices | 3A | queued |
-| 26 | biologics-cdmo-market | Pharmaceuticals | 3B | queued |
-| 27 | sterile-injectables-market | Pharmaceuticals | 3B | queued |
-| 28 | vaccine-cold-chain-market | Pharmaceuticals | 3B | queued |
-| 29 | plasma-fractionation-market | Pharmaceuticals | 3B | queued |
-| 30 | pharmacy-automation-market | Healthcare IT | 3B | queued |
-| 31 | medical-device-cybersecurity-market | Healthcare IT | 4A | queued |
-| 32 | nuclear-medicine-radioisotope-market | Pharmaceuticals | 4A | queued |
-| 33 | ophthalmic-therapeutics-market | Pharmaceuticals | 4A | queued |
-| 34 | psychedelic-therapeutics-market | Pharmaceuticals | 4A | queued |
-| 35 | fertility-and-ivf-services-market | Healthcare IT | 4A | queued |
-| 36 | femtech-market | Medical Devices | 4B | queued |
-| 37 | advanced-wound-care-market | Medical Devices | 4B | queued |
-| 38 | orthopedic-implants-market | Medical Devices | 4B | queued |
-| 39 | rehabilitation-robotics-market | Medical Devices | 4B | queued |
-| 40 | veterinary-diagnostics-market | Life Sciences | 4B | queued |
+| 11 | single-cell-sequencing-market | Life Sciences | 2A | check-passed |
+| 12 | spatial-biology-market | Life Sciences | 2A | check-passed |
+| 13 | proteomics-market | Life Sciences | 2A | check-passed |
+| 14 | pharmacogenomics-market | Life Sciences | 2A | check-passed |
+| 15 | organoid-and-organ-on-chip-market | Life Sciences | 2A | check-passed |
+| 16 | decentralized-clinical-trials-market | Healthcare IT | 2B | check-passed |
+| 17 | real-world-evidence-market | Healthcare IT | 2B | check-passed |
+| 18 | health-data-interoperability-market | Healthcare IT | 2B | check-passed |
+| 19 | ~~revenue-cycle-management-automation-market~~ -> **revenue-cycle-management-market** | Healthcare IT | 2B | check-passed |
+| 20 | hospital-at-home-market | Healthcare IT | 2B | check-passed |
+| 21 | proton-therapy-market | Medical Devices | 3A | check-passed |
+| 22 | surgical-navigation-market | Medical Devices | 3A | check-passed |
+| 23 | insulin-delivery-devices-market | Medical Devices | 3A | check-passed |
+| 24 | sleep-apnea-devices-market | Medical Devices | 3A | check-passed |
+| 25 | hearing-aids-market | Medical Devices | 3A | check-passed |
+| 26 | biologics-cdmo-market | Pharmaceuticals | 3B | check-passed |
+| 27 | sterile-injectables-market | Pharmaceuticals | 3B | check-passed |
+| 28 | vaccine-cold-chain-market | Pharmaceuticals | 3B | check-passed |
+| 29 | plasma-fractionation-market | Pharmaceuticals | 3B | check-passed |
+| 30 | pharmacy-automation-market | Healthcare IT | 3B | check-passed |
+| 31 | medical-device-cybersecurity-market | Healthcare IT | 4A | check-passed |
+| 32 | nuclear-medicine-radioisotope-market | Pharmaceuticals | 4A | check-passed |
+| 33 | ophthalmic-therapeutics-market | Pharmaceuticals | 4A | check-passed |
+| 34 | psychedelic-therapeutics-market | Pharmaceuticals | 4A | check-passed |
+| 35 | fertility-services-market | Healthcare IT | 4A | check-passed |
+| 36 | femtech-market | Medical Devices | 4B | check-passed |
+| 37 | advanced-wound-care-market | Medical Devices | 4B | check-passed |
+| 38 | orthopedic-implants-market | Medical Devices | 4B | check-passed |
+| 39 | rehabilitation-robotics-market | Medical Devices | 4B | check-passed |
+| 40 | veterinary-diagnostics-market | Life Sciences | 4B | check-passed |
+
+**Rounds 2, 3 and 4 are drafted and passing `check` — thirty reports held for the
+next merge slot**, plus two analysis articles and a press release in
+`content/blogs/` and `content/press-releases/`. Order inside the deploy: reports
+first, then the articles that link to them.
+
+**Round 2.** Ten
+reports: single-cell sequencing, spatial biology, proteomics, pharmacogenomics,
+organoids & organ-on-chip; decentralised trials, real-world evidence, health
+data interoperability, revenue cycle management, hospital-at-home. Publishing
+them before a deploy would list cards pointing at 404s — see the sequencing rule
+in `REPORT-AUTHORING-BRIEF.md`.
 
 States: `queued` -> `drafting` -> `check-passed` -> `published`. A topic that
 turns out to have no defensible public evidence base is marked `dropped` with

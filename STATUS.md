@@ -1,84 +1,87 @@
 # STATUS
 
-**Updated:** 2026-10-16 17:05 IST
-**Budget:** 7d used 12% | pace 56.3% | ceiling (70% of pace) 39.4% | headroom +27.4 points
-**Merges to `main` today (IST):** 4 of 5 used — #13 00:13, #14 01:02, #15 02:26,
-#16 09:08. **One slot left**, held for the first batch of new reports.
-**Commits on `work/continuous-improvements`:** unlimited, three since the last merge.
+**Updated:** 2026-10-16 23:40 IST
+**Budget:** 7d used 15% | ceiling (70% of pace) ~39% | headroom +23 points | 5h used 14%
+**Merges to `main` today (IST):** 5 of 5 used — #13, #14, #15, #16, #17 (round 1
+of the reports). The next slot opens at **00:00 IST**, twenty minutes from now.
+**Commits on `work/continuous-improvements`:** 40, all pushed.
 **Mode:** running
 
-## Active task — the 30-50 report expansion
+## The deploy, ready to go
 
-Standing instruction received today: add **30-50 research reports**. Corpus is
-**142** rows.
+Everything below is staged and checked; `DEPLOY-RUNBOOK.md` has the sequence and
+`.pr-body.md` holds the PR text.
 
-Built first, because the discipline could not be enforced by hand across 40
-reports:
+```
+report drafts   40 pass, 0 fail      (10 already live, 30 to publish)
+articles         2 pass, 0 fail
+press release    1 pass, 0 fail
+HTML audit      16 of 16 routes clean, 0 errors
+contrast audit   0 failing pairs, both themes
+build           clean, 200 static pages
+```
 
-- `scripts/report-db.mjs` — `count` / `slugs` / `industries` / `dump` / `check` /
-  `publish`. `check` is offline and refuses a draft whose CAGR does not
-  reconcile with its own endpoints, whose series does not start at the base
-  year, which claims a vendor market share, whose `meta_title` exceeds 60 chars
-  or claims both "Global" and a region, or whose charts carry no `data_source`.
-  `publish` upserts on `slug` — never deletes.
-- `research/REPORT-AUTHORING-BRIEF.md` — the contract for a research pass:
-  evidence file first, with a mandatory "do not publish" list; at least three
-  published estimates with their stated scopes; one grounding calculation
-  against a countable public register.
-- `research/REPORT-PIPELINE.md` — 40 topics in 8 batches, checked against
-  `research/corpus-slugs.txt` so none duplicates an existing row. No further
-  regional clones.
+Order inside the deploy, because `dynamicParams = false` makes an unpublished
+page a 404 while the listing already shows its card: **reports first**, then the
+articles that link to them, then build, merge, verify. The corpus goes from
+**152 to 182**.
 
-**In flight:** two research agents on round 1 (batch 1A diagnostics/devices,
-batch 1B therapeutics), 5 reports each. They stop at a passing `check`;
-publishing stays here. ETA for round 1 drafts: ~60-90 minutes from 16:50 IST.
+## The 40-topic expansion is complete
+
+Ten published this afternoon, thirty drafted and held. Every base year is a
+named publisher's own figure advanced at that publisher's own rate, and every
+headline is divided through by something countable. The results that contradict
+the published literature outright are tabulated in `research/REPORT-PIPELINE.md`;
+the strongest are orthopaedic implants (five disclosures = **120.8%** of one
+publisher's whole global market), sleep apnoea (**104.5%**), veterinary
+diagnostics (one company = **92.6%**), psychedelics (two non-psychedelic
+products = **113.5%**, leaving the psychedelics a negative implied value) and
+hearing aids, which resolves its own spread: **$380 per aid** at the factory
+gate against **$1,347** at retail, proven inside one company's two revenue lines.
 
 ## Shipped to the branch since the last merge
 
-| Commit | What it does |
-|---|---|
-| `ab17fc0` | Charts carry `<figure>`/`<figcaption>` source notes; `/methodology` page; `error.tsx` + `global-error.tsx`; the report-db tool and authoring brief |
-| `1aea085` | Category chips, mega-menu tiles and the region select derived from the corpus instead of a 12-row JSON |
-| `1e04e20` | Fabricated testimonials no longer rendered on the homepage |
+Credibility: chart source captions and `/methodology`; `/llms.txt` rebuilt
+(12 -> 152 report URLs, 24 dead category links -> 0); `Dataset.license` no longer
+points at a 404; `datePublished` is a calendar date everywhere; related-research
+blocks (152 pages had **zero** outbound report links); per-report social cards.
 
-Measured outcomes:
+Correctness and a11y: two-tone focus ring (1.00:1 -> 7.70:1 on the blue CTA,
+confirmed in Chrome); form field borders 1.07:1 -> 3.30:1; `country-select`
+rescued from 1.02:1 in dark mode; heading outlines; `/design-system` canonical
+and single `<h1>`; `/reports` payload 508KB -> 184KB.
 
-```
-chart source attributions in built HTML      0 -> rendered under every chart
-/methodology                                 404 -> prerendered, 1 h1 / 5 h2
-category chips matching zero reports         6 of 12 -> 0 of 6
-?category= links in the header               12 -> 6 (38/39/16/6/23/20 = 142)
-region options returning nothing             5 of 6 -> control dropped
-error boundaries                             0 -> 2
-```
+Reported by Siddhant and fixed: header dropdowns painting behind page content
+(the header's `backdrop-filter` creates a stacking context, so the menu's z-50
+never applied against the page) and the FAQ +/x toggle, now centred by geometry
+at 0.00px on both axes.
+
+Tooling so none of it regresses: `audit-html.mjs`, `contrast-audit.mjs`,
+`report-db.mjs`, `blog-db.mjs`, `DEPLOY-RUNBOOK.md`, and corrected `AGENTS.md`
+and `CLAUDE.md`.
 
 ## Needs Siddhant
 
 - **R-9** — the "Our research shapes decisions at" marquee asserts client
-  relationships with 12 third-party marks (Meta, Trivago, Suzuki, Kawasaki,
-  Nestlé, CDC, BCG, PwC, Argonne, ChampionX, Mitsubishi, SK). It may be true;
-  it is not mine to judge. One yes/no per logo and the unverifiable ones come
-  off the page.
-- **R-4** — the Product/Offer JSON-LD publishes a hardcoded `$2,995` with
-  `InStock`. The same figure is on the page, so changing only the schema would
-  make them disagree. Pricing and checkout are yours.
+  relationships with 12 third-party marks. One yes/no per logo.
+- **R-10** — 26 of the reports are not healthcare (agritech, climate tech, space
+  economy, quantum, advanced materials, digital infrastructure, synthetic
+  biology). Keep and widen the positioning, or separate them? The homepage and
+  listing now say "research verticals", true either way.
+- **R-4** — the Product/Offer schema publishes a hardcoded $2,995 with
+  `InStock`, matching the visible price. Pricing and checkout are yours.
+- **R-11** — no terms-of-use page exists; the Dataset schema wanted to cite one.
 
 ## Next up
 
-1. Publish round 1 of the new reports once both batches pass `check`, then
-   spend today's last merge slot on them.
-2. Launch round 2 (batches 2A/2B — single-cell sequencing, spatial biology,
-   proteomics, pharmacogenomics, organoids; DCTs, RWE, interoperability, RCM
-   automation, hospital-at-home).
-3. `meta_description` over 160 chars on 14 of 142 rows — the new checker
-   rejects this, so the corpus has to meet its own rule. Per-row editorial, not
-   a pattern substitution.
-4. `getReportBySlug` runs a second full-table query purely to compute an array
-   index; the listing still does `select('*')` over 142 rows of large JSONB.
-   Both are metered egress.
-5. `StyledReportContent.tsx` (381 lines of tuned long-form CSS) is imported
-   nowhere, so `.prose` never applies to a report page. Wire it or record why
-   not — it is not to be deleted.
+1. **00:00 IST** — run the runbook: publish 30 reports, 2 articles and the press
+   release, merge, verify in production.
+2. Re-measure first paint with gtag blocked (**R-13**: FCP and LCP are the same
+   event at 1,316ms on a server-rendered text page with an 89ms TTFB).
+3. Fix the production audit's remaining errors — all already fixed on the
+   branch, so the deploy should clear them.
+4. Round 5 of the expansion, or a fresh review pass, depending on what the
+   deploy turns up.
 
 ## Blockers
 
