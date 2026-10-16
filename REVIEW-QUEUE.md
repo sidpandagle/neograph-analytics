@@ -35,6 +35,7 @@ land at the first slot after 00:00 UTC.
 | **Homepage claimed "over 2,500 research reports spanning 20+ sectors and 50+ countries"** one scroll below the hero's correct "142 across 6". | 3 corpus sizes on one page | claim removed; hero is sole source of truth |
 | **Left rail overhung the hero by ~155px.** 13 items at 48px pitch. | rail ~721px | **645px**, pitch 42px, measured |
 | Negative growth rendered as `+-2.1%` | latent | sign handled |
+| **`/reports` RSC payload** (was R-2) | 508KB for 142 reports | **184KB for 152** (-64%): a card projection in `getReportCards()`, then only the 13 fields the client interface declares crossing to the browser. 12 cards and the client filter unchanged. Pagination is no longer worth the complexity at this size |
 | **`/design-system` renders 2 `<h1>` and has no canonical** (was R-6) | robots-disallowed, so impact is confined | h1 count 2 -> 1 (the second was a type specimen, now a styled `p`); canonical and explicit `noindex, nofollow` added via a new layout, since the page itself is a client component |
 | **Focus ring `#1541E3` on the blue hero panels = **1.00:1**; on the footer = 2.46:1. WCAG 1.4.11 needs 3:1** (was R-0e) | keyboard focus invisible on the primary CTAs | two-tone ring (ink + paper, inverted in dark): 18.72 / 7.25 / 18.72:1 across white card, blue panel and ink footer. Modelled from token values, not yet seen in a browser |
 | **`meta_description` over 160 chars on 14 of 142 rows** (was R-3) | needs editorial judgement per row, not pattern substitution | corpus-wide pass: 14 descriptions over 160 and 45 titles over 60 -> **0 and 0** across all 152 rows |
@@ -51,7 +52,6 @@ land at the first slot after 00:00 UTC.
 |---|---|---|---|
 | R-9 | high **[H]** | "Our research shapes decisions at" runs a logo marquee of Meta, Trivago, Suzuki, Kawasaki, Nestlé Professional, CDC, BCG, PwC, Argonne, ChampionX, Mitsubishi, SK — 12 third-party marks asserting client relationships. Same class as the testimonials, but unlike them it may be **true**, and only Siddhant can say. Needs a yes/no per logo; unverifiable ones come off the page | 12 logos, 0 verifiable from inside the repo |
 | ~~R-0~~ | fixed #14 | `/reports` search filters a **10-row** `all_reports.json`, not the 142 passed from the server — typing anything hides 93% of the catalogue | `len(all_reports.json)` = 10 vs 142 live; also ships 206KB of JSON to the client |
-| R-2 | medium | `/reports` RSC payload. **Remeasured after the `getReportCards()` projection: 508KB -> 284KB** for 152 reports. Still the heaviest route; the remaining weight is 152 cards of real card data, so the next step is paginating or streaming the list rather than trimming columns | 284KB vs 54-148KB for every other route |
 | R-4 | medium **[H]** | Hardcoded `price: '$2,995'` published as Product/Offer JSON-LD with `InStock` while checkout throws | schema asserts purchasability that does not work |
 | ~~R-7~~ | fixed #15 | CLAUDE.md documents automatic dark mode; no `prefers-color-scheme` block exists | 0 matches in `app/globals.css` |
 

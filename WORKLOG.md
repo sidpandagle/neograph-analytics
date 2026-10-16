@@ -741,3 +741,22 @@ does see it.
 
 Verified in the built HTML: h1 count 2 -> 1, canonical present,
 `noindex, nofollow` present.
+
+### `/reports` payload: 508KB -> 184KB (was R-2)
+Two passes. First the Supabase projection (`getReportCards()`), which stopped
+pulling `market_dynamics`, `company_profiles`, `research_methodology`, `faqs`
+and the rest for a card that shows four fields: 508KB -> 284KB.
+
+Then the server-to-client boundary. `ReportsListingClient` declares thirteen
+fields in its own interface, but it was being handed the full `Report` shape, so
+`meta_title`, `meta_keywords`, `baseYear`, `forecastPeriod`, the formatted
+market-size strings, `cagr`, `reportCode`, `discounted_price` and three empty
+arrays rode along in the RSC payload **unread, once per card, 152 times**. The
+page now maps to exactly those thirteen. `description` and `summary` also held
+the same string twice per card, so the duplicate is dropped — `ReportCard`
+renders `summary || description` and the client filter reads both, so neither
+changes behaviour.
+
+284KB -> **184KB**, 12 cards on page one, filter and search unchanged. Total
+from the original measurement: **508KB -> 184KB, -64%**, while the corpus grew
+from 142 to 152. Pagination is not worth the complexity at this size.
