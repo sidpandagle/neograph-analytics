@@ -960,3 +960,49 @@ or a word boundary, never mid-word and never leaving a dangling comma.
 Applied to `/blog/[slug]` and `/press-releases/[slug]`. The audit now covers 16
 routes including a million-unit report, a blog article and a press release:
 **16 of 16 error-free.**
+
+### Round 3, batch 3A — five device reports drafted (held)
+All five pass. Twenty reports are now drafted and waiting on one deploy.
+
+- **Hearing aids** is the best-grounded report in three rounds, because it
+  resolves a contradiction instead of just finding one. EHIMA members sold
+  **23.16M units in 2025**; the published market over those units is **$380 per
+  aid**, which is a factory-gate price, while a 1,100-respondent buyer survey
+  measures $1,347 per aid at retail — so consumer spend on the same units is
+  **~$31.2B, 3.5x the headline**. Demant proves both tiers inside one company:
+  2025 retail revenue (DKK 10,724M, +8%) now **exceeds** its external wholesale
+  revenue (DKK 9,841M, -2%). Four manufacturers disclose 1.34x the whole
+  published market, and stripping retail out lands them back at ~$8-9B. The
+  coherence failure is the finding: units decelerating 7.7% -> 4.0% -> 2.1%,
+  measured prices down 42% since 2018 (OTC $502 a pair against $3,432
+  prescription), manufacturers growing 2-3% — against published CAGRs of
+  5.6-11.7%.
+- **Sleep apnoea**: three disclosures sum to **104.5% of one publisher's entire
+  global market** — ResMed alone is 65.0% of another's — before Philips
+  Respironics, Löwenstein, BMC, oral appliances and the diagnostics half one of
+  them explicitly includes. The headline uses MarketsandMarkets' endpoints at
+  the rate they *imply* (7.6%), not the 10.9% its page states, because 10.9%
+  compounds to $14.4B against its own $11.6B forecast; a reprint of the same
+  report states 7.6%, which corroborates the endpoints. Also flagged: the
+  425M-patient prevalence denominator everyone divides by was ResMed-funded and
+  rests on reliable data from 16 countries.
+- **Surgical navigation**: a **9.99x** spread, the widest the corpus has seen,
+  and cleanly bimodal — 6.5-6.9% against 14-15.2%, split by whether robotics is
+  counted. One publisher issues both halves and labels them. The ceiling test is
+  decisive: the high figure would be 88.5% of Stryker's *entire* MedSurg &
+  Neurotechnology segment and 1.40x Medtronic's *entire* Neuroscience portfolio.
+- **Insulin delivery**: Insulet's $2.7B of Omnipod revenue is **3.0x one
+  publisher's entire $900M global pump-consumables segment**. Revenue per
+  patient is directly checkable here — $4,500 per Omnipod user, $2,865 per Beta
+  Bionics user — which inverts to **1.6-2.6M pump users worldwide**, or
+  0.27-0.44% of the IDF's 589M adults with diabetes.
+- **Proton therapy**: $13.1M per operating centre per year against a $33-160M,
+  20-to-30-year asset, which rules out a capital-only reading; a bottom-up build
+  from IBA's own disclosed unit economics lands within 10-20% of the lowest
+  dated published figure. PTCOG's register was unreachable all pass (503), so
+  the ~125-centre count comes from a 2026 peer-reviewed review citing it, and
+  says so.
+
+Two more published series that fail their own arithmetic, bringing this month's
+tally to four: MarketsandMarkets' sleep-apnoea rate (10.9% stated, 7.65%
+implied) and GMI's proton-therapy rate (10.8% stated, 10.3% implied).

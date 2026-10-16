@@ -1,0 +1,267 @@
+{
+  "report_id": "sleep-apnea-devices-market",
+  "slug": "sleep-apnea-devices-market",
+  "title": "Sleep Apnea Devices Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 7.46,
+    "forecast_value": 11.61,
+    "cagr": 7.6
+  },
+  "market_overview": {
+    "summary": "Published sleep apnoea device estimates for 2025 run from $5.6 billion to about $9.13 billion — a 1.63x spread, narrow by this corpus's standards. The level, not the spread, is where this market fails. Three disclosures — ResMed's Sleep and Breathing Health segment at $4,504.9 million, Inspire Medical at $912.0 million and Fisher & Paykel's Homecare group at roughly $437 million converted — total $5,853.9 million. That exceeds one publisher's entire global market and consumes 84.5% of another's, before counting Philips Respironics, Lowenstein, BMC, React Health, the whole oral appliance industry, Nyxoah, or the polysomnography and home-sleep-testing segment that the same publisher explicitly says it includes. ResMed alone is 65.0% of the mid-range published figure. We publish MarketsandMarkets' endpoints — $7.46 billion in 2026 to $11.61 billion by 2032 — at the 7.6% its own endpoints imply, not the 10.9% its page states, because $6.93 billion compounded at 10.9% for seven years reaches $14.4 billion, not the $11.61 billion the same page publishes. Set against Benjafield's 425 million adults with moderate-to-severe OSA, the industry reaches on the order of 1.6% of its stated indicated population, and the forecast is a claim that this moves to about 2.7%.",
+    "key_trends": [
+      "One vendor is most of the market and no report says so: ResMed's Sleep and Breathing Health revenue of $4,504.9 million in FY2025 is 65.0% of the mid-range published 2025 total, our own division of a reported figure by a third-party estimate",
+      "Masks are not an accessory, they are 41% of the leader's relevant revenue: ResMed disclosed $2,665.2 million of devices against $1,839.7 million of masks and other in FY2025, and the publishers disagree about whether to count them",
+      "The structural event of the decade was regulatory, not technological: Philips Respironics has been barred from selling new sleep and respiratory devices in the United States since the April 2024 consent decree, with its chief executive saying such compliance typically takes five to seven years",
+      "Neurostimulation has become a real second modality rather than a niche: Inspire Medical grew 14% to $912.0 million in FY2025 at an 86.6% fourth-quarter gross margin, with Nyxoah competing directly",
+      "Reimbursement coding is now the binding variable for the growth segment: Inspire revised its 2026 guidance to $950 million to $1.0 billion on uncertainty from the move to CPT code 64582 with the -52 modifier",
+      "Connected devices are the asset: ResMed's chief executive stated the company has sold 30 million fully cloud-connectable devices into 140 countries, which against 425 million moderate-to-severe patients is 7.1% ever reached across the leader's entire history"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "On the order of 1.6% of the treatment-indicated population served"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A very large untreated population: Benjafield and colleagues estimated 936 million adults aged 30-69 with mild-to-severe obstructive sleep apnoea and 425 million with moderate-to-severe disease, against an industry reaching on the order of 1.6% of the latter",
+      "Mask and consumable replacement on a growing installed base, which is the stable half of the economics — $1,839.7 million of ResMed's FY2025 segment revenue, or 41% of it",
+      "Home sleep testing displacing in-laboratory polysomnography, which lowers the cost and friction of diagnosis and is the mechanism by which prevalence converts into patients",
+      "Hypoglossal nerve stimulation as an alternative for PAP-intolerant patients, now a $912.0 million business at Inspire Medical growing 14% a year with an 86.6% fourth-quarter gross margin",
+      "Cloud connectivity as an adherence and reimbursement tool: ResMed's devices are cloud-connected by design and the company reports 30 million sold into 140 countries, which turns compliance data into a payer-facing asset",
+      "Obesity prevalence, which is the principal modifiable risk factor and the variable the Benjafield prevalence model itself uses to extrapolate between countries"
+    ],
+    "restraints": [
+      "The diagnosis gap is the binding constraint and it is not a device problem: most of the 425 million moderate-to-severe patients have never had a sleep study, so device demand is gated by diagnostic capacity and referral patterns",
+      "PAP adherence is poor and well known to be poor, which caps the revenue a diagnosed patient generates over time and is why vendors invest in connectivity",
+      "Reimbursement coding risk at the growth end: Inspire revised 2026 guidance downward on the move to CPT code 64582 with the -52 modifier and the related physician payment rates",
+      "Regulatory exposure of a kind that can remove a major vendor from a major market: Philips Respironics has been unable to sell new sleep devices in the United States since April 2024 and has not said when sales could resume",
+      "The published market totals are too small to contain their own named vendors, which makes this category hazardous to size, benchmark or allocate capital against from secondary research",
+      "Quality-system and recall liability on devices that are used nightly in the home for years, where a materials failure reaches millions of units before it is detected"
+    ],
+    "opportunities": [
+      "Diagnosis, not treatment, is the largest addressable gap: moving penetration of the moderate-to-severe population from roughly 1.6% to 2.7% is the entire content of the published forecast, and anything that accelerates testing moves it faster",
+      "The United States vacuum created by the Philips Respironics consent decree, which has kept a major vendor out of new device sales in the largest market since April 2024",
+      "Oral appliances and neurostimulation for the PAP-intolerant, two segments MarketsandMarkets names explicitly in scope and whose participants are almost entirely absent from any disclosed revenue",
+      "Asia Pacific, which MarketsandMarkets projects as the fastest-growing region at 11.8% a year and where Benjafield's model puts China at the highest absolute prevalence in the world",
+      "Software and adherence services as a separate revenue line, which ResMed already reports at $641.4 million of Residential Care Software — a business most published definitions of this market do not count at all"
+    ],
+    "challenges": [
+      "The published total cannot hold the market it describes. Three disclosures total $5,853.9 million against published 2025 figures of $5.6 billion and $6.93 billion, before Philips, Lowenstein, BMC, React Health, SomnoMed, ProSomnus, Vivos, Nyxoah and the entire diagnostics segment",
+      "One publisher's stated CAGR fails its own arithmetic by $2.8 billion at the horizon: $6.93 billion at 10.9% for seven years is $14.4 billion, not the $11.61 billion the same page publishes",
+      "The prevalence denominator every forecast in this market leans on was funded by the market's largest vendor and rests on reliable data from only 16 countries across 17 studies",
+      "Publishers disagree about whether masks are in scope, and masks are 41% of the leader's segment revenue — roughly the size of the entire published spread",
+      "Nobody publishes a treated-patient count. The only figures available are a cumulative device count stated verbally on an earnings call and a customer count characterised by a news outlet",
+      "The market-leading vendor's revenue divided by the market total gives 65%, which means almost every competitive assumption a reader brings to a $6.93 billion headline is wrong"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "CPAP devices",
+      "APAP devices",
+      "BPAP and bilevel devices",
+      "Adaptive servo-ventilation devices",
+      "Masks and facial interfaces",
+      "Oral appliances and mandibular advancement devices",
+      "Hypoglossal nerve stimulation implants",
+      "Polysomnography systems",
+      "Home sleep testing devices",
+      "Oximeters"
+    ],
+    "by_application": [
+      "Obstructive sleep apnoea",
+      "Central and mixed sleep apnoea",
+      "Treatment-emergent central sleep apnoea",
+      "Diagnosis and sleep study",
+      "Adherence monitoring and titration"
+    ],
+    "by_end_user": [
+      "Home care settings",
+      "Sleep laboratories and diagnostic centres",
+      "Hospitals",
+      "Durable medical equipment providers and homecare dealers",
+      "Dental and orthodontic practices"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 7.46 },
+    { "year": 2027, "value": 8.03 },
+    { "year": 2028, "value": 8.65 },
+    { "year": 2029, "value": 9.31 },
+    { "year": 2030, "value": 10.02 },
+    { "year": 2031, "value": 10.78 },
+    { "year": 2032, "value": 11.61 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at the 7.6% CAGR implied by MarketsandMarkets' own published endpoints, not its stated 10.9%)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "ResMed Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "So dominant that it breaks the published arithmetic. Its FY2025 Sleep and Breathing Health revenue of $4,504.9 million is 65.0% of the mid-range published 2025 market total and 80.4% of the lowest — our own division of a reported figure by third-party estimates, with both inputs named. No share is disclosed by the company and we assign none. It also funded the prevalence study that supplies the denominator for every forecast in this market.",
+      "description": "FY2025 (ended 30 June 2025) total revenue $5,146.3 million, up 10%. Sleep and Breathing Health $4,504.9 million, comprising devices $2,665.2 million and masks and other $1,839.7 million — masks are 41% of the segment. Residential Care Software $641.4 million. By geography, United States, Canada and Latin America $2,997.5 million against combined Europe, Asia and other markets $1,507.4 million. Gross margin 59.4%, up 270 basis points; net income $1,400.7 million; diluted EPS $9.51; operating cash flow $1.8 billion. Devices were approximately 52% of net revenues. Its chief executive stated on the fiscal 2025 call that the company has sold 30 million fully cloud-connectable devices into 140 countries — a spoken remark, not a filing figure."
+    },
+    {
+      "company": "Koninklijke Philips N.V. (Philips Respironics)",
+      "headquarters": "Amsterdam, Netherlands",
+      "market_position": "The structural event in this market. Philips Respironics has been barred from selling new sleep and respiratory care devices in the United States since the consent decree was finalised in April 2024, while continuing to service the United States installed base, sell accessories and consumables there, and supply new devices outside the United States. Philips does not disclose sleep revenue, so the hole it left can only be bounded by an analyst estimate. No share is assigned.",
+      "description": "Reached agreement with the United States Department of Justice and FDA in January 2024, with the consent decree finalised in April 2024 following the Respironics recall. The decree focuses on Philips Respironics' United States business operations. Philips' chief executive stated that compliance with such agreements in the medical equipment industry typically takes five to seven years, and the company has not said when United States sales could resume. UBS analysts estimated the agreement as an approximately 400 million euro sales headwind — an analyst estimate, not a company figure. Philips said the decree did not change its 2023-2025 group financial outlook."
+    },
+    {
+      "company": "Fisher & Paykel Healthcare Corporation Limited",
+      "headquarters": "Auckland, New Zealand",
+      "market_position": "The principal independent competitor in masks and flow generators, and the clearest beneficiary of the Philips vacuum in interface products. Reports in New Zealand dollars and does not split obstructive sleep apnoea out of its Homecare group, so its OSA contribution can only be bounded from above. No share is disclosed and we assign none.",
+      "description": "FY2025 (ended 31 March 2025) total operating revenue a record NZ$2.02 billion, up 16% reported and 14% in constant currency. Homecare group NZ$739.9 million — roughly US$437 million at an approximate NZD 1 to USD 0.59 conversion, which is ours, and which is an upper bound on its OSA contribution because the group also contains humidification and nasal high flow. OSA mask revenue up 14% reported and 11% in constant currency, with the F&P Nova Micro launched in April 2024 and the F&P Nova Nasal in March 2025."
+    },
+    {
+      "company": "Inspire Medical Systems, Inc.",
+      "headquarters": "Golden Valley, Minnesota, United States",
+      "market_position": "Has built a second treatment modality to real scale — hypoglossal nerve stimulation for patients who cannot tolerate positive airway pressure — at an 86.6% gross margin, which is an implant economics profile rather than a device one. Also the clearest illustration that reimbursement coding, not clinical demand, now sets the growth rate. No share is disclosed.",
+      "description": "FY2025 revenue $912.0 million, up 14%, with fourth-quarter revenue of $269.1 million, up 12%, attributed mainly to growth at existing implanting centres and new centre additions. Fourth-quarter gross margin 86.6%; full-year adjusted EBITDA $200.6 million; operating cash flow $117.0 million. Revised 2026 revenue guidance to $950 million to $1.0 billion, implying 4% to 10% growth, on an expected first-quarter impact from coding uncertainty tied to the move to CPT code 64582 with the -52 modifier and the related physician reimbursement rates."
+    },
+    {
+      "company": "Nyxoah SA",
+      "headquarters": "Mont-Saint-Guibert, Belgium",
+      "market_position": "Inspire's direct competitor in hypoglossal nerve stimulation, with a bilateral stimulation approach. Named because the published market scope includes implantable therapy and because no disclosed revenue for this segment beyond Inspire's enters any of the containment arithmetic in this report. Not sized.",
+      "description": "Genio bilateral hypoglossal nerve stimulation system for obstructive sleep apnoea, positioned against Inspire's unilateral implant. Revenue is immaterial relative to the segment leaders and is not used in this report's arithmetic."
+    },
+    {
+      "company": "SomnoMed Limited and ProSomnus, Inc.",
+      "headquarters": "Sydney, Australia and Pleasanton, California, United States",
+      "market_position": "The oral appliance industry, which MarketsandMarkets names explicitly in its therapeutic scope and which contributes nothing to any disclosed revenue figure used here. Their absence is part of why three disclosures already exceed a published global total. Named, not sized.",
+      "description": "Custom mandibular advancement devices prescribed for mild-to-moderate obstructive sleep apnoea and for patients intolerant of positive airway pressure, dispensed through dental practices. Neither is material relative to the PAP vendors and neither enters this report's containment arithmetic."
+    },
+    {
+      "company": "Lowenstein Medical, BMC Medical and React Health",
+      "headquarters": "Bad Ems, Germany; Beijing, China; and Brandon, Florida, United States",
+      "market_position": "The non-disclosing PAP flow-generator manufacturers, whose combined output is one of the main reasons the published totals cannot be reconciled with the industry they describe. React Health and BMC in particular expanded into the United States opening created by the Philips consent decree. None discloses comparable revenue and no share is assigned.",
+      "description": "Positive airway pressure flow generators, masks and accessories sold through homecare and durable medical equipment channels in Europe, Asia and North America. None publishes segment revenue comparable to ResMed's or Fisher & Paykel's disclosures."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Inspire Medical Systems, Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $912.0 million on 11 February 2026, up 14%, with a fourth-quarter gross margin of 86.6% and adjusted EBITDA of $200.6 million, and revised 2026 guidance to $950 million to $1.0 billion on coding uncertainty tied to the move to CPT code 64582 with the -52 modifier and the related physician reimbursement rates."
+    },
+    {
+      "company": "ResMed Inc.",
+      "year": 2025,
+      "event": "Reported fiscal 2025 revenue of $5,146.3 million, up 10%, with Sleep and Breathing Health at $4,504.9 million split $2,665.2 million of devices and $1,839.7 million of masks and other, Residential Care Software at $641.4 million, gross margin up 270 basis points to 59.4% and net income of $1,400.7 million."
+    },
+    {
+      "company": "Koninklijke Philips N.V.",
+      "year": 2024,
+      "event": "Finalised its consent decree with the United States Department of Justice and FDA in April 2024, barring Philips Respironics from selling new sleep and respiratory care devices in the United States while permitting servicing of the installed base and sales of accessories, consumables and replacement parts; the company's chief executive said compliance with such agreements typically takes five to seven years and has not said when United States sales could resume."
+    },
+    {
+      "company": "Fisher & Paykel Healthcare Corporation Limited",
+      "year": 2025,
+      "event": "Reported FY2025 operating revenue of a record NZ$2.02 billion on 28 May 2025, up 16%, with the Homecare group at NZ$739.9 million and obstructive sleep apnoea mask revenue up 14% reported and 11% in constant currency, having launched the F&P Nova Micro mask in April 2024 and the F&P Nova Nasal mask in March 2025."
+    },
+    {
+      "company": "MarketsandMarkets",
+      "year": 2025,
+      "event": "Published its Sleep Apnea Devices Market report (MD 1181) in June 2025 with a 2024 base of $6.47 billion, a 2025 estimate of $6.93 billion and a 2032 forecast of $11.61 billion, while stating a 10.9% CAGR for 2025-2032 that its own endpoints contradict — $6.93 billion at 10.9% for seven years reaches $14.4 billion, a $2.8 billion discrepancy the page does not explain."
+    }
+  ],
+  "regulatory_landscape": [
+    "Positive airway pressure devices are Class II in the United States and reach the market through the FDA 510(k) pathway. The binding constraint for one major vendor is not clearance but a consent decree: Philips Respironics has been barred from selling new sleep and respiratory care devices in the United States since the decree was finalised in April 2024, while permitted to service the installed base and to sell accessories, consumables and replacement parts.",
+    "Medicare pays for PAP therapy under the Part B durable medical equipment benefit with a documented adherence requirement — a trial period after which continued coverage depends on demonstrated use at a specified threshold. That rule, not the device, is why connectivity and compliance reporting are built into every major platform and why ResMed's devices are cloud-connected by design.",
+    "Diagnosis is itself regulated and reimbursed separately. In-laboratory polysomnography and home sleep apnea testing carry distinct CPT codes and distinct coverage conditions, and the shift of testing from the laboratory to the home is a reimbursement change as much as a technological one. It is the gate through which prevalence becomes device demand.",
+    "Implantable hypoglossal nerve stimulation is reimbursed through surgical CPT coding and is therefore exposed to coding revisions in a way that capital devices are not: Inspire Medical revised its 2026 revenue guidance specifically on the move to CPT code 64582 with the -52 modifier and the related physician payment rates.",
+    "EU Medical Device Regulation 2017/745 governs PAP devices, masks, oral appliances and sleep diagnostic equipment placed on the EU market, with notified-body conformity assessment and post-market clinical follow-up; an implantable neurostimulator is assessed at a materially higher risk class than a flow generator.",
+    "FDA quality system regulation at 21 CFR part 820 and the medical device reporting requirements at 21 CFR part 803 are the enforcement surface that produced the Philips Respironics outcome. For devices used nightly in the home over years, a materials failure reaches millions of units before surveillance detects it, which is why this category's largest structural event of the decade was a recall and its consent decree rather than any product launch."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "MarketsandMarkets, Sleep Apnea Devices Market, report MD 1181, published June 2025 — $6.47B (2024), $6.93B (2025), $11.61B (2032); stated CAGR 10.9% (2025-2032) which its own endpoints contradict at an implied 7.65%; scope split therapeutic (CPAP, APAP, BPAP, oral appliances, masks) and diagnostic (polysomnography, home sleep testing, oximeters)",
+      "ResMed Inc., Form 8-K Exhibit 99.1, fourth quarter and full year fiscal 2025 results (year ended 30 June 2025) — total revenue $5,146.3M; Sleep and Breathing Health $4,504.9M (devices $2,665.2M, masks and other $1,839.7M); Residential Care Software $641.4M",
+      "ResMed Inc., Form 10-K for fiscal 2025 (SEC EDGAR, CIK 943819) — devices approximately 52%, 52% and 54% of net revenues in fiscal 2025, 2024 and 2023",
+      "Inspire Medical Systems, Inc., fourth quarter and full year 2025 financial results, 11 February 2026 (Form 8-K exhibit) — FY2025 revenue $912.0M (+14%), Q4 $269.1M, Q4 gross margin 86.6%, adjusted EBITDA $200.6M, 2026 guidance $950M-$1.0B revised on CPT code 64582 coding uncertainty",
+      "Fisher & Paykel Healthcare Corporation Ltd, FY2025 annual results (year ended 31 March 2025), NZX/ASX announcement 28 May 2025 — total operating revenue NZ$2.02B (+16%), Homecare group NZ$739.9M, OSA masks +14% reported and +11% constant currency",
+      "Benjafield A.V. et al., Estimation of the global prevalence and burden of obstructive sleep apnoea: a literature-based analysis, The Lancet Respiratory Medicine, 2019 (PubMed 31300334) — 936 million adults aged 30-69 with mild-to-severe OSA and 425 million with moderate-to-severe; reliable data from 16 countries across 17 studies; funded by ResMed",
+      "Koninklijke Philips N.V., Philips Respironics consent decree explainer and FAQ dated 10 April 2024 — United States new sleep and respiratory device sales barred, servicing and consumables permitted, ex-United States supply continuing; five to seven year typical compliance horizon",
+      "Research and Markets, Sleep Apnea Devices Market Global Forecast to 2032, 13 October 2025 — reprints the $6.4B (2024), $6.9B (2025), $11.6B (2032) series at 7.6%, the arithmetic-consistent rate",
+      "Arizton, Global Sleep Apnea Devices Market Focused Insights 2025-2030 — $8.52B (2024) to $12.92B (2030) at 7.20%, with Facial Interfaces as a top-level segment",
+      "Knowledge Sourcing Intelligence, sleep apnea devices market — $5.6B (2025) to $7.3B (2030) at 5.2%; IMARC Group — $8.5B (2024) to $14.4B (2033); Emergen Research — $12.88B by 2030 at 6.9%"
+    ],
+    "data_validation": "The 2026 base is MarketsandMarkets' own published 2025 figure of $6.93 billion advanced one year at the rate its own endpoints imply, giving $7.46 billion; the 2032 endpoint is its own published $11.61 billion, unaltered. The rate published here is 7.6%, the one its endpoints imply, and not the 10.9% its page states: $6.93 billion compounded at 10.9% for seven years reaches $14.4 billion, a $2.8 billion discrepancy against the same page's own 2032 figure, which the page does not explain. Research and Markets' October 2025 reprint of the same series states 7.6%, which corroborates that the endpoints rather than the stated rate are the report's real content. MarketsandMarkets was chosen because it publishes by far the most explicit scope in the set, naming both halves and every product class inside them, because it carries a stated publication date and a dated base year where most of the set carries neither, and because its endpoint-implied 7.65% is corroborated by Arizton at 7.20% and Emergen at 6.9%. Three grounding tests were run. First, a containment test against FY2025 reported revenue: ResMed's Sleep and Breathing Health segment at $4,504.9 million, Inspire Medical at $912.0 million and Fisher & Paykel's Homecare group at roughly $437 million converted from NZ$739.9 million total $5,853.9 million. That is 104.5% of Knowledge Sourcing Intelligence's entire $5.6 billion global market, 84.5% of MarketsandMarkets' $6.93 billion and 64.1% of Arizton's implied $9.13 billion — before Philips Respironics, which still supplies new devices outside the United States and consumables within it, before Lowenstein, BMC Medical and React Health, before the oral appliance industry, before Nyxoah, and before the entire polysomnography, home sleep testing and oximetry segment that MarketsandMarkets explicitly says it counts. ResMed alone is 65.0% of MarketsandMarkets' 2025 total. Second, a prevalence test: against Benjafield and colleagues' 936 million adults aged 30-69 with mild-to-severe OSA and 425 million with moderate-to-severe disease, the $6.93 billion total is $7.40 and $16.31 per person per year respectively, against roughly $700 to $1,200 of annual device-and-mask value, which implies the industry serves on the order of 1.6% of the treatment-indicated population. From the vendor side, ResMed's stated 30 million cumulative cloud-connectable devices against 425 million moderate-to-severe adults is 7.1% ever reached across the leader's entire history. Third, restating the forecast in those terms: the $11.61 billion 2032 figure is $27.32 per moderate-to-severe adult, so the published forecast is a claim that penetration moves from roughly 1.6% to roughly 2.7%. These are scope and plausibility tests, not market estimates. The Fisher & Paykel conversion uses our own approximate exchange rate and its Homecare group includes humidification and nasal high flow products beyond OSA, so that line is an upper bound; the ResMed 30-million device figure is a spoken earnings-call remark rather than a filing figure; the prevalence base was funded by ResMed and rests on reliable data from only 16 countries across 17 studies; the $700 to $1,200 per-patient device value is our own characterisation from ResMed's device-to-mask revenue split rather than a published price. Regional and country splits are published as empty arrays because the one source naming regions gives no regional dollar figures, and ResMed's own geographic split is one company's revenue rather than a market split. No vendor market share is published because none is disclosed; the 65.0% figure is our division of a reported segment by a third-party estimate and is stated in prose with both inputs named."
+  },
+  "faqs": [
+    {
+      "question": "How large is the sleep apnea devices market?",
+      "answer": "We publish $7.46 billion for 2026, rising to $11.61 billion by 2032 at 7.6%, from MarketsandMarkets' own published endpoints. Published 2025 estimates run from $5.6 billion to about $9.13 billion — a 1.63x spread, narrow by the standards of this corpus. The problem is not the spread. Three companies' disclosed revenue totals $5,853.9 million, which exceeds the lowest published global figure outright and consumes 84.5% of the mid-range one, before counting Philips Respironics or the entire diagnostics segment the same report says it includes."
+    },
+    {
+      "question": "Why is your CAGR 7.6% when the publisher says 10.9%?",
+      "answer": "Because 10.9% does not reach the publisher's own endpoint. MarketsandMarkets publishes $6.93 billion for 2025 and $11.61 billion for 2032 and states 10.9% for that window. Compounding $6.93 billion at 10.9% for seven years gives $14.4 billion — a $2.8 billion discrepancy against its own forecast, with no reconciliation on the page. The endpoints imply 7.65%. Research and Markets' October 2025 reprint of the same series states 7.6%, which suggests the endpoints are the report's real content and the 10.9% is an error."
+    },
+    {
+      "question": "Does disclosed vendor revenue exceed the published market?",
+      "answer": "Yes, against one publisher. ResMed's Sleep and Breathing Health segment was $4,504.9 million in FY2025, Inspire Medical $912.0 million and Fisher & Paykel's Homecare group roughly $437 million converted — $5,853.9 million between them, or 104.5% of Knowledge Sourcing Intelligence's entire $5.6 billion global market. And that omits Philips Respironics, which still sells new devices outside the United States and consumables within it; Lowenstein, BMC Medical and React Health; the whole oral appliance industry; Nyxoah; and every polysomnography, home sleep test and oximetry vendor — all of which the mid-range report explicitly includes in scope."
+    },
+    {
+      "question": "How concentrated is this market?",
+      "answer": "Extremely, and no published report says so. ResMed's Sleep and Breathing Health revenue of $4,504.9 million is 65.0% of MarketsandMarkets' $6.93 billion 2025 total and 80.4% of the lowest published figure — our own division of a reported segment by third-party estimates, with both inputs named. ResMed discloses no share and we assign none. But a reader who assumes a normal competitive distribution beneath a $6.93 billion headline has the structure of this industry badly wrong."
+    },
+    {
+      "question": "What proportion of sleep apnea patients does the industry actually reach?",
+      "answer": "On the order of 1.6% of the treatment-indicated population. Benjafield and colleagues estimated 425 million adults aged 30-69 with moderate-to-severe obstructive sleep apnoea; the published $6.93 billion market is $16.31 per such person per year against roughly $700 to $1,200 of annual device-and-mask value. From the other side, ResMed's chief executive put cumulative cloud-connectable devices sold at 30 million into 140 countries, which is 7.1% of that population ever reached across the market leader's entire history. The forecast to $11.61 billion by 2032 is a claim that penetration moves to about 2.7%."
+    },
+    {
+      "question": "How reliable is the prevalence figure every forecast uses?",
+      "answer": "It is the best available and it should be used with its caveats visible. Benjafield et al. published it in The Lancet Respiratory Medicine in 2019: 936 million adults aged 30-69 with mild-to-severe OSA and 425 million with moderate-to-severe. Reliable prevalence data existed for only 16 countries across 17 studies, and the rest was extrapolated by population and body-mass index. The study was funded by ResMed, the largest vendor in the market, and it replaced a WHO 2007 estimate of more than 100 million with a figure nearly ten times larger."
+    },
+    {
+      "question": "What has Philips' exit from United States sleep devices done to the market?",
+      "answer": "It removed a major vendor from new device sales in the largest market, and it is the structural event of the decade in this category. The consent decree with the United States Department of Justice and FDA was finalised in April 2024; Philips Respironics may still service its United States installed base and sell accessories, consumables and replacement parts there, and still supplies new devices outside the United States. Its chief executive said compliance with such agreements typically takes five to seven years and the company has not said when United States sales could resume. UBS analysts estimated the decree as an approximately 400 million euro sales headwind — an analyst figure, since Philips does not disclose sleep revenue."
+    }
+  ],
+  "seo": {
+    "meta_title": "Sleep Apnea Devices Market Size & Forecast to 2032",
+    "meta_description": "Sleep apnea devices at $7.46B in 2026, reaching $11.61B by 2032 at 7.6% — and why three vendors' disclosed revenue exceeds a published global total.",
+    "keywords": [
+      "sleep apnea devices market",
+      "CPAP market size",
+      "ResMed sleep and breathing health revenue",
+      "hypoglossal nerve stimulation market",
+      "Philips Respironics consent decree",
+      "obstructive sleep apnoea prevalence"
+    ]
+  },
+  "executive_summary": "Sleep apnoea devices is a market whose published figures are too small to contain the companies they describe. Estimates for 2025 run $5.6 billion to about $9.13 billion — a 1.63x spread, narrow by this corpus's standards and the wrong thing to be reassured by. Three disclosures settle it: ResMed's Sleep and Breathing Health segment at $4,504.9 million, Inspire Medical at $912.0 million, Fisher & Paykel's Homecare group at roughly $437 million converted — $5,853.9 million, which is 104.5% of the lowest published global total and 84.5% of the mid-range one. Not in that sum: Philips Respironics, still selling new devices outside the United States and consumables within it; Lowenstein, BMC Medical and React Health; the entire oral appliance industry; Nyxoah; and every polysomnography, home sleep test and oximetry vendor — all of which the mid-range report explicitly names in its own scope. ResMed alone is 65.0% of that report's total. We publish its endpoints — $7.46 billion in 2026 to $11.61 billion by 2032 — at the 7.6% they imply, not the 10.9% the page states, because $6.93 billion at 10.9% for seven years reaches $14.4 billion, a $2.8 billion contradiction the publisher leaves unexplained. The denominator makes the level legible. Against Benjafield's 425 million adults with moderate-to-severe OSA, the whole industry is $16.31 per indicated patient per year, against roughly $700 to $1,200 of annual device-and-mask value — on the order of 1.6% penetration. ResMed's 30 million cumulative cloud-connectable devices is 7.1% of that population ever reached. The forecast, restated honestly, is a claim that penetration moves from 1.6% to 2.7%.",
+  "key_highlights": [
+    "Headline: $7.46 billion in 2026 to $11.61 billion in 2032 at 7.6% — MarketsandMarkets' own endpoints at the rate they imply, not the 10.9% its page states",
+    "That publisher's stated rate fails its own arithmetic by $2.8 billion: $6.93 billion at 10.9% for seven years is $14.4 billion, not the $11.61 billion it forecasts",
+    "Three disclosures total $5,853.9 million — 104.5% of one publisher's entire global market and 84.5% of another's — before Philips, Lowenstein, BMC, oral appliances, Nyxoah and all of diagnostics",
+    "ResMed alone is 65.0% of the mid-range published 2025 total, at $4,504.9 million of Sleep and Breathing Health revenue",
+    "Masks are 41% of the leader's segment revenue ($1,839.7 million against $2,665.2 million of devices), and publishers disagree about whether to count them",
+    "The industry reaches on the order of 1.6% of the 425 million adults Benjafield estimates have moderate-to-severe OSA — $16.31 per indicated patient per year",
+    "ResMed's 30 million cumulative cloud-connectable devices sold into 140 countries is 7.1% of that population ever reached, across the leader's entire history",
+    "The prevalence denominator every forecast leans on was funded by ResMed and rests on reliable data from only 16 countries across 17 studies"
+  ],
+  "market_context": "Sleep apnoea is the rare healthcare market where the size of the untreated population is not in dispute and the size of the industry is. Benjafield and colleagues put 936 million adults aged 30-69 at mild-to-severe obstructive sleep apnoea and 425 million at moderate-to-severe, and that estimate — funded by ResMed, built on reliable data from 16 countries and extrapolated by body-mass index — is the denominator under every forecast in the category. Against it, the whole global device industry is about $16 per indicated patient per year, which means it reaches on the order of one and a half percent of the people it says need treatment. That is the market's defining fact, and it has two consequences. First, the binding constraint is diagnosis, not devices: the gate between prevalence and demand is a sleep study, which is why home sleep testing and reimbursement coding matter more than any product feature. Second, the industry is far more concentrated than its published size suggests. ResMed's Sleep and Breathing Health revenue is roughly two-thirds of the mid-range published global total, and a reader who takes a $6.93 billion headline and assumes a competitive field has the structure wrong. The concentration got worse, not better, through the period: the April 2024 Philips Respironics consent decree removed a major vendor from new United States sleep device sales for a horizon its own chief executive put at five to seven years, and Philips does not disclose sleep revenue, so the hole can only be bounded by an analyst's approximately 400 million euro estimate.",
+  "forecast_analysis": "Our 7.6% is the rate MarketsandMarkets' own endpoints imply, and the reason we are not publishing the 10.9% on its page is arithmetic: that rate overshoots its own 2032 figure by $2.8 billion. Research and Markets' reprint of the same series states 7.6%, which is good evidence the endpoints are the report and the stated rate is an error. What the corrected rate actually claims is worth restating in clinical terms, because that is the only form in which it can be argued with. $6.93 billion in 2025 is $16.31 per moderate-to-severe patient per year and $11.61 billion in 2032 is $27.32, so the forecast is a claim that the industry moves from serving on the order of 1.6% of the treatment-indicated population to roughly 2.7%. That is modest and it is defensible. It is also nothing like what a 10.9% compound rate to $11.6 billion sounds like. The mechanisms that would deliver it are identifiable and mostly not about devices: home sleep testing continuing to displace in-laboratory polysomnography, obesity prevalence continuing to rise, and mask-and-consumable replacement compounding on a growing installed base — $1,839.7 million of ResMed's segment revenue, 41% of it, is already masks. The mechanisms that could break it in either direction are both regulatory. Upward, the United States opening left by the Philips consent decree is still unfilled and has at least several years to run. Downward, Inspire's 2026 guidance cut on the move to CPT code 64582 with the -52 modifier shows that a coding revision can reset the growth end of this market in a single quarter. Readers should forecast diagnosed patients and replacement cycles, and treat any published figure below about $6 billion for 2025 as arithmetically impossible against the vendors it names.",
+  "reader_takeaways": [
+    "Check the published total against the vendors before you use it. ResMed, Inspire and Fisher & Paykel disclose $5,853.9 million between them, which exceeds one publisher's entire global market and leaves no room for Philips, three other PAP makers, oral appliances or any of diagnostics.",
+    "This market is about two-thirds one company. ResMed's $4,504.9 million Sleep and Breathing Health segment is 65.0% of the mid-range published 2025 figure, and no published report states the concentration.",
+    "Recompute any CAGR from the endpoints. MarketsandMarkets states 10.9% and publishes endpoints implying 7.65% — a $2.8 billion contradiction at the horizon that its own reprint elsewhere corrects to 7.6%.",
+    "Translate the forecast into penetration. At $16.31 per moderate-to-severe patient per year rising to $27.32, the published growth is a claim that the industry moves from about 1.6% to about 2.7% of the indicated population — which is a claim a clinician can argue with.",
+    "Establish whether masks are in scope. They are 41% of the leader's segment revenue, and a definition that leaves them out removes roughly as much as the entire published spread between publishers."
+  ]
+}

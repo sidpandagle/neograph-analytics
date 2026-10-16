@@ -35,11 +35,11 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 18 | health-data-interoperability-market | Healthcare IT | 2B | check-passed |
 | 19 | ~~revenue-cycle-management-automation-market~~ -> **revenue-cycle-management-market** | Healthcare IT | 2B | check-passed |
 | 20 | hospital-at-home-market | Healthcare IT | 2B | check-passed |
-| 21 | proton-therapy-market | Medical Devices | 3A | queued |
-| 22 | surgical-navigation-market | Medical Devices | 3A | queued |
-| 23 | insulin-delivery-systems-market | Medical Devices | 3A | queued |
-| 24 | sleep-apnea-devices-market | Medical Devices | 3A | queued |
-| 25 | hearing-aids-market | Medical Devices | 3A | queued |
+| 21 | proton-therapy-market | Medical Devices | 3A | check-passed |
+| 22 | surgical-navigation-market | Medical Devices | 3A | check-passed |
+| 23 | insulin-delivery-devices-market | Medical Devices | 3A | check-passed |
+| 24 | sleep-apnea-devices-market | Medical Devices | 3A | check-passed |
+| 25 | hearing-aids-market | Medical Devices | 3A | check-passed |
 | 26 | biologics-cdmo-market | Pharmaceuticals | 3B | check-passed |
 | 27 | sterile-injectables-market | Pharmaceuticals | 3B | check-passed |
 | 28 | vaccine-cold-chain-market | Pharmaceuticals | 3B | check-passed |
@@ -56,7 +56,12 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 39 | rehabilitation-robotics-market | Medical Devices | 4B | queued |
 | 40 | veterinary-diagnostics-market | Life Sciences | 4B | queued |
 
-**Round 2 is drafted and passing `check`, held for the next merge slot.** Ten
+**Rounds 2 and 3 are drafted and passing `check` — twenty reports held for the
+next merge slot**, plus two analysis articles and a press release in
+`content/blogs/` and `content/press-releases/`. Order inside the deploy: reports
+first, then the articles that link to them.
+
+**Round 2.** Ten
 reports: single-cell sequencing, spatial biology, proteomics, pharmacogenomics,
 organoids & organ-on-chip; decentralised trials, real-world evidence, health
 data interoperability, revenue cycle management, hospital-at-home. Publishing
