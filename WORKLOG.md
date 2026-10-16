@@ -1006,3 +1006,38 @@ All five pass. Twenty reports are now drafted and waiting on one deploy.
 Two more published series that fail their own arithmetic, bringing this month's
 tally to four: MarketsandMarkets' sleep-apnoea rate (10.9% stated, 7.65%
 implied) and GMI's proton-therapy rate (10.8% stated, 10.3% implied).
+
+### Report pages were 152 dead ends
+Measured: **0 occurrences of `href="/reports/` in the built HTML of a report
+page.** Not one report linked to another. The `// TODO: Fetch related reports`
+in `app/reports/[slug]/page.tsx` had been open long enough for the corpus to
+reach 152. That costs a reader the obvious next step and costs the site the
+internal links a crawler follows to find depth — on a domain whose indexed count
+has been the standing problem.
+
+`lib/api/relatedReports.ts` scores every other report on shared industry (+3),
+shared topic words (+2 each, with report-title stopwords removed) and a baseline
++1, penalises regional clones (-2) so four copies of one topic cannot fill the
+list, and breaks ties by order-of-magnitude size distance so the suggested
+report is a comparable one. Deterministic throughout — these pages are
+prerendered, and two builds of the same corpus must produce the same page.
+
+One narrow select for the whole corpus, memoised for the process: a build
+renders 152 report pages in one process, so without the memo this would run 152
+times per build for the same rows.
+
+**The finding that shaped it.** The first version put *earth observation, 5G
+smart grid, green hydrogen, vertical farming and quantum sensors* under
+`liquid-biopsy-market`. Cause: 26 rows in the corpus are not healthcare at all,
+and the stored `industry` does not separate them — `liquid-biopsy-market` and
+`agritech-vertical-farming-led-market` are both "Life Sciences". Same industry,
+similar market size, nothing else in common. There is now a hard cluster
+boundary on the slug prefix (agritech, climate-tech, space-economy,
+quantum-technology, digital-infrastructure, advanced-materials,
+synthetic-biology): a healthcare report never lists a non-healthcare one, and
+vice versa, whatever the column says.
+
+Built HTML across 152 report pages: **mean 5.4 outbound report links, minimum 2,
+zero dead ends.** Spot checks read correctly — BCI next to neuromodulation,
+wearables and surgical robotics; OIS next to the two AI-in-oncology reports and
+clinical decision support; the climate cluster staying inside itself.

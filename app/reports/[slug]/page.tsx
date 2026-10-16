@@ -12,6 +12,8 @@ import { marketValue } from "@/lib/format";
 import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
 import { buildReportTOC } from "@/lib/reportToc";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
+import { RelatedReports } from "@/components/reports/RelatedReports";
+import { getRelatedReports } from "@/lib/api/relatedReports";
 
 /**
  * Reports are prerendered from Supabase (140 rows), not from the 10-row JSON
@@ -299,9 +301,10 @@ export default async function ReportPage({
     },
   ];
 
-  // Fetch related reports
-  // TODO: Fetch related reports from API when relatedReportIds are provided
-  // const relatedReports: Report[] = [];
+  /* Related reports, scored on shared industry and topic words. The TODO this
+     replaces had been open long enough for the corpus to reach 152 reports with
+     no link between any of them. */
+  const relatedReports = await getRelatedReports(report.slug);
 
   const reportUrl = `https://www.neographanalytics.com/reports/${report.slug}`;
   const reportKeywords = report.meta_keywords?.split(',').map(k => k.trim()).filter(Boolean);
@@ -423,6 +426,8 @@ export default async function ReportPage({
               </header>
 
               <JsonReportSections report={jsonReport} />
+              {/* A report page used to end with no link to any other report. */}
+              <RelatedReports reports={relatedReports} />
             </article>
           </ReportContentWrapper>
       </div>
