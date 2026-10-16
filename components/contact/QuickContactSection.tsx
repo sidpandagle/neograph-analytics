@@ -15,7 +15,7 @@ export default function QuickContactSection() {
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-3 bg-[var(--card)] rounded-lg hover:shadow-md transition-shadow group"
         >
-          <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+          <div className="flex-shrink-0 w-8 h-8 bg-[var(--cmi-primary-fill)] rounded-lg flex items-center justify-center">
             <svg
               className="w-4 h-4 text-white"
               fill="currentColor"
@@ -37,7 +37,7 @@ export default function QuickContactSection() {
           href={`mailto:${CONTACT_INFO.email}`}
           className="flex items-center gap-3 p-3 bg-[var(--card)] rounded-lg hover:shadow-md transition-shadow group"
         >
-          <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+          <div className="flex-shrink-0 w-8 h-8 bg-[var(--cmi-primary-fill)] rounded-lg flex items-center justify-center">
             <svg
               className="w-4 h-4 text-white"
               fill="none"
@@ -62,7 +62,7 @@ export default function QuickContactSection() {
       </div>
 
       <div className="pt-3 border-t border-[var(--border-light)]">
-        <div className="flex items-center gap-2 text-xs text-[var(--primary-dark)]">
+        <div className="flex items-center gap-2 text-xs text-[var(--cmi-primary)]">
           <svg
             className="w-4 h-4"
             fill="none"

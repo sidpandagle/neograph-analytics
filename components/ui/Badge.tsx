@@ -23,15 +23,15 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       success:
         'bg-[var(--content-success-bg)] text-[var(--content-success-text)]',
       warning:
-        'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary-pressed)]',
+        'bg-[var(--content-warning-bg)] text-[var(--content-warning-text)]',
       danger:
-        'bg-[#FEF0F2] text-[var(--destructive)]',
+        'bg-[var(--content-danger-bg)] text-[var(--content-danger-text)]',
       outline:
         'border border-[var(--cmi-line)] text-[var(--cmi-body)] hover:border-[var(--cmi-primary)] hover:text-[var(--cmi-primary)]',
       onBlue:
         'bg-[var(--cmi-primary-raised)] text-[var(--primary-foreground)]',
       ink:
-        'bg-[var(--cmi-ink-surface)] text-white',
+        'bg-[var(--cmi-ink-surface)] text-[var(--cmi-on-blue)]',
     };
 
     const sizes = {

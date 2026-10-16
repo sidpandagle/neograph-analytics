@@ -94,7 +94,7 @@ export default async function AboutPage() {
             </span>
             <h1 className="text-[2.75rem] md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] tracking-[-0.02em]">
               Sustainable Healthcare Transformation<br className="hidden md:block" />{' '}
-              Through an <span className="text-[var(--cmi-sky)]">Integrated Approach</span>
+              Through an <span className="text-[var(--cmi-on-blue)]">Integrated Approach</span>
             </h1>
             <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
               A specialized healthcare consulting firm offering comprehensive advisory services to providers,
@@ -184,7 +184,7 @@ export default async function AboutPage() {
                 <div className="text-4xl md:text-5xl font-bold text-white tracking-tight tabular-nums">
                   {stat.val}
                 </div>
-                <div className="text-sm font-semibold text-slate-300 mt-2">
+                <div className="text-sm font-semibold text-[var(--cmi-on-blue)] mt-2">
                   {stat.label}
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default async function AboutPage() {
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-[2.75rem] text-white leading-[1.15] tracking-[-0.02em]">
-              Ready to Work With <span className="text-[var(--cmi-sky)]">NeoGraph Analytics?</span>
+              Ready to Work With <span className="text-[var(--cmi-on-blue)]">NeoGraph Analytics?</span>
             </h2>
             <p className="text-lg text-[var(--cmi-on-blue)] leading-[1.8]">
               Join leading healthcare organizations that trust our research to drive their strategic initiatives.

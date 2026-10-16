@@ -58,7 +58,7 @@ export const TOCChapterItem: React.FC<TOCChapterItemProps> = ({
         onClick={onToggle}
         className={cn(
           'w-full text-left p-6 flex items-center gap-4 group',
-          'bg-[var(--muted)] hover:bg-[var(--muted)]/80',
+          'bg-[var(--muted)] hover:bg-[var(--cmi-raisedsurface)]',
           'transition-colors duration-200'
         )}
         aria-expanded={isOpen}
@@ -66,8 +66,8 @@ export const TOCChapterItem: React.FC<TOCChapterItemProps> = ({
         <div
           className={cn(
             'w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0',
-            'bg-[var(--primary)] text-white transition-colors duration-200',
-            'group-hover:bg-[var(--primary)]/90'
+            'bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] transition-colors duration-200',
+            'group-hover:bg-[var(--cmi-primary-pressed)]'
           )}
         >
           <svg

@@ -43,7 +43,7 @@ export const Breadcrumb = React.forwardRef<HTMLElement, BreadcrumbProps>(
                   </span>
                 )}
                 {!isLast && (
-                  <span className="text-[var(--muted-foreground)]/40">/</span>
+                  <span className="text-[var(--cmi-meta)]">/</span>
                 )}
               </li>
             );

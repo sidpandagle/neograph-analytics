@@ -134,7 +134,7 @@ export default function ServicesPage() {
                 <div className="p-8 flex flex-col gap-5 flex-1">
                   {/* Icon + Title */}
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-tile flex items-center justify-center shrink-0 ${svc.accent === 'amber' ? 'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary)]' : 'bg-[var(--cmi-surface)] text-[var(--cmi-primary-pressed)]'}`}>
+                    <div className={`w-12 h-12 rounded-tile flex items-center justify-center shrink-0 ${svc.accent === 'amber' ? 'bg-[var(--cmi-chip-blue)] text-[var(--cmi-primary)]' : 'bg-[var(--cmi-surface)] text-[var(--cmi-primary)]'}`}>
                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d={svc.icon} />
                       </svg>
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-[-50%] h-px bg-slate-200" />
                 )}
                 <div className="flex flex-col items-center text-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-ocean-600 flex items-center justify-center text-white text-lg font-bold shadow-lg shadow-ocean-600/25 shrink-0 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-[var(--cmi-primary-fill)] flex items-center justify-center text-[var(--primary-foreground)] text-lg font-bold shadow-[var(--shadow-blue)] shrink-0 relative z-10">
                     {step.num}
                   </div>
                   <div>
@@ -234,7 +234,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-[var(--primary)] bg-[var(--primary-foreground)] hover:opacity-95 shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]">
+                <button className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold rounded-xl text-[var(--primary-foreground)] bg-[var(--cmi-primary-fill)] hover:bg-[var(--cmi-primary-pressed)] shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-w-[180px]">
                   Contact Our Team
                 </button>
               </Link>

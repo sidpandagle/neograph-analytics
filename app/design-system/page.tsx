@@ -265,7 +265,7 @@ export default function DesignSystemPage() {
               <Grid cols={3} gap="lg">
                 <Card>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 rounded-full bg-[var(--cmi-primary-fill)] flex items-center justify-center text-[var(--primary-foreground)] font-semibold">
                       JD
                     </div>
                     <div>
@@ -291,7 +291,7 @@ export default function DesignSystemPage() {
 
                 <Card>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 rounded-full bg-[var(--cmi-primary-fill)] flex items-center justify-center text-[var(--primary-foreground)] font-semibold">
                       AS
                     </div>
                     <div>
