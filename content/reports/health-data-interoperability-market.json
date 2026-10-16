@@ -1,0 +1,251 @@
+{
+  "report_id": "health-data-interoperability-market",
+  "slug": "health-data-interoperability-market",
+  "title": "Health Data Interoperability Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 6.5,
+    "forecast_value": 14.0,
+    "cagr": 13.4
+  },
+  "executive_summary": "Published estimates of health data interoperability do not form one distribution with outliers. They form two separate populations with nothing in between. Four independent houses size a market of $3.4 billion to $5.8 billion at the base year growing at 12.24% to 13.8%. Two others size a market of $84.58 billion to $103.90 billion growing at 22.65% to 22.9%. The base-year spread is 14.6x and the growth spread 1.87x.\n\nThe most instructive fact in that table is that Credence Research publishes both populations. Its healthcare interoperability solutions report reaches about $10.63 billion by 2032 at 13.38%; its separate data interoperability report reaches about $349.9 billion by 2032 at 22.51%. That is a thirty-three-fold difference inside one house's own catalogue. It is not a disagreement about the market. It is two products with similar titles, and anyone who quotes one while meaning the other is wrong by a factor of thirty.\n\nThe larger population's own wording explains itself. Coherent Market Insights describes its scope as \"a wide range of technologies, standards, and solutions that aim to break down data silos.\" Read literally, that admits integration middleware, API management, cloud data platforms and master data management sold to healthcare buyers -- general-purpose enterprise software with a healthcare customer, not an interoperability product.\n\nThis is a market with an unusually small countable register, which makes the arithmetic checkable. The Sequoia Project, the Recognized Coordinating Entity for TEFCA, lists eleven Designated QHINs. Divide Coherent's $103.90 billion by eleven and you get $9.4 billion per national network per year -- more than the entire revenue of Epic Systems, press-reported at about $6.7 billion for 2025, a company that sells a complete electronic health record to most of the US hospital market and of which Nexus is one component. The larger figure is 15.5 times the revenue of the biggest company in health IT. Interoperability is a feature inside products like that one, not a market fifteen times larger than the leading vendor.",
+  "market_context": "Interoperability in healthcare is defined by instruments, not by technology. In the United States the 21st Century Cures Act information blocking provisions make withholding electronic health information a penalisable act, and the Trusted Exchange Framework and Common Agreement creates a legal structure under which designated networks exchange data on common terms. Those instruments produce the demand. They also produce the only reliable count of participants.\n\nThe Sequoia Project, operating as the Recognized Coordinating Entity, lists eleven Designated QHINs as of October 2026: CommonWell Health Alliance, eClinicalWorks (PrismaNet), eHealth Exchange, Epic (Nexus), Health Gorilla, Kno2, KONZA, MedAllies, Netsmart, Oracle Health Information Network and Surescripts. Five were designated in December 2023, two in February 2024, and four across 2025 -- eClinicalWorks in January, Surescripts in April, Netsmart in August and Oracle Health Information Network on 20 November, which coverage described as roughly doubling the number since TEFCA went live.\n\nThe structural point a market estimate has to confront is that several of those eleven are electronic health record vendors exchanging data for their own installed bases. KLAS Research's 2025 acute care EHR market share report, released 14 May 2026, gives Epic 43.7% of US acute care hospitals and 56.9% of beds, with Oracle Health at 21.9% and 20.4%, MEDITECH at 14.7% and 12.5%, TruBridge at 7.6% and 2.4% and Altera Digital Health at 2.9% and 2.8%. Those are installed-base counts of hospitals and beds from a named source, not revenue shares, and they are cited here as such.\n\nThey matter because a market in which one vendor holds 56.9% of beds is one in which a large share of the interoperability problem is solved inside a single product and never becomes a third-party purchase. That is a restraint on this market, not a driver, and no published forecast treats it as one."
+  ,
+  "forecast_analysis": "The curve shown here is modelled at a constant 13.4% rate. P&S Intelligence, in its March 2026 edition (report code 13954), publishes $5.8 billion for 2025, $6.5 billion for 2026 and $14.0 billion for 2032 with a stated 13.4% CAGR over 2026-2032. Those endpoints imply 13.64% compound, which reconciles with the stated rate. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen because it is the most recent member of the tightly clustered solutions population, it publishes explicit values for both ends of our forecast window on one scope, and its segmentation names the buyers -- hospitals and health systems, physician practices, pharmaceutical companies, payers, government and public health agencies, imaging centres, and health IT vendors and integrators -- rather than abstractions. It also survives both grounding tests: $590.9 million per Designated QHIN and an upper-bound $1.07 million per US hospital are figures a reader can test against an IT budget.\n\nThe Coherent population does not survive either test, and the report is explicit about why rather than averaging it in. $9.4 billion per QHIN and an upper-bound $17.0 million per US hospital on interoperability alone are not numbers any institution recognises.\n\nWhat the forecast cannot capture is the main risk to it, which runs in the opposite direction to the growth rate. Hospitals affected by EHR purchase decisions fell about 40% against 2024 and nearly 50% against 2023, with Epic adding 77 acute care hospitals in 2025 against 180 in 2024 and 154 in 2023, and Oracle Health losing a net 56. Consolidation onto a smaller number of platforms removes interoperability work rather than creating it. A forecast of 13.4% through 2032 is a forecast that regulation keeps generating exchange obligations faster than platform consolidation retires them.",
+  "market_overview": {
+    "summary": "On the scope published by the most recent member of the clustered solutions population, the health data interoperability market is $6.50 billion in 2026, projected to $14.00 billion by 2032 at a 13.4% CAGR. Published base-year estimates for 2025 spread 14.6x, from $5.8 billion to $84.58 billion, and growth rates 1.87x, from 12.24% to 22.9%. These are two populations, not one: four houses cluster between $3.4 billion and $5.8 billion, two sit above $84 billion, and Credence Research publishes a version in each. Against the eleven Designated QHINs that TEFCA recognises, the larger figures imply $9.4 billion per national network per year -- 15.5 times the reported revenue of Epic Systems.",
+    "key_trends": [
+      "Published base-year estimates for 2025 spread 14.6x ($5.8 billion to $84.58 billion) and growth rates 1.87x (12.24% to 22.9%), forming two separate populations with nothing between them",
+      "Credence Research publishes both populations: a healthcare interoperability solutions report reaching about $10.63 billion by 2032 and a data interoperability report reaching about $349.9 billion, a 33-fold difference inside one catalogue",
+      "The Sequoia Project lists eleven Designated QHINs as of October 2026, four of them designated during 2025, with Oracle Health Information Network added on 20 November 2025",
+      "Dividing the largest published 2026 figure by those eleven networks gives $9.4 billion per QHIN per year, which is 15.5 times Epic Systems' revenue as press-reported for 2025",
+      "KLAS Research's 2025 acute care EHR report (14 May 2026) puts Epic at 43.7% of US acute care hospitals and 56.9% of beds -- installed-base counts, not revenue share",
+      "Hospitals affected by EHR purchase decisions fell about 40% against 2024 and nearly 50% against 2023, so platform consolidation is retiring interoperability work as regulation creates it"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Mandated in the United States; national exchange concentrated in eleven designated networks"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "The 21st Century Cures Act information blocking provisions, which make withholding electronic health information a penalisable act rather than a commercial choice",
+      "TEFCA, which gives exchange a common legal framework and has produced eleven Designated QHINs, four of them during 2025 alone",
+      "ASTP/ONC certification requirements, including the HTI-2 final rule, which oblige certified health IT to expose standardised FHIR APIs",
+      "A broad and well-identified buyer set: P&S Intelligence's own end-user list runs from hospitals and physician practices through payers, government and public health agencies to health IT vendors and integrators themselves",
+      "Payer-provider data exchange obligations, which create a second buyer with different data needs from the provider side and no shared platform to fall back on"
+    ],
+    "restraints": [
+      "Platform consolidation retires interoperability work: KLAS records Epic at 56.9% of US acute care beds in 2025, and data exchanged inside one vendor's installed base never becomes a third-party purchase",
+      "The purchase cycle is slowing: hospitals affected by EHR decisions fell about 40% against 2024 and nearly 50% against 2023, with Epic adding 77 hospitals in 2025 against 180 in 2024",
+      "Published market sizes that differ by fifteen times, with one house publishing both versions, make this category unusable as a basis for capital planning",
+      "Interoperability is a cost of compliance for most buyers rather than a revenue-generating investment, which caps what any provider will pay for it",
+      "Neither the Sequoia Project nor the QHINs publish exchange volumes, so there is no public measure of whether the designated networks are actually carrying traffic"
+    ],
+    "opportunities": [
+      "Semantic and organisational interoperability, which P&S distinguishes from structural exchange and which remains unsolved even where documents move successfully",
+      "Payer-side infrastructure, where the obligations are newer than on the provider side and the incumbent EHR platforms have no installed-base advantage",
+      "Public health and registry reporting, a buyer group named in P&S's end-user list that was underserved before the pandemic and is now funded",
+      "Integration for the long tail of specialty, behavioural health, post-acute and ambulatory systems that sit outside the four large acute care platforms",
+      "FHIR API management and developer tooling, which the HTI rules require certified systems to expose and which most provider IT departments cannot build"
+    ],
+    "challenges": [
+      "No participant discloses interoperability revenue: Epic is privately held and files nothing, Oracle Health is consolidated inside Oracle, and Surescripts, Health Gorilla, Kno2, KONZA and MedAllies are private or non-profit",
+      "The Epic revenue figures used in this report's arithmetic -- about $5.7 billion for 2024 and about $6.7 billion for 2025 -- are press reports about a private company, not filings, and are whole-company",
+      "Scope inconsistency of fifteen times between published estimates makes procurement and investment comparisons across reports invalid",
+      "TEFCA participation is a designation, not a volume: eleven networks are recognised and none of them has published how much data it exchanges",
+      "We could not retrieve a current count of certified health IT products: the ASTP/ONC Certified Health IT Product List REST endpoint returned HTTP 400 on the queries attempted on 16 October 2026, so that second register is unavailable here"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Interoperability solutions and platforms",
+      "Integration and implementation services",
+      "Foundational exchange",
+      "Structural interoperability",
+      "Semantic interoperability",
+      "Organisational and process interoperability"
+    ],
+    "by_application": [
+      "Care coordination and transitions of care",
+      "Payer-provider data exchange",
+      "Public health and registry reporting",
+      "Diagnosis and treatment decision support",
+      "Patient access and individual access services",
+      "Research and secondary data use"
+    ],
+    "by_end_user": [
+      "Hospitals and health systems",
+      "Physician practices and clinics",
+      "Payers and insurers",
+      "Government and public health agencies",
+      "Diagnostic and imaging centres",
+      "Pharmaceutical and biotechnology companies",
+      "Health IT vendors and integrators"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 6.5 },
+    { "year": 2027, "value": 7.39 },
+    { "year": 2028, "value": 8.39 },
+    { "year": 2029, "value": 9.54 },
+    { "year": 2030, "value": 10.84 },
+    { "year": 2031, "value": 12.32 },
+    { "year": 2032, "value": 14.0 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Epic Systems",
+      "headquarters": "United States",
+      "market_position": "Dominant EHR installed base; Nexus is one of eleven Designated QHINs",
+      "description": "KLAS Research's 2025 acute care EHR market share report, released 14 May 2026, puts Epic at 43.7% of US acute care hospitals (from 42.3% in 2024) and 56.9% of beds (from 54.9%), with 77 hospitals added in 2025 against 180 in 2024 and 154 in 2023. Those are installed-base counts of hospitals and beds from a named source and are not revenue shares, and no interoperability share is disclosed for the company. Epic is privately held and files no financial statements; its revenue has been press-reported at about $5.7 billion for 2024 and about $6.7 billion for 2025, whole-company figures with no interoperability line. Epic Nexus was among the five networks designated in December 2023 when TEFCA went live."
+    },
+    {
+      "company": "Oracle Health",
+      "headquarters": "United States",
+      "market_position": "Second-largest EHR installed base; its network was designated the eleventh QHIN",
+      "description": "KLAS puts Oracle Health at 21.9% of US acute care hospitals and 20.4% of beds for 2025, with a net loss of 56 hospitals during the year; KLAS also records continuing declines in satisfaction with the Millennium platform and calls 2026 a critical year for the vendor's new AI-enabled EHR. Oracle Health Information Network Inc. was designated a QHIN on 20 November 2025, reported as bringing the total to eleven. Oracle Health is consolidated inside Oracle with no interoperability segment, so neither its revenue nor its share in this market can be stated."
+    },
+    {
+      "company": "Surescripts",
+      "headquarters": "United States",
+      "market_position": "Incumbent national network, designated a QHIN in April 2025",
+      "description": "Operates the long-established national e-prescribing and clinical messaging network and was designated a QHIN in April 2025. Privately held and owned by pharmacy and pharmacy benefit participants; publishes no revenue, so no size or share figure exists for it."
+    },
+    {
+      "company": "Health Gorilla",
+      "headquarters": "United States",
+      "market_position": "Challenger built as an interoperability platform rather than around an EHR",
+      "description": "One of the five networks designated in December 2023 when TEFCA went live, and one of the few QHINs that is not an electronic health record vendor exchanging data for its own installed base. Privately held with no published financials and no disclosed share."
+    },
+    {
+      "company": "CommonWell Health Alliance",
+      "headquarters": "United States",
+      "market_position": "Vendor-sponsored exchange alliance, designated a QHIN in February 2024",
+      "description": "A not-for-profit alliance founded by health IT vendors to provide cross-vendor record location and retrieval, designated alongside Kno2 in February 2024. As a membership organisation it has no commercial revenue comparable to a vendor's and no share figure can be computed for it."
+    },
+    {
+      "company": "MEDITECH",
+      "headquarters": "United States",
+      "market_position": "Third-largest acute care EHR installed base",
+      "description": "KLAS puts MEDITECH at 14.7% of US acute care hospitals and 12.5% of beds for 2025, and names it the leader among standalone hospitals of 26 to 200 beds. Those are installed-base counts, not revenue shares. The company is privately held, publishes no financials, and discloses no interoperability revenue."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Oracle",
+      "year": 2025,
+      "event": "Oracle Health Information Network Inc., a subsidiary of Oracle, was designated a Qualified Health Information Network under TEFCA on 20 November 2025, reported as bringing the total to eleven QHINs -- roughly double the number when TEFCA went live at the end of 2023. Oracle said customers can opt in at no additional cost through Oracle Health Connection Hub and that the network runs on Oracle Cloud Infrastructure with support for data types including X-rays and MRIs. No exchange volume was published."
+    },
+    {
+      "company": "KLAS Research",
+      "year": 2026,
+      "event": "Released its 2025 acute care EHR market share report on 14 May 2026: Epic at 43.7% of US acute care hospitals (from 42.3%) and 56.9% of beds (from 54.9%), Oracle Health at 21.9% and 20.4%, MEDITECH at 14.7% and 12.5%, TruBridge at 7.6% and 2.4%, Altera Digital Health at 2.9% and 2.8%. Epic added 77 hospitals against 180 in 2024 and 154 in 2023; Oracle Health lost a net 56; hospitals affected by purchase decisions fell about 40% against 2024 and nearly 50% against 2023; only two systems with more than ten hospitals made an enterprise-wide decision, both choosing Epic."
+    },
+    {
+      "company": "The Sequoia Project",
+      "year": 2025,
+      "event": "As TEFCA's Recognized Coordinating Entity, designated four new QHINs during 2025 -- eClinicalWorks (PrismaNet) in January, Surescripts in April, Netsmart in August and Oracle Health Information Network in November -- bringing the register to eleven Designated QHINs."
+    },
+    {
+      "company": "ASTP/ONC",
+      "year": 2026,
+      "event": "Published a TEFCA updates presentation on 19 February 2026 and the resource 'Data Liquidity, Affordability, and Access: The History & Growth of TEFCA', which records the designation timeline from the initial five networks in December 2023 through CommonWell and Kno2 in February 2024 to the four designations of 2025."
+    }
+  ],
+  "regulatory_landscape": [
+    "21st Century Cures Act information blocking provisions, codified at 45 CFR Part 171, which make withholding, delaying or imposing unreasonable conditions on access to electronic health information a penalisable practice unless an exception applies",
+    "Trusted Exchange Framework and Common Agreement (TEFCA), administered by The Sequoia Project as Recognized Coordinating Entity, under which eleven networks have been designated as Qualified Health Information Networks as of October 2026",
+    "ASTP/ONC Health IT Certification Program and the HTI-1 and HTI-2 final rules, which require certified health IT to expose standardised FHIR-based APIs and set the technical floor for structural interoperability",
+    "United States Core Data for Interoperability (USCDI), which defines the data classes and elements certified systems must be able to exchange and is revised on a published cadence",
+    "HL7 FHIR and the US Core implementation guides, which are the standards the certification rules point to rather than requirements in themselves",
+    "CMS Interoperability and Prior Authorization final rule, which places API obligations on payers and creates a buyer group outside the provider EHR installed bases",
+    "European Health Data Space Regulation, which sets analogous exchange and secondary-use obligations across the European Union on a separate standards track"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public registers, public filings, named third-party research and published market estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "The Sequoia Project (Recognized Coordinating Entity for TEFCA), Designated QHINs register, retrieved 16 October 2026: eleven Designated QHINs -- CommonWell Health Alliance, eClinicalWorks (PrismaNet), eHealth Exchange, Epic (Nexus), Health Gorilla, Kno2, KONZA, MedAllies, Netsmart, Oracle Health Information Network, Surescripts",
+      "ASTP/ONC, 'Data Liquidity, Affordability, and Access: The History & Growth of TEFCA' and the TEFCA Updates presentation of 19 February 2026: designation timeline from December 2023 through November 2025",
+      "Oracle, 'Oracle Health Secures TEFCA QHIN Designation', 20 November 2025, and Healthcare Dive coverage recording the total as eleven QHINs",
+      "American Hospital Association, Fast Facts on U.S. Hospitals, 2024 AHA Annual Survey: 6,100 hospitals, 5,121 community hospitals, 907,216 staffed beds, 35,658,583 admissions",
+      "KLAS Research, 2025 acute care EHR market share report, released 14 May 2026, as reported by Fierce Healthcare and Becker's Hospital Review: Epic 43.7% of hospitals and 56.9% of beds, Oracle Health 21.9% and 20.4%, MEDITECH 14.7% and 12.5%, TruBridge 7.6% and 2.4%, Altera 2.9% and 2.8%; Epic +77 hospitals in 2025 against +180 in 2024; Oracle Health -56 net; purchase decisions down about 40% on 2024 -- third-party reporting of a paid report, flagged as such, and installed-base counts rather than revenue shares",
+      "Becker's Hospital Review and BizTimes reporting on Epic Systems revenue: about $5.7 billion for 2024 and about $6.7 billion for 2025 -- press reports about a privately held company, not filings",
+      "P&S Intelligence, healthcare interoperability solutions market, March 2026, report code 13954: $5.8 billion (2025), $6.5 billion (2026), $14.0 billion (2032), 13.4% CAGR 2026-2032",
+      "IMARC Group ($3.9 billion 2023 to $11.0 billion 2032 at 12.24%), Credence Research ($3,857.68 million 2023 to $10,625.41 million 2032 at 13.38%, with a second inconsistent set on the same page), SNS Insider via GlobeNewswire 16 September 2024 ($3.4 billion 2023 to $10.9 billion 2032 at 13.8%) and Global Market Insights report GMI3148 of April 2023 ($5.6 billion 2022 to $18.9 billion 2032 at 13.2%)",
+      "Coherent Market Insights, health data interoperability market: $84.58 billion (2025) to $352.13 billion (2032) at 22.65% via a Barchart-hosted press release, and $103.90 billion (2026) to $438.80 billion (2033) at 22.9% on the publisher's segmentation page, with scope described as 'a wide range of technologies, standards, and solutions that aim to break down data silos'; and Credence Research's separate data interoperability report at about $349.9 billion by 2032 at 22.51%"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Two plausibility tests were run against countable records. First, the Sequoia Project lists eleven Designated QHINs as of 16 October 2026; dividing the published 2026 figures by eleven gives $590,909,091 per network on the scope published here and $9,445,454,545 per network on the Coherent scope, and the latter is 15.5 times Epic Systems' revenue as press-reported for 2025 (about $6.7 billion), which rules the Coherent population out as a product market. Second, dividing by the 6,100 US hospitals in the 2024 AHA Annual Survey gives an upper bound of $1,065,574 per hospital per year on the scope published here and $17,032,787 on the Coherent scope; both place a global numerator over a US-only denominator so the true global figures are lower, and the second is not a line item any hospital carries. The KLAS figures quoted in this report are installed-base counts of hospitals and beds from a named source dated 14 May 2026, explicitly not revenue shares, and no structured share field is populated anywhere in this report. Neither test establishes the correct market size and neither is offered as an estimate. The intermediate forecast years are interpolation between P&S Intelligence's published 2026 and 2032 values, not separately published observations. A second register -- the ASTP/ONC Certified Health IT Product List -- was attempted and could not be used: its REST endpoint returned HTTP 400 on the queries tried on 16 October 2026, and no current total from a named source was retrievable."
+  },
+  "faqs": [
+    {
+      "question": "How big is the health data interoperability market?",
+      "answer": "$6.50 billion in 2026 rising to $14.00 billion by 2032 at 13.4%, on the scope published by P&S Intelligence in March 2026. But published base-year estimates for 2025 range from $5.8 billion to $84.58 billion, a 14.6x spread, and they form two separate populations rather than one distribution. Which number you are quoted depends entirely on which of the two a house happens to publish -- and Credence Research publishes one of each."
+    },
+    {
+      "question": "Why do published interoperability estimates differ by fifteen times?",
+      "answer": "Because the larger population counts general-purpose data infrastructure sold to healthcare buyers. Coherent Market Insights describes its scope as 'a wide range of technologies, standards, and solutions that aim to break down data silos', which admits integration middleware, API management, cloud data platforms and master data management. The smaller population counts interoperability products and the services to implement them. Both descriptions are defensible; they are not the same market."
+    },
+    {
+      "question": "How can you check whether an interoperability market size is plausible?",
+      "answer": "Divide it by the eleven Designated QHINs that TEFCA recognises. The figure published here gives $590.9 million per national network per year. The largest published figure gives $9.4 billion per network -- 15.5 times the revenue of Epic Systems, which has been press-reported at about $6.7 billion for 2025 and which sells a complete EHR to most of the US hospital market. Interoperability is a feature inside products like that, not a market fifteen times larger than the leading vendor."
+    },
+    {
+      "question": "Does EHR consolidation help or hurt the interoperability market?",
+      "answer": "It hurts it, and no published forecast treats it that way. KLAS Research's 2025 report puts Epic at 56.9% of US acute care beds, up from 54.9%. Data exchanged inside one vendor's installed base never becomes a third-party purchase. KLAS also records hospitals affected by EHR purchase decisions falling about 40% against 2024 and nearly 50% against 2023. A 13.4% forecast through 2032 assumes regulation keeps creating exchange obligations faster than consolidation retires them."
+    },
+    {
+      "question": "Who leads the health data interoperability market?",
+      "answer": "Nobody can say, because no participant discloses interoperability revenue. Epic is privately held and files nothing; its revenue figures in the press are whole-company. Oracle Health is consolidated inside Oracle. Surescripts, Health Gorilla, Kno2, KONZA and MedAllies are private or non-profit. The KLAS percentages that circulate -- Epic 43.7% of hospitals, Oracle Health 21.9% -- are installed-base counts of hospitals and beds from a named source dated 14 May 2026, not revenue or interoperability share, and should never be quoted as the latter."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because the two houses that publish regional shares do so on scopes that differ by fifteen times: Global Market Insights puts North America at over 44% of a $5.6 billion 2022 market, Coherent at nearly two fifths of an $84.58 billion 2025 market. Apportioning either would transmit a scope error as geography. We have a complete US register of designated networks and no comparable register anywhere else, which is enough to test a global figure and not enough to split one."
+    }
+  ],
+  "key_highlights": [
+    "Published base-year estimates for 2025 spread 14.6x ($5.8 billion to $84.58 billion) in two separate populations with nothing in between, and growth rates spread 1.87x (12.24% to 22.9%)",
+    "Credence Research publishes both populations: about $10.63 billion by 2032 at 13.38% in one report and about $349.9 billion at 22.51% in another, a 33-fold difference inside one catalogue",
+    "The Sequoia Project lists eleven Designated QHINs as of October 2026, four of them added during 2025 and Oracle Health Information Network on 20 November 2025",
+    "The largest published 2026 figure implies $9.4 billion per Designated QHIN per year, which is 15.5 times Epic Systems' revenue as press-reported for 2025",
+    "KLAS Research (14 May 2026) puts Epic at 43.7% of US acute care hospitals and 56.9% of beds -- installed-base counts from a named source, not revenue share",
+    "Hospitals affected by EHR purchase decisions fell about 40% against 2024 and nearly 50% against 2023, so consolidation is retiring interoperability work as regulation creates it",
+    "No participant discloses interoperability revenue, so no share figure for this market is verifiable"
+  ],
+  "reader_takeaways": [
+    "Before accepting an interoperability market size, establish which of the two populations it belongs to -- the solutions cluster around $3.4 to $5.8 billion at the base year, or the data-infrastructure reading above $84 billion",
+    "Check any house's catalogue for a second report with a similar title: Credence Research publishes versions of this market thirty-three times apart, and quoting the wrong one is a factor-of-thirty error",
+    "Use the eleven Designated QHINs as your own sanity check: divide any figure you are given by eleven and ask whether that is a credible annual revenue for a national exchange network",
+    "Treat EHR consolidation as a restraint on this market, not a driver: Epic at 56.9% of US acute care beds means a growing share of exchange happens inside one product and is never bought",
+    "Never quote a KLAS installed-base percentage as interoperability market share -- it is a count of hospitals and beds running an EHR, which is a different measurement entirely"
+  ],
+  "seo": {
+    "meta_title": "Health Data Interoperability Market Forecast 2032",
+    "meta_description": "Interoperability estimates form two populations 15x apart. Dividing by TEFCA's eleven designated QHINs shows which one can possibly be right.",
+    "keywords": [
+      "health data interoperability market",
+      "healthcare interoperability solutions market size",
+      "interoperability market forecast 2032",
+      "TEFCA QHIN",
+      "FHIR API healthcare",
+      "information blocking Cures Act",
+      "EHR market share KLAS"
+    ]
+  }
+}

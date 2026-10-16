@@ -1,0 +1,244 @@
+{
+  "report_id": "single-cell-sequencing-market",
+  "slug": "single-cell-sequencing-market",
+  "title": "Single-Cell Sequencing Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 2.19,
+    "forecast_value": 4.37,
+    "cagr": 12.2
+  },
+  "market_overview": {
+    "summary": "Single-cell sequencing is the set of chemistries, instruments and analysis software that resolve genomes, transcriptomes and epigenomes one cell at a time rather than averaging a tissue. Published sizings for 2025 run from $1.88 billion to $2.83 billion on the sequencing-only scope — a 1.51x spread, unusually tight for this sector — but widen to 3.58x once houses relabel the category 'single-cell analysis' and fold in flow cytometry, cell sorting and imaging. MarketsandMarkets publishes both scopes and its own two figures sit 1.95x apart in the same base year, which settles the question of whether this is a definitional gap or a disagreement about the market. We publish the narrower scope at the lowest published rate in its cluster, because the category leader's disclosed revenue tells a slower story than any published forecast.",
+    "key_trends": [
+      "Consumables now carry the category while instruments contract: 10x Genomics reported FY2025 consumables up 3% company-wide against instruments down 39%, with Single Cell instruments specifically down 36% — pull-through on an installed base, not new placements",
+      "The category leader's core line is shrinking, not growing: 10x's FY2025 Single Cell consumables revenue fell 2% year-over-year, against published whole-market CAGRs of 12.2% to 16.7%",
+      "Scope creep into spatial: Towards Healthcare lists spatial transcriptomics inside its single-cell sequencing technology segmentation, so a reader adding a published single-cell figure to a published spatial figure risks double-counting, and no house states whether it has excluded the other",
+      "Multi-omic single-cell assays (joint RNA plus ATAC, RNA plus protein) are the segment every house names as fastest-growing, and the one for which none publishes a separate figure",
+      "Competition has shifted from instrument architecture to kit price per cell, with combinatorial-indexing entrants (Parse Biosciences, Scale Biosciences) competing on cells-per-dollar rather than on hardware",
+      "Academic and government budget pressure is the binding constraint on instrument revenue, which is capital spend and therefore the first line cut; 10x and Bruker both attributed 2025 softness to it"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Routine in research, early in clinical use"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "An installed instrument base that generates recurring consumables revenue independently of new placements — the mechanism behind 10x's +3% consumables against -39% instruments in FY2025",
+      "Tumour heterogeneity and immune-repertoire questions that bulk sequencing cannot answer, which makes single-cell the default method in oncology and immunology research (31,041 PubMed records for 'single-cell RNA sequencing' as of 16 October 2026)",
+      "Falling cost per cell as combinatorial-indexing chemistries compete with droplet microfluidics, which widens the addressable experiment rather than the addressable customer",
+      "Cell and gene therapy development, where release and characterisation work requires per-cell resolution on products that are themselves cells",
+      "Sequencing capacity that is already paid for: high-throughput platforms installed for other purposes absorb single-cell libraries at marginal cost, removing a capital barrier"
+    ],
+    "restraints": [
+      "Capital-equipment contraction: 10x reported Single Cell instrument revenue down 36% in FY2025 and spatial instruments down 41%, both attributed to constrained academic and biopharma capital budgets",
+      "Dependence on grant funding, which concentrates demand in a customer base whose budgets are set politically rather than commercially",
+      "No reimbursement pathway: single-cell assays are research-use-only in almost all applications, so there is no CPT-coded, payer-funded demand to underwrite growth",
+      "Analysis rather than chemistry is the bottleneck — bioinformatics capacity, not reagent supply, limits how many experiments a lab completes per year",
+      "Sample-quality constraints: most chemistries need fresh or cryopreserved viable cells, which excludes the archival FFPE material that clinical pathology actually holds"
+    ],
+    "opportunities": [
+      "Clinical translation under CLIA: with FDA's laboratory-developed test rule vacated in March 2025 and not appealed, a single-cell assay can be offered as an LDT under CMS oversight rather than through a device pathway",
+      "Multi-omic and single-cell plus spatial workflows, where the same sample yields two revenue events instead of one",
+      "Instrument-light models: kit-only chemistries that run on existing lab equipment convert a capital sale into a consumables sale, which is where the growth currently is",
+      "Cell-therapy manufacturing quality control, a non-academic, non-grant-funded buyer with recurring per-batch volume",
+      "Consolidation: Standard BioTools exited 2025 with roughly $550 million in cash and investments after the SomaLogic divestiture and has stated an inorganic growth intent"
+    ],
+    "challenges": [
+      "A published 12.2% whole-market rate requires the market to add $1.51 billion between 2025 and 2030 — about 3.9x 10x Genomics' entire FY2025 Single Cell revenue — in a period when the leader's own Single Cell revenue declined",
+      "Intellectual-property friction: 10x received $44.1 million in patent-litigation settlement payments in the first half of 2025, which is a cost of entry for competitors and a distortion in reported revenue",
+      "Scope confusion makes the published market unusable for sizing a business plan, with the same house publishing figures 1.95x apart for adjacent definitions",
+      "Price competition on cells-per-dollar compresses revenue per experiment even as experiment counts rise, so unit growth and revenue growth diverge",
+      "No disclosed denominator: no vendor publishes kit units or library counts, so total market volume cannot be checked against any register"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Reagents and kits (pre-sequencing)",
+      "Reagents and kits (sequencing)",
+      "Instruments and platforms",
+      "Software and data analysis",
+      "Services"
+    ],
+    "by_application": [
+      "Oncology",
+      "Immunology and infectious disease",
+      "Neuroscience",
+      "Stem cell and developmental biology",
+      "Cell and gene therapy development",
+      "Microbiology and host-pathogen interaction"
+    ],
+    "by_end_user": [
+      "Academic and research institutions",
+      "Pharmaceutical and biotechnology companies",
+      "Contract research organisations",
+      "Clinical and diagnostic laboratories"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 2.19 },
+    { "year": 2027, "value": 2.46 },
+    { "year": 2028, "value": 2.76 },
+    { "year": 2029, "value": 3.09 },
+    { "year": 2030, "value": 3.47 },
+    { "year": 2031, "value": 3.89 },
+    { "year": 2032, "value": 4.37 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 12.2% CAGR from MarketsandMarkets' published 2025 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "10x Genomics, Inc.",
+      "headquarters": "Pleasanton, California, United States",
+      "market_position": "The category's disclosing leader. Its FY2025 Single Cell revenue of $385.9 million is 19.8% of MarketsandMarkets' published $1.95 billion 2025 market — our own division of two disclosed line items by a published total, not a share estimate. 10x does not publish a market share and we do not assign one.",
+      "description": "Droplet-microfluidic Chromium platform. FY2025 (preliminary, unaudited, 11 January 2026): Single Cell consumables $363.2 million (down 2%) and Single Cell instruments $22.7 million (down 36%). Also the largest spatial vendor. Received $44.1 million in patent-litigation settlement payments in the first half of 2025."
+    },
+    {
+      "company": "Illumina, Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "Owns the sequencing step rather than the single-cell step. Most single-cell libraries are read on Illumina instruments, so Illumina captures sequencing-consumable revenue downstream of every competitor's kit, but books it as sequencing rather than single-cell and discloses no single-cell split.",
+      "description": "FY2025 revenue $4.34 billion, flat year-over-year; Q4 sequencing consumables $755 million, up 8%. Acquired SomaLogic from Standard BioTools for $350 million cash plus up to $75 million in milestones, completed 30 January 2026, extending the company into proteomics."
+    },
+    {
+      "company": "Becton, Dickinson and Company",
+      "headquarters": "Franklin Lakes, New Jersey, United States",
+      "market_position": "Present through the Rhapsody single-cell platform and a very large installed base of flow cytometers, but does not break out single-cell revenue in its segment reporting, so its position cannot be sized from public filings.",
+      "description": "BD Biosciences supplies cartridge-based single-cell multi-omic workflows alongside the flow-cytometry hardware that the wider 'single-cell analysis' market definitions count."
+    },
+    {
+      "company": "Standard BioTools Inc.",
+      "headquarters": "South San Francisco, California, United States",
+      "market_position": "A smaller, consolidating player. FY2025 continuing-operations revenue of $85.3 million spans microfluidics and mass cytometry rather than single-cell sequencing alone, so no single-cell figure is extractable.",
+      "description": "Reported FY2025 continuing-operations revenue of $85.3 million on 24 February 2026, down from roughly $185 million including SomaLogic. Exited the year with about $550 million in cash and investments after divesting SomaLogic to Illumina, and has stated an inorganic growth intent."
+    },
+    {
+      "company": "Parse Biosciences, Inc.",
+      "headquarters": "Seattle, Washington, United States",
+      "market_position": "Private; revenue not disclosed. Competes on combinatorial indexing, which needs no dedicated instrument, and therefore on cells per dollar rather than on hardware.",
+      "description": "Instrument-free split-pool barcoding chemistry positioned against droplet microfluidics. Named here because the published whole-market forecasts require the non-10x majority of the market to compound at roughly 16% a year, and this is the kind of company that would have to do it."
+    },
+    {
+      "company": "Scale Biosciences, Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "Private; revenue not disclosed. Another combinatorial-indexing entrant competing on throughput per dollar rather than instrument capability.",
+      "description": "Kit-based single-cell and single-nucleus chemistries, including joint RNA and ATAC assays, run on standard laboratory equipment."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "10x Genomics, Inc.",
+      "year": 2026,
+      "event": "Reported preliminary unaudited FY2025 results on 11 January 2026 showing Single Cell consumables revenue of $363.2 million, down 2% year-over-year, and Single Cell instrument revenue of $22.7 million, down 36%, with total company revenue of approximately $598.7 million excluding $44.1 million of patent-litigation settlement receipts."
+    },
+    {
+      "company": "Illumina, Inc.",
+      "year": 2026,
+      "event": "Completed the acquisition of SomaLogic from Standard BioTools on 30 January 2026 for $350 million in cash plus up to $75 million in near-term milestones and royalties, adding aptamer-based proteomics to its multiomics portfolio."
+    },
+    {
+      "company": "Standard BioTools Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 continuing-operations revenue of $85.3 million on 24 February 2026, having fully operationalised over $40 million of annualised cost savings, and disclosed roughly $550 million in cash and investments following the SomaLogic divestiture."
+    },
+    {
+      "company": "Illumina, Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $4.34 billion, flat year-over-year, with fourth-quarter sequencing consumables of $755 million, up 8%, and guided FY2026 revenue to $4.5-4.6 billion."
+    }
+  ],
+  "regulatory_landscape": [
+    "No FDA marketing pathway applies to the overwhelming majority of single-cell sequencing products, which are sold research-use-only and labelled as not for use in diagnostic procedures. This is the single largest structural difference between this market and the sequencing-diagnostics market it is often grouped with.",
+    "Clinical Laboratory Improvement Amendments (CLIA), administered by CMS: a single-cell assay offered as a clinical service must be validated and run in a CLIA-certified laboratory, with CAP accreditation the de facto additional requirement for payer acceptance.",
+    "FDA's laboratory-developed tests final rule was vacated in its entirety by U.S. District Judge Sean D. Jordan on 31 March 2025 in the consolidated Association for Molecular Pathology and American Clinical Laboratory Association litigation, on the ground that LDTs are not devices under the Federal Food, Drug, and Cosmetic Act. FDA did not appeal within the 60-day window, so CLIA oversight by CMS remains the operative regime — this removes a prospective compliance cost from clinical single-cell translation that several 2024-vintage forecasts had priced in.",
+    "EU In Vitro Diagnostic Regulation 2017/746 applies to any single-cell product placed on the EU market for a diagnostic purpose, with conformity assessment obligations that scale with risk class; research-use-only products fall outside it but must be labelled accordingly.",
+    "Export controls and country-specific procurement rules materially affect instrument placements in China, which both 10x and Illumina identified as a distinct revenue headwind in FY2025 reporting."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "10x Genomics, Inc., Form 8-K Exhibit 99.1, preliminary unaudited Q4 and FY2025 revenue results, 11 January 2026 (SEC EDGAR, CIK 1770787)",
+      "MarketsandMarkets, 'Single Cell Sequencing Market — Global Forecast to 2030', report BT 9503, published 30-31 July 2025",
+      "Towards Healthcare, 'Single Cell Sequencing Market Sizing', last updated 07 September 2026",
+      "Global Market Insights, single-cell analysis market (wider scope, retained for the scope comparison)",
+      "Illumina, Inc., fourth-quarter and fiscal-year 2025 financial results, 5 February 2026",
+      "Standard BioTools Inc., Form 8-K Exhibit 99.1, Q4 and FY2025 financial results, 24 February 2026",
+      "PubMed (NCBI E-utilities esearch, db=pubmed), term '\"single-cell RNA sequencing\"', retrieved 16 October 2026: 31,041 records",
+      "Association for Molecular Pathology v. FDA, U.S. District Court for the Eastern District of Texas, order vacating the laboratory-developed tests final rule, 31 March 2025"
+    ],
+    "data_validation": "The headline is one house's own published base advanced at that house's own published rate, labelled as interpolation: MarketsandMarkets' $1.95B (2025) becomes $2.19B (2026) and $4.37B (2032) at 12.2%. The modelled 2030 point, $3.47B, lands within 0.3% of that house's separately published $3.46B for 2030, which confirms the interpolation is faithful rather than merely arithmetic. Independent corroboration comes from a different house: Towards Healthcare's own published 2026 figure of $2.16B is 1.4% from our derived $2.19B. The grounding calculation divides 10x Genomics' disclosed FY2025 Single Cell revenue of $385.9 million ($363.2M consumables plus $22.7M instruments, from the 11 January 2026 Form 8-K) by the published $1.95 billion 2025 total and gets 19.8%, which rules the sequencing-scope figures in as consistent with one disclosing leader holding about a fifth, and shows that the published 12.2% rate requires the market to add about 3.9x that leader's entire Single Cell revenue in five years while that leader's own Single Cell line declined 2%. That is a plausibility and run-rate test, not a market estimate: it does not establish the correct market size, the ratio is our own division against a third party's denominator, and no vendor discloses kit or library volume against which the total could be independently checked. Regional and country splits are published as empty because no named source gives a percentage; vendor shares are omitted because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the single-cell sequencing market?",
+      "answer": "We publish $2.19 billion for 2026, rising to $4.37 billion by 2032 at 12.2%. That derives from MarketsandMarkets' published $1.95 billion for 2025 and its own 12.2% rate, advanced one year to a 2026 base. Published 2025 estimates on the sequencing-only scope run from $1.88 billion to $2.83 billion — a 1.51x spread. Towards Healthcare, working from a different base, publishes its own 2026 figure of $2.16 billion, 1.4% from ours."
+    },
+    {
+      "question": "Why do some reports say the market is $5 billion or more?",
+      "answer": "Because they are sizing 'single-cell analysis', not single-cell sequencing. That wider definition adds flow cytometry, cell sorting and imaging — a large, mature instrument base with no sequencing content. MarketsandMarkets publishes both scopes and its own two figures sit 1.95x apart in the same base year ($1.95 billion versus $3.81 billion), which is the clearest available evidence that this is a definitional difference rather than a disagreement about the market."
+    },
+    {
+      "question": "How much of the market does 10x Genomics hold?",
+      "answer": "10x does not disclose a market share and we do not assign one. What is disclosed is revenue: 10x's FY2025 Single Cell revenue was $385.9 million ($363.2 million consumables plus $22.7 million instruments), per its 11 January 2026 Form 8-K. Divided by MarketsandMarkets' published $1.95 billion 2025 market, that is 19.8%. That is our arithmetic against a third party's denominator, and the denominators differ by 1.51x within scope, so treat it as a scale check rather than a share."
+    },
+    {
+      "question": "Is the market actually growing at the rates published?",
+      "answer": "Not at present, on the evidence that is disclosed. In FY2025 the category leader's Single Cell consumables revenue fell 2% and its Single Cell instrument revenue fell 36%. A 12.2% whole-market rate on the published base requires $1.51 billion of net addition between 2025 and 2030, roughly 3.9x 10x's entire FY2025 Single Cell revenue. If the leader holds about a fifth and is flat to down, the remaining four-fifths must compound at roughly 16% a year. That is a forecast about a recovery in research funding, not an extrapolation of a disclosed run-rate."
+    },
+    {
+      "question": "Why do instrument and consumables revenues move in opposite directions?",
+      "answer": "Because they are different purchases. Instruments are capital spend, approved annually and cut first when grant or biopharma budgets tighten; consumables are pull-through on instruments already installed and keep generating revenue after placements stall. 10x's FY2025 split shows the pattern exactly: consumables up 3% company-wide against instruments down 39%. It means the installed base, not the sales pipeline, is what supports near-term revenue."
+    },
+    {
+      "question": "Does the published single-cell market overlap with the spatial biology market?",
+      "answer": "In at least one case, yes. Towards Healthcare lists spatial transcriptomics inside its single-cell sequencing technology segmentation, while other houses forecast spatial biology as a separate market. No house states whether it has excluded the other, so adding a published single-cell figure to a published spatial figure risks double-counting. 10x Genomics reports the two separately, which is why its disclosure is the more reliable basis for a check."
+    },
+    {
+      "question": "Can single-cell sequencing be used clinically today?",
+      "answer": "Only as a laboratory-developed test. Almost all single-cell products are sold research-use-only with no FDA marketing authorisation, so clinical use runs through a CLIA-certified laboratory under CMS oversight. FDA's attempt to regulate LDTs as devices was vacated in full on 31 March 2025 and not appealed, which lowers the prospective compliance cost of that route — but it does not create reimbursement, and the absence of CPT-coded payer funding remains the main reason clinical volume is small."
+    }
+  ],
+  "seo": {
+    "meta_title": "Single-Cell Sequencing Market Size & Forecast to 2032",
+    "meta_description": "Single-cell sequencing: $2.19B in 2026 to $4.37B by 2032 at 12.2%. Published 2025 estimates span 1.51x, tested against 10x Genomics' disclosed revenue.",
+    "keywords": [
+      "single-cell sequencing market",
+      "single cell sequencing market size",
+      "scRNA-seq market",
+      "10x Genomics revenue",
+      "single-cell analysis market",
+      "single-cell multi-omics"
+    ]
+  },
+  "executive_summary": "Single-cell sequencing is one of the few markets in this corpus where the published sizings broadly agree — and that agreement is the least interesting thing about it. Within the sequencing-only scope, 2025 estimates run from Towards Healthcare's $1.88 billion to 360iResearch's $2.83 billion, a 1.51x spread. Cross into 'single-cell analysis' and the same figure becomes $3.81 to $6.73 billion, because flow cytometry, cell sorting and imaging instruments get folded in. MarketsandMarkets publishes both scopes and its own two numbers sit 1.95x apart in the same base year, which settles whether this is a definitional artefact or a real disagreement. We publish the narrow scope: $2.19 billion in 2026 rising to $4.37 billion by 2032 at 12.2%, derived by advancing that house's own 2025 base at its own rate, and corroborated to within 1.4% by Towards Healthcare's independently published 2026 figure of $2.16 billion. The more important finding is what happens when the published totals meet a disclosed one. 10x Genomics reports Single Cell separately from Spatial and consumables separately from instruments: FY2025 Single Cell revenue was $385.9 million, which is 19.8% of the published $1.95 billion market. In that same year 10x's Single Cell consumables revenue fell 2% and its Single Cell instrument revenue fell 36%. A 12.2% whole-market rate therefore requires the non-leading four-fifths of the market — mostly private, pre-revenue or materially smaller platforms — to compound at roughly 16% a year. Every published forecast in this market is, in substance, a forecast about research funding recovering. None of them says so.",
+  "key_highlights": [
+    "Headline: $2.19 billion in 2026 to $4.37 billion in 2032 at 12.2%, derived from MarketsandMarkets' published $1.95 billion 2025 base and its own stated rate",
+    "Published 2025 sizings span 1.51x within the sequencing scope ($1.88B-$2.83B) and 3.58x once 'single-cell analysis' definitions are included ($1.88B-$6.73B)",
+    "One house, MarketsandMarkets, publishes figures 1.95x apart for the two scopes in the same base year — the clearest available proof the gap is definitional",
+    "10x Genomics' disclosed FY2025 Single Cell revenue of $385.9 million is 19.8% of the published $1.95 billion 2025 market, by our own division",
+    "The leader's Single Cell consumables revenue fell 2% and its Single Cell instruments fell 36% in FY2025, against published whole-market CAGRs of 12.2% to 16.7%",
+    "A 12.2% rate requires $1.51 billion of net market addition by 2030 — about 3.9x 10x's entire FY2025 Single Cell revenue",
+    "No vendor market shares, regional splits or country splits are published here, because no named source discloses them"
+  ],
+  "market_context": "Single-cell sequencing sits between two much larger markets and is routinely confused with both. Upstream, the sequencing itself runs on Illumina, Pacific Biosciences and Oxford Nanopore instruments: Illumina's FY2025 revenue was $4.34 billion, and the sequencing consumables consumed by a single-cell library are booked there, not by the single-cell vendor whose kit prepared it. Downstream and adjacent, spatial biology resolves the same molecules with tissue coordinates rather than cell identity, and at least one house folds spatial transcriptomics into its single-cell segmentation. The result is a category whose boundaries are drawn differently by every publisher and by no vendor. What makes it tractable is that 10x Genomics splits its reporting the way the market should be defined — Single Cell separately from Spatial, consumables separately from instruments — so a reader can test a published total against a disclosed one. That test is the organising argument of this report. It also explains why a market with pervasive scientific adoption (31,041 PubMed records for the method) has a commercial size measured in low single-digit billions: almost all of it is research-use-only, grant-funded, and attached to no reimbursement code.",
+  "forecast_analysis": "Our 12.2% is the lowest rate published in the sequencing cluster, and we chose it deliberately, because the grounding arithmetic shows even that rate runs ahead of the disclosed run-rate. MarketsandMarkets' own series requires the market to add $1.51 billion between 2025 and 2030 — roughly 3.9x 10x Genomics' entire FY2025 Single Cell revenue of $385.9 million. In the same period that forecast was published, 10x's Single Cell consumables revenue declined 2% and its Single Cell instrument revenue declined 36%. With 10x at 19.8% of the published total by our own division, the arithmetic requires the remaining ~80% to compound at about 16% a year. The houses forecasting 15.05% and 16.7% are making a correspondingly larger claim from a correspondingly different base. The honest reading is that these are not extrapolations of momentum but forecasts about three specific things: academic and government capital budgets recovering, consumables pull-through continuing to compound on an installed base that stopped growing, and cell-therapy manufacturing emerging as a non-grant-funded buyer. Our series models a constant 12.2% because that is the published rate we are using; the real path will be flatter near term and steeper later, if those three conditions hold. Readers sizing a business on this market should treat the first two forecast years as the leader's disclosed trajectory, not as our curve.",
+  "reader_takeaways": [
+    "Check which scope a published figure uses before comparing it to anything. 'Single-cell sequencing' and 'single-cell analysis' differ by roughly 2x in the same base year from the same publisher, and the wider one counts flow cytometry.",
+    "Use 10x Genomics' Single Cell line as the market's pulse, not its size. It is the only disclosed, separately reported figure in the category: $385.9 million in FY2025, with consumables down 2% and instruments down 36%.",
+    "Treat every published CAGR here as a forecast about research-funding recovery. A 12.2% rate needs about 3.9x the leader's entire current Single Cell revenue added in five years, and the leader is currently shrinking.",
+    "Do not add a published single-cell figure to a published spatial figure. At least one house counts spatial transcriptomics inside single-cell, and none states what it has excluded.",
+    "Expect consumables and instruments to keep diverging. Instruments are capital spend and move with budgets; consumables are pull-through on the installed base and are the durable revenue line."
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "report_id": "real-world-evidence-market",
+  "slug": "real-world-evidence-market",
+  "title": "Real-World Evidence Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 3.1,
+    "forecast_value": 7.67,
+    "cagr": 16.3
+  },
+  "executive_summary": "Published estimates of the real-world evidence market disagree about its size by ten times and about its growth rate by more than two. Base-year values for 2025 run from $2.0 billion to $20.03 billion, a 10.0x spread, and published compound growth rates from 7.01% to 16.3%, a 2.32x spread. Unlike most markets in this corpus, where the houses agree about growth and disagree about scope, here they disagree about both. Three houses cluster between $2.0 billion and $3.5 billion for 2025; one sits an order of magnitude above.\n\nThis market happens to have the best grounding number in healthcare IT, and it exists by accident. Effective 1 January 2026 IQVIA reorganised its segments, and in disclosing the change it published the dollar value of the business it was moving: Real-World Late Phase and certain other real-world offerings, \"representing $674 million in 2025 revenue\", shifted out of Technology & Analytics Solutions and into Research & Development Solutions.\n\nThat single sub-line is 21.7% of the entire global market as the most clearly scoped house sizes it for 2026. More severely, IQVIA's whole Technology & Analytics Solutions segment booked $6,626 million in FY2025 -- 3.31 times the $2.0 billion that the lowest estimate assigns to the whole world. A $2 billion global market would require IQVIA alone to hold 34% of it from one reporting line, before TriNetX, Flatiron, Komodo Health, Veradigm, Optum and HealthVerity are counted at all. The low estimate is not reconcilable with disclosed revenue.\n\nThe high estimate fails in the other direction. $20.03 billion is 3.02 times IQVIA's whole technology and analytics segment. That is only coherent if the figure counts pharmaceutical sponsors' internal epidemiology, HEOR and medical-affairs headcount alongside vendor revenue -- spend that is real but is nobody's revenue, and therefore nobody's addressable market. Between those two bounds sits the one series in this set that states what it counts and names its data sources.",
+  "market_context": "Real-world evidence is a regulatory construct before it is a market. Section 3022 of the 21st Century Cures Act required the FDA to establish a programme for evaluating the use of real-world evidence in regulatory decisions, and the agency published its framework in December 2018. In Europe, the EMA built DARWIN EU as a federated network for interrogating routine-care data. Those instruments created the demand; they did not create an industry, because they say nothing about who must be paid to generate the evidence.\n\nThat is why the estimates differ by ten times. The cluster houses size solutions sold by vendors: licensed datasets, analytics platforms, study execution services, registry operations. The outlier can only be sizing the total cost of generating real-world evidence, which is dominated by pharmaceutical companies' own staff. A vendor that sets its addressable market from the larger figure is counting its customers' salary bill as its opportunity.\n\nA second, subtler boundary problem is where real-world evidence ends and late-phase interventional research begins. IQVIA answered that question for itself in 2026 by moving Real-World Late Phase out of its technology segment and into its research segment, and renaming the remainder Commercial Solutions. One of the two largest participants in this market has concluded that its late-phase real-world business belongs with clinical research rather than with data and analytics. No published market estimate reflects that distinction.\n\nThe clinical trial register illustrates the scale of what happens outside it: on 16 October 2026, only 675 of the 607,160 studies in ClinicalTrials.gov text-matched \"real-world evidence\". Most real-world evidence is generated from data that was never collected for research, which is the definitional point of the field and the reason it cannot be counted from any register."
+  ,
+  "forecast_analysis": "The curve shown here is modelled at a constant 16.3% rate. Global Market Insights, in report GMI9187 of February 2026, publishes $3.1 billion for 2026 and $11.9 billion for 2035 with a stated 16.3% CAGR over 2026-2035. The 2032 endpoint of $7.67 billion is the published 2026 value carried forward six years at that published rate. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen for reasons that have nothing to do with it being a middle value. It is the only estimate in the set that states what it counts -- solutions combining data collection, integration, study execution and analytics that turn routine-care data into evidence for clinical, commercial or regulatory decisions -- and the only one that names its data sources: electronic health records, claims, pharmacy records, registries, and patient-generated and digital-health data. It is also the only one publishing a multi-year series ($1.7 billion for 2022, $2.3 billion for 2024, $2.6 billion for 2025) rather than two endpoints, and a separate United States series ($680.4 million in 2022 rising to $1,053.1 million in 2025) that a reader can test against the global figure.\n\nIt is the only series that survives all three grounding tests. It is large enough that IQVIA's disclosed $674 million real-world line is a plausible fraction rather than a third of it, and small enough that it is not a multiple of the largest participant's whole technology segment.\n\nThe 16.3% rate is at the top of the published range, and readers should treat the rate as the weaker half of this estimate. Growth rates in this literature run from 7.01% to 16.3% -- a genuine disagreement about whether real-world evidence is becoming a standard regulatory input or remaining a specialist commissioned service. Nothing in the public record settles it.",
+  "market_overview": {
+    "summary": "On the scope used by the only series in this set that defines itself and names its data sources, the real-world evidence market is $3.10 billion in 2026, projected to $7.67 billion by 2032 at a 16.3% CAGR. Published base-year estimates for 2025 spread 10.0x, from $2.0 billion to $20.03 billion, and published growth rates spread 2.32x, from 7.01% to 16.3%. The houses disagree about both size and growth. IQVIA's own 2026 segment reorganisation disclosed $674 million of real-world revenue from a single sub-line, which is 21.7% of the whole global market on this scope and 34% of the lowest published estimate -- arithmetic that rules the low end out.",
+    "key_trends": [
+      "Base-year estimates for 2025 spread 10.0x ($2.0 billion to $20.03 billion) and published CAGRs spread 2.32x (7.01% to 16.3%) -- unusually, the houses disagree about growth as well as scope",
+      "IQVIA's 2026 segment reorganisation disclosed Real-World Late Phase and certain other real-world offerings as \"representing $674 million in 2025 revenue\", the only vendor-specific real-world figure in the public record",
+      "That $674 million is 21.7% of the entire global market on the scope published here, and 34% of the lowest published whole-market estimate",
+      "IQVIA's whole Technology & Analytics Solutions segment booked $6,626 million in FY2025, which is 3.31 times the lowest published global market size",
+      "IQVIA moved Real-World Late Phase into its research segment effective 1 January 2026, deciding for itself that late-phase real-world work belongs with clinical research rather than with data and analytics",
+      "Only 675 of the 607,160 studies in ClinicalTrials.gov text-match \"real-world evidence\" as of 16 October 2026, because most real-world evidence comes from data never collected for research"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Routine in commercial and HEOR use; established but selective as a regulatory input"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A statutory requirement in the United States: section 3022 of the 21st Century Cures Act obliged the FDA to establish a programme for evaluating real-world evidence in regulatory decisions, and the agency published its framework in December 2018",
+      "A built European counterpart: the EMA's DARWIN EU federated network makes routine-care data interrogable across member-state sources for regulatory questions",
+      "Payer and health technology assessment demand for comparative effectiveness in populations that trials exclude, which creates a buyer with no interest in whether the evidence is randomised",
+      "Growing availability of licensable longitudinal data from electronic health records, claims, pharmacy records and registries, which is the raw material and the main cost line",
+      "Post-approval commitments on accelerated and conditional approvals, which make real-world data collection a condition of continued marketing rather than a discretionary spend"
+    ],
+    "restraints": [
+      "The lowest published global estimate of $2.0 billion is 30% of a single participant's technology segment, which means published sizes in this market cannot be relied on for planning",
+      "Most evidence generation happens inside sponsors rather than being bought: that is the only way to reconcile the $20.03 billion high estimate, and it caps the vendor-addressable share",
+      "Data provenance and fitness-for-purpose remain the binding regulatory constraint -- the FDA framework evaluates whether the data are adequate, not whether they are available",
+      "Fragmented and non-interoperable source data raises the cost of every study and makes results difficult to replicate across vendors",
+      "Growth rates published for this market run from 7.01% to 16.3%, a genuine disagreement that nothing in the public record settles"
+    ],
+    "opportunities": [
+      "Regulatory-grade evidence packages rather than datasets: the margin sits in the study design, provenance documentation and defensibility, not in the data licence",
+      "Federated and privacy-preserving analytics, which let a sponsor query data it cannot be given and which DARWIN EU has made the European default",
+      "Oncology and rare disease, where trial populations are small by necessity and real-world comparators are the only available control",
+      "Device and diagnostics post-market surveillance, a smaller buyer group than pharma with the same regulatory obligations and much less internal capability"
+    ],
+    "challenges": [
+      "No participant except IQVIA discloses real-world revenue, and IQVIA's disclosure appeared only as a by-product of a segment reorganisation, so share cannot be computed for anyone",
+      "Veradigm, one of the named data participants, was delisted from Nasdaq for non-compliance with the timely-filing rule and filed a Form NT 10-K for FY2025 on 17 March 2026, so it has no current audited figures",
+      "TriNetX, Komodo Health and HealthVerity are private; Flatiron Health is inside Roche with no separate disclosure -- there is no numerator for any of them",
+      "Scope inconsistency of ten times between published estimates makes investment and procurement comparisons across reports invalid",
+      "Meticulous Research publishes two mutually inconsistent figure sets for the same report identifier, which is a warning about the care with which some of this literature is assembled"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Data sets and data licensing",
+      "Analytics platforms and software",
+      "Study design and execution services",
+      "Registry design and operation",
+      "Federated and privacy-preserving analytics infrastructure"
+    ],
+    "by_application": [
+      "Regulatory submissions and post-approval commitments",
+      "Health technology assessment and payer dossiers",
+      "Comparative effectiveness and outcomes research",
+      "Post-market safety surveillance",
+      "Commercial strategy and market access",
+      "Clinical trial design and external control arms"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biotechnology companies",
+      "Medical device and diagnostics companies",
+      "Payers and health insurers",
+      "Regulators and health technology assessment bodies",
+      "Providers and integrated delivery networks",
+      "Contract research organisations"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 3.1 },
+    { "year": 2027, "value": 3.61 },
+    { "year": 2028, "value": 4.19 },
+    { "year": 2029, "value": 4.88 },
+    { "year": 2030, "value": 5.67 },
+    { "year": 2031, "value": 6.6 },
+    { "year": 2032, "value": 7.67 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR from the published 2026 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "IQVIA",
+      "headquarters": "United States",
+      "market_position": "Dominant participant and the only one with any disclosed real-world revenue line",
+      "description": "Reported FY2025 revenue of $16,310 million, with Technology & Analytics Solutions at $6,626 million, R&DS at $8,896 million and CSMS at $788 million. In announcing a segment reorganisation effective 1 January 2026 it disclosed that Real-World Late Phase and certain other real-world offerings, \"representing $674 million in 2025 revenue\", move from TAS into R&DS, and that TAS is renamed Commercial Solutions. That $674 million is the only vendor-specific real-world figure in the public record. It is 21.7% of the whole global market on the scope published in this report -- our own division of two differently scoped published numbers, stated here as arithmetic rather than as a market share, because the numerator is one company's sub-line and the denominator is another house's whole market. No real-world market share is disclosed."
+    },
+    {
+      "company": "Flatiron Health (Roche)",
+      "headquarters": "United States",
+      "market_position": "Incumbent in oncology real-world data, consolidated inside its parent",
+      "description": "Built the oncology electronic health record dataset most widely used in regulatory and payer submissions. Acquired by Roche and reported within the parent's results with no segment or product disclosure, so neither its revenue nor its share can be stated."
+    },
+    {
+      "company": "TriNetX",
+      "headquarters": "United States",
+      "market_position": "Challenger in federated provider-network analytics",
+      "description": "Operates a federated network through which sponsors query provider data without receiving it, which is the architecture European regulators have favoured. Privately held, publishes no financials, and no share figure exists for it."
+    },
+    {
+      "company": "Komodo Health",
+      "headquarters": "United States",
+      "market_position": "Challenger built on linked claims and encounter data",
+      "description": "Sells a longitudinal patient-encounter map assembled primarily from claims data, competing on breadth of linkage rather than on clinical depth. Privately held with no published revenue, so no share can be computed."
+    },
+    {
+      "company": "Veradigm",
+      "headquarters": "United States",
+      "market_position": "Incumbent data asset with unresolved reporting status",
+      "description": "Holds ambulatory electronic health record and registry data assets of long standing. The company was delisted from Nasdaq for non-compliance with the timely periodic filing rule -- the Hearings Panel decided to delist on 27 February 2024 and Nasdaq filed Form 25 on 25 April 2024 -- following a March 2023 determination that its financial statements could no longer be relied upon. It filed a Form NT 10-K for FY2025 on 17 March 2026, so it is still not current in its periodic reporting and has no usable recent revenue figure. An SEC investigation into the reporting failures concluded with no recommended enforcement action."
+    },
+    {
+      "company": "Optum",
+      "headquarters": "United States",
+      "market_position": "Incumbent data and analytics business inside a payer parent",
+      "description": "Licenses de-identified claims and clinical data at national scale and runs its own outcomes research. Reported within UnitedHealth Group's Optum segments without a real-world evidence line item, so no size or share figure exists for it in this market."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "IQVIA",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $16,310 million on 5 February 2026 (TAS $6,626 million, R&DS $8,896 million, CSMS $788 million) and announced a segment reorganisation effective 1 January 2026 under which CSMS is folded into TAS, TAS is renamed Commercial Solutions, and Real-World Late Phase and certain other real-world offerings \"representing $674 million in 2025 revenue\" move from TAS to the R&DS segment. Recast 2024 and 2025 segment figures were provided, with the new basis first appearing in the Q1 2026 Form 10-Q."
+    },
+    {
+      "company": "Veradigm",
+      "year": 2026,
+      "event": "Filed a Form NT 10-K for fiscal year 2025 on 17 March 2026, continuing a reporting delinquency that began with its March 2023 determination that prior financial statements could no longer be relied upon and led to Nasdaq delisting in 2024. A related SEC investigation concluded with no recommended enforcement action."
+    },
+    {
+      "company": "Global Market Insights",
+      "year": 2026,
+      "event": "Published report GMI9187 in February 2026 sizing the real-world evidence solutions market at $3.1 billion for 2026 and $11.9 billion for 2035 at a 16.3% CAGR, with a stated scope covering data collection, integration, study execution and analytics over electronic health records, claims, pharmacy records, registries and patient-generated data, and a separate United States series rising from $680.4 million in 2022 to $1,053.1 million in 2025."
+    },
+    {
+      "company": "Veradigm",
+      "year": 2024,
+      "event": "Delisted from Nasdaq for non-compliance with the rule requiring timely periodic SEC filings and with the annual-meeting rule: the Hearings Panel decided to delist on 27 February 2024 and Nasdaq filed Form 25 on 25 April 2024. Reporting shortcomings had overstated revenue by about $20 million across fifteen months of 2021 and 2022."
+    }
+  ],
+  "regulatory_landscape": [
+    "Section 3022 of the 21st Century Cures Act (2016), which required the FDA to establish a programme for evaluating the potential use of real-world evidence in regulatory decision-making",
+    "FDA Framework for its Real-World Evidence Program (December 2018), under which the agency assesses whether real-world data are fit for purpose and whether the study design can support a regulatory conclusion -- availability of data is not the test",
+    "FDA guidances on real-world data from electronic health records and claims, registries, and on data standards for submissions containing real-world data, which set the documentation burden on any vendor selling regulatory-grade evidence",
+    "EMA Data Analysis and Real World Interrogation Network (DARWIN EU), a federated network for querying routine-care data across European sources, which makes federated architecture the European default rather than an option",
+    "EU General Data Protection Regulation and the European Health Data Space Regulation, which govern secondary use of health data and set the terms on which any dataset in this market may be licensed",
+    "ICH E6(R3) Good Clinical Practice, revised to be modality-neutral, which applies to real-world studies where they are interventional"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public filings, public registers and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "IQVIA Holdings, fourth-quarter and full-year 2025 results, 5 February 2026: total revenue $16,310 million; TAS $6,626 million; R&DS $8,896 million; CSMS $788 million; Real-World Late Phase and certain other real-world offerings \"representing $674 million in 2025 revenue\" moved from TAS to R&DS effective 1 January 2026; TAS renamed Commercial Solutions",
+      "Veradigm Inc., Form NT 10-K for FY2025 filed 17 March 2026 (SEC EDGAR CIK 1124804), and Nasdaq delisting record: Hearings Panel decision 27 February 2024, Form 25 filed 25 April 2024",
+      "ClinicalTrials.gov API v2, query.term=\"real-world evidence\", retrieved 16 October 2026: 675 studies against 607,160 in the whole register",
+      "Global Market Insights, real-world evidence solutions market, report GMI9187, February 2026: $1.7 billion (2022), $2.3 billion (2024), $2.6 billion (2025), $3.1 billion (2026), $11.9 billion (2035), 16.3% CAGR 2026-2035; United States $680.4 million (2022) to $1,053.1 million (2025)",
+      "IMARC Group, real world evidence solutions market: $2.0 billion (2025) to $3.8 billion (2034), 7.01% CAGR 2026-2034; an earlier vintage $1.8 billion (2023) to $3.4 billion (2032) at 7.6%",
+      "Meticulous Research, real world evidence solutions market, report MR-253, February 2026: two pages for the same report publish $3.5 billion (2025) to $8.9 billion (2036) at 12.2% and $6.42 billion (2026) to $12.84 billion (2036) at 7.2%",
+      "Fortune Business Insights, real world evidence solutions market: $20.03 billion (2025), $22.3 billion (2026), $65.42 billion (2034), 14.40% CAGR -- reached us via Fortune-hosted pages with mismatched URL slugs and a third-party repost, and flagged as unconfirmed against a clean primary page",
+      "DelveInsight, GlobeNewswire release of 2 July 2025: approximately 8% CAGR and about $5.2 billion by 2032",
+      "FDA, Framework for FDA's Real-World Evidence Program, December 2018, implementing section 3022 of the 21st Century Cures Act; EMA, Data Analysis and Real World Interrogation Network (DARWIN EU)"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Three plausibility tests were run against disclosed company revenue. First, IQVIA's disclosed Real-World Late Phase and other real-world revenue of $674 million for 2025 is 21.7% of the $3.1 billion global market published for 2026 on this scope, which sets a floor: a whole-market figure materially below about $3 billion cannot be right. Second, IQVIA's whole Technology & Analytics Solutions segment of $6,626 million is 3.31 times the $2.0 billion that the lowest published estimate assigns to the whole world; since $674 million of that segment was explicitly real-world, a $2.0 billion market would give IQVIA alone 34% of it from one reporting line, before TriNetX, Flatiron, Komodo, Veradigm, Optum and HealthVerity, so the low estimate is ruled out as a whole-market figure. Third, the $20.03 billion high estimate is 3.02 times IQVIA's whole technology and analytics segment, which is coherent only if it counts sponsors' internal evidence-generation cost alongside vendor revenue, so it is not a vendor-addressable market. None of these tests establishes the correct market size and none is offered as an estimate; each is a division of two differently scoped published numbers and is labelled as such. The 2032 endpoint and intermediate years are interpolation from the published 2026 value at the published 16.3% rate, not separately published observations."
+  },
+  "faqs": [
+    {
+      "question": "How big is the real-world evidence market?",
+      "answer": "$3.10 billion in 2026 rising to $7.67 billion by 2032 at 16.3%, on the only published scope in this set that defines what it counts and names its data sources. Published base-year estimates for 2025 range from $2.0 billion to $20.03 billion, a 10.0x spread, and growth rates from 7.01% to 16.3%. The figure you are quoted depends almost entirely on whether the house counted vendor revenue or the total cost of generating evidence."
+    },
+    {
+      "question": "Why do published real-world evidence estimates differ by ten times?",
+      "answer": "Because some count what vendors are paid and one counts what the function costs. The cluster houses size licensed datasets, analytics platforms and study services. A $20.03 billion figure is three times the whole technology and analytics segment of the sector's largest company, which is only reachable by including pharmaceutical sponsors' own epidemiology, HEOR and medical-affairs headcount. That spend is real, but it is nobody's revenue and therefore nobody's addressable market."
+    },
+    {
+      "question": "How can you check whether a real-world evidence market size is plausible?",
+      "answer": "Compare it to IQVIA's disclosed figures, because IQVIA accidentally published the best grounding number in the market. Its 2026 segment reorganisation disclosed Real-World Late Phase and certain other real-world offerings as $674 million of 2025 revenue, and its whole Technology & Analytics Solutions segment booked $6,626 million. Any whole-market figure below about $3 billion would make that single $674 million line a third of the world, and any figure above about $20 billion is a multiple of the largest participant's entire technology segment."
+    },
+    {
+      "question": "Is real-world evidence measurable from the clinical trial registers?",
+      "answer": "No, and that is the point of the field. On 16 October 2026 only 675 of the 607,160 studies in ClinicalTrials.gov text-matched \"real-world evidence\". Most real-world evidence is generated from electronic health records, claims and registry data that were never collected for research and never registered anywhere. There is no register of real-world studies, which is why every size estimate in this market is a model rather than a count."
+    },
+    {
+      "question": "Who leads the real-world evidence market?",
+      "answer": "IQVIA is the dominant participant and the only one with any disclosed real-world revenue -- $674 million for 2025, visible only because the company moved that business between segments. Flatiron Health is inside Roche, Optum inside UnitedHealth Group, and TriNetX, Komodo Health and HealthVerity are private. Veradigm has not been current in its SEC reporting since 2023 and filed a Form NT 10-K for FY2025 in March 2026. No share percentage exists for any participant."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because the two houses that publish regional shares do so on scopes that differ by ten times. Global Market Insights puts North America at 43.3% of 2025 with Europe at $719.6 million and Asia Pacific at $548.5 million; Fortune Business Insights puts North America at 42.11% of a market an order of magnitude larger. Apportioning either would transmit a scope error as geography, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates for 2025 spread 10.0x ($2.0 billion to $20.03 billion) and published CAGRs spread 2.32x (7.01% to 16.3%)",
+    "IQVIA's 2026 segment reorganisation disclosed Real-World Late Phase and certain other real-world offerings as \"representing $674 million in 2025 revenue\" -- the only vendor-specific real-world figure in the public record",
+    "That $674 million is 21.7% of the whole global market on the scope published here, and 34% of the lowest published whole-market estimate",
+    "IQVIA's whole Technology & Analytics Solutions segment of $6,626 million for FY2025 is 3.31 times the lowest published global market size",
+    "The highest published estimate, $20.03 billion for 2025, is 3.02 times that same segment, which makes it a cost-of-function figure rather than a vendor-addressable market",
+    "Only 675 of 607,160 ClinicalTrials.gov studies text-match \"real-world evidence\" -- there is no register from which this market can be counted",
+    "No participant other than IQVIA discloses any real-world revenue, so no share figure for this market is verifiable"
+  ],
+  "reader_takeaways": [
+    "Before accepting a real-world evidence market size, ask whether it counts vendor revenue or the total cost of generating evidence -- that single decision moves the base year by ten times",
+    "Use IQVIA's disclosures as your own sanity check: any whole-market figure below about $3 billion makes one disclosed $674 million sub-line a third of the world",
+    "Treat the growth rate as the weaker half of any estimate here: published CAGRs run 7.01% to 16.3% and nothing public settles whether real-world evidence becomes a standard regulatory input or stays a commissioned service",
+    "Expect the regulatory boundary to keep moving: IQVIA has already decided that late-phase real-world work belongs with clinical research rather than with data and analytics, and no published market estimate reflects that",
+    "Treat any vendor share percentage for this market as unsourced, because every participant except IQVIA reports real-world work inside a larger segment, inside a parent, or not at all"
+  ],
+  "seo": {
+    "meta_title": "Real-World Evidence Market Size & Forecast 2032",
+    "meta_description": "RWE estimates spread 10x at the base year. IQVIA's disclosed $674M real-world line and $6,626M segment show which published figures cannot be right.",
+    "keywords": [
+      "real world evidence market",
+      "real-world evidence solutions market size",
+      "RWE market forecast 2032",
+      "real world data market",
+      "IQVIA real world late phase",
+      "FDA real-world evidence framework",
+      "DARWIN EU"
+    ]
+  }
+}

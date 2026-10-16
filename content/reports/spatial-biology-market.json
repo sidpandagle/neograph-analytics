@@ -1,0 +1,244 @@
+{
+  "report_id": "spatial-biology-market",
+  "slug": "spatial-biology-market",
+  "title": "Spatial Biology Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 1.4,
+    "forecast_value": 3.32,
+    "cagr": 15.5
+  },
+  "market_overview": {
+    "summary": "Spatial biology measures RNA, protein or DNA while keeping the tissue coordinates of each measurement, which makes it the complement to single-cell methods rather than a competitor to them. Published sizings span 16.9x, from Arizton's $383.93 million for 2024 to a $6.5 billion figure for 2025 attributed to Roots Analysis — and both claim the same narrow scope, spatial transcriptomics and genomics. The more useful finding is that the narrow-scope totals are too low rather than too high: two disclosing vendors, 10x Genomics and Akoya Biosciences, together booked about $260.5 million of spatial revenue in FY2024, which is 67.9% of one published whole-market total and 47.0% of another, before Bruker's NanoString line or Standard BioTools' Hyperion are counted at all. We therefore publish the wider spatial-biology scope.",
+    "key_trends": [
+      "Spatial is the only line at the category leader that grew: 10x Genomics' FY2025 spatial consumables revenue rose 19% to $144.0 million while its single-cell consumables fell 2%",
+      "Instruments are contracting even where consumables grow: 10x's spatial instrument revenue fell 41% in FY2025 to $34.1 million, so the growth is pull-through on an installed base rather than new placements",
+      "The sector has consolidated into instrument conglomerates: NanoString into Bruker (Q2 2024), Akoya into Quanterix (announced January 2025), leaving few independent reporting entities and less public disclosure than two years ago",
+      "Spatial proteomics plus outsourced services is worth more than sequencing-based spatial on its own — the gap between the narrow ($0.4-0.6B) and wide ($1.2-1.5B) published scopes is the clearest available measure of it",
+      "Published forecasts disagree internally as well as with each other: Meticulous Research's own $1.48 billion base and 19.3% rate give $8.64 billion for 2036, not the $10.2 billion it publishes",
+      "Academic literature has scaled faster than commercial revenue: 8,121 PubMed records for 'spatial transcriptomics' as of 16 October 2026, against a whole-market revenue base measured in low single-digit billions"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in translational research, pre-clinical in diagnostics"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Tissue context answers questions single-cell dissociation destroys — immune-cell positioning relative to tumour margins is the canonical example, and it is the main reason immuno-oncology groups buy spatial platforms",
+      "FFPE compatibility: unlike most single-cell chemistries, leading spatial assays run on archival formalin-fixed material, which unlocks existing pathology biobanks as sample supply",
+      "An installed base that generates recurring consumables revenue: 10x's spatial consumables grew 19% in FY2025 even as its spatial instrument sales fell 41%, and Akoya disclosed 1,330 installed instruments at the end of 2024",
+      "Biopharma translational research budgets, which fund spatial as a biomarker-discovery tool attached to specific clinical programmes rather than as general capital equipment",
+      "Instrument vendors with distribution: Bruker and Quanterix both acquired spatial platforms into existing commercial organisations, which widens reach without widening the platform count"
+    ],
+    "restraints": [
+      "Capital-equipment contraction across life-science tools: 10x attributed a 41% decline in spatial instrument revenue to constrained academic and biopharma capital budgets",
+      "No reimbursement: spatial assays are research-use-only with no CPT-coded, payer-funded clinical application at scale, so demand is entirely discretionary research spend",
+      "Analysis capacity, not assay capacity, is the throughput limit — spatial datasets are large and the interpretation step requires bioinformatics staff most labs do not have",
+      "Disclosure has worsened as the market consolidated: NanoString sits inside Bruker's $1.08 billion BSI NANO segment and Hyperion inside Standard BioTools' $85.3 million, neither separately reported, so the market is now less measurable than before",
+      "Platform fragmentation with incompatible outputs: imaging-based, sequencing-based and antibody-based spatial methods do not produce interchangeable data, which slows standardisation and deters clinical validation"
+    ],
+    "opportunities": [
+      "Spatial proteomics and spatial multi-omics, the segments every publisher names as fastest-growing and none sizes separately — and, on the gap between the narrow and wide published scopes, already the larger half of the market",
+      "Outsourced spatial services, which convert a capital barrier into a per-sample fee and bring in customers who will never buy an instrument",
+      "Clinical translation as a laboratory-developed test under CLIA, a route made cheaper by the March 2025 vacatur of FDA's LDT rule, though it creates no reimbursement by itself",
+      "Companion-diagnostic development, where spatial readouts of target expression in situ could support drug labelling claims that bulk or single-cell assays cannot",
+      "Consolidation: with few independent platforms left and Standard BioTools holding roughly $550 million in cash after divesting SomaLogic, further acquisition of spatial assets is plausible"
+    ],
+    "challenges": [
+      "The published narrow-scope totals are arithmetically too small: Arizton's $383.93 million for 2024 leaves $123.4 million for the entire field outside 10x and Akoya, which cannot absorb Bruker's NanoString line at the low-double-digit growth Bruker describes",
+      "A 16.9x spread across published estimates, and a case where one publisher's narrow-scope figure exceeds its own wider-scope figure by 5.4x, makes the published market unusable for planning without reconstruction",
+      "Falling instrument revenue erodes the mechanism that creates future consumables revenue — a shrinking placement rate today caps the pull-through base tomorrow",
+      "Loss of standalone reporting after the Bruker and Quanterix acquisitions means future grounding checks of this kind will be harder, not easier",
+      "Spatial competes for the same shrinking research-capital budget as single-cell, flow cytometry and mass spectrometry, so category growth is partly reallocation rather than net new spend"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Instruments and platforms",
+      "Consumables and reagents",
+      "Software and analytics",
+      "Outsourced services"
+    ],
+    "by_application": [
+      "Spatial transcriptomics",
+      "Spatial proteomics",
+      "Spatial genomics",
+      "Spatial metabolomics",
+      "Spatial multi-omics"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biotechnology companies",
+      "Academic and research institutions",
+      "Contract research organisations",
+      "Hospitals and other clinical facilities"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 1.4 },
+    { "year": 2027, "value": 1.62 },
+    { "year": 2028, "value": 1.87 },
+    { "year": 2029, "value": 2.16 },
+    { "year": 2030, "value": 2.49 },
+    { "year": 2031, "value": 2.88 },
+    { "year": 2032, "value": 3.32 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 15.5% CAGR from Roots Analysis' published 2026 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "10x Genomics, Inc.",
+      "headquarters": "Pleasanton, California, United States",
+      "market_position": "The largest spatial vendor that reports spatial separately. FY2025 spatial revenue of $178.1 million is 14.8% of Roots Analysis' published $1.20 billion 2025 spatial-biology market, or 46.4% of Arizton's $383.93 million narrow-scope 2024 market — our own division of disclosed line items by published totals, which is precisely why those two published totals cannot both be right. 10x publishes no market share and we assign none.",
+      "description": "Visium and Xenium platforms, spanning sequencing-based and imaging-based spatial transcriptomics. FY2025 (preliminary, unaudited, 11 January 2026): spatial consumables $144.0 million, up 19%; spatial instruments $34.1 million, down 41%. Spatial was the only growing consumables line in the company."
+    },
+    {
+      "company": "Bruker Corporation",
+      "headquarters": "Billerica, Massachusetts, United States",
+      "market_position": "Holds the NanoString GeoMx and CosMx platforms, acquired in the second quarter of 2024, inside its BSI NANO segment. Bruker does not disclose spatial revenue separately, so its position cannot be sized from filings — only characterised from management commentary.",
+      "description": "FY2025 revenue $3.44 billion, up 2% reported and down 4% organic. BSI NANO segment revenue $1.08 billion, down 2%, with the decline attributed to weak academic, government and industrial demand and partly offset by NanoString. Management described the spatial biology business as growing at low double digits in 2025, with double-digit organic order growth in the fourth quarter."
+    },
+    {
+      "company": "Quanterix Corporation",
+      "headquarters": "Billerica, Massachusetts, United States",
+      "market_position": "Entered spatial biology by acquiring Akoya Biosciences, announced as an all-stock transaction on 10 January 2025. Akoya's contribution is partially disclosed, which makes Quanterix one of only two reporting sources of spatial revenue data.",
+      "description": "FY2025 total revenue $138.9 million, up about 1% from $137.4 million. The Form 10-K reports Akoya adding $21.9 million of product revenue from the close date — a partial period, not annualisable — while legacy product revenue fell 11%, or $8.7 million. Akoya's last full standalone year, FY2024, was $81.7 million on an installed base of 1,330 instruments."
+    },
+    {
+      "company": "Standard BioTools Inc.",
+      "headquarters": "South San Francisco, California, United States",
+      "market_position": "Present in spatial proteomics through Hyperion imaging mass cytometry, reported inside total continuing-operations revenue with no spatial split, so no figure is extractable.",
+      "description": "FY2025 continuing-operations revenue $85.3 million, reported 24 February 2026, spanning microfluidics and mass cytometry. Holds roughly $550 million in cash and investments after divesting SomaLogic to Illumina on 30 January 2026, with a stated inorganic growth intent."
+    },
+    {
+      "company": "Vizgen, Inc.",
+      "headquarters": "Cambridge, Massachusetts, United States",
+      "market_position": "Private; revenue not disclosed. Competes in imaging-based spatial transcriptomics on panel size and single-molecule resolution.",
+      "description": "MERFISH-based spatial transcriptomics platforms. Named because the grounding arithmetic shows the published narrow-scope totals leave very little revenue for the field outside 10x and Akoya, and this is one of the companies that field consists of."
+    },
+    {
+      "company": "Curio Bioscience, Inc.",
+      "headquarters": "Palo Alto, California, United States",
+      "market_position": "Private; revenue not disclosed. Positioned as an instrument-free, kit-only route into spatial transcriptomics, which sidesteps the capital-budget constraint currently depressing instrument sales across the sector.",
+      "description": "Bead-array whole-transcriptome spatial kits that run without a dedicated instrument, competing on cost per tissue section rather than on hardware capability."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "10x Genomics, Inc.",
+      "year": 2026,
+      "event": "Reported preliminary unaudited FY2025 results on 11 January 2026 showing spatial consumables revenue of $144.0 million, up 19% year-over-year, against spatial instrument revenue of $34.1 million, down 41% — making spatial the only growing consumables line in the company."
+    },
+    {
+      "company": "Quanterix Corporation",
+      "year": 2025,
+      "event": "Announced a definitive all-stock agreement to acquire Akoya Biosciences on 10 January 2025, bringing Akoya's spatial proteomics platforms and 1,330-instrument installed base into Quanterix; the FY2025 Form 10-K reports $21.9 million of Akoya product revenue from the close date."
+    },
+    {
+      "company": "Bruker Corporation",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $3.44 billion on 12 February 2026, with the BSI NANO segment at $1.08 billion, down 2%; management described the spatial biology business built on the NanoString acquisition as growing at low double digits for the year with double-digit organic order growth in the fourth quarter."
+    },
+    {
+      "company": "Akoya Biosciences, Inc.",
+      "year": 2025,
+      "event": "Reported full-year 2024 revenue of $81.7 million, down 15.5% from $96.6 million, with the decline attributed primarily to lower instrument sales, and an installed base of 1,330 instruments at 31 December 2024 — its last full year as a standalone reporting company."
+    }
+  ],
+  "regulatory_landscape": [
+    "Spatial biology products are overwhelmingly sold research-use-only and labelled as not for use in diagnostic procedures, so no FDA marketing authorisation applies to the current market. This is the structural reason the market is small relative to its scientific footprint.",
+    "Clinical Laboratory Improvement Amendments (CLIA), administered by CMS: a spatial assay offered as a clinical service must be validated and run in a CLIA-certified laboratory, with CAP accreditation the practical additional requirement for payer acceptance.",
+    "FDA's laboratory-developed tests final rule was vacated in its entirety by U.S. District Judge Sean D. Jordan on 31 March 2025, on the ground that LDTs are not devices under the Federal Food, Drug, and Cosmetic Act and that Congress assigned their oversight to CMS under CLIA. FDA did not appeal within the 60-day window. This lowers the prospective compliance cost of clinical spatial testing but creates no reimbursement.",
+    "FDA companion-diagnostic co-development under 21 CFR 809 and the agency's CDx guidance is the only route by which a spatial readout becomes a labelled, reimbursable test; no spatial platform has yet obtained a companion-diagnostic approval, which is the gap between the sector's clinical narrative and its current revenue.",
+    "EU In Vitro Diagnostic Regulation 2017/746 governs any spatial product placed on the EU market for a diagnostic purpose, with conformity assessment scaling by risk class; research-use-only products are outside its scope but must be labelled as such."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "10x Genomics, Inc., Form 8-K Exhibit 99.1, preliminary unaudited Q4 and FY2025 revenue results, 11 January 2026 (SEC EDGAR, CIK 1770787)",
+      "Akoya Biosciences, Inc., fourth-quarter and full-year 2024 financial results — FY2024 revenue $81.7 million, installed base 1,330",
+      "Quanterix Corporation, Form 10-K for FY2025 (SEC EDGAR, CIK 1503274) — total revenue $138.9 million, Akoya contribution $21.9 million of product revenue",
+      "Roots Analysis, Spatial Biology Market, last updated September 2026 — $1.20B (2025), $1.40B (2026), $5.14B (2035), 15.5%",
+      "Meticulous Research, Spatial Biology Market (report 6714), June 2026 — $1.48B (2026), $10.2B (2036), 19.3%",
+      "MarketsandMarkets, spatial genomics and transcriptomics market — $554.5M (2024) to $995.7M (2029), 12.4%",
+      "Arizton, Spatial Transcriptomics and Genomics Market — $383.93M (2024) to $1.00B (2030), 17.4%",
+      "Bruker Corporation, fourth-quarter and full-year 2025 financial results, 12 February 2026 — FY2025 revenue $3.44 billion, BSI NANO $1.08 billion",
+      "Standard BioTools Inc., Form 8-K Exhibit 99.1, Q4 and FY2025 financial results, 24 February 2026 — continuing-operations revenue $85.3 million",
+      "PubMed (NCBI E-utilities esearch, db=pubmed), term '\"spatial transcriptomics\"', retrieved 16 October 2026: 8,121 records"
+    ],
+    "data_validation": "The 2026 base of $1.40 billion is Roots Analysis' own published figure, not a derivation; the 2032 endpoint of $3.32 billion applies that house's own published 15.5% rate over six years and is labelled as interpolation. Roots was selected because it is the only series in the set whose published endpoints reconcile with its own published rate: $1.40B x 1.155^9 gives $5.12B against its published $5.14B, a 0.4% difference, whereas Meticulous Research's published $1.48B base and 19.3% rate give $8.64B for 2036 rather than the $10.2B it publishes — an 18% internal gap. The grounding calculation sums the only two disclosed spatial revenue figures available for a common year: 10x Genomics' FY2024 spatial revenue of about $178.8 million, back-solved by us from the growth rates disclosed in its 11 January 2026 Form 8-K ($144.0M divided by 1.19, and $34.1M divided by 0.59), plus Akoya Biosciences' reported FY2024 revenue of $81.7 million, giving $260.5 million. That is 67.9% of Arizton's published $383.93 million 2024 market and 47.0% of MarketsandMarkets' $554.5 million, before Bruker's NanoString line or Standard BioTools' Hyperion are counted at all, which rules both narrow-scope totals out as measures of spatial biology and rules the wider $1.2-1.5 billion range in. This is a plausibility test, not a market estimate: it does not establish the correct figure, one of its two inputs is our own back-solve rather than a reported number, and the undisclosed NanoString and Hyperion revenues mean the true two-vendor-plus total is higher than $260.5 million by an unknown amount. Regional and country arrays are empty because no named source publishes a percentage for this scope; vendor shares are omitted because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the spatial biology market?",
+      "answer": "We publish $1.40 billion for 2026, rising to $3.32 billion by 2032 at 15.5%. The 2026 figure is Roots Analysis' own published number; the 2032 figure applies its own published rate. Published estimates across the sector span 16.9x, from Arizton's $383.93 million for 2024 to a $6.5 billion figure for 2025, so the number you use depends entirely on which scope the publisher measured."
+    },
+    {
+      "question": "Why is the range of published estimates so wide?",
+      "answer": "Partly scope and partly error. The genuine scope split is between spatial transcriptomics and genomics alone ($383.93 million to $554.5 million at 2024) and all spatial modalities including proteomics, software and outsourced services ($1.20 billion at 2025 to $1.48 billion at 2026) — which implies spatial proteomics plus services is the larger half of the market. The rest is not scope: one publisher's narrow-scope figure exceeds its own wider-scope figure by 5.4x, and another's published endpoint is 18% away from what its own base and rate produce."
+    },
+    {
+      "question": "Are the published spatial market sizes too high or too low?",
+      "answer": "The narrow ones are too low, which is unusual. 10x Genomics' FY2024 spatial revenue of about $178.8 million, back-solved from its disclosed growth rates, plus Akoya Biosciences' reported FY2024 revenue of $81.7 million, comes to $260.5 million from two companies. That is 67.9% of Arizton's $383.93 million whole-market total and 47.0% of MarketsandMarkets' $554.5 million — leaving as little as $123 million for Bruker's NanoString line, Standard BioTools' Hyperion, Vizgen, Curio and everyone else. Bruker says its spatial business grew at low double digits in 2025, so that remainder is clearly not $123 million."
+    },
+    {
+      "question": "Which company leads the spatial biology market?",
+      "answer": "On disclosed revenue, 10x Genomics, with $178.1 million of spatial revenue in FY2025. No vendor publishes a market share and we assign none. The position is harder to assess than it was two years ago: NanoString now sits inside Bruker's BSI NANO segment and Akoya inside Quanterix, and neither parent discloses a spatial split, so the market has become less measurable as it consolidated."
+    },
+    {
+      "question": "Why is spatial growing while single-cell is not?",
+      "answer": "On the one set of figures that splits them cleanly, it is. In FY2025 10x Genomics' spatial consumables revenue rose 19% to $144.0 million while its single-cell consumables fell 2% to $363.2 million. Spatial is earlier in its adoption curve, works on archival FFPE tissue that pathology departments already hold, and answers questions dissociation-based single-cell methods destroy. Spatial instrument revenue still fell 41%, so the growth is pull-through on instruments already placed, not new placements."
+    },
+    {
+      "question": "Can spatial assays be used in clinical diagnostics today?",
+      "answer": "Only as laboratory-developed tests. No spatial platform holds an FDA companion-diagnostic approval, and products are sold research-use-only. A clinical spatial assay must be validated and run in a CLIA-certified laboratory under CMS oversight; FDA's attempt to regulate such tests as devices was vacated on 31 March 2025 and not appealed, which lowers the prospective compliance cost but creates no reimbursement. The absence of a CPT-coded payment is why clinical volume remains negligible."
+    },
+    {
+      "question": "Does the spatial market overlap with the single-cell sequencing market?",
+      "answer": "In the published figures, yes, and dangerously. At least one publisher lists spatial transcriptomics inside its single-cell sequencing technology segmentation, so adding a published single-cell number to a published spatial number can double-count the same revenue. 10x Genomics reports Single Cell and Spatial as separate lines, which is why its disclosure rather than any published total is the reliable basis for separating the two."
+    }
+  ],
+  "seo": {
+    "meta_title": "Spatial Biology Market Size & Forecast to 2032",
+    "meta_description": "Spatial biology market at $1.40B in 2026, reaching $3.32B by 2032 at 15.5%. Published estimates span 16.9x; two vendors' disclosed revenue tests them.",
+    "keywords": [
+      "spatial biology market",
+      "spatial transcriptomics market",
+      "spatial proteomics market",
+      "10x Genomics spatial revenue",
+      "Akoya Biosciences revenue",
+      "spatial multi-omics"
+    ]
+  },
+  "executive_summary": "Spatial biology is the rare market in this corpus where the grounding arithmetic says the published figures are too small. Estimates span 16.9x, from Arizton's $383.93 million for 2024 to a $6.5 billion figure for 2025 attributed to Roots Analysis — and the two extremes claim the same scope, spatial transcriptomics and genomics, which means they cannot both be measurements. Stranger still, the publisher carrying the $6.5 billion narrow-scope number publishes $1.20 billion for 2025 on the wider scope that contains it, a subset larger than its superset by 5.4x. We set that series aside and build on Roots Analysis' spatial-biology series, which is the only one whose published endpoints reconcile with its own published rate to better than 1%: $1.40 billion in 2026 rising to $3.32 billion by 2032 at 15.5%. The test that decides the scope question uses the only two companies that have disclosed spatial revenue for a common year. 10x Genomics' FY2024 spatial revenue, back-solved from the growth rates in its January 2026 filing, was about $178.8 million; Akoya Biosciences reported $81.7 million. Together $260.5 million — 67.9% of Arizton's whole-market total and 47.0% of MarketsandMarkets'. That leaves as little as $123 million for Bruker's NanoString platforms, Standard BioTools' Hyperion, Vizgen, Curio and the rest of the field, which is not credible when Bruker describes its spatial business as growing at low double digits. The narrow-scope totals measure a part of the market and are being read as the whole of it.",
+  "key_highlights": [
+    "Headline: $1.40 billion in 2026 to $3.32 billion in 2032 at 15.5%, built on Roots Analysis' own published 2026 base and rate",
+    "Published estimates span 16.9x, and the two extremes claim the same narrow scope — one publisher's subset figure exceeds its own superset figure by 5.4x",
+    "Two disclosing vendors booked about $260.5 million of spatial revenue in FY2024, which is 67.9% of one published whole-market total and 47.0% of another",
+    "That leaves as little as $123 million for Bruker's NanoString line, Standard BioTools' Hyperion, Vizgen, Curio and the whole remaining field — so the narrow totals are too low, not too high",
+    "Meticulous Research's own $1.48 billion base and 19.3% rate give $8.64 billion for 2036, 18% below the $10.2 billion it publishes",
+    "Spatial was 10x Genomics' only growing consumables line in FY2025, up 19% to $144.0 million, while spatial instruments fell 41%",
+    "Consolidation has reduced disclosure: NanoString into Bruker, Akoya into Quanterix, with no spatial split reported by either parent"
+  ],
+  "market_context": "Spatial biology occupies the gap between two measurement traditions. Pathology has always had tissue context and no molecular depth; genomics has molecular depth and, since dissociation became standard, no tissue context. Spatial platforms restore both at once, which is why the method spread through immuno-oncology and neuroscience faster than any commercial forecast anticipated — 8,121 PubMed records for 'spatial transcriptomics' by October 2026. Commercially, however, the sector has been absorbed rather than scaled: NanoString went into Bruker in the second quarter of 2024, Akoya into Quanterix from January 2025, and SomaLogic from Standard BioTools into Illumina in January 2026. The consequence for anyone trying to size the market is that it is less measurable now than it was in 2023. Of the major platforms, only 10x Genomics still reports spatial as a separate revenue line. This report leans heavily on that one disclosure, and on Akoya's final standalone year, precisely because they are the last clean data points before the category disappeared inside larger segment reporting.",
+  "forecast_analysis": "We publish 15.5%, the lower of the two wide-scope published rates, from the only series whose arithmetic closes on itself. Roots Analysis' $1.40 billion for 2026 compounded at its stated 15.5% gives $5.12 billion for 2035 against its published $5.14 billion — a 0.4% gap that tells you the series was built rather than asserted. The comparison matters: Meticulous Research's $1.48 billion for 2026 at its stated 19.3% gives $8.64 billion for 2036, not the $10.2 billion it publishes, so its headline endpoint requires 21.3% rather than the rate on its own page. On the substance, 15.5% is a claim that spatial consumables pull-through keeps compounding while instrument placements recover. The first half of that is observable — 10x's spatial consumables grew 19% in FY2025 — but the second half is not: spatial instrument revenue fell 41% in the same year, and a consumables base cannot compound indefinitely on instruments that stopped being placed. Readers should treat the near-term path as consumables-led and flatter than the curve, with the rate dependent on academic and biopharma capital budgets turning. The one element genuinely unpriced in every published series is spatial proteomics and outsourced services, which the narrow-versus-wide scope gap implies is already the larger half of the market and which no publisher sizes separately.",
+  "reader_takeaways": [
+    "Ask whether a published spatial figure covers proteomics and services or only transcriptomics and genomics. The difference is roughly 2-3x, and it is the whole of the apparent disagreement among the credible publishers.",
+    "Treat the sub-$600 million narrow-scope totals as a part, not the whole. Two companies alone disclosed $260.5 million for FY2024, which leaves no room for Bruker's NanoString line at the growth Bruker reports.",
+    "Check a forecast against its own arithmetic before using it. One series in this market publishes an endpoint 18% away from what its own base and rate produce.",
+    "Watch 10x Genomics' spatial consumables line as the category's only clean public signal, and expect it to be the last one: NanoString and Akoya no longer report separately.",
+    "Separate the consumables story from the instrument story. Spatial consumables grew 19% in FY2025 while spatial instruments fell 41%, and only the second of those sets the ceiling on future growth."
+  ]
+}

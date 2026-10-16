@@ -33,7 +33,7 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 16 | decentralized-clinical-trials-market | Healthcare IT | 2B | queued |
 | 17 | real-world-evidence-market | Healthcare IT | 2B | queued |
 | 18 | health-data-interoperability-market | Healthcare IT | 2B | queued |
-| 19 | revenue-cycle-management-automation-market | Healthcare IT | 2B | queued |
+| 19 | ~~revenue-cycle-management-automation-market~~ -> **revenue-cycle-management-market** | Healthcare IT | 2B | check-passed |
 | 20 | hospital-at-home-market | Healthcare IT | 2B | queued |
 | 21 | proton-therapy-market | Medical Devices | 3A | queued |
 | 22 | surgical-navigation-market | Medical Devices | 3A | queued |

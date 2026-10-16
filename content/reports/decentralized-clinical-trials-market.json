@@ -1,0 +1,240 @@
+{
+  "report_id": "decentralized-clinical-trials-market",
+  "slug": "decentralized-clinical-trials-market",
+  "title": "Decentralized Clinical Trials Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 10.2,
+    "forecast_value": 21.4,
+    "cagr": 13.0
+  },
+  "executive_summary": "Published estimates of the decentralized clinical trials market agree with each other to an unusual degree, and that is the first thing a reader should be suspicious of. Four independent houses put the 2024 base year between $8.19 billion and $8.8 billion -- a spread of only 1.07x -- and published compound growth rates between 13.0% and 14.8%, a spread of 1.14x. In a literature where eleven-fold disagreements are routine, convergence this tight usually means the houses are deriving the figure the same way from the same upstream denominator, not measuring independently.\n\nThe interesting question is therefore not how big the market is but what the agreed number can possibly be counting. ClinicalTrials.gov answers that. Of 607,160 studies in the register on 16 October 2026, exactly 37 text-match the phrase \"decentralized clinical trial\" -- six thousandths of one percent. There is no population of self-identified decentralized trials large enough to carry a $10 billion market.\n\nWhat there is, is a population of ordinary industry trials buying decentralized components. 11,502 industry-sponsored interventional studies began across 2024 and 2025, a run-rate of 5,751 a year. Divide the published 2026 market by that and you get $1.77 million of decentralization spend per industry trial -- roughly 2% to 9% of a late-phase budget, which is plausible, but only if essentially every industry trial now carries some decentralized element.\n\nThat is also the regulator's position. The FDA issued its final guidance in September 2024 under the title Conducting Clinical Trials With Decentralized Elements, retitling the 2023 draft, which had been Decentralized Clinical Trials for Drugs, Biological Products, and Devices. Commentators read the change as the agency abandoning the attempt to classify whole trials as decentralized or hybrid in favour of regulating individual elements. The commercial confirmation is Science 37, the only listed pure-play: it went public by SPAC merger in 2021 above a $1 billion valuation, booked $70.1 million of revenue in 2022, and sold to eMed in 2024 for about $38 million -- a third of one percent of the market it was named after.",
+  "market_context": "Decentralization is not a technology. It is a change in where the trial happens, and it is assembled from components that already had their own markets: telehealth consultations, electronic consent, electronic patient-reported outcome instruments, home nursing visits, direct-to-patient drug shipment, wearable sensors and remote source data verification. A sponsor does not buy a decentralized trial. It buys some of those components and runs them alongside sites.\n\nThat structure explains why the market is simultaneously easy to size and impossible to locate. Every large CRO and every eClinical platform vendor sells decentralized components, and none of them reports the revenue separately. Medidata sits inside Dassault Systemes with no standalone disclosure. Veeva reports product families rather than modalities: its 10-K for the year ended 31 January 2026 states that R&D and Quality Solutions was approximately 55% of total revenues of $3,195.3 million, which implies roughly $1.76 billion -- but that is the whole R&D platform, and the 55% is a percentage we have multiplied out ourselves rather than a reported figure. Oracle Health Sciences is consolidated inside Oracle. IQVIA's decentralized capability is spread across its R&D Solutions segment.\n\nThe one company that organised itself entirely around the narrow definition demonstrated what that definition is worth. Science 37's $70.1 million of 2022 revenue was 0.69% of the market as published for 2026, and the $38 million eMed paid for the whole company in 2024 was 0.37% of it. A market where the pure-play is a rounding error is a market defined by a feature, not by an industry."
+  ,
+  "forecast_analysis": "The curve shown here is modelled at a constant rate between two published endpoints. P&S Intelligence, in its April 2026 edition, publishes $9.1 billion for 2025, $10.2 billion for 2026 and $21.4 billion for 2032 with a stated 13.0% CAGR over 2026-2032. Those endpoints imply 13.15% compound, which reconciles with the stated rate. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen because it publishes an explicit 2026 value and an explicit 2032 value on one scope, and because its segmentation makes the broad reading of the market explicit: alongside hybrid designs at about 60% and fully decentralized designs in the minority, it carries a category called site-centric with digital enablement. A trial that is site-centric with digital enablement is a conventional trial that bought a decentralized component. Counting it is exactly the scope decision the grounding arithmetic shows must be in force, and P&S is the only house that says so in its own structure.\n\nThe forecast endpoints across the set look more divergent than they are. BCC Research reaches $18.8 billion by 2030, Business Research Insights $24.97 billion by 2032 and Global Market Insights $29.7 billion by 2034. Rebased to 2032 at each house's own rate they sit between roughly $21 billion and $25 billion. The real uncertainty is not the rate but whether the category survives as a separate line item at all, given that the regulator has stopped treating it as one.",
+  "market_overview": {
+    "summary": "On the scope used by the most recent series that publishes both a 2026 and a 2032 value, the decentralized clinical trials market is $10.2 billion in 2026, projected to $21.4 billion by 2032 at a 13.0% CAGR. Published 2024 base-year estimates span only $8.19 billion to $8.8 billion, a 1.07x spread, and published growth rates only 13.0% to 14.8%. That agreement is unusual and should be read as a shared derivation method rather than as corroboration. Against ClinicalTrials.gov, only 37 of 607,160 registered studies describe themselves as decentralized trials, so the published figures can only be measuring decentralized elements bought by ordinary industry trials -- which is also how the FDA chose to regulate them from September 2024.",
+    "key_trends": [
+      "Published 2024 base-year estimates span just 1.07x ($8.19 billion to $8.8 billion) and CAGRs just 1.14x (13.0% to 14.8%), the tightest agreement in this corpus",
+      "Only 37 of the 607,160 studies in ClinicalTrials.gov text-match \"decentralized clinical trial\" as of 16 October 2026, which is 0.006% of the register",
+      "11,502 industry-sponsored interventional studies began across 2024 and 2025, implying $1.77 million of decentralization spend per industry trial at the published 2026 market size",
+      "The FDA's September 2024 final guidance is titled Conducting Clinical Trials With Decentralized Elements, retitled from a 2023 draft that had named decentralized trials as a trial class",
+      "Science 37, the only listed pure-play, sold to eMed for about $38 million in 2024 after a 2021 SPAC merger above a $1 billion valuation and $70.1 million of 2022 revenue",
+      "P&S Intelligence's own segmentation carries site-centric with digital enablement as a category, confirming that conventional trials with decentralized components are inside the count"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Component-level adoption is widespread in industry trials; fully remote designs remain a minority"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A regulatory framework that now explicitly accommodates decentralized elements: the FDA's final guidance of September 2024 covers telehealth visits, in-home visits by remote trial personnel and visits with local healthcare providers",
+      "A very large base of ordinary trials into which components can be sold: 11,502 industry-sponsored interventional studies began across 2024 and 2025, a run-rate of 5,751 a year",
+      "Recruitment and retention economics, which decentralized elements improve by removing travel from the participant's burden rather than by changing the science",
+      "Rare disease and oncology programmes where the eligible population is geographically dispersed and site-based recruitment is the binding constraint",
+      "Established eClinical platform vendors able to add decentralized modules to installed bases they already own, which lowers the cost of adoption for sponsors"
+    ],
+    "restraints": [
+      "The FDA's retitling of its own guidance removed the regulatory basis for treating decentralized trials as a distinct class, which undermines the category as a separately purchasable line item",
+      "Only 37 studies in a 607,160-study register describe themselves as decentralized, so there is no self-identifying buyer population to sell to",
+      "The only listed pure-play, Science 37, reached $70.1 million of revenue and sold for about $38 million in 2024, which is the market's own verdict on standalone decentralized businesses",
+      "Investigational product complexity limits what can leave the site: the FDA's guidance advises weighing product safety and complexity, with in-person oversight for high-risk or first-in-human products",
+      "Published market sizes that converge too neatly on a figure none of the houses can decompose make this category an unreliable basis for capital planning"
+    ],
+    "opportunities": [
+      "Selling decentralized components into the large majority of trials that remain site-centric, which is where P&S Intelligence locates a named segment rather than a new market",
+      "Post-approval and real-world late-phase studies, which P&S identifies as the fastest-growing phase category and where home-based data collection is the default rather than an innovation",
+      "Small and medium sponsors, identified as the fastest-growing organisation size, who have no site network to protect and therefore no internal resistance to decentralization",
+      "Regulatory operations services: sponsors now need to document how each decentralized element was controlled, which creates work that did not exist before September 2024"
+    ],
+    "challenges": [
+      "No participant discloses decentralized-trial revenue, so share cannot be computed for anyone: Medidata sits inside Dassault Systemes, Oracle Health Sciences inside Oracle, and Veeva reports product families rather than modalities",
+      "Component-level adoption inside conventional trials is invisible to every public register, so adoption cannot be measured, only asserted",
+      "Local healthcare provider involvement shifts responsibility to clinicians who are not trial-trained, which is a quality risk the FDA guidance addresses but does not remove",
+      "The convergence of published estimates removes the usual diagnostic signal: when houses disagree you can locate the scope decision, and when they agree without publishing methods you cannot"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Platforms and technology solutions",
+      "Operational and support services",
+      "Electronic consent and electronic patient-reported outcomes",
+      "Telehealth and virtual visit infrastructure",
+      "Home nursing and mobile clinical services",
+      "Direct-to-patient investigational product logistics",
+      "Wearable and sensor data capture"
+    ],
+    "by_application": [
+      "Fully decentralized trial designs",
+      "Hybrid trial designs",
+      "Site-centric trials with digital enablement",
+      "Post-approval and real-world late-phase studies",
+      "Registry and observational research"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biotechnology sponsors",
+      "Contract research organisations",
+      "Medical device and diagnostics sponsors",
+      "Academic and cooperative group sponsors",
+      "Site networks and local healthcare providers"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 10.2 },
+    { "year": 2027, "value": 11.54 },
+    { "year": 2028, "value": 13.06 },
+    { "year": 2029, "value": 14.77 },
+    { "year": 2030, "value": 16.72 },
+    { "year": 2031, "value": 18.91 },
+    { "year": 2032, "value": 21.4 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "IQVIA",
+      "headquarters": "United States",
+      "market_position": "Incumbent CRO with decentralized capability distributed across its research segment",
+      "description": "Reported FY2025 revenue of $16,310 million, of which Research & Development Solutions was $8,896 million. Decentralized capability sits inside that segment with no separate line item, and from 1 January 2026 IQVIA additionally moved Real-World Late Phase and certain other real-world offerings -- $674 million of 2025 revenue -- into R&DS, which further blends late-phase and decentralized work into one reported figure. No decentralized-trial revenue or share is disclosed."
+    },
+    {
+      "company": "Medidata (Dassault Systemes)",
+      "headquarters": "United States / France",
+      "market_position": "Incumbent eClinical platform, decentralized components sold as modules",
+      "description": "Carries eConsent, eCOA and Sensor Cloud as the components that, in the company's own description, bring trials to patients at home. Medidata is a Dassault Systemes business and publishes no standalone revenue; Dassault does not break out a decentralized line. Neither a size nor a share can be stated."
+    },
+    {
+      "company": "Veeva Systems",
+      "headquarters": "United States",
+      "market_position": "Incumbent clinical platform competing on the whole R&D stack rather than on decentralization",
+      "description": "Reported total revenues of $3,195.3 million for the fiscal year ended 31 January 2026, up 16%, with subscription revenue of $2,684.2 million. The 10-K states that R&D and Quality Solutions accounted for approximately 55% of total revenues, up from 53%. Multiplying that percentage gives roughly $1.76 billion -- our arithmetic on a disclosed percentage, not a reported segment figure -- and in any case it covers the whole R&D and quality platform, not decentralization. No decentralized revenue or share is disclosed."
+    },
+    {
+      "company": "Oracle Health Sciences",
+      "headquarters": "United States",
+      "market_position": "Incumbent clinical data platform consolidated inside a much larger parent",
+      "description": "Clinical trial technology is reported within Oracle and is not separable from the parent's cloud and applications revenue. Oracle publishes no clinical trials segment and no decentralized line, so no size or share figure exists for it in this market."
+    },
+    {
+      "company": "Science 37 (eMed)",
+      "headquarters": "United States",
+      "market_position": "The only listed pure-play, now a private subsidiary",
+      "description": "Built entirely around the narrow definition of a decentralized trial. Went public by SPAC merger in 2021 at a valuation above $1 billion, booked $70.1 million of revenue in 2022 against a $100 million forecast made at the time of the merger, and on 29 January 2024 agreed to be acquired by the telehealth and diagnostics company eMed for $5.75 per share in cash, about $38 million, a roughly 21% premium to the prior close. It delisted and now operates as a subsidiary of eMed, LLC. Its best reported year was 0.69% of the market as published for 2026."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "U.S. Food and Drug Administration",
+      "year": 2024,
+      "event": "Issued the final guidance Conducting Clinical Trials With Decentralized Elements in September 2024, retitling the 2023 draft Decentralized Clinical Trials for Drugs, Biological Products, and Devices. Commentators read the retitling as the agency moving away from classifying whole trials as decentralized or hybrid and toward regulating individual decentralized elements such as telehealth visits, in-home visits by remote trial personnel and visits with local healthcare providers. The final version encourages early engagement with the relevant review division, particularly for complex or first-in-human trials."
+    },
+    {
+      "company": "Science 37",
+      "year": 2024,
+      "event": "Agreed on 29 January 2024 to be acquired by eMed for $5.75 per share in cash, valuing the whole company at about $38 million, a roughly 21% premium to the prior close. The company had gone public by SPAC merger in 2021 at a valuation above $1 billion and booked $70.1 million of revenue in 2022, short of the $100 million forecast at the time of the merger. The transaction took the only listed decentralized-trial pure-play private."
+    },
+    {
+      "company": "IQVIA",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $16,310 million on 5 February 2026, with Research & Development Solutions at $8,896 million, and announced that from 1 January 2026 Real-World Late Phase and certain other real-world offerings representing $674 million of 2025 revenue move from the Technology & Analytics Solutions segment into R&DS -- blending late-phase and decentralized research into a single reported segment."
+    },
+    {
+      "company": "Veeva Systems",
+      "year": 2026,
+      "event": "Reported fiscal 2026 total revenues of $3,195.3 million, up 16%, with subscription revenue of $2,684.2 million, and disclosed in its 10-K that R&D and Quality Solutions reached approximately 55% of total revenues, up from 53% the prior year, with that share expected to keep rising."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA final guidance, Conducting Clinical Trials With Decentralized Elements (September 2024): addresses decentralized elements individually -- telehealth visits, in-home visits by remote trial personnel, visits with local healthcare providers -- rather than classifying a trial as decentralized or hybrid, and advises weighing investigational product safety and complexity before allowing use outside the site",
+    "FDA revised Part 11 questions and answers on electronic systems, electronic records and electronic signatures in clinical investigations (October 2024), which governs the data systems any decentralized element depends on",
+    "FDA draft guidance on integrating randomised controlled trials into routine clinical practice, released alongside the decentralized-elements final guidance, which addresses the point-of-care trial designs that overlap this market",
+    "21 CFR Part 50 informed consent requirements, which electronic consent must satisfy rather than replace",
+    "EU Clinical Trials Regulation 536/2014 and the EMA/HMA/EC recommendation paper on decentralised elements in clinical trials (2022), which set the European position and are not identical to the FDA's",
+    "ICH E6(R3) Good Clinical Practice, which revised the GCP framework to be modality-neutral and applies to data captured remotely on the same terms as data captured at a site"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public registers, public filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "ClinicalTrials.gov API v2, retrieved 16 October 2026: 607,160 studies in the whole register; 37 text-matching \"decentralized clinical trial\"; 5,711 text-matching \"remote monitoring\" or \"telehealth\"; 11,502 interventional studies with an industry lead sponsor and a start date between 1 January 2024 and 31 December 2025",
+      "FDA, Conducting Clinical Trials With Decentralized Elements, final guidance for industry, investigators and other interested parties, September 2024, retitled from the 2023 draft Decentralized Clinical Trials for Drugs, Biological Products, and Devices",
+      "IQVIA Holdings, fourth-quarter and full-year 2025 results, 5 February 2026: total revenue $16,310 million; R&DS $8,896 million; TAS $6,626 million; CSMS $788 million; Real-World Late Phase and certain other real-world offerings representing $674 million of 2025 revenue moved from TAS to R&DS effective 1 January 2026",
+      "Veeva Systems, Form 10-K for the fiscal year ended 31 January 2026 (SEC EDGAR CIK 1393052) and fourth-quarter and fiscal 2026 results of 4 March 2026: total revenues $3,195.3 million; subscription revenue $2,684.2 million; R&D and Quality Solutions approximately 55% of total revenues",
+      "Fierce Biotech, Science 37 agrees to be acquired by eMed in deal valued at $38M, 29 January 2024: $5.75 per share cash, about 21% premium, $70.1 million of 2022 revenue against a $100 million SPAC-era forecast, 2021 SPAC merger above a $1 billion valuation",
+      "P&S Intelligence, decentralized clinical trials market, April 2026, report code 13993: $9.1 billion (2025), $10.2 billion (2026), $21.4 billion (2032), 13.0% CAGR 2026-2032",
+      "BCC Research, Decentralized Clinical Trials: Global Markets, 2025 edition: $8.8 billion (2024), $18.8 billion (2030), 13.7% CAGR 2025-2030",
+      "Global Market Insights, decentralized clinical trials market: $8.6 billion (2024), $29.7 billion (2034), 13.3% CAGR",
+      "Outsourcing-Pharma, 13 November 2024, reporting Business Research Insights: $7.14 billion (2023), $8.19 billion (2024), $24.97 billion (2032), 14.8% CAGR -- a third-party summary rather than the primary release, and flagged as such"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Three plausibility tests were run against countable public records. First, of 607,160 studies in ClinicalTrials.gov on 16 October 2026 only 37 text-match \"decentralized clinical trial\" -- 0.006% -- which rules out any reading in which the market consists of self-identified decentralized trials. Second, 11,502 industry-sponsored interventional studies began across 2024 and 2025, a run-rate of 5,751 a year; dividing the published 2026 market of $10.2 billion by that gives $1,773,605 per trial, roughly 2% to 9% of a late-phase budget, which is plausible only if essentially every industry trial carries some decentralized element -- the same reading the FDA adopted when it retitled its guidance in September 2024. Third, Science 37, the only listed pure-play, booked $70.1 million in 2022 (0.69% of the published 2026 market) and sold for about $38 million in 2024 (0.37%), which rules out a reading in which the market consists of standalone decentralized-trial businesses. None of these tests establishes the correct market size and none is offered as an estimate. The 2032 endpoint and intermediate years are interpolation between P&S Intelligence's published 2026 and 2032 values at the implied constant rate, not separately published observations."
+  },
+  "faqs": [
+    {
+      "question": "How big is the decentralized clinical trials market?",
+      "answer": "$10.2 billion in 2026 rising to $21.4 billion by 2032 at 13.0%, on the scope published by P&S Intelligence in April 2026. Published 2024 base-year estimates from four houses run only $8.19 billion to $8.8 billion, a 1.07x spread, which is unusually tight. Treat that agreement as a shared derivation method rather than as independent corroboration, because none of the houses publishes the method."
+    },
+    {
+      "question": "Why do so few registered trials describe themselves as decentralized?",
+      "answer": "Because almost none of them are, in the strict sense. On 16 October 2026 exactly 37 of the 607,160 studies in ClinicalTrials.gov text-matched the phrase \"decentralized clinical trial\". A $10 billion market cannot rest on 37 studies, so the published figures must be counting decentralized components bought by ordinary trials. The FDA reached the same conclusion: its September 2024 final guidance is titled Conducting Clinical Trials With Decentralized Elements, having dropped the 2023 draft's framing of decentralized trials as a trial class."
+    },
+    {
+      "question": "How can you check whether a decentralized trials market size is plausible?",
+      "answer": "Divide it by the number of trials that could buy decentralized components. 11,502 industry-sponsored interventional studies began across 2024 and 2025, a run-rate of 5,751 a year. $10.2 billion over that is $1,773,605 per trial, or about 2% to 9% of a typical late-phase budget. That passes -- but only on the assumption that nearly every industry trial now buys something decentralized. If you believe only a minority do, the implied per-trial spend becomes impossible."
+    },
+    {
+      "question": "What happened to the pure-play decentralized trial companies?",
+      "answer": "Science 37, the only listed one, went public by SPAC merger in 2021 at a valuation above $1 billion, reached $70.1 million of revenue in 2022 against a $100 million forecast, and was acquired by eMed in 2024 for $5.75 per share, about $38 million. Its best reported year was 0.69% of the market as published for 2026, and the whole company sold for 0.37% of it. That is the clearest evidence that decentralization is a feature sold by incumbents, not an industry."
+    },
+    {
+      "question": "Who leads the decentralized clinical trials market?",
+      "answer": "IQVIA, Medidata, Veeva Systems and Oracle Health Sciences are the recognised participants, and not one of them discloses decentralized-trial revenue. Medidata sits inside Dassault Systemes. Oracle Health Sciences sits inside Oracle. Veeva reports product families: its 10-K puts R&D and Quality Solutions at approximately 55% of $3,195.3 million for the year ended 31 January 2026, which is the whole R&D platform. No share percentage exists for anyone, so treat any you are shown as unsourced."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no named source publishes a defensible dollar split for this scope. P&S Intelligence states North America at about 40% and Asia-Pacific growing fastest at 13.9%, but publishes no regional values and no method. We have a global trial register and no regional revenue data, which is enough to test a global figure for plausibility and not enough to apportion one, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Published 2024 base-year estimates span only 1.07x ($8.19 billion to $8.8 billion) and CAGRs only 1.14x (13.0% to 14.8%) -- read the agreement as a shared method, not as corroboration",
+    "Only 37 of 607,160 studies in ClinicalTrials.gov text-match \"decentralized clinical trial\" as of 16 October 2026, which is 0.006% of the register",
+    "11,502 industry-sponsored interventional studies began across 2024 and 2025, implying $1,773,605 of decentralization spend per industry trial at the published 2026 size",
+    "The FDA's September 2024 final guidance regulates decentralized elements, not decentralized trials, having retitled the 2023 draft that treated them as a trial class",
+    "Science 37, the only listed pure-play, booked $70.1 million in 2022 and sold to eMed for about $38 million in 2024 -- 0.37% of the market it was named after",
+    "P&S Intelligence's own segmentation includes site-centric trials with digital enablement, confirming conventional trials are inside the count",
+    "No participant discloses decentralized-trial revenue, so no share figure for this market is verifiable"
+  ],
+  "reader_takeaways": [
+    "Before accepting a decentralized trials market size, ask whether it counts trials or components -- only the component reading survives the 37-studies-in-607,160 test",
+    "Use ClinicalTrials.gov as your own sanity check: divide any figure you are given by roughly 5,751 industry-sponsored interventional trials a year and ask whether that per-trial spend is credible for your therapeutic area",
+    "Read the FDA's September 2024 retitling as a commercial signal, not just a regulatory one: a category the regulator declines to define as a class is hard to sell as a line item",
+    "Do not plan on a standalone decentralized business: the only pure-play reached $70.1 million of revenue and sold for about $38 million",
+    "Treat any vendor share percentage for this market as unsourced, because every significant participant reports decentralization inside a larger segment or inside a parent company"
+  ],
+  "seo": {
+    "meta_title": "Decentralized Clinical Trials Market Forecast 2032",
+    "meta_description": "DCT estimates agree within 1.07x, yet only 37 of 607,160 ClinicalTrials.gov studies call themselves decentralized. What the published figures count.",
+    "keywords": [
+      "decentralized clinical trials market",
+      "DCT market size",
+      "decentralized clinical trials forecast 2032",
+      "FDA decentralized elements guidance",
+      "hybrid clinical trials",
+      "remote clinical trials market",
+      "eClinical platform market"
+    ]
+  }
+}

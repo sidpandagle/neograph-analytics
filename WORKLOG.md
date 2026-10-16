@@ -621,3 +621,48 @@ clipped, so the outer ring is the one carrying contrast.
 
 Verified in the built CSS; the contrast figures are computed from the token
 values, not yet observed in a browser (browser tools open at 21:00 IST).
+
+### Round 2, batch 2B — five Healthcare IT reports drafted (held, not published)
+All five pass `check`. Held on the branch rather than published, because
+`dynamicParams = false` on the report route means a row in Supabase that was not
+in the last build's `generateStaticParams()` **404s**, while `/reports` — ISR,
+hourly — would already be listing a card pointing at it. That is PR #4's
+soft-404 defect with the sign flipped. The rule is now written into the
+authoring brief: publish only when a merge slot can follow within the hour.
+
+The batch's findings are unusually good:
+
+- **RWE**: IQVIA's 2026 segment reorganisation accidentally disclosed its
+  real-world line at **$674M in 2025 revenue** — 21.7% of one published whole
+  global market, while IQVIA's whole Technology & Analytics segment ($6,626M) is
+  **3.31x another publisher's entire $2.0B world**.
+- **Interoperability**: a **14.6x** spread at 2025 ($5.8B to $84.58B) with
+  nothing in between, and **Credence Research publishes both ends** — ~$10.63B
+  and ~$349.9B by 2032, a 33-fold gap inside one catalogue. Per Designated QHIN
+  (11, Sequoia Project), the high estimate implies $9.4B each, **15.5x Epic's
+  entire 2025 revenue**.
+- **Decentralised trials**: four houses agree to 1.07x, which the report reads as
+  a shared derivation rather than corroboration. Only **37 of 607,160**
+  ClinicalTrials.gov studies text-match "decentralized clinical trial", and the
+  only pure-play (Science 37) sold for ~$38M after booking $70.1M — 0.37% of the
+  market named after it. The FDA dropped "decentralized clinical trials" for
+  "decentralized elements" in September 2024, which is the regulator conceding
+  the same scope point.
+- **Hospital-at-home**: 373 approved hospitals across 140 systems (January
+  2026), against **31,000 patients in four years** of the CMS programme, while
+  published sizes imply 202,211 to 811,027 episodes a year.
+- **RCM**: published as `revenue-cycle-management-market`, **not** as the
+  automation slug it was queued under. The report's finding is that no
+  defensible standalone size for RCM automation exists — the one
+  automation-specific figure is **29.0x Waystar's entire FY2025 revenue** — so a
+  title promising an automation market size would have reproduced the defect the
+  report is about. The superseded draft is kept at
+  `content/reports/_superseded-...json`; nothing was deleted.
+
+One correction to my own brief, which the research pass caught: I told it the
+CMS hospital-at-home waiver was near statutory expiry. **Section 6210 of the
+Consolidated Appropriations Act, 2026 extended it to 30 September 2030**
+(corroborated by Chartis and the AMA). The real restraint is that the waiver
+**already lapsed once**, in the 2025 shutdown, and that 30 September 2030 falls
+inside every published forecast period while none of them says what happens on
+1 October 2030.
