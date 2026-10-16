@@ -1368,3 +1368,27 @@ verticals" while 26 of those rows are agritech, climate tech, space economy,
 quantum technology, digital infrastructure, advanced materials or synthetic
 biology. Now "152 research reports across 6 research verticals", which is true
 whichever way Siddhant decides R-10. Verified in the built homepage.
+
+### Core Web Vitals, measured (BACKLOG P2)
+First trace of a report page, local production build, no throttling:
+
+```
+LCP            1,572 ms   (TTFB 28 ms, render delay 1,544 ms — 98.2%)
+LCP element    the server-rendered <h1>: text, already in the HTML
+CLS            0.00
+DOM            771 elements, depth 16 — not the problem
+layout updates 678 ms, 179 ms, 680 ms, each over 1102 of 1102 nodes
+```
+
+The shape of this is unusual and worth stating plainly: the largest element is
+text that is **already in the delivered HTML**, so nothing is waiting on the
+network — 98% of LCP is the main thread, and two ~680ms full-page layout passes
+account for most of it. On a desktop with no throttling.
+
+Filed as **R-13** with the suspects ranked (Recharts measuring its container,
+the TOC `IntersectionObserver`, the header's `backdrop-filter`) rather than
+guessed at: isolating it needs a trace with the charts removed, which is not
+something to start twenty minutes before a deploy.
+
+CLS at 0.00 is worth recording as a pass — the chart containers and the sticky
+rails hold their space.
