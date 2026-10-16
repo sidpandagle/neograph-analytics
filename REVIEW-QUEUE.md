@@ -35,6 +35,8 @@ land at the first slot after 00:00 UTC.
 | **Homepage claimed "over 2,500 research reports spanning 20+ sectors and 50+ countries"** one scroll below the hero's correct "142 across 6". | 3 corpus sizes on one page | claim removed; hero is sole source of truth |
 | **Left rail overhung the hero by ~155px.** 13 items at 48px pitch. | rail ~721px | **645px**, pitch 42px, measured |
 | Negative growth rendered as `+-2.1%` | latent | sign handled |
+| **Region filter: **142 of 142** reports are `Global`, so 5 of 6 options return nothing and the 6th returns everything** (was R-0c) | `"region":"Global"` x142 | region select dropped while one distinct value exists; it returns when regional rows do |
+| **6 of 12 category chips and mega-menu entries match **zero** reports (Clinical Diagnostics, Healthcare Services, Laboratory Equipment, Therapeutic Area, Dental, Animal Health)** (was R-0b) | counted in the live `/reports` RSC payload | chips and tiles now derived from the corpus: 6 live categories with counts (38/39/16/6/23/20 = 142) |
 | **No `error.tsx` or `global-error.tsx` anywhere** (was R-5) | an unhandled render error shows the bare Next.js error page | fixed — see below |
 | **Charts have no `<figure>`/`<figcaption>`; `charts[].data_source` is populated in the data and never rendered** (was R-1) | field present on report rows, 0 occurrences in built HTML | fixed — see below |
 | **Site promises methodology and sources in 3 places; **0** reachable source attributions exist and there is no `/methodology` route** (was R-0g) | `charts[].data_source` populated, never rendered | fixed — see below |
@@ -44,8 +46,6 @@ land at the first slot after 00:00 UTC.
 | # | Severity | Finding | Measured evidence |
 |---|---|---|---|
 | ~~R-0~~ | fixed #14 | `/reports` search filters a **10-row** `all_reports.json`, not the 142 passed from the server — typing anything hides 93% of the catalogue | `len(all_reports.json)` = 10 vs 142 live; also ships 206KB of JSON to the client |
-| R-0b | high | 6 of 12 category chips and mega-menu entries match **zero** reports (Clinical Diagnostics, Healthcare Services, Laboratory Equipment, Therapeutic Area, Dental, Animal Health) | counted in the live `/reports` RSC payload |
-| R-0c | high | Region filter: **142 of 142** reports are `Global`, so 5 of 6 options return nothing and the 6th returns everything | `"region":"Global"` x142 |
 | R-0d | high | `.prose` never applies to report pages — `StyledReportContent.tsx` (381 lines) is imported nowhere, so the tuned long-form CSS is dead for reports | 0 `prose` matches in built report HTML |
 | R-0e | high | Focus ring `#1541E3` on the blue hero panels = **1.00:1**; on the footer = 2.46:1. WCAG 1.4.11 needs 3:1 | keyboard focus invisible on the primary CTAs |
 | R-0f | high | 9 of 10 testimonials are non-healthcare, under the heading "What healthcare executives say" — incl. a vehicle-engineering principal engineer and a football club director | West Ham United, Mitsubishi Motors R&D, Clorox, Singapore Tourism Board |

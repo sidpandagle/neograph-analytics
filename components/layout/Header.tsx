@@ -2,18 +2,24 @@ import Link from "next/link";
 import Navigation, { MobileNav } from "./Navigation";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
+import { getReportCategories } from "@/lib/api/home";
 
 /**
  * The header is a panel on the desk, sitting in normal document flow so it
  * scrolls away with the rest of the page instead of staying pinned.
  */
-export default function Header() {
+export default async function Header() {
+  /* The category tiles and chips used to come from `data/categories.json`,
+     where six of twelve sectors matched no report at all. They now come from
+     the corpus; the JSON remains the fallback inside Navigation. */
+  const categories = await getReportCategories();
+
   return (
     <div className="mx-auto w-full max-w-desk px-3.5 pt-4 pb-4 md:px-5 md:pt-5 md:pb-5">
       <header className="flex items-center justify-between gap-4 rounded-card border border-[var(--cmi-line)] bg-[var(--card)] px-4 py-2.5 shadow-card backdrop-blur-xl md:px-[22px] md:py-3.5">
         <Logo variant="dark" />
 
-        <Navigation />
+        <Navigation categories={categories} />
 
         <div className="flex shrink-0 items-center gap-3 md:gap-4">
           <Link
@@ -23,7 +29,7 @@ export default function Header() {
             Request Sample
           </Link>
           <ThemeToggle />
-          <MobileNav />
+          <MobileNav categories={categories} />
         </div>
       </header>
     </div>

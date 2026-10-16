@@ -11,6 +11,7 @@
  */
 import { supabase } from '@/lib/supabase/client';
 import { toNum } from '@/lib/format';
+import categoriesJson from '@/data/categories.json';
 
 const TABLE = 'neograph_reports';
 
@@ -221,4 +222,64 @@ export async function getSearchIndex(): Promise<SearchIndexEntry[]> {
       region: regions[0]?.region ?? 'Global',
     };
   });
+}
+
+/**
+ * The report categories that actually exist in the corpus, with counts.
+ *
+ * `data/categories.json` lists 12 sectors. Six of them — Clinical Diagnostics,
+ * Healthcare Services, Laboratory Equipment, Therapeutic Area, Dental, Animal
+ * Health — match no report, so half the mega-menu tiles and listing chips led
+ * to an empty page. The JSON is still the source of slugs and descriptions;
+ * this decides which of them get rendered, and adds any industry present in
+ * the corpus that the JSON never listed.
+ *
+ * Selects one short column over 142 rows (a few KB), in keeping with the
+ * egress discipline in this file. The header is in the root layout, so every
+ * ISR-cached route pays this once per revalidation window.
+ */
+export interface ReportCategory {
+  id: number;
+  name: string;
+  slug: string;
+  description: string;
+  count: number;
+}
+
+export async function getReportCategories(): Promise<ReportCategory[]> {
+  const { data, error } = await supabase.from(TABLE).select('industry');
+
+  if (error) {
+    console.error('[getReportCategories] query failed:', error.message);
+    return [];
+  }
+
+  const counts = new Map<string, number>();
+  for (const row of data ?? []) {
+    const name = typeof row.industry === 'string' ? row.industry.trim() : '';
+    if (name) counts.set(name, (counts.get(name) ?? 0) + 1);
+  }
+  if (counts.size === 0) return [];
+
+  const defined = categoriesJson as Array<{
+    id: number; name: string; slug: string; description: string;
+  }>;
+  const order = new Map(defined.map((c, i) => [c.name, i]));
+
+  return [...counts.entries()]
+    .map(([name, count]) => {
+      const match = defined.find((c) => c.name === name);
+      return {
+        id: match?.id ?? 1000 + (order.size + count),
+        name,
+        slug: match?.slug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+        description: match?.description ?? `${count} research reports in ${name}.`,
+        count,
+      };
+    })
+    .sort(
+      (a, b) =>
+        (order.get(a.name) ?? 99) - (order.get(b.name) ?? 99) ||
+        a.name.localeCompare(b.name)
+    );
 }

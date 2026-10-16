@@ -437,3 +437,27 @@ render error showed the bare Next.js screen.
 Build clean, 142 report pages + `/methodology` prerendered. In the built HTML:
 `<figure>` wraps the forecast chart with the caption above; `/methodology`
 renders 1 `<h1>`, 5 `<h2>` and the live corpus count (142 across 6).
+
+### Filters that return nothing (was R-0b, R-0c)
+`/reports` rendered 12 category chips from `data/categories.json` while the
+corpus contains 6 industries. Six chips — Clinical Diagnostics, Healthcare
+Services, Laboratory Equipment, Therapeutic Area, Dental, Animal Health — were
+guaranteed to return an empty page, and the same six were tiles in the
+mega-menu and rows in the mobile drawer. The region select offered six options
+over a corpus where all 142 rows are `Global`: five returned nothing, one
+returned everything.
+
+Both now derive from the data. `getReportCategories()` selects the single
+`industry` column (a few KB over 142 rows, in keeping with the egress rule in
+that file) and the header passes the result to `Navigation` and `MobileNav`;
+`data/categories.json` stays as the slug/description map and as the fallback if
+the query fails, so the menu can never render empty. The listing builds its own
+chip list the same way and prints the count on each chip. The region control is
+dropped while only one distinct value exists and returns on its own when
+regional rows do.
+
+Verified in the built HTML: chips read
+`Biotechnology 38, Healthcare IT 39, Medical Devices 16, Medical Imaging 6,
+Life Sciences 23, Pharmaceuticals 20` — summing to 142 — the hero line reads
+"across 6 healthcare sectors" rather than 12, the header exposes 6 distinct
+`?category=` links rather than 12, and no region select is present.
