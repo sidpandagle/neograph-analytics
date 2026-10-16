@@ -898,3 +898,41 @@ of which is in the live corpus yet. That is the link checker doing its job, and
 it establishes the order inside a deploy — **reports first, then anything that
 links to them** — which is now written into the authoring brief. Its title also
 measured 89 characters and is now 57.
+
+### `/llms.txt` was describing 8% of the publication, and advertising 404s
+Two defects in one endpoint, both found while checking whether new content
+reaches it.
+
+**It read the bundled snapshots, not the corpus.** `data/reports.json` holds 12
+rows and `data/blogs.json` 6, against 152 reports live. A crawler asking this
+endpoint what the publication covers was told about **12 of 152 reports** — the
+same defect class as the listing search that filtered a 10-row snapshot, and
+with the same cause: a JSON file left in place after the data moved to Supabase.
+
+**It advertised URLs that do not exist.** A `/categories/<slug>` link for each of
+the twelve entries in `categories.json`, printed twice over — **24 dead links**,
+against a route that does not exist (`/categories/biotechnology` -> 404,
+verified). Six of those twelve categories match no report at all. It also
+advertised `/consulting`, which 308s to `/services`. Feeding a crawler a list of
+dead links is the soft-404 problem aimed at machines instead of people.
+
+Rewritten: Supabase first with the snapshots as the fallback that keeps the
+endpoint answering if the database is unreachable (and the footer now says which
+source produced the output). Categories are derived from the corpus, so one with
+no reports cannot be advertised, and category links point at
+`/reports?category=<slug>`, which is what the listing actually reads. The report
+index is complete rather than a sample of 15 — one line each is a few hundred
+bytes, and a crawler asking what we cover should be told. Analysis articles and
+press releases are included, and the methodology is stated in full near the top.
+
+Measured on a clean local server: **21KB -> 85KB, 12 -> 152 report URLs, 24 -> 0
+`/categories/` links**, `Content source: live corpus`, and the million-unit
+reports render correctly (`$66.5M base year -> $167.9M forecast`).
+
+**Process note, the same trap as PR #10's false negative.** The first
+verification showed the *old* output. Cause: a `next start -p 3100` from this
+repo, launched at 02:24 today by an earlier session, still holding the port and
+serving stale code. Confirmed by PID and command line that it was mine and from
+this repo, then **left running** and the check repeated on **port 3101** — the
+instruction is to not disturb anything on this machine, and a second port costs
+nothing. Verify the server is the one you just built.
