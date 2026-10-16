@@ -1476,3 +1476,42 @@ pre-paint theme script, the font load, or a long task holding the first frame �
 and it is a different question from the one R-13 started as. Next pass blocks
 gtag at the network layer rather than in page script, where it cannot be routed
 around.
+
+## 2026-10-17 — the deploy, and the defect it exposed on the way
+
+Published 30 reports, 2 articles and the press release to Supabase (corpus
+**152 -> 182**), then built — and the spot check found the new report pages
+carrying **no related-research block at all**, while the old ones had theirs.
+
+Three wrong explanations before the right one, each discarded on evidence:
+
+1. *A transient Supabase failure under build load.* Added a retry and a longer
+   memo TTL. Rebuilt: unchanged.
+2. *Stale build artefacts.* File timestamps showed both files written in the
+   same build, six seconds apart.
+3. *Bad data.* A direct query returned 182 rows, found the new slug, and counted
+   27 same-industry candidates. The data was fine.
+
+Instrumenting the build settled it: **the corpus query returned 152 rows inside
+the build while returning 182 outside it.** Next's Data Cache wraps `fetch`, and
+supabase-js issues its queries through it — a fetch with no cache hint is cached
+**indefinitely**, so this query was served from the *previous build's* entry.
+`generateStaticParams` had fresh data, so all 182 pages were generated; each of
+the 30 new ones then looked itself up in a 152-row corpus, failed to find
+itself, and rendered nothing. No error, no empty section — a missing block on
+exactly the new pages.
+
+The first fix was wrong and the build said so plainly: `cache: 'no-store'` made
+the route dynamic, and with `dynamicParams = false` every page logged "Dynamic
+server usage" and **all 182** shipped without the block — worse than the defect.
+The fix is a 60-second `revalidate` on that one query, which keeps the route
+static and makes any build a minute after a publish see the new rows.
+
+Verified after the fix: **182 of 182 pages have a related list** (0 with none, 0
+query failures), the new reports render their figures with the right unit
+(`$963.7M -> $1,177.8M` on the isotope report), each carries its chart source
+caption and its own social card, 16 of 16 audited routes are clean and contrast
+has 0 failing pairs.
+
+Worth keeping in mind for any future corpus-wide read used during a build: it
+needs a revalidate, or the build will cheerfully serve yesterday's corpus.

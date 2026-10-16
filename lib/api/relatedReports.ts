@@ -15,9 +15,38 @@
  * build renders 152 report pages in one process, so without the memo this would
  * run 152 times per build for the same rows.
  */
-import { supabase } from '@/lib/supabase/client';
+import { createClient } from '@supabase/supabase-js';
 import { marketValue } from '@/lib/format';
 import { marketName } from '@/lib/seo';
+
+/**
+ * A client of this module's own, whose corpus query carries a short revalidate.
+ *
+ * Why not the shared client: Next's Data Cache wraps `fetch`, and supabase-js
+ * issues its queries through it. A fetch with no cache hint is cached
+ * **indefinitely**, so on the first build after the corpus went from 152 to 182
+ * rows this query was served from the previous build's entry: the build
+ * rendered all 182 report pages (`generateStaticParams` had fresh data) while
+ * every one of the 30 new reports read **152 rows** here, failed to find itself
+ * among them, and shipped with no related block. Silently — no error, no empty
+ * section, just a missing block on exactly the new pages.
+ *
+ * `cache: 'no-store'` is not the fix: it makes the route dynamic, and with
+ * `dynamicParams = false` the build then logs "Dynamic server usage" for every
+ * page and ships *all* 182 without the block. A 60-second revalidate keeps the
+ * route static and makes any build a minute after a publish see the new rows.
+ */
+const corpusClient = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  {
+    auth: { persistSession: false },
+    global: {
+      fetch: (input: RequestInfo | URL, init?: RequestInit) =>
+        fetch(input, { ...init, next: { revalidate: 60 } } as RequestInit),
+    },
+  }
+);
 
 export interface RelatedReport {
   slug: string;
@@ -36,18 +65,34 @@ interface LightRow {
   unit: string | null;
 }
 
-const TTL_MS = 60_000;
+/* A full build renders every report page across several worker processes, each
+   with its own memo, and the whole run takes minutes — a 60s TTL meant workers
+   refetched mid-build, and a single transient failure then produced pages with
+   no related block at all. Ten minutes covers a build; the retry below covers
+   the failure. */
+const TTL_MS = 600_000;
 let memo: { at: number; rows: LightRow[] } | null = null;
 
 async function loadCorpus(): Promise<LightRow[]> {
   if (memo && Date.now() - memo.at < TTL_MS) return memo.rows;
 
-  const { data, error } = await supabase
-    .from('neograph_reports')
-    .select('slug,title,industry,published_year,market_size,unit');
+  const select = () =>
+    corpusClient.from('neograph_reports').select('slug,title,industry,published_year,market_size,unit');
 
-  if (error || !data) {
-    console.error('[relatedReports] query failed:', error?.message ?? 'no data');
+  let { data, error } = await select();
+  if (error || !data?.length) {
+    /* One retry, because the failure mode is a transient one under build load
+       and the cost of not retrying is a page that silently ships without its
+       related block — which is exactly what happened on the first build after
+       the corpus went from 152 to 182. */
+    await new Promise((r) => setTimeout(r, 300));
+    ({ data, error } = await select());
+  }
+
+  if (error || !data?.length) {
+    console.error('[relatedReports] query failed:', error?.message ?? 'no rows');
+    /* Never cache an empty result: a stale corpus is better than none, and an
+       empty one would persist for the rest of the TTL. */
     return memo?.rows ?? [];
   }
 
