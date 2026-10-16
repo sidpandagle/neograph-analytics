@@ -1312,3 +1312,41 @@ Six BACKLOG items closed in place with what was actually done, including one
 closed as **not a defect** after measurement: the avatar CDN finding, where
 `image_url` is empty on all three team rows and both render sites guard on it,
 so nothing broken is served.
+
+### Browser verification (window opened 21:00 IST)
+Three fixes confirmed in Chrome against the local build at 1512x950, measured
+rather than eyeballed.
+
+**Header dropdown stacking.** With the Consulting menu open, `elementFromPoint`
+at the panel's centre, both lower corners and the point overlapping the hero
+search area each returns an element **inside the panel and inside the z-60
+header wrapper**. The live DOM also confirms the root cause: the `<header>`
+computes `backdrop-filter: blur(24px)`, which creates a stacking context, and
+the highest z-index anywhere outside the header is the skip link at 100 —
+intentionally above — then 50.
+
+A false negative worth recording: the first three probes said the hero was on
+top. The menu had closed. Each `evaluate_script` run was clicking the trigger
+again and toggling it shut, so the probes ran against
+`visibility: hidden; opacity: 0`. Reading `aria-expanded` before clicking fixed
+it. Same family as the stale-server false pass — confirm the state you think
+you are measuring.
+
+**FAQ toggle centring.** Glyph centre against circle centre:
+**offsetX 0.00px, offsetY 0.00px** in both states, with the open state showing
+`matrix(0.707107, …)` — the 45-degree rotation about the SVG's own centre.
+
+**Focus ring.** Tabbed to "Buy report now" on the blue CTA panel in dark mode:
+`:focus-visible` matches, `outline: 2px solid rgb(255,255,255)` at 2px offset
+with a `rgb(11,18,32)` inner ring from the box-shadow. Both strokes present, the
+white one at 7.70:1 against that fill — where the old single-colour ring
+measured 1.00:1 on the same button.
+
+Also seen working in the browser: the related-research block renders six sourced
+neighbours with size and CAGR under each report.
+
+Filed while looking: related-report card titles carry the full stored
+boilerplate ("Global Cell & Gene Therapy Manufacturing Market — Growth Drivers,
+Restraints and Future Outlook 2032"), where the social card already trims to
+"… Market". Cosmetic, queued as R-12 rather than fixed at 23:30 with a deploy
+pending.
