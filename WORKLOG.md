@@ -1409,3 +1409,20 @@ R-13 is raised to **high** on that evidence. Deferring the fix rather than
 guessing at it twenty minutes before a deploy: the next pass isolates it by
 tracing with the third-party script blocked, which is one line of CDP and
 answers the question outright.
+
+### Correcting the performance finding before it became a wrong one
+The trace attributed **288ms of main thread to Google Tag Manager**. The
+production HTML ships **no external scripts at all** — 14 script tags, every one
+a first-party chunk — so that time came from the measuring browser, which is a
+real Chrome profile with extensions installed, not from the site.
+
+Which means an unknown share of the 3.9s render delay is the profile rather than
+the page, and R-13 drops back to medium and **"not yet attributable"** until it
+is re-measured in a clean profile. The one conclusion that survives the caveat
+is the differential: the chartless page is slower than the report page, so
+Recharts is not the cause whatever the absolute numbers turn out to be.
+
+This is the third time today that a measurement needed the measurement checked:
+the stale `next start` serving old code, the menu probes running against a
+toggled-shut menu, and now an extension's work counted as the site's. The rule
+earns its place — reproduce cleanly before fixing.
