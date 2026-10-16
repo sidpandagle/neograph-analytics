@@ -760,3 +760,41 @@ changes behaviour.
 284KB -> **184KB**, 12 cards on page one, filter and search unchanged. Total
 from the original measurement: **508KB -> 184KB, -64%**, while the corpus grew
 from 142 to 152. Pagination is not worth the complexity at this size.
+
+### `scripts/audit-html.mjs` — the headless audit, committed this time
+The 2026-10-15 session ran an HTML audit as throwaway shell and lost it with the
+session, so every later session re-derived the same checks by hand. It is a
+committed tool now: 13 routes, read from `.next/server/app/*.html` or from
+production with `--prod`, exit code = error count so it can gate a commit. No
+browser, so it runs at any hour.
+
+Checks: exactly one `<h1>` and no headings above it, heading-level skips,
+empty headings, one `<main>`, skip link, title ≤60 (entities decoded first),
+description 70-160, canonical present and on-site, every `ld+json` block parses,
+`<img>` without `alt`, buttons and links with no accessible name, form controls
+with no label, `<figure>` without `<figcaption>`, `<html lang>`.
+
+The two rules the predecessor got wrong are explicitly not repeated: it counted
+`&amp;` as five characters when measuring titles, and it called buttons
+icon-only when they had visible text. The accessible-name check reads text
+content, and a `noindex` page is no longer asked for a canonical.
+
+First run: **1 error, 7 warnings over 13 pages.** All but one are now fixed:
+
+- `/methodology` rendered a **63-character title** — my own page from this
+  morning. The root layout appends " | NeoGraph Analytics" (21 chars), so the
+  page name has to carry the subject alone. Now "Methodology".
+- **Heading outlines jumped h1 -> h3** on `/reports`, `/blog` and
+  `/press-releases`: the page `h1` is the only heading above the grid, and every
+  card title was an `h3`. A screen-reader user navigating by heading cannot tell
+  a skipped level from missed content. `ReportCard` now takes a `headingLevel`
+  prop defaulting to `h2`; the author page, where the grid sits under a section
+  `h2`, passes `h3`. `BlogCard` and `PressReleaseCard` go to `h2`.
+- **h2 -> h4 inside report pages**: the per-region and per-company item
+  headings were `h4` directly under a section `h2`. Both are `h3` now.
+- `/request-sample` had a 57-character description; it now says what a sample
+  actually contains.
+
+Re-run: **13 of 13 pages error-free, 0 errors, 1 warning** — `/design-system`'s
+66-character description, left as it is because the page is an internal tool
+carrying `noindex, nofollow`.

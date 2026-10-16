@@ -358,7 +358,7 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
                 >
                   {i + 1}
                 </span>
-                <h4 className="font-semibold text-sm text-[var(--foreground)]">{r.region}</h4>
+                <h3 className="font-semibold text-sm text-[var(--foreground)]">{r.region}</h3>
                 {r.largest_country && (
                   <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--content-surface)', color: 'var(--content-muted)', border: '1px solid var(--content-border)' }}>
                     Lead: {r.largest_country}
@@ -435,7 +435,7 @@ function CompetitiveLandscapeSection({
                     {p.company.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm text-[var(--foreground)]">{p.company}</h4>
+                    <h3 className="font-semibold text-sm text-[var(--foreground)]">{p.company}</h3>
                     {p.headquarters && (
                       <p className="text-xs" style={{ color: 'var(--content-muted)' }}>{p.headquarters}</p>
                     )}

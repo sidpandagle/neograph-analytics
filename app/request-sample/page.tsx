@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 // in robots.ts, so this exists to prevent a stray duplicate signal, not to rank.
 export const metadata: Metadata = {
   title: "Request a Sample",
-  description: "Request a sample of a NeoGraph Analytics research report.",
+  description: "Request a sample of any NeoGraph Analytics research report — representative pages, the table of contents, and the sources behind the figures.",
   alternates: { canonical: "/request-sample" },
   robots: { index: false, follow: true },
 };

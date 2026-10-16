@@ -8,7 +8,9 @@ import { getHomeFacts } from "@/lib/api/home";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Methodology | How our figures are produced",
+  /* The root layout appends " | NeoGraph Analytics" (21 chars), which pushed
+     the rendered <title> to 63. The page name carries the subject on its own. */
+  title: "Methodology",
   description:
     "How NeoGraph Analytics builds a market estimate: published estimates compared, their spread reported, and every headline grounded against a public register.",
   keywords: [
