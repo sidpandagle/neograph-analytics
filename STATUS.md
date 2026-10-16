@@ -1,10 +1,12 @@
 # STATUS
 
-**Updated:** 2026-10-16 17:05 IST
+**Updated:** 2026-10-16 18:10 IST
 **Budget:** 7d used 12% | pace 56.3% | ceiling (70% of pace) 39.4% | headroom +27.4 points
-**Merges to `main` today (IST):** 4 of 5 used — #13 00:13, #14 01:02, #15 02:26,
-#16 09:08. **One slot left**, held for the first batch of new reports.
-**Commits on `work/continuous-improvements`:** unlimited, three since the last merge.
+**Merges to `main` today (IST):** **5 of 5 used** — #13 00:13, #14 01:02,
+#15 02:26, #16 09:08, #17 17:30 (round 1 of the reports). No deploy left today;
+work continues on the branch and Supabase content changes still reach
+production through ISR.
+**Commits on `work/continuous-improvements`:** three since the merge.
 **Mode:** running
 
 ## Active task — the 30-50 report expansion
@@ -29,9 +31,16 @@ reports:
   `research/corpus-slugs.txt` so none duplicates an existing row. No further
   regional clones.
 
-**In flight:** two research agents on round 1 (batch 1A diagnostics/devices,
-batch 1B therapeutics), 5 reports each. They stop at a passing `check`;
-publishing stays here. ETA for round 1 drafts: ~60-90 minutes from 16:50 IST.
+**Round 1 published — corpus 142 -> 152.** Ten reports, every base year a named
+publisher's own figure advanced at that publisher's own rate, every headline
+divided through by something countable. Figures and grounding arithmetic are
+tabulated in `research/REPORT-PIPELINE.md`. Live in production and verified.
+
+**In flight:** round 2, two agents — batch 2A (single-cell sequencing, spatial
+biology, proteomics, pharmacogenomics, organoids) and batch 2B (decentralised
+trials, RWE, interoperability, RCM automation, hospital-at-home). ETA ~25
+minutes from 18:10 IST. Their brief forbids installing anything, after a round-1
+agent put `pypdf` into user site-packages.
 
 ## Shipped to the branch since the last merge
 
@@ -40,6 +49,14 @@ publishing stays here. ETA for round 1 drafts: ~60-90 minutes from 16:50 IST.
 | `ab17fc0` | Charts carry `<figure>`/`<figcaption>` source notes; `/methodology` page; `error.tsx` + `global-error.tsx`; the report-db tool and authoring brief |
 | `1aea085` | Category chips, mega-menu tiles and the region select derived from the corpus instead of a 12-row JSON |
 | `1e04e20` | Fabricated testimonials no longer rendered on the homepage |
+
+Shipped since (on the branch, awaiting tomorrow's first slot):
+
+| Commit | What it does |
+|---|---|
+| `51d2e7f` | Round 1: ten reports; unit-aware money formatting; two new checker rules |
+| `2bd5c83` | Titles over 60 chars 45 -> 0, descriptions over 160 14 -> 0, across all 152 rows (Supabase, already live via ISR) |
+| `c20f2e0` | Two-tone focus ring; worst-case contrast 1.00:1 -> 7.25:1, and it now survives the 33 `focus:outline-none` call sites |
 
 Measured outcomes:
 
@@ -65,20 +82,19 @@ error boundaries                             0 -> 2
 
 ## Next up
 
-1. Publish round 1 of the new reports once both batches pass `check`, then
-   spend today's last merge slot on them.
-2. Launch round 2 (batches 2A/2B — single-cell sequencing, spatial biology,
-   proteomics, pharmacogenomics, organoids; DCTs, RWE, interoperability, RCM
-   automation, hospital-at-home).
-3. `meta_description` over 160 chars on 14 of 142 rows — the new checker
-   rejects this, so the corpus has to meet its own rule. Per-row editorial, not
-   a pattern substitution.
-4. `getReportBySlug` runs a second full-table query purely to compute an array
-   index; the listing still does `select('*')` over 142 rows of large JSONB.
-   Both are metered egress.
-5. `StyledReportContent.tsx` (381 lines of tuned long-form CSS) is imported
+1. Review and publish round 2 when both batches pass `check` (publishing is
+   Supabase-only; it needs tomorrow's first merge slot only to prerender the
+   pages, since `dynamicParams = false`).
+2. Launch round 3 (batches 3A/3B — proton therapy, surgical navigation, insulin
+   delivery, sleep apnoea, hearing aids; biologics CDMO, sterile injectables,
+   vaccine cold chain, plasma fractionation, pharmacy automation).
+3. `StyledReportContent.tsx` (381 lines of tuned long-form CSS) is imported
    nowhere, so `.prose` never applies to a report page. Wire it or record why
    not — it is not to be deleted.
+4. Confirm the new focus ring in a browser after 21:00 IST; the contrast
+   figures so far are computed from token values.
+5. `/design-system` renders 2 `<h1>` and has no canonical (robots-disallowed,
+   so the impact is confined).
 
 ## Blockers
 
