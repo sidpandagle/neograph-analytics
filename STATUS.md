@@ -2,13 +2,15 @@
 
 **Updated:** 2026-10-17 02:50 IST
 **Budget:** 7d used ~15% | ceiling (70% of pace) ~39% | headroom ~+23 points
-**Merges to `main` today (IST):** **1 of 5** — #18 at 00:48. Four slots left.
+**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change). Next
+scheduled merge **21:00 IST** — one scheduled merge a day now; extra merges
+only on the owner's request.
 **Mode:** running
 
 ## On the branch, verified locally, awaiting a merge slot
 
-The four owner decisions, implemented. Four merge slots are open today; this
-bundle needs a deploy for the code half to reach production.
+The four owner decisions, implemented. This bundle needs a deploy for the code
+half to reach production — it goes out at the 21:00 IST merge.
 
 ```
 /legal/terms-of-use            200, 10 sections (published to Supabase, live now)

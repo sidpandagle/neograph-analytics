@@ -1,6 +1,7 @@
 # Deploy runbook
 
-Five merges to `main` a day, spread across the IST day; each merge is a deploy.
+One scheduled merge to `main` a day, at 9:00 pm IST; each merge is a deploy.
+The owner may request extra merges at any time — those are uncapped.
 Content and code are published in one sequence because of one constraint:
 
 > `/reports/[slug]` and `/blog/[slug]` set `dynamicParams = false`. A row that

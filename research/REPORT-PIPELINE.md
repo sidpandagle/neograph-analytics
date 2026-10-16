@@ -57,7 +57,7 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 40 | veterinary-diagnostics-market | Life Sciences | 4B | published |
 
 **Rounds 2, 3 and 4 are drafted and passing `check` — thirty reports held for the
-next merge slot**, plus two analysis articles and a press release in
+21:00 IST merge**, plus two analysis articles and a press release in
 `content/blogs/` and `content/press-releases/`. Order inside the deploy: reports
 first, then the articles that link to them.
 
