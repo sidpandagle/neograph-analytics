@@ -461,3 +461,31 @@ Verified in the built HTML: chips read
 Life Sciences 23, Pharmaceuticals 20` — summing to 142 — the hero line reads
 "across 6 healthcare sectors" rather than 12, the header exposes 6 distinct
 `?category=` links rather than 12, and no region select is present.
+
+### Testimonials off the homepage (was R-0f)
+Ten testimonials, each with a five-star rating, under "What healthcare
+executives say". The names are job titles — "Head of Marketing", "Research
+Associate" — and nine of the ten companies are outside healthcare: West Ham
+United, Mitsubishi Motors R&D of America, The Clorox Company, Singapore Tourism
+Board, Beeline, Nissan Chemical, SMS Elotherm, Berumen, Mitsubishi. Only Exact
+Sciences is a healthcare company.
+
+The section is no longer rendered. `data/testimonials.json`,
+`TestimonialsSection` and its skeleton all stay in place and stay exported, for
+when real attributable quotes exist. Nothing was deleted.
+
+Filed alongside it as **R-9, needing Siddhant**: the "Our research shapes
+decisions at" marquee asserts client relationships with twelve third-party
+marks (Meta, Trivago, Suzuki, Kawasaki, Nestlé Professional, CDC, BCG, PwC,
+Argonne, ChampionX, Mitsubishi, SK). Unlike the testimonials this may well be
+true, and it is not mine to judge from inside the repo — it needs a yes or no
+per logo. Left on the page until then.
+
+R-4 was also marked `[H]`: the Product/Offer JSON-LD publishes a hardcoded
+`$2,995` with `InStock`, and the same figure is shown on the page. Making the
+schema disagree with the visible price would be worse than the present state,
+and pricing and checkout are Siddhant's call, so it is flagged rather than
+changed.
+
+Verified in the built homepage: "healthcare executives", "West Ham" and
+"Clorox" all absent.

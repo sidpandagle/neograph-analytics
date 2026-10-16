@@ -13,10 +13,8 @@ import {
   IndustryCategoriesSection,
   StatsSection,
   TrustedPartnersSection,
-  TestimonialsSection,
   CTASection,
   StatsSectionSkeleton,
-  TestimonialsSectionSkeleton,
 } from '@/components/home';
 
 export const metadata: Metadata = {
@@ -41,9 +39,18 @@ export default function HomePage() {
 
       <TrustedPartnersSection />
 
-      <Suspense fallback={<TestimonialsSectionSkeleton />}>
-        <TestimonialsSection />
-      </Suspense>
+      {/* Testimonials are not rendered.
+          The ten rows in `data/testimonials.json` carry job titles in place of
+          names ("Head of Marketing", "Research Associate") and nine of the ten
+          companies are outside healthcare — West Ham United, Mitsubishi Motors
+          R&D, The Clorox Company, Singapore Tourism Board, Beeline, Nissan
+          Chemical — under a heading that reads "What healthcare executives
+          say", each with a five-star rating. On a publication whose only asset
+          is credibility, unverifiable praise next to sourced analysis devalues
+          the analysis. The component and the data stay in place for when real,
+          attributable quotes exist; they are simply not on the page.
+          `TestimonialsSection` / `TestimonialsSectionSkeleton` remain exported
+          from `@/components/home`. */}
 
       <CTASection />
     </>
