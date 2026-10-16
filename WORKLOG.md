@@ -936,3 +936,27 @@ serving stale code. Confirmed by PID and command line that it was mine and from
 this repo, then **left running** and the check repeated on **port 3101** — the
 instruction is to not disturb anything on this machine, and a second port costs
 nothing. Verify the server is the one you just built.
+
+### Titles composed at render time were still too long (`lib/seo.ts`)
+The corpus rows were fixed in place this afternoon, but article and press-release
+pages compose their metadata in `generateMetadata` from an excerpt plus a
+template, so the rendered `<title>` can break the limit even when the stored
+fields are clean. Extending `audit-html.mjs` to cover two detail pages caught it
+immediately:
+
+```
+"The Future of Personalized Medicine | Healthcare Insights | NeoGraph Analytics"  78
+"Digital Health Investment Surpasses $30 Billion in 2025 | NeoGraph Analytics"     76
+press-release meta description                                                    195
+```
+
+`lib/seo.ts` holds the rule now. `pageTitle()` tries the full template, then
+drops suffixes one at a time, and takes the first form that fits 60 — returning
+`{ absolute }` so the root layout cannot append the brand a second time, which
+is how an earlier title came to read "... | NeoGraph Analytics | NeoGraph
+Analytics". `pageDescription()` cuts at the last sentence boundary inside 160,
+or a word boundary, never mid-word and never leaving a dangling comma.
+
+Applied to `/blog/[slug]` and `/press-releases/[slug]`. The audit now covers 16
+routes including a million-unit report, a blog article and a press release:
+**16 of 16 error-free.**

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, Container, Badge, StyledArticleContent } from "@/components/ui";
 import { getBlogs, getBlogBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
+import { pageTitle, pageDescription } from "@/lib/seo";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 import BlogSidebarForm from "@/components/blog/BlogSidebarForm";
 import { QuickContactSection } from "@/components/contact";
@@ -51,8 +52,11 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     const blog = response.data;
 
     // Use metadata fields if available, otherwise fallback to defaults
-    const title = blog.metadata?.metaTitle || `${blog.title} | Healthcare Insights`;
-    const description = blog.metadata?.metaDescription || blog.excerpt;
+    /* The template used to append both "Healthcare Insights" and the brand on
+       top of the article title, which rendered an 78-character <title>.
+       `pageTitle` keeps whichever suffixes still fit inside 60. */
+    const title = pageTitle(blog.metadata?.metaTitle || blog.title, { suffix: 'Healthcare Insights' });
+    const description = pageDescription(blog.metadata?.metaDescription || blog.excerpt);
     const keywords = blog.metadata?.keywords || [];
 
     return {

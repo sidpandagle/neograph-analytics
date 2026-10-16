@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, Container, Badge, StyledArticleContent, Button, Card, CardContent } from "@/components/ui";
 import { getPressReleases, getPressReleaseBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
+import { pageTitle, pageDescription } from "@/lib/seo";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 import { OfficeLocationsSidebar } from "@/components/contact";
 
@@ -50,8 +51,10 @@ export async function generateMetadata({ params }: PressReleasePageProps): Promi
     const pressRelease = response.data;
 
     // Use metadata fields if available, otherwise fallback to defaults
-    const title = pressRelease.metadata?.metaTitle || pressRelease.title;
-    const description = pressRelease.metadata?.metaDescription || pressRelease.excerpt;
+    /* A 54-character headline plus the brand suffix rendered 76 characters, and
+       the stored excerpt ran to 195. Both are clamped at render time. */
+    const title = pageTitle(pressRelease.metadata?.metaTitle || pressRelease.title);
+    const description = pageDescription(pressRelease.metadata?.metaDescription || pressRelease.excerpt);
     const keywords = pressRelease.metadata?.keywords || ["healthcare press releases", "healthcare news", "industry announcements", "healthcare market updates"];
 
     return {
