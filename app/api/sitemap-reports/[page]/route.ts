@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getReports } from '@/lib/api/reports';
+import { getReportSitemapEntries } from '@/lib/api/reports';
 
 const BASE_URL = 'https://www.neographanalytics.com';
 const ITEMS_PER_SITEMAP = 500;
@@ -15,8 +15,7 @@ export async function GET(
     return new NextResponse('Not Found', { status: 404 });
   }
 
-  const reportsRes = await getReports();
-  const allReports = reportsRes.success ? reportsRes.data : [];
+  const allReports = await getReportSitemapEntries();
   const startIndex = (page - 1) * ITEMS_PER_SITEMAP;
   const pageReports = allReports.slice(startIndex, startIndex + ITEMS_PER_SITEMAP);
 

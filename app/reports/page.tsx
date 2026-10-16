@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
-import { getReports } from '@/lib/api/reports';
+import { getReportCards } from '@/lib/api/reports';
 import { ReportsListingClient } from '@/components/reports';
 import ReportsSkeleton from '@/components/reports/ReportsSkeleton';
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 async function ReportsContent() {
-  const result = await getReports();
+  const result = await getReportCards();
   const reports = result.success ? result.data : [];
   return <ReportsListingClient reports={reports} />;
 }

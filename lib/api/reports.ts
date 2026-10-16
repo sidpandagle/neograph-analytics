@@ -67,14 +67,17 @@ export async function getReports(filters?: ReportFilters): Promise<ApiResponse<R
   return { success: true, data: reports };
 }
 
+/**
+ * One report by slug.
+ *
+ * This used to run a second, corpus-wide query for the `slug` column of all 142
+ * rows purely to work out the report's position in the listing order, which
+ * `rowToReport` then used as its `id`. Nothing consumes that id on a detail page
+ * — the checkout page and its form key off the slug — so the query was pure
+ * metered egress. The id is now 0 here, and the listing still numbers its own
+ * rows positionally, which is the only place the number is read.
+ */
 export async function getReportBySlug(slug: string): Promise<ApiResponse<Report>> {
-  const { data: allData } = await supabase
-    .from('neograph_reports')
-    .select('slug')
-    .order('published_year', { ascending: false });
-
-  const slugIndex = (allData ?? []).findIndex(r => r.slug === slug);
-
   const { data, error } = await supabase
     .from('neograph_reports')
     .select('*')
@@ -85,7 +88,7 @@ export async function getReportBySlug(slug: string): Promise<ApiResponse<Report>
     return { success: false, error: 'not_found', message: 'Report not found' };
   }
 
-  return { success: true, data: rowToReport(data as Record<string, unknown>, slugIndex >= 0 ? slugIndex : 0) };
+  return { success: true, data: rowToReport(data as Record<string, unknown>, 0) };
 }
 
 export async function searchReports(
@@ -94,4 +97,55 @@ export async function searchReports(
   limit: number = 50
 ): Promise<ApiResponse<Report[]>> {
   return getReports({ search: query, page, limit });
+}
+
+/**
+ * Columns the listing cards and the sitemaps actually read.
+ *
+ * `getReports()` does `select('*')` over 142 rows, which pulls every large
+ * JSONB column — `market_dynamics`, `company_profiles`, `research_methodology`,
+ * `faqs` and the rest — to render a card that shows a title, a category, a year
+ * and a description. Supabase egress is the metered resource on the free tier,
+ * so the two callers that only need the surface get their own projection.
+ */
+const CARD_COLUMNS =
+  'slug,title,meta_title,meta_description,meta_keywords,industry,published_year,report_id,base_year,forecast_period,market_size';
+
+const SITEMAP_COLUMNS = 'slug,published_year';
+
+/**
+ * The listing page's data. Same `Report` shape, so `ReportCard` and
+ * `ReportsListingClient` are unchanged; the fields those components never read
+ * (`keyFindings`, `faqs`, `keyPlayers`, `overview`) come back empty rather than
+ * being fetched and discarded.
+ */
+export async function getReportCards(): Promise<ApiResponse<Report[]>> {
+  const { data, error } = await supabase
+    .from('neograph_reports')
+    .select(CARD_COLUMNS)
+    .order('published_year', { ascending: false });
+
+  if (error) return { success: false, error: 'fetch_error', message: error.message };
+
+  const reports = (data ?? []).map((row, i) => rowToReport(row as Record<string, unknown>, i));
+  return { success: true, data: reports };
+}
+
+/** Slug and year only — everything a sitemap entry needs. */
+export async function getReportSitemapEntries(): Promise<
+  Array<{ slug: string; year: string }>
+> {
+  const { data, error } = await supabase
+    .from('neograph_reports')
+    .select(SITEMAP_COLUMNS)
+    .order('published_year', { ascending: false });
+
+  if (error || !data) {
+    console.error('[getReportSitemapEntries] query failed:', error?.message ?? 'no data');
+    return [];
+  }
+
+  return data
+    .filter((r): r is { slug: string; published_year: number } => Boolean(r.slug))
+    .map((r) => ({ slug: String(r.slug), year: String(r.published_year ?? '') }));
 }

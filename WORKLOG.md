@@ -489,3 +489,21 @@ changed.
 
 Verified in the built homepage: "healthcare executives", "West Ham" and
 "Clorox" all absent.
+
+### Two metered-egress queries that fetched what nothing reads
+- `getReportBySlug` ran a **second corpus-wide query** for the `slug` column of
+  all 142 rows, purely to compute the report's index in listing order so
+  `rowToReport` could use it as `id`. Nothing on a detail page reads that id —
+  checkout and its form key off the slug — so every report view paid for a
+  142-row query it discarded. Removed.
+- `getReports()` does `select('*')`, which pulls `market_dynamics`,
+  `company_profiles`, `research_methodology`, `faqs` and every other large JSONB
+  column so a card can show a title, a category, a year and a description. Two
+  new projections, both additive — `getReportCards()` (11 surface columns) for
+  the listing and `getReportSitemapEntries()` (`slug,published_year`) for
+  `sitemap.ts` and `/api/sitemap-reports/[page]`. `getReports()` is untouched
+  for anything that still wants the whole row.
+
+Measured: the built `/reports` HTML drops from **508KB to 284KB** (-44%) with
+the same 12 cards and the same 142-report count, because the RSC payload no
+longer carries the unread JSONB.
