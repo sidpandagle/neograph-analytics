@@ -1,0 +1,235 @@
+{
+  "report_id": "femtech-market",
+  "slug": "femtech-market",
+  "title": "Femtech Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 9.78,
+    "forecast_value": 21.69,
+    "cagr": 14.2
+  },
+  "executive_summary": "Femtech has no defensible boundary, and a report on it that does not open by saying so is misleading its reader. Published 2026 estimates run from $9.78 billion to $73.4 billion -- a 7.5x spread, the widest in this corpus. The published growth rates spread only 1.32x, from 13.52% to 17.9%. Nobody disagrees about the trajectory. They are describing different industries.\n\nThe word is stretched across at least six businesses that share a customer and nothing else: women's health medical devices, women's health pharmaceuticals, fertility and IVF services, digital and consumer software, consumer durables such as breast pumps, and menstrual care consumer products. No publisher in our set says which it is counting.\n\nTwo disclosures settle what each reading must be. Hologic's Breast Health and GYN Surgical segments came to $2,163.9 million for its fiscal 2025, and Organon's Women's Health franchise to $1,752 million for calendar 2025 -- $3,915.9 million between them, and that is a floor, because we excluded Hologic's Diagnostics segment with its cervical cytology and HPV testing for want of a disclosed split. That sum is 45.7% of Mordor Intelligence's $8.56 billion for 2025 and 5.3% of Global Market Insights' $73.4 billion for 2026.\n\nAt 45.7% the narrow reading is coherent: a market that is 51.62% devices and 46.10% hospital revenue on its own account, in which the largest breast imaging franchise and the largest contraceptive implant franchise together make a little under half, hangs together. At 5.3% the wide reading needs a $69.5 billion remainder, and the only candidate of that size is the consumer menstrual care aisle -- pads, tampons, cups, period underwear -- sold by Procter & Gamble, Kimberly-Clark and Essity. Nobody calls those companies femtech.\n\nWe therefore publish the narrowest sourced reading, $9.78 billion for 2026 rising to $21.69 billion by 2032 at 14.20%, and name what it excludes.",
+  "market_context": "Three facts about this category deserve more attention than any market size.\n\nFirst, the tier that gives femtech its name discloses nothing. We found no public revenue, subscriber or unit figure for any femtech application or platform company -- not for the period trackers, not for the menopause platforms, not for the pelvic-health services. All are private, and there is no listed femtech pure-play of scale anywhere. Yet software is the third fastest-growing segment in the forecasts, at 16.12% on Mordor's own projection. The fastest-growing part of this market is the part nobody can check.\n\nSecond, the parts that do disclose are not growing. Hologic's Breast Health fell 2.5% in fiscal 2025 and its GYN Surgical rose 6.0%, netting to essentially flat at $2,163.9 million against $2,164.2 million. Organon's Women's Health fell 1% as reported and 2% ex-FX, with the fourth quarter down 16% ex-FX, NuvaRing down 23% and Nexplanon down 4% -- down 9% in the United States, which Organon attributes to policy-related access restrictions and lower physician demand.\n\nThird, the largest disclosure is about to stop. Hologic announced on 21 October 2025 a definitive agreement to be acquired by funds managed by Blackstone and TPG, and has withdrawn fiscal 2026 guidance. After that closes, the public record on women's health devices is thinner than it is today, and every femtech market size published afterwards is less checkable than this one.",
+  "forecast_analysis": "The headline comes from Mordor Intelligence, read from the publisher's own page on 16 October 2026: $8.56 billion for 2025, $9.78 billion for 2026, $18.98 billion for 2031, a 14.20% CAGR for 2026-2031 over a 2020-2031 study period covering 17 countries. The 2026 base is Mordor's own published figure. The 2032 endpoint continues its own rate one year past its own horizon (9.78 x 1.1420^6 = 21.69); interpolating forward lands 2031 on 19.00 against the published 18.98.\n\nIt was chosen because it is the narrowest sourced reading, which is the right default where no boundary is defensible; because it is the only source in the set we could read from the publisher's own page, where Global Market Insights, Report Prime and the Fortune-attributed figures came through search summaries or Notion mirror pages and DelveInsight's own page leaves its dollar values as the placeholder \"USD XX Billion\"; and because it is the only one that publishes a definition, a country count, an application taxonomy and segment shares, which is what makes it identifiable at all.\n\nTreat the 14.20% with care. It is applied to a market Mordor itself describes as 51.62% devices, and the largest disclosed device and pharmaceutical franchises in women's health were flat to shrinking in 2025 -- combined, down about half a percent against published rates of 13.52% to 17.9%. The rate is a forecast that the undisclosed digital and menopause segments carry the whole market. That may prove right. It is a much stronger claim than any of these pages makes out loud.",
+  "market_overview": {
+    "summary": "On the narrowest sourced reading -- Mordor Intelligence's devices, software and services for women's health, 51.62% devices and 46.10% hospital and maternal centre revenue -- the femtech market is $9.78 billion in 2026, projected to $21.69 billion by 2032 at a 14.20% CAGR. Wider published readings put 2026 at $56.44 billion and $73.4 billion, a 7.5x spread against the narrowest, because they necessarily include consumer menstrual care products and wellness services. This report publishes the narrow reading and names what it excludes: consumer period products, retail breast pumps and wearables, non-clinical subscription platforms and general women's wellness.",
+    "key_trends": [
+      "Published 2026 estimates spread 7.5x ($9.78B to $73.4B) while published CAGRs spread only 1.32x (13.52% to 17.9%)",
+      "Hologic's Breast Health and GYN Surgical plus Organon's Women's Health total $3,915.9M -- 45.7% of the narrowest published market and 5.3% of the widest",
+      "No femtech application or platform company discloses revenue, subscribers or units: the digital tier that names the category is entirely private",
+      "The two largest disclosed women's health franchises shrank about 0.5% combined in 2025 against published CAGRs of 13.52% to 17.9%",
+      "Hologic is being taken private by Blackstone and TPG and has withdrawn fiscal 2026 guidance, removing the largest public women's health device disclosure",
+      "Organon attributes a 9% US decline in Nexplanon to policy-related access restrictions and lower physician demand, with NuvaRing down 23% ex-FX"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Clinical segments established; consumer and digital segments early and unmeasured"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Menopause and longevity, projected by Mordor at 16.18% to 2031 and historically served by almost nothing, which is the clearest unmet-need case in the category",
+      "Specialty women's health clinics, the fastest-growing end user on Mordor's own projection at 16.73%, shifting care out of general gynaecology",
+      "Fertility demand: Organon's fertility business grew 8% ex-FX in 2025 even as its wider Women's Health franchise declined",
+      "Minimally invasive gynaecological surgery, where Hologic's GYN Surgical grew 6.0% in fiscal 2025 on MyoSure, Fluent and the acquired Gynesonics business",
+      "Software and connected care, the third fastest-growing segment at 16.12%, where a low cost of delivery allows access in markets with no device infrastructure"
+    ],
+    "restraints": [
+      "Policy and access: Organon attributes a 9% decline in US Nexplanon sales to policy-related access restrictions and lower physician demand",
+      "The disclosed parts of this market are not growing -- Hologic's Breast Health fell 2.5% and Organon's Women's Health fell 2% ex-FX in 2025",
+      "Contraceptive product decline is steep where it has set in: NuvaRing fell 23% ex-FX in 2025",
+      "Hospital capital cycles govern 46.10% of the market on Mordor's own end-user split, which makes it a budget line rather than a consumer purchase",
+      "Reimbursement for digital women's health is largely undefined, so the fastest-growing segment has the least certain revenue model"
+    ],
+    "opportunities": [
+      "Menopause care, where almost no incumbent has a franchise and where the published growth rate is highest",
+      "Asia-Pacific, projected at 15.12% against a North America that already holds 41.95% of the market on Mordor's figures",
+      "Pelvic and uterine health, a named application area in which no public company discloses a dedicated revenue line",
+      "Postpartum haemorrhage and maternal safety devices, where Organon's JADA system is growing against a declining franchise",
+      "Consolidation of a fragmented private digital tier, which has no listed comparator and therefore no public valuation benchmark"
+    ],
+    "challenges": [
+      "The category has no agreed boundary: the same word covers hospital mammography and supermarket period products, and no publisher states which it means",
+      "The fastest-growing segment discloses nothing at all, so the growth that carries every published forecast cannot be verified by anyone",
+      "Hologic's take-private removes the largest public disclosure, making future market sizes less checkable than this one",
+      "Two of the largest women's health businesses in the world are about 5% of the widest published market, which should disqualify that reading for anyone using it to plan"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Devices",
+      "Software",
+      "Services"
+    ],
+    "by_application": [
+      "Reproductive health and contraception",
+      "Pregnancy and nursing care",
+      "Menstrual health management",
+      "Pelvic and uterine health",
+      "Menopause and longevity",
+      "Sexual health and wellness"
+    ],
+    "by_end_user": [
+      "Hospitals and maternal centres",
+      "Fertility and IVF clinics",
+      "Specialty women's health clinics"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 9.78 },
+    { "year": 2027, "value": 11.17 },
+    { "year": 2028, "value": 12.75 },
+    { "year": 2029, "value": 14.57 },
+    { "year": 2030, "value": 16.63 },
+    { "year": 2031, "value": 19.0 },
+    { "year": 2032, "value": 21.69 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Hologic",
+      "headquarters": "United States",
+      "market_position": "Largest disclosed women's health device business; being taken private",
+      "description": "Reported Breast Health revenue of $1,484.1 million (down 2.5%) and GYN Surgical revenue of $679.8 million (up 6.0%) for the fiscal year ended 27 September 2025, within total company revenue of $4,100.5 million. Breast Health is mammography and interventional breast products including Endomagnetics; GYN Surgical is MyoSure, Fluent and the acquired Gynesonics business. Its Diagnostics segment of $1,827.2 million contains cervical cytology and HPV testing, which is women's health, but also respiratory assays and Biotheranostics oncology lab testing with no disclosed split, so it is excluded from this report's arithmetic. On 21 October 2025 Hologic announced a definitive agreement to be acquired by funds managed by Blackstone and TPG and withdrew fiscal 2026 guidance."
+    },
+    {
+      "company": "Organon",
+      "headquarters": "United States",
+      "market_position": "Largest disclosed women's health pharmaceutical franchise",
+      "description": "Reported Women's Health revenue of $1,752 million for 2025, down 1% as reported and 2% ex-FX, within total revenue of $6,216 million. Nexplanon and Implanon NXT were $921 million, down 4% ex-FX, of which $610 million in the United States and $311 million internationally, with the US down 9% on what Organon describes as policy-related access restrictions and lower physician demand, partly offset by Brazil and its institutional business. NuvaRing fell 23% ex-FX to $91 million. The fertility business grew 8% ex-FX but no fertility total is disclosed; Follistim AQ was $264 million and Ganirelix Acetate $101 million. The JADA postpartum haemorrhage system is growing. Fourth-quarter Women's Health was down 16% ex-FX."
+    },
+    {
+      "company": "Femtech application and platform companies",
+      "headquarters": "Various, all private",
+      "market_position": "The tier that names the category, and discloses nothing",
+      "description": "Period and ovulation trackers, menopause platforms, pelvic-health services and direct-to-consumer telehealth are the businesses the word femtech was coined for, and the segment published forecasts grow fastest -- software at 16.12% to 2031. We found no public revenue, subscriber or unit figure for any of them in this research pass, and there is no listed femtech pure-play of scale anywhere. That absence is reported here as a result rather than filled with an estimate."
+    },
+    {
+      "company": "Procter & Gamble, Kimberly-Clark, Essity",
+      "headquarters": "United States, United States, Sweden",
+      "market_position": "What the wide readings must mostly consist of",
+      "description": "The wider published femtech figures of $56.44 billion and $73.4 billion require a remainder of roughly $70 billion once the two disclosed women's health franchises are accounted for. The only candidate category of that size is consumer menstrual care -- pads, tampons, cups and period underwear -- sold predominantly by these three companies under brands including Always, Tampax, Kotex, Bodyform and Libresse. Nobody calls them femtech. We obtained no sourced figure for the global menstrual care market in this pass and none is published here; the companies are named as the identification, not sized."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Hologic",
+      "year": 2025,
+      "event": "Announced on 21 October 2025 a definitive agreement to be acquired by funds managed by Blackstone and TPG, and consequently declined to provide annual or quarterly financial guidance for fiscal 2026 -- removing the largest public disclosure of women's health device revenue from the record."
+    },
+    {
+      "company": "Hologic",
+      "year": 2025,
+      "event": "Reported fiscal 2025 results for the year ended 27 September 2025: Breast Health revenue of $1,484.1 million, down 2.5%; GYN Surgical of $679.8 million, up 6.0% on MyoSure, Fluent and the acquired Gynesonics business; and total company revenue of $4,100.5 million, up 1.7%."
+    },
+    {
+      "company": "Organon",
+      "year": 2026,
+      "event": "Reported full-year 2025 Women's Health revenue of $1,752 million, down 1% as reported and 2% ex-FX, with the fourth quarter down 16% ex-FX, NuvaRing down 23% ex-FX to $91 million and Nexplanon down 4% ex-FX to $921 million including a 9% US decline the company attributes to policy-related access restrictions and lower physician demand."
+    },
+    {
+      "company": "Organon",
+      "year": 2026,
+      "event": "Disclosed that its fertility business grew 8% ex-FX in 2025 and that the JADA postpartum haemorrhage system grew, together substantially offsetting the NuvaRing and Nexplanon declines, while declining to publish a fertility revenue total."
+    },
+    {
+      "company": "Global Market Insights",
+      "year": 2026,
+      "event": "Published a femtech market estimate in April 2026 valuing the category at $73.4 billion for 2026 and projecting $255.5 billion by 2035 -- a base 7.5 times the narrowest published reading, against which the two largest disclosed women's health franchises in the world account for 5.3%."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA 510(k) and premarket approval pathways for women's health devices under 21 CFR Part 884, covering obstetrical and gynaecological devices from hysteroscopes to endometrial ablation systems",
+    "FDA Mammography Quality Standards Act (MQSA) accreditation and certification, which governs every mammography facility in the United States and conditions the breast imaging installed base",
+    "FDA regulation of software as a medical device, which determines whether a cycle-tracking or contraception app is a regulated device or a wellness product -- the boundary that most divides this category",
+    "FDA and state-level regulation of contraceptive access, the pathway Organon identifies as having restricted US Nexplanon demand",
+    "EU Medical Device Regulation 2017/745, which classifies contraceptive and intrauterine devices as Class III and raised evidence requirements for women's health devices generally",
+    "Health data protection regimes -- HIPAA in the United States and GDPR in the European Union -- which apply with particular force to reproductive health data held by consumer applications"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of SEC filings, company results releases and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Hologic, Inc., Form 10-K for the fiscal year ended 27 September 2025: Breast Health $1,484.1M, GYN Surgical $679.8M, Diagnostics $1,827.2M, Skeletal Health $109.4M, total $4,100.5M",
+      "Hologic, Inc., Q4 fiscal 2025 results (exhibit 99.1 to a Form 8-K, 3 November 2025): quarterly segment revenue, organic revenue excluding COVID-19, and the withdrawal of fiscal 2026 guidance on the Blackstone and TPG acquisition agreement of 21 October 2025",
+      "Organon & Co., full-year 2025 results (12 February 2026) and Form 10-K for the year ended 31 December 2025: Women's Health $1,752M, Nexplanon $921M, NuvaRing $91M, total revenue $6,216M",
+      "Mordor Intelligence, Femtech Market (read from the publisher's own page, 16 October 2026): $8.56B for 2025, $9.78B for 2026, $18.98B for 2031 at 14.20%, with devices at 51.62% and hospitals and maternal centres at 46.10% of 2025",
+      "Global Market Insights, Femtech Market (April 2026): $73.4B for 2026 rising to $255.5B by 2035",
+      "Report Prime femtech market ($56.44B for 2026 to $132.20B by 2032 at 15.24%); DelveInsight FemTech (13.52% for 2025-2032, dollar values left as placeholders on the publisher's page); Research and Markets (July 2022, $60.7B by 2031); and a Fortune Business Insights attribution read from Notion mirror pages"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates, attributed by name, and presented as published estimates rather than verified measurements. Four grounding tests were run. First, two disclosed women's health revenue lines were summed -- Hologic's Breast Health and GYN Surgical at $2,163.9M for its fiscal 2025 plus Organon's Women's Health franchise at $1,752M for calendar 2025, totalling $3,915.9M -- and divided by each publisher's base-year total, giving 45.7% of Mordor's $8.56 billion for 2025 and 5.3% of Global Market Insights' $73.4 billion for 2026. That establishes the narrow reading as internally coherent for a market Mordor itself describes as 51.62% devices and 46.10% hospital revenue, and establishes that the wide reading requires a remainder of roughly $70 billion for which consumer menstrual care is the only candidate of that size. Second, no public revenue, subscriber or unit figure was found for any femtech application or platform company, so the fastest-growing segment in every published forecast has no disclosed revenue at all; that absence is reported rather than estimated. Third, the disclosed growth rates were compared with the published ones: the two franchises were flat to declining in 2025 -- Hologic's two segments combined at $2,163.9M against $2,164.2M, Organon's Women's Health down 2% ex-FX with its fourth quarter down 16% -- against published CAGRs of 13.52% to 17.9%. Fourth, Hologic's agreement to be acquired by Blackstone and TPG and its withdrawal of fiscal 2026 guidance were recorded as removing the largest public disclosure in the category. These tests do not establish the correct market size for any scope, and no market size of our own is asserted. Hologic's fiscal year ends in September and is not coterminous with Organon's calendar year; Hologic's Diagnostics segment contains cervical cytology and HPV testing which are women's health but are excluded from the sum because no split is disclosed, which makes $3,915.9M a floor rather than a maximum -- including Diagnostics would give $5,743.1M and 67.1% of Mordor's 2025 market; the combined 2025 decline of about 0.5% relies on our own back-calculation of Organon's 2024 Women's Health revenue from its stated 1% decline; no Organon fertility total is disclosed despite an 8% ex-FX growth figure; no sourced figure for the global menstrual care market was obtained and none is published; and dividing company revenue by a third party's market total compares differently constructed numbers. No vendor market share is published because none is disclosed, and no regional or country split is published, because a single house's apportionment of a category with no agreed boundary is not a measurement."
+  },
+  "faqs": [
+    {
+      "question": "How big is the femtech market?",
+      "answer": "On the narrowest sourced reading -- Mordor Intelligence's devices, software and services for women's health -- $9.78 billion in 2026, projected to $21.69 billion by 2032 at 14.20%. Wider published readings put 2026 at $56.44 billion and $73.4 billion. That is a 7.5x spread, the widest in our corpus, and it reflects a category with no agreed boundary rather than a disagreement about growth."
+    },
+    {
+      "question": "Why do published femtech estimates differ by 7.5x?",
+      "answer": "Because femtech is a coinage stretched across at least six businesses: women's health devices, women's health pharmaceuticals, fertility and IVF services, digital software, consumer durables such as breast pumps, and consumer menstrual care products. No publisher in our set states which of the six it counts. Mordor comes closest, and its own figures place it -- devices are 51.62% of its market and hospitals and maternal centres 46.10% of its end users."
+    },
+    {
+      "question": "How can you tell which reading is which?",
+      "answer": "By arithmetic. Hologic's Breast Health and GYN Surgical came to $2,163.9 million for fiscal 2025 and Organon's Women's Health to $1,752 million for 2025 -- $3,915.9 million together. That is 45.7% of Mordor's $8.56 billion, which is a coherent concentration for the two largest women's health franchises in the world. It is 5.3% of Global Market Insights' $73.4 billion, which requires a roughly $70 billion remainder that can only be the consumer period-products aisle."
+    },
+    {
+      "question": "What does the narrow reading exclude?",
+      "answer": "On its own segment shares it substantially excludes consumer menstrual care products -- pads, tampons, cups, period underwear -- the retail breast pump and consumer wearable market, direct-to-consumer subscription platforms outside a clinical setting, and general women's wellness and mental health services. If you need a figure that includes those, expect something in the $56 to $73 billion range, and know that no publisher in that range states a scope."
+    },
+    {
+      "question": "How much revenue do femtech apps actually make?",
+      "answer": "Nobody knows publicly. We found no revenue, subscriber or unit figure for any femtech application or platform company in this research pass, and there is no listed femtech pure-play of scale anywhere. Yet software is the third fastest-growing segment in the forecasts at 16.12% to 2031. The fastest-growing part of this market is the part nobody can verify, and we report that absence rather than substituting an estimate for it."
+    },
+    {
+      "question": "Are the published growth rates credible?",
+      "answer": "They are a bet on the segments that disclose nothing. The two largest disclosed women's health franchises shrank about half a percent combined in 2025: Hologic's Breast Health fell 2.5% while GYN Surgical rose 6.0%, netting to flat, and Organon's Women's Health fell 2% ex-FX with its fourth quarter down 16%, NuvaRing down 23% and US Nexplanon down 9% on what the company calls policy-related access restrictions. Published CAGRs of 13.52% to 17.9% assume menopause, software and specialty clinics carry the whole market."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Mordor publishes a North America share of 41.95% for 2025, but that is one house's apportionment of a category with no agreed boundary, with no method stated. In a market where the same word covers hospital mammography and supermarket period products, a regional table would imply a precision the evidence cannot support, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Published 2026 estimates spread 7.5x ($9.78B to $73.4B) -- the widest base-year spread in this corpus -- while CAGRs spread only 1.32x",
+    "Hologic's Breast Health and GYN Surgical plus Organon's Women's Health total $3,915.9M: 45.7% of the narrowest published market and 5.3% of the widest",
+    "The wide readings require a remainder of roughly $70B, for which consumer menstrual care sold by P&G, Kimberly-Clark and Essity is the only candidate of that size",
+    "No femtech application or platform company discloses revenue, subscribers or units -- and software is the third fastest-growing published segment at 16.12%",
+    "The two largest disclosed women's health franchises shrank about 0.5% combined in 2025 against published CAGRs of 13.52% to 17.9%",
+    "Organon attributes a 9% US decline in Nexplanon to policy-related access restrictions, with NuvaRing down 23% ex-FX",
+    "Hologic is being taken private by Blackstone and TPG and has withdrawn fiscal 2026 guidance, removing the category's largest public disclosure"
+  ],
+  "reader_takeaways": [
+    "Never quote a femtech market size without the scope attached: the same word covers hospital mammography and the supermarket period-products aisle, and that moves the number 7.5x",
+    "Test any femtech figure by dividing Hologic's and Organon's disclosed women's health revenue into it -- 45.7% means a devices reading, 5% means consumer hygiene is included",
+    "Treat the digital tier as unmeasured, not small: it discloses nothing at all, and it is the segment every published forecast relies on for growth",
+    "Model the clinical segments from the disclosed record, which was flat to declining in 2025, rather than from a category CAGR built on the segments that do not report",
+    "Expect the evidence base to get worse: once Hologic is private, the largest public women's health device disclosure disappears"
+  ],
+  "seo": {
+    "meta_title": "Femtech Market Size and Forecast to 2032",
+    "meta_description": "Published femtech estimates spread 7.5x for 2026. Hologic's and Organon's disclosed women's health revenue is 46% of the narrowest and 5% of the widest.",
+    "keywords": [
+      "femtech market",
+      "femtech market size",
+      "women's health technology market",
+      "Hologic breast health revenue",
+      "Organon women's health revenue",
+      "menopause care market",
+      "fertility technology market"
+    ]
+  }
+}

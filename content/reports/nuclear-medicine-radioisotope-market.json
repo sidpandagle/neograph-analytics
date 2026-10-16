@@ -1,0 +1,276 @@
+{
+  "report_id": "nuclear-medicine-radioisotope-market",
+  "slug": "nuclear-medicine-radioisotope-market",
+  "title": "Nuclear Medicine Radioisotope Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Million",
+  "market_size": {
+    "current_value": 963.7,
+    "forecast_value": 1177.8,
+    "cagr": 3.4
+  },
+  "market_overview": {
+    "summary": "This report covers the isotope supply chain and generators - target irradiation in research reactors, molybdenum-99 processing, shipment, and the technetium-99m generators hospitals elute at the bedside - and stops at the generator sale. Finished radiopharmaceutical drug products are the subject of NeoGraph's separate radiopharmaceuticals-market report. That boundary is the whole story here: published estimates are bimodal, clustering at $0.7-1.8 billion and again at $5.9-11.8 billion with nothing published in between, and the OECD Nuclear Energy Agency's 6-day curie register settles which cluster is the isotope. On the best-grounded published base this is a $963.7 million market in 2026 reaching $1,177.8 million by 2032 at 3.4%.",
+    "key_trends": [
+      "Published estimates are bimodal - $0.7-1.8 billion and $5.9-11.8 billion, with not one estimate published in the gap between $1.8 billion and $5.9 billion",
+      "World Mo-99 supply rests on six ageing research reactors totalling 26,200 6-day curies per week, about 95% of global supply, three of them commissioned before 1962",
+      "The isotope-tier figures imply $672 per 6-day curie, inside the NEA's own generator-stage required-price band of roughly $536 to $1,033",
+      "Lantheus discloses the two tiers separately in one statement: TechneLite generators at $86.8 million against Pylarify at $989.1 million, a ratio of 11.4 to 1",
+      "NEA measures demand growth at 5% a year in emerging markets and 0.5% in mature ones, which is where the isotope-tier CAGRs of 3.4% to 4.3% sit and nowhere near the 15.1% to 19.15% of the upper cluster",
+      "NorthStar Medical Radioisotopes halted Mo-99 production after 2023, citing rising costs and competition from foreign government-subsidised producers - an exit, not an entry, in a market published forecasts describe as expanding",
+      "No large new capacity arrives before SHINE's 2027 accelerator, with PALLAS in the early 2030s and France's Jules Horowitz Reactor in 2032"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in nuclear medicine; supply constrained rather than demand constrained"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Technetium-99m remains the isotope behind 80 to 85% of all nuclear medicine procedures, counted by the NEA at over 30 million procedures a year, with no substitute at that scale",
+      "Emerging-market demand growing at 5% a year as diagnostic imaging access expands, against 0.5% in mature markets, on NEA's own measurement",
+      "Radioligand therapy pulling new isotopes - lutetium-177, actinium-225, yttrium-90 - into the same reactor and processing infrastructure that supplies Mo-99",
+      "Replacement capacity finally funded: PALLAS in the Netherlands has EUR 2 billion of state aid and construction underway, and Canada's Darlington units are being adapted for Mo-99, Y-90 and Lu-177",
+      "Accelerator and non-uranium routes reaching commercial scale, with SHINE's fusion-driven Chrysalis facility targeted at 2027"
+    ],
+    "restraints": [
+      "Six reactors supply about 95% of world Mo-99 and three were commissioned before 1962; the HFR at Petten was shut down in October 2024 for a structural repair, worsening a global shortage",
+      "Nothing in this chain can be stockpiled - Mo-99's half-life is 66 hours and Tc-99m's is 6 hours - so capacity has to be available the week it is needed or the dose does not exist",
+      "Marginal cost sits far below average cost, so the NEA observes that producers can break even only by restricting capacity until shortages generate price peaks, which then induces further restriction",
+      "The NEA states that current producers sometimes receive what could be characterised as state subsidies that obscure the true cost of production, which deters private entrants",
+      "NorthStar exited Mo-99 production after five years, citing exactly those cost and subsidy pressures",
+      "The HEU-to-LEU target conversion required by non-proliferation policy yields less Mo-99 per irradiation cycle and more waste, raising unit cost across the whole producer set"
+    ],
+    "opportunities": [
+      "Capacity payments rather than dose-only pricing, which the NEA explicitly proposes as the route to smoother pricing for a non-storable good",
+      "Dual-purpose production from power reactors, where CANDU online refuelling allows isotope output without interrupting electricity generation - Ontario already supplies around half the world's cobalt-60",
+      "Domestic ytterbium-176 enrichment in North America, which would remove the Russian dependency in the lutetium-177 chain",
+      "Accelerator and natural-molybdenum routes that eliminate uranium targets entirely, cutting waste and proliferation exposure",
+      "Regional on-demand production for isotopes whose half-life currently forces air freight, which is where SHINE's batch model is aimed"
+    ],
+    "challenges": [
+      "Published market sizes differ by up to 16.6 times, and several reports sold as isotope research are in fact sizing the finished radiopharmaceutical market",
+      "No producer discloses its share of Mo-99 supply, and the NEA states that each step's contribution to cost is proprietary, so the economics cannot be audited from outside",
+      "No public series of actual annual Mo-99 output exists - only nameplate capacity - and the NEA's own demand projections relied partly on confidential supply-chain data",
+      "Outage reserve capacity has to be paid for while sitting idle, and the NEA describes achieving and sustaining it as a persistent unsolved problem"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Molybdenum-99 bulk isotope",
+      "Technetium-99m generators",
+      "Iodine-131",
+      "Lutetium-177 bulk isotope",
+      "Yttrium-90 and other therapeutic isotope feedstock",
+      "Cyclotron-produced isotopes (F-18, Ga-68, Tl-201, Ga-67)"
+    ],
+    "by_application": [
+      "SPECT and planar diagnostic imaging",
+      "Cardiovascular perfusion imaging",
+      "Oncology diagnosis and staging",
+      "Bone scanning",
+      "Thyroid diagnosis and therapy",
+      "Radioligand therapy isotope supply"
+    ],
+    "by_end_user": [
+      "Hospital nuclear medicine departments",
+      "Central and commercial radiopharmacies",
+      "Diagnostic imaging centres",
+      "Radiopharmaceutical manufacturers buying bulk isotope",
+      "Academic and research institutes"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 963.7 },
+    { "year": 2027, "value": 996.5 },
+    { "year": 2028, "value": 1030.3 },
+    { "year": 2029, "value": 1065.4 },
+    { "year": 2030, "value": 1101.6 },
+    { "year": 2031, "value": 1139.0 },
+    { "year": 2032, "value": 1177.8 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Curium Pharma",
+      "headquarters": "France and Netherlands",
+      "market_position": "One of the two largest Mo-99 processors and generator suppliers; privately held",
+      "description": "Processes irradiated targets into Mo-99 and supplies Tc-99m generators internationally. The NEA records Curium as having completed conversion to low-enriched uranium targets in the Netherlands by 2017 and as the counterparty to Poland's MARIA reactor conversion in 2018. Privately held with no revenue disclosure, so its position can be described but not sized. Market share is not disclosed, and the NEA states that each step's contribution to cost in this chain is proprietary information."
+    },
+    {
+      "company": "Lantheus Holdings",
+      "headquarters": "United States",
+      "market_position": "The only company that discloses its generator revenue separately from its drug-product revenue",
+      "description": "Reported FY2025 worldwide revenue of $1,541.6 million on 26 February 2026, of which the TechneLite technetium generator line was $86.8 million - 5.6% of its own revenue - against $989.1 million for the Pylarify PSMA imaging agent. That 11.4-to-1 ratio inside one company is the clearest available statement of the gap between the isotope tier this report covers and the drug-product tier it does not. Market share is not disclosed."
+    },
+    {
+      "company": "NTP Radioisotopes (NECSA)",
+      "headquarters": "South Africa",
+      "market_position": "Operator of the second-largest listed Mo-99 reactor capacity",
+      "description": "Processes Mo-99 from the SAFARI-1 reactor at Pelindaba, which the NEA lists at 6,200 6-day curies per week - the second-largest single capacity in the world after Belgium's BR2. The NEA records NECSA as having completed low-enriched uranium target conversion in 2018. No revenue disclosure and no market share."
+    },
+    {
+      "company": "Institute for Radioelements (IRE)",
+      "headquarters": "Belgium",
+      "market_position": "Processor serving the largest listed reactor capacity",
+      "description": "Processes Mo-99 in Belgium, where the BR2 reactor at Mol carries the largest capacity in the NEA's table at 8,600 6-day curies per week. The NEA records IRE as having successfully converted to low-enriched uranium targets since early 2023, and notes BR2 will continue to use some highly enriched uranium fuel until a planned complete phase-out in 2026. No revenue disclosure and no market share."
+    },
+    {
+      "company": "ANSTO",
+      "headquarters": "Australia",
+      "market_position": "The only producer on the NEA list operating a reactor commissioned this century",
+      "description": "Operates the OPAL reactor at Lucas Heights, commissioned in 2006 at 2,200 6-day curies per week, which the NEA notes was designed for low-enriched uranium fuel from the outset. OPAL is the youngest reactor in the world's Mo-99 supply base by more than three decades. A government body; no commercial revenue disclosure and no market share."
+    },
+    {
+      "company": "SHINE Technologies",
+      "headquarters": "United States",
+      "market_position": "The nearest prospective new entrant, by a non-reactor route",
+      "description": "Developing accelerator-driven fusion production of Mo-99 at its Chrysalis facility, targeted at 2027 on 5.5-day cycles over 50 weeks a year with low-enriched uranium solution irradiation, yielding up to approximately 22,000 millicuries of Tc-99m per batch. The company has said the facility could address more than one-third of global demand. Pre-revenue in Mo-99; no market share."
+    },
+    {
+      "company": "Cardinal Health",
+      "headquarters": "United States",
+      "market_position": "Largest nuclear radiopharmacy network, revenue not separably disclosed",
+      "description": "Its Nuclear and Precision Health Solutions business distributes and compounds radiopharmaceuticals through a national radiopharmacy network. Cardinal reports it inside an Other segment that recorded $5,382 million in FY2025 against $4,512 million in FY2024, and which also contains at-Home Solutions and OptiFreight Logistics - so no nuclear revenue line exists to cite. Market share is not disclosed."
+    },
+    {
+      "company": "NorthStar Medical Radioisotopes",
+      "headquarters": "United States",
+      "market_position": "A former producer, and the market's clearest economic signal",
+      "description": "Produced Mo-99 from 2018 to 2023 on a 6.5-day-per-week cycle using enriched molybdenum-98 targets rather than uranium, then halted production. The NEA records that NorthStar attributed the withdrawal to rising production costs and competition from foreign government-subsidised producers, and presents it as an illustration of how an inefficient market drives new suppliers out. No current Mo-99 revenue and no market share."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Nuclear Energy Agency (OECD)",
+      "year": 2025,
+      "event": "Published Current Trends in the Supply and Utilisation of Medical Radioisotopes (NEA No. 7743) on 21 October 2025, listing six research reactors at 26,200 6-day curies per week as approximately 95% of global Mo-99 supply and setting out why marginal-cost pricing of a non-storable good drives producers to restrict capacity."
+    },
+    {
+      "company": "Lantheus Holdings",
+      "year": 2026,
+      "event": "Reported FY2025 results on 26 February 2026: worldwide revenue $1,541.6 million with TechneLite generators at $86.8 million against Pylarify at $989.1 million, and guided FY2026 revenue down to $1.40-1.45 billion while sharpening focus on radiodiagnostics."
+    },
+    {
+      "company": "GE HealthCare",
+      "year": 2026,
+      "event": "Reported on 4 February 2026 that Pharmaceutical Diagnostics full-year 2025 revenue reached $2,900 million from $2,508 million, with fourth-quarter segment EBIT of $234 million at a 29.6% margin - drug-product revenue three times the whole published Mo-99 market."
+    },
+    {
+      "company": "NorthStar Medical Radioisotopes",
+      "year": 2023,
+      "event": "Halted Mo-99 production after five years of operation, attributing the withdrawal to rising production costs and competition from foreign government-subsidised producers, and shifted focus to other isotopes."
+    },
+    {
+      "company": "Nuclear Research and Consultancy Group (NRG)",
+      "year": 2024,
+      "event": "Reported construction milestones underway on the PALLAS reactor in the Netherlands - 55 MW, low-enriched uranium fuel, 300 operating days a year, supported by EUR 2 billion in state aid - with operation expected in the early 2030s."
+    },
+    {
+      "company": "Nuclear Research and Consultancy Group (NRG)",
+      "year": 2024,
+      "event": "The High Flux Reactor at Petten was shut down in October 2024 for a structural issue requiring immediate repair, which combined with scheduled maintenance at other reactors to worsen a global shortage of both Mo-99 and Tc-99m."
+    }
+  ],
+  "regulatory_landscape": [
+    "The global highly-enriched-to-low-enriched uranium conversion programme, which applies separately to reactor fuel and to irradiation targets: LVR-15 fuel converted 2011, MARIA fuel 2014, OPAL low-enriched from commissioning, BR2 phasing out remaining HEU in 2026; targets converted by Curium in the Netherlands by 2017, NECSA in South Africa by 2018, MARIA in 2018 and IRE in Belgium from early 2023",
+    "The NEA's full-cost-recovery principle for Mo-99 irradiation, which sets out the methodology by which reactor operators should recover capital as well as marginal cost, and which the NEA says would require reactors to raise prices a further 40%",
+    "US Nuclear Regulatory Commission licensing and Euratom guidelines governing isotope production, handling and transport, which the NEA identifies as a continuing compliance load on producers",
+    "Transport regulation of radioactive material, which the NEA records as a specific supply-chain vulnerability because changes to safety standards complicate logistics for a cargo with a 66-hour half-life",
+    "FDA and Health Canada approval pending for Mo-99 production via the Laurentis and BWXT Target Delivery System at Darlington, which is the regulatory gate on Canadian CANDU-sourced Mo-99 reaching patients"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on the OECD Nuclear Energy Agency's published supply report, company filings and earnings releases, and publisher pages read directly, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "OECD Nuclear Energy Agency, Current Trends in the Supply and Utilisation of Medical Radioisotopes, NEA No. 7743, version 1.1, 21 October 2025: reactor capacities in 6-day curies per week, procedure counts, demand growth rates and supply economics",
+      "OECD NEA, The Supply of Medical Isotopes: Full Cost Recovery for Molybdenum-99 Irradiation (2012): an average patient dose costs around USD 21 at generator sale, of which about USD 2 is irradiation",
+      "NEA presentation to RRFM 2011: levelised cost and required price per 6-day curie at reactor, processor, generator and radiopharmacy stages, in euros",
+      "Lantheus Holdings fourth quarter and full year 2025 results, released 26 February 2026: worldwide revenue $1,541.6 million, TechneLite $86.8 million, Pylarify $989.1 million",
+      "GE HealthCare Technologies fourth quarter and full year 2025 results, Form 8-K released 4 February 2026: Pharmaceutical Diagnostics revenue $2,900 million for 2025 against $2,508 million for 2024",
+      "Cardinal Health Form 10-K for the fiscal year ended 30 June 2025: Other segment revenue $5,382 million, with Nuclear and Precision Health Solutions not separately disclosed",
+      "Persistence Market Research, Molybdenum-99 Market (PMRREP38370, 195 pages, October 2026): $963.7 million for 2026 to $1,217.8 million by 2033 at 3.4%",
+      "IMARC Group, Nuclear Medicine Radioisotopes Market (SR112026A7532), last updated 20 April 2026: $8.4 billion for 2025 to $15.7 billion by 2034 at 6.99%",
+      "Transparency Market Research, Medical Radioisotopes Market, published 3 April 2025: $5.9 billion for 2024 to $14.1 billion by 2035 at 8.1%",
+      "Internal Revenue Service yearly average currency exchange rates for 2025, EUR 0.886 per US dollar, used for every euro conversion in this report",
+      "NeoGraph Analytics, Radiopharmaceuticals Market, which covers the finished drug-product tier at $8.08 billion for 2026 and defines the boundary of this report"
+    ],
+    "data_validation": "The headline figures are Persistence Market Research's own published 2026 value of $963.7 million and its own stated 3.4% rate; the 2032 endpoint and intermediate years are interpolation on that published rate across a horizon one year shorter than the publisher's own, not separate observations. That series was chosen because it is the only isotope-tier series read directly from a publisher's page with a report ID and date, because it carries a published 2026 base needing no interpolation, and because it is the only one the grounding arithmetic supports. The grounding rests on a published physical register: the NEA lists six research reactors at 26,200 6-day curies per week and states they are approximately 95% of global Mo-99 supply, implying about 1,434,160 6-day curies of annual capacity. Dividing gives $672 per 6-day curie on the published base, which falls inside the NEA's own generator-stage required-price band of roughly $536 to $1,033 per 6-day curie and within 1.4 times an observed selling price of about $470 per curie from a 2008 US study; the upper cluster of published estimates implies $5,858 to $8,207 per 6-day curie, which is 2.9 to 4.0 times the NEA's full radiopharmacy-stage cost and therefore cannot be the isotope at any tier of the chain. A second check uses the NEA's own full-cost-recovery figure of about USD 21 per average patient dose at generator sale against 30 to 40 million Tc-99m procedures a year, giving a band of $630 to $840 million into which the isotope-tier estimates fall and which the upper cluster exceeds by 10 to 14 times. A third needs no assumption at all: Lantheus discloses TechneLite generator revenue of $86.8 million alongside Pylarify drug-product revenue of $989.1 million in the same statement, a ratio of 11.4 to 1, and its generator line is 9.0% of the published Mo-99 market against 0.7% of the largest upper-cluster figure. Two drug-product disclosures, GE HealthCare's Pharmaceutical Diagnostics at $2,900 million and Lantheus at $1,541.6 million, total 4.6 times the whole published Mo-99 market and 53% of the largest isotope-labelled estimate, which is what identifies the upper cluster as the drug-product tier covered by NeoGraph's radiopharmaceuticals-market report. These are scope and plausibility tests, not market estimates. The curie denominator is nameplate capacity grossed up from a coverage statement rather than measured output, and real output is lower, so every per-curie figure here is a floor. The NEA cost stack is from 2011 and its euro figures were converted by us at the IRS 2025 yearly average rate of EUR 0.886 per US dollar, a fourteen-year gap that inflation alone would widen. The procedure count is internally inconsistent inside the NEA's own report, which gives both over 30 million and over 40 million in different chapters. No vendor share, regional split or country split is published anywhere in this report, and no Curium or Cardinal Health nuclear revenue figure is estimated because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How big is the nuclear medicine radioisotope market?",
+      "answer": "On the best-grounded published base, $963.7 million in 2026 reaching $1,177.8 million by 2032 at 3.4%. That figure covers the isotope supply chain - molybdenum-99 and the technetium-99m generators hospitals elute - and not finished radiopharmaceutical drug products. Published estimates labelled for this market range from about $707 million to $11.77 billion, and the arithmetic shows the large ones are sizing the drug-product market instead."
+    },
+    {
+      "question": "Why do published estimates differ by sixteen times?",
+      "answer": "Because they are not one distribution. They are two clusters with an empty order of magnitude between them: $0.7-1.8 billion and $5.9-11.8 billion, with nothing published between $1.8 billion and $5.9 billion. The lower cluster prices the isotope as supplied; the upper cluster prices the finished dose. The upper cluster's centre of gravity gives the game away - one publisher's $8.4 billion for 2025 is within 4% of NeoGraph's separately researched radiopharmaceuticals market base of $8.08 billion for 2026."
+    },
+    {
+      "question": "How is this report different from the radiopharmaceuticals market report?",
+      "answer": "This one stops at the generator or bulk-isotope sale: reactor irradiation, Mo-99 processing, shipment, generators. The radiopharmaceuticals report covers the finished drug products - Pylarify, Pluvicto, Definity, FDG doses, Lu-177 therapies - and sizes that market at $8.08 billion for 2026. Lantheus proves the gap inside one statement: its TechneLite generator line is $86.8 million against $989.1 million for Pylarify, a ratio of 11.4 to 1."
+    },
+    {
+      "question": "Where does the world's molybdenum-99 actually come from?",
+      "answer": "Six research reactors. The NEA lists BR2 in Belgium at 8,600 6-day curies per week, SAFARI-1 in South Africa at 6,200, LVR-15 in Czechia at 3,200, MARIA in Poland at 3,000, HFR in the Netherlands at 3,000 and OPAL in Australia at 2,200 - about 95% of global supply from 26,200 6-day curies of weekly capacity. Three were commissioned before 1962. HFR was shut down in October 2024 for a structural repair, which worsened a global shortage of both Mo-99 and Tc-99m."
+    },
+    {
+      "question": "Does the published market size make sense per curie?",
+      "answer": "The isotope-tier figure does. Dividing $963.7 million by roughly 1,434,160 6-day curies of annual capacity gives $672 per 6-day curie, which sits inside the NEA's own generator-stage required-price band of about $536 to $1,033 and within 1.4 times an observed selling price of around $470 per curie from a 2008 US study. The upper cluster implies $5,858 to $8,207 per 6-day curie - 2.9 to 4.0 times the NEA's full radiopharmacy-stage cost, so it is not the isotope at any point in the chain."
+    },
+    {
+      "question": "Why is growth only 3.4% when other forecasts say 15% or more?",
+      "answer": "Because the NEA measures demand growing at 5% a year in emerging markets and 0.5% in mature ones, and no large new capacity arrives before SHINE's accelerator in 2027, PALLAS in the early 2030s and France's Jules Horowitz Reactor in 2032. A supplier also left: NorthStar halted Mo-99 production after 2023, citing rising costs and foreign government-subsidised competition. A 19% compound rate would require a supply base that does not exist and has recently lost a participant."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because only one source publishes regional splits for the isotope tier, and they are one publisher's apportionment of a single-isotope total with no method stated. We note the splits in the research notes and publish none of them. The physical register points elsewhere anyway: supply is concentrated in Belgium, South Africa, Czechia, Poland, the Netherlands and Australia while demand is global, so a revenue-by-region table would describe neither."
+    }
+  ],
+  "seo": {
+    "meta_title": "Nuclear Medicine Radioisotope Market to 2032",
+    "meta_description": "Six reactors supply 95% of world Mo-99 at 26,200 6-day curies a week. Why published estimates split into two clusters 16x apart, and which one is the isotope.",
+    "keywords": [
+      "nuclear medicine radioisotope market",
+      "molybdenum-99 market",
+      "technetium-99m generator market",
+      "medical radioisotope supply chain",
+      "6-day curie",
+      "Mo-99 supply",
+      "OECD NEA medical radioisotopes"
+    ]
+  },
+  "executive_summary": "Published estimates of this market do not disagree about growth. They disagree about what is being counted, and unusually they do it in a way that is visible on sight: the estimates are bimodal. One cluster sits at $0.7 to $1.8 billion, another at $5.9 to $11.8 billion, and not a single published figure falls in the gap between $1.8 billion and $5.9 billion. A distribution with an empty order of magnitude in the middle is not a measurement problem. It is two markets sharing a name.\n\nThis market is unusually good for settling that, because the physical quantity is counted in a published unit by an intergovernmental body. The OECD Nuclear Energy Agency's October 2025 supply report lists the six research reactors that carry world molybdenum-99 production - BR2 in Belgium at 8,600 6-day curies per week, SAFARI-1 in South Africa at 6,200, LVR-15 in Czechia at 3,200, MARIA in Poland at 3,000, HFR in the Netherlands at 3,000, OPAL in Australia at 2,200 - and states they are approximately 95% of global supply. That is about 1,434,160 6-day curies of annual capacity.\n\nDivide. The isotope-tier figure implies $672 per 6-day curie, which lands inside the NEA's own generator-stage required-price band of roughly $536 to $1,033 and within 1.4 times an observed selling price of about $470 per curie from a 2008 US study. The upper cluster implies $5,858 to $8,207 per 6-day curie - 2.9 to 4.0 times the NEA's full radiopharmacy-stage cost, so it is not the isotope at the reactor, the processor, the generator or even the radiopharmacy. A second route agrees: the NEA's full-cost-recovery study puts an average patient dose at about USD 21 at generator sale, which across 30 to 40 million technetium procedures a year gives $630 to $840 million. The isotope-tier estimates sit in that band. The upper cluster exceeds it ten to fourteen times.\n\nThe decisive evidence needs no assumption at all, because one company publishes both tiers in the same statement. Lantheus, a leading North American technetium generator supplier, reported FY2025 revenue of $1,541.6 million on 26 February 2026 - of which TechneLite generators were $86.8 million and the Pylarify imaging agent was $989.1 million. Inside one company, the finished radiopharmaceutical is 11.4 times the generator. Lantheus's generator line is 9.0% of the published Mo-99 market and 0.7% of the largest upper-cluster figure; the first is a credible position for one of a handful of suppliers and the second is not. And two drug-product disclosures - GE HealthCare's Pharmaceutical Diagnostics at $2,900 million for 2025 and Lantheus's $1,541.6 million - total 4.6 times the entire published Mo-99 market and 53% of the largest isotope-labelled estimate. That is what identifies the upper cluster: it is the radiopharmaceutical drug market, which NeoGraph's radiopharmaceuticals-market report already sizes at $8.08 billion for 2026, within 4% of the figure one publisher sells as nuclear medicine radioisotopes.",
+  "key_highlights": [
+    "Published estimates are bimodal: $0.7-1.8 billion for the isotope tier and $5.9-11.8 billion for the drug-product tier, with nothing published in between",
+    "Six research reactors carry 26,200 6-day curies per week, about 95% of world Mo-99 supply; three were commissioned before 1962 and the newest, OPAL, dates from 2006",
+    "The published isotope-tier base implies $672 per 6-day curie, inside the NEA's own generator-stage required-price band of roughly $536 to $1,033",
+    "The NEA's own cost study puts a patient dose at about USD 21 at generator sale; across 30-40 million procedures that is $630-840 million, which brackets the isotope-tier estimates",
+    "Lantheus discloses both tiers in one statement: TechneLite generators $86.8 million against Pylarify $989.1 million, a ratio of 11.4 to 1",
+    "GE HealthCare's Pharmaceutical Diagnostics at $2,900 million plus Lantheus at $1,541.6 million is 4.6 times the whole published Mo-99 market",
+    "NEA measures demand growth at 5% a year in emerging markets and 0.5% in mature ones - and NorthStar left Mo-99 production after 2023 citing subsidised foreign competition"
+  ],
+  "market_context": "Nuclear medicine runs on a decay chain, and the chain sets the industrial structure. Uranium-235 targets are irradiated in a research reactor to produce molybdenum-99, whose 66-hour half-life is just long enough to ship worldwide. Mo-99 is loaded into a generator, from which a hospital elutes technetium-99m with a 6-hour half-life, on the morning it is needed. Nothing in that chain can be stored, which means capacity has to exist the week the dose is required or the dose simply does not exist. The NEA draws the consequence precisely: because the marginal cost of production is far below the average cost, a producer can break even by restricting capacity until periodic supply interruptions generate price peaks - and the resulting volatility then induces further restriction.\n\nThat is why this market is small and fragile rather than large and growing. Six reactors built mostly in the 1950s to 1970s for nuclear research, with isotope production as a secondary function, supply about 95% of world Mo-99. The 2008-2009 crisis followed the unplanned shutdown of a single Canadian reactor; the October 2024 shutdown of the HFR at Petten did the same at smaller scale. Meanwhile the non-proliferation conversion from highly to low-enriched uranium targets, now largely complete across the producer set, yields less Mo-99 per cycle and more waste, raising unit cost for everyone. NorthStar's exit after 2023 is the economic verdict.\n\nThis report therefore deliberately stops at the generator. The money in nuclear medicine is downstream of here - in PSMA imaging agents, lutetium-177 radioligand therapy, PET tracers - and that is the subject of NeoGraph's radiopharmaceuticals-market report at $8.08 billion for 2026. The therapeutic boom described there depends entirely on the isotope base described here, which is the argument for reading both.",
+  "forecast_analysis": "The curve starts at $963.7 million for 2026 - Persistence Market Research's own published 2026 value, not an interpolation - and compounds at the same publisher's stated 3.4% to $1,177.8 million by 2032, a horizon one year shorter than the publisher's own. Intermediate years are interpolation on that rate, and the implied rate between our endpoints is 3.40%, identical to the published one.\n\nWe publish this series rather than one of the much larger ones because it is the only isotope-tier figure read directly from a publisher's page, because its base year needs no interpolation, and because it is the only one that survives the register. At $672 per 6-day curie it sits inside the NEA's own generator-stage price band; the alternatives sit at three to four times the NEA's full radiopharmacy cost, which places them in a different market entirely.\n\nA 3.4% rate is also the only one consistent with the supply side. The NEA measures demand growing at 5% annually in emerging markets and 0.5% in mature ones. No large new capacity arrives before SHINE's Chrysalis accelerator in 2027, with PALLAS in the early 2030s and France's Jules Horowitz Reactor in 2032, and a producer has recently left rather than entered. A 15% or 19% compound rate would require either a supply base that does not exist or a price escalation the NEA says the market structure prevents from being smooth.\n\nThe real risk to this shape is that it is too smooth, not that it is too low. For a non-storable good produced by six ageing reactors, the realistic path is a flat trend punctuated by shortage-driven price spikes of exactly the kind the NEA describes producers as depending on to recover capital. Readers should treat the line as a trend and watch the reactor outage record, which is the variable that actually moves revenue in this market.",
+  "reader_takeaways": [
+    "Check which tier a nuclear medicine radioisotope figure is measuring: anything in the $5.9-11.8 billion range is the radiopharmaceutical drug market, not the isotope supply chain",
+    "Use the 6-day curie as the sanity check: about $672 per 6-day curie is consistent with the NEA's own generator-stage price band, and $5,858 is not",
+    "Read Lantheus's product table as the structural statement it is - $86.8 million of generators against $989.1 million of one imaging agent, inside one company",
+    "Treat supply, not demand, as the binding constraint: six reactors, three of them pre-1962, about 95% of world Mo-99, and nothing storable",
+    "Expect a flat trend with shortage-driven price spikes rather than compound growth, because the NEA describes capacity restriction as how producers recover capital in this market",
+    "Pair this report with NeoGraph's radiopharmaceuticals-market report, which covers the drug-product tier the large published estimates are actually describing"
+  ]
+}

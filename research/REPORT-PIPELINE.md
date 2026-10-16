@@ -45,16 +45,16 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 28 | vaccine-cold-chain-market | Pharmaceuticals | 3B | check-passed |
 | 29 | plasma-fractionation-market | Pharmaceuticals | 3B | check-passed |
 | 30 | pharmacy-automation-market | Healthcare IT | 3B | check-passed |
-| 31 | medical-device-cybersecurity-market | Healthcare IT | 4A | queued |
+| 31 | medical-device-cybersecurity-market | Healthcare IT | 4A | drafting |
 | 32 | nuclear-medicine-radioisotope-market | Pharmaceuticals | 4A | queued |
-| 33 | ophthalmic-therapeutics-market | Pharmaceuticals | 4A | queued |
-| 34 | psychedelic-therapeutics-market | Pharmaceuticals | 4A | queued |
-| 35 | fertility-and-ivf-services-market | Healthcare IT | 4A | queued |
-| 36 | femtech-market | Medical Devices | 4B | queued |
-| 37 | advanced-wound-care-market | Medical Devices | 4B | queued |
-| 38 | orthopedic-implants-market | Medical Devices | 4B | queued |
-| 39 | rehabilitation-robotics-market | Medical Devices | 4B | queued |
-| 40 | veterinary-diagnostics-market | Life Sciences | 4B | queued |
+| 33 | ophthalmic-therapeutics-market | Pharmaceuticals | 4A | drafting |
+| 34 | psychedelic-therapeutics-market | Pharmaceuticals | 4A | drafting |
+| 35 | fertility-services-market | Healthcare IT | 4A | drafting |
+| 36 | femtech-market | Medical Devices | 4B | check-passed |
+| 37 | advanced-wound-care-market | Medical Devices | 4B | check-passed |
+| 38 | orthopedic-implants-market | Medical Devices | 4B | check-passed |
+| 39 | rehabilitation-robotics-market | Medical Devices | 4B | check-passed |
+| 40 | veterinary-diagnostics-market | Life Sciences | 4B | check-passed |
 
 **Rounds 2 and 3 are drafted and passing `check` — twenty reports held for the
 next merge slot**, plus two analysis articles and a press release in

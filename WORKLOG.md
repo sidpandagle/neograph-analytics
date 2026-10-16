@@ -1085,3 +1085,47 @@ about the SVG's own centre, so both states land dead centre regardless of font.
 Both are structural fixes verified in the built HTML and in the stacking rules;
 the visual confirmation in a browser comes after 21:00 IST, when that window
 opens.
+
+### Round 4, batch 4B — five reports drafted (held)
+The first attempt at round 4 was killed mid-run by an expired login, leaving one
+notes file behind. The retry was told to reuse it rather than redo it, **and to
+verify it before relying on it** — which earned its keep: of the two
+load-bearing sources, IDEXX's SEC exhibit confirmed to the dollar, but a "45% of
+revenue from reference laboratories" claim **was not on the publisher's page on
+re-reading**. It was withdrawn, the withdrawal documented in the notes, and the
+scope finding rebuilt on a different source plus the structural fact that one
+publisher carries no services line at all.
+
+- **Veterinary diagnostics**: IDEXX's disclosed CAG Diagnostics recurring
+  revenue is **92.6% of one publisher's entire global market**, and IDEXX's
+  total revenue **exceeds that market by 17%**.
+- **Orthopaedic implants**: five disclosed segment revenues sum to **$34,369M =
+  120.8% of one publisher's whole global market**; two companies alone are
+  62.2% of it. The per-procedure test lands at $3,040, inside the measured
+  $1,797-$12,093 implant cost range — so the *procedure* arithmetic is sound
+  while the *market total* is not.
+- **Advanced wound care** is the second report in two rounds that **resolves**
+  its spread rather than only finding it: one publisher's own stated 60%
+  advanced share applied to its own $24.4B all-wound-care figure gives $14.64B,
+  within **9.5%** of another publisher's independent advanced-only $13.37B. The
+  1.83x gap is the gauze, proven from inside one publisher's own two numbers.
+  It also catches a shock no published CAGR has priced: CMS's $127.14/cm² skin
+  substitute rate from 1 January 2026 has already produced a guided **71% fall**
+  at one supplier and a booked $72M impairment.
+- **Rehabilitation robotics** is the thinnest, and says so in its first
+  paragraph: **all three listed pure-plays sum to $75.7M, 5.0% of the published
+  market**, and disclosed powered-exoskeleton revenue is 2.98% of one
+  publisher's own exoskeleton segment — about 234 devices at the CMS K1007 rate
+  against an implied 7,850. What the other 95% must be is named (the stationary
+  clinical platform tier, all private) and deliberately not sized. One of the
+  three listed companies **left the category mid-forecast** — merged into an AI
+  infrastructure business in May 2026, unit put up for sale in October — and no
+  published forecast mentions it.
+- **Femtech**: a **7.5x** base spread against a 1.32x CAGR spread. Three
+  disclosed segments are 45.7% of the narrow reading and **5.3% of the widest**,
+  which would need a ~$70B remainder that only consumer menstrual care could
+  supply. Published at the narrow reading with the exclusions named. The
+  structural finding: **no femtech app or platform company discloses revenue,
+  subscribers or units** — reported as a result rather than filled with an
+  estimate — and the category's largest public disclosure is about to disappear
+  into a take-private.

@@ -1,0 +1,252 @@
+{
+  "report_id": "medical-device-cybersecurity-market",
+  "slug": "medical-device-cybersecurity-market",
+  "title": "Medical Device Cybersecurity Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 1.69,
+    "forecast_value": 4.18,
+    "cagr": 16.3
+  },
+  "market_overview": {
+    "summary": "Published estimates of this market spread 8.49x at 2025, from $1.46 billion to $12.4 billion - and the clearest proof that the gap is a definition rather than a disagreement comes from one publisher, which last updated two reports on the same day in September 2026 giving $1.46 billion and $7.29 billion for the same base year. The narrow scope counts products built for medical devices: clinical-network asset discovery, firmware and SBOM analysis, device identity, premarket security engineering. The broad scope counts general enterprise security bought by healthcare organisations, including antivirus, endpoint, cloud, identity management and spend by payers, who own no medical devices. Dividing each figure by the 6,100 US hospitals in the AHA Annual Survey settles it. On the narrow reading this is a $1.69 billion market in 2026 reaching $4.18 billion by 2032 at 16.3%.",
+    "key_trends": [
+      "Published 2025 estimates spread 8.49x, from $1.46 billion to $12.4 billion, and one publisher accounts for a 4.99x slice of that on its own",
+      "Section 524B of the FD&C Act, in force since 29 March 2023, binds premarket submission sponsors rather than device owners - it is a manufacturer obligation, not a hospital one",
+      "The operative FDA guidance was reissued on 27 June 2025, superseding the 27 September 2023 version and adding a section specifically on 524B cyber devices",
+      "Localised against IMARC's own regional split and divided by AHA's 6,100 US hospitals, the narrow figure implies about $91,000 per hospital per year and the broad figures $456,000 to $776,000",
+      "The HIMSS cybersecurity survey finds healthcare organisations have traditionally spent 6% or less of total IT budget on all cybersecurity, and 20% cannot state a cybersecurity budget at all",
+      "Consolidation is repricing the vendor side: ServiceNow agreed in late December 2025 to buy Armis for $7.75 billion, and Claroty raised a $150 million Series F at a $3 billion valuation in January 2026"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Widely deployed in large health systems; thin in small and rural hospitals"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Section 524B of the FD&C Act, which since March 2023 has required cyber-device premarket submissions to include a postmarket vulnerability plan, coordinated disclosure, patching commitments and a software bill of materials",
+      "Long-lived connected device estates running operating systems past end of support, which cannot be patched on an IT cadence and must instead be segmented and monitored",
+      "Ransomware against hospital networks, where the clinical consequence of downtime rather than the data loss is what forces the budget",
+      "Cyber insurance and health-system board scrutiny, which turn device inventory completeness into a reportable control rather than an IT preference",
+      "FDA's 27 June 2025 guidance revision, which pushed security-by-design work upstream into the quality system and created a market for premarket security engineering services"
+    ],
+    "restraints": [
+      "Hospital cybersecurity budgets are small in absolute terms: HIMSS respondents have traditionally put 6% or less of IT spend into all cybersecurity, of which device security is one line",
+      "A fifth of healthcare organisations in the HIMSS survey have no set cybersecurity budget and fund it ad hoc, which makes a per-hospital subscription a hard sell outside large systems",
+      "Nearly a third of US community hospitals are rural, where there is often no security staff to operate a device-security platform once it is bought",
+      "Device manufacturers control the patch, so a hospital that identifies a vulnerability frequently cannot remediate it and can only compensate around it",
+      "Spending increases reported to HIMSS went disproportionately into tools rather than staff, which limits how much value a new platform can deliver"
+    ],
+    "opportunities": [
+      "Manufacturer-side security engineering and SBOM tooling, the half of this market created directly by 524B and still the newer one",
+      "Bundling device security into enterprise exposure management, which is the explicit rationale for ServiceNow's acquisition of Armis",
+      "Smaller and rural hospitals, almost entirely unserved at current platform price points, reachable only through managed service delivery",
+      "Legacy and end-of-support device security as a distinct product line, since the installed base cannot be replaced on any realistic capital cycle",
+      "Device identity and cryptographic attestation, which would move the market from detecting unknown devices to preventing unknown devices"
+    ],
+    "challenges": [
+      "The category's own published sizes differ 8.49x, so a buyer cannot use published research to benchmark what peers spend",
+      "No vendor in the market discloses healthcare-specific revenue, so concentration and growth have to be inferred from funding rounds and acquisition prices",
+      "Asset discovery produces findings faster than hospitals can act on them, and alert volume without remediation capacity erodes the business case at renewal",
+      "Section 524B applies at submission, so the several hundred thousand devices already in service were never covered by it"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Connected device security platforms (discovery, classification, segmentation)",
+      "Device-native and embedded security",
+      "Software bill of materials and software composition analysis",
+      "Device identity, cryptography and attestation",
+      "Security testing, penetration testing and attack simulation",
+      "Managed and professional security services"
+    ],
+    "by_application": [
+      "Secure device development and premarket cybersecurity submissions",
+      "Device discovery and clinical asset management",
+      "Vulnerability and post-market risk management",
+      "Runtime threat detection and incident response",
+      "Network access control and microsegmentation",
+      "Legacy and end-of-support device security"
+    ],
+    "by_end_user": [
+      "Hospitals and health systems",
+      "Medical device manufacturers",
+      "Imaging and diagnostic centres",
+      "Ambulatory surgery centres and specialty clinics",
+      "Contract development and manufacturing organisations serving device makers"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 1.69 },
+    { "year": 2027, "value": 1.97 },
+    { "year": 2028, "value": 2.29 },
+    { "year": 2029, "value": 2.66 },
+    { "year": 2030, "value": 3.09 },
+    { "year": 2031, "value": 3.6 },
+    { "year": 2032, "value": 4.18 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Armis",
+      "headquarters": "United States and Israel",
+      "market_position": "Largest disclosed recurring revenue in connected-device security, across all verticals",
+      "description": "The only company in this set with a company-announced revenue figure: annual recurring revenue passed $300 million in August 2025, up from $200 million in under a year. The business is cross-industry exposure management spanning IT, operational technology and medical devices, and no healthcare-only revenue is disclosed, so the figure cannot be read as a medical device security number. ServiceNow agreed to acquire Armis for $7.75 billion in cash in late December 2025, its largest acquisition, with closing expected in the second half of 2026. Market share is not disclosed."
+    },
+    {
+      "company": "Claroty",
+      "headquarters": "United States and Israel",
+      "market_position": "Leading healthcare-specific platform, built on an acquisition",
+      "description": "Acquired Medigate, described as the first security platform built specifically for healthcare IoT, alongside a $400 million Series E; the product is now sold as Claroty xDome. Raised a $150 million Series F at a $3 billion valuation in January 2026. The only recurring revenue figure available, above $200 million, comes from a private-company data aggregator rather than the company, and is cross-industry. Market share is not disclosed."
+    },
+    {
+      "company": "Asimily",
+      "headquarters": "United States",
+      "market_position": "Highest-rated in healthcare IoT buyer surveys, revenue undisclosed",
+      "description": "Scores at the top of KLAS Research's healthcare IoT security ranking, ahead of larger platforms, on a respondent base that KLAS itself reports as small. Privately held with no revenue disclosure. Market share is not disclosed."
+    },
+    {
+      "company": "Cynerio",
+      "headquarters": "United States and Israel",
+      "market_position": "Healthcare-only specialist, small surveyed footprint",
+      "description": "Built exclusively for healthcare device security rather than adapted from industrial OT. Appears in KLAS's healthcare IoT security ranking on a respondent base of 15, which is the smallest in that comparison. Privately held with no revenue disclosure. Market share is not disclosed."
+    },
+    {
+      "company": "Medcrypt",
+      "headquarters": "United States",
+      "market_position": "Manufacturer-side rather than hospital-side",
+      "description": "Works on the device manufacturer half of this market - security engineering, cryptography and vulnerability analysis feeding FDA premarket submissions - rather than selling monitoring to hospitals. Publishes the most-cited public tally of medical device vulnerability disclosures, which counts 433 vulnerabilities across 2013 to 2024 with about half attributable to four manufacturers. Privately held; no revenue disclosure and no market share."
+    },
+    {
+      "company": "Palo Alto Networks",
+      "headquarters": "United States",
+      "market_position": "Large enterprise vendor present in hospitals, with no separable healthcare line",
+      "description": "Sells into healthcare at scale through network security and its medical IoT security product, but reports revenue by product category rather than by industry vertical, so no healthcare or medical-device figure exists to cite. Named here because the broad published definitions of this market plainly include spend that goes to vendors like this one, which is part of why those definitions size four to eight times larger. Market share is not disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "FDA",
+      "year": 2025,
+      "event": "Issued the final guidance Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions on 27 June 2025, superseding the 27 September 2023 version and adding a section addressing section 524B cyber device requirements."
+    },
+    {
+      "company": "Armis",
+      "year": 2025,
+      "event": "Announced in August 2025 that annual recurring revenue had passed $300 million, up from $200 million in under a year, at growth above 50% year on year - the only company-announced revenue figure in this vendor set."
+    },
+    {
+      "company": "ServiceNow",
+      "year": 2025,
+      "event": "Agreed in late December 2025 to acquire Armis for $7.75 billion in cash, its largest acquisition, funded from cash and debt, with closing expected in the second half of 2026 subject to regulatory approval."
+    },
+    {
+      "company": "Claroty",
+      "year": 2026,
+      "event": "Raised a $150 million Series F at a $3 billion valuation in January 2026, having previously acquired healthcare IoT security specialist Medigate, now sold as Claroty xDome."
+    },
+    {
+      "company": "IMARC Group",
+      "year": 2026,
+      "event": "Updated its medical device security market report on 20 February 2026 to $12.4 billion for 2025 - 8.49 times the smallest published estimate for the same year, on a component list that includes antivirus, identity management, data loss prevention and disaster recovery."
+    }
+  ],
+  "regulatory_landscape": [
+    "Section 524B of the Federal Food, Drug, and Cosmetic Act, added by FDORA and effective 29 March 2023: a sponsor of a 510(k), PMA, PDP, De Novo or HDE submission for a cyber device must submit a plan to monitor, identify and address postmarket vulnerabilities including coordinated disclosure, maintain processes giving reasonable assurance of cybersecurity, make postmarket patches available on a cycle and out of cycle for critical vulnerabilities, and provide a software bill of materials",
+    "The statutory definition of a cyber device, which is narrower than the phrase suggests: software validated, installed or authorised by the sponsor, the ability to connect to the internet, and technological characteristics that could be vulnerable to cybersecurity threats",
+    "FDA's Federal Register notice of 30 March 2023, Docket FDA-2023-D-1030, under which FDA did not generally intend to issue refuse-to-accept decisions on 524B grounds alone before 1 October 2023 and may do so afterwards, with non-compliance treated as a prohibited act",
+    "FDA final guidance Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions, issued 27 June 2025, superseding the 27 September 2023 final guidance",
+    "FDA's refuse-to-accept policy document for cyber devices under section 524B, which governs whether a deficient submission is accepted for review at all",
+    "CISA's ICS medical advisory (ICSMA) process and the FDA-CISA information-sharing arrangement, which is how device vulnerabilities reach hospitals in practice - though the advisory series is not published as a countable annual total"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on publisher pages read directly, public registers and regulatory instruments, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Fortune Business Insights, Medical Device Cybersecurity Solutions Market (report 119283), last updated 28 September 2026: $1.46B (2025), $1.69B (2026), $5.68B (2034), 16.3% CAGR - read directly from the publisher's page",
+      "Fortune Business Insights, Medical Device Security Market (report 115040), last updated 28 September 2026: $7.29B (2025), $8.30B (2026), $22.69B (2034), 13.39% CAGR - read directly from the publisher's page",
+      "IMARC Group, Medical Device Security Market (SR112026A4841), last updated 20 February 2026: $12.4B (2025), $34.5B (2034), 11.66% CAGR, with North America at over 43.6% of 2025",
+      "American Hospital Association, Fast Facts on U.S. Hospitals, 2026, from the 2024 AHA Annual Survey: 6,100 total US hospitals, 5,121 community hospitals, 35,658,583 admissions",
+      "HIMSS Healthcare Cybersecurity Survey, fielded late 2024 with 273 healthcare cybersecurity professionals: cybersecurity traditionally 6% or less of IT budget, 20% with no set cybersecurity amount",
+      "Section 524B of the FD&C Act (effective 29 March 2023) and FDA's Federal Register notice of 30 March 2023, Docket FDA-2023-D-1030",
+      "FDA final guidance, Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions, 27 June 2025",
+      "FDA 510(k) clearance counts for 2024 and 2025 from public-file aggregators (3,082 and 3,195 on one tally, 3,129 and 3,225 on another)",
+      "Armis company announcement, August 2025: annual recurring revenue passed $300 million",
+      "Medcrypt vulnerability disclosure whitepaper, 2025 edition: 433 vulnerabilities across 2013-2024, about half at four manufacturers"
+    ],
+    "data_validation": "The headline figures are Fortune Business Insights' own published 2025 and 2026 values for its Medical Device Cybersecurity Solutions report and its own stated 16.3% rate; the 2032 endpoint and intermediate years are interpolation on that published rate, not separate observations. That series was chosen because it is the only one in the set whose printed scope is medical device security rather than healthcare enterprise security, and because it is the only one the grounding arithmetic supports. The grounding check localises each published global total using the only regional split any source publishes - IMARC's own North America 43.6% and United States 87.60% of North America - and divides by the 6,100 US hospitals in AHA's 2024 Annual Survey. That gives about $91,000 per US hospital per year on the narrow figure against $456,000 to $776,000 on the broad ones, in a population where the HIMSS survey finds total cybersecurity spend traditionally at 6% or less of IT budget, 20% of organisations with no set cybersecurity amount at all, and 1,797 of 5,121 community hospitals classified as rural. Only the narrow figure survives. A second check sums the two largest disclosed vendor revenues, Armis's company-announced $300 million ARR and an aggregator's estimate above $200 million for Claroty, both cross-industry: roughly $500 million, which is 34% of the narrow figure and 4% of the largest. A third divides the narrow figure by the 3,195 510(k) clearances of 2025 to get $457,000 per clearance, far more than premarket security engineering costs, which establishes that this is predominantly a provider-side rather than a compliance market. These are scope and plausibility tests, not market estimates. The regional split is one publisher's and is applied to others' totals as a yardstick; the vendor sum mixes a disclosure with a third-party estimate and counts cross-industry revenue against a healthcare market; HIMSS's figures are a survey of 273 self-selected respondents; the 510(k) counts are aggregator tallies rather than an FDA-published total; and dividing a global market by a national hospital count compares differently constructed numbers. No vendor share, regional split or country split is published anywhere in this report."
+  },
+  "faqs": [
+    {
+      "question": "How big is the medical device cybersecurity market?",
+      "answer": "On the narrow reading this report publishes, $1.69 billion in 2026 reaching $4.18 billion by 2032 at 16.3%. Published estimates for 2025 range from $1.46 billion to $12.4 billion, an 8.49x spread. The large figures count general healthcare enterprise security - antivirus, endpoint, cloud, identity management, even payer spend - rather than security built for medical devices."
+    },
+    {
+      "question": "Why do published estimates differ by more than eight times?",
+      "answer": "Because they are counting different things, and one publisher proves it. Fortune Business Insights last updated two reports on the same day in September 2026: one gives $1.46 billion for 2025, the other $7.29 billion. The scope tables show why. The smaller counts device security platforms, embedded security, SBOM analytics and device identity. The larger counts encryption, antivirus, identity management, disaster recovery, endpoint, application and cloud security, and includes healthcare payers, who own no medical devices."
+    },
+    {
+      "question": "What does FDA section 524B actually require, and of whom?",
+      "answer": "It binds sponsors of premarket submissions, not hospitals or device owners. Since 29 March 2023, a 510(k), PMA, PDP, De Novo or HDE submission for a cyber device - software the sponsor validated or installed, able to connect to the internet, with vulnerable technological characteristics - must include a plan to monitor, identify and address postmarket vulnerabilities with coordinated disclosure, processes giving reasonable assurance of cybersecurity, postmarket patches on a regular cycle and out of cycle for critical vulnerabilities, and a software bill of materials. FDA may refuse to accept a deficient submission, and the operative guidance was reissued on 27 June 2025."
+    },
+    {
+      "question": "What does this market cost a hospital per year?",
+      "answer": "Taking the narrow published total, localising it with the only regional split any publisher states and dividing by the 6,100 US hospitals in AHA's 2024 Annual Survey gives roughly $91,000 per hospital per year. The broad published totals imply $456,000 to $776,000 on medical device security alone, inside a cybersecurity budget that HIMSS respondents traditionally put at 6% or less of IT spend. That is the test the large figures fail. The $91,000 is a labelled plausibility calculation, not a price."
+    },
+    {
+      "question": "Who leads this market, and what share do they hold?",
+      "answer": "No share figures exist, because no vendor discloses healthcare-specific revenue. Armis is the only company with an announced number - annual recurring revenue above $300 million as of August 2025, across IT, OT and medical devices rather than healthcare alone - and ServiceNow agreed to buy it for $7.75 billion in late December 2025. Claroty, which acquired healthcare IoT specialist Medigate, raised at a $3 billion valuation in January 2026. Asimily and Cynerio rate highly in buyer surveys and publish nothing. Palo Alto Networks sells into hospitals at scale and reports by product, not vertical."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because only one source in the set publishes regional splits, and this report's own arithmetic rejects the total those splits apportion. We use that source's North America and United States percentages inside the grounding calculation as a labelled yardstick, and publish none of them. A regional table built on one publisher's apportionment of a figure we rule out would be worse than no table."
+    }
+  ],
+  "seo": {
+    "meta_title": "Medical Device Cybersecurity Market Size to 2032",
+    "meta_description": "Published 2025 estimates spread 8.49x, from $1.46bn to $12.4bn. Dividing by AHA's 6,100 US hospitals shows which reading survives - and what 524B requires.",
+    "keywords": [
+      "medical device cybersecurity market",
+      "medical device security market size",
+      "FDA section 524B",
+      "IoMT security",
+      "healthcare device cybersecurity",
+      "software bill of materials medical devices",
+      "hospital device security spend"
+    ]
+  },
+  "executive_summary": "Published estimates of this market run from $1.46 billion to $12.4 billion for 2025 - an 8.49x spread. In a market where the buyers are hospitals that file audited accounts and the sellers are venture-funded software companies whose rounds are priced in public, that is not a measurement problem. It is a definition problem, and unusually, it can be proved inside a single publishing house rather than inferred across several.\n\nFortune Business Insights last updated two reports on the same day, 28 September 2026. One puts the medical device cybersecurity solutions market at $1.46 billion for 2025. The other puts the medical device security market at $7.29 billion for the same year. A 4.99x gap, one publisher, one date. Both scope tables are printed, so the gap is readable rather than mysterious. The smaller report counts products built for medical devices: clinical-network asset discovery, firmware and software bill of materials analysis, device identity, premarket security engineering. The larger counts general enterprise security bought by healthcare organisations - encryption, antivirus, identity and access management, disaster recovery, endpoint, application and cloud - and includes healthcare payers among its end users, who own no medical devices at all. IMARC's $12.4 billion is built from the same broad component list and lands 1.70x above even that.\n\nThe decisive test is per hospital. Localising each global total with the only regional split any publisher states, and dividing by the 6,100 US hospitals in AHA's 2024 Annual Survey, the narrow figure implies about $91,000 per hospital per year. The broad figures imply $456,000 to $776,000 - on medical device security alone, inside a cybersecurity budget the HIMSS survey finds healthcare organisations have traditionally held at 6% or less of IT spend, in a population where a fifth of organisations cannot state a cybersecurity budget at all and 1,797 of 5,121 community hospitals are rural. The $91,000 figure is what an IoMT platform priced per device or per bed actually costs. The larger ones describe the whole healthcare security stack.\n\nThe vendor side agrees. Armis's company-announced $300 million of recurring revenue and an aggregator's estimate above $200 million for Claroty - both cross-industry, not healthcare-only - total roughly $500 million: 34% of the narrow figure, 4% of the largest. A software category whose two leading platforms hold a third of it is normal. One where they hold 4% is a category that has been drawn to include someone else's business.",
+  "key_highlights": [
+    "Published 2025 estimates spread 8.49x, from $1.46 billion to $12.4 billion",
+    "One publisher last updated two reports on the same day in September 2026 giving $1.46 billion and $7.29 billion for the same base year - a 4.99x disagreement inside one house",
+    "The broad scope includes antivirus, endpoint, cloud, identity management and healthcare payer spend; the narrow scope includes device discovery, SBOM analytics and device identity",
+    "Per US hospital per year: about $91,000 on the narrow figure against $456,000 to $776,000 on the broad ones, against AHA's 6,100 hospitals",
+    "HIMSS finds healthcare organisations have traditionally spent 6% or less of total IT budget on all cybersecurity, and 20% have no set cybersecurity amount",
+    "Armis's $300 million and an estimated $200 million-plus for Claroty, both cross-industry, are 34% of the narrow figure and 4% of the largest",
+    "Section 524B has bound premarket submission sponsors since 29 March 2023, with the operative FDA guidance reissued 27 June 2025 - it does not bind hospitals or devices already in service"
+  ],
+  "market_context": "This market exists because of a mismatch in lifecycles. A hospital information system is replaced on a software cadence; an infusion pump, a patient monitor or a CT scanner is a capital asset held for a decade or more, often running an operating system whose support ended years ago, and frequently unpatchable by the hospital that owns it because the manufacturer controls the software. The result is a large, long-lived, networked estate that cannot be secured the way the rest of enterprise IT is secured, which is why the category's core product is discovery and segmentation rather than patching.\n\nSection 524B of the FD&C Act, effective 29 March 2023, addresses the front of that lifecycle and only the front. It requires sponsors of premarket submissions for cyber devices to bring a postmarket vulnerability plan, coordinated disclosure, patching commitments and a software bill of materials. It says nothing about the devices already installed, which is where almost all of the risk and almost all of the current spend sits. That split - manufacturer obligation at submission, hospital problem in service - is the structural fact of the market, and it is why the published estimates divide so badly: a publisher can reasonably draw the boundary around either side, or around the whole healthcare security stack, and the three choices differ by a factor of eight.\n\nNeograph's health-data-interoperability-market and revenue-cycle-management-market reports cover adjacent hospital IT spend; this report is deliberately narrower, and the per-hospital arithmetic is the reason why.",
+  "forecast_analysis": "The curve starts at $1.69 billion for 2026 - Fortune Business Insights' own published 2026 value, not an interpolation of ours - and compounds at the same publisher's stated 16.3% to $4.18 billion by 2032. Intermediate years are interpolation on that rate. The implied rate between our endpoints is 16.30%, identical to the published one.\n\nWe publish the narrow series rather than the broad one because it is the only figure in the set that survives division by a countable register. Localised and divided by AHA's 6,100 US hospitals it implies about $91,000 per hospital per year, which is what an IoMT security platform priced per connected device actually costs. The broad figures imply $456,000 to $776,000 per hospital on device security alone, which does not fit a cybersecurity budget that HIMSS respondents hold at 6% or less of IT spend, and fits still worse in the 1,797 rural community hospitals AHA counts.\n\nThe risk to this forecast is not that 16.3% is too high for the product category - the vendor evidence is of faster growth than that, with Armis's recurring revenue doubling in under a year and ServiceNow paying $7.75 billion for it. The risk is on the demand side and it is specific: the HIMSS survey finds spending increases going disproportionately into tools rather than staff, and a device security platform that produces findings a hospital has no capacity to act on is a renewal problem. A 16.3% compound rate also smooths over what is likely to be a step pattern, as 524B pulls manufacturer-side security engineering into the category faster than hospital-side subscription growth. Readers should treat the shape as modelled and track the vendor disclosures, which are the only hard numbers in this market.",
+  "reader_takeaways": [
+    "Ask which scope a medical device cybersecurity figure uses before using it: one publisher printed $1.46 billion and $7.29 billion for the same year on the same day",
+    "Reject estimates that imply $456,000 to $776,000 per US hospital per year on device security alone - that does not fit a cybersecurity budget HIMSS puts at 6% or less of IT spend",
+    "Use about $91,000 per hospital per year as the order of magnitude for an IoMT security platform, and treat it as a labelled plausibility figure rather than a price",
+    "Read section 524B correctly: it binds premarket submission sponsors for cyber devices, not hospitals, and not the installed base where the risk actually sits",
+    "Track vendor disclosures rather than market forecasts - Armis's announced revenue and the prices paid for Armis and Claroty are the only hard numbers in this category"
+  ]
+}
