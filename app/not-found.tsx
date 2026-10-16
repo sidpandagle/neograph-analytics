@@ -74,14 +74,14 @@ export default function NotFoundPage() {
         />
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <div className="space-y-5">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-ocean-600/[0.18] border border-ocean-500/30 rounded-full mb-2">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/[0.08] border border-white/20 rounded-full mb-2">
               <svg className="w-10 h-10 text-ocean-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <p className="text-6xl font-bold text-white/20 leading-none tracking-tight">404</p>
             <h1 className="text-[2.75rem] md:text-5xl text-white leading-[1.1] tracking-[-0.02em]">
-              Page <span className="text-[var(--cmi-sky)]">Not Found</span>
+              Page <span className="text-[var(--cmi-on-blue)]">Not Found</span>
             </h1>
             <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
               The report or page you are looking for does not exist or may have been moved. Let us help you find what you need.

@@ -163,7 +163,7 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--muted-foreground)] pb-8">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-semibold">
+              <div className="w-10 h-10 rounded-full bg-[var(--cmi-primary-fill)] flex items-center justify-center text-[var(--primary-foreground)] font-semibold">
                 {pressRelease.author.split(" ").map(n => n[0]).join("")}
               </div>
               <span className="font-medium text-[var(--foreground)]">{pressRelease.author}</span>

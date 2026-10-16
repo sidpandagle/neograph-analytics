@@ -68,7 +68,7 @@ export default function StatsSection() {
               key={benefit}
               className="flex items-start gap-3 rounded-xl bg-[var(--cmi-primary-raised)] px-4 py-3.5"
             >
-              <span className="num shrink-0 text-[13px] text-[var(--cmi-sky)]">
+              <span className="num shrink-0 text-[13px] text-[var(--cmi-on-blue)]">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span className="text-sm leading-[1.45] text-white">{benefit}</span>

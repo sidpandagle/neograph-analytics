@@ -56,7 +56,7 @@ export default function AuthorReportsListing({ reports, authorName }: AuthorRepo
           </p>
           <Link
             href="/reports"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary)] text-white rounded-lg hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] rounded-lg hover:opacity-90 transition-opacity"
           >
             Browse All Reports
           </Link>

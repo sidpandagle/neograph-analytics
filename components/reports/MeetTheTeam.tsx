@@ -43,7 +43,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
                 className="w-16 h-16 rounded-full object-cover border-2 border-[var(--primary)]"
               />
             ) : (
-              <div className="w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-xl font-semibold">
+              <div className="w-16 h-16 rounded-full bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] flex items-center justify-center text-xl font-semibold">
                 {getInitials(member.name)}
               </div>
             )}
@@ -61,7 +61,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
                   href={member.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0A66C2] hover:text-[#004182] transition-colors"
+                  className="text-[var(--brand-linkedin)] hover:text-[var(--brand-linkedin-hover)] transition-colors"
                   aria-label={`${member.name}'s LinkedIn profile`}
                 >
                   <svg
@@ -88,7 +88,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
         {/* View Profile Button */}
         <Link
           href={`/authors/${member.id}`}
-          className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--primary)]/80 transition-colors pt-2"
+          className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--primary-hover)] transition-colors pt-2"
         >
           View Author Profile
           <svg

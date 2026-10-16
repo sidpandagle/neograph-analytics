@@ -49,20 +49,20 @@ const DYNAMICS_TABS = [
   {
     key: 'drivers',
     label: 'Growth Drivers',
-    dot: '#16a34a',
-    bg: '#f0fdf4',
-    border: '#bbf7d0',
-    text: '#15803d',
-    accentBar: '#22c55e',
+    dot: 'var(--content-success-accent)',
+    bg: 'var(--content-success-bg)',
+    border: 'var(--content-success-border)',
+    text: 'var(--content-success-text)',
+    accentBar: 'var(--content-success-accent)',
   },
   {
     key: 'restraints',
     label: 'Restraints',
-    dot: '#dc2626',
-    bg: '#fff1f2',
-    border: '#fecdd3',
-    text: '#b91c1c',
-    accentBar: '#f87171',
+    dot: 'var(--content-danger-accent)',
+    bg: 'var(--content-danger-bg)',
+    border: 'var(--content-danger-border)',
+    text: 'var(--content-danger-text)',
+    accentBar: 'var(--content-danger-accent)',
   },
   {
     key: 'opportunities',
@@ -77,10 +77,10 @@ const DYNAMICS_TABS = [
     key: 'challenges',
     label: 'Challenges',
     dot: 'var(--label-amber)',
-    bg: '#fffbeb',
-    border: '#fde68a',
-    text: '#b45309',
-    accentBar: '#fbbf24',
+    bg: 'var(--content-warning-bg)',
+    border: 'var(--content-warning-border)',
+    text: 'var(--content-warning-text)',
+    accentBar: 'var(--content-warning-accent)',
   },
 ] as const
 
@@ -498,9 +498,9 @@ function RecentDevelopmentsSection({ developments }: { developments: JsonReport[
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
                 style={{
-                  background: i === 0 ? 'var(--primary)' : 'var(--card)',
+                  background: i === 0 ? 'var(--cmi-primary-fill)' : 'var(--card)',
                   color: i === 0 ? 'var(--primary-foreground)' : 'var(--primary)',
-                  border: `2px solid ${i === 0 ? 'var(--primary)' : 'hsl(var(--primary-hsl) / 0.35)'}`,
+                  border: `2px solid ${i === 0 ? 'var(--cmi-primary-fill)' : 'hsl(var(--primary-hsl) / 0.35)'}`,
                 }}
               >
                 {String(d.year).slice(2)}
@@ -636,7 +636,7 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
               <span
                 className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-sm font-bold transition-transform duration-200"
                 style={{
-                  background: open === i ? 'var(--primary)' : 'var(--muted)',
+                  background: open === i ? 'var(--cmi-primary-fill)' : 'var(--muted)',
                   border: open === i ? 'none' : '1px solid var(--border)',
                   color: open === i ? 'var(--primary-foreground)' : 'var(--muted-foreground)',
                   transform: open === i ? 'rotate(45deg)' : 'none',
@@ -779,7 +779,7 @@ function ForecastAnalysisBlock({ analysis }: { analysis: string }) {
 
 function ReaderTakeawaysSection({ takeaways }: { takeaways: string[] }) {
   if (!takeaways.length) return null
-  const dotColors = ['var(--primary)', 'var(--content-success-accent)', 'var(--label-amber)', '#DC2626', 'var(--accent)']
+  const dotColors = ['var(--primary)', 'var(--content-success-accent)', 'var(--label-amber)', 'var(--content-danger-accent)', 'var(--accent)']
   return (
     <section className="mb-14">
       <div className="space-y-2">

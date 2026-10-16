@@ -31,7 +31,7 @@ export default function AuthorProfile({ author, totalReports }: AuthorProfilePro
                   className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[var(--primary)] shadow-lg"
                 />
               ) : (
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-3xl md:text-4xl font-semibold shadow-lg">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] flex items-center justify-center text-3xl md:text-4xl font-semibold shadow-lg">
                   {getInitials(author.name)}
                 </div>
               )}
@@ -48,7 +48,7 @@ export default function AuthorProfile({ author, totalReports }: AuthorProfilePro
                     href={author.linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#0A66C2] hover:text-[#004182] transition-colors w-fit"
+                    className="text-[var(--brand-linkedin)] hover:text-[var(--brand-linkedin-hover)] transition-colors w-fit"
                     aria-label={`${author.name}'s LinkedIn profile`}
                   >
                     <svg

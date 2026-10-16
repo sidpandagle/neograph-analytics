@@ -111,7 +111,7 @@ export default async function ConsultingServicePage({ params }: ConsultingServic
                   <CardContent className="pt-6">
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-semibold">
+                        <div className="w-8 h-8 rounded-full bg-[var(--cmi-primary-fill)] text-[var(--primary-foreground)] flex items-center justify-center font-semibold">
                           {index + 1}
                         </div>
                       </div>

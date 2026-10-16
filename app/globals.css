@@ -8,6 +8,42 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
+  /* ── Legacy ramp tokens (slate/gray and ocean/navy/bright/blue/amber) ──
+     tailwind.config.ts mapped these scales onto fixed hexes, so ~130 call
+     sites across /about, /services, /contact, /not-found and the form
+     components could not follow the theme: `text-slate-900` stayed #0A1633
+     on a #131C30 card (1.3:1) and `bg-ocean-50` stayed #F4F7FE, a white blob
+     on a dark page. Pointing the scales at these tokens fixes every call site
+     at once instead of rewriting each one.
+
+     The shade index means "contrast distance from the surface", not
+     "lightness" -- so the ramp inverts in dark mode and `-50` stays a
+     background tint while `-900` stays heading text in both themes.
+     Light values below are byte-for-byte the ones the config held. ───── */
+  --n-50:  #F9FBFF;
+  --n-100: #F4F7FE;
+  --n-200: #E3E9F7;
+  --n-300: #D8E2F5;
+  --n-400: #A8B4CC;
+  --n-500: #8A97B2;
+  --n-600: #5C6B8A;
+  --n-700: #4C5B7A;
+  --n-800: #2A3A5C;
+  --n-900: #0A1633;
+  --n-950: #060E22;
+
+  --b-50:  #F4F7FE;
+  --b-100: #EDF1FE;
+  --b-200: #C9D8FF;
+  --b-300: #A9C0FF;
+  --b-400: #6E97F2;
+  --b-500: #2C55EB;
+  --b-600: #1541E3;
+  --b-700: #0E2FA8;
+  --b-800: #0B2585;
+  --b-900: #0A1633;
+  --b-950: #060E22;
+
   /* ── Raw palette ───────────────────────────────────────────── */
   --cmi-primary: #1541E3;          /* link + accent TEXT            */
   /* --cmi-primary was both the fill behind white text and the colour of link
@@ -28,7 +64,9 @@
   --cmi-ink-surface: #0A1633;      /* the one dark panel on the desk    */              /* headings, footer              */
   --cmi-sky: #BFDCF7;              /* data panels, chart base       */
   --cmi-sky-ink: #34557F;          /* text on sky                   */
-  --cmi-on-blue: #C9D8FF;          /* body copy on primary          */
+  --cmi-on-blue: #DCE6FF;          /* body copy on primary, 4.66 on
+                                      --cmi-primary-raised (was #C9D8FF
+                                      at 4.09)                      */
   /* #A9C0FF measured 4.03:1 on the #1541E3 panel it is used on -- under AA
      for the 12px licence and meta labels that carry it. */
   --cmi-on-blue-dim: #C2D3FF;      /* 4.85:1 on the blue panel      */      /* eyebrows/labels on primary    */
@@ -144,6 +182,30 @@
   --label-amber: #A14A06;          /* 6.00:1 on white               */
   --content-success-text: #027A48;
   --content-success-text-dark: #05603A;
+
+  /* Danger and warning tints. These were four hardcoded hex sets inside
+     JsonReportSections (the Restraints and Challenges tabs), so the two
+     cards stayed pale pink and pale amber on a dark page while everything
+     around them went navy. Each text value is measured on its own tint. */
+  --content-danger-bg: #FFF1F2;
+  --content-danger-border: #FECDD3;
+  --content-danger-text: #A8121F;      /* 6.90 on its tint, 6.69 on --background */
+  --content-danger-accent: #E04452;
+  --content-warning-bg: #FFFBEB;
+  --content-warning-border: #FDE68A;
+  --content-warning-text: #8A4B06;     /* 6.55 on its tint, 6.00 on --background */
+  --content-warning-accent: #B8791C;
+
+  /* LinkedIn brand blue. #0A66C2 is 5.69:1 on white but only 2.99:1 on the
+     dark card, so the link all but vanished on the author and team pages.
+     The dark value is the brand hue lifted, not a different colour. */
+  --brand-linkedin: #0A66C2;
+  --brand-linkedin-hover: #004182;
+
+  /* Modal / drawer scrim. It was bg-[var(--cmi-ink-surface)]/25, and Tailwind
+     cannot put an alpha channel on an arbitrary var() colour -- it emitted no
+     rule at all, so the drawer had backdrop-blur over an undimmed page. */
+  --scrim: rgba(10, 22, 51, 0.45);
 
   /* ── On-dark (used over --primary and ink panels) ──────────── */
   --on-dark-text: #FFFFFF;
@@ -292,7 +354,7 @@
   }
 
   .panel {
-    background: #FFFFFF;
+    background: var(--card);
     border-radius: var(--radius-panel);
     padding: var(--panel-pad);
   }
@@ -326,7 +388,7 @@
 
   /* Bordered content card — the primary content unit. */
   .cmi-card {
-    background: #FFFFFF;
+    background: var(--card);
     border: 1px solid var(--cmi-line);
     border-radius: var(--radius-card);
     padding: var(--card-pad);
@@ -436,7 +498,7 @@
     transition: background 0.16s ease, color 0.16s ease;
     white-space: nowrap;
   }
-  .segmented-item:hover { background: #FFFFFF; color: var(--cmi-ink); }
+  .segmented-item:hover { background: var(--card); color: var(--cmi-ink); }
   /* The fill token, not the link token: --cmi-primary goes light in dark mode
      and this white label measured 2.97:1 on it. --primary-foreground is the
      colour contracted to sit on a fill in either theme. */
@@ -515,7 +577,7 @@
      redefined here rather than removed so every call site adopts
      the CMI system at once. ─────────────────────────────────── */
   .theme-hero {
-    background: #FFFFFF;
+    background: var(--card);
     color: var(--foreground);
     border-radius: var(--radius-panel);
   }
@@ -534,8 +596,14 @@
     border-radius: var(--radius-card);
     color: var(--foreground);
   }
+  /* These five surfaces (.panel, .cmi-card, .theme-hero, .theme-card and the
+     prose table) were literal #FFFFFF, so they stayed white in dark mode while
+     their `color: var(--foreground)` went to #E9EEFA -- white text on a white
+     card, 1.04:1. Reported from /press-releases, but it was every page: .panel
+     and .cmi-card are the two most-used surface classes in the app. A surface
+     must name the same token as the text that sits on it. */
   .theme-card {
-    background: #FFFFFF;
+    background: var(--card);
     border-color: var(--cmi-line);
     border-radius: var(--radius-card);
     color: var(--foreground);
@@ -721,7 +789,7 @@
     border: 1px solid var(--cmi-line);
     border-radius: var(--radius-tile);
     overflow: hidden;
-    background: #FFFFFF;
+    background: var(--card);
     margin: 1.25rem 0;
   }
 
@@ -897,6 +965,35 @@
    ═══════════════════════════════════════════════════════════════ */
 
 .dark {
+  /* Legacy ramps, inverted. Every text shade (400 and up) was checked against
+     all three dark surfaces -- #0B1120, #131C30, #18223A -- and the weakest
+     pairing is --b-400 on --cmi-surface at 4.68:1. The blue ramp compresses
+     between 400 and 600 because AA sets a floor there; the separation that
+     the light ramp spends on lightness is spent on the 50-300 tints instead. */
+  --n-50:  #131C30;
+  --n-100: #18223A;
+  --n-200: #2F3C5C;
+  --n-300: #4E6291;
+  --n-400: #7F8EB0;
+  --n-500: #97A4C2;
+  --n-600: #B5C2DC;
+  --n-700: #C3CEE6;
+  --n-800: #D6DEF0;
+  --n-900: #E9EEFA;
+  --n-950: #F5F8FF;
+
+  --b-50:  #151F38;
+  --b-100: #1B2947;
+  --b-200: #243460;
+  --b-300: #35508C;
+  --b-400: #5A8AE6;
+  --b-500: #608FEB;
+  --b-600: #6694F1;
+  --b-700: #8CB0F6;
+  --b-800: #B4C8FF;
+  --b-900: #D7E2FF;
+  --b-950: #ECF2FF;
+
   /* ── Surfaces ── */
   --background: #0B1120;
   --cmi-desk: #0B1120;
@@ -958,7 +1055,11 @@
   --primary-foreground: #FFFFFF;
   /* Fill variants, so they track --cmi-primary-fill rather than the link
      colour. White on #4766E4 = 5.08:1, on #2744C6 = 7.00:1. */
-  --cmi-primary-raised: #4766E4;
+  /* 4.90:1 with white and 3.78 with --cmi-on-blue, so the numerals in the
+     home benefit chips failed. Darkening it clears both; 1.19 separation from
+     the --cmi-primary-fill panel it sits on is in line with the rest of the
+     dark system (--card against --background is 1.11). */
+  --cmi-primary-raised: #1F3BAE;
   --cmi-primary-pressed: #2744C6;
   --primary-hover: #7FA8F5;
   --primary-dark: #4878DC;
@@ -980,6 +1081,17 @@
   --content-success-text-dark: #A7F3CF;
   --content-success-accent: #34D399;
   --label-amber: #F0A868;
+  --content-danger-bg: #2B1218;
+  --content-danger-border: #6B2430;
+  --content-danger-text: #FF9AA6;      /* 8.67 on its tint */
+  --content-danger-accent: #FF6B80;
+  --content-warning-bg: #2A1D0B;
+  --content-warning-border: #6A4A18;
+  --content-warning-text: #F6C177;     /* 10.02 on its tint */
+  --content-warning-accent: #F0A868;
+  --brand-linkedin: #4DA3E8;        /* 6.24 on --card */
+  --brand-linkedin-hover: #7FC0F2;
+  --scrim: rgba(2, 5, 12, 0.62);
 
   /* ── Elevation reads differently on a dark desk: shadows stop
         working, so panels separate by surface contrast instead. ── */
@@ -1004,7 +1116,11 @@
   --popover-hsl: 221 43% 13%;  /* #131C30 */
   --popover-foreground-hsl: 222 63% 95%;  /* #E9EEFA */
   --primary-hsl: 220 82% 65%;  /* #5B8DEF */
-  --primary-foreground-hsl: 223 49% 8%;  /* #0B1120 */
+  /* Must track --primary-foreground, which is #FFFFFF in dark mode: the fill
+     it sits on is --cmi-primary-fill #2744C6 (7.70:1 with white). This said
+     #0B1120, so the hex path and the Tailwind path disagreed by 18.99:1 --
+     no call site uses the class form today, which is why nothing broke. */
+  --primary-foreground-hsl: 0 0% 100%;  /* #FFFFFF */
   --secondary-hsl: 222 41% 16%;  /* #18223A */
   --secondary-foreground-hsl: 222 63% 95%;  /* #E9EEFA */
   --muted-hsl: 222 41% 16%;  /* #18223A */

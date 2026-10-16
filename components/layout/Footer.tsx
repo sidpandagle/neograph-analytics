@@ -109,7 +109,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2.5">
             <span className={columnHeading}>Support</span>
             <a href={`mailto:${CONTACT_INFO.email}`} className={`${footerLink} flex items-center gap-2`}>
-              <Mail className="h-3.5 w-3.5 shrink-0 text-[var(--cmi-sky)]" />
+              <Mail className="h-3.5 w-3.5 shrink-0 text-[var(--cmi-on-blue)]" />
               <span className="truncate">{CONTACT_INFO.email}</span>
             </a>
           </div>
