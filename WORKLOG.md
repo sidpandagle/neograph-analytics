@@ -590,3 +590,34 @@ reaches — the template itself had to shorten.
 55 rows written. Re-audit: **titles over 60 = 0, descriptions over 160 = 0,
 descriptions under 70 = 0.** Supabase-only, so this reaches production through
 ISR without spending a deploy.
+
+### Keyboard focus was invisible on a third of the controls (was R-0e)
+The global ring was `2px solid var(--primary)` — #1541E3 — which is the exact
+fill of the hero and CTA panels. Measured contrast of the ring against the three
+surfaces a focusable control actually sits on:
+
+```
+                  ring #1541E3   ink #0B1220   paper #FFFFFF
+white card          7.25:1        18.72:1        1.00:1
+blue panel          1.00:1         2.58:1        7.25:1
+ink footer          2.58:1         1.00:1       18.72:1
+```
+
+No single colour clears WCAG 1.4.11's 3:1 on all three, which is why this was
+never fixable by swapping the token. The ring is now two-tone — ink outline plus
+a paper inner ring, inverted in dark mode — so one of the two always contrasts,
+and the two sit at 18.72:1 against each other. Worst case across the three
+surfaces goes from **1.00:1 to 7.25:1**.
+
+The larger half of the finding was not in the original filing: **`focus:outline-none`
+appears at 33 call sites** and exactly one of them supplies a focus-visible
+style of its own. Those classes outspecify a bare `:focus-visible`, so a third
+of the interactive controls had no keyboard focus indicator at all regardless of
+the token. The rule therefore carries `!important` on the outline and the inner
+ring — deliberate, documented in place, and the whole point of the rule.
+
+The outline survives an `overflow: hidden` ancestor while the box-shadow can be
+clipped, so the outer ring is the one carrying contrast.
+
+Verified in the built CSS; the contrast figures are computed from the token
+values, not yet observed in a browser (browser tools open at 21:00 IST).
