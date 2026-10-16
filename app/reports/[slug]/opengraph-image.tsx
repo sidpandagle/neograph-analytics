@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getReportBySlugFull, getReportSlugs } from '@/lib/supabaseReports';
 import { marketValue } from '@/lib/format';
+import { marketName } from '@/lib/seo';
 
 /**
  * Per-report social card.
@@ -33,25 +34,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const report = await getReportBySlugFull(slug);
 
-  /* Keep the market's name and the word "Market" and drop the tail. Corpus
-     titles carry several — "Market Size, Share & Forecast 2026-2032", "Market —
-     Growth Drivers, Restraints and Future Outlook 2032", "Market Size and
-     Trends Analysis" — so the cut is made at the end of the first whole word
-     "Market" rather than by matching each tail.
-
-     The pattern is built from a character class, not a word-boundary escape:
-     the escapes here were once written through a tool that turned a
-     backslash-b into a literal backspace (U+0008), so the pattern matched
-     nothing and every card rendered the untrimmed title. The PNG came back
-     byte-identical after a rebuild, which is what gave it away. */
-  const MARKET_WORD = new RegExp('(^|[^A-Za-z])Market([^A-Za-z]|$)', 'i');
-  const rawTitle = report?.title ?? '';
-  const marketMatch = MARKET_WORD.exec(rawTitle);
-  const title =
-    (marketMatch
-      ? rawTitle.slice(0, marketMatch.index + marketMatch[0].indexOf('Market') + 6)
-      : rawTitle
-    ).replace(/\s+/g, ' ').trim() || 'Market Research';
+  const title = marketName(report?.title) || 'Market Research';
   const industry = report?.industry ?? 'Healthcare';
   const base = report ? marketValue(report.market_size?.current_value, report.unit) : '';
   const forecast = report ? marketValue(report.market_size?.forecast_value, report.unit) : '';

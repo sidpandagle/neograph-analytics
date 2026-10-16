@@ -83,3 +83,25 @@ export function schemaDate(value: string | number | undefined | null): string | 
   const parsed = new Date(v);
   return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
 }
+
+/**
+ * A report's market name, without the stored title's boilerplate tail.
+ *
+ * Corpus titles carry several tails — "Market Size, Share & Forecast
+ * 2026-2032", "Market — Growth Drivers, Restraints and Future Outlook 2032",
+ * "Market Size and Trends Analysis" — so the cut is made at the end of the
+ * first whole word "Market" rather than by matching each tail in turn. A title
+ * with no "Market" in it is returned unchanged.
+ *
+ * The pattern is built from a character class rather than a word-boundary
+ * escape: an earlier copy of this logic had its escapes turned into literal
+ * backspace characters by a tool, matched nothing, and silently did nothing.
+ */
+export function marketName(title: string | undefined | null): string {
+  const raw = String(title ?? '');
+  const match = new RegExp('(^|[^A-Za-z])Market([^A-Za-z]|$)', 'i').exec(raw);
+  const cut = match
+    ? raw.slice(0, match.index + match[0].indexOf('Market') + 'Market'.length)
+    : raw;
+  return cut.replace(/s+/g, ' ').trim();
+}

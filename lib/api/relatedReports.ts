@@ -17,6 +17,7 @@
  */
 import { supabase } from '@/lib/supabase/client';
 import { marketValue } from '@/lib/format';
+import { marketName } from '@/lib/seo';
 
 export interface RelatedReport {
   slug: string;
@@ -153,7 +154,8 @@ export async function getRelatedReports(
 
   return chosen.map(({ row }) => ({
     slug: row.slug,
-    title: row.title,
+    /* Cards printed the whole stored title, boilerplate tail and all. */
+    title: marketName(row.title),
     industry: row.industry,
     size: marketValue(row.market_size?.current_value, row.unit),
     cagr:

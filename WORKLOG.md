@@ -1350,3 +1350,14 @@ boilerplate ("Global Cell & Gene Therapy Manufacturing Market — Growth Drivers
 Restraints and Future Outlook 2032"), where the social card already trims to
 "… Market". Cosmetic, queued as R-12 rather than fixed at 23:30 with a deploy
 pending.
+
+### One title trim, shared (R-12)
+The related-report cards printed the stored title in full — "Global Cell & Gene
+Therapy Manufacturing Market — Growth Drivers, Restraints and Future Outlook
+2032" — six times per page, while the social card already trimmed to "… Market".
+`marketName()` now lives in `lib/seo.ts` and both call it, so the two cannot
+drift. Built HTML: "Global Gene Therapy Market", "CAR-T Cell Therapy Market".
+
+The helper carries the warning with it: build the pattern from a character
+class, not a word-boundary escape, because an earlier copy had its escapes
+turned into literal backspace characters and silently did nothing.
