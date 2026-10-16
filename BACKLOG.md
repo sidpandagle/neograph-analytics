@@ -26,31 +26,54 @@ Priority order. `[P0]` = site is broken / losing traffic. `[P1]` = high value.
       `recent_developments`, `research_methodology`, `company_profiles`,
       `key_highlights`, `reader_takeaways`.
       **DONE 2026-10-15 — PR #5 and #7 — incl. all segmentation dimensions.**
-- [ ] `getReportBySlug` runs a second full-table query just to compute an array
-      index. Remove it.
-- [ ] Listing page does `select('*')` over 140 rows of large JSONB. Select only
-      the columns the cards need.
+- [x] `getReportBySlug` runs a second full-table query just to compute an array
+      index. Remove it. **DONE 2026-10-16.**
+- [x] Listing page does `select('*')` over 140 rows of large JSONB. Select only
+      the columns the cards need. **DONE 2026-10-16** — `getReportCards()`;
+      `/reports` HTML 508KB -> 184KB with the corpus up from 142 to 152.
 
 ## P1 — visuals
 - [ ] Build a chart set driven by real columns: forecast line (`market_forecast`),
       segmentation share, regional bars, country comparison, competitive position.
       Recharts is already a dependency.
-- [ ] Per-report OG images (1200x630) generated from market metrics.
+- [x] Per-report OG images (1200x630) generated from market metrics.
+      **DONE 2026-10-16** — `app/reports/[slug]/opengraph-image.tsx`, build-time,
+      no image host and no egress. All 152 reports previously shared one stock
+      photo.
 - [x] ~~`cdn.neographanalytics.com` + R2~~ **DROPPED 2026-10-15.** The domain is on
       GoDaddy nameservers, not Cloudflare, and R2 custom domains require the zone to
       be on Cloudflare. Not worth migrating DNS on a live domain. Visuals ship as
       inline SVG instead (no hosting, no egress, no image-optimization quota).
-- [ ] Repoint author/team avatar `<img>` srcs from the non-resolving CDN host to
-      local assets in `public/`. They are broken images today.
+- [x] ~~Repoint author/team avatar `<img>` srcs from the non-resolving CDN host~~
+      **NOT A DEFECT 2026-10-16** — measured: `image_url` is empty on all 3 team
+      rows and both render sites guard on it, so no broken image is served. The
+      only CDN reference left is a `remotePatterns` entry in `next.config.ts`.
 
 ## P2 — technical
-- [ ] JSON-LD audit (Dataset/Report, FAQPage, BreadcrumbList) — 6 ld+json blocks
+- [x] JSON-LD audit (Dataset/Report, FAQPage, BreadcrumbList) — 6 ld+json blocks
       already render; verify correctness against the real data.
+      **DONE 2026-10-16** — 8 blocks audited. `Dataset.license` pointed at a
+      404ing `/legal/terms-of-use` on all 152 pages (removed; R-11 covers
+      writing one); `datePublished` was `"2026"` / `"December 18, 2025"`, not
+      calendar dates (normalised). Breadcrumbs, FAQ parity and
+      `temporalCoverage` checked and correct. `scripts/audit-html.mjs` now
+      enforces all of it.
 - [ ] Core Web Vitals pass (LCP, CLS) on report + listing pages.
 - [ ] Accessibility pass: headings, contrast, focus states, tap targets.
-- [ ] Reconcile `data/all_reports.json` (10) / `bulk` (107) / `old` (104) /
+- [x] Reconcile `data/all_reports.json` (10) / `bulk` (107) / `old` (104) /
       `reports.json` (12) against Supabase (140). Document the canonical source.
-- [ ] `AGENTS.md` is stale (claims no database). Refresh to match reality.
+      **DONE 2026-10-16** — table in `AGENTS.md`: Supabase `neograph_reports`
+      (152) is canonical; `all_reports.json` is the fallback behind
+      `lib/supabaseReports.ts`; `bulk`/`old` are historical and unused;
+      `categories.json` is a slug map whose 6 unmatched entries no longer reach
+      the UI. The snapshots stay — they are what stops a Supabase outage
+      rendering an empty site.
+- [x] `AGENTS.md` is stale (claims no database). Refresh to match reality.
+      **DONE 2026-10-16** — rewritten. It also said the dev server runs on 3000
+      (it must not — that port is Siddhant's), that dark mode switches on
+      `prefers-color-scheme` (there is no such block), and that `lib/utils.ts`
+      exports `slugify` (it does not). It now carries the data table, the
+      publish/deploy sequencing rule, the egress discipline and the checkers.
 
 ## P1 — new content
 - [ ] Research + publish new reports into `neograph_reports`, full schema,

@@ -1277,3 +1277,38 @@ own card.
 Also tidied: the six `next start` servers this session left on ports 3101-3106
 are stopped, each confirmed by command line as mine and from this repo first.
 The one on :3100 from an earlier session is left alone.
+
+### `AGENTS.md` rewritten, and the data sources finally documented
+Two BACKLOG items, both stale documentation that was actively misleading.
+
+`AGENTS.md` opened with "Content is sourced from **static JSON files**" and
+"Static JSON Data: simplifies content management without a database" — the site
+has run on Supabase for some time. It also told an agent to run the dev server
+on **port 3000**, which belongs to Siddhant's own work; claimed dark mode
+switches on `prefers-color-scheme`, which appears nowhere in `globals.css`; and
+documented a `slugify()` export from `lib/utils.ts` that does not exist.
+
+It now carries what an agent actually needs: the canonical-data table, the
+publish/deploy sequencing rule, the egress discipline, the checker commands, the
+list of routes that exist (and the two that do not — `/consulting` 308s and
+`/categories/*` 404s, which `/llms.txt` was advertising 24 times), and the house
+rules about deleting nothing and attaching numbers to findings.
+
+The data reconciliation, as a table rather than a mystery:
+
+```
+neograph_reports (Supabase)   152   canonical
+data/all_reports.json          10   fallback behind lib/supabaseReports.ts
+data/reports.json              12   stale snapshot, feeds nothing load-bearing
+data/all_reports bulk.json    107   historical, unused
+data/all_reports old.json     104   historical, unused
+data/categories.json           12   slug map; 6 entries match no report
+```
+
+The snapshots stay. They are what stops a Supabase outage rendering an empty
+site, and that is now written down so the next pass does not "tidy" them away.
+
+Six BACKLOG items closed in place with what was actually done, including one
+closed as **not a defect** after measurement: the avatar CDN finding, where
+`image_url` is empty on all three team rows and both render sites guard on it,
+so nothing broken is served.
