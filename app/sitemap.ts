@@ -18,6 +18,7 @@ const STATIC_PAGES = [
   { path: '/blog',            changeFrequency: 'daily'   as const, priority: 0.8 },
   { path: '/press-releases',  changeFrequency: 'weekly'  as const, priority: 0.7 },
   { path: '/about',           changeFrequency: 'monthly' as const, priority: 0.7 },
+  { path: '/methodology',     changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/services',        changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/contact',         changeFrequency: 'monthly' as const, priority: 0.5 },
 ];

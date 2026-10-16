@@ -11,6 +11,7 @@ const companyLinks = [
 
 const researchLinks = [
   { href: "/reports", label: "Research Reports" },
+  { href: "/methodology", label: "Methodology" },
   { href: "/press-releases", label: "Press Releases" },
   { href: "/blog", label: "Blog" },
   { href: "/request-sample", label: "Request Sample" },

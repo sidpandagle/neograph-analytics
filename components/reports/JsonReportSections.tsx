@@ -4,8 +4,10 @@ import React, { useRef, useState } from 'react'
 import { MarketForecastLineChart } from './charts/MarketForecastLineChart'
 import { ComponentSharePieChart } from './charts/ComponentSharePieChart'
 import { RegionalBarChart } from './charts/RegionalBarChart'
+import { ChartFigure } from './ChartFigure'
 import type { JsonReport, SegmentItem } from '@/lib/jsonReports'
 import { pct, barWidth, toNum, usableRows } from '@/lib/format'
+import { findChartEntry, chartSourceNote, chartModellingNote } from '@/lib/chartAttribution'
 
 interface JsonReportSectionsProps {
   report: JsonReport
@@ -833,6 +835,12 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
   const baseYearPoint = report.market_forecast.find((p) => p.year === report.base_year)
   const displayCurrentValue = baseYearPoint?.value ?? report.market_size.current_value
 
+  // Each rendered chart carries its own source note, taken from the row's
+  // `charts[]` entry where one describes it. Previously populated and unused.
+  const forecastChart = findChartEntry(report.charts, 'market_forecast', ['forecast', 'market size', 'growth'])
+  const segmentationChart = findChartEntry(report.charts, 'market_segmentation', ['segment', 'component', 'share by'])
+  const regionalChart = findChartEntry(report.charts, 'regional_analysis', ['region', 'geograph'])
+
   return (
     <div>
       {/* ── Executive Summary ── */}
@@ -910,16 +918,21 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
         <SectionHeading id="charts" num={nextSection()}>Market Forecast & Data</SectionHeading>
         <div className="space-y-6">
           {report.market_forecast.length > 0 && (
-            <MarketForecastLineChart
-              data={report.market_forecast}
-              baseYear={report.base_year}
-              forecastPeriod={report.forecast_period}
-              currentValue={displayCurrentValue}
-              forecastValue={report.market_size.forecast_value}
-              cagr={report.market_size.cagr}
-              unit={report.unit}
-              currency={report.currency}
-            />
+            <ChartFigure
+              source={chartSourceNote(forecastChart)}
+              modelling={chartModellingNote(forecastChart)}
+            >
+              <MarketForecastLineChart
+                data={report.market_forecast}
+                baseYear={report.base_year}
+                forecastPeriod={report.forecast_period}
+                currentValue={displayCurrentValue}
+                forecastValue={report.market_size.forecast_value}
+                cagr={report.market_size.cagr}
+                unit={report.unit}
+                currency={report.currency}
+              />
+            </ChartFigure>
           )}
           {report.forecast_analysis && <ForecastAnalysisBlock analysis={report.forecast_analysis} />}
           <div className="grid grid-cols-1 gap-6">
@@ -927,16 +940,26 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
               (item): item is SegmentItem =>
                 typeof item === 'object' && item !== null && 'market_share' in item
             ) && (
-              <ComponentSharePieChart
-                title="Market Share by Component"
-                segments={(report.market_segmentation.by_component ?? []).filter(
-                  (item): item is SegmentItem =>
-                    typeof item === 'object' && item !== null && 'market_share' in item
-                )}
-              />
+              <ChartFigure
+                source={chartSourceNote(segmentationChart)}
+                modelling={chartModellingNote(segmentationChart)}
+              >
+                <ComponentSharePieChart
+                  title="Market Share by Component"
+                  segments={(report.market_segmentation.by_component ?? []).filter(
+                    (item): item is SegmentItem =>
+                      typeof item === 'object' && item !== null && 'market_share' in item
+                  )}
+                />
+              </ChartFigure>
             )}
             {report.regional_analysis.length > 0 && (
-              <RegionalBarChart regions={report.regional_analysis} />
+              <ChartFigure
+                source={chartSourceNote(regionalChart)}
+                modelling={chartModellingNote(regionalChart)}
+              >
+                <RegionalBarChart regions={report.regional_analysis} />
+              </ChartFigure>
             )}
           </div>
         </div>

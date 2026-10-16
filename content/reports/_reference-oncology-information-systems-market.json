@@ -1,0 +1,218 @@
+{
+  "report_id": "oncology-information-systems-market",
+  "slug": "oncology-information-systems-market",
+  "title": "Oncology Information Systems Market Size, Share and Trends Analysis",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "executive_summary": "Eight published estimates of the oncology information systems market put its 2032 value between $5.7 billion and $15.78 billion. Read quickly, that looks like disagreement about growth. It is not. Measured across the four houses that publish a base-year size, the base-year figures spread 2.74x -- from $3.10 billion to $8.49 billion -- while the compound growth rates spread only 1.27x, from 6.67% to 8.5%.\n\nEveryone is modelling much the same underlying expansion and arriving at much the same rate. The 2032 endpoints diverge almost entirely because the starting points do. A headline that reports a single 2032 number is therefore reporting the analyst's scope decision rather than a finding about the market.\n\nThe scope decision can be identified rather than guessed at. The IAEA's Directory of Radiotherapy Centres lists close to 8,700 radiotherapy centres worldwide, a figure a 2025 geospatial analysis in Radiotherapy and Oncology corroborates at 8,925 centres with verified coordinates. Divide the published base-year sizes by that denominator and the high estimates imply roughly $976,000 of annual spend per radiotherapy centre. That is not a software licence. The larger figures cannot be describing radiation oncology information systems -- the ARIA and MOSAIQ class of product -- alone; they necessarily bundle medical oncology electronic records, practice management, revenue cycle and professional services across a far larger population of sites.\n\nThis is checkable arithmetic rather than an assertion, and it is the most useful thing a buyer can take from the published literature. Before comparing two OIS forecasts, establish whether either one is counting the same thing you are.",
+  "market_context": "An oncology information system is the record of what was planned, delivered and billed for a cancer patient. In radiation oncology it is also a safety system: it holds the prescription, sequences the fractions, and verifies that the machine delivered what was planned. That makes it unusually sticky software, bound to the linear accelerators on site and to the vendor that supplied them.\n\nThe installed base is not growing quickly, and in the United States it is not growing at all. A CMS-based study publicised by ASTRO counts 3,145 US radiation oncology practice sites in 2025, down from a range of 3,214 to 3,338 across 2018 to 2023. The same work finds 427 counties with a net loss of sites, and 68.5% of US counties -- 50.8 million people -- with no radiation oncology site at all in 2025.\n\nA market whose site count is flat to declining does not grow at 7-8% on new sites. It grows on what is sold into each existing site: broader modules, longer service contracts, and the migration of medical oncology workflow onto the same platform. That migration is also what makes the category boundary move, and therefore what makes the published estimates diverge.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 7.84% CAGR between the published 2026 and 2032 endpoints from Research and Markets, which also publishes a $7.91 billion figure for 2025. The intermediate years are interpolation, not separately sourced observations, and should be read as the shape implied by the two endpoints rather than as annual estimates.\n\nThis series was chosen because it carries the most recent base year of the eight estimates surveyed. It is a broad-scope series: per the per-centre arithmetic in the executive summary, a market of this size cannot consist of radiotherapy information systems alone. Readers working to a narrow, radiation-oncology-only definition should anchor instead on the cluster near $3.1 to $3.6 billion -- Global Market Insights at $3.10 billion for 2022 and Strategic Market Research at $3.60 billion for 2025 -- and should expect roughly the same growth rate, because the published rates barely differ.",
+  "meta_title": "Oncology Information Systems Market Size and Forecast to 2032",
+  "meta_description": "Published estimates of the oncology information systems market spread 2.74x at the base year but only 1.27x on growth rate. A per-centre test against the IAEA radiotherapy register shows why.",
+  "meta_keywords": [
+    "oncology information systems market",
+    "oncology information system",
+    "OIS market size",
+    "radiation oncology software",
+    "ARIA MOSAIQ",
+    "oncology EMR market",
+    "cancer care IT"
+  ],
+  "market_size": {
+    "cagr": 7.84,
+    "current_value": 8.49,
+    "forecast_value": 13.42
+  },
+  "market_overview": {
+    "summary": "On the broad definition used by the most recently based published estimate, the oncology information systems market is $8.49 billion in 2026, projected to $13.42 billion by 2032 at a 7.84% CAGR. Narrower definitions covering radiation oncology software alone start near $3.1 to $3.6 billion and grow at a similar rate. The gap between the two is scope, not growth.",
+    "key_trends": [
+      "Base-year estimates spread 2.74x ($3.10B to $8.49B) while published CAGRs spread only 1.27x (6.67% to 8.5%)",
+      "High estimates imply roughly $976,000 per radiotherapy centre per year against the IAEA's ~8,700-centre register, so they cannot be radiotherapy-only",
+      "US radiation oncology sites fell to 3,145 in 2025 from 3,214-3,338 across 2018-2023, so growth is not coming from new sites",
+      "68.5% of US counties, covering 50.8 million people, had no radiation oncology practice site in 2025",
+      "Current vendor share is not publicly disclosed; the ARIA and MOSAIQ installed-base figures still in circulation date from 2011 and 2013"
+    ],
+    "market_drivers": [
+      "Migration of medical oncology workflow onto platforms that began as radiation oncology systems",
+      "Service and maintenance contracts attached to a large, long-lived installed base",
+      "Interoperability and information-blocking obligations forcing record modernisation"
+    ],
+    "market_challenges": [
+      "A flat-to-declining site count in the largest market",
+      "Switching costs that protect incumbents also slow new-entrant revenue",
+      "Category boundaries that differ between vendors, making procurement comparisons unreliable"
+    ]
+  },
+  "market_dynamics": {
+    "drivers": [
+      "An installed base bound to on-site linear accelerators, producing durable service and upgrade revenue",
+      "Consolidation of medical and radiation oncology records onto a single platform, widening the per-site footprint",
+      "Interoperability and information-blocking rules obliging practices to modernise ageing records",
+      "Treatment complexity -- adaptive planning, higher fraction counts -- raising the value of verification and workflow software"
+    ],
+    "challenges": [
+      "No public, current measure of vendor share, so competitive claims cannot be independently checked",
+      "Scope inconsistency between published estimates makes market-sizing an unreliable basis for planning",
+      "Safety-critical function raises the evidential bar for any change to established workflow"
+    ],
+    "restraints": [
+      "The US site count is flat to falling, so unit growth cannot carry the market",
+      "Replacement cycles are long and migrations are clinically risky, slowing competitive displacement",
+      "Capital constraints at community practices, where consolidation has been persistent",
+      "Bundling with hardware obscures the software price, making standalone value hard to establish"
+    ],
+    "opportunities": [
+      "Practices without a radiation oncology site nearby are a distribution problem the software can partly address through remote planning and review",
+      "Medical oncology workflow remains the least consolidated part of the record and the clearest expansion path",
+      "Service revenue on an ageing installed base, where upgrade rather than replacement is the realistic sale"
+    ]
+  },
+  "market_segmentation": {
+    "by_product": [
+      "Patient information systems",
+      "Treatment planning systems",
+      "Treatment delivery and verification",
+      "Professional and implementation services"
+    ],
+    "by_end_user": [
+      "Hospitals and academic medical centres",
+      "Freestanding cancer care centres",
+      "Community oncology practices"
+    ],
+    "by_application": [
+      "Radiation oncology",
+      "Medical oncology",
+      "Surgical oncology"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    {
+      "year": 2026,
+      "value": 8.49
+    },
+    {
+      "year": 2027,
+      "value": 9.16
+    },
+    {
+      "year": 2028,
+      "value": 9.87
+    },
+    {
+      "year": 2029,
+      "value": 10.65
+    },
+    {
+      "year": 2030,
+      "value": 11.48
+    },
+    {
+      "year": 2031,
+      "value": 12.38
+    },
+    {
+      "year": 2032,
+      "value": 13.42
+    }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Varian (Siemens Healthineers)",
+      "founded": 1999,
+      "description": "Supplier of the ARIA oncology information system, acquired by Siemens Healthineers in 2021. Signify Research's 2023 analysis places Varian among the holders of most radiation oncology OIS revenue, and notes that share in major non-US markets rests on installed bases and bundled hardware and software. No current share percentage is publicly disclosed.",
+      "headquarters": "United States",
+      "market_position": "Incumbent"
+    },
+    {
+      "company": "Elekta",
+      "founded": 1972,
+      "description": "Supplier of MOSAIQ, which Elekta's 2023/24 annual report describes as a market-leading multidisciplinary oncology information system with a large global installed base. The most recent public customer count the company has published is from 2013, so the current figure is unknown.",
+      "headquarters": "Sweden",
+      "market_position": "Incumbent"
+    },
+    {
+      "company": "RaySearch Laboratories",
+      "founded": 1998,
+      "description": "Named by Signify Research alongside Varian and Elekta as holding most radiation oncology OIS revenue in 2023. Approaches the category from treatment planning rather than from an installed hardware base.",
+      "headquarters": "Sweden",
+      "market_position": "Challenger"
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "ONC Health IT Certification Program, which governs certified electronic health record technology used by oncology practices",
+    "HIPAA Privacy and Security Rules, applying to the protected health information these systems hold",
+    "21st Century Cures Act information-blocking provisions, which constrain how records may be withheld or delayed",
+    "CMS Promoting Interoperability requirements, which tie payment to certified record use",
+    "Medical device software regulation, which applies where treatment delivery and verification functions are classified as a device"
+  ],
+  "research_methodology": {
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. The per-centre figures in this report are a plausibility test, computed by dividing published base-year sizes by the IAEA centre count. That test shows the high estimates cannot refer to radiotherapy systems alone; it does not establish what the correct market size is, and is not offered as an estimate. DIRAC describes itself as an incomplete description of worldwide radiotherapy infrastructure, so the denominator is a lower bound. The 2025 US site count derives from CMS billing data and is not comparable with earlier counts built from state regulatory and dosimetry sources; the two are not presented here as a single trend.",
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public sources and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "IAEA Directory of Radiotherapy Centres (DIRAC): approximately 8,700 radiotherapy centres worldwide, 2025",
+      "Radiotherapy and Oncology (2025) geospatial analysis: 8,925 centres with verified coordinates, filtered from 9,061 DIRAC records as of November 2024",
+      "CMS-based study publicised by ASTRO (2026): 3,145 US radiation oncology practice sites in 2025; 427 counties with net site loss since 2018; 68.5% of counties without a site",
+      "Published market estimates from Research and Markets / 360iResearch, Zion Market Research, Strategic Market Research, Global Market Insights, Credence Research, SNS Insider, Dimension Market Research and GII Research",
+      "Signify Research (2023) on radiation oncology OIS revenue concentration; Elekta Annual Report 2023/24"
+    ]
+  },
+  "faqs": [
+    {
+      "answer": "It depends entirely on scope. On the broad definition used by the most recently based estimate, $8.49 billion in 2026 rising to $13.42 billion by 2032 at 7.84%. On narrower, radiation-oncology-focused definitions, the base is closer to $3.1 to $3.6 billion. Published 2032 values across eight houses run from $5.7 billion to $15.78 billion.",
+      "question": "How big is the oncology information systems market?"
+    },
+    {
+      "answer": "Because they start in different places, not because they disagree about growth. Base-year sizes spread 2.74x across the houses that publish one, while compound growth rates spread only 1.27x. The variable is what counts as an oncology information system.",
+      "question": "Why do published estimates differ so much?"
+    },
+    {
+      "answer": "By dividing the market size by the number of radiotherapy centres. The IAEA's register lists about 8,700 worldwide. The high estimates imply roughly $976,000 of annual spend per centre, which is far above any plausible software licence, so those figures must include medical oncology records, practice management, revenue cycle and services.",
+      "question": "How can you tell which estimates use a broad definition?"
+    },
+    {
+      "answer": "Not in the United States. A CMS-based study counts 3,145 practice sites in 2025, below the 3,214 to 3,338 range seen from 2018 to 2023. 427 counties recorded a net loss of sites over that period, and 68.5% of counties had none at all in 2025.",
+      "question": "Is the number of radiation oncology sites growing?"
+    },
+    {
+      "answer": "Signify Research placed Varian, Elekta and RaySearch as holding most radiation oncology OIS revenue in 2023, and Elekta describes MOSAIQ as market-leading. No current share percentages are public. The installed-base figures still quoted for ARIA and MOSAIQ come from 2011 and 2013 respectively and should not be used.",
+      "question": "Who leads the oncology information systems market?"
+    },
+    {
+      "answer": "Because no public source splits this market by region in a way that survives scrutiny. Publishing a regional table would mean inventing one. The sections are omitted rather than filled with placeholder figures.",
+      "question": "Why does this report show no regional breakdown?"
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates spread 2.74x while published CAGRs spread 1.27x: the disagreement is about scope, not growth",
+    "Published 2032 endpoints range from $5.7 billion to $15.78 billion across eight houses",
+    "High estimates imply about $976,000 per radiotherapy centre per year against the IAEA's ~8,700-centre register",
+    "That per-centre figure rules out a radiotherapy-only reading of the larger numbers",
+    "US radiation oncology sites fell to 3,145 in 2025, from 3,214-3,338 across 2018-2023",
+    "68.5% of US counties, home to 50.8 million people, had no radiation oncology site in 2025",
+    "No current vendor share is publicly disclosed; circulating installed-base figures date from 2011 and 2013"
+  ],
+  "reader_takeaways": [
+    "Before comparing two OIS forecasts, establish whether either counts medical oncology records and services, because that single decision moves the base year by 2.74x",
+    "Growth rate is the stable part of the published literature; treat a quoted 2032 value as a scope statement",
+    "Do not plan on site growth in the United States: the count is flat to declining and access is concentrating",
+    "Treat any vendor share percentage you are shown as unsourced unless it names a current, public measurement, because none exists"
+  ]
+}

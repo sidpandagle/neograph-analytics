@@ -360,3 +360,80 @@ characters and each needs an editorial judgement rather than a substitution.
 Dry-run first, applied second; the script writes nothing without `--apply`.
 Because report pages carry `revalidate = 3600`, these reach production through
 ISR without waiting for a deploy.
+
+## 2026-10-16 — the report pipeline, and making sources visible
+
+### `scripts/report-db.mjs` — one place where a report becomes a row
+Reports were going into Supabase ad hoc, with the evidence discipline enforced
+only by whoever was typing. The tool now holds both halves:
+
+- `count` / `slugs` / `industries` / `dump` for reading the corpus (142 rows,
+  6 industries: Healthcare IT 39, Biotechnology 38, Life Sciences 23,
+  Pharmaceuticals 20, Medical Devices 16, Medical Imaging 6).
+- `check` runs offline and refuses a draft that fails the house rules.
+- `publish` upserts on `slug` — never deletes, never truncates.
+
+The checks that matter, all of them arithmetic rather than taste:
+- **The CAGR must reconcile.** `current * (1+cagr)^years` has to land on
+  `forecast_value` within 0.6 points. A headline that fails its own arithmetic
+  is the most common defect in published market research.
+- The plotted series must start at `base_year` on exactly `current_value`.
+- `competitive_landscape[].market_share` is **rejected outright** — vendor share
+  is almost never publicly disclosed, so a number there is invention by
+  definition.
+- Numeric shares anywhere else require a sourcing statement in the prose.
+- `meta_title` <= 60 chars and never both "Global" and a region; description
+  70-160. These are the two defects the 142-row corpus already had.
+- Every `charts[]` entry needs a `data_source`.
+
+Calibrated against the published OIS row: it passes the CAGR and base-year
+checks and fails three (summary 364 chars, title 61, description 191) — the last
+two are real, already-known defects, which is the right answer for a checker.
+
+### `research/REPORT-AUTHORING-BRIEF.md` and `research/REPORT-PIPELINE.md`
+The brief is the contract for a research pass: the evidence-file format with its
+mandatory "do not publish" list, the grounding-arithmetic requirement, the draft
+JSON shape, the corpus conventions (`report_id` equals the slug; base year 2026;
+forecast 2026-2032). The pipeline file holds 40 topics in 8 batches, picked
+against `research/corpus-slugs.txt` so none duplicates an existing row.
+
+No further regional clones (`north-america-*`, `europe-*`, ...). The corpus
+already carries four regional copies of fourteen topics; a fifth adds no
+analysis, and all 142 rows say `region: Global` anyway.
+
+### Charts now say where their numbers come from (was R-1, R-0g)
+`charts[].data_source` has been populated on every row and rendered nowhere.
+Three charts now sit inside `<figure>` with a `<figcaption>`:
+
+```
+Source: NeoGraph Analytics, tabulated from the base-year and forecast values
+stated in this report. Modelled at constant CAGR between published endpoints.
+How these figures are produced.
+```
+
+Two details worth recording. Some `data_source` values name a real publication;
+others name the column the series was read from (`market_forecast`), which tells
+a reader nothing — `lib/chartAttribution.ts` rephrases those into a true
+statement instead of printing the column name. And the OIS row had buried its
+modelling caveat *inside the chart title*, where it reads as part of the
+chart's name; `chartModellingNote` lifts it into the caption where it belongs.
+
+### `/methodology` — the page three other pages were already promising
+The site said "methodology" and "sources" in three places and had no such
+route, and zero source attributions were reachable anywhere. The page states
+what the checker enforces: estimates collected rather than averaged, the spread
+reported as the finding, every headline divided through by a public register,
+and an explicit list of what gets left out (vendor shares, unsourced regional
+splits, segment percentages, padded development lists). Linked from the footer,
+from every chart caption, and added to both sitemaps.
+
+### Error boundaries (was R-5)
+`app/error.tsx` (retry + browse, logs the digest only) and
+`app/global-error.tsx` (self-contained inline styles, since a root-layout
+failure means no fonts and no theme tokens). Neither existed, so any unhandled
+render error showed the bare Next.js screen.
+
+### Verified
+Build clean, 142 report pages + `/methodology` prerendered. In the built HTML:
+`<figure>` wraps the forecast chart with the caption above; `/methodology`
+renders 1 `<h1>`, 5 `<h2>` and the live corpus count (142 across 6).
