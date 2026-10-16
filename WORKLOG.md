@@ -1392,3 +1392,20 @@ something to start twenty minutes before a deploy.
 
 CLS at 0.00 is worth recording as a pass — the chart containers and the sticky
 rails hold their space.
+
+### The slow paint is in production, and it is not the charts
+Traced `/methodology` in **production**: **LCP 3,921ms, TTFB 45ms, CLS 0.03.**
+The page has no charts, no `IntersectionObserver` and six headings, and its LCP
+element is text already in the delivered HTML — so 3,876ms of that is the main
+thread, not the network.
+
+That rules out the first suspect from the report-page trace. The chartless page
+is **worse** than the report page (1,572ms), so Recharts is not what is costing
+the time; something in the shared shell is. Measured so far: the HubSpot/GTM
+script takes 288ms of main thread. Remaining suspects are the header's
+`backdrop-filter`, the theme-toggle hydration and the font load.
+
+R-13 is raised to **high** on that evidence. Deferring the fix rather than
+guessing at it twenty minutes before a deploy: the next pass isolates it by
+tracing with the third-party script blocked, which is one line of CDP and
+answers the question outright.
