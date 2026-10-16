@@ -831,3 +831,51 @@ click. Both drafts pass.
 
 Held for the same deploy as round 2's reports: `/blog/[slug]` also sets
 `dynamicParams = false`.
+
+### Round 3, batch 3B — five supply-side reports drafted (held)
+All five pass `check`. Held with round 2 for the same deploy.
+
+This batch is the strongest yet on grounding, because the suppliers are listed
+and report by segment, in four currencies — converted at the **IRS yearly
+average rates for 2025**, named and dated in every methodology block (CHF 0.831,
+KRW 1,421.779, EUR 0.886, CNY 7.129, JPY 149.632 per USD).
+
+- **Plasma fractionation**: CSL Behring $11,158M + Grifols Biopharma €6,487M +
+  Octapharma €3.47bn = **$22,396M, which is 80.9% of one published whole market**
+  — and adding a single Takeda immunoglobulin line reaches **96.4% of it.** That
+  publisher's figure is a floor, not a market. Per litre of US plasma: ~$358.
+  The structural find the forecasts miss: Grifols closed 29 US collection
+  centres in April 2026 **while reporting rising collection** — growth has moved
+  to yield per donation, not centre count.
+- **Sterile injectables**: a **13.6x** spread at 2025, with the *same publisher*
+  holding both ends ($46.43B and $632.46B). Fresenius Kabi Pharma plus Hikma
+  Injectables are 12.1% of the generic reading and **0.95% of the $591B
+  reading** — two of the largest generic injectable suppliers in the world
+  cannot be under 1% of their own market, so the high series is list-price
+  injectable *drug* revenue. Separately: the three shortage registers disagree
+  **2.44x** (FDA 93, USP 75, ASHP 227), and Hikma's disclosed Injectables margin
+  fell 36.3% -> 30.0% on ~12% revenue growth, which is the shortage economics in
+  a single disclosure.
+- **Biologics CDMO**: Lonza + Samsung Biologics + WuXi Biologics = **$10,655M =
+  56.7% of a published market the same page calls "fragmented."** Samsung's
+  revenue over its stated 605,000 L of capacity is **$5,298 per litre per year**,
+  so a $25B+ base needs 4.8 million litres of fully-utilised third-party
+  capacity against ~845,000 L at the world's largest owner.
+- **Vaccine cold chain**: 11.2x on size *and* 12.0x on rate. Against UNICEF's
+  2.787bn doses (2024) the published markets imply $1.48, $12.67 and $16.63 per
+  dose, and the top figure is **8.26x UNICEF's entire $5.610B procurement
+  budget, vaccines included.** The chosen publisher's own series also fails its
+  own arithmetic (its rate compounds to 65.01, not the 66.3 it prints), so the
+  report uses their rate and says why it does not use their endpoint.
+- **Pharmacy automation**: Omnicell's $1,185M is **16.5% of one whole published
+  market** — the cleanest single-vendor ratio in three rounds, because Omnicell
+  is a pure play. The per-store anchor (~$39,100 per US retail pharmacy per
+  year) is the one grounding calculation in this batch that **confirms** the
+  published range rather than contradicting it, which is worth recording: the
+  method is not only capable of producing contradictions. One publisher's 2032
+  forecast is 9.3% *below* another's 2025 actual, because it publishes no base
+  year at all.
+
+Method note the agent left for the next pass rather than repeating blind: the
+WHO PQS prequalified-equipment catalogue cannot be used as a count, because its
+own guidance says reference codes are never reassigned.

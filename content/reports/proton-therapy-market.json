@@ -1,0 +1,252 @@
+{
+  "report_id": "proton-therapy-market",
+  "slug": "proton-therapy-market",
+  "title": "Proton Therapy Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 1.82,
+    "forecast_value": 3.36,
+    "cagr": 10.8
+  },
+  "market_overview": {
+    "summary": "Published proton therapy estimates for 2025 run from about $0.73 billion to $1.66 billion — a 2.3x spread, narrowing to 1.37x among the series that publish a dated 2025 base. We publish IndustryARC's series, the only one in the set that defines both of its product segments in words: $1.82 billion in 2026 rising to $3.36 billion by 2032 at 10.8%. What makes this market unusual in our corpus is that the published figures survive an independent build. Against the roughly 125 particle therapy centres the PTCOG register records in clinical operation at end-2024, the headline works out to about $13.1 million per operating centre per year — too little to be capital equipment on a 20-to-30-year asset, and therefore new-build spending plus recurring service, which is what IndustryARC says it counts. Scaling IBA's disclosed unit economics — EUR 2.93 million of service revenue per active site across 45 sites, EUR 22.5 million of equipment revenue per room delivered across 9 rooms — to the world fleet gives $1.00 to $1.12 billion, within 10 to 20% of the low end of the published range. The same disclosure rules out the low tail: IBA's EUR 334.3 million would be half the world market on Allied Market Research's trajectory.",
+    "key_trends": [
+      "The market steps rather than compounds: IBA's proton therapy net sales rose 57% in FY2025 to EUR 334.3 million after shrinking the year before, because the series is the sum of a few dozen construction projects, not a smooth demand curve",
+      "Service is now the stable half of vendor revenue and the lumpy half is equipment: IBA reported EUR 131.7 million of proton therapy services (+7%) against EUR 202.7 million of equipment (+127%) in FY2025, on 45 active sites worldwide",
+      "Compact single-room systems have changed who can buy: 36 of the 43 projects in IBA's equipment backlog are single-room Proteus ONE units against 7 multi-room Proteus PLUS, and a single-room centre is announced at $33-40 million against upward of $160 million for multi-room",
+      "China is the growth geography in physical terms: a 2026 review counts more than 30 Chinese centres operational or under construction, and IBA reported its first live treatment rooms in Chengdu and Shenzhen during 2025",
+      "Clinical evidence is arriving late relative to the installed base: IBA cites MD Anderson head-and-neck results and a randomised photon-versus-proton breast trial enrolling 1,238 patients, decades after the first centres opened",
+      "Order intake is running ahead of revenue: IBA booked EUR 250 million of proton therapy equipment orders in 2025 (+137%, 10 accelerator systems sold against 5 in 2024) and carries a EUR 1.6 billion group backlog, so the recognised revenue series lags the commercial one by years"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Roughly 125 centres worldwide against a global oncology population"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Compact single-room accelerators at $33-40 million of project cost, against upward of $160 million for a multi-room centre, which brings proton therapy within reach of single hospitals rather than only national or consortium projects",
+      "A large and growing installed base generating contracted service revenue: IBA's 45 active sites produced EUR 131.7 million of service revenue in FY2025, and its services backlog alone is EUR 806 million",
+      "Paediatric and head-and-neck indications where dose sparing has the clearest clinical rationale, and where IBA cites MD Anderson evidence establishing proton therapy as a standard of care in head and neck cancer",
+      "National programmes in markets without existing capacity, including the Chinese build-out that a 2026 review counts at more than 30 centres operational or under construction",
+      "Cumulative treated-patient volume passing 450,000 by end-2024 on the PTCOG register, which gives the modality a clinical track record that early reimbursement disputes were fought without"
+    ],
+    "restraints": [
+      "Capital intensity against uncertain reimbursement: a centre costs $33 million to over $160 million and a Medicare claims analysis puts the median proton course reimbursement at $32,428 against $18,575 for IMRT, so payers have resisted the premium in the commonest indications",
+      "Execution risk inside the vendors: IBA's own FY2025 results attribute a gross margin decline to 32.2% partly to legacy low-margin proton therapy projects, and the company recognised EUR 8.7 million of bad-debt provisions on customer credit risk",
+      "The published market is approximately equal to total global clinical revenue from proton treatment — roughly $41,000 per patient per year against about 40,000 patients treated annually — which caps how much of the clinical dollar a vendor can ever capture",
+      "Long project cycles: the first of IBA's 10-room Spanish projects only began installation in Q4 2025, and three further projects' 2026 starts are explicitly conditioned on customers' own execution timelines",
+      "Competition from improving photon radiotherapy, which is far cheaper per installed room and improves continuously, so the dose-sparing advantage must be demonstrated against a moving comparator"
+    ],
+    "opportunities": [
+      "Service and upgrade revenue on an installed base that is still young: IBA's services backlog of EUR 806 million exceeds its equipment backlog of EUR 564 million, and a total system restoration at Massachusetts General shows modernisation is a product line of its own",
+      "Markets with no capacity at all, where a single compact centre is the whole national programme, which is how the 50-plus centres under construction or planned are distributed",
+      "Carbon-ion and mixed particle facilities, a much smaller fleet than protons, where the PTCOG register recorded only about 13 heavy-ion facilities among 104 particle facilities as of a 2022 count",
+      "Randomised evidence converting payer resistance into coverage: the breast trial IBA cites enrolled 1,238 patients across leading United States cancer centres and reported quality-of-life advantages at ASTRO 2025",
+      "Fleet replacement and expansion at existing centres, where the customer relationship, the vault and the clinical programme already exist and only the accelerator is new"
+    ],
+    "challenges": [
+      "A published CAGR is the wrong instrument for this market. Every source in the set smooths an 8-14% curve over a series that in IBA's hands moved 57% in one year, and no published rate is anywhere near what the largest independent vendor actually did",
+      "Vendor disclosure is almost absent. IBA publishes a proton therapy segment; Varian sits inside Siemens Healthineers with no proton split, and Hitachi, Sumitomo, Mevion and ProTom publish nothing comparable, so no share can be stated for anyone",
+      "The central public register is not reliably available. PTCOG's own facility pages returned HTTP 503 throughout this research pass, so even the facility count has to be taken from peer-reviewed papers that cite it",
+      "Published scope decisions move the total by two-thirds on their own: one source counts equipment and service, another adds clinical implementation services, and a third appears to count equipment alone",
+      "One publisher's figures fail their own arithmetic: $1.2 billion in 2022 to $3.2 billion in 2032 is 10.3% a year, not the 10.8% the page states, and the page does not explain the gap"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Equipment — accelerators (cyclotrons and synchrotrons) and beam delivery systems",
+      "Service — maintenance, upgrades, training and technical support",
+      "Single-room systems",
+      "Multi-room systems"
+    ],
+    "by_application": [
+      "Paediatric oncology",
+      "Head and neck cancer",
+      "Central nervous system and brain tumours",
+      "Prostate cancer",
+      "Lung and thoracic cancer",
+      "Ocular tumours",
+      "Breast cancer"
+    ],
+    "by_end_user": [
+      "Academic medical centres and university hospitals",
+      "Dedicated proton therapy centres",
+      "National cancer programmes",
+      "Private hospital groups"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 1.82 },
+    { "year": 2027, "value": 2.02 },
+    { "year": 2028, "value": 2.23 },
+    { "year": 2029, "value": 2.48 },
+    { "year": 2030, "value": 2.74 },
+    { "year": 2031, "value": 3.04 },
+    { "year": 2032, "value": 3.36 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 10.8% CAGR between IndustryARC's published 2025 base and 2032 endpoint)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "IBA (Ion Beam Applications SA)",
+      "headquarters": "Louvain-la-Neuve, Belgium",
+      "market_position": "The only vendor that publishes a proton therapy segment, and therefore the only hard number anyone outside the industry has. FY2025 proton therapy net sales of EUR 334.3 million across 45 active sites. That figure is also a floor that rules out the low tail of the published range: on Allied Market Research's trajectory IBA alone would be about half the world market. Share is not disclosed and we assign none.",
+      "description": "FY2025 proton therapy net sales EUR 334.3 million, up 57%, comprising EUR 202.7 million of equipment (+127%) and EUR 131.7 million of services (+7%), with an adjusted EBIT contribution of EUR 10.2 million. 12 rooms sold — the second-best year on record — and 9 rooms delivered. Equipment backlog of 43 projects: 7 multi-room Proteus PLUS and 36 single-room Proteus ONE. Group net sales EUR 620.2 million (+24%), group backlog EUR 1.6 billion. Reported 27 March 2026."
+    },
+    {
+      "company": "Varian, a Siemens Healthineers business",
+      "headquarters": "Palo Alto, California, United States (parent: Erlangen, Germany)",
+      "market_position": "The principal competitor to IBA on installed and contracted rooms, through the ProBeam platform, and the only vendor whose radiotherapy franchise is larger than its proton business by an order of magnitude. Proton therapy revenue is not broken out anywhere in Siemens Healthineers' segment reporting, so its position can only be characterised from individually announced centre contracts.",
+      "description": "ProBeam single- and multi-room proton systems. Publicly announced installations and contracts include Scripps in San Diego, the Rinecker centre in Munich, the Paul Scherrer Institute, Cincinnati Children's, King Fahd Medical City, National Taiwan University in Taipei, two Norwegian centres and the Danish national four-room centre in Aarhus. No proton revenue line is disclosed."
+    },
+    {
+      "company": "Hitachi, Ltd.",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "A long-standing synchrotron-based supplier with a strong position in Japan and selected United States academic centres. Proton therapy sits inside a conglomerate's healthcare reporting with no separate revenue line, so no share is stated.",
+      "description": "Synchrotron proton therapy systems with scanning beam delivery, supplied to Japanese national centres and to United States academic programmes. No proton therapy revenue is separately disclosed."
+    },
+    {
+      "company": "Mevion Medical Systems, Inc.",
+      "headquarters": "Littleton, Massachusetts, United States",
+      "market_position": "The compact single-room specialist, whose superconducting synchrocyclotron design was the commercial answer to the capital problem that kept proton therapy to national projects. Privately held; no revenue is disclosed.",
+      "description": "Single-room proton therapy systems built around a gantry-mounted compact accelerator, aimed at hospitals that cannot fund a multi-room vault. Privately held and reports no financial figures."
+    },
+    {
+      "company": "ProTom International",
+      "headquarters": "Flower Mound, Texas, United States",
+      "market_position": "A small-footprint synchrotron vendor competing in the same compact-system segment as Mevion and IBA's Proteus ONE. Privately held; no revenue is disclosed and no share is assigned.",
+      "description": "Radiance 330 compact synchrotron proton therapy system, installed at a small number of United States sites. Privately held."
+    },
+    {
+      "company": "Sumitomo Heavy Industries, Ltd.",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "A cyclotron supplier with an installed base concentrated in Japan, reported inside an industrial conglomerate with no proton split. Named, not sized.",
+      "description": "Cyclotron-based proton therapy systems and related accelerator technology. No proton therapy revenue is separately disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "IBA (Ion Beam Applications SA)",
+      "year": 2026,
+      "event": "Reported FY2025 results on 27 March 2026: proton therapy net sales of EUR 334.3 million, up 57%, with equipment up 127% to EUR 202.7 million and services up 7% to EUR 131.7 million; 12 rooms sold and 9 delivered; 45 active sites worldwide; equipment backlog of 43 projects comprising 7 Proteus PLUS and 36 Proteus ONE systems; group backlog at an all-time high of EUR 1.6 billion."
+    },
+    {
+      "company": "IBA (Ion Beam Applications SA)",
+      "year": 2025,
+      "event": "Began installation of the first of the 10-room proton therapy projects in Spain in the fourth quarter of 2025, and brought the first live treatment rooms into operation at the Proteus PLUS installations in Chengdu and Shenzhen, China, with final delivery expected by the end of 2026."
+    },
+    {
+      "company": "IBA (Ion Beam Applications SA)",
+      "year": 2025,
+      "event": "Booked EUR 250 million of proton therapy equipment orders, up 137% year on year, selling 10 accelerator systems against 5 in 2024, and began a total system restoration at Massachusetts General Hospital to fully modernise its proton therapy facility."
+    },
+    {
+      "company": "Particle Therapy Co-Operative Group (PTCOG)",
+      "year": 2025,
+      "event": "Cumulative patients treated worldwide with particle radiotherapy passed 450,000 by the end of 2024 on the PTCOG register, with over 120 proton therapy centres in clinical operation and more than 50 further centres under construction or in planning, as counted from the register in the peer-reviewed literature."
+    },
+    {
+      "company": "UMass Memorial Health Care, Inc.",
+      "year": 2025,
+      "event": "Filed a Massachusetts determination-of-need application in March 2025 listing approximately $39.5 million for the proton treatment vault line item alone, one of the few public filings that puts a documented figure on the civil-works component of a proton therapy project."
+    }
+  ],
+  "regulatory_landscape": [
+    "Proton therapy systems are regulated in the United States as medical devices and have historically reached the market through the FDA 510(k) pathway for medical charged-particle radiation therapy systems, with the accelerator, the beam delivery system and the treatment planning software each carrying its own clearance obligations.",
+    "Reimbursement, not marketing authorisation, is the binding regulatory constraint. CMS pays for proton beam radiation therapy through its outpatient prospective payment system codes, and a Medicare claims analysis found a median reimbursement of $32,428 for a proton course against $18,575 for IMRT; commercial payer coverage policies restrict proton therapy by indication, with prostate cancer the most commonly contested.",
+    "Every proton therapy facility requires a radiation licence from the national or state radiological protection authority — in the United States an Agreement State or NRC licence, in the European Union a licence under the Basic Safety Standards Directive 2013/59/Euratom — covering shielding design, activation products and secondary neutron dose.",
+    "EU Medical Device Regulation 2017/745 governs any proton therapy system placed on the EU market, with conformity assessment by a notified body and post-market surveillance obligations scaling by risk class.",
+    "Certificate-of-need regimes in United States states including Massachusetts gate construction independently of FDA clearance: a proton centre must first satisfy a state determination-of-need process on cost and community need, which is why filings such as UMass Memorial's are among the few public documents disclosing project costs.",
+    "No central regulator publishes a register of operating proton therapy centres. The PTCOG list maintained by the Particle Therapy Co-Operative Group is the de facto register, and it is a voluntary professional-society compilation rather than a regulatory filing."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "IndustryARC, Proton Therapy Systems Market, report 503994 — $1.64B (2025 base year), $3.36B (2032), 10.8% (2026-2032); scope stated as equipment plus service",
+      "Towards Healthcare, Proton Therapy Systems Market Sizing, page last updated 21 April 2026 — $1.52B (2024), $1.66B (2025), $3.72B (2034), 9.44%",
+      "Global Market Insights, proton therapy systems market — $1.2B (2022), $3.2B (2032), 10.8% stated for 2023-2032; U.S. $530M (2022); gastrointestinal cancer $322M (2022)",
+      "IBA (Ion Beam Applications SA), FY2025 results press release and results PDF, 27 March 2026 — proton therapy net sales EUR 334.3M, equipment EUR 202.7M, services EUR 131.7M, 45 active sites, 12 rooms sold, 9 rooms delivered, 43 projects in backlog",
+      "Advances in proton therapy technology and global clinical applications, PMC12932165 — over 120 (Table 3: ~125) operational centres at end-2024, more than 50 under construction or planned, cumulative patients treated over 450,000, citing the PTCOG register accessed 15 January 2025",
+      "PTCOG Ocular Survey, PMC12914457, January 2026 — over 100 particle therapy centres in operation worldwide; 42,457 ocular particle therapy treatments through end-2023",
+      "Particle Therapy Co-Operative Group (PTCOG), facilities in clinical operation and patient statistics register — cited through the peer-reviewed literature because the register's own pages returned HTTP 503 throughout this research pass",
+      "Massachusetts Department of Public Health determination-of-need filing, UMass Memorial Health Care Inc., March 2025 — approximately $39,495,099 for the proton treatment vault line item",
+      "Healthcare Design, St. Joseph's Hospital Cancer Institute proton therapy centre announcement (2023) — $33 million single-room compact centre in Tampa, Florida",
+      "AuntMinnie, proton therapy cost coverage — multi-room centres upward of $160 million; median Medicare reimbursement of $32,428 per proton course against $18,575 for IMRT, from undated secondary summaries"
+    ],
+    "data_validation": "The headline is one publisher's own base advanced one year at its own stated rate and terminating on its own published endpoint: IndustryARC's $1.64 billion for 2025 becomes $1.82 billion for 2026 at 10.8%, reaching its published $3.36 billion for 2032. The internal check is that $1.82 billion compounded at 10.8% for six years gives $3.37 billion against the published $3.36 billion, a 0.3% difference. IndustryARC was chosen because it is the only source in the set that defines both of its product segments in words — equipment as accelerators and delivery systems, service as maintenance, upgrades, training and technical support — because it publishes a dated 2025 base year rather than a vintage base extended forward, and because its endpoints reconcile with its own stated rate, which one competing source's do not. Four grounding tests were run. First, the per-centre test: $1.64 billion divided by roughly 125 particle therapy centres in clinical operation at end-2024, taken from the PTCOG register as counted in a 2026 peer-reviewed review, gives $13.1 million per operating centre per year, against a centre capital cost of $33 to 40 million for a single room and upward of $160 million for multi-room, on a 20-to-30-year asset. That rules out reading the total as capital equipment alone and confirms it is new-build spending plus recurring service. Second, the per-patient test: the same total divided by the roughly 40,000 patients a year implied by the PTCOG cumulative delta between end-2023 and end-2024 gives about $41,000 per patient per year, approximately equal to a whole Medicare proton course at a reported median of $32,428, which rules out any reading of the figure as treatment revenue since vendors do not collect clinical fees. Third, a bottom-up build from the only vendor that discloses a proton segment: IBA's FY2025 service revenue of EUR 131.7 million across 45 active sites is EUR 2.93 million per site per year, and its equipment revenue of EUR 202.7 million across 9 rooms delivered is EUR 22.5 million per room; scaled to 125 centres and an assumed 25 to 30 rooms delivered worldwide per year, that gives EUR 929 million to EUR 1,041 million, or about $1.00 to $1.12 billion at a labelled EUR 1 to USD 1.08 conversion — within 10 to 20% of the low end of the published range. Fourth, a floor test: IBA's EUR 334.3 million is about 49.5% of Allied Market Research's implied 2025 total, which would make one vendor half the world market and therefore rules that trajectory out. These are scope and plausibility tests, not market estimates. The worldwide annual room-delivery rate is our own assumption because no register publishes it; the per-room figure is an average of percentage-of-completion revenue across a project portfolio rather than a price; the currency conversion compares differently constructed numbers; and PTCOG's register was unreachable throughout this pass, so the facility count is taken from papers that cite it rather than read directly. Regional, country and segment splits are published as empty arrays because the only source offering them splits a 2022 base whose own endpoints do not reconcile with its own stated rate, and no vendor market share is published because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the proton therapy market?",
+      "answer": "We publish $1.82 billion for 2026, rising to $3.36 billion by 2032 at 10.8%, derived from IndustryARC's published $1.64 billion base for 2025 and its own stated rate and 2032 endpoint. Published 2025 figures run from about $0.73 billion to $1.66 billion — a 2.3x spread — narrowing to 1.37x among the series that actually publish a dated 2025 base. What the figure counts is new-build capital spending plus recurring service across a world fleet of roughly 125 centres, which works out to about $13.1 million per operating centre per year."
+    },
+    {
+      "question": "Does the published market size survive an independent check?",
+      "answer": "Unusually, yes — at the low end. IBA is the only vendor that publishes a proton therapy segment, and it disclosed EUR 131.7 million of service revenue across 45 active sites and EUR 202.7 million of equipment revenue across 9 rooms delivered in FY2025. That is EUR 2.93 million of service per site and EUR 22.5 million per room. Scale those to roughly 125 centres and an assumed 25 to 30 rooms delivered worldwide a year and you get $1.00 to $1.12 billion — within 10 to 20% of the lowest dated published figure, and about two-thirds of the highest. For a healthcare market, that is close agreement."
+    },
+    {
+      "question": "Is the figure the value of the world's installed proton therapy base?",
+      "answer": "No, and the arithmetic says so. $13.1 million per operating centre per year against a centre that costs $33 to 40 million for a single room, or upward of $160 million for multi-room, and lasts 20 to 30 years, would mean the world rebuilt its entire proton fleet every 3 to 12 years. It does not. The published figure is annual flow — new construction plus service contracts — not the value of the fleet."
+    },
+    {
+      "question": "Is it treatment revenue — what hospitals bill for proton therapy?",
+      "answer": "No, though the numbers are close enough to mislead. Dividing the headline by the roughly 40,000 patients treated worldwide each year, implied by the PTCOG register's cumulative delta between end-2023 and end-2024, gives about $41,000 per patient. A Medicare claims analysis puts the median reimbursement for a whole proton course at $32,428. If the published market were treatment revenue, equipment makers would be capturing essentially the entire clinical fee, which is not what happens. Hospitals collect the treatment fee; vendors sell them accelerators and service contracts."
+    },
+    {
+      "question": "Why is a CAGR the wrong instrument for this market?",
+      "answer": "Because the market is a few dozen building projects, not a demand curve. IBA's proton therapy net sales rose 57% in FY2025, after falling the year before. No published CAGR in the set is anywhere near that — they cluster between 8.24% and 13.65%. The smooth curve is an artefact of annualising lumpy project revenue. Order intake tells you more than revenue does: IBA sold 12 rooms in 2025 and carries 43 projects in equipment backlog, which is a better forward signal than any rate."
+    },
+    {
+      "question": "Which company leads proton therapy, and what share does it hold?",
+      "answer": "IBA and Varian, the Siemens Healthineers business, are the two largest suppliers by installed and contracted rooms. Neither share is disclosed and we assign none. IBA is the only vendor publishing a proton therapy segment at all — EUR 334.3 million in FY2025 — and Varian's proton revenue is not broken out anywhere in Siemens Healthineers' reporting. Hitachi, Sumitomo, Mevion and ProTom publish nothing comparable, Mevion and ProTom being privately held."
+    },
+    {
+      "question": "What would change the forecast most?",
+      "answer": "Reimbursement and Chinese build-out, in that order. A Medicare proton course reimburses at a median $32,428 against $18,575 for IMRT, and commercial payers restrict proton therapy by indication, so randomised evidence that shifts coverage policy — of the kind IBA cites from MD Anderson in head and neck cancer, and from a breast trial enrolling 1,238 patients — would change demand more than any price or technology move. A 2026 review counts more than 30 Chinese centres operational or under construction, which is the single largest identifiable block of new rooms."
+    }
+  ],
+  "seo": {
+    "meta_title": "Proton Therapy Market Size, Share & Forecast to 2032",
+    "meta_description": "Proton therapy market at $1.82B in 2026, reaching $3.36B by 2032 at 10.8% — tested against 125 operating centres and IBA's disclosed per-site economics.",
+    "keywords": [
+      "proton therapy market",
+      "proton therapy market size",
+      "particle therapy centres",
+      "proton therapy systems",
+      "IBA Proteus ONE",
+      "PTCOG register"
+    ]
+  },
+  "executive_summary": "Proton therapy is the market in this corpus where the published numbers mostly hold up, and the interesting finding is why. Estimates for 2025 run from roughly $0.73 billion to $1.66 billion — a 2.3x spread that narrows to 1.37x among the series publishing a dated 2025 base — and the gap is a scope decision about whether to count service, not a disagreement about growth. We publish IndustryARC's series, the only one that defines both of its segments in words: $1.82 billion in 2026 to $3.36 billion by 2032 at 10.8%, interpolated from its own base at its own rate and terminating on its own published endpoint, with the interpolation checking out to 0.3%. Then we test it against things that can be counted. The PTCOG register records roughly 125 particle therapy centres in clinical operation at end-2024 and cumulative treated patients passing 450,000, so the headline is about $13.1 million per operating centre per year. That rules out two readings a general reader will reach for: it is far too little to be the value of a fleet of $33-to-160-million assets, and at roughly $41,000 per patient treated it is approximately equal to total global clinical revenue, which vendors do not collect. What it is, is new-build capital plus service — and that can be built from the bottom up, because IBA publishes both revenue and counts. EUR 131.7 million of service across 45 active sites is EUR 2.93 million per site; EUR 202.7 million of equipment across 9 rooms delivered is EUR 22.5 million per room. Scaled to the world fleet that gives $1.00 to $1.12 billion, within 10 to 20% of the lowest dated published figure. The same disclosure kills the low tail: at Allied Market Research's trajectory, IBA alone would be half the world market. The defect that remains is the instrument, not the level. IBA's proton revenue moved 57% in FY2025 after falling the year before. This is a market of a few dozen construction projects, and every publisher in the set smooths it into a 10% curve.",
+  "key_highlights": [
+    "Headline: $1.82 billion in 2026 to $3.36 billion in 2032 at 10.8%, interpolated from IndustryARC's own published 2025 base and terminating on its own 2032 endpoint",
+    "Published 2025 estimates span 2.3x ($0.73B-$1.66B), narrowing to 1.37x among series with a dated 2025 base — the gap is whether service is counted, not growth",
+    "$13.1 million per operating centre per year, against roughly 125 particle therapy centres in clinical operation at end-2024 on the PTCOG register",
+    "A bottom-up build from IBA's disclosed unit economics — EUR 2.93 million of service per active site, EUR 22.5 million per room delivered — gives $1.00-1.12 billion, within 10-20% of the lowest dated published figure",
+    "IBA's EUR 334.3 million proton therapy segment is a floor that rules out the low tail: on Allied Market Research's trajectory one vendor would be half the world market",
+    "About $41,000 per patient treated worldwide, roughly a whole Medicare proton course at a reported median $32,428 — which rules out reading the market as treatment revenue",
+    "The series steps rather than compounds: IBA's proton therapy net sales rose 57% in FY2025 after falling in FY2024, against published CAGRs of 8.24% to 13.65%"
+  ],
+  "market_context": "Proton therapy sits at an awkward join between capital construction and clinical oncology, and that is what makes it hard to size. A proton centre is not a device purchase; it is a building project with an accelerator in it, costing $33 to 40 million for a single compact room and upward of $160 million for a multi-room facility, taking years to install and lasting decades. The world has roughly 125 of them in clinical operation, with more than 50 under construction or planned, and they have cumulatively treated over 450,000 patients since the modality began. Set against those counts, the published market figures are annual flow across a small, visible, countable fleet — new construction plus service contracts — and they come out to about $13.1 million per centre per year. That is a very different quantity from the two things readers usually assume a market size means: it is not the value of the installed base, which would be an order of magnitude larger, and it is not what hospitals bill for proton treatment, which at roughly 40,000 patients a year and a reported median Medicare course of $32,428 happens to land near the same number by coincidence. The supplier structure explains why disclosure is so thin. IBA is a listed pure-play and publishes a proton segment. Varian is inside Siemens Healthineers, Hitachi and Sumitomo inside Japanese conglomerates, and Mevion and ProTom are private. One company out of six tells you anything, and the whole analysis of this market rests on it.",
+  "forecast_analysis": "Our 10.8% is IndustryARC's own rate applied to its own base and terminating on its own endpoint, and the interpolation reproduces its published 2032 figure to within 0.3%. Whether a compound rate is the right description of this market is a separate question, and the answer is no. IBA's proton therapy net sales rose 57% in FY2025 to EUR 334.3 million, having fallen the year before, because its equipment line more than doubled as backlog converted — the first of ten rooms in Spain starting installation, the first live rooms in Chengdu and Shenzhen. A market whose largest independent vendor moves by 57% in a year is not compounding at 10.8%; it is recognising a handful of construction projects. The published rates in the set, 8.24% to 13.65%, are all annualisations of the same lumpy series, and they tell you the long-run trend of the fleet rather than anything useful about 2027. The forward signals that are actually informative are the ones IBA publishes directly: 12 rooms sold in 2025 against 5 accelerator systems in 2024, equipment order intake up 137% to EUR 250 million, 43 projects in backlog of which 36 are single-room, and a services backlog of EUR 806 million that now exceeds the equipment backlog of EUR 564 million. The structural reading those support is that the service line grows smoothly with the installed base and the equipment line does not grow smoothly at all. Readers forecasting this market should model rooms commissioned and service contracts attached, and treat any published CAGR as a long-run average they cannot spend.",
+  "reader_takeaways": [
+    "Divide any proton therapy market figure by the centre count before using it. Roughly 125 centres in clinical operation and a $1.64 billion global figure is $13.1 million per centre per year, which is new-build plus service — not the value of the fleet and not treatment revenue.",
+    "The low tail of the published range is ruled out by one disclosure. IBA's EUR 334.3 million proton therapy segment would be half the world market on the smallest published trajectory, which cannot be right given Varian's comparable installed base.",
+    "Do not plan on a CAGR here. IBA's proton revenue grew 57% in FY2025 and shrank in FY2024. Model rooms sold, rooms delivered and service contracts attached; the published 8-14% rates are annualised project lumpiness.",
+    "Check whether a source counts service. One publisher counts equipment and service, another adds clinical implementation services, a third appears to count equipment alone — and service is roughly 40% of the one vendor segment we can see.",
+    "Expect the analysis of this market to stay dependent on a single company. Of six serious vendors, only IBA publishes a proton segment; Varian is inside Siemens Healthineers, Hitachi and Sumitomo inside conglomerates, Mevion and ProTom private."
+  ]
+}

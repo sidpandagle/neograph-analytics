@@ -1,0 +1,246 @@
+{
+  "report_id": "vaccine-cold-chain-market",
+  "slug": "vaccine-cold-chain-market",
+  "title": "Vaccine Cold Chain Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 37.78,
+    "forecast_value": 56.8,
+    "cagr": 7.03
+  },
+  "market_overview": {
+    "summary": "Vaccine cold chain carries the widest published disagreement in this corpus on both dimensions at once. For 2025 the estimates run from $4.13 billion to a derived $46.35 billion, an 11.2x spread, and the stated growth rates run from 0.85% to 10.23%, a 12.0x spread in the rate itself. One publisher disagrees with itself by almost two to one. UNICEF settles part of it: it delivered 2.787 billion vaccine doses to 99 countries in 2024 and spent $5.610 billion on all procurement across 160 countries, so a $46.35 billion vaccine cold chain is 8.26 times the entire budget of the world's largest vaccine buyer, including the vaccines. Dividing the published markets by UNICEF's dose volume gives $1.48, $12.67 and $16.63 per dose. Only the first is plausible as the cost of moving a dose; the larger figures are defensible only as equipment plus packaging plus services, which is what the publisher we follow says it counts.",
+    "key_trends": [
+      "The spread is extreme on both dimensions simultaneously: 11.2x in base-year size ($4.13 billion to a derived $46.35 billion for 2025) and 12.0x in stated growth rate (0.85% to 10.23%)",
+      "Equipment versus movement is the scope line that explains it: a refrigerator is capital equipment with a ten-year life while shipping a dose is a service consumed once, and the 8.5x gap between the two main readings is almost entirely hardware and packaging",
+      "COVID normalisation is why the logistics-only reading prints 0.85%: Roots Analysis segments explicitly by COVID-19 versus other vaccines, and a logistics market inflated by the COVID campaign shrinks back toward routine immunisation volumes from a 2025 base",
+      "The growth in temperature-controlled life science logistics has moved to cell and gene therapy, not vaccines: Cryoport, the sector's only listed pure-play, grew commercial cell and gene therapy support 29% to $33.4 million in 2025 on total revenue of $176.2 million",
+      "One publisher's own series fails its own arithmetic: IMARC states $35.3 billion for 2025, $66.3 billion for 2034 and a 7.03% CAGR, but 35.3 x 1.0703^9 = 65.01 and the endpoint implies 7.26%",
+      "WHO's prequalified immunization device catalogue cannot be counted from its product codes: its own guidance states a reference is never reassigned, so breaks in the numerical sequence appear when an item is dropped"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal and mandatory for licensed vaccines; the constraint is last-mile equipment and monitoring in low-income settings"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Routine immunisation volume is enormous and non-discretionary: UNICEF alone delivered 2.787 billion doses to 99 countries in 2024, stated as enough to reach 45% of the world's children under five",
+      "Ultra-cold and cryogenic capability built for mRNA COVID vaccines is now installed capacity that serves cell and gene therapy and clinical trial logistics, which is where Cryoport's growth came from in 2025",
+      "Equipment replacement rather than new installation drives the hardware half of the market: a prequalified vaccine refrigerator has a defined service life, so a large installed base generates recurring demand independent of dose growth",
+      "Temperature monitoring and data logging have shifted from optional to expected, adding a per-shipment software and device cost that did not exist a decade ago",
+      "Solar direct-drive refrigeration has made cold chain viable in settings without reliable grid power, expanding the equipment market into locations that previously could not hold a vaccine at all"
+    ],
+    "restraints": [
+      "Cost per dose is the binding constraint and it is small: UNICEF's 2.787 billion doses against the logistics-only published market implies about $1.48 per dose, and the routine antigens inside those boxes are themselves priced in cents to a few dollars",
+      "A derived vaccine cold chain market of $46.35 billion is 8.26 times UNICEF's entire 2024 procurement spend of $5.610 billion, which covered all supplies and services for 160 countries including the vaccines",
+      "COVID-era capacity is being normalised rather than grown: the one published series scoped specifically to vaccine logistics forecasts 0.85% annual growth to 2030",
+      "Procurement is concentrated in a small number of buyers - UNICEF, Gavi, PAHO and national immunisation programmes - whose budgets are set politically rather than by demand, which caps price",
+      "The sector's only listed pure-play had total 2025 revenue of $176.2 million, which is 4.3% of even the smaller published market, so there is almost no public financial disclosure against which to test any claim"
+    ],
+    "opportunities": [
+      "Controlled temperature chain for vaccines licensed to tolerate excursions reduces last-mile equipment dependence and is the only lever that materially lowers cost per dose",
+      "Cryogenic and ultra-cold logistics serving cell and gene therapy carry margins vaccines cannot support, which is why the suppliers are reallocating toward them - Cryoport's gross margin rose from 44.4% to 47.1% in 2025",
+      "Monitoring and data rather than hardware is where recurring revenue sits, and it is the segment least represented in equipment-weighted market sizings",
+      "WHO prequalification is a durable commercial moat: a product listed in the PQS catalogue is procurable by UN agencies and a competing product without it is not",
+      "Consolidation among logistics providers continues to reshape the sector, as with DHL Group's partnership with Cryoport and its acquisition of CRYOPDP"
+    ],
+    "challenges": [
+      "No published series measures vaccine cold chain as a single thing: one counts logistics only, one counts equipment and packaging and services, and a third is a vaccine slice of the whole healthcare cold chain derived by multiplying a product share by a total",
+      "The best available grounding register is a buyer's annual report rather than a supplier disclosure, because none of Thermo Fisher, DHL, Kuehne+Nagel, Envirotainer, B Medical Systems or McKesson publishes a vaccine cold chain revenue line",
+      "UNICEF's awarded price-per-dose tables and Gavi shipment reports are published as PDFs that resist automated reading, which keeps the most authoritative volume and price data out of most analyses",
+      "The WHO PQS catalogue is the natural countable register for prequalified equipment and its product codes explicitly cannot be used as a count, because retired references leave permanent gaps in the sequence",
+      "A single publisher produced a vaccine storage and packaging market of $35.3 billion growing at 7.03% and a healthcare cold chain logistics market of $18.1 billion growing at 2.8% - 1.95x apart in size and 2.5x apart in rate"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Storage Equipment (Refrigerators, Freezers, Cold Rooms)",
+      "Passive Packaging (Cool Bags, Cold Boxes, Vaccine Carriers)",
+      "Transportation Services (Ground, Air, Ocean)",
+      "Warehouse Storage Services",
+      "Temperature Monitoring and Data Logging"
+    ],
+    "by_application": [
+      "Routine Childhood Immunisation",
+      "Outbreak and Campaign Response",
+      "Adult and Seasonal Influenza Vaccination",
+      "Clinical Trial Vaccine Supply"
+    ],
+    "by_end_user": [
+      "UN Agencies and Donor-Funded Immunisation Programmes",
+      "National Immunisation Programmes and Ministries of Health",
+      "Biopharmaceutical Manufacturers",
+      "Hospitals and Primary Care Facilities",
+      "Medical Laboratories"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 37.78 },
+    { "year": 2027, "value": 40.44 },
+    { "year": 2028, "value": 43.28 },
+    { "year": 2029, "value": 46.33 },
+    { "year": 2030, "value": 49.59 },
+    { "year": 2031, "value": 53.08 },
+    { "year": 2032, "value": 56.8 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Cryoport",
+      "headquarters": "Brentwood, Tennessee, United States",
+      "market_position": "The only listed pure-play in temperature-controlled life science logistics and equipment, with total 2025 revenue of $176.2 million - about 4.3% of the smaller published vaccine cold chain market. Share is not disclosed and the business is cell-and-gene-weighted rather than vaccine-weighted.",
+      "description": "Reports both halves of the business: Life Sciences Services at $96.497 million, up 17.6%, and Life Sciences Products at $79.680 million, up 6.6%, for FY2025. Growth came from cell and gene therapy rather than vaccines - commercial cell and gene therapy support rose 29% to a record $33.4 million and clinical trial support 14% to $47.1 million. Gross margin improved from 44.4% to 47.1% and the company guided to $190-194 million for 2026. Entered a strategic partnership with DHL Group that included DHL acquiring CRYOPDP."
+    },
+    {
+      "company": "Thermo Fisher Scientific",
+      "headquarters": "Waltham, Massachusetts, United States",
+      "market_position": "Named among the companies covered in IMARC's vaccine storage and packaging report. Supplies laboratory and pharmacy-grade refrigeration, ultra-low temperature freezers and cryogenic storage, with no vaccine cold chain revenue line disclosed.",
+      "description": "The largest supplier of the hardware half of this market by breadth, spanning pharmacy refrigerators, ultra-low temperature freezers built out during the mRNA COVID campaign, and cryogenic storage. Because the equipment is sold into laboratory, clinical, biobanking and vaccine applications from a single catalogue and reported inside wider segments, no vaccine-specific figure is derivable from its filings."
+    },
+    {
+      "company": "DHL Group (Life Sciences & Healthcare)",
+      "headquarters": "Bonn, Germany",
+      "market_position": "Named among the companies covered in IMARC's report and the largest operator of temperature-controlled pharmaceutical logistics networks by footprint. No vaccine cold chain revenue line is disclosed.",
+      "description": "Operates the global air and ground freight and certified pharmaceutical warehousing on which donor-funded vaccine delivery depends. Reinforced its position in the specialist end of the market through a strategic partnership with Cryoport and the acquisition of CRYOPDP, which consolidated one of the few remaining independent specialist couriers in the sector."
+    },
+    {
+      "company": "Kuehne+Nagel",
+      "headquarters": "Schindellegi, Switzerland",
+      "market_position": "Major provider of pharmaceutical and healthcare air and sea freight with GDP-certified temperature-controlled facilities. Vaccine-specific revenue is not disclosed.",
+      "description": "Competes with DHL for the lane management, airport-to-airport and bonded storage work that moves bulk vaccine consignments between manufacturer and country. Its disclosure, like DHL's, aggregates healthcare logistics into a wider division, which is the structural reason this market has no supply-side sum to test published sizings against."
+    },
+    {
+      "company": "Envirotainer",
+      "headquarters": "Rosersberg, Sweden",
+      "market_position": "The leading supplier of active, powered air freight containers for temperature-controlled pharmaceutical shipments, operating on a lease-per-shipment model. Privately held; no revenue is disclosed.",
+      "description": "Occupies the active-container segment that Roots Analysis separates from passive packaging. An active container holds temperature electronically through a long-haul flight and is leased rather than sold, which makes its economics per shipment rather than per unit - the clearest case in this market of a cost that scales with doses moved rather than with installed base."
+    },
+    {
+      "company": "B Medical Systems",
+      "headquarters": "Hosingen, Luxembourg",
+      "market_position": "A specialist supplier of WHO-prequalified vaccine refrigerators, freezers and solar direct-drive units for low-resource settings. Privately held; no revenue is disclosed.",
+      "description": "Sells into the UN and donor procurement channel that requires listing in the WHO Catalogue of Prequalified Immunization Devices, where refrigerators and freezers sit in category E003. Prequalification is the commercial moat in this segment: a product in the catalogue is procurable by UN agencies and one without it is not, regardless of its specifications."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Cryoport",
+      "year": 2026,
+      "event": "Reported fourth-quarter and full-year 2025 results on 3 March 2026: revenue of $176.2 million, above the high end of guidance and up about 12%, with Life Sciences Services at $96.497 million (+17.6%) and Life Sciences Products at $79.680 million (+6.6%); commercial cell and gene therapy support rose 29% to a record $33.4 million; gross margin improved to 47.1% from 44.4%; 2026 guidance of $190-194 million."
+    },
+    {
+      "company": "UNICEF Supply Division",
+      "year": 2024,
+      "event": "Delivered 2.787 billion vaccine doses to 99 countries, stated as enough to reach 45% of the world's children under five, on total procurement of $5.610 billion across 160 countries - $3.778 billion of supplies and $1.832 billion of services, a 7% increase on the previous year."
+    },
+    {
+      "company": "DHL Group",
+      "year": 2025,
+      "event": "Entered a strategic partnership with Cryoport that included DHL's acquisition of CRYOPDP, consolidating one of the few remaining independent specialist temperature-controlled couriers into a global logistics network."
+    },
+    {
+      "company": "IMARC Group",
+      "year": 2026,
+      "event": "Published a vaccine storage and packaging market of $35.3 billion for 2025 rising to $66.3 billion by 2034 at a stated 7.03% CAGR on 15 May 2026 - a series whose stated rate and stated endpoint do not reconcile, since 35.3 x 1.0703^9 gives 65.01 and the endpoint implies 7.26%."
+    },
+    {
+      "company": "Roots Analysis",
+      "year": 2026,
+      "event": "Updated its Cold Chain Logistics Market for Vaccines report in August 2026 with a 2025 value of $4.13 billion growing at 0.85% a year to $4.32 billion by 2030, segmented explicitly by COVID-19 versus other vaccines - the lowest growth rate published for any market in this corpus."
+    }
+  ],
+  "regulatory_landscape": [
+    "WHO Performance, Quality and Safety (PQS) prequalification and the WHO Catalogue of Prequalified Immunization Devices: a refrigerator, freezer, cold box or vaccine carrier must be listed in the catalogue, where refrigerators and freezers occupy category E003, to be procurable by UN agencies. The catalogue states that a product reference is never reassigned, so breaks appear in the numerical sequence when an item is dropped - which means the codes cannot be read as a count of current products.",
+    "WHO Good Distribution Practices for pharmaceutical products and the EU Guidelines on Good Distribution Practice of medicinal products for human use (2013/C 343/01), which set the qualification, mapping, monitoring and excursion-management requirements that make temperature-controlled distribution a regulated activity rather than ordinary freight.",
+    "WHO Vaccine Vial Monitor requirements and the controlled temperature chain framework, under which specific vaccines are licensed to tolerate defined excursions outside 2-8 degrees Celsius for a limited period - the only regulatory lever that materially reduces last-mile equipment dependence.",
+    "UNICEF Supply Division tendering and long-term arrangements, which publish awarded prices per dose by antigen and set the procurement terms for the largest single vaccine buyer in the world, and therefore set the price ceiling on the logistics that serve donor-funded immunisation.",
+    "IATA Temperature Control Regulations and the Perishable Cargo Regulations chapter governing time- and temperature-sensitive healthcare shipments, which determine how active and passive containers may be carried by air and are the operative rules for the lane between manufacturer and country."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Division of each published market size by UNICEF's disclosed 2024 vaccine dose volume to derive an implied cold chain cost per dose, and comparison of each against UNICEF's total procurement budget",
+      "Derivation of a vaccine slice of the healthcare cold chain by multiplying one publisher's whole-market total by its own stated vaccine product share, labelled as derived and used only to bound the spread"
+    ],
+    "secondary_research": [
+      "UNICEF Supply Annual Report 2024 - 2.787 billion vaccine doses delivered to 99 countries, enough to reach 45% of the world's children under five; total 2024 procurement $5.610 billion across 160 countries, of which $3.778 billion supplies and $1.832 billion services",
+      "Cryoport, Inc. Fourth Quarter and Full-Year 2025 Financial Results, 3 March 2026 - revenue $176.2 million, Life Sciences Services $96.497 million (+17.6%), Life Sciences Products $79.680 million (+6.6%), commercial cell and gene therapy support $33.4 million (+29%), gross margin 47.1%",
+      "IMARC Group, Global Vaccine Storage and Packaging Market, published 15 May 2026 - $35.3 billion (2025) to $66.3 billion (2034) at a stated 7.03% CAGR for 2026-2034, historical period 2020-2025, with disclosed equipment, packaging-type and packaging-level segmentation",
+      "Roots Analysis, Cold Chain Logistics Market for Vaccines: Industry Trends and Global Forecasts till 2030, last updated August 2026 - $4.13 billion (2025), $4.18 billion (2026) to $4.32 billion (2030) at 0.85%, segmented by COVID-19 versus other vaccines",
+      "Mordor Intelligence, Healthcare Cold Chain Market, page updated 11 September 2026 with estimates as of January 2026 - $124.53 billion (2025) to $223.39 billion (2031) at 10.23%, with vaccines stated at 37.23% of 2025 market revenue",
+      "WHO Catalogue of Prequalified Immunization Devices (IMD-PQS), refrigerators and freezers in category E003, edition dated 14 February 2025, including the guidance that product references are never reassigned so gaps appear in the sequence",
+      "IMARC Group, Global Healthcare Cold Chain Logistics Market Report and Forecast 2025-2033 - $18.1 billion (2024) to $23.2 billion (2033) at 2.8%, the same publisher's logistics-only scope"
+    ],
+    "data_validation": "Three tests were run against countable public figures rather than against another forecast. First, each published market size was divided by UNICEF's disclosed 2024 vaccine delivery volume of 2.787 billion doses, giving an implied cold chain cost per dose of $1.48 for Roots Analysis' logistics-only figure, $12.67 for IMARC's storage-and-packaging figure and $16.63 for the vaccine slice derived from Mordor's whole-market total. Allowing a generous global dose volume of 6 billion, more than double UNICEF's, the latter two still imply $5.88 and $7.73 per dose. Second, and decisively, the derived $46.35 billion vaccine cold chain figure was compared with UNICEF's total 2024 procurement of $5.610 billion, which covered all supplies and all services for 160 countries including the vaccines themselves: the derived market is 8.26 times that budget and IMARC's figure 6.29 times it. Third, the only listed pure-play in the sector, Cryoport, reported total 2025 revenue of $176.2 million, which is 4.3% of the smaller published market and 0.38% of the larger, with its growth coming from cell and gene therapy rather than vaccines - corroborating the COVID-normalisation reading behind the 0.85% logistics rate. These are plausibility tests, not market estimates. They rule the logistics-only reading in as a measure of moving doses and establish that the larger figures are defensible only as equipment plus packaging plus services, which is what the publisher we follow discloses that it counts. The $46.35 billion figure is our own multiplication of a whole-market total by a stated product share and is not a published number. Separately, IMARC's own series fails its own arithmetic: 35.3 x 1.0703^9 = 65.01 against a published 66.3 billion, and the endpoint implies 7.26% against a stated 7.03%, so we publish the stated rate and not the stated endpoint.",
+    "limitations": "UNICEF's per-antigen awarded price tables and the Gavi shipment reports are published as PDFs that could not be opened, so no per-dose vaccine price or freight rate is quoted. The WHO PQS catalogue could not be enumerated, and its product codes explicitly cannot be used as a count because retired references leave permanent gaps. None of Thermo Fisher, DHL, Kuehne+Nagel, Envirotainer, B Medical Systems or McKesson discloses a vaccine cold chain revenue line, so no supply-side sum exists. No vendor market share, regional split or country split is published."
+  },
+  "faqs": [
+    {
+      "question": "How large is the vaccine cold chain market?",
+      "answer": "The published answers for 2025 range from $4.13 billion to a derived $46.35 billion, an 11.2x spread, because they count different things. We publish $37.78 billion for 2026 rising to $56.80 billion by 2032 at 7.03%, following IMARC's vaccine storage and packaging scope, which counts refrigerators, freezers, packaging and warehouse and transport services. If the question is narrower - what does it cost to move and store doses - the logistics-only figure is $4.13 billion for 2025, growing at 0.85% a year to 2030."
+    },
+    {
+      "question": "Why do the published growth rates range from 0.85% to 10.23%?",
+      "answer": "Because the three series measure three different systems. Roots Analysis measures vaccine logistics only and segments explicitly by COVID-19 versus other vaccines, so its 0.85% is a market normalising back to routine immunisation volumes after the COVID campaign. Mordor's 10.23% is for the whole healthcare cold chain, where the growth comes from cell and gene therapy and biopharmaceuticals rather than vaccines. IMARC's 7.03% is for vaccine equipment, packaging and services together. Neither extreme is wrong for what it measures, and neither is a growth rate for vaccine cold chain."
+    },
+    {
+      "question": "What does it cost to keep a vaccine dose cold?",
+      "answer": "UNICEF delivered 2.787 billion doses to 99 countries in 2024, which makes the arithmetic direct. The logistics-only published market divided by that volume gives about $1.48 per dose, which is the right order of magnitude for passive packaging, cold boxes, freight and in-country storage. The larger published figures give $12.67 and $16.63 per dose, which would exceed the price of the vaccine inside the box by a large multiple for most of the routine immunisation schedule - and even assuming a global volume of 6 billion doses, more than double UNICEF's, they still imply $5.88 and $7.73."
+    },
+    {
+      "question": "Can a $46 billion vaccine cold chain market be real?",
+      "answer": "Not as a measure of moving vaccines. UNICEF is the largest single buyer of vaccines in the world and its entire 2024 procurement, across all supplies and services for 160 countries and including the vaccines themselves, was $5.610 billion. A vaccine cold chain of $46.35 billion is 8.26 times that. The figure is also not a published one - it is our own multiplication of Mordor Intelligence's whole healthcare cold chain total by its own stated vaccine product share of 37.23%, and we present it only to bound the spread and then rule it out."
+    },
+    {
+      "question": "Who supplies vaccine cold chain and what shares do they hold?",
+      "answer": "No share figures exist, because essentially nobody discloses a vaccine cold chain revenue line. The equipment comes from Thermo Fisher Scientific, B Medical Systems and other WHO-prequalified manufacturers; the active containers from Envirotainer; the logistics from DHL Group and Kuehne+Nagel, each reporting inside a wider healthcare division. The one listed pure-play, Cryoport, reported total 2025 revenue of $176.2 million - 4.3% of even the smaller published market - and its growth came from cell and gene therapy, not vaccines."
+    },
+    {
+      "question": "Why not count the WHO prequalified equipment catalogue?",
+      "answer": "We tried, and the catalogue rules it out. WHO's Catalogue of Prequalified Immunization Devices lists refrigerators and freezers under category E003, with each product coded as the category reference plus a number. But the catalogue's own guidance states that a reference is never reassigned to another product, therefore breaks in the numerical sequence appear when an item is dropped. The highest code number is not a count of listed products, and we could not read the catalogue PDF to enumerate the live entries, so no PQS count appears in this report."
+    }
+  ],
+  "seo": {
+    "meta_title": "Vaccine Cold Chain Market Size & Forecast 2026-2032",
+    "meta_description": "Vaccine cold chain at $37.78B in 2026 reaching $56.8B by 2032 at 7.03% CAGR. Published 2025 sizings span 11.2x; UNICEF's 2.787bn doses test every one of them.",
+    "keywords": [
+      "vaccine cold chain market",
+      "vaccine storage and packaging",
+      "cold chain logistics vaccines",
+      "UNICEF vaccine procurement",
+      "WHO PQS prequalified refrigerators",
+      "temperature controlled pharmaceutical logistics"
+    ]
+  },
+  "executive_summary": "Vaccine cold chain is the worst-measured market in this corpus. Published 2025 sizings run from $4.13 billion to a derived $46.35 billion, an 11.2x spread, and stated growth rates from 0.85% to 10.23%, a 12.0x spread in the rate - extreme on both dimensions at once. One publisher disagrees with itself: IMARC prints vaccine storage and packaging at $35.3 billion growing at 7.03% and healthcare cold chain logistics at $18.1 billion growing at 2.8%. The buyer side settles more than the supplier side can. UNICEF, the largest single vaccine buyer in the world, delivered 2.787 billion doses to 99 countries in 2024 and spent $5.610 billion on all procurement across 160 countries, supplies and services and vaccines included. The derived $46.35 billion vaccine cold chain is therefore 8.26 times UNICEF's entire budget, and IMARC's $35.3 billion is 6.29 times it. Dividing each published market by UNICEF's dose volume gives $1.48, $12.67 and $16.63 of cold chain cost per dose; even assuming a global volume of 6 billion doses the larger two still imply $5.88 and $7.73, against routine antigen prices measured in cents to a few dollars. Only the logistics-only figure is plausible as the cost of moving a dose. We publish IMARC's storage-and-packaging series, which is the most completely disclosed scope in the set, rebased to 2026 at its own stated rate - and we publish the stated rate rather than the stated endpoint, because 35.3 x 1.0703^9 = 65.01 against a published 66.3 billion.",
+  "key_highlights": [
+    "Published 2025 sizings span 11.2x ($4.13 billion to a derived $46.35 billion) and stated growth rates span 12.0x (0.85% to 10.23%) - extreme disagreement on both dimensions at once",
+    "UNICEF delivered 2.787 billion vaccine doses to 99 countries in 2024 on total procurement of $5.610 billion, which makes the derived $46.35 billion vaccine cold chain 8.26 times the entire budget of the world's largest vaccine buyer",
+    "Dividing the published markets by UNICEF's dose volume gives $1.48, $12.67 and $16.63 per dose; only the first is plausible as the cost of moving and storing a routine immunisation dose",
+    "IMARC's series fails its own arithmetic: 35.3 x 1.0703^9 = 65.01 against a published $66.3 billion endpoint, which implies 7.26% rather than the stated 7.03%",
+    "The sector's only listed pure-play, Cryoport, had total 2025 revenue of $176.2 million - 4.3% of even the smaller published market - and its growth came from cell and gene therapy, not vaccines",
+    "WHO's prequalified immunization device catalogue cannot be used as a count: its own guidance states references are never reassigned, so retired products leave permanent gaps in the numbering"
+  ],
+  "market_context": "Vaccine cold chain is a cost centre inside a system funded by donors and ministries of health, not a market with a price-setting mechanism of its own. UNICEF, Gavi and PAHO buy most of the doses that move through it, publish awarded prices per antigen, and tender the logistics; the result is that the ceiling on cold chain spend per dose is set by what a public immunisation budget can bear, not by what the service is worth. That is why the growth rates in this sector have diverged so sharply from the rest of healthcare logistics. The money in temperature-controlled life science supply has moved to cell and gene therapy, where a single shipment can be worth more than a million doses of measles vaccine - Cryoport's commercial cell and gene therapy revenue grew 29% in 2025 while the vaccine-specific logistics market is forecast at under 1% a year. The ultra-cold capacity built for mRNA COVID vaccines is now serving that higher-value traffic. Vaccine cold chain inherits the installed base and keeps the volume, but not the pricing power.",
+  "forecast_analysis": "We publish 7.03%, which is IMARC's own stated rate for its vaccine storage and packaging scope, and we deliberately prefer the rate to the publisher's own endpoint because the two do not reconcile: 35.3 x 1.0703^9 gives $65.01 billion against a published $66.3 billion for 2034, an implied 7.26%. Advancing the 2025 base one year gives 35.3 x 1.0703 = $37.78 billion for 2026, and interpolating on the same rate gives 37.78 x 1.0703^6 = $56.80 billion for 2032, inside the publisher's series rather than at its endpoint. The 7.03% rate sits between the two bounding readings for a defensible reason. The 0.85% logistics-only rate reflects COVID normalisation in a service consumed once per dose; the 10.23% whole-healthcare rate reflects cell and gene therapy growth that has nothing to do with vaccines. An equipment-weighted vaccine market should grow faster than the first, because installed hardware generates replacement demand on a service-life cycle independent of dose volumes, and slower than the second, because none of the high-value cell and gene traffic is in its scope. What the rate does not price is whether donor immunisation budgets grow at all, which is the actual determinant and is political.",
+  "reader_takeaways": [
+    "Establish the scope before using any vaccine cold chain figure: equipment plus packaging plus services is roughly 8.5x the logistics-only reading, and the two are published under names a reader cannot distinguish",
+    "UNICEF's annual report is the most useful document in this market - 2.787 billion doses and $5.610 billion of total procurement for 2024 - because it converts any market size claim into a cost per dose you can sanity-check",
+    "A cold chain cost above a few dollars per dose should be rejected on its face for routine immunisation, since the vaccine inside the box is itself priced in cents to a few dollars",
+    "Read a 10% growth rate for healthcare cold chain as a statement about cell and gene therapy, not vaccines: Cryoport's 2025 growth came from a 29% rise in commercial cell and gene therapy support",
+    "When a publisher's stated CAGR and stated endpoint disagree, as IMARC's do by 0.23 points here, prefer the rate and say so - the endpoint is usually the rounded model output"
+  ]
+}

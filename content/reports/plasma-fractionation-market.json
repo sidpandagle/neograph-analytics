@@ -1,0 +1,255 @@
+{
+  "report_id": "plasma-fractionation-market",
+  "slug": "plasma-fractionation-market",
+  "title": "Plasma Fractionation Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 39.5,
+    "forecast_value": 61.6,
+    "cagr": 7.6
+  },
+  "market_overview": {
+    "summary": "Plasma fractionation has the narrowest published spread of any market in this batch - $27.7 billion to $40.27 billion for 2025, just 1.45x - and that narrowness is itself the finding. The suppliers are few, large and mostly listed, and the raw material is a licensed, litre-counted biological that cannot be bought on a spot market, so there is less room for a publisher to be wrong. The disclosures still rule one figure out. CSL Behring reported US$11,158 million for FY2025, Grifols' Biopharma unit EUR 6,487 million and Octapharma EUR 3.47 billion for 2024; at the IRS 2025 average euro rate that is $22.40 billion, which is 80.9% of IMARC's whole-market figure and, once one Takeda product line is added, 96.4% of it - before Kedrion, Biotest, LFB, SK Plasma and the Chinese fractionators are counted at all. IMARC's $27.7 billion is a floor, not a market.",
+    "key_trends": [
+      "The narrowest spread in this corpus, at 1.45x for 2025 and 1.42x for 2032, because the supply side is concentrated among four global fractionators whose revenue is largely disclosed",
+      "Three companies' disclosed revenue totals $22.40 billion for 2025 - 80.9% of IMARC's $27.7 billion whole-market figure and 60.5% of P&S Intelligence's $37.0 billion, which is why we publish the larger of the two",
+      "Immunoglobulins are the growth engine and albumin is not: Grifols reported its immunoglobulin franchise up 14.7% at constant currency in 2025 with albumin down 5.1% on market and pricing pressure in China, and Takeda reported immunoglobulin up 4.1% with albumin down 2.1% for the same reason",
+      "The industry is re-engineering yield per donation rather than adding centres: CSL rolled its Rika collection device out to 220 centres and deployed an individualised nomogram tool explicitly to reduce the unit acquisition cost of plasma, while Grifols put nomogram technology into 80% of its US centres",
+      "Centre count is now falling where yield is rising: Grifols acquired centres from ImmunoTek in February 2025, reported higher collection volume for the year, then announced the closure of 29 US donation centres in April 2026, consolidating into higher-performing locations",
+      "China is the swing market on the albumin side, and it is moving against the industry: both Grifols and Takeda attributed albumin declines in 2025 to Chinese market and pricing pressure and government cost containment"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Established standard of care in immunology, haematology and neurology; constrained by donated plasma supply rather than demand"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Immunoglobulin demand grows faster than the market as a whole: Grifols reported its immunoglobulin franchise up 14.7% at constant currency in 2025 against group revenue up 7.0%, and CSL reported immunoglobulin sales up 15% in the first half of its FY2025",
+      "Neurology indications - chronic inflammatory demyelinating polyneuropathy and related conditions - have expanded immunoglobulin use beyond primary immunodeficiency, which is why P&S Intelligence lists immunoglobulins at 55% of its 2025 market by product",
+      "Collection yield per donation is improving through device and protocol change rather than capital expansion, which raises output without the cost of new centres",
+      "Supply-side concentration supports pricing: four global fractionators plus a national long tail means immunoglobulin has not behaved like a commodity despite being off-patent in concept",
+      "National plasma self-sufficiency programmes create new contracted demand, as with NHS England's selection of Octapharma as sole fractionator for the UK plasma-for-medicines programme in February 2025"
+    ],
+    "restraints": [
+      "The input is a donated biological with a fixed yield per litre: three companies' disclosed revenue against roughly 62.5 million litres of US plasma collected in 2024 is about $358 per litre, and output cannot be raised by paying more for a raw material that is collection-capacity limited",
+      "Albumin is in decline in its largest growth market: both Grifols and Takeda attributed 2025 albumin weakness to Chinese pricing pressure and government cost containment, and albumin is a co-product of the same fractionation run as immunoglobulin",
+      "Centre economics are tightening rather than loosening: Grifols closed 29 US donation centres in April 2026 while describing itself as the leading plasma operator with more than 300, which is consolidation, not expansion",
+      "Donor compensation and collection costs are the dominant variable cost and are not reducible by scale, which is why both CSL and Grifols name unit acquisition cost reduction as an explicit operating priority",
+      "No primary public register publishes US or global plasma collection volume: PPTA directs enquiries to its North America Distribution Data Program and publishes no public litre total, so the industry's physical denominator is only available from contradictory secondary sources"
+    ],
+    "opportunities": [
+      "Recombinant substitution cuts both ways and currently favours the incumbents, because the same companies sell both - CSL Behring's reported revenue includes recombinant coagulation factors alongside fractionated products",
+      "Alpha-1 proteinase inhibitor and other specialty fractions carry higher revenue per litre than albumin and are in P&S Intelligence's product scope but not IMARC's, which is part of the residual spread",
+      "Plasma self-sufficiency policy in Europe, the UK and parts of Asia creates contracted, non-price-competitive demand for fractionation capacity",
+      "Yield improvement is the cheapest growth available: an individualised collection nomogram raises litres per donor visit with no new real estate, which is why both of the largest collectors are deploying one",
+      "Specialty entrants are still able to open centres and secure FDA approval, as Kamada did in Houston, Texas during 2025, which suggests the long tail is viable at small scale in defined niches"
+    ],
+    "challenges": [
+      "Three companies plus one product line of a fourth are 96.4% of IMARC's published whole market, which no genuine whole market can be, so one widely cited figure in this category is demonstrably a floor",
+      "Octapharma and Kedrion are private, and third-party figures for Octapharma's 2024 revenue range from $3.2 billion to $3.9 billion - a 22% range on a single year that cannot be narrowed from public sources",
+      "Takeda discloses Plasma-Derived Therapies growth but not its revenue level, so the fourth global fractionator cannot be summed with the other three from its results releases",
+      "CSL Behring's disclosed revenue includes recombinant coagulation factors that are not fractionated from plasma, so even the cleanest disclosure in the set overstates plasma-derived revenue by an undisclosed amount",
+      "Published collection-centre counts conflict within the secondary literature - roughly 1,247 from one source against over 900 from another - with no primary figure to arbitrate"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Immunoglobulins",
+      "Albumin",
+      "Coagulation Factor VIII",
+      "Coagulation Factor IX and Other Factors",
+      "Alpha-1 Proteinase Inhibitor and Other Specialty Fractions"
+    ],
+    "by_application": [
+      "Immunology and Primary Immunodeficiency",
+      "Neurology",
+      "Haematology",
+      "Critical Care and Volume Replacement",
+      "Pulmonology",
+      "Rheumatology"
+    ],
+    "by_end_user": [
+      "Hospitals and Clinics",
+      "Home Infusion and Specialty Pharmacy",
+      "Clinical Research Laboratories",
+      "National Plasma Self-Sufficiency Programmes"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 39.5 },
+    { "year": 2027, "value": 42.54 },
+    { "year": 2028, "value": 45.81 },
+    { "year": 2029, "value": 49.33 },
+    { "year": 2030, "value": 53.13 },
+    { "year": 2031, "value": 57.21 },
+    { "year": 2032, "value": 61.6 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "CSL Behring",
+      "headquarters": "King of Prussia, Pennsylvania, United States (parent CSL Limited, Melbourne, Australia)",
+      "market_position": "Largest disclosed plasma-derived therapy revenue in the world at US$11,158 million for FY2025, within CSL group revenue of US$15.6 billion. Share is not disclosed and the denominator is in dispute; the figure also includes recombinant coagulation factors that are not fractionated from plasma.",
+      "description": "Operates one of the two largest plasma collection networks, with centres across the US and Europe, and names collection efficiency and unit acquisition cost reduction as explicit operating priorities. Rolled out the Rika collection device to 220 centres with completion targeted for June 2025 and deployed an individualised nomogram tool, iNomi, to collect the right volume from each donor. Immunoglobulin sales were US$3,174 million in the first half of FY2025, up 15%, with albumin at US$672 million, up 9%."
+    },
+    {
+      "company": "Grifols",
+      "headquarters": "Barcelona, Spain",
+      "market_position": "Second-largest disclosed plasma-derived therapy revenue, with its Biopharma unit at EUR 6,487 million for 2025 - 86.2% of group revenue of EUR 7,524 million - equivalent to $7,322 million at the IRS 2025 average euro rate. Share is not disclosed.",
+      "description": "The clearest public illustration of the industry's shift from centre count to yield per donation. Acquired plasma donation centres from ImmunoTek in February 2025, put new nomogram technology into 80% of its US centres, reported higher collection volume for the year on the back of both, and then announced the closure of 29 US donation centres in April 2026 while describing itself as the leading plasma operator with more than 300. Its immunoglobulin franchise grew 14.7% at constant currency in 2025 while albumin fell 5.1% on Chinese market and pricing pressure. Group profit more than doubled to EUR 402 million."
+    },
+    {
+      "company": "Takeda Pharmaceutical Company (Plasma-Derived Therapies)",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "One of the four global fractionators. Takeda discloses Plasma-Derived Therapies growth but not its revenue level, so it cannot be summed with the other three from its results releases. No share is disclosed.",
+      "description": "For FY2025, the year ended 31 March 2026, Takeda reported PDT growth of 1.9% at constant exchange rates, with immunoglobulin up 4.1% and albumin down 2.1%, the albumin decline attributed to lower demand in China tied to government cost containment and partly offset by tenders in other markets. Group revenue was JPY 4,505.7 billion, down 1.7% at actual rates. The combination of growing immunoglobulin and falling albumin matches Grifols' pattern exactly, which makes it a structural feature of 2025 rather than a company-specific one."
+    },
+    {
+      "company": "Octapharma",
+      "headquarters": "Lachen, Switzerland",
+      "market_position": "The largest privately held fractionator, with 2024 revenue reported third-party at around EUR 3.47 billion - although third-party figures for the same year range from $3.2 billion to $3.9 billion, a 22% range that cannot be narrowed from public sources. No share is disclosed.",
+      "description": "Selected by NHS England in February 2025 as sole fractionator for the UK plasma-for-medicines programme, which is the clearest recent example of national self-sufficiency policy creating contracted fractionation demand. Opened expanded facilities at its Vienna manufacturing site in the same year. Being private, it publishes a financial review rather than filed accounts, which is why the measurement penalty on its revenue is so large."
+    },
+    {
+      "company": "Kedrion Biopharma",
+      "headquarters": "Castelvecchio Pascoli, Italy",
+      "market_position": "A mid-sized fractionator with US and European collection and manufacturing, absent from the disclosed-revenue sum because it does not publish comparable segment revenue. No share is disclosed.",
+      "description": "Part of the national and regional long tail that makes the concentration arithmetic above a floor rather than a ceiling: three companies at 80.9% of IMARC's published market leaves no room for Kedrion, Biotest, LFB, SK Plasma, Shanghai RAAS or Hualan Biological, all of which fractionate plasma at commercial scale. Its absence from the public record is the single largest reason this market cannot be sized from the supply side alone."
+    },
+    {
+      "company": "Kamada",
+      "headquarters": "Rehovot, Israel",
+      "market_position": "A specialty plasma-derived therapy company with a small and growing US collection footprint. Too small to affect the concentration arithmetic, but evidence that entry remains possible.",
+      "description": "Announced FDA approval of a plasma collection centre in Houston, Texas and expanded its Texas collection operations during 2025. Focuses on hyperimmune and niche plasma-derived products rather than the high-volume immunoglobulin and albumin franchises, which is the segment where a small operator can still earn an adequate return on a single collection centre."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Grifols",
+      "year": 2026,
+      "event": "Announced on 24 April 2026 the closure of 29 US plasma donation centres, consolidating operations into higher-performing locations, in the same announcement in which it described itself as the leading plasma operator with more than 300 centres in the United States."
+    },
+    {
+      "company": "Grifols",
+      "year": 2026,
+      "event": "Reported full-year 2025 results on 26 February 2026: group revenue of EUR 7,524 million, up 4.3% reported and 7.0% at constant currency, with Biopharma at EUR 6,487 million or 86.2% of revenue; the immunoglobulin franchise grew 14.7% at constant currency while albumin fell 5.1% on market and pricing pressure in China; group profit more than doubled to EUR 402 million."
+    },
+    {
+      "company": "Takeda Pharmaceutical Company",
+      "year": 2026,
+      "event": "Reported FY2025 results for the year ended 31 March 2026 showing Plasma-Derived Therapies growth of 1.9% at constant exchange rates, with immunoglobulin up 4.1% and albumin down 2.1% on lower Chinese demand tied to government cost containment, against group revenue of JPY 4,505.7 billion, down 1.7%."
+    },
+    {
+      "company": "Grifols",
+      "year": 2025,
+      "event": "Acquired plasma donation centres from ImmunoTek in February 2025 and deployed new nomogram technology across 80% of its US plasma centres, which it credited along with optimisation of existing centres for higher plasma collection volume during the year."
+    },
+    {
+      "company": "Octapharma",
+      "year": 2025,
+      "event": "Selected by NHS England in February 2025 as the sole fractionator for the United Kingdom's plasma-for-medicines programme, and opened expanded facilities at its Vienna manufacturing site during the same year."
+    },
+    {
+      "company": "Kamada",
+      "year": 2025,
+      "event": "Announced FDA approval of a plasma collection centre in Houston, Texas and expanded its plasma collection operations in the state, demonstrating that entry at single-centre scale remains viable in specialty hyperimmune niches."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA licensure of plasma collection centres under 21 CFR Part 606 and Part 640 Subpart G: each source plasma collection centre requires its own FDA licence, which is why centre openings and closures are announceable corporate events - Kamada announced FDA approval of its Houston centre in 2025 and Grifols announced 29 closures in 2026.",
+    "PPTA International Quality Plasma Program (IQPP) certification and the Standards for Source Plasma, which govern donor qualification, the inventory hold period and donation frequency, and are the voluntary industry standard layered on top of FDA requirements.",
+    "EU Regulation on substances of human origin (SoHO) and the preceding Blood Directive 2002/98/EC, which set donation, testing and traceability requirements for plasma collected in the EU and underpin the national self-sufficiency programmes that create contracted fractionation demand.",
+    "National plasma self-sufficiency procurement, exemplified by NHS England's selection of a sole fractionator for the United Kingdom plasma-for-medicines programme in February 2025 - a contracting mechanism that sets volume and price outside normal market competition.",
+    "Chinese albumin import quotas and government cost containment, which both Grifols and Takeda identified as the cause of albumin revenue declines in 2025 and which is therefore the single most consequential regulatory variable currently acting on this market."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Summation and conversion of disclosed plasma-derived therapy revenue for three of the four global fractionators, tested against each published market total",
+      "Division of that sum by published US source plasma collection volume and collection-centre counts to derive revenue per litre and per centre, with the contradictions in the underlying secondary figures disclosed"
+    ],
+    "secondary_research": [
+      "CSL Limited Annual Report 2025, fiscal year ended 30 June 2025 - CSL Behring revenue US$11,158 million; group revenue US$15.6 billion; collection efficiency and unit plasma acquisition cost named as priorities, citing the Rika device and the iNomi nomogram",
+      "CSL Limited Half Year Results Investor Presentation, 11 February 2025 - immunoglobulin sales US$3,174 million (+15%), albumin US$672 million (+9%); Rika rolled out to 220 centres",
+      "Grifols SA Full-Year 2025 Financial Results, reported 26 February 2026 - group revenue EUR 7,524 million, Biopharma EUR 6,487 million (86.2%), immunoglobulin franchise +14.7% CER, albumin -5.1%, adjusted EBITDA EUR 1,825 million at 24.3%",
+      "Grifols SA company announcement, 24 April 2026 - more than 300 US centres and the closure of 29 donation centres; Grifols Form 20-F FY2025 on the ImmunoTek acquisition and nomogram deployment across 80% of US centres",
+      "Takeda Pharmaceutical Company Fourth Quarter FY2025 Results, year ended 31 March 2026 - group revenue JPY 4,505.7 billion; Plasma-Derived Therapies +1.9% CER with immunoglobulin +4.1% and albumin -2.1%",
+      "P&S Intelligence, Plasma Fractionation Market Size & Share Analysis 2026-2032, report 11610, 290 pages, published January 2026 - $37.0B (2025), $39.5B (2026), $61.6B (2032), 7.6% CAGR; immunoglobulins 55%, North America 45%, hospitals and clinics 70%",
+      "IMARC Group, Global Plasma Fractionation Market, last updated 24 March 2026 - $27.7B (2025) to $42.3B (2034) at a stated 4.67% CAGR whose own endpoints imply 4.81%",
+      "Plasma Protein Therapeutics Association, About PPTA - confirms that no public centre count or collected-litre total is published, and directs enquiries to the North America Distribution Data Program",
+      "IRS Yearly Average Currency Exchange Rates, 2025 annual averages, retrieved 16 October 2026 (EUR 0.886 and JPY 149.632 per US dollar)"
+    ],
+    "data_validation": "Two tests were run against disclosed company figures rather than against another forecast. First, plasma-derived therapy revenue was summed and converted at the IRS 2025 yearly average rates: CSL Behring US$11,158 million for FY2025, Grifols Biopharma EUR 6,487 million divided by 0.886 giving $7,322 million, and Octapharma EUR 3.47 billion for 2024 giving $3,916 million, for a total of $22,396 million. That is 80.9% of IMARC's $27.7 billion for 2025, 69.8% of MarknTel Advisors' $32.1 billion, 60.5% of P&S Intelligence's $37.0 billion and 55.6% of Fortune Business Insights' $40.27 billion. Adding the one Takeda figure we could locate - a 20-F immunoglobulin franchise line of JPY 644.6 billion, or $4,308 million, read from a table whose column headers were not legible and used directionally only - takes three companies plus one product line of a fourth to 96.4% of IMARC's whole published market, before Kedrion, Biotest, LFB, SK Plasma, Shanghai RAAS and Hualan Biological are counted. IMARC's figure is therefore a floor rather than a market, and P&S Intelligence's $37.0 billion is the more plausible of the two, with the three-company sum at 60.5% of it a credible concentration for a four-player industry with a national long tail. Second, the same sum was divided by published US source plasma collection volume of roughly 62.5 million litres for 2024, giving about $358 per litre, and by roughly 1,247 US collection centres, giving about $17.96 million of therapy revenue per centre per year. These are plausibility and ratio tests, not market estimates. CSL Behring's figure includes recombinant coagulation factors that are not fractionated from plasma, so it overstates plasma-derived revenue; Octapharma's is a 2024 euro figure for a private company that third-party sources report across a 22% range; and the litre and centre counts come from a single secondary source contradicted by other secondary sources, with PPTA publishing no primary figure.",
+    "limitations": "Takeda does not disclose a Plasma-Derived Therapies revenue level, only growth rates, so the fourth global fractionator could not be summed. Octapharma and Kedrion are private. No primary register publishes US or global plasma collection volume or centre counts; the figures used are secondary and mutually contradictory, and the per-litre and per-centre ratios rest on them. No vendor market share, regional split or country split is published."
+  },
+  "faqs": [
+    {
+      "question": "How large is the plasma fractionation market?",
+      "answer": "We publish $39.50 billion for 2026 rising to $61.60 billion by 2032 at 7.6%. Both figures are P&S Intelligence's own published values for those exact years, so no interpolation is involved - it is the only report in this batch whose base year and forecast window match ours. Published 2025 bases across the set run from $27.7 billion to $40.27 billion, a spread of only 1.45x, which is the narrowest in this corpus."
+    },
+    {
+      "question": "Why is the spread so much narrower here than in other healthcare markets?",
+      "answer": "Because the supply side is concentrated and disclosed. There are four global fractionators, three of which publish revenue, and the raw material is a licensed, inventoried, litre-counted biological that cannot be bought on a spot market. A publisher sizing this market is constrained by numbers that already exist in annual reports, which is not true of most of the markets in this corpus. The residual 1.45x is mostly about whether recombinant substitutes and specialty fractions such as alpha-1 proteinase inhibitor are inside the count."
+    },
+    {
+      "question": "Which published figure for this market is wrong?",
+      "answer": "IMARC's $27.7 billion for 2025 is a floor rather than a market. CSL Behring disclosed US$11,158 million for FY2025, Grifols' Biopharma unit EUR 6,487 million and Octapharma around EUR 3.47 billion for 2024 - $22.40 billion in total at the IRS 2025 average euro rate, or 80.9% of that figure. Add the one Takeda immunoglobulin line we could locate and three companies plus one product line reach 96.4% of it, leaving nothing for Kedrion, Biotest, LFB, SK Plasma, Shanghai RAAS or Hualan Biological, all of which fractionate plasma at commercial scale."
+    },
+    {
+      "question": "What does a litre of plasma earn?",
+      "answer": "Roughly $358 of finished therapy revenue, on the arithmetic available: three companies' disclosed revenue of $22.40 billion against approximately 62.5 million litres of US source plasma collected in 2024. Add the Takeda immunoglobulin line and it is about $427. The United States supplies most of the world's source plasma, so the global figure per litre of all plasma collected is lower. The collection volume comes from a secondary source that other secondary sources contradict - PPTA publishes no public litre total - so the ratio should be read as an order of magnitude."
+    },
+    {
+      "question": "Is the plasma collection network growing?",
+      "answer": "Not in centre count. Grifols acquired centres from ImmunoTek in February 2025, reported higher collection volume for the year, and then announced the closure of 29 US donation centres in April 2026 while describing itself as the leading plasma operator with more than 300. CSL has rolled its Rika collection device out to 220 centres and deployed an individualised nomogram, both aimed explicitly at collection efficiency and unit acquisition cost. The growth lever in this industry has moved from centre count to litres per donor visit, and none of the published forecasts price that shift."
+    },
+    {
+      "question": "Why is albumin falling while immunoglobulin grows?",
+      "answer": "China. Both of the two fractionators that disclosed the detail for 2025 gave the same reason: Grifols reported albumin down 5.1% on market and pricing pressure in China while its immunoglobulin franchise grew 14.7% at constant currency, and Takeda reported albumin down 2.1% on lower Chinese demand tied to government cost containment while immunoglobulin grew 4.1%. Albumin and immunoglobulin are co-products of the same fractionation run, so the divergence is a demand and pricing event in one country, not a manufacturing one - and it makes Chinese albumin policy the most consequential regulatory variable currently acting on this market."
+    }
+  ],
+  "seo": {
+    "meta_title": "Plasma Fractionation Market Size & Forecast 2026-2032",
+    "meta_description": "Plasma fractionation at $39.5B in 2026 reaching $61.6B by 2032 at 7.6% CAGR. Three disclosed fractionators total $22.4B, or 80.9% of one published total.",
+    "keywords": [
+      "plasma fractionation market",
+      "plasma-derived therapies",
+      "immunoglobulin market",
+      "CSL Behring Grifols Takeda",
+      "source plasma collection",
+      "albumin coagulation factors"
+    ]
+  },
+  "executive_summary": "Plasma fractionation is the best-measured market in this batch, and the reason is structural: there are four global fractionators, three of them disclose revenue, and the input is a licensed, inventoried, litre-counted biological. Published 2025 bases span just 1.45x, from $27.7 billion to $40.27 billion, and 2032 endpoints 1.42x. One house even reconciles across editions - IMARC's earlier series, advanced two years at its own rate, lands within $30 million of its current 2025 figure, which is the only such consistency anywhere in this corpus. The disclosures still rule a figure out. CSL Behring reported US$11,158 million for FY2025, Grifols' Biopharma unit EUR 6,487 million and Octapharma around EUR 3.47 billion for 2024; at the IRS 2025 average euro rate that is $22.40 billion, which is 80.9% of IMARC's $27.7 billion and 60.5% of P&S Intelligence's $37.0 billion. Adding the one Takeda immunoglobulin line we could locate takes three companies plus one product line of a fourth to 96.4% of IMARC's whole market, leaving nothing for Kedrion, Biotest, LFB, SK Plasma or the Chinese fractionators. We therefore publish P&S Intelligence's series: $39.50 billion for 2026 to $61.60 billion by 2032 at 7.6%, both its own published figures for our exact window. Against roughly 62.5 million litres of US source plasma collected in 2024, the disclosed sum is about $358 per litre - and the industry is now closing collection centres while raising yield per donation, which no published forecast prices.",
+  "key_highlights": [
+    "The narrowest published spread in this corpus: 1.45x at 2025 and 1.42x at 2032, because three of the four global fractionators disclose revenue",
+    "CSL Behring US$11,158M, Grifols Biopharma EUR 6,487M and Octapharma EUR 3.47bn sum to $22.40 billion - 80.9% of IMARC's $27.7 billion whole-market figure and 60.5% of P&S Intelligence's $37.0 billion",
+    "Adding one Takeda immunoglobulin line takes three companies plus one product line to 96.4% of IMARC's published market, which establishes that figure as a floor rather than a market",
+    "Disclosed revenue against roughly 62.5 million litres of US source plasma collected in 2024 is about $358 per litre of finished therapy revenue",
+    "Grifols closed 29 US plasma donation centres in April 2026 having acquired centres in February 2025 and reported rising collection volume - the growth lever has moved from centre count to yield per donation",
+    "Immunoglobulin grows while albumin falls, and both fractionators that disclosed the reason named Chinese pricing pressure and government cost containment"
+  ],
+  "market_context": "Plasma fractionation is the only market in this corpus where the raw material is a human donation and the capacity constraint is a person's willingness to sit in a chair twice a week. That single fact explains most of its behaviour. Demand for immunoglobulin has grown faster than donation volume for most of the last decade, which is why the industry spent the 2010s opening collection centres and is now spending the 2020s raising the yield from the ones it has - Rika devices, individualised nomograms, 80% nomogram coverage at Grifols, and 29 closures in a single announcement. Fractionation itself is a co-product process: the same run yields immunoglobulin, albumin and coagulation factors in fixed proportion, so a demand shock in one product cannot be answered by making less of it. That is why Chinese albumin cost containment shows up as a revenue decline at two companies simultaneously while immunoglobulin grows at both. The market sits downstream of a biological supply chain and upstream of three different clinical specialties, and it is priced by whichever of those is tightest.",
+  "forecast_analysis": "The 7.6% rate published here is P&S Intelligence's own, for a window - 2026 to 2032 - that is exactly ours, with both endpoints published rather than extrapolated. Its internal arithmetic is good: 39.5 x 1.076^6 = 61.30 against a published 61.6, an implied 7.69% against a stated 7.6%, so the forecast series here is modelled at the implied rate to close exactly on the published endpoint while the headline CAGR carries the publisher's stated figure. The published range of 4.67% to 8.75% divides on a clear question: whether immunoglobulin volume growth continues to outrun collection capacity. The low end implicitly assumes it does not, and it has the better recent evidence on the supply side - yield engineering raises output without capital, and an industry that closes 29 centres while reporting higher collection is one with slack. The high end assumes neurology indications keep expanding immunoglobulin use faster than yield improvements can be absorbed. The 7.6% published here sits above the midpoint, and the risk to it is not demand but albumin: it is a co-product, it is in decline in its largest growth market on government cost containment, and no published forecast separates the two product lines it is averaging."
+  ,
+  "reader_takeaways": [
+    "Test any plasma fractionation market size against the three disclosed revenue lines - $22.40 billion for 2025 - because a figure that makes CSL, Grifols and Octapharma more than 80% of it has no room for the rest of the industry",
+    "Use the per-litre ratio of roughly $358 of therapy revenue per litre of US source plasma to sanity-check capacity and supply claims, while treating the collection volume behind it as a contradicted secondary figure",
+    "Read centre-count announcements as yield announcements: Grifols closing 29 centres while reporting higher collection volume is the industry telling you where the growth lever now is",
+    "Separate immunoglobulin from albumin before accepting any growth rate: they are co-products of the same run, immunoglobulin grew double digits at Grifols in 2025 and albumin fell, and the averaged CAGR hides both",
+    "Chinese albumin policy is the most consequential regulatory variable in this market right now, and it appeared in two different companies' 2025 disclosures for the same reason"
+  ]
+}

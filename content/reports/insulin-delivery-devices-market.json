@@ -1,0 +1,270 @@
+{
+  "report_id": "insulin-delivery-devices-market",
+  "slug": "insulin-delivery-devices-market",
+  "title": "Insulin Delivery Devices Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 21.9,
+    "forecast_value": 34.56,
+    "cagr": 7.9
+  },
+  "market_overview": {
+    "summary": "Published insulin delivery device estimates for 2024 run from $10.11 billion to about $35.6 billion — a 3.52x spread — and the stated CAGRs run from 5.17% to 15.3% in the wrong direction, with the lowest base claiming the highest growth. We publish Global Market Insights' October 2026 series, the only one in the set whose own segment and regional tables sum exactly to its own total: $21.90 billion in 2026 rising to $34.56 billion by 2032 at 7.9%. This market has unusually good denominators, and they expose two things. First, a taxonomy failure: Insulet's $2.7 billion of Omnipod revenue is almost entirely disposable pods, a consumable, against a global pump-consumables segment of $900 million — a factor of three. Second, and more useful than any dollar figure: Insulet, Tandem and Beta Bionics publish patient counts alongside revenue, so revenue per patient is directly checkable at $4,500, roughly $3,383 and $2,865 a year. Inverting the published pump-side total of $7.40 billion gives a global pump population of 1.6 to 2.6 million people — under half of one percent of the 589 million adults the IDF counts as living with diabetes, 252 million of whom do not know it.",
+    "key_trends": [
+      "Patch pumps are taking the category: Insulet grew Omnipod revenue 31.6% to $2.7 billion in FY2025 and passed 600,000 estimated active users globally, ranking first in new customer starts in both the United States and Europe",
+      "Type 2 diabetes, not type 1, is where the pump growth now comes from, which is what turns a 1.6-to-2.6-million-patient market into a plausible multi-million one — and it is the explicit driver Insulet cites for its FY2025 outperformance",
+      "The pharmacy channel is replacing durable medical equipment: Beta Bionics' pharmacy sales rose 295% in the fourth quarter of 2025 and the pharmacy share of its new patient starts went from a high single-digit percentage to the high twenties in one year",
+      "That channel shift breaks the revenue series. Tandem's 2026 guidance of $1.065-1.085 billion includes $85-95 million of headwind purely from moving United States customers to pay-as-you-go pricing with no upfront pump reimbursement, while it guides pump shipments up 10-11%",
+      "Automated insulin delivery is now the product, not the pump: Medtronic's fiscal 2025 Diabetes growth of 10.7% is attributed to MiniMed 780G installed base and CGM attachment rates, and it has filed 510(k)s for an interoperable pump and algorithm to pair with an Abbott-based sensor",
+      "Structural separation is under way at the largest incumbent: Medtronic announced its intent to separate the Diabetes business into a standalone public company within 18 months, which will for the first time put a pump-and-CGM pure play of that scale on public record"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Pens and syringes near-universal where insulin is available; pumps under 0.5% of people with diabetes"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Type 2 diabetes adoption of pump therapy, which Insulet names as the main driver of its 31.6% FY2025 Omnipod growth and which is the only mechanism that can move pump penetration above the current 0.3-0.4% of people with diabetes",
+      "Automated insulin delivery algorithms paired with continuous glucose monitoring, now the actual product being bought: Medtronic cites MiniMed 780G installed base and CGM attachment rates as its fiscal 2025 growth drivers",
+      "Pharmacy-channel distribution, which removes the durable medical equipment paperwork barrier — Beta Bionics' pharmacy sales grew 295% in Q4 2025 and Tandem is migrating its whole United States base",
+      "A very large and still-growing population: the IDF Diabetes Atlas 11th edition counts 589 million adults aged 20-79 with diabetes in 2025, projected to reach 853 million by 2050",
+      "Geographic expansion of patch pumps into markets with no prior pump infrastructure: Insulet launched Omnipod 5 in nine new markets during 2025 and grew international revenue 44.1%",
+      "Interoperability mandates and filings that unbundle the pump from the sensor, including Medtronic's 510(k) submissions for an interoperable pump and algorithm, which widens the addressable base for every algorithm vendor"
+    ],
+    "restraints": [
+      "The commodity half of the market barely grows. Pen needles, syringes and testing strips are about $5.00 billion of the published 2025 total and compound at 2% to 4.5% on the same publisher's own figures, which caps any blended rate",
+      "Pump therapy reaches under half of one percent of people with diabetes, and 252 million of the 589 million adults with diabetes are undiagnosed, so the near-term constraint is diagnosis and insulin access rather than device choice",
+      "Reimbursement model change suppresses reported revenue: Tandem's own 2026 guidance carries $85-95 million of headwind from pay-as-you-go pricing while patient volumes rise, so the dollar series understates the patient series",
+      "Device revenue is about $34 per person with diabetes per year worldwide, which is what happens when most insulin outside high-income markets is delivered by a disposable syringe",
+      "Quality-system and regulatory exposure at the smaller vendors, including the FDA warning letter Beta Bionics addressed on its fourth-quarter 2025 call, which for a single-product company is an existential rather than an operational risk",
+      "Pricing pressure from channel conversion: pharmacy distribution removes the upfront pump payment that funded the capital, so vendors take the margin over a longer recurring stream"
+    ],
+    "opportunities": [
+      "Type 2 pump penetration, which is the single largest identifiable step change available: moving from 0.3-0.4% of the diabetic population to 1% would roughly triple the pump side of the market",
+      "Markets with no existing pump base, where Insulet's nine new Omnipod 5 launches in 2025 produced 44.1% international revenue growth off a small base",
+      "Algorithm and software licensing decoupled from hardware, enabled by interoperability filings of the kind Medtronic has made for a pump and algorithm pairing with an Abbott-based sensor",
+      "The Medtronic Diabetes separation, which will create a listed pump-and-CGM company of scale and for the first time put a pump-attributable revenue line on public record",
+      "Consumables economics on an installed base: a 3-day disposable pod generates $4,500 a year per user on Insulet's disclosed figures, which is a recurring revenue profile closer to pharmaceuticals than to capital equipment"
+    ],
+    "challenges": [
+      "The published taxonomy cannot hold its own largest participant. Insulet's $2.7 billion of disposable pod revenue is three times the $900 million global pump-consumables segment, and classifying pods as tubeless pumps instead makes one company 90% of that segment",
+      "Five disclosures consume 93% of the published pump side of the market: Insulet, Tandem, Beta Bionics, Medtronic Diabetes and Ypsomed's former Diabetes Care business leave about $495 million for Roche, Sequel, Medtrum, Equil, SOOIL and every Chinese and Indian vendor combined",
+      "A single blended CAGR describes nobody. Companies in this market grew 10.7% to 54% in FY2025 while the commodity segments grow at 2% to 4.5%, and the published 7.9% is the average of two unrelated businesses",
+      "Published CAGRs run inversely to published bases — the lowest base claims 15.3% and the highest claims 5.17% — which is the signature of rates reverse-engineered to hit a predetermined endpoint",
+      "One publisher's page carries content about asthma inhalers, COPD, cystic fibrosis and nasal congestion inside an insulin delivery report, which means at least one estimate in the public record was not assembled from insulin device data at all",
+      "Revenue is about to stop tracking adoption as the pharmacy transition proceeds, so analysts measuring this market in dollars will diverge from the clinical reality measured in patients"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Tubeless patch pumps",
+      "Tubed insulin pumps",
+      "Pump consumables and infusion sets",
+      "Disposable insulin pens",
+      "Reusable insulin pens",
+      "Pen needles",
+      "Insulin syringes",
+      "Jet injectors"
+    ],
+    "by_application": [
+      "Type 1 diabetes",
+      "Type 2 diabetes on insulin",
+      "Gestational diabetes",
+      "Automated insulin delivery with continuous glucose monitoring",
+      "Multiple daily injection therapy"
+    ],
+    "by_end_user": [
+      "Home care and self-administration",
+      "Retail and pharmacy channel",
+      "Durable medical equipment distributors",
+      "Hospitals and clinics",
+      "Ambulatory surgical centres"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 21.9 },
+    { "year": 2027, "value": 23.63 },
+    { "year": 2028, "value": 25.5 },
+    { "year": 2029, "value": 27.51 },
+    { "year": 2030, "value": 29.68 },
+    { "year": 2031, "value": 32.03 },
+    { "year": 2032, "value": 34.56 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at Global Market Insights' stated 7.9% CAGR from its own published 2026 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Insulet Corporation",
+      "headquarters": "Acton, Massachusetts, United States",
+      "market_position": "The company the published taxonomy cannot place. Its $2.7 billion of Omnipod revenue is almost entirely disposable pods — a consumable — against a global pump-consumables segment one publisher sizes at $900 million, a factor of three; classified instead as a tubeless pump it would be 90% of that segment. It also publishes a patient count, which makes it the anchor for every per-user calculation in this report. Share is not disclosed and we assign none.",
+      "description": "FY2025 total revenue approximately $2.73 billion, up 31%, of which Omnipod was $2.7 billion (up 31.6% reported, 30.3% constant currency) and Drug Delivery $34.1 million. International revenue $754.3 million, up 44.1%. Operating income $473.8 million, or 17.5% of revenue. More than 600,000 estimated active Omnipod users globally at 31 December 2025, which at $2.7 billion is $4,500 per user per year. Ranked first in new customer starts in both the United States and Europe in 2025, with Omnipod 5 launched in nine new markets. Growth attributed mainly to type 2 diabetes adoption."
+    },
+    {
+      "company": "Medtronic plc, Diabetes",
+      "headquarters": "Galway, Ireland (Diabetes operational base: Northridge, California, United States)",
+      "market_position": "Holds the largest installed pump base globally and is the reason the published pump segment runs out of room: adding any plausible pump-only figure for Medtronic to the three pure-plays fills the segment. Its $2.755 billion includes continuous glucose monitoring, which the published market does not count at all, so it cannot be compared directly. No pump count and no share are disclosed.",
+      "description": "Fiscal 2025 Diabetes revenue $2.755 billion, up 10.7% reported and 11.5% organic; fourth-quarter revenue $728 million, up 10.4% reported and 12.0% organic, a sixth consecutive quarter of double-digit organic growth. Growth attributed to adoption of the MiniMed 780G automated insulin delivery system, a growing installed base and strong CGM attachment rates, with international pumps up low twenties. Secured FDA approval for the Simplera Sync CGM with MiniMed 780G and submitted 510(k) applications for an interoperable pump and algorithm to pair with an Abbott-based sensor. Medtronic announced its intent to separate Diabetes into a standalone public company within 18 months."
+    },
+    {
+      "company": "Tandem Diabetes Care, Inc.",
+      "headquarters": "San Diego, California, United States",
+      "market_position": "The clearest illustration of why this market is about to be mismeasured. Tandem is migrating United States customers to pay-as-you-go pharmacy pricing with no upfront pump reimbursement, and its own 2026 guidance carries $85-95 million of headwind from the change while it guides pump shipments up 10-11%. Reported revenue and patients served are moving in opposite directions. No share is disclosed.",
+      "description": "FY2025 worldwide sales approximately $1.015 billion, up 12%, with fourth-quarter sales of $290.4 million. More than 126,000 pumps shipped worldwide during 2025 — more than 86,000 in the United States and more than 40,000 internationally — with 38,000 shipped in the fourth quarter. More than 300,000 United States customers regularly order supplies, which at $1.015 billion is roughly $3,383 per customer per year before counting international customers. 2026 guidance $1.065-1.085 billion including the business-model headwind."
+    },
+    {
+      "company": "Beta Bionics, Inc.",
+      "headquarters": "Irvine, California, United States",
+      "market_position": "The smallest disclosed participant and the most precisely measurable: $100.3 million of FY2025 revenue across an installed base of exactly 35,011 users, or $2,865 per user per year. Its channel mix is the leading indicator for the whole market — pharmacy sales grew 295% in the fourth quarter. Share is not disclosed and we assign none.",
+      "description": "FY2025 net sales $100.3 million, up 54% from $65.1 million, at a 55.4% gross margin, split $75.8 million durable medical equipment and $24.4 million pharmacy. Fourth-quarter net sales $32.1 million, up 57%, with DME up 24% to $22.3 million and pharmacy up 295% to $9.8 million. Close to 20,000 new users adopted the iLet bionic pancreas in 2025, taking the installed base to 35,011; fourth-quarter new patient starts 5,592, up 37%. Pharmacy share of new patient starts rose from a high single-digit percentage to the high twenties in one year. Management addressed an FDA warning letter tied to quality-system observations on the fourth-quarter call."
+    },
+    {
+      "company": "Ypsomed Holding AG",
+      "headquarters": "Burgdorf, Switzerland",
+      "market_position": "Has left the market during the period under review. Its Diabetes Care business — the mylife pump and pen portfolio — recorded CHF 236.9 million in FY2024/25, the last year it was a reported segment, and was sold during FY2025/26. Ypsomed now reports as a drug-delivery contract manufacturer. Named and dated, not sized forward.",
+      "description": "FY2025/26 consolidated revenue CHF 731.0 million against CHF 748.9 million the prior year, with Delivery Systems — the core contract drug-delivery business — at CHF 601.5 million, up about 20% from CHF 502.3 million. Diabetes Care recorded CHF 236.9 million in FY2024/25. EBIT more than doubled to CHF 246.1 million, partly on the book gain from completing the sale of mylife Diabetes Care AG and Ypsotec AG. Dividend proposed to double to CHF 4.40 per share."
+    },
+    {
+      "company": "Roche Diabetes Care (F. Hoffmann-La Roche AG)",
+      "headquarters": "Basel, Switzerland",
+      "market_position": "Holds the Accu-Chek pen, pump and infusion-set portfolio with a long-established European and emerging-market base, reported inside Roche Diagnostics with no insulin-delivery split. One of the vendors that must fit, with Sequel, Medtrum, Equil, SOOIL and every Chinese and Indian manufacturer, into the roughly $495 million the published pump segment has left after five disclosures. Named, not sized.",
+      "description": "Accu-Chek insulin pumps, infusion sets and pen systems, distributed principally through pharmacy and retail channels in Europe, Latin America and Asia. No insulin-delivery device revenue is separately disclosed in Roche's segment reporting."
+    },
+    {
+      "company": "Novo Nordisk A/S and Eli Lilly and Company",
+      "headquarters": "Bagsvaerd, Denmark and Indianapolis, Indiana, United States",
+      "market_position": "Between them supply most of the world's insulin pens, which is the largest single segment of this market at about 38% of one publisher's 2025 total. Neither reports pen hardware separately from the insulin inside it, so the pen segment — the biggest part of the published market — has no disclosed revenue line anywhere. Named, not sized.",
+      "description": "Disposable and reusable insulin pen systems supplied as part of insulin franchises, with the device cost embedded in the drug price and not separately reported. Their absence from any device revenue disclosure is why the pen segment of the published market cannot be independently checked at all."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Insulet Corporation",
+      "year": 2026,
+      "event": "Reported FY2025 results on 18 February 2026: Omnipod revenue of $2.7 billion, up 31.6%, with international revenue up 44.1% to $754.3 million, and disclosed more than 600,000 estimated active Omnipod users globally as of 31 December 2025 — a tenth consecutive year of 20%-plus constant-currency growth, driven mainly by type 2 diabetes adoption."
+    },
+    {
+      "company": "Tandem Diabetes Care, Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 results on 19 February 2026 with worldwide sales of about $1.015 billion and more than 126,000 pumps shipped, and guided 2026 to $1.065-1.085 billion including $85-95 million of headwind from migrating United States customers to a pay-as-you-go pharmacy model with no upfront pump reimbursement, while guiding United States pump shipments up 10-11%."
+    },
+    {
+      "company": "Beta Bionics, Inc.",
+      "year": 2026,
+      "event": "Reported FY2025 net sales of $100.3 million on 17 February 2026, up 54%, with an installed base of 35,011 iLet users after close to 20,000 new adoptions during the year, and fourth-quarter pharmacy-channel sales up 295% to $9.8 million as the pharmacy share of new patient starts rose from a high single-digit percentage to the high twenties."
+    },
+    {
+      "company": "Medtronic plc",
+      "year": 2025,
+      "event": "Announced on 21 May 2025 its intent to separate the Diabetes business into a standalone public company within 18 months, preferring an initial public offering followed by a split-off, alongside fiscal 2025 Diabetes revenue of $2.755 billion, up 10.7% reported and 11.5% organic."
+    },
+    {
+      "company": "Ypsomed Holding AG",
+      "year": 2026,
+      "event": "Completed the sale of mylife Diabetes Care AG, formerly Ypsomed Diabetes Care AG, during FY2025/26, removing from the market a business that had recorded CHF 236.9 million of revenue in FY2024/25, and reported group EBIT more than doubling to CHF 246.1 million partly on the resulting book gain."
+    },
+    {
+      "company": "International Diabetes Federation",
+      "year": 2025,
+      "event": "Published the IDF Diabetes Atlas 11th edition on 7 April 2025 at the World Diabetes Congress in Bangkok, counting 589 million adults aged 20-79 living with diabetes, of whom 252 million are unaware of their condition, and projecting 853 million adults by 2050."
+    }
+  ],
+  "regulatory_landscape": [
+    "Insulin pumps are Class II devices in the United States and have historically cleared through the FDA 510(k) pathway. Since 2019 FDA has recognised an Alternate Controller Enabled infusion pump pathway — the interoperable pump, or ACE pump — which permits a pump to be cleared for use with a compatible controller and algorithm from a different manufacturer. Medtronic submitted 510(k) applications under that framework for an interoperable pump and algorithm during fiscal 2025.",
+    "Automated insulin delivery requires three separate authorisations that must then be shown to work together: the pump as an ACE pump, the sensor as an integrated continuous glucose monitor (iCGM), and the dosing algorithm as interoperable automated glycaemic controller software. A system is only marketable when all three clearances exist and compatibility is demonstrated, which is why Medtronic's Simplera Sync approval for use with MiniMed 780G was reported as a discrete regulatory event.",
+    "Channel classification determines reimbursement. Pumps supplied as durable medical equipment are paid under Medicare Part B with upfront reimbursement for the device; pumps supplied through the pharmacy channel are paid under Part D or commercial pharmacy benefit as a recurring supply, with no upfront payment. That distinction, not any clinical change, is what produces the $85-95 million revenue headwind in Tandem's 2026 guidance.",
+    "FDA quality system regulation at 21 CFR part 820 — now converging on ISO 13485 under the Quality Management System Regulation — is the enforcement surface for this category, and warning letters are a live risk for single-product companies: Beta Bionics addressed one tied to quality-system observations on its fourth-quarter 2025 earnings call.",
+    "EU Medical Device Regulation 2017/745 governs pumps, pens and infusion sets placed on the EU market, with notified-body conformity assessment and post-market clinical follow-up; insulin pens supplied as part of a drug-device combination are additionally assessed under the medicinal product framework, which is one reason pen hardware revenue is never reported separately.",
+    "Pen needles, insulin syringes and infusion sets are regulated as Class II sharps with 510(k) obligations and, in the United States, are additionally subject to the Needlestick Safety and Prevention Act's requirements on sharps injury protection — a commodity regulatory regime quite unlike the pump pathway, which is part of why a single market definition spanning both is unstable."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "Global Market Insights, Insulin Delivery Devices Market, report GMI1649, published October 2026 — $18.50B (2024), $20.00B (2025), $21.90B (2026), $42.96B (2035), 7.9% (2026-2035), with pumps $6.50B, pens 38%, pen needles $3.00B, syringes 8%, pump consumables $900M and strips 2% for 2025",
+      "Insulet Corporation, Reports Fourth Quarter and Full Year 2025 Results, 18 February 2026 — Omnipod revenue $2.7B (+31.6%), Drug Delivery $34.1M, international $754.3M (+44.1%), more than 600,000 estimated active Omnipod users globally at 31 December 2025",
+      "Tandem Diabetes Care, Inc., Announces Fourth Quarter and Full Year 2025 Financial Results and 2026 Financial Guidance, 19 February 2026 — worldwide sales about $1.015B (+12%), more than 126,000 pumps shipped, more than 300,000 United States supply-ordering customers, 2026 guidance including $85-95M of pay-as-you-go headwind",
+      "Medtronic plc, fourth quarter and fiscal year 2025 results, 21 May 2025, and Form 10-K for fiscal 2025 (SEC EDGAR, CIK 1613103) — Diabetes revenue $2.755B (+10.7% reported, +11.5% organic), including CGM; intent to separate Diabetes announced",
+      "Beta Bionics, Inc., Announces Fourth Quarter and Full Year 2025 Financial Results, 17 February 2026 — net sales $100.3M (+54%), DME $75.8M, pharmacy $24.4M, installed base 35,011 users",
+      "Ypsomed Holding AG, FY2025/26 annual results — group revenue CHF 731.0M, Delivery Systems CHF 601.5M, Diabetes Care CHF 236.9M in FY2024/25, completion of the mylife Diabetes Care AG disposal",
+      "International Diabetes Federation, IDF Diabetes Atlas 11th edition, published 7 April 2025 — 589 million adults aged 20-79 with diabetes, 252 million undiagnosed, 853 million projected by 2050",
+      "DelveInsight, insulin delivery devices market (2025 report) — approximately $35.6B (2024) to $53.0B (2032) at 5.17%",
+      "Credence Research, insulin delivery devices market — $10.11B (2024) to $31.57B (2032) at 15.3%; page carries content about asthma, COPD and cystic fibrosis inside an insulin report",
+      "SkyQuest Technology, insulin delivery devices market — $18.02B (2024) to $33.11B (2032) at 7.9%; and MarketsandMarkets, insulin delivery device market — $30.8B (2023) to $46.2B (2028) at 8.5%"
+    ],
+    "data_validation": "The 2026 base is Global Market Insights' own published 2026 figure of $21.90 billion, unaltered; the 2032 endpoint is derived by compounding it at GMI's own stated 7.9% rate and is labelled as interpolation. The internal check is that the implied rate between our endpoints is 7.90%, identical to the stated rate. GMI was chosen because it is the only source in the set that is internally consistent — its 2025 product segments sum exactly to its $20.00 billion total, and so does its 2025 regional table, which no other source here can demonstrate — because it is the most recently published with a dated base year, and because its explicit taxonomy is what made the checks below possible at all. Five grounding tests were run against FY2025 reported revenue and the patient counts companies publish alongside it. First, a taxonomy test: Insulet's $2.7 billion of Omnipod revenue is almost entirely disposable pods, which is a consumable, and that is 3.0 times GMI's entire global pump-consumables segment of $900 million; reclassifying pods as tubeless pumps instead makes Insulet 90% of that $3.00 billion segment, leaving $300 million for Ypsomed, Medtrum, Equil, Sequel and every other patch-pump vendor. Second, a containment test: GMI's pump-attributable total for 2025 is $6.50 billion of pumps plus $0.90 billion of pump consumables, or $7.40 billion. Insulet, Tandem and Beta Bionics together disclose $3,849 million, which is 52.0% of it, and none of the three is the global installed-base leader. Adding Medtronic Diabetes at $2,755 million and Ypsomed's former Diabetes Care segment at about $301 million takes five disclosures to $6,905 million, or 93.3%, leaving about $495 million for Roche, Sequel, Medtrum, Equil, SOOIL, every third-party infusion set and every Chinese and Indian vendor. The Medtronic figure includes continuous glucose monitoring revenue that GMI does not count in this market, so it is an upper bound rather than a pump figure, and the pure-play subtotal carries the finding on its own. Third, a revenue-per-patient test, possible because three companies publish both numbers: Insulet $2,700 million over more than 600,000 active users is $4,500 per user per year; Beta Bionics $100.3 million over exactly 35,011 users is $2,865; Tandem $1,015 million over more than 300,000 United States supply-ordering customers is about $3,383 before counting international customers. Because the user counts are floors, these are upper bounds. Fourth, inverting the published total: $7.40 billion divided by $4,500 gives 1.64 million pump users worldwide and divided by $2,865 gives 2.58 million, so GMI's pump side implies a global pump population of roughly 1.6 to 2.6 million — a statement a clinician can check, unlike the dollar figure. Fifth, against the population denominator: $20.00 billion over the IDF's 589 million adults with diabetes is $34 per person per year, and 1.6 to 2.6 million pump users is 0.27% to 0.44% of that population, 252 million of whom are undiagnosed. Finally, the blended rate was tested against company growth: Beta Bionics grew 54%, Insulet 31.6%, Tandem 12% and Medtronic Diabetes 10.7% in FY2025, while GMI's own syringe, strip and pen-needle segments compound at 2% to 4.5%, so the published 7.9% is the average of two unrelated businesses and describes neither. These are scope and plausibility tests, not market estimates. They do not establish the correct figure for any segment. Regional and country splits are published as empty arrays because the only source offering them presents no method, and no vendor market share is published because none is disclosed and the disclosures that exist are not comparable: Insulet's revenue is consumables, Medtronic's includes CGM, and Tandem's is being restructured by a pricing-model change that reduces reported revenue while patient volume rises."
+  },
+  "faqs": [
+    {
+      "question": "How large is the insulin delivery devices market?",
+      "answer": "We publish $21.90 billion for 2026, rising to $34.56 billion by 2032 at 7.9%, from Global Market Insights' October 2026 series. Published 2024 estimates run from $10.11 billion to about $35.6 billion — a 3.52x spread — and the stated CAGRs run from 5.17% to 15.3%, inversely to the bases, which is the signature of rates reverse-engineered to hit a predetermined endpoint. The more useful framing is per person: $20.00 billion for 2025 across the 589 million adults the IDF counts as living with diabetes is about $34 a year each."
+    },
+    {
+      "question": "How many people worldwide use an insulin pump?",
+      "answer": "Roughly 1.6 to 2.6 million, on our arithmetic, and this is the one number in the market you can genuinely check. Insulet, Tandem and Beta Bionics publish revenue and patient counts in the same releases: $4,500 per Omnipod user per year across more than 600,000 users, about $3,383 per Tandem supply-ordering customer, and $2,865 per Beta Bionics user across exactly 35,011. Dividing the published pump-side total of $7.40 billion by those rates gives 1.6 to 2.6 million people — under half of one percent of adults with diabetes."
+    },
+    {
+      "question": "Does the published market definition hold up?",
+      "answer": "Not at the consumables boundary. Insulet sells disposable pods, not a durable pump — the controller is an app — so essentially all of its $2.7 billion of Omnipod revenue is a consumable. One publisher's entire global pump-consumables segment is $900 million. That is a factor of three. The only alternative is to classify pods as tubeless pumps, which makes Insulet 90% of a $3.00 billion segment and leaves $300 million for every other patch-pump vendor on earth. The taxonomy has one coherent place to put the market's fastest-growing company and it does not fit there either."
+    },
+    {
+      "question": "Does disclosed vendor revenue exceed the published pump market?",
+      "answer": "It fills it. The published pump side for 2025 is $6.50 billion of pumps plus $0.90 billion of pump consumables, $7.40 billion in all. Insulet, Tandem and Beta Bionics disclose $3,849 million between them — 52% — and none of the three has the largest installed base. Add Medtronic Diabetes and Ypsomed's former Diabetes Care segment and five disclosures account for 93.3%, leaving about $495 million for Roche Accu-Chek, Sequel, Medtrum, Equil, SOOIL, third-party infusion sets and every Chinese and Indian manufacturer. Medtronic's figure includes CGM, so treat it as an upper bound — but the three pure-plays carry the point unaided."
+    },
+    {
+      "question": "Why is a single CAGR misleading here?",
+      "answer": "Because the market is two businesses glued together. Pen needles, syringes and testing strips are about $5.00 billion of the 2025 total and compound at 2% to 4.5% on the same publisher's own figures. Meanwhile Beta Bionics grew 54% in FY2025, Insulet 31.6%, Tandem 12% and Medtronic Diabetes 10.7%. The published 7.9% sits between them and describes no company in the market. Apply it to either half and you will be wrong in opposite directions."
+    },
+    {
+      "question": "Why will reported revenue stop tracking adoption?",
+      "answer": "Because the channel is changing. Pumps sold as durable medical equipment are reimbursed upfront; pumps supplied through the pharmacy channel are paid as a recurring supply with no upfront device payment. Tandem's 2026 guidance of $1.065-1.085 billion includes $85-95 million of headwind purely from that shift, while it guides United States pump shipments up 10-11%. Beta Bionics shows the same migration: pharmacy sales up 295% in the fourth quarter and the pharmacy share of new starts going from high single digits to the high twenties in one year. Revenue down, patients up."
+    },
+    {
+      "question": "Which company leads insulin delivery, and what share does it hold?",
+      "answer": "Medtronic holds the largest installed pump base globally and Insulet has the largest and fastest-growing disclosed revenue at $2.7 billion. No share is disclosed for anyone and we assign none, because the disclosures are not comparable: Insulet's revenue is consumables, Medtronic's bundles CGM, Tandem's is being suppressed by a pricing-model change, and the pen segment — the single largest part of the published market at about 38% — has no disclosed revenue anywhere, because Novo Nordisk and Eli Lilly embed pen hardware in the insulin price."
+    }
+  ],
+  "seo": {
+    "meta_title": "Insulin Delivery Devices Market Size & Forecast 2032",
+    "meta_description": "Insulin delivery devices at $21.90B in 2026, reaching $34.56B by 2032 at 7.9% — and why disclosed pump revenue fills 93% of the published pump segment.",
+    "keywords": [
+      "insulin delivery devices market",
+      "insulin pump market size",
+      "patch pump Omnipod",
+      "automated insulin delivery",
+      "insulin pen needles market",
+      "Tandem Beta Bionics revenue"
+    ]
+  },
+  "executive_summary": "Insulin delivery is the best-instrumented market in this batch, because three companies publish patient counts alongside revenue, and that turns an unauditable dollar figure into checkable arithmetic. Published 2024 estimates span $10.11 billion to about $35.6 billion — a 3.52x spread — with stated CAGRs running 5.17% to 15.3% inversely to the bases, which is what reverse-engineered rates look like. We publish Global Market Insights' October 2026 series, the only one whose 2025 product and regional tables both sum exactly to its own total: $21.90 billion in 2026 to $34.56 billion by 2032 at 7.9%. Then the denominators do their work. Insulet's $2.7 billion of Omnipod revenue is essentially all disposable pods — a consumable — against a global pump-consumables segment of $900 million, a factor of three; reclassify pods as tubeless pumps and one company becomes 90% of a $3.00 billion segment. Take the whole pump side, $7.40 billion, and three pure-plays disclose 52% of it while none of them is the installed-base leader; add Medtronic Diabetes and Ypsomed's former unit and five disclosures consume 93.3%, leaving about $495 million for Roche, Sequel, Medtrum, Equil, SOOIL and every Chinese and Indian vendor. The per-patient figures are the useful output: $4,500 a year per Omnipod user, $2,865 per Beta Bionics user, about $3,383 per Tandem supply-ordering customer. Inverting the published total gives 1.6 to 2.6 million pump users worldwide — 0.27% to 0.44% of the 589 million adults the IDF counts with diabetes, 252 million of whom are undiagnosed. And the 7.9% headline averages a 2%-growth needles-and-strips business with an 11-to-54%-growth pump business. Worse, revenue is about to stop tracking adoption: Tandem's 2026 guidance carries $85-95 million of headwind purely from pharmacy-channel pricing while shipments rise 10-11%.",
+  "key_highlights": [
+    "Headline: $21.90 billion in 2026 to $34.56 billion in 2032 at 7.9%, from Global Market Insights' own published 2026 base and stated rate (implied 7.90%)",
+    "Published 2024 estimates span 3.52x ($10.11B-$35.6B), with CAGRs of 5.17% to 15.3% running inversely to the bases",
+    "Insulet's $2.7 billion of disposable pod revenue is 3.0x the entire $900 million global pump-consumables segment one publisher sizes",
+    "Five disclosures consume 93.3% of the $7.40 billion published pump side; three pure-plays alone are 52%, and none of them is the installed-base leader",
+    "Revenue per patient is directly checkable: $4,500 a year per Omnipod user (600,000+ users), $2,865 per Beta Bionics user (35,011 users), about $3,383 per Tandem supply customer",
+    "Inverting the published pump total gives 1.6-2.6 million pump users worldwide — 0.27% to 0.44% of the 589 million adults with diabetes the IDF counts, 252 million of them undiagnosed",
+    "The 7.9% blended rate averages a 2%-growth commodity business (needles, syringes, strips, about $5.00 billion) with companies that grew 10.7% to 54% in FY2025",
+    "Tandem's 2026 guidance includes $85-95 million of headwind from pay-as-you-go pharmacy pricing while it guides pump shipments up 10-11% — revenue and patients diverging"
+  ],
+  "market_context": "Insulin delivery is two markets filed under one heading, and the filing error is what produces a 3.5x spread. One of them is a commodity: pen needles, insulin syringes and test strips, about $5.00 billion a year on one publisher's figures, compounding at 2% to 4.5%, sold through pharmacy and retail at low unit prices into every country that has insulin at all. The other is automated insulin delivery: pumps, patch pods, infusion sets and the algorithms that run them, about $7.40 billion, whose vendors grew between 10.7% and 54% in FY2025 and whose patient population is on our arithmetic between 1.6 and 2.6 million people. The first market is defined by insulin access; the second by reimbursement, diagnosis and clinical inertia. They share a word and nothing else. The scale of the gap between them is best seen through the population: the IDF counts 589 million adults living with diabetes, 252 million of whom do not know it, which puts total device spend at about $34 per person with diabetes per year and pump penetration at under half of one percent. Everything that gets written about this market — the algorithms, the interoperability filings, the patch-pump launches, the type 2 expansion — concerns that fraction of a percent. And the supplier structure makes the larger half unauditable: Novo Nordisk and Eli Lilly supply most of the world's pens with the hardware cost embedded in the insulin price, so the biggest single segment of the published market, roughly 38% of it, has no disclosed revenue line anywhere on earth.",
+  "forecast_analysis": "Our 7.9% is Global Market Insights' own rate on its own base, and the series reproduces its stated rate exactly. The problem is not the arithmetic, it is that the rate is a weighted average of two businesses that no operator experiences together. The pump side compounds at the rate its vendors actually posted in FY2025 — Beta Bionics 54%, Insulet 31.6%, Tandem 12%, Medtronic Diabetes 10.7% — and the commodity side at 2% to 4.5% on the same publisher's own segment figures. A reader forecasting pumps at 7.9% will understate by half; a reader forecasting pen needles at 7.9% will overstate by double. The structural question that determines which way the blend drifts is type 2 adoption, which Insulet names as the main driver of its outperformance. Moving pump penetration from 0.3-0.4% of the diabetic population to 1% would roughly triple the pump side and would shift the blended rate upward by several points on its own. Against that, two forces suppress the measured series. The first is the pharmacy channel: pumps paid as a recurring supply rather than reimbursed upfront generate less revenue per new patient in year one, and Tandem has quantified that at $85-95 million of 2026 headwind against 10-11% shipment growth. The second is simply the commodity base, which is large, inelastic and tracks insulin volumes rather than technology. Readers should forecast the two halves separately, and should prefer patients, pumps shipped and installed base — all of which Insulet, Tandem and Beta Bionics publish — over revenue, which is about to become a worse proxy for adoption than it already is.",
+  "reader_takeaways": [
+    "Forecast the two halves separately. Pen needles, syringes and strips are about $5.00 billion growing 2-4.5%; pumps and pods are about $7.40 billion whose vendors grew 10.7% to 54% in FY2025. The published 7.9% describes neither.",
+    "Use patients, not dollars. Insulet, Tandem and Beta Bionics publish user counts with revenue — $4,500, about $3,383 and $2,865 per patient per year. Inverting the published total gives 1.6-2.6 million pump users, which you can sanity-check against clinical reality.",
+    "Note that the published pump segment is already full. Five disclosures account for 93.3% of it, leaving about $495 million for Roche, Sequel, Medtrum, Equil, SOOIL and all Chinese and Indian vendors combined.",
+    "Expect reported revenue to understate adoption from 2026. Tandem's guidance carries $85-95 million of pharmacy-channel headwind while shipments grow 10-11%, and Beta Bionics' pharmacy share of new starts went from high single digits to the high twenties in a year.",
+    "Remember that the biggest segment is invisible. Insulin pens are about 38% of the published market and neither Novo Nordisk nor Eli Lilly reports pen hardware separately from the insulin inside it, so that part of any estimate cannot be checked at all."
+  ]
+}
