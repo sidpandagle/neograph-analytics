@@ -35,6 +35,7 @@ land at the first slot after 00:00 UTC.
 | **Homepage claimed "over 2,500 research reports spanning 20+ sectors and 50+ countries"** one scroll below the hero's correct "142 across 6". | 3 corpus sizes on one page | claim removed; hero is sole source of truth |
 | **Left rail overhung the hero by ~155px.** 13 items at 48px pitch. | rail ~721px | **645px**, pitch 42px, measured |
 | Negative growth rendered as `+-2.1%` | latent | sign handled |
+| **`meta_description` over 160 chars on 14 of 142 rows** (was R-3) | needs editorial judgement per row, not pattern substitution | corpus-wide pass: 14 descriptions over 160 and 45 titles over 60 -> **0 and 0** across all 152 rows |
 | **9 of 10 testimonials are non-healthcare, under the heading "What healthcare executives say" — incl. a vehicle-engineering principal engineer and a football club director** (was R-0f) | West Ham United, Mitsubishi Motors R&D, Clorox, Singapore Tourism Board | section no longer rendered; component and data left in place |
 | **Region filter: **142 of 142** reports are `Global`, so 5 of 6 options return nothing and the 6th returns everything** (was R-0c) | `"region":"Global"` x142 | region select dropped while one distinct value exists; it returns when regional rows do |
 | **6 of 12 category chips and mega-menu entries match **zero** reports (Clinical Diagnostics, Healthcare Services, Laboratory Equipment, Therapeutic Area, Dental, Animal Health)** (was R-0b) | counted in the live `/reports` RSC payload | chips and tiles now derived from the corpus: 6 live categories with counts (38/39/16/6/23/20 = 142) |
@@ -51,7 +52,6 @@ land at the first slot after 00:00 UTC.
 | R-0d | high | `.prose` never applies to report pages — `StyledReportContent.tsx` (381 lines) is imported nowhere, so the tuned long-form CSS is dead for reports | 0 `prose` matches in built report HTML |
 | R-0e | high | Focus ring `#1541E3` on the blue hero panels = **1.00:1**; on the footer = 2.46:1. WCAG 1.4.11 needs 3:1 | keyboard focus invisible on the primary CTAs |
 | R-2 | medium | `/reports` ships ~508KB, nearly all RSC payload for 142 reports | 508KB vs 54-148KB for every other route |
-| R-3 | medium | `meta_description` over 160 chars on 14 of 142 rows | needs editorial judgement per row, not pattern substitution |
 | R-4 | medium **[H]** | Hardcoded `price: '$2,995'` published as Product/Offer JSON-LD with `InStock` while checkout throws | schema asserts purchasability that does not work |
 | R-6 | low | `/design-system` renders 2 `<h1>` and has no canonical | robots-disallowed, so impact is confined |
 | ~~R-7~~ | fixed #15 | CLAUDE.md documents automatic dark mode; no `prefers-color-scheme` block exists | 0 matches in `app/globals.css` |

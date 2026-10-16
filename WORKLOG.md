@@ -562,3 +562,31 @@ into the user Python site-packages to read the CMS CLIA statistics PDF. Nothing
 in the project or in global config was touched and nothing was removed, but it
 is a change outside this repo and the standing rule is not to make them. The
 brief for round 2 forbids installing anything.
+
+### SEO field lengths, all 152 rows (was R-3)
+`report-db.mjs audit` (new) measured the corpus: **45 titles over 60 characters**
+and **14 descriptions over 160**. The earlier title pass had cut the mean from
+92.4 to 56.4 but left a 61-77 character tail that no pattern substitution
+reaches — the template itself had to shorten.
+
+`scripts/fix-meta-lengths.mjs` (dry run by default, `--apply` to write):
+
+- **Titles** try progressively shorter templates against the market name taken
+  from the row's own title, and take the first that fits 60. Seven rows said
+  "... Industry Size & Analysis 2032" rather than "... Market ...", so the name
+  extractor had to terminate on both words — without that they were unfixable
+  mechanically.
+- **Descriptions** are rebuilt from the row's structured figures rather than
+  trimmed, because several restated numbers that no longer match the columns the
+  page renders, and `united-states-cell-gene-therapy-manufacturing-market` was
+  **truncated mid-sentence** at "is expected to ". A description built from
+  `market_size`, `base_year` and `forecast_period` cannot drift from the page.
+  Descriptions that open analytically rather than formulaically — the OIS row
+  leads with its 2.74x spread — are shortened in place instead.
+- No marketing tail was appended. "Sources and methodology inside" would be a
+  claim about the page's contents, and these are legacy rows whose depth varies;
+  the figures are the part that is certainly true.
+
+55 rows written. Re-audit: **titles over 60 = 0, descriptions over 160 = 0,
+descriptions under 70 = 0.** Supabase-only, so this reaches production through
+ISR without spending a deploy.
