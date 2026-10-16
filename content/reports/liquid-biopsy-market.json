@@ -1,0 +1,242 @@
+{
+  "report_id": "liquid-biopsy-market",
+  "slug": "liquid-biopsy-market",
+  "title": "Liquid Biopsy Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 8.03,
+    "forecast_value": 17.54,
+    "cagr": 13.91
+  },
+  "executive_summary": "Published estimates of the liquid biopsy market disagree twice over, and the two disagreements have different causes. At the same 2024 base year, four houses publish $2.21 billion, $6.17 billion, $6.4 billion and $9.63 billion -- a 4.36x spread. Published compound growth rates run from 9.0% to 28.61%, a 2.55x spread. In the oncology information systems market the rates agree and only the base years diverge; here nothing agrees, and a reader given a single headline number has been told nothing about the market.\n\nThe base-year spread is a scope difference that one source states openly: Towards Healthcare labels its $2.21 billion figure as liquid biopsy in-vitro diagnostics -- kits, assays and instruments. Almost all of the revenue in this field is laboratory service revenue, because the tests that sell are laboratory-developed tests run in CLIA-certified laboratories. Guardant Health alone booked $982.0 million in FY2025. A $2.21 billion whole-market figure cannot be counting that.\n\nThe growth-rate spread is a bet, and it can be identified with arithmetic rather than opinion. Guardant's disclosed FY2025 figures give a realised therapy-selection price of $683.6 million over roughly 276,000 oncology tests, or $2,477 per test. Divide Fortune Business Insights' $106.49 billion 2034 forecast by that price and it implies 43.0 million tests a year. GLOBOCAN 2022 puts total new cancer cases worldwide at close to 20 million. The high forecast implies 2.15 liquid biopsies per year for every newly diagnosed cancer patient on earth, which is not therapy selection. It is population screening of asymptomatic people, priced as though reimbursement already existed.\n\nThat is the fault line. The low-rate houses are forecasting a market that exists and is paid for. The high-rate houses are forecasting multi-cancer early detection. Before comparing two liquid biopsy forecasts, establish which of those two things each one is counting.",
+  "market_context": "A liquid biopsy looks for tumour material -- circulating tumour DNA, circulating tumour cells, exosomes, methylation signatures -- in a blood draw instead of a tissue sample. Its established clinical job is narrow and valuable: genotyping an advanced solid tumour when tissue is insufficient, inaccessible or stale, so that a targeted therapy can be chosen. The FDA approved the first two companion diagnostics on that indication within three weeks of each other in August 2020, Guardant360 CDx on 7 August and FoundationOne Liquid CDx on 26 August.\n\nThe commercial structure follows from the regulation. Because a laboratory-developed test run in a CLIA-certified laboratory is a service rather than a distributed product, the money in this field shows up as service revenue priced per test by payers, not as instrument and reagent sales. CMS set Guardant360's rate at $5,000 for code 0326U effective 1 January 2024. That single administrative decision does more to determine the size of this market than any technical advance in the same period.\n\nThe second market -- screening asymptomatic people for cancer they do not know they have -- is governed by entirely different economics. Guardant's Shield screening test was priced at $920 by Medicare from 1 August 2024 and later $1,495 under ADLT status, roughly a fifth to a third of the therapy-selection rate, because screening only works at population scale and population scale only works at low unit cost. Conflating the two markets is the single most common error in the published literature on this category.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 13.91% rate. Precedence Research publishes $7.05 billion for 2025 and a stated 13.91% CAGR over 2025-2034; the 2026 base of $8.03 billion is that published figure advanced one year at that published rate, and the 2032 endpoint of $17.54 billion continues it. The intermediate years are interpolation, not separately sourced observations, and should be read as the shape the two endpoints imply.\n\nThis series was chosen for three reasons. It carries an explicit base-year value and an explicit rate, where several houses publish only an endpoint. Its rate sits inside the therapy-selection cluster of 11.2% to 13.9%, which is the activity that is clinically established and reimbursed today. And it survives the per-test plausibility test described in the executive summary, where the 25.9% and 28.61% series do not.\n\nReaders modelling the screening case should not use this curve. They should take a view on whether multi-cancer early detection achieves broad reimbursement before 2032, because that single question, not the growth of genotyping, is what separates a $17 billion market in 2032 from a $100 billion one in 2034. At Guardant's disclosed screening price of $916 per test, a $106.49 billion market implies 116 million screening tests a year, more than the entire screening-eligible population of the United States and European Union combined.",
+  "market_overview": {
+    "summary": "On the therapy-selection definition used by the most recently based published series, the liquid biopsy market is $8.03 billion in 2026, projected to $17.54 billion by 2032 at a 13.91% CAGR. Published estimates spread 4.36x at the same 2024 base year and 2.55x on growth rate. The base-year spread is a scope difference between in-vitro-diagnostic product revenue and laboratory service revenue; the growth-rate spread is a disagreement about whether multi-cancer early detection screening becomes a reimbursed activity before the forecast ends. Those are two markets, not one market growing at uncertain speed.",
+    "key_trends": [
+      "Base-year estimates spread 4.36x at the same 2024 year ($2.21B to $9.63B) and published CAGRs spread 2.55x (11.21% to 28.61%)",
+      "The low-rate houses are forecasting therapy selection; the high-rate houses are forecasting population screening, which is a different market with a fifth of the unit price",
+      "Fortune Business Insights' $106.49B 2034 forecast implies 43.0 million tests a year at Guardant's disclosed $2,477 ASP, against close to 20 million new cancers worldwide per GLOBOCAN 2022",
+      "Revenue in this field is laboratory service revenue, not product revenue, because the tests that sell are laboratory-developed tests run in CLIA-certified laboratories",
+      "Reimbursement decisions move the market more than technology: CMS set Guardant360's rate at $5,000 for code 0326U effective 1 January 2024 and Shield at $920 from 1 August 2024",
+      "Vendor market share is not publicly disclosed by any company or named source in this category"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in advanced solid tumour genotyping; pre-reimbursement in screening"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Targeted therapies that require a specific molecular alteration before they can be prescribed, which makes genotyping a gate on the prescription rather than an optional test",
+      "Tissue insufficiency: a meaningful share of advanced solid tumour patients cannot supply an adequate biopsy, and blood is the only available route",
+      "Established Medicare pricing for the leading tests, which converts clinical utility into realisable revenue",
+      "Companion diagnostic approvals that tie a test to a specific drug label, creating demand that follows the drug's uptake rather than diagnostic fashion",
+      "Minimal residual disease and recurrence monitoring, which turns a single diagnostic event into a repeated longitudinal one"
+    ],
+    "restraints": [
+      "Screening indications lack broad reimbursement, so the largest forecast growth has no payment mechanism attached to it yet",
+      "Sensitivity falls sharply at early stage and low tumour burden, which is precisely where screening value would have to come from",
+      "Laboratory-developed test regulation is unsettled, and a change in how the FDA treats LDTs would alter the cost structure of the whole category",
+      "Tissue biopsy remains the reference standard in guidelines for most first-line genotyping decisions",
+      "Published market sizes are too inconsistent to support capital planning, which slows institutional investment"
+    ],
+    "opportunities": [
+      "Minimal residual disease monitoring in resected disease, where the clinical question is well defined and the test is repeated several times per patient",
+      "Pharmaceutical partnerships and biopharma data contracts, which Guardant reports as a distinct revenue line and which do not depend on clinical reimbursement",
+      "Markets outside the United States where tissue biopsy infrastructure is thin and a blood draw is logistically easier than a procedure",
+      "Methylation and fragmentomic signatures that do not depend on detecting a specific mutation, widening the addressable indication set"
+    ],
+    "challenges": [
+      "No public, current measure of vendor share, so competitive claims in this category cannot be independently checked",
+      "The two regional splits in circulation -- 45.59% North America for 2024 and 54.57% for 2025, from different houses -- are nine points apart with no visible methodology",
+      "Demonstrating mortality benefit from screening requires trials that take longer than any published forecast horizon",
+      "Price compression: screening economics require a unit price a fifth of the therapy-selection rate, so volume growth and revenue growth diverge"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Circulating tumour DNA (ctDNA) assays",
+      "Circulating tumour cell (CTC) assays",
+      "Exosome and extracellular vesicle assays",
+      "Methylation and fragmentomic signature assays"
+    ],
+    "by_application": [
+      "Therapy selection in advanced solid tumours",
+      "Resistance mutation monitoring",
+      "Minimal residual disease and recurrence monitoring",
+      "Multi-cancer early detection screening",
+      "Clinical trial enrolment and biopharma research"
+    ],
+    "by_end_user": [
+      "Reference and specialty laboratories",
+      "Hospitals and academic medical centres",
+      "Pharmaceutical and biotechnology companies",
+      "Community oncology practices"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    {
+      "year": 2026,
+      "value": 8.03
+    },
+    {
+      "year": 2027,
+      "value": 9.15
+    },
+    {
+      "year": 2028,
+      "value": 10.42
+    },
+    {
+      "year": 2029,
+      "value": 11.87
+    },
+    {
+      "year": 2030,
+      "value": 13.52
+    },
+    {
+      "year": 2031,
+      "value": 15.4
+    },
+    {
+      "year": 2032,
+      "value": 17.54
+    }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Guardant Health",
+      "headquarters": "United States",
+      "market_position": "Incumbent in therapy-selection testing; the only pure-play with disclosed test volumes",
+      "description": "Reported $982.0 million of FY2025 revenue, of which $683.6 million was oncology on roughly 276,000 tests and $79.7 million was screening on roughly 87,000 Shield tests. Guardant360 CDx was the first FDA-approved liquid biopsy companion diagnostic, on 7 August 2020, and was approved in June 2026 as a companion diagnostic for zongertinib in HER2-mutant advanced NSCLC. Guardant reports 25 companion-diagnostic indications, a count of indications rather than of share. No market share percentage is publicly disclosed."
+    },
+    {
+      "company": "Foundation Medicine (Roche)",
+      "headquarters": "United States / Switzerland",
+      "market_position": "Incumbent, reached from comprehensive tissue genomic profiling",
+      "description": "FoundationOne Liquid CDx was approved by the FDA on 26 August 2020 and covers more than 300 genes, with companion indications that have accumulated across ovarian, breast, prostate and non-small cell lung cancer. Revenue is consolidated within Roche Diagnostics and is not separately disclosed, so neither its size nor its share can be stated."
+    },
+    {
+      "company": "Natera",
+      "headquarters": "United States",
+      "market_position": "Challenger, strongest in molecular residual disease rather than therapy selection",
+      "description": "Approaches the category from reproductive and transplant genetics and has built its oncology position on personalised, tumour-informed residual disease testing rather than on companion diagnostics. Liquid biopsy revenue is not broken out as a separate reported segment, and no share figure is public."
+    },
+    {
+      "company": "Exact Sciences",
+      "headquarters": "United States",
+      "market_position": "Challenger in screening; ownership changing",
+      "description": "Built on stool-based colorectal screening rather than blood, and extending into blood-based screening and residual disease. Abbott announced an agreement to acquire the company in its full-year 2025 results of 22 January 2026 and said it expected the transaction to close in the second quarter of 2026, which would place a large screening franchise inside a diagnostics major. No liquid biopsy share figure is public."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Guardant Health",
+      "year": 2026,
+      "event": "Guardant360 CDx approved by the FDA as a companion diagnostic for Boehringer Ingelheim's HERNEXEOS (zongertinib) in HER2-mutant advanced non-small cell lung cancer, announced 10 June 2026."
+    },
+    {
+      "company": "Abbott / Exact Sciences",
+      "year": 2026,
+      "event": "Abbott announced an agreement to acquire Exact Sciences in its fourth-quarter and full-year 2025 results of 22 January 2026, stating that it expected the transaction to close in the second quarter of 2026."
+    },
+    {
+      "company": "Guardant Health",
+      "year": 2026,
+      "event": "Reported FY2025 revenue of $982.0 million, up 33%, including $79.7 million of Shield screening revenue on approximately 87,000 tests, and guided 2026 revenue to $1.25-1.28 billion (19 February 2026)."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA premarket approval (PMA) for companion diagnostics: Guardant360 CDx approved 7 August 2020 and FoundationOne Liquid CDx approved 26 August 2020, each tied to specific drug labels rather than to a general diagnostic claim",
+    "CLIA certification under 42 CFR Part 493, which governs the laboratories that run the laboratory-developed tests carrying most of this market's revenue",
+    "CMS Clinical Laboratory Fee Schedule and the PAMA framework, which set the per-test rates that determine realisable revenue: $5,000 for code 0326U from 1 January 2024",
+    "Advanced Diagnostic Laboratory Test (ADLT) status, which sets an initial price from list and then resets it to the median private payer rate, as applied to Shield at $920 and subsequently $1,495",
+    "EU In Vitro Diagnostic Regulation (IVDR) 2017/746, which reclassified most cancer-related assays upward and requires notified body conformity assessment"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public filings, public registers and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Guardant Health, fourth-quarter and full-year 2025 results (19 February 2026) and Form 10-K for FY2025, SEC EDGAR CIK 1576280: $982.0M total revenue, $683.6M oncology on ~276,000 tests, $79.7M screening on ~87,000 Shield tests",
+      "Bray F. et al., Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries, CA Cancer J Clin (2024): close to 20 million new cancer cases worldwide",
+      "ClinicalTrials.gov API v2, query.term='liquid biopsy', retrieved 16 October 2026: 860 registered studies against 607,160 studies in the register",
+      "FDA premarket approval records and contemporaneous coverage for Guardant360 CDx (7 August 2020) and FoundationOne Liquid CDx (26 August 2020)",
+      "CMS Clinical Laboratory Fee Schedule determinations reported by 360Dx and GenomeWeb: $5,000 for code 0326U effective 1 January 2024; Shield at $920 effective 1 August 2024 and $1,495 under ADLT",
+      "Published market estimates from Precedence Research (2025), Fortune Business Insights, MarketsandMarkets, Towards Healthcare, Spherical Insights (15 November 2023), SkyQuest Technology (2024) and Data Bridge Market Research",
+      "Abbott Laboratories, fourth-quarter and full-year 2025 results, 22 January 2026, and Form 10-K for FY2025"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. The per-test figures in this report are a plausibility test: $683.6 million of Guardant Health oncology revenue divided by approximately 276,000 oncology tests gives $2,477, and dividing published market sizes by that price gives an implied annual test volume which is then compared with GLOBOCAN 2022 global cancer incidence of close to 20 million cases. That test shows the 25.9% and 28.61% series cannot describe therapy-selection testing, because they imply more tests per year than there are cancer diagnoses; it does not establish what the correct market size is and is not offered as an estimate. The divisor is one company's realised average selling price in one year, not an industry average, and realised prices outside the United States are materially lower. The 2026 base value is Precedence Research's published 2025 figure advanced one year at Precedence's own published rate, not a separately published observation."
+  },
+  "faqs": [
+    {
+      "question": "How big is the liquid biopsy market?",
+      "answer": "It depends on what is being counted. On the therapy-selection definition used by the most recently based published series, $8.03 billion in 2026 rising to $17.54 billion by 2032 at 13.91%. At the same 2024 base year, published figures run from $2.21 billion to $9.63 billion, a 4.36x spread, and 2034 forecasts run from $8.72 billion to $106.49 billion."
+    },
+    {
+      "question": "Why do published liquid biopsy estimates differ so much?",
+      "answer": "For two separate reasons. The base years differ 4.36x because some houses count only in-vitro-diagnostic product revenue while others count laboratory service revenue, which is where nearly all the money is. The growth rates differ 2.55x because the high-rate houses are forecasting population screening for cancer in asymptomatic people, and the low-rate houses are forecasting genotyping of patients who already have a diagnosis."
+    },
+    {
+      "question": "How can you tell which forecasts assume population screening?",
+      "answer": "Divide the forecast by a disclosed price per test. Guardant Health's FY2025 figures give $683.6 million over roughly 276,000 oncology tests, or $2,477 per test. Fortune Business Insights' $106.49 billion 2034 forecast divided by that price implies 43.0 million tests a year, against close to 20 million new cancer cases worldwide in GLOBOCAN 2022. No therapy-selection market can run 2.15 tests per newly diagnosed patient per year."
+    },
+    {
+      "question": "Who leads the liquid biopsy market?",
+      "answer": "Guardant Health is the only participant that discloses test volumes and liquid-biopsy-specific revenue, at $982.0 million in FY2025. Foundation Medicine's revenue is consolidated inside Roche Diagnostics and Natera does not break out a liquid biopsy segment, so no share percentages exist for any of them. Any share figure you are shown for this market should be treated as unsourced."
+    },
+    {
+      "question": "Is liquid biopsy reimbursed?",
+      "answer": "Therapy-selection testing is. CMS set Guardant360's Clinical Laboratory Fee Schedule rate at $5,000 for code 0326U effective 1 January 2024. Screening is at an earlier stage: Shield was priced at $920 by Medicare from 1 August 2024 and subsequently $1,495 under Advanced Diagnostic Laboratory Test status. Broad screening reimbursement is the single assumption that separates the low forecasts from the high ones."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because the two regional figures in public circulation contradict each other. One house puts North America at 45.59% of 2024 and another at 54.57% of 2025, nine points apart, with no visible methodology for either. Publishing a regional table would mean choosing between two unexplained numbers or inventing a third, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates spread 4.36x at the same 2024 year, from $2.21 billion to $9.63 billion",
+    "Published CAGRs spread 2.55x, from 11.21% to 28.61% -- so unlike most markets, the growth rate is contested too",
+    "Guardant Health's disclosed FY2025 figures give $2,477 per therapy-selection test and $916 per screening test",
+    "Fortune Business Insights' $106.49 billion 2034 forecast implies 43.0 million tests a year, 2.15x global annual cancer incidence",
+    "That arithmetic rules out a therapy-selection reading of the high forecasts: they assume population screening",
+    "Revenue here is laboratory service revenue, not product revenue, which is why product-scope estimates land near $2 billion",
+    "No vendor discloses market share, and the two circulating regional splits are nine points apart"
+  ],
+  "reader_takeaways": [
+    "Before comparing two liquid biopsy forecasts, establish whether each one is counting therapy selection or population screening, because that decision moves the 2034 endpoint by more than 12x",
+    "Treat a product-scope figure near $2 billion and a service-scope figure near $9 billion as answers to different questions, not as a disagreement",
+    "Model the screening case as a reimbursement question, not a technology question: at the disclosed $916 screening price the high forecast needs 116 million tests a year",
+    "Treat any liquid biopsy vendor share percentage you are shown as unsourced, because no company in this category discloses one",
+    "Watch the CLFS and ADLT rate-setting calendar more closely than the assay pipeline, since a single code determination moves realisable revenue more than most technical advances"
+  ],
+  "seo": {
+    "meta_title": "Liquid Biopsy Market Size and Forecast to 2032",
+    "meta_description": "Liquid biopsy estimates spread 4.36x at the same base year and 2.55x on growth. A per-test test against Guardant's disclosed volumes shows why.",
+    "keywords": [
+      "liquid biopsy market",
+      "liquid biopsy market size",
+      "ctDNA testing market",
+      "circulating tumour DNA",
+      "multi-cancer early detection",
+      "companion diagnostics",
+      "liquid biopsy forecast 2032"
+    ]
+  }
+}

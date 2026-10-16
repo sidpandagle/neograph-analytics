@@ -215,6 +215,28 @@ export function checkDraft(d, { knownSlugs } = {}) {
     if (!c.data_source) errors.push(`chart "${c.title}" has no data_source`);
   }
 
+  // The renderer reads `event`; a draft that calls the field `development`
+  // renders the company and year with an empty paragraph under them. Caught
+  // after the first batch did exactly that.
+  for (const r of d.recent_developments ?? []) {
+    if (!r?.event) {
+      errors.push(
+        `recent_developments entry for ${r?.company ?? '?'} has no \`event\` field` +
+          (r?.development ? ' (found `development` — the renderer reads `event`)' : '')
+      );
+    }
+    if (!r?.company || !Number.isInteger(r?.year)) {
+      errors.push('each recent_developments entry needs a company and an integer year');
+    }
+  }
+
+  // U+FFFD means a source was decoded with the wrong codec somewhere upstream;
+  // "bioM<?>rieux" reached a draft that way. It must never reach a reader.
+  const whole = JSON.stringify(d);
+  if (whole.includes('�')) {
+    errors.push('contains U+FFFD replacement characters — a mis-decoded source, repair the text');
+  }
+
   if (knownSlugs?.has(d.slug)) warnings.push('slug already in the corpus — publish will overwrite that row');
 
   return { errors, warnings };

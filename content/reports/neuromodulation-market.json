@@ -1,0 +1,260 @@
+{
+  "report_id": "neuromodulation-market",
+  "slug": "neuromodulation-market",
+  "title": "Neuromodulation Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 9.42,
+    "forecast_value": 16.1,
+    "cagr": 9.35
+  },
+  "executive_summary": "Most market-research disagreements are disagreements about scope: the houses start in different places and grow at much the same rate. Neuromodulation is the inverse case. Published base-year values run from $5.9 billion for 2025 to $8.99 billion for 2024, a spread of only 1.52x, while published compound growth rates run from 4.4% to 12.17%, a spread of 2.77x. The entire 2.71x range at 2032 -- $8.0 billion against $21.64 billion -- is produced by the rate rather than the starting point. Everyone broadly agrees what this market is today. Nobody agrees how fast it grows.\n\nThat makes the usual explanation insufficient, so the question has to be settled against disclosed revenue. Two companies publish a neuromodulation line. Medtronic reported $1.93 billion for fiscal 2025, up 11%, driven by pain stimulation and the Inceptiv closed-loop spinal cord stimulator. Boston Scientific's disclosed figures add to $1,198 million for calendar 2025 -- $866 million for the nine months to 30 September plus $332 million in the fourth quarter. Together, $3.128 billion.\n\nSet that against the high estimate. For Data Bridge's $8.99 billion to hold, $5.86 billion of annual neuromodulation revenue must sit outside those two companies -- 1.87 times their combined disclosed total. Abbott is the named third implantable vendor but does not break out neuromodulation at all, disclosing only that sales grew 7% in the third quarter of 2025 on the Eterna rechargeable stimulator, so it is excluded here and the combined share of the three cannot be computed. Even generously, no public filing evidences a participant of the scale the high figures require in implantable neurostimulation.\n\nThe conclusion is that the high estimates cannot be implantable-only. They must include external and non-implantable stimulation -- transcutaneous nerve stimulation, transcranial magnetic and direct current stimulation, wearables -- a consumer-adjacent category with genuinely faster growth. That is also what explains the 2.77x rate spread: a growth rate forecast for the external segment is being applied to a whole-market base.",
+  "market_context": "Neuromodulation is the business of changing nervous system activity with delivered electricity. Clinically it divides into three established implantable applications -- spinal cord stimulation for chronic pain, deep brain stimulation for movement disorders, and sacral and tibial stimulation for pelvic and urological indications -- and a much larger, looser set of external modalities that stimulate through the skin or skull without surgery.\n\nThe implantable half has the economics of implantable cardiology: a surgical procedure, a capital pulse generator, leads, a programming relationship, a replacement cycle set by battery life, and reimbursement determined by procedure codes rather than by device price. It is also, by the disclosed numbers, an oligopoly. Medtronic and Boston Scientific between them disclosed $3.128 billion in 2025, and Abbott is the third participant. Entry requires a clinical evidence base, a surgeon-training channel and a payer coverage position, which is why the segment's challengers are specialists rather than scale competitors -- and why Boston Scientific's 2025 expansion came through acquiring Nalu Medical and agreeing to acquire Valencia Technologies rather than through organic entry into new indications.\n\nThe external half has none of those constraints. A transcutaneous stimulator can be sold without surgery, often without reimbursement and sometimes without a prescription. Its growth rate is a function of consumer demand and distribution rather than of surgical capacity and coverage policy. Treating the two halves as one market is defensible only if the report says which half it is forecasting, and almost none of the published estimates does.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 9.35% rate. DelveInsight publishes $7,862.04 million for 2024 and $16,111.10 million for 2032 at a stated 9.44% over 2025-2032. The 2026 base of $9.42 billion is the published 2024 value advanced two years at that published rate; the 2032 endpoint is DelveInsight's own published figure, unmodified. Over the 2026-2032 window those two values reconcile at 9.35%, and the 0.09-point difference from the firm's stated 9.44% is the arithmetic consequence of anchoring on their published endpoint rather than extrapolating past it. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen for three reasons. It has both an explicit base-year value and an explicit endpoint inside the forecast window. Its base sits in the $5.9 billion to $7.9 billion cluster that the disclosed-revenue test rules in as coherent. And its rate sits between the implantable-only floor of 4.4% and the external-inclusive ceiling of 12.17%, which is the honest position for a series whose scope is stated as devices without further qualification.\n\nReaders modelling implantable neurostimulation alone should anchor lower and slower -- near iData Research's $5.9 billion for 2025 at 4.4%, or Zion Market Research's 6.1% -- because that is the segment whose participants disclose revenue and whose growth can be checked. Readers who want the 11.60% or 12.17% rates should establish first what share of their base is external stimulation, because that is the assumption those rates are actually about, and no published source quantifies it.",
+  "market_overview": {
+    "summary": "Neuromodulation is $9.42 billion in 2026 on the published series with the clearest base and endpoint, projected to $16.10 billion by 2032 at a 9.35% CAGR. The published literature on this market is the inverse of most: base-year values agree to within 1.52x while growth rates spread 2.77x, from 4.4% to 12.17%. Disclosed revenue explains why. Medtronic and Boston Scientific together disclosed $3.128 billion in 2025, so the high estimates require $5.86 billion of revenue outside them -- 1.87 times their combined total -- which no public filing accounts for in implantable neurostimulation. The high figures must include external, non-implantable stimulation.",
+    "key_trends": [
+      "Base-year estimates spread only 1.52x ($5.9B to $8.99B) while published CAGRs spread 2.77x (4.4% to 12.17%) -- the inverse of most market literature",
+      "Medtronic disclosed $1.93 billion of fiscal 2025 neuromodulation net sales, up 11%, within a $9.8 billion Neuroscience portfolio",
+      "Boston Scientific's disclosed 2025 figures add to $1,198 million: $866 million for nine months plus $332 million in the fourth quarter",
+      "The high estimates require $5.86 billion of revenue outside those two companies, 1.87x their combined disclosed total",
+      "Abbott, the named third implantable vendor, does not break out neuromodulation revenue, so the combined share of the three cannot be computed",
+      "Boston Scientific expanded by acquisition in 2025, completing Nalu Medical and announcing an agreement for Valencia Technologies, rather than entering new indications organically"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in chronic pain and movement disorders; early in most other indications"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Opioid substitution policy, which has made spinal cord stimulation a funded alternative for chronic pain rather than a last resort",
+      "Closed-loop stimulation that adjusts output to a measured neural response, exemplified by Medtronic's Inceptiv launch, which the company cited as a driver of 11% fiscal 2025 growth",
+      "A replacement cycle set by battery life, which generates predictable revenue from the existing implanted population independent of new patients",
+      "Rechargeable systems that extend device life and reduce replacement surgery, improving the clinical case without reducing the revenue per patient",
+      "Indication expansion into refractory epilepsy, treatment-resistant depression and pelvic indications, each with its own evidence base and coverage decision"
+    ],
+    "restraints": [
+      "Implantation requires surgical capacity, a trained implanter and a payer coverage position, none of which scales at consumer speed",
+      "Published growth rates disagree 2.77x, so this market cannot support capital planning without first resolving which segment is being forecast",
+      "Explant and revision rates in spinal cord stimulation remain a live clinical criticism of the category and a constraint on referral growth",
+      "Reimbursement is set by procedure codes rather than device performance, so a better device does not necessarily command a better price",
+      "Abbott's non-disclosure of neuromodulation revenue means roughly a third of the implantable market is financially opaque to any outside analyst"
+    ],
+    "opportunities": [
+      "External and non-implantable stimulation, which carries the growth rates the high forecasts assume and needs neither surgery nor, often, reimbursement",
+      "Treatment-resistant psychiatric indications, where the unmet need is large and the evidence base is now accumulating in registered trials",
+      "Acquiring specialist platforms rather than developing them, the route Boston Scientific took with Nalu Medical and Valencia Technologies in 2025",
+      "Markets outside the United States, where Abbott attributed its third-quarter 2025 neuromodulation growth specifically to international performance of the Eterna rechargeable stimulator"
+    ],
+    "challenges": [
+      "No participant discloses a neuromodulation market share, and one of the three implantable vendors discloses no revenue figure at all",
+      "No published source splits implantable from external neuromodulation, which is precisely the split that determines whether a 12.17% rate is credible",
+      "Volume evidence for spinal cord stimulation is fragmentary: available figures count worldwide procedures, US procedures, devices sold and two decades of Medicare operations, and are not comparable with one another",
+      "Demonstrating durable benefit in new indications requires trial horizons longer than the forecast period in any published estimate"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Spinal cord stimulation",
+      "Deep brain stimulation",
+      "Sacral and tibial nerve stimulation",
+      "Vagus nerve stimulation",
+      "Responsive and closed-loop neurostimulation",
+      "External and transcutaneous stimulation",
+      "Transcranial magnetic and direct current stimulation"
+    ],
+    "by_application": [
+      "Chronic pain",
+      "Parkinson's disease and essential tremor",
+      "Epilepsy",
+      "Urinary and faecal incontinence",
+      "Treatment-resistant depression and obsessive-compulsive disorder",
+      "Dystonia and movement disorders",
+      "Migraine and headache"
+    ],
+    "by_end_user": [
+      "Hospitals and neurosurgical centres",
+      "Ambulatory surgical centres",
+      "Specialist pain clinics",
+      "Neurology and psychiatry outpatient practices",
+      "Home and self-administered use (external devices)"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    {
+      "year": 2026,
+      "value": 9.42
+    },
+    {
+      "year": 2027,
+      "value": 10.3
+    },
+    {
+      "year": 2028,
+      "value": 11.26
+    },
+    {
+      "year": 2029,
+      "value": 12.31
+    },
+    {
+      "year": 2030,
+      "value": 13.47
+    },
+    {
+      "year": 2031,
+      "value": 14.73
+    },
+    {
+      "year": 2032,
+      "value": 16.1
+    }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Medtronic",
+      "headquarters": "Ireland / United States",
+      "market_position": "Largest disclosed participant across spinal cord and deep brain stimulation",
+      "description": "Disclosed Neuromodulation net sales of $1.93 billion for fiscal 2025 (year ended 25 April 2025), against $1.75 billion in fiscal 2024, a 10.7% reported increase; the Form 10-K states the line rose 11%, driven by Pain Stimulation and the continued launch of the Inceptiv closed-loop spinal cord stimulator, within a Neuroscience portfolio of $9.8 billion. This is the largest disclosed neuromodulation revenue figure in the industry. No market share percentage is publicly disclosed."
+    },
+    {
+      "company": "Boston Scientific",
+      "headquarters": "United States",
+      "market_position": "Second disclosed participant; strongest recent growth and the most acquisitive",
+      "description": "Disclosed $866 million of Neuromodulation net sales for the nine months to 30 September 2025, 6% of consolidated net sales and up 7.4%, plus $332 million in the fourth quarter against $299 million a year earlier, giving $1,198 million for calendar 2025. Full-year organic growth was stated at 8%, with the brain franchise up low double digits and the pain franchise up high single digits. Completed the acquisition of Nalu Medical and announced an agreement to acquire Valencia Technologies, maker of the eCoin tibial nerve stimulation system. No share percentage is publicly disclosed."
+    },
+    {
+      "company": "Abbott",
+      "headquarters": "United States",
+      "market_position": "Named third implantable vendor; revenue not disclosed",
+      "description": "Universally identified as the third of the three implantable neurostimulation vendors, with the Eterna rechargeable spinal cord stimulator and a deep brain stimulation portfolio. Abbott does not break out neuromodulation in its segment reporting and disclosed only that neuromodulation sales grew 7% year over year in the third quarter of 2025, led by Eterna in international markets, with no dollar figure. Its revenue is therefore excluded from the arithmetic in this report, and the combined share of the three implantable vendors cannot be computed."
+    },
+    {
+      "company": "LivaNova",
+      "headquarters": "United Kingdom",
+      "market_position": "Specialist incumbent in vagus nerve stimulation",
+      "description": "The established vagus nerve stimulation participant, in refractory epilepsy and in treatment-resistant depression, which is a coverage question rather than a technology question. Occupies an indication the three large implantable vendors do not lead, which is the characteristic shape of a challenger position in this market. No neuromodulation share figure is public."
+    },
+    {
+      "company": "NeuroPace",
+      "headquarters": "United States",
+      "market_position": "Specialist in responsive neurostimulation for epilepsy",
+      "description": "Built entirely around responsive neurostimulation, which detects electrographic activity and stimulates in response rather than on a fixed schedule -- the clearest commercial example of the closed-loop principle that the larger vendors are now adopting in pain. Illustrates why challengers in this market are indication specialists rather than scale competitors. No share figure is public."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Medtronic",
+      "year": 2025,
+      "event": "Reported fiscal 2025 Neuromodulation net sales of $1.93 billion, up from $1.75 billion in fiscal 2024, attributing the 11% increase to Pain Stimulation and the continued launch of the Inceptiv closed-loop spinal cord stimulator (Form 10-K and fourth-quarter earnings release, 20 May 2025)."
+    },
+    {
+      "company": "Boston Scientific",
+      "year": 2026,
+      "event": "Reported fourth-quarter 2025 Neuromodulation net sales of $332 million against $299 million a year earlier, and full-year neuromodulation organic growth of 8%, with the brain franchise up low double digits and the pain franchise up high single digits (results release, 4 February 2026)."
+    },
+    {
+      "company": "Boston Scientific",
+      "year": 2026,
+      "event": "Confirmed completion of the acquisition of Nalu Medical, developer of the Nalu Neuromodulation System, and announced an agreement to acquire Valencia Technologies, maker of the eCoin tibial nerve stimulation system, subject to customary closing conditions (results release, 4 February 2026)."
+    },
+    {
+      "company": "Abbott",
+      "year": 2025,
+      "event": "Reported that neuromodulation sales grew 7% year over year in the third quarter of 2025, led by the performance of the Eterna rechargeable spinal cord stimulation device in international markets, without disclosing a dollar figure for the business."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA premarket approval (PMA) for implantable neurostimulators, which are Class III devices requiring clinical evidence of safety and effectiveness for each indication, with PMA supplements for changes to an approved system",
+    "FDA Investigational Device Exemption (IDE) for trials of new indications, which is the gate every indication expansion in this market must pass",
+    "CMS National and Local Coverage Determinations for spinal cord stimulation and deep brain stimulation, which determine whether an approved device is paid for and therefore whether it is implanted",
+    "Medicare physician fee schedule and hospital outpatient prospective payment procedure codes, which set the reimbursement for implantation and revision and thereby the economics of the procedure rather than of the device",
+    "FDA Class II regulation and 510(k) clearance for most external and transcutaneous stimulators, a materially lower evidential burden than the PMA pathway governing implantables -- the regulatory reason the two halves of this market grow at different rates",
+    "EU Medical Device Regulation (MDR) 2017/745, under which active implantable neurostimulators are Class III and require notified body conformity assessment and post-market clinical follow-up"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of SEC filings, audited results releases, peer-reviewed utilisation studies and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Medtronic plc, Form 10-K for fiscal 2025 (year ended 25 April 2025), SEC EDGAR CIK 1613103, and fourth-quarter earnings release exhibit 99.1 of 20 May 2025: Neuromodulation net sales $1.93 billion against $1.75 billion, +11%; Neuroscience portfolio $9.8 billion, +5%",
+      "Boston Scientific Corporation, Form 10-Q for the quarter ended 30 September 2025, SEC EDGAR CIK 885725: nine-month Neuromodulation net sales $866 million, 6% of consolidated net sales, +7.4%",
+      "Boston Scientific Corporation, fourth-quarter and full-year 2025 results, 4 February 2026: Q4 Neuromodulation $332 million against $299 million, +11.1% reported and +9.9% operational; full-year organic growth 8%; Nalu Medical acquisition completed and Valencia Technologies agreement announced",
+      "Abbott Laboratories, third-quarter 2025 neuromodulation commentary: +7% year over year led by Eterna in international markets, with no dollar figure disclosed",
+      "Journal of Pain Research (July 2020), Medicare Part B spinal cord stimulator utilisation 2000-2019: 992,372 percutaneous and 99,736 open operations approved; annual placement rates peaked in 2013",
+      "Vanderbilt University Medical Center (24 February 2022): approximately 34,000 spinal cord stimulator implants per year worldwide, about half in North America; Medtech 360 via Becker's Spine Review: approximately 110,000 SCS implants sold, up 20,000 from 2017",
+      "Published market estimates from iData Research (2025), DelveInsight, Data Bridge Market Research, Zion Market Research, Precedence Research and Meticulous Research"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. The grounding test adds the only two disclosed neuromodulation revenue lines in the industry -- Medtronic's $1.930 billion for fiscal 2025 and Boston Scientific's $1.198 billion for calendar 2025, itself the sum of a disclosed $866 million nine-month figure and a disclosed $332 million fourth quarter -- to $3.128 billion, and compares that with the published base-year sizes. For the highest published base of $8.99 billion to hold, $5.86 billion must sit outside those two companies, 1.87 times their combined disclosed total; this rules out an implantable-only reading of the high estimates and indicates they include external, non-implantable stimulation. Abbott is the named third implantable vendor but discloses no neuromodulation revenue figure, so it is excluded from the calculation and the combined share of the three cannot be computed. A secondary order-of-magnitude check divides the $3.128 billion by approximately 110,000 spinal cord stimulator devices sold to give roughly $28,400 per device, which is consistent with a pulse generator and leads at system level; this check is weak because the revenue also contains deep brain and sacral stimulation and because the available volume figures count four different things -- worldwide procedures, US procedures, devices sold and two decades of cumulative Medicare operations -- and must not be combined into a single series. Both calculations are plausibility tests, not market estimates, and neither establishes the correct market size. The 2026 base value is DelveInsight's published 2024 figure advanced two years at DelveInsight's own published rate, not a separately published observation."
+  },
+  "faqs": [
+    {
+      "question": "How big is the neuromodulation market?",
+      "answer": "About $9.42 billion in 2026, projected to $16.10 billion by 2032 at 9.35%, on the published series with the clearest base and endpoint. Published base years run from $5.9 billion for 2025 to $8.99 billion for 2024, a narrow 1.52x spread, while 2032 endpoints run from $8.0 billion to $21.64 billion, a 2.71x spread produced almost entirely by the growth rate rather than the starting point."
+    },
+    {
+      "question": "Why do published neuromodulation growth rates differ so much?",
+      "answer": "Because the high rates are being forecast for a different segment than the base they are applied to. Implantable neurostimulation is a reimbursement-constrained surgical oligopoly; external and transcutaneous stimulation needs no surgery, often no reimbursement and sometimes no prescription, and grows at consumer speed. Published CAGRs run 4.4% to 12.17%, and that 2.77x spread tracks how much external stimulation each house is implicitly counting."
+    },
+    {
+      "question": "How can you tell which estimates include external, non-implantable devices?",
+      "answer": "By checking them against disclosed revenue. Medtronic disclosed $1.93 billion of neuromodulation net sales for fiscal 2025 and Boston Scientific's disclosed 2025 figures add to $1,198 million, $3.128 billion together. For the highest published base of $8.99 billion to hold, $5.86 billion must sit outside those two companies -- 1.87 times their combined total -- and no public filing accounts for a participant of that scale in implantable neurostimulation."
+    },
+    {
+      "question": "Who leads the neuromodulation market, and what share do the big three hold?",
+      "answer": "Medtronic is the largest disclosed participant at $1.93 billion in fiscal 2025, followed by Boston Scientific at $1,198 million in 2025. Abbott is the named third implantable vendor but does not break out neuromodulation revenue at all -- it disclosed only 7% third-quarter 2025 growth led by Eterna internationally. The combined share of the three therefore cannot be computed, and no participant publishes a share percentage."
+    },
+    {
+      "question": "How many spinal cord stimulators are implanted each year?",
+      "answer": "The public evidence is fragmentary and the available figures are not comparable. One source gives approximately 34,000 implants per year worldwide with about half in North America; another gives approximately 60,000 surgically implanted per year in the United States; a market dataset counts approximately 110,000 devices sold in a year. Medicare Part B data record 992,372 percutaneous and 99,736 open operations approved cumulatively across 2000 to 2019. These count worldwide procedures, US procedures, devices sold and two decades of claims respectively, and must not be presented as one series."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no named source publishes a regional split for this market. The only geographic disclosure available is qualitative -- Abbott attributing its third-quarter 2025 neuromodulation growth to international markets -- which is not a split. Publishing a regional table would mean inventing one, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates spread only 1.52x while published CAGRs spread 2.77x (4.4% to 12.17%) -- the inverse of most market literature",
+    "Medtronic disclosed $1.93 billion of fiscal 2025 neuromodulation net sales, up 11% on the Inceptiv closed-loop launch and pain stimulation",
+    "Boston Scientific's disclosed 2025 figures add to $1,198 million, giving $3.128 billion across the two companies that disclose",
+    "The highest published base requires $5.86 billion of revenue outside those two, 1.87x their combined disclosed total",
+    "That rules out an implantable-only reading of the high estimates: they must include external and transcutaneous stimulation",
+    "Abbott, the named third implantable vendor, discloses no neuromodulation revenue, so the big three's combined share cannot be computed",
+    "The $3.128 billion over approximately 110,000 spinal cord stimulators sold is roughly $28,400 per device, consistent with a generator and leads"
+  ],
+  "reader_takeaways": [
+    "Resolve the implantable-versus-external question before accepting any neuromodulation growth rate, because that single decision accounts for the whole 4.4% to 12.17% range",
+    "Check any base-year figure against the $3.128 billion the two disclosing companies actually booked in 2025: anything above about $8 billion requires revenue nobody files",
+    "Model implantable neurostimulation as a reimbursement-constrained oligopoly growing in the mid single digits, and external stimulation as a separate, faster, consumer-adjacent business",
+    "Treat any big-three share percentage as unsourced, since one of the three publishes no neuromodulation revenue figure at all",
+    "Do not combine the circulating spinal cord stimulation volume figures: they count worldwide procedures, US procedures, devices sold and cumulative Medicare claims, and only look like a trend"
+  ],
+  "seo": {
+    "meta_title": "Neuromodulation Market Size and Forecast to 2032",
+    "meta_description": "Neuromodulation estimates agree 1.52x on size but spread 2.77x on growth. Disclosed Medtronic and Boston Scientific revenue shows which rate holds.",
+    "keywords": [
+      "neuromodulation market",
+      "neuromodulation market size",
+      "spinal cord stimulation market",
+      "deep brain stimulation market",
+      "neurostimulation devices",
+      "closed-loop neurostimulation",
+      "neuromodulation forecast 2032"
+    ]
+  }
+}

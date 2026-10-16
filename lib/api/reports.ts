@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase/client';
 import type { Report, ReportFilters } from './reports.types';
 import type { ApiResponse } from './config';
+import { marketValue } from '@/lib/format';
 
 function rowToReport(row: Record<string, unknown>, index: number): Report {
   const ms = (row.market_size ?? {}) as Record<string, number>;
@@ -24,8 +25,8 @@ function rowToReport(row: Record<string, unknown>, index: number): Report {
     reportCode: row.report_id as string,
     baseYear: String(row.base_year),
     forecastPeriod: row.forecast_period as string,
-    marketSize2024: `$${(ms.current_value ?? 0).toFixed(1)}B`,
-    marketSize2032: `$${(ms.forecast_value ?? 0).toFixed(1)}B`,
+    marketSize2024: marketValue(ms.current_value, row.unit),
+    marketSize2032: marketValue(ms.forecast_value, row.unit),
     cagr: `${ms.cagr ?? 0}%`,
     overview: (mo.summary as string) || '',
     keyFindings: (mo.key_trends as string[]) || [],
@@ -109,7 +110,7 @@ export async function searchReports(
  * so the two callers that only need the surface get their own projection.
  */
 const CARD_COLUMNS =
-  'slug,title,meta_title,meta_description,meta_keywords,industry,published_year,report_id,base_year,forecast_period,market_size';
+  'slug,title,meta_title,meta_description,meta_keywords,industry,published_year,report_id,base_year,forecast_period,market_size,unit,currency';
 
 const SITEMAP_COLUMNS = 'slug,published_year';
 

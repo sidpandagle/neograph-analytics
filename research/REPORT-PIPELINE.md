@@ -15,16 +15,16 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 
 | # | Slug | Industry | Round | State |
 |---|---|---|---|---|
-| 1 | liquid-biopsy-market | Life Sciences | 1A | drafting |
-| 2 | point-of-care-diagnostics-market | Medical Devices | 1A | drafting |
-| 3 | antimicrobial-resistance-diagnostics-market | Life Sciences | 1A | drafting |
-| 4 | neuromodulation-market | Medical Devices | 1A | drafting |
-| 5 | brain-computer-interface-market | Medical Devices | 1A | drafting |
-| 6 | radiopharmaceuticals-market | Pharmaceuticals | 1B | drafting |
-| 7 | car-t-cell-therapy-market | Biotechnology | 1B | drafting |
-| 8 | bispecific-antibodies-market | Biotechnology | 1B | drafting |
-| 9 | glp-1-receptor-agonists-market | Pharmaceuticals | 1B | drafting |
-| 10 | phage-therapy-market | Biotechnology | 1B | drafting |
+| 1 | liquid-biopsy-market | Life Sciences | 1A | published |
+| 2 | point-of-care-diagnostics-market | Medical Devices | 1A | published |
+| 3 | antimicrobial-resistance-diagnostics-market | Life Sciences | 1A | published |
+| 4 | neuromodulation-market | Medical Devices | 1A | published |
+| 5 | brain-computer-interface-market | Medical Devices | 1A | published |
+| 6 | radiopharmaceuticals-market | Pharmaceuticals | 1B | published |
+| 7 | car-t-cell-therapy-market | Biotechnology | 1B | published |
+| 8 | bispecific-antibodies-market | Biotechnology | 1B | published |
+| 9 | glp-1-receptor-agonists-market | Pharmaceuticals | 1B | published |
+| 10 | phage-therapy-market | Biotechnology | 1B | published |
 | 11 | single-cell-sequencing-market | Life Sciences | 2A | queued |
 | 12 | spatial-biology-market | Life Sciences | 2A | queued |
 | 13 | proteomics-market | Life Sciences | 2A | queued |
@@ -63,4 +63,21 @@ than no report.
 
 ## Published from this expansion
 
-(none yet)
+**Round 1 — 10 reports, published 2026-10-16. Corpus 142 -> 152.**
+
+| Slug | Base -> forecast | CAGR | Estimate spread | Grounding |
+|---|---|---|---|---|
+| liquid-biopsy-market | $8.03B -> $17.54B | 13.91% | 4.36x base, 2.55x CAGR | Guardant FY2025 $683.6M / ~276k tests = $2,477/test; the top forecast implies 43.0M tests/yr against ~20M annual cancer cases (GLOBOCAN 2022) |
+| point-of-care-diagnostics-market | $35.17B -> $52.78B | 7.00% | 11.0x base, 1.37x CAGR | CMS CLIA Sept 2026: 255,184 waived + PPM sites; $53.1B over them = $208,087/site/yr |
+| antimicrobial-resistance-diagnostics-market | $5.28B -> $7.60B | 6.26% | 1.54x (bases agree to 1.02x) | bioMérieux microbiology ~$1.40B = 31.5% of the whole published market |
+| neuromodulation-market | $9.42B -> $16.10B | 9.35% | 1.52x base, **2.77x CAGR** | Medtronic $1.930B + Boston Scientific $1.198B = $3.128B disclosed; the remainder is 1.87x their combined total |
+| brain-computer-interface-market | $795.3M -> $2,252.5M | 18.95% | **9.16x base** | ClinicalTrials.gov 265 BCI studies; $262M/study = $989k, $2.40B/study = $9.06M; no approved implant |
+| radiopharmaceuticals-market | $8.08B -> $12.49B | 7.53% | 1.78x base, **3.35x CAGR** | Pluvicto + Lutathera + Pylarify + Telix = $4.43B = 76% of the lowest published whole market |
+| car-t-cell-therapy-market | $5.53B -> $12.53B | 14.6% | 1.19x base, 2.97x CAGR | Five disclosed products sum to $5.53B, **exceeding every published market size** |
+| bispecific-antibodies-market | $14.45B -> $32.90B | 14.7% | 3.49x base | Oncology bispecifics $3.79B + Hemlibra/Vabysmo $10.66B = $14.45B, 74% non-oncology |
+| glp-1-receptor-agonists-market | $71.94B -> $142.76B | 12.1% | **24.2x base** | Novo DKK 234,549m + Lilly $36,507m = $71.94B disclosed, above three of five published market sizes |
+| phage-therapy-market | $66.5M -> $167.93M | 16.7% | **33.2x base** | No US/EU marketing authorisation; 124 registered studies; the top figure implies $10.3M per study |
+
+Every one of the ten: `regional_analysis` and `country_analysis` empty, no vendor
+market shares anywhere, base years derived from a named publisher's own figure
+advanced at that publisher's own rate, and the derivation stated on the page.

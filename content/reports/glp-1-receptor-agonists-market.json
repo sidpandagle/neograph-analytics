@@ -1,0 +1,214 @@
+{
+  "report_id": "glp-1-receptor-agonists-market",
+  "slug": "glp-1-receptor-agonists-market",
+  "title": "GLP-1 Receptor Agonists Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 71.94,
+    "forecast_value": 142.76,
+    "cagr": 12.1
+  },
+  "market_overview": {
+    "summary": "This is the rare market that can be measured rather than estimated. Novo Nordisk and Eli Lilly disclose GLP-1 brand revenue in audited filings, and for FY2025 those disclosures sum to $71.94 billion - more than three of the five published market sizes for the same class. Published 2025 estimates run from $2.6 billion to $62.86 billion, a 24.2x spread, with no scope ambiguity to explain it. This report takes the disclosed revenue as the 2026 base and the lowest mainstream published growth rate, 12.1%, giving $142.76 billion by 2032.",
+    "key_trends": [
+      "Disclosed FY2025 GLP-1 brand revenue of Novo Nordisk and Eli Lilly is $71.94 billion, which exceeds three of the five published market sizes for the class",
+      "Published 2025 estimates spread 24.2x ($2.6 billion to $62.86 billion) even though the class has a clean pharmacological definition and brand-level public disclosure",
+      "Tirzepatide is now larger than semaglutide in dollar terms at Lilly: Mounjaro grew 99% to $22,965 million and Zepbound 175% to $13,542 million in FY2025",
+      "Novo's GLP-1 portfolio reached DKK 234,549 million in FY2025, with Wegovy at DKK 79,106 million and Ozempic at DKK 127,089 million",
+      "Only Grand View Research's back-solved 2025 base of about $69.8 billion survives comparison with the filings, agreeing within 3%",
+      "Applying the highest published rate, 17.5%, to the correctly measured base implies $189 billion by 2032 - roughly 2.63x the two companies' current combined GLP-1 revenue"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Mass-market in type 2 diabetes, rapidly scaling in obesity"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Obesity indications turning a diabetes class into a far larger prescribing population: Zepbound grew 175% and reached $13,542 million in FY2025",
+      "Cardiovascular and renal outcome labels that move GLP-1 therapy from glycaemic control to risk reduction",
+      "Oral formulations, which remove the injection barrier and lower cost of goods per course",
+      "Manufacturing capacity additions by both leaders, which converted a supply-limited market into a demand-limited one",
+      "Expanding payer and employer coverage of obesity treatment, which determines realisable volume more than clinical demand does"
+    ],
+    "restraints": [
+      "Price realisation is falling as access widens: Lilly reported a 5% negative price effect on Q4 2025 revenue even as volume rose 46%",
+      "Within-portfolio cannibalisation is visible - Trulicity declined 17% in Q4 2025 as patients switched to Mounjaro",
+      "Payer coverage of obesity indications remains discretionary in many plans and is the binding constraint on volume",
+      "Discontinuation rates within the first year limit revenue per patient relative to a chronic-therapy assumption",
+      "Semaglutide loses exclusivity in several markets within the forecast period, which no published forecast appears to price"
+    ],
+    "opportunities": [
+      "Orforglipron and other oral small-molecule incretins, which address the cost and cold-chain limits of peptides",
+      "Indication expansion into sleep apnoea, metabolic liver disease and cardiovascular prevention",
+      "Markets outside the United States, where disclosed revenue remains concentrated and penetration is far lower",
+      "Fixed-dose combinations with amylin and other gut hormones, aimed at efficacy and tolerability rather than at new patients"
+    ],
+    "challenges": [
+      "Published market sizes for this class are mostly below two companies' audited revenue, so the published literature cannot be used for planning without correction",
+      "Compounded and grey-market semaglutide reached material volume during shortages and is not publicly measured at all",
+      "Government price negotiation of the largest brands will hit a market whose growth assumptions are built on current realised prices",
+      "Clinical discontinuation and payer limits mean treated-population forecasts and revenue forecasts diverge sharply"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Semaglutide (injectable)",
+      "Semaglutide (oral)",
+      "Tirzepatide (dual GIP/GLP-1)",
+      "Dulaglutide",
+      "Liraglutide",
+      "Exenatide-class and other legacy agents"
+    ],
+    "by_application": [
+      "Type 2 diabetes",
+      "Obesity and weight management",
+      "Cardiovascular risk reduction",
+      "Chronic kidney disease",
+      "Metabolic liver disease"
+    ],
+    "by_end_user": [
+      "Retail and mail-order pharmacy",
+      "Primary care and endocrinology practices",
+      "Hospital outpatient pharmacy",
+      "Direct-to-patient and telehealth channels"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 71.94 },
+    { "year": 2027, "value": 80.64 },
+    { "year": 2028, "value": 90.4 },
+    { "year": 2029, "value": 101.34 },
+    { "year": 2030, "value": 113.6 },
+    { "year": 2031, "value": 127.35 },
+    { "year": 2032, "value": 142.76 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Novo Nordisk",
+      "headquarters": "Denmark",
+      "market_position": "Largest disclosed GLP-1 portfolio by brand count and revenue",
+      "description": "Disclosed FY2025 GLP-1 revenue of DKK 234,549 million - Ozempic DKK 127,089 million, Wegovy DKK 79,106 million, Rybelsus DKK 22,093 million, Victoza DKK 3,020 million and Saxenda DKK 3,241 million - which is about $35.43 billion at the DKK 6.62 average USD rate disclosed in the same filing. GLP-1 medicines grew 14% and account for roughly three-quarters of the company's DKK 309,064 million of total net sales. No market share is published here because the class denominator is a floor."
+    },
+    {
+      "company": "Eli Lilly and Company",
+      "headquarters": "United States",
+      "market_position": "Fastest-growing disclosed revenue; single largest brand pair",
+      "description": "Disclosed FY2025 Mounjaro revenue of $22,965 million, up 99% from $11,540 million, and Zepbound revenue of $13,542 million, up 175% from $4,926 million - $36,507 million combined, slightly ahead of Novo's entire GLP-1 portfolio in dollar terms. Trulicity declined 17% in Q4 2025 as patients switched to Mounjaro. Total company revenue was $65,179 million, with FY2026 guidance of $80-83 billion."
+    },
+    {
+      "company": "Sanofi",
+      "headquarters": "France",
+      "market_position": "Legacy participant",
+      "description": "Historically present in the incretin class through lixisenatide-containing products. Current GLP-1 revenue is not separately disclosed at a level comparable with the two leaders, and is excluded from the $71.94 billion aggregate, which makes that figure a floor."
+    },
+    {
+      "company": "AstraZeneca",
+      "headquarters": "United Kingdom",
+      "market_position": "Legacy exenatide-class participant",
+      "description": "Holds exenatide-class assets from the original GLP-1 generation. Revenue is immaterial relative to the semaglutide and tirzepatide franchises and is not separately disclosed in a form usable for class sizing."
+    },
+    {
+      "company": "Compounding pharmacies and unapproved suppliers",
+      "headquarters": "Multiple",
+      "market_position": "Unmeasured parallel supply",
+      "description": "During shortage periods, compounded semaglutide and tirzepatide reached material volume in the United States through telehealth and compounding channels. None of it is publicly measured, and no published market size discloses whether it is included. It is named here for completeness and deliberately not sized."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "FDA new drug application and supplemental approvals for GLP-1 receptor agonists, including the separate obesity indications marketed under distinct brand names",
+    "FDA drug shortage listing and the associated 503A/503B compounding provisions, which permitted compounded copies while a product was listed as in shortage and restricted them once it was not",
+    "Medicare Part D and the Inflation Reduction Act price negotiation programme, which brings the largest brands into negotiated pricing within the forecast period",
+    "Medicare statutory exclusion of drugs used for weight loss, and its partial circumvention through cardiovascular and other outcome-based indications",
+    "EMA centralised marketing authorisation, the route for semaglutide and tirzepatide products in the European Union",
+    "Patent and regulatory exclusivity expiry for semaglutide in several markets during the forecast period, which determines when generic entry becomes possible"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on audited brand-level revenue disclosures and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Novo Nordisk Form 6-K, Q4 and FY2025 company announcement (2026): Ozempic DKK 127,089m, Rybelsus DKK 22,093m, Victoza DKK 3,020m, Wegovy DKK 79,106m, Saxenda DKK 3,241m, total net sales DKK 309,064m, 2025 average USD rate DKK 6.62",
+      "Eli Lilly fourth-quarter 2025 results release, 4 February 2026: Mounjaro $22,965m (+99%), Zepbound $13,542m (+175%), total revenue $65,179m (+45%), FY2026 guidance $80-83bn",
+      "Towards Healthcare via BioSpace press release (2025): $62.86bn in 2025, $53.5bn in 2024, 17.5% CAGR to 2034",
+      "Grand View Research GLP-1 receptor agonist market: $156.71bn by 2030 at 17.46% from 2025, implying a 2025 base of about $69.8bn",
+      "Healthcare Foresights (2025): $28.7bn in 2025 to $95.3bn by 2035 at 12.1% (2026-2035)",
+      "IMARC Group (2025): $26.8bn in 2024 to $55.6bn by 2033 at 8.47%",
+      "Future Market Insights via PR Newswire, 3 December 2025: $2.6bn in 2025 to $7.8bn by 2035 at 11.7%"
+    ],
+    "data_validation": "The base figure is not a published market estimate but a sum of audited brand disclosures. Novo Nordisk's FY2025 GLP-1 brands total DKK 234,549 million, which at the DKK 6.62 average USD rate disclosed in the same filing is $35,430 million; Eli Lilly's Mounjaro and Zepbound total $36,507 million. The two sum to $71,937 million, or $71.94 billion. Trulicity's full-year figure was not located and is excluded, as are legacy exenatide-class products and all compounded supply, so the figure is a floor. Three of the five published estimates for this class are below that floor and one, Future Market Insights's $2.6 billion, is smaller than a single quarter of Zepbound; only Grand View Research's back-solved 2025 base of about $69.8 billion agrees with it, within 3%. The forecast applies 12.1%, the lowest mainstream published rate, to that base. Applying the highest published rate of 17.5% instead would give about $189 billion by 2032, requiring the two companies' combined GLP-1 revenue to reach 2.63x its FY2025 level, which the disclosed run-rate does not by itself support. This comparison is a plausibility test on published forecasts, not a market estimate of its own."
+  },
+  "faqs": [
+    {
+      "question": "How big is the GLP-1 receptor agonist market?",
+      "answer": "Novo Nordisk and Eli Lilly disclosed $71.94 billion of GLP-1 brand revenue for FY2025 - DKK 234,549 million across Novo's five brands, about $35.43 billion, plus $36,507 million for Mounjaro and Zepbound. That is a floor, since Trulicity and legacy agents are excluded. This report carries it as the 2026 base and projects $142.76 billion by 2032 at 12.1%."
+    },
+    {
+      "question": "Why are published estimates so much lower than disclosed revenue?",
+      "answer": "There is no scope explanation available, which is what makes it notable. The class has a clean pharmacological definition and both leaders report brand-level revenue in audited filings. Three of five published 2025 estimates are nonetheless below the two companies' combined disclosed revenue, and one, at $2.6 billion, is smaller than a single quarter of Zepbound."
+    },
+    {
+      "question": "Which published forecast is consistent with the filings?",
+      "answer": "Grand View Research's. Its published endpoint of $156.71 billion by 2030 at 17.46% back-solves to a 2025 base of about $69.8 billion, within 3% of the $71.94 billion the companies disclose. The other published bases range from $2.6 billion to $62.86 billion."
+    },
+    {
+      "question": "Do the published growth rates make sense on a correct base?",
+      "answer": "Less than they look. Applying the highest published rate, 17.5%, to the disclosed $71.94 billion gives about $189 billion by 2032, which requires Novo and Lilly's combined GLP-1 revenue to reach 2.63x its FY2025 level - roughly four times Lilly's entire current company revenue. That is a forecast about oral incretins, manufacturing and payer coverage, not an extrapolation of today's run-rate. This report uses 12.1% for that reason."
+    },
+    {
+      "question": "Who leads the GLP-1 market?",
+      "answer": "The two leaders are close and have swapped positions by measure. Novo Nordisk's five GLP-1 brands totalled about $35.43 billion in FY2025; Lilly's Mounjaro and Zepbound alone totalled $36,507 million, with the faster growth - 99% and 175% respectively. No share percentages are published here because the class denominator is a floor built from incomplete disclosure."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because neither company publishes a clean GLP-1-only geographic split, and the one published regional share we found is attached to a base the filings contradict. A regional table would have to be apportioned by feel, so the section is omitted."
+    }
+  ],
+  "seo": {
+    "meta_title": "GLP-1 Receptor Agonists Market Size and Forecast to 2032",
+    "meta_description": "Novo Nordisk and Lilly disclosed $71.94bn of GLP-1 brand revenue in FY2025 - above three of five published market sizes. What that does to the forecasts.",
+    "keywords": [
+      "GLP-1 receptor agonists market",
+      "GLP-1 market size",
+      "semaglutide revenue",
+      "tirzepatide sales",
+      "Ozempic sales",
+      "Zepbound revenue",
+      "obesity drug market"
+    ]
+  },
+  "executive_summary": "Almost every market in this literature has to be estimated. This one does not. GLP-1 receptor agonist is a pharmacological class with a countable membership, and the two companies that hold essentially all of it report brand-level revenue in audited filings. For FY2025 those filings give Novo Nordisk DKK 234,549 million across Ozempic, Wegovy, Rybelsus, Victoza and Saxenda - $35.43 billion at the DKK 6.62 average rate disclosed in the same document - and Eli Lilly $36,507 million for Mounjaro and Zepbound. The two sum to $71.94 billion, and that is a floor, because Trulicity's full year, legacy exenatide-class products and all compounded supply are excluded.\n\nPublished estimates for the same class in 2025 run from $2.6 billion to $62.86 billion, a 24.2x spread. Three of the five are below the audited revenue of two companies. Future Market Insights's $2.6 billion is smaller than Zepbound's fourth quarter alone. Only Grand View Research's figure survives: its published $156.71 billion for 2030 at 17.46% back-solves to a 2025 base of about $69.8 billion, within 3% of the disclosures.\n\nThe correction matters most at the slope. A 17.5% CAGR sounds unremarkable until it is applied to a base that is right. On $71.94 billion it implies about $189 billion by 2032 - Novo and Lilly's combined GLP-1 revenue at 2.63x its current level, roughly four times Lilly's entire present company revenue, and against a FY2026 total-company guidance of $80-83 billion. The disclosed run-rate does not support that on its own. It is a claim about oral semaglutide, orforglipron, manufacturing capacity and payer coverage decisions, three of which are unresolved and one of which is political.\n\nThis report therefore pairs the measured base with the lowest mainstream published rate, 12.1%, giving $142.76 billion by 2032, and states exactly what a higher rate would require.",
+  "key_highlights": [
+    "Disclosed FY2025 GLP-1 brand revenue across Novo Nordisk and Eli Lilly is $71.94 billion, and that is a floor",
+    "Published 2025 estimates spread 24.2x, from $2.6 billion to $62.86 billion, with no scope ambiguity to explain the gap",
+    "Three of five published market sizes are below the audited revenue of two companies",
+    "Lilly's Mounjaro ($22,965m, +99%) and Zepbound ($13,542m, +175%) together now slightly exceed Novo's entire GLP-1 portfolio in dollars",
+    "Only Grand View Research's back-solved 2025 base of about $69.8 billion reconciles with the filings, within 3%",
+    "At the highest published rate of 17.5%, the correctly based class reaches about $189 billion by 2032 - 2.63x today's disclosed revenue",
+    "Lilly's own FY2026 guidance for all products is $80-83 billion, which is the scale check on any such forecast"
+  ],
+  "market_context": "The GLP-1 class began as a glycaemic treatment and became something else. Ozempic was approved for type 2 diabetes; semaglutide at a higher dose, branded Wegovy, treats obesity. Tirzepatide repeats the pattern as Mounjaro and Zepbound. One molecule, two brands, two indications, two payer regimes - and the second is where the growth is. Zepbound grew 175% in FY2025 against Mounjaro's 99%, from a base less than half the size.\n\nThat split is also why the market behaves unlike a typical drug class. In diabetes, GLP-1 therapy competes inside an established treatment algorithm with existing reimbursement. In obesity, it has to create coverage that largely did not exist: Medicare's statutory exclusion of weight-loss drugs is being worked around through cardiovascular and other outcome indications, and commercial coverage remains discretionary and employer-specific. Volume is therefore set by coverage decisions rather than by diagnosed prevalence, which makes the market unusually sensitive to policy and unusually insensitive to epidemiology.\n\nThe third distinctive feature is that the constraint moved. Through 2023 and 2024 these products were supply-limited, and compounded copies filled the gap at unmeasured scale. By FY2025, with capacity added, the binding constraint is price and coverage: Lilly reported 46% volume growth in the fourth quarter against a 5% negative price effect. A market whose price realisation is falling while volume compounds is not well described by a single CAGR, which is part of why the published forecasts disagree.",
+  "forecast_analysis": "The curve starts at $71.94 billion for 2026 - FY2025 disclosed GLP-1 brand revenue for Novo Nordisk and Eli Lilly, carried forward unchanged because 2026 revenue is not yet disclosed - and compounds at 12.1% to $142.76 billion by 2032. The intermediate years are interpolation on that one rate, not separate observations.\n\nTwo deliberate choices. The base is the measured floor rather than any published estimate, because three of the five published figures are below it. The rate is the lowest mainstream published one, from Healthcare Foresights, because the higher published rates were calibrated against bases two to twenty-seven times too small, where the same percentage represents a far smaller absolute claim. Transplanting 17.5% onto a correct base produces about $189 billion by 2032, which would require these two companies' GLP-1 revenue to reach 2.63x its FY2025 level - a scale that exceeds Lilly's entire company today by a wide margin.\n\nThat is not an argument that it cannot happen. Zepbound's 175% growth shows how fast this class moves when coverage opens. It is an argument that the difference between $143 billion and $189 billion in 2032 rests on four identifiable events - oral semaglutide volume, orforglipron approval and pricing, obesity coverage decisions by Medicare and large employers, and semaglutide exclusivity expiry - and that a reader should price those explicitly rather than accept them bundled inside a published growth rate.",
+  "reader_takeaways": [
+    "Use the filings, not the market reports: Novo and Lilly disclosed $71.94 billion of GLP-1 brand revenue for FY2025, above three of five published market sizes",
+    "Check any published GLP-1 forecast by back-solving its base year and comparing it with that figure - most will fail the test",
+    "A 17.5% rate on a correct base means about $189 billion by 2032, or 2.63x the two leaders' current combined GLP-1 revenue; decide whether you believe that before using the rate",
+    "Model coverage decisions and price realisation, not prevalence: Q4 2025 volume grew 46% while realised price fell 5%",
+    "Treat any GLP-1 vendor share percentage as approximate at best - even a careful bottom-up total excludes Trulicity, legacy agents and all compounded supply"
+  ]
+}

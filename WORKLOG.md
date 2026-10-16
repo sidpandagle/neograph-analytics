@@ -507,3 +507,58 @@ Verified in the built homepage: "healthcare executives", "West Ham" and
 Measured: the built `/reports` HTML drops from **508KB to 284KB** (-44%) with
 the same 12 cards and the same 142-report count, because the RSC payload no
 longer carries the unread JSONB.
+
+### Round 1 of the expansion — 10 reports, corpus 142 -> 152
+Two research passes ran in parallel (the two-agent limit), one on diagnostics
+and devices, one on therapeutics, both against
+`research/REPORT-AUTHORING-BRIEF.md`. All ten drafts pass
+`node scripts/report-db.mjs check`. Evidence files are in `research/*-notes.md`
+and the headline figures with their grounding arithmetic are tabulated in
+`research/REPORT-PIPELINE.md`.
+
+What makes these different from the corpus they joined: every base year is a
+named publisher's own figure advanced at that publisher's own rate, stated as
+such on the page, and every headline is divided through by something countable.
+Several of those divisions are decisive rather than decorative:
+
+- **CAR-T**: five disclosed product revenues sum to **$5.53B, which exceeds
+  every published market size for the same year.** The bottom-up floor is above
+  the top-down estimates.
+- **GLP-1**: Novo's DKK 234,549m plus Lilly's $36,507m is **$71.94B disclosed**,
+  above three of five published market sizes. One publisher's $2.6B is smaller
+  than a single quarter of Zepbound.
+- **Bispecifics**: two published estimates are below Hemlibra and Vabysmo
+  **alone**; 74% of disclosed revenue is non-oncology.
+- **Liquid biopsy**: the top forecast implies 43.0M tests a year against ~20M
+  annual cancer cases — 2.15x total incidence, so it cannot be therapy
+  selection; it assumes population screening.
+- **Phage therapy**: no marketing authorisation in the US, EU or UK; the top
+  published figure works out at $10.3M per registered trial. Published as
+  option value on an unread Phase 3, explicitly not as revenue.
+
+Three defects surfaced while reviewing the drafts, all fixed before publishing:
+
+1. **Unit blindness, 1,000x.** Two of the ten are stored in millions
+   (`phage-therapy-market` $66.5M, `brain-computer-interface-market` $795.3M).
+   `money()` defaults to `'B'` and two other call sites hardcoded `B`, so the
+   cards and the detail-page metrics would have rendered "$66.5B" — the worst
+   class of error this site can make. `unitSuffix()`/`marketValue()` now read
+   the row's `unit`, and `unit,currency` were added to `CARD_COLUMNS`. The
+   charts and the hero already read the column.
+2. **`recent_developments` keyed `development`** where the renderer reads
+   `event`, which would have printed a company and year above an empty
+   paragraph. Normalised, and the checker now rejects it by name.
+3. **U+FFFD in "bioMérieux"** — a source decoded with the wrong codec upstream.
+   Repaired, and the checker now rejects any draft containing a replacement
+   character.
+
+Verified after publishing: build clean, **200 static pages** (was 190), the two
+million-unit reports render `$66.5M`/`$167.9M` and `$795.3M`/`$2252.5M`, each
+report page carries its chart source caption, and the homepage corpus count
+reads 152.
+
+One thing to flag outside the repo: the diagnostics agent installed `pypdf`
+into the user Python site-packages to read the CMS CLIA statistics PDF. Nothing
+in the project or in global config was touched and nothing was removed, but it
+is a change outside this repo and the standing rule is not to make them. The
+brief for round 2 forbids installing anything.

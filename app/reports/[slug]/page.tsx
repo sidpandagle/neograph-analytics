@@ -8,6 +8,7 @@ import { ReportContentWrapper } from "@/components/reports/ReportContentWrapper"
 import type { SidebarTOCItem } from "@/lib/toc-utils";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
+import { marketValue } from "@/lib/format";
 import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
 import { buildReportTOC } from "@/lib/reportToc";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
@@ -169,8 +170,9 @@ export default async function ReportPage({
   const forecastEndYear = jsonReport.forecast_period.split('-')[1];
   const forecastRangeLabel = jsonReport.forecast_period;
 
-  const displayMarketSizeCurrent = `$${jsonReport.market_size.current_value.toFixed(1)}B`;
-  const displayMarketSizeForecast = `$${jsonReport.market_size.forecast_value.toFixed(1)}B`;
+  /* Not every report is in billions — see `unitSuffix`. */
+  const displayMarketSizeCurrent = marketValue(jsonReport.market_size.current_value, jsonReport.unit);
+  const displayMarketSizeForecast = marketValue(jsonReport.market_size.forecast_value, jsonReport.unit);
   const displayCAGR = `${jsonReport.market_size.cagr}%`;
 
   const metricCards = [

@@ -1,0 +1,217 @@
+{
+  "report_id": "car-t-cell-therapy-market",
+  "slug": "car-t-cell-therapy-market",
+  "title": "CAR-T Cell Therapy Market Size, Share & Forecast 2026-2032",
+  "industry": "Biotechnology",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 5.53,
+    "forecast_value": 12.53,
+    "cagr": 14.6
+  },
+  "market_overview": {
+    "summary": "Five approved CAR-T products disclosed $5.53 billion of worldwide net revenue in FY2025 - more than every published estimate says the entire market is worth. Published base-year figures cluster tightly between $3.87 billion and $4.6 billion, a 1.19x spread, while the published growth rates spread 2.97x, from 14.6% to 43.3%. This report anchors the base on the disclosed revenue instead and pairs it with the lowest published growth rate, giving $5.53 billion in 2026 and $12.53 billion by 2032 at 14.6%, because two of the five disclosed products are in decline.",
+    "key_trends": [
+      "Disclosed FY2025 revenue of $5.53 billion across five products exceeds every published market size, by 1.39x against the one estimate based on 2025 itself",
+      "Growth is concentrated and partly substitutive: Breyanzi rose to $1,358 million from $747 million and Carvykti reached $1.9 billion, while Yescarta fell 5% and Tecartus 15%",
+      "Gilead's whole cell therapy line declined 7% in FY2025, so the incumbent CD19 franchise is contracting even as the category grows",
+      "BCMA products were 42% of disclosed FY2025 revenue (Carvykti $1.9bn plus Abecma $0.427bn of $5.53bn), which contradicts the published claim that CD19 is 86.5% of the market",
+      "1,278 studies are registered on ClinicalTrials.gov with chimeric antigen receptor interventions against seven approved products, so most of the field is still pipeline",
+      "Published base-year estimates agree closely (1.19x) but growth rates do not (2.97x), so the forecast, not the base, is where published views diverge"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in late-line haematological malignancy, absent in solid tumours"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Earlier-line label movement in multiple myeloma, which lifted Carvykti to $1.9 billion in FY2025",
+      "Breyanzi's expansion across large B-cell lymphoma indications, which nearly doubled its revenue year on year",
+      "Removal of the REMS requirement for approved CD19 and BCMA autologous CAR-T products, lowering the administrative barrier at treating centres",
+      "A very deep pipeline: 1,278 registered chimeric antigen receptor studies as of October 2026",
+      "Outpatient and community administration, which widens the number of sites able to deliver a product at all"
+    ],
+    "restraints": [
+      "Autologous manufacturing is per-patient, so cost of goods does not fall with volume the way a biologic's does",
+      "Apheresis-to-infusion turnaround excludes the fastest-progressing patients, capping the addressable population below the diagnosed one",
+      "In-class competition is redistributive rather than additive: Yescarta fell 5% and Tecartus 15% in FY2025 as newer products took share",
+      "Delivery is confined to qualified centres with cytokine release syndrome and neurotoxicity management capability",
+      "No approved CAR-T product exists for any solid tumour, which is where most of the oncology burden sits"
+    ],
+    "opportunities": [
+      "Allogeneic and in vivo approaches, which would break the per-patient manufacturing constraint if they reach approval",
+      "Autoimmune indications, where CD19-directed cell therapy is in trials outside oncology",
+      "Earlier lines of therapy in myeloma and lymphoma, which expand the eligible population without needing new sites",
+      "Ex-US markets, where access lags approval and disclosed revenue is still concentrated in the United States"
+    ],
+    "challenges": [
+      "Published market sizes are below disclosed product revenue, so any model built on them starts wrong and compounds the error",
+      "No denominator is publicly measurable, so vendor share cannot be computed even though five product revenues are disclosed",
+      "Secondary malignancy class labelling and long-term follow-up obligations add cost and complexity to every programme",
+      "Pricing pressure from payers rises as the number of approved products in the same indication increases"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "CD19-directed autologous",
+      "BCMA-directed autologous",
+      "Allogeneic (investigational)",
+      "Dual-target and armoured constructs (investigational)"
+    ],
+    "by_application": [
+      "Large B-cell lymphoma",
+      "Multiple myeloma",
+      "Acute lymphoblastic leukaemia",
+      "Follicular and mantle cell lymphoma",
+      "Chronic lymphocytic leukaemia",
+      "Autoimmune disease (investigational)"
+    ],
+    "by_end_user": [
+      "Academic transplant and cellular therapy centres",
+      "Qualified community and network treatment centres",
+      "Specialty cancer hospitals"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 5.53 },
+    { "year": 2027, "value": 6.34 },
+    { "year": 2028, "value": 7.26 },
+    { "year": 2029, "value": 8.32 },
+    { "year": 2030, "value": 9.54 },
+    { "year": 2031, "value": 10.93 },
+    { "year": 2032, "value": 12.53 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Johnson & Johnson (with Legend Biotech)",
+      "headquarters": "United States",
+      "market_position": "Largest single disclosed CAR-T product",
+      "description": "Reported FY2025 Carvykti revenue of $1.9 billion, the largest disclosed figure for any CAR-T product, attributed to share gains and manufacturing capacity expansion within an oncology business that grew 22.1% to $25.4 billion. Carvykti is co-developed and co-commercialised with Legend Biotech. No market share is disclosed and none is computable."
+    },
+    {
+      "company": "Gilead Sciences (Kite)",
+      "headquarters": "United States",
+      "market_position": "Incumbent CD19 franchise, in decline",
+      "description": "Reported Yescarta at $1.5 billion (down 5%) and Tecartus at $344 million (down 15%) for FY2025, with the whole cell therapy line down 7%, attributing both declines to in-class and out-of-class competition. The clearest public evidence that growth in this category is partly displacement."
+    },
+    {
+      "company": "Bristol Myers Squibb",
+      "headquarters": "United States",
+      "market_position": "Fastest-growing disclosed CD19 product",
+      "description": "Reported Breyanzi at $1,358 million for FY2025 against $747 million in FY2024, an 82% increase, and Abecma at $427 million against $406 million. Breyanzi accounted for most of the net growth in disclosed CD19 revenue during 2025."
+    },
+    {
+      "company": "Novartis",
+      "headquarters": "Switzerland",
+      "market_position": "First approved, now a minor contributor",
+      "description": "Markets Kymriah, the first approved CAR-T product. Novartis did not break Kymriah out in its FY2025 top-20 brand table, so its annual revenue is not publicly disclosed and is excluded from the $5.53 billion aggregate used in this report. That exclusion makes the aggregate a floor."
+    },
+    {
+      "company": "Autolus Therapeutics",
+      "headquarters": "United Kingdom",
+      "market_position": "Recent entrant in adult ALL",
+      "description": "Markets Aucatzyl (obecabtagene autoleucel) in the United States, the most recent addition to the approved set. Its revenue is not included in the aggregate used here, which again makes that aggregate conservative."
+    },
+    {
+      "company": "Legend Biotech",
+      "headquarters": "United States and China",
+      "market_position": "Co-developer of the largest product",
+      "description": "Originator and co-commercialisation partner for Carvykti. Because the product's revenue is reported through a collaboration, a single unduplicated market total cannot be built by summing both partners' disclosures, and this report counts the J&J-reported figure only."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "FDA Biologics License Application pathway for cellular therapy products under 21 CFR Part 1271 and section 351 of the Public Health Service Act",
+    "Removal of the Risk Evaluation and Mitigation Strategy requirement for approved BCMA- and CD19-directed autologous CAR-T products, which reduced the compliance burden on treating centres",
+    "FDA class labelling on the risk of secondary T-cell malignancy, applying across approved CAR-T products",
+    "Fifteen-year long-term follow-up expectations for gene therapy products under FDA guidance, which extend post-approval obligations well beyond launch",
+    "EMA Advanced Therapy Medicinal Product regulation (EC No 1394/2007), the route to European authorisation and the basis for its hospital-exemption provisions",
+    "FACT-JACIE immune effector cell standards, which in practice determine which centres may deliver these products"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of audited company disclosures, public registers and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Bristol Myers Squibb Q4 2025 Form 8-K Exhibit 99.1 product revenue table, 5 February 2026: Breyanzi $1,358m (2024 $747m), Abecma $427m (2024 $406m)",
+      "Gilead Sciences Fourth Quarter and Full Year 2025 Financial Results, 10 February 2026: Yescarta $1.5bn (-5%), Tecartus $344m (-15%), cell therapy total $1.8bn (-7%)",
+      "Johnson & Johnson Q4 and Full Year 2025 results, January 2026: Carvykti $1.9bn, oncology $25.4bn (+22.1%)",
+      "Novartis full-year 2025 results media release (2026): Kymriah not separately disclosed in the top-20 brand table",
+      "ClinicalTrials.gov API v2 interventional search for 'chimeric antigen receptor': 1,278 registered studies, retrieved 16 October 2026",
+      "Published market estimates from Coherent Market Insights (2025), Global Market Insights (2025), Research and Markets (July 2025 and December 2025), Technavio (2025) and Meticulous Research (2025)"
+    ],
+    "data_validation": "The headline base is not a published market estimate. It is the sum of worldwide net product revenue disclosed for FY2025 by the manufacturers of five approved CAR-T products - Yescarta $1,500m, Tecartus $344m, Carvykti $1,900m, Breyanzi $1,358m and Abecma $427m - which comes to $5,529m, or $5.53 billion. Kymriah and Aucatzyl are excluded because their annual revenue is not separately disclosed, so the figure is a floor rather than a measurement of the whole market. It is used as the 2026 anchor without an uplift, since 2026 revenue is not yet disclosed. The forecast applies 14.6%, the lowest published mainstream CAGR, because the disclosed data show Yescarta down 5%, Tecartus down 15% and Gilead's cell therapy line down 7% in the same year the category grew. This arithmetic is a plausibility test on the published estimates - it demonstrates that all of them understate the base - and is not itself a market estimate. No methodology behind any published estimate was inspected."
+  },
+  "faqs": [
+    {
+      "question": "How big is the CAR-T cell therapy market?",
+      "answer": "Five approved products disclosed $5.53 billion of worldwide net revenue in FY2025, and that excludes Kymriah and Aucatzyl, so it is a floor. This report carries that $5.53 billion as the 2026 base and projects $12.53 billion by 2032 at 14.6%. Published estimates put the base at $3.87-4.6 billion, which the disclosed revenue contradicts."
+    },
+    {
+      "question": "Why is the disclosed revenue higher than the published market size?",
+      "answer": "Because the published estimates are below the audited product revenue of the companies in the market. Carvykti alone was $1.9 billion and Breyanzi $1,358 million in FY2025; add Yescarta, Tecartus and Abecma and the total is $5.53 billion, or 1.39x the one published figure that is based on 2025 itself. It is not a stale-base-year problem."
+    },
+    {
+      "question": "Is CAR-T growth adding to the market or moving between products?",
+      "answer": "Both. Breyanzi rose 82% and Carvykti reached $1.9 billion, but Yescarta fell 5%, Tecartus fell 15% and Gilead's whole cell therapy line fell 7%, with the company attributing the declines to in-class competition. Net category growth is real but materially smaller than the growth of the fastest products."
+    },
+    {
+      "question": "Is CD19 really 86.5% of the market?",
+      "answer": "No, not on disclosed revenue. BCMA-directed products - Carvykti at $1.9 billion and Abecma at $427 million - were 42% of the $5.53 billion disclosed in FY2025. The 86.5% figure circulates in a published market report; the company filings do not support it."
+    },
+    {
+      "question": "Who leads the CAR-T market?",
+      "answer": "On disclosed revenue, Johnson & Johnson with Legend Biotech holds the largest single product at $1.9 billion, followed by Gilead's Yescarta at $1.5 billion and BMS's Breyanzi at $1,358 million. No share percentage is given here, because the market denominator is not publicly measurable - any share figure would be a ratio against an estimate."
+    },
+    {
+      "question": "How much of the CAR-T field is actually commercial?",
+      "answer": "A small fraction. ClinicalTrials.gov lists 1,278 registered studies using chimeric antigen receptor interventions against seven approved products, none of them for a solid tumour. Most published forecasts assume some of that pipeline converts; the disclosed revenue reflects only what has already been approved."
+    }
+  ],
+  "seo": {
+    "meta_title": "CAR-T Cell Therapy Market Size and Forecast to 2032",
+    "meta_description": "Five approved CAR-T products disclosed $5.53bn of FY2025 revenue - more than any published market size. What that does to the forecasts built on them.",
+    "keywords": [
+      "CAR-T cell therapy market",
+      "CAR-T market size",
+      "Carvykti sales",
+      "Yescarta revenue",
+      "Breyanzi sales",
+      "cell therapy market",
+      "BCMA CAR-T"
+    ]
+  },
+  "executive_summary": "Published estimates of the CAR-T cell therapy market agree about the present and disagree about the future. The base-year figures sit between $3.87 billion and $4.6 billion, a 1.19x spread that is unusually tight for this literature, while the published growth rates run from 14.6% to 43.3%, a 2.97x spread. Normally that would be the story.\n\nIt is not, because the audited numbers overtake all of them. For FY2025 the manufacturers of five approved CAR-T products disclosed worldwide net revenue of $5.53 billion: Carvykti at $1.9 billion (Johnson & Johnson), Yescarta at $1.5 billion and Tecartus at $344 million (Gilead), and Breyanzi at $1,358 million and Abecma at $427 million (Bristol Myers Squibb). Kymriah and Aucatzyl are not in that sum because their annual revenue is not separately disclosed, so $5.53 billion is a floor. It is 1.39x the one published estimate whose base year is 2025 itself, which rules out the explanation that the published figures are merely stale.\n\nThis is not a pedantic correction. A 30.5% growth rate applied to a base 1.29x too low does not produce a forecast 1.29x too low - it compounds the error for a decade. And the disclosed data argue for the opposite adjustment on the rate: Yescarta fell 5% in FY2025, Tecartus fell 15%, and Gilead's entire cell therapy line fell 7%, with the company attributing both declines to in-class competition. Growth in this category is concentrated in Carvykti and Breyanzi and is partly displacement of the incumbents rather than expansion of the treated population.\n\nThis report therefore anchors the base on disclosed revenue and pairs it with the lowest published rate, 14.6%, giving $12.53 billion by 2032. A reader who wants a higher rate should first say which of the five disclosed products supplies it.",
+  "key_highlights": [
+    "Disclosed FY2025 revenue across five approved CAR-T products was $5.53 billion, which exceeds every published base-year market size",
+    "Against the one published estimate based on 2025 itself ($3.99bn), the disclosed revenue is 1.39x higher",
+    "Published base years agree closely (1.19x spread) while published CAGRs spread 2.97x, from 14.6% to 43.3%",
+    "Growth is concentrated: Breyanzi up 82% to $1,358 million and Carvykti at $1.9 billion, against Yescarta down 5% and Tecartus down 15%",
+    "Gilead's whole cell therapy franchise declined 7% in FY2025, which published high-growth forecasts do not reflect",
+    "BCMA products were 42% of disclosed revenue, contradicting the circulating claim that CD19 holds 86.5% of the market",
+    "1,278 chimeric antigen receptor studies are registered against seven approved products, and none is approved in a solid tumour"
+  ],
+  "market_context": "A CAR-T product is not manufactured in the usual sense. A patient's T cells are collected by apheresis, engineered to express a chimeric antigen receptor, expanded, released against specification and infused back into the same patient. Every dose is a separate manufacturing run with a named recipient, which means cost of goods barely benefits from scale and the supply chain is a logistics problem rather than a production one.\n\nThat shapes the commercial ceiling more than demand does. The patient must be well enough to wait out the turnaround between collection and infusion, and must be treated at a centre able to manage cytokine release syndrome and neurotoxicity - in practice a FACT-JACIE accredited immune effector cell programme. The eligible population is therefore materially smaller than the diagnosed population, and the binding constraint is site capacity and patient fitness rather than incidence.\n\nThe approved set reflects that. Seven products, all autologous, all directed at CD19 or BCMA, all in haematological malignancy. Nothing is approved for a solid tumour, which is where the great majority of cancer incidence lies. Against that, 1,278 registered studies are exploring allogeneic constructs, in vivo delivery, dual targeting and autoimmune indications. The gap between seven commercial products and 1,278 trials is where the difference between a 14.6% and a 43.3% published forecast actually lives - not in the market as it exists, but in an assumption about how much of that pipeline converts.",
+  "forecast_analysis": "The curve here starts at $5.53 billion, the FY2025 disclosed product revenue of five approved CAR-T products, carried into 2026 unchanged because 2026 revenue is not yet disclosed. It is projected at 14.6% - the lowest published mainstream rate, from Research and Markets' July 2025 report - to $12.53 billion by 2032. Intermediate years are interpolation on that single rate, not separately sourced observations.\n\nTwo choices need defending. First, the base: we use disclosed revenue rather than a published market size because every published size is below it, and the most recent one is 1.39x below. Second, the rate: having corrected the base upward, applying the published high rates would compound an optimism the filings contradict. Two of the five disclosed products declined in FY2025 and the largest incumbent franchise shrank 7%. A 30.5% CAGR on a $5.53 billion base implies roughly $28 billion by 2032, which would require Carvykti and Breyanzi to carry the entire category while Yescarta, Tecartus and Abecma keep falling.\n\nThe honest summary is that the slope is unresolved and depends on events that have not happened: approval of an allogeneic product, a solid-tumour indication, or an autoimmune label. Readers who believe any of those arrive before 2030 should model a higher rate and say explicitly which one they are buying.",
+  "reader_takeaways": [
+    "Do not use a published CAR-T market size as a base: all of them are below the $5.53 billion that five manufacturers disclosed for FY2025",
+    "Separate category growth from product growth - Breyanzi and Carvykti grew while Yescarta, Tecartus and Gilead's whole cell therapy line fell",
+    "Treat any CD19-versus-BCMA share figure sceptically: disclosed revenue puts BCMA at 42%, not the 14% implied by the circulating 86.5% claim",
+    "The constraint on this market is accredited delivering sites and patient fitness during turnaround, not diagnosed incidence",
+    "A forecast above about 15% is a bet on an unapproved product class - allogeneic, solid tumour or autoimmune - and should be stated as such"
+  ]
+}
