@@ -1452,3 +1452,27 @@ the clean run that the "no external scripts" check had got wrong:
 Three instruments, three different answers, and only the third one was sound.
 Worth the entry even though the finding shrank: the first number would have sent
 the next session optimising charts that are not the problem.
+
+### One more measurement, and an attempt that did not work
+Tried to isolate gtag by patching `document.createElement` in an init script
+before navigation. **It did not block it** — the script was still in the DOM
+afterwards (`@next/third-parties` sets `src` by a path the patch did not cover),
+so that experiment is inconclusive and is recorded as such rather than as a
+result.
+
+The run was still worth having, because of the gap it shows:
+
+```
+TTFB                187 ms
+DOMContentLoaded    484 ms
+first paint       1,436 ms
+first contentful  1,436 ms   (same event as LCP)
+CLS                 0.035
+```
+
+**Roughly 950ms passes between the DOM being ready and anything appearing on
+screen.** That is the shape to chase next — a stylesheet applied late, the
+pre-paint theme script, the font load, or a long task holding the first frame —
+and it is a different question from the one R-13 started as. Next pass blocks
+gtag at the network layer rather than in page script, where it cannot be routed
+around.
