@@ -1,6 +1,6 @@
 # STATUS
 
-**Updated:** 2026-10-16 18:40 IST
+**Updated:** 2026-10-16 19:50 IST
 **Budget:** 7d used 12% | pace 56.3% | ceiling (70% of pace) 39.4% | headroom +27.4 points
 **Merges to `main` today (IST):** **5 of 5 used** — #13 00:13, #14 01:02,
 #15 02:26, #16 09:08, #17 17:30 (round 1 of the reports). No deploy left today;
@@ -36,20 +36,15 @@ publisher's own figure advanced at that publisher's own rate, every headline
 divided through by something countable. Figures and grounding arithmetic are
 tabulated in `research/REPORT-PIPELINE.md`. Live in production and verified.
 
-**Round 2 drafted and passing — 10 reports, held for the next deploy.** They are
-not published to Supabase yet on purpose: `dynamicParams = false` means a row
-absent from the last build is a 404 while `/reports` would already be listing a
-card for it. Publishing is now paired with a deploy in the authoring brief.
+**All four rounds are drafted — the 40-topic queue is complete.** Ten reports
+are live; **thirty are held** for the next deploy, with two analysis articles
+and a press release. Everything passes its checker: `report-db.mjs check` over
+all 40 drafts, `blog-db.mjs check` over the three content pieces.
 
-**In flight:** round 3, two agents — batch 3A (proton therapy, surgical
-navigation, insulin delivery, sleep apnoea, hearing aids) and batch 3B (biologics
-CDMO, sterile injectables, vaccine cold chain, plasma fractionation, pharmacy
-automation). Started 17:51 IST, ETA ~19:00. Their briefs forbid installing
-anything, after a round-1 agent put `pypdf` into user site-packages.
-
-**Queued for the same deploy:** two analysis articles written out of the reports'
-own evidence, in `content/blogs/`, both passing `blog-db.mjs check --online`
-(which verifies every internal report link against the live corpus).
+They are held rather than published because `dynamicParams = false` means a row
+in Supabase that was not in the last build 404s while `/reports` already lists a
+card for it. `DEPLOY-RUNBOOK.md` now holds the full sequence — reports first,
+then the articles that link to them, then build, merge and verify.
 
 ## Shipped to the branch since the last merge
 
@@ -97,18 +92,16 @@ error boundaries                             0 -> 2
 
 ## Next up
 
-1. Review round 3 when the agents report, then at the **first merge slot after
-   00:00 IST**: publish rounds 2 and 3 plus the two articles, merge, and verify
-   in production. That single deploy takes the corpus from 152 to ~172.
-2. Launch round 4 (batches 4A/4B — medical device cybersecurity, radioisotope
-   supply, ophthalmic therapeutics, psychedelic therapeutics, fertility
-   services; femtech, advanced wound care, orthopaedic implants, rehabilitation
-   robotics, veterinary diagnostics). That completes the 40-topic queue.
-3. Confirm the new focus ring in a browser after 21:00 IST — the contrast
-   figures are computed from token values, not yet observed.
-4. Run `node scripts/audit-html.mjs --prod` after the deploy. It currently
-   reports 5 errors in production, all of them already fixed on the branch.
-5. The open review queue is down to the two items that need Siddhant.
+1. **First merge slot after 00:00 IST**: run `DEPLOY-RUNBOOK.md` end to end.
+   Thirty reports, two articles and a press release in one deploy, taking the
+   corpus from **152 to 182**.
+2. After 21:00 IST, confirm in a browser: the header dropdown now painting above
+   page content, the FAQ toggle centring, and the new focus ring (its contrast
+   figures are computed from token values, not yet observed).
+3. Run `node scripts/audit-html.mjs --prod` after the deploy — production
+   currently reports 5 errors, all already fixed on the branch.
+4. Generate the next round of work from a fresh review pass; the open queue is
+   down to three items, all needing Siddhant.
 
 ## Blockers
 

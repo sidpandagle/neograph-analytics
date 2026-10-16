@@ -46,7 +46,7 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 29 | plasma-fractionation-market | Pharmaceuticals | 3B | check-passed |
 | 30 | pharmacy-automation-market | Healthcare IT | 3B | check-passed |
 | 31 | medical-device-cybersecurity-market | Healthcare IT | 4A | check-passed |
-| 32 | nuclear-medicine-radioisotope-market | Pharmaceuticals | 4A | queued |
+| 32 | nuclear-medicine-radioisotope-market | Pharmaceuticals | 4A | check-passed |
 | 33 | ophthalmic-therapeutics-market | Pharmaceuticals | 4A | check-passed |
 | 34 | psychedelic-therapeutics-market | Pharmaceuticals | 4A | check-passed |
 | 35 | fertility-services-market | Healthcare IT | 4A | check-passed |
