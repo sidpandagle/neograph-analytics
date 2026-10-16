@@ -138,12 +138,46 @@ function auditDocument(route, html) {
   // ── structured data ───────────────────────────────────────────────────────
   const blocks = [...html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)];
   for (const [i, b] of blocks.entries()) {
+    let parsed;
     try {
-      const parsed = JSON.parse(b[1]);
-      if (!parsed['@context']) warnings.push(`ld+json block ${i + 1} has no @context`);
-      if (!parsed['@type'] && !Array.isArray(parsed)) warnings.push(`ld+json block ${i + 1} has no @type`);
+      parsed = JSON.parse(b[1]);
     } catch (e) {
       errors.push(`ld+json block ${i + 1} does not parse: ${e.message}`);
+      continue;
+    }
+    const label = `ld+json ${parsed['@type'] ?? `block ${i + 1}`}`;
+    if (!parsed['@context']) warnings.push(`${label} has no @context`);
+    if (!parsed['@type'] && !Array.isArray(parsed)) warnings.push(`${label} has no @type`);
+
+    /* A bare year passed JSON.parse happily and was emitted on 152 report pages
+       as `"datePublished": "2026"`. schema.org Date wants a calendar date, and
+       a validator drops what it cannot read rather than telling you. */
+    for (const field of ['datePublished', 'dateModified', 'uploadDate']) {
+      const v = parsed[field];
+      if (v !== undefined && !/^\d{4}-\d{2}-\d{2}/.test(String(v))) {
+        errors.push(`${label}.${field} is "${v}" — not a calendar date`);
+      }
+    }
+
+    if (parsed['@type'] === 'BreadcrumbList') {
+      const items = parsed.itemListElement ?? [];
+      const positions = items.map((it) => it.position);
+      const sequential = positions.every((p, n) => p === n + 1);
+      if (!sequential) errors.push(`BreadcrumbList positions are ${positions.join(',')} — must start at 1 and increment`);
+      const unnamed = items.filter((it) => !it.name && !it.item?.name).length;
+      if (unnamed) errors.push(`BreadcrumbList has ${unnamed} item(s) with no name`);
+    }
+
+    if (parsed['@type'] === 'FAQPage') {
+      const entities = parsed.mainEntity ?? [];
+      /* Schema that claims more questions than the page shows is the kind of
+         mismatch that costs a rich result for the whole domain. */
+      const rendered = (html.match(/id="faq-q-\d+"/g) ?? []).length;
+      if (rendered && entities.length !== rendered) {
+        errors.push(`FAQPage declares ${entities.length} questions, the page renders ${rendered}`);
+      }
+      const malformed = entities.filter((q) => !q.name || !q.acceptedAnswer?.text).length;
+      if (malformed) errors.push(`FAQPage has ${malformed} entry/entries missing a name or acceptedAnswer.text`);
     }
   }
 

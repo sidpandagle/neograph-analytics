@@ -64,3 +64,22 @@ export function pageDescription(text: string, max = DESCRIPTION_MAX): string {
   const cut = (lastSpace > max * 0.5 ? window.slice(0, lastSpace) : window).replace(/[\s,;:—-]+$/, '');
   return `${cut}.`;
 }
+
+/**
+ * A schema.org Date from whatever the row carries.
+ *
+ * Report rows store only `published_year`, so every report page was emitting
+ * `"datePublished": "2026"`. A bare year is a valid ISO 8601 *year*, but
+ * schema.org's Date and Google's structured-data parsers expect a calendar
+ * date, and a four-character value is the kind of thing a validator drops
+ * silently. A year-only row becomes 1 January of that year, which is the honest
+ * reading of "we know the year and not the day".
+ */
+export function schemaDate(value: string | number | undefined | null): string | undefined {
+  const v = String(value ?? '').trim();
+  if (!v) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}/.test(v)) return v.slice(0, 10);
+  if (/^\d{4}$/.test(v)) return `${v}-01-01`;
+  const parsed = new Date(v);
+  return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
+}

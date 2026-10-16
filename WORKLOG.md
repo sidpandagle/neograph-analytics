@@ -1216,3 +1216,30 @@ What survived as real:
 
 Audit after the fixes: **0 failing pairs in both themes**, 16 of 16 pages still
 error-free in the HTML audit.
+
+### The JSON-LD audit (BACKLOG P2), and two defects across every page
+Eight `ld+json` blocks render on a report page and nothing had checked their
+*contents*. Two real defects, both on every page of their kind:
+
+- **`Dataset.license` pointed at `/legal/terms-of-use`, which 404s.** The legal
+  pages are privacy, refund and cancellation; there is no terms-of-use. So 152
+  report pages each declared a licence URL that does not resolve. The field is
+  now absent rather than wrong — asserting no licence beats asserting a broken
+  one — and R-11 records that it returns if a terms-of-use page is ever written,
+  which is Siddhant's call because it is legal copy.
+- **`datePublished` was not a date.** Report rows store only a year, so the
+  schema said `"2026"`; blog and press-release rows store a human date, so they
+  said `"December 18, 2025"`. schema.org Date wants a calendar date and a
+  validator drops what it cannot read rather than reporting it. `schemaDate()`
+  normalises both — a year-only row becomes 1 January of that year, which is the
+  honest reading of "we know the year and not the day".
+
+The audit now checks structured-data *content*, not just that it parses:
+calendar dates on `datePublished`/`dateModified`/`uploadDate`, breadcrumb
+positions starting at 1 and incrementing, every breadcrumb item named, and
+**FAQPage parity — the schema may not claim more questions than the page
+renders**, which is the mismatch that costs a rich result for a whole domain.
+
+Checked and correct, so left alone: breadcrumb positions (1,2,3 with names),
+FAQPage parity (6 = 6), `Dataset.temporalCoverage` (`2026/2032`),
+`variableMeasured` carrying the real figures with the right unit suffix.

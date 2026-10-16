@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Section, Container, Badge, StyledArticleContent } from "@/components/ui";
 import { getBlogs, getBlogBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
-import { pageTitle, pageDescription } from "@/lib/seo";
+import { pageTitle, pageDescription, schemaDate } from "@/lib/seo";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 import BlogSidebarForm from "@/components/blog/BlogSidebarForm";
 import { QuickContactSection } from "@/components/contact";
@@ -114,8 +114,10 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     title: blog.title,
     description: blog.excerpt,
     url: `https://www.neographanalytics.com/blog/${blog.slug}`,
-    datePublished: blog.publishDate || blog.createdAt || blog.date,
-    dateModified: blog.updatedAt,
+    /* Rows store a human date ("December 18, 2025"); schema.org wants a
+       calendar date. See `schemaDate`. */
+    datePublished: schemaDate(blog.publishDate || blog.createdAt || blog.date) ?? "",
+    dateModified: schemaDate(blog.updatedAt),
     author: blog.authorDetails?.name || blog.author,
     keywords: blog.metadata?.keywords,
   });

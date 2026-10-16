@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Section, Container, Badge } from "@/components/ui";
 import { getLegalPages, getLegalPageBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
+import { schemaDate } from "@/lib/seo";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 
 
@@ -97,8 +98,8 @@ export default async function LegalDetailPage({ params }: LegalPageProps) {
     title: page.title,
     description: page.excerpt,
     url: `https://www.neographanalytics.com/legal/${page.slug}`,
-    datePublished: page.lastUpdated,
-    dateModified: page.lastUpdated,
+    datePublished: schemaDate(page.lastUpdated) ?? "",
+    dateModified: schemaDate(page.lastUpdated),
     keywords: page.metadata?.keywords,
   });
 

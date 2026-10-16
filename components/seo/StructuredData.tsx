@@ -230,7 +230,11 @@ export const generateDatasetSchema = (params: {
     name: 'NeoGraph Analytics',
   },
   datePublished: params.datePublished,
-  license: 'https://www.neographanalytics.com/legal/terms-of-use',
+  /* `license` previously pointed at /legal/terms-of-use, which **404s** — the
+     legal pages are privacy, refund and cancellation only. Every one of the 152
+     report pages was declaring a licence URL that does not resolve. Asserting no
+     licence is better than asserting a broken one; the field returns when a
+     terms-of-use page exists (filed as R-11, since legal copy is Siddhant's). */
   ...(params.keywords && params.keywords.length > 0 && {
     keywords: params.keywords.join(', '),
   }),

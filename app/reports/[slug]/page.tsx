@@ -9,6 +9,7 @@ import type { SidebarTOCItem } from "@/lib/toc-utils";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
 import { marketValue } from "@/lib/format";
+import { schemaDate } from "@/lib/seo";
 import { getReportBySlugFull, getReportSlugs } from "@/lib/supabaseReports";
 import { buildReportTOC } from "@/lib/reportToc";
 import { JsonReportSections } from "@/components/reports/JsonReportSections";
@@ -309,13 +310,17 @@ export default async function ReportPage({
   const reportUrl = `https://www.neographanalytics.com/reports/${report.slug}`;
   const reportKeywords = report.meta_keywords?.split(',').map(k => k.trim()).filter(Boolean);
 
+  /* Rows carry only a publication year, so these schemas were emitting
+     "datePublished": "2026". `schemaDate` turns that into a calendar date. */
+  const reportDate = schemaDate(report.date);
+
   // Generate structured data schemas
   const articleSchema = generateArticleSchema({
     type: 'Report',
     title: report.title,
     description: report.description,
     url: reportUrl,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
     author: report.authors && report.authors.length > 0 ? report.authors.map((author) => author.name) : undefined,
     keywords: reportKeywords,
   });
@@ -329,14 +334,14 @@ export default async function ReportPage({
     category: report.category,
     reportCode: report.reportCode || `HF${report.id}`,
     keywords: reportKeywords,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
   });
 
   const datasetSchema = generateDatasetSchema({
     name: `${report.title} - Market Data`,
     description: `Market research dataset for ${report.title}. Includes market size, CAGR, and forecast data for ${report.forecastPeriod || `${baseYearLabel}–${forecastEndYear}`}.`,
     url: reportUrl,
-    datePublished: report.date,
+    datePublished: reportDate ?? report.date,
     keywords: reportKeywords,
     temporalCoverage: report.forecastPeriod
       ? report.forecastPeriod.replace('-', '/')

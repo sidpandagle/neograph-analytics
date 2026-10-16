@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Section, Container, Badge, StyledArticleContent, Button, Card, CardContent } from "@/components/ui";
 import { getPressReleases, getPressReleaseBySlug, isApiError } from "@/lib/api";
 import type { Metadata } from "next";
-import { pageTitle, pageDescription } from "@/lib/seo";
+import { pageTitle, pageDescription, schemaDate } from "@/lib/seo";
 import { StructuredData, generateArticleSchema, generateBreadcrumbSchema } from "@/components/seo/StructuredData";
 import { OfficeLocationsSidebar } from "@/components/contact";
 
@@ -112,8 +112,9 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
     title: pressRelease.title,
     description: pressRelease.excerpt,
     url: `https://www.neographanalytics.com/press-releases/${pressRelease.slug}`,
-    datePublished: pressRelease.publishDate || pressRelease.createdAt || pressRelease.date,
-    dateModified: pressRelease.updatedAt,
+    /* Same as the blog route: a human date is not a schema.org Date. */
+    datePublished: schemaDate(pressRelease.publishDate || pressRelease.createdAt || pressRelease.date) ?? "",
+    dateModified: schemaDate(pressRelease.updatedAt),
     author: pressRelease.authorDetails?.name || pressRelease.author,
     keywords: pressRelease.metadata?.keywords,
   });
