@@ -345,7 +345,11 @@ export default function DesignSystemPage() {
             <Card>
               <CardContent className="space-y-4 pt-6">
                 <div>
-                  <h1 className="text-4xl font-bold mb-2">Heading 1</h1>
+                  {/* A type specimen, not a heading. This was a real <h1>, which
+                      gave the page two — the page title and this sample — and a
+                      document outline with two top-level headings. The sample
+                      only has to *look* like an h1; it must not claim to be one. */}
+                  <p className="text-4xl font-bold mb-2">Heading 1</p>
                   <p className="text-sm text-[var(--muted-foreground)]">
                     text-4xl font-bold
                   </p>

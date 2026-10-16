@@ -723,3 +723,21 @@ Also worth recording:
   The prose is careful that the April 2025 roadmap *encourages* new-approach
   data — it mandates no model and qualifies none — and that FDAMA 3.0 passed
   each chamber separately and **is not law**.
+
+### `/design-system`: two `<h1>`s and no canonical (was R-6)
+The second `<h1>` was a **type specimen** — the sample that shows what an h1
+looks like — so the page had two top-level headings and a document outline that
+claimed two documents. The specimen only has to look like an h1; it is now a
+`<p>` with the same classes. The h2-h6 specimens below it are left as they are:
+they produce an odd outline but not a competing root, and the page is an
+internal tool.
+
+The page is a client component and so cannot export metadata, which is why it
+had no canonical. A new `app/design-system/layout.tsx` supplies one plus an
+explicit `noindex, nofollow`. The robots.txt disallow alone was not enough: a
+disallowed URL can still be indexed from external links precisely because the
+crawler never fetches the page to find a meta robots tag, while a direct request
+does see it.
+
+Verified in the built HTML: h1 count 2 -> 1, canonical present,
+`noindex, nofollow` present.
