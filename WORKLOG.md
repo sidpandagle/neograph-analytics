@@ -1361,3 +1361,10 @@ drift. Built HTML: "Global Gene Therapy Market", "CAR-T Cell Therapy Market".
 The helper carries the warning with it: build the pattern from a character
 class, not a word-boundary escape, because an earlier copy had its escapes
 turned into literal backspace characters and silently did nothing.
+
+### The homepage made the same overstatement as the listing
+The hero read "152 research reports across 6 **healthcare and life sciences**
+verticals" while 26 of those rows are agritech, climate tech, space economy,
+quantum technology, digital infrastructure, advanced materials or synthetic
+biology. Now "152 research reports across 6 research verticals", which is true
+whichever way Siddhant decides R-10. Verified in the built homepage.
