@@ -136,7 +136,13 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             <p className="mt-3 text-[15px] leading-[1.55] text-[var(--cmi-on-blue)]">
               {filteredReports.length.toLocaleString()}{' '}
               {filteredReports.length === 1 ? 'report' : 'reports'} across{' '}
-              {categoryOptions.length} healthcare sectors
+              {/* "healthcare sectors" was inaccurate against the corpus: 26 of the
+                  rows are agritech, climate tech, space economy, quantum
+                  technology, digital infrastructure, advanced materials or
+                  synthetic biology. Whether those belong on a healthcare
+                  publication is Siddhant's call (filed as R-10); until then the
+                  count is described in a way that is true either way. */}
+              {categoryOptions.length} research sectors
             </p>
           </div>
 

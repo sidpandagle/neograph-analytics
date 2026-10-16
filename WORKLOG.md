@@ -1041,3 +1041,20 @@ Built HTML across 152 report pages: **mean 5.4 outbound report links, minimum 2,
 zero dead ends.** Spot checks read correctly — BCI next to neuromodulation,
 wearables and surgical robotics; OIS next to the two AI-in-oncology reports and
 clinical decision support; the climate cluster staying inside itself.
+
+### 26 of 152 reports are not healthcare (filed as R-10, needs Siddhant)
+Found while building the related-reports boundary. By slug prefix:
+`agritech-*` 4, `climate-tech-*` 4, `space-economy-*` 4, `quantum-technology-*`
+4, `advanced-materials-*` 4, `digital-infrastructure-*` 3, `synthetic-biology-*`
+3 — lunar mining, undersea cable, green hydrogen, ceramic defence materials.
+
+They are also filed under the same `industry` values as the healthcare rows,
+which is why the first related-reports pass offered earth observation and
+vertical farming to a reader of the liquid-biopsy report.
+
+Two defensible answers — keep them and widen the positioning, or move them
+behind a separate section — and the choice is Siddhant's, not mine. What I have
+done meanwhile is make the page stop asserting something untrue: the listing
+read "{n} healthcare sectors" and now reads "{n} research sectors", which holds
+either way. The `relatedReports` cluster boundary already keeps the two sets
+from appearing next to each other.
