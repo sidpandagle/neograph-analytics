@@ -798,3 +798,36 @@ First run: **1 error, 7 warnings over 13 pages.** All but one are now fixed:
 Re-run: **13 of 13 pages error-free, 0 errors, 1 warning** — `/design-system`'s
 66-character description, left as it is because the page is an internal tool
 carrying `noindex, nofollow`.
+
+### Two analysis articles, drafted from the reports' own evidence
+The blog corpus was six generic pieces with invented bylines ("Dr. Sarah
+Johnson" appears nowhere in `team-members`). Rather than add more of the same,
+these two are written out of the research notes behind this month's reports, with
+every figure traceable to a named filing and every claim linked to the report it
+came from. Byline is "NeoGraph Analytics Research Desk" — the honest one.
+
+1. **"When the sellers' own filings exceed the market they sell into"** — the
+   bottom-up inversion in CAR-T ($5.53B of disclosed product revenue against
+   published bases of $3.87-4.6B), GLP-1 ($71.94B disclosed, above three of five
+   published sizes, one of which is smaller than a quarter of Zepbound) and
+   bispecifics (two published estimates below Hemlibra and Vabysmo alone, and
+   74% of disclosed revenue non-oncology). Also retires the circulating "CD19 =
+   86.5% of CAR-T" claim: the two BCMA products are 42% of the disclosed total.
+2. **"Why two forecasts of the same market differ by ten times"** — the
+   base-versus-rate table across ten markets. Point-of-care spreads 11.0x on the
+   base and 1.37x on the rate; radiopharmaceuticals invert it at 1.78x and 3.35x.
+   Includes the three cases worth remembering: one publisher at both extremes
+   (Credence, 33x apart in one catalogue), a subset exceeding its own superset by
+   5.4x, and four houses agreeing to 1.07x about a category only 37 of 607,160
+   registered studies name.
+
+`scripts/blog-db.mjs` carries the checks that matter for an HTML article:
+balanced tags (the page injects content with `dangerouslySetInnerHTML`, so a
+stray `</table>` breaks everything below it), no `<h1>` inside the body, no
+U+FFFD, a date and read-time in the corpus's format, and — with `--online` —
+**every internal `/reports/<slug>` link verified against the live corpus**, since
+a dead link in an analysis piece lands exactly where a reader is most likely to
+click. Both drafts pass.
+
+Held for the same deploy as round 2's reports: `/blog/[slug]` also sets
+`dynamicParams = false`.
