@@ -19,8 +19,8 @@ import {
 
 export const metadata: Metadata = {
   title: { absolute: "NeoGraph Analytics | Healthcare Market Research" },
-  description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
-  keywords: ["neograph analytics", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
+  description: "Market research across healthcare, life sciences and frontier technology: market sizing, segmentation, regional and competitive analysis, sources stated.",
+  keywords: ["neograph analytics", "healthcare market research", "life sciences research reports", "market sizing and forecasts", "frontier technology research"],
   alternates: {
     canonical: 'https://www.neographanalytics.com',
   },

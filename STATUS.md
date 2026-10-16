@@ -1,9 +1,30 @@
 # STATUS
 
-**Updated:** 2026-10-17 00:55 IST
+**Updated:** 2026-10-17 02:50 IST
 **Budget:** 7d used ~15% | ceiling (70% of pace) ~39% | headroom ~+23 points
 **Merges to `main` today (IST):** **1 of 5** — #18 at 00:48. Four slots left.
 **Mode:** running
+
+## On the branch, verified locally, awaiting a merge slot
+
+The four owner decisions, implemented. Four merge slots are open today; this
+bundle needs a deploy for the code half to reach production.
+
+```
+/legal/terms-of-use            200, 10 sections (published to Supabase, live now)
+Dataset.license                restored, 1 assertion per report page
+footer                         4 legal links (was 3)
+/api/purchase-inquiry          400 on missing email, bad email, malformed body
+corpus by industry             13 verticals (was 6; 28 rows were mislabelled)
+hero / listing counts          "182 reports across 13 verticals", derived
+audit-html.mjs                 17 of 17 routes, 0 errors, 1 warning
+contrast-audit.mjs             0 failing pairs
+tsc --noEmit                   clean
+```
+
+The Supabase half — the terms page and the 13 chips — reaches production
+through ISR within the hour without a deploy. The licence assertion, the
+checkout fix, the footer link and the widened copy need the merge.
 
 ## Deployed and verified in production
 
@@ -46,13 +67,19 @@ the branch side was strictly newer in every case.
 
 ## Needs Siddhant
 
-- **R-9** — the client-logo marquee asserts relationships with 12 third-party
-  marks. One yes/no per logo.
-- **R-10** — 26 of the 182 reports are not healthcare. Keep and widen the
-  positioning, or separate them? Copy now says "research verticals" either way.
-- **R-4** — the Product/Offer schema publishes a hardcoded $2,995 with
-  `InStock`, matching the visible price.
-- **R-11** — no terms-of-use page exists; the Dataset schema wanted to cite one.
+All four `[H]` items are answered and implemented (R-9, R-4, R-10, R-11). One
+narrower question came out of the work:
+
+- **Who is the contracting entity, and under which law?** The footer says
+  NeoGraph Analytics Pvt. Ltd. (Pune) while `lib/contact.ts` also lists an
+  Austin, TX office. `/legal/terms-of-use` therefore says the entity and
+  governing law are stated on each order rather than naming one. One line from
+  you replaces that paragraph with a real governing-law clause.
+- **One live send of the new purchase-inquiry route is unverified.** Its
+  validation path is tested (400 on missing email, bad email, malformed body)
+  and the Resend sender is the one `/api/contact` already uses, but no real
+  email was sent to `support@` without being asked. To confirm delivery:
+  `curl -X POST https://www.neographanalytics.com/api/purchase-inquiry -H 'Content-Type: application/json' -d '{"fullName":"Test","email":"you@example.com","reportTitle":"Test","reportSlug":"femtech-market"}'`
 
 ## Next up
 

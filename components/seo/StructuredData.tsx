@@ -230,11 +230,13 @@ export const generateDatasetSchema = (params: {
     name: 'NeoGraph Analytics',
   },
   datePublished: params.datePublished,
-  /* `license` previously pointed at /legal/terms-of-use, which **404s** — the
-     legal pages are privacy, refund and cancellation only. Every one of the 152
-     report pages was declaring a licence URL that does not resolve. Asserting no
-     licence is better than asserting a broken one; the field returns when a
-     terms-of-use page exists (filed as R-11, since legal copy is Siddhant's). */
+  /* `license` pointed at /legal/terms-of-use while that page did not exist, so
+     all 152 report pages declared a licence URL that 404'd; the field was
+     removed rather than pointed at an unrelated policy. The page now exists
+     (R-11, published 2026-10-17) and carries the report licence itself, so the
+     assertion is restored. If the route is ever removed, remove this with it —
+     a broken licence URL is worse than none. */
+  license: 'https://www.neographanalytics.com/legal/terms-of-use',
   ...(params.keywords && params.keywords.length > 0 && {
     keywords: params.keywords.join(', '),
   }),

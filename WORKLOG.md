@@ -1515,3 +1515,74 @@ has 0 failing pairs.
 
 Worth keeping in mind for any future corpus-wide read used during a build: it
 needs a revalidate, or the build will cheerfully serve yesterday's corpus.
+
+## 2026-10-17 — the four owner decisions, answered and implemented
+Siddhant answered the four `[H]` items in one line each: R-10 "go with what is
+better for site", R-9 yes, R-4 yes, R-11 "you draft it and use it in site".
+
+- **R-9 closed as confirmed.** All 12 marks in `TrustedPartnersSection` are
+  authorised by the owner. No code change; the finding is recorded as answered
+  rather than fixed, which is the honest disposition.
+- **R-4: the price is real, the delivery was not.** $2,995 / `InStock` is
+  correct and stays. Verifying it exposed a worse defect: `CheckoutForm`'s
+  `handleSubmit` was `setSubmitted(true)` and nothing else. It rendered "our
+  team will contact you" over a lead that was never sent anywhere — every
+  checkout inquiry since the form shipped was dropped. New
+  `app/api/purchase-inquiry/route.ts` (mirrors `/api/contact`: same
+  `form-guard`, same Resend sender, plus report slug/title and the quoted
+  price), `submitPurchaseInquiry()` in `lib/api/forms.ts`, and the form now
+  flips to the success panel only on a confirmed send, shows the server's
+  message on failure, and keeps what the buyer typed. Its 5 field borders also
+  still used `--border` (1.07:1) and are repointed to `--input` (3.43/3.80:1) —
+  the token pass that fixed contact, request-sample, blog and 404 had missed
+  checkout.
+- **R-11 drafted and published.** `/legal/terms-of-use` exists: 10 sections,
+  ~5.9KB, covering what we publish and that forecasts are estimates, ordering
+  and sales-assisted payment, the report licence (one named user, internal use,
+  quoting with attribution; no resale, no training a competing data product),
+  free material, automated access via `/llms.txt`, IP, liability capped at what
+  was paid, personal data, and who the contracting entity is. Published through
+  a new `scripts/legal-db.mjs` (list/dump/check/publish, upsert on `slug`,
+  nothing deleted). `Dataset.license` is restored on all 182 report pages and
+  the footer carries a Terms of Use link.
+  **Governing law is deliberately not asserted** — the footer says NeoGraph
+  Analytics Pvt. Ltd. (Pune) while `lib/contact.ts` also carries an Austin, TX
+  office, so the page says the contracting entity and governing law are stated
+  on the order. Siddhant's call to name one.
+- **R-10 resolved as "keep all 182 and widen".** Orphaning 26 indexed pages
+  costs more than a broader masthead. Measuring it found the actual defect:
+  **22 of those rows were labelled `Life Sciences` in Supabase** — lunar
+  mining, undersea cable, green hydrogen, high-entropy alloys, precision-farming
+  drones, quantum networking — and both the mega-menu tiles and the `/reports`
+  chips derive from that column, so the taxonomy actively misfiled them.
+  `scripts/relabel-industries.mjs` (dry run by default) relabelled 28 rows into
+  7 honest industries: Advanced Materials 4, Agriculture & Food Tech 6,
+  Climate & Energy 4, Digital Infrastructure 3, Quantum Technology 4, Space
+  Economy 4, Synthetic Biology 3. The corpus now reads 13 verticals, not 6, and
+  the hero and listing counts — which are derived, not written — say so
+  without any wording that has to be kept true by hand. `data/categories.json`
+  gained the 7 with editorial descriptions and slugs matching the runtime
+  derivation. Root, home and `/reports` metadata widened to "healthcare, life
+  sciences and frontier technology" (153 and 151 chars); `/about` no longer
+  calls itself "a specialized healthcare consulting firm". The "Behind
+  Healthcare's Biggest Decisions" h1 stays: healthcare is 156 of 182 rows and
+  the ranking brand anchor.
+
+### A third false pass of the same family, caught
+`npm run build` on a warm `.next` **emitted the previous build's HTML**: the
+compiled server chunk contained the new Terms of Use footer link while
+`.next/server/app/about.html`, written by that same build, carried only the old
+three. Verification against it would have passed a change that had not been
+built. Before that, `next start -p 3100` had failed with `EADDRINUSE` (PID
+15684 already held the port) and the 200s came from a stale server — the exact
+trap CLAUDE.md warns about. Both now have a habit attached: confirm the PID
+owning the port is ours, and move `.next` aside before a build whose output
+will be used as evidence.
+
+### Checker
+`scripts/audit-html.mjs` audits `/legal/terms-of-use` as a 17th route and gains
+a licence rule: a `license` in any ld+json block must point at a route this
+build renders (local) or return 200 (`--prod`). Negative-tested — repointing it
+at `/legal/nope-does-not-exist` fails the audit, restoring it clears.
+`17 of 17 routes error-free, 0 errors, 1 warning` (the pre-existing short
+`/design-system` description). `contrast-audit.mjs`: 0 failing pairs.

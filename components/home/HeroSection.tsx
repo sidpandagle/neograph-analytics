@@ -51,12 +51,13 @@ export default async function HeroSection() {
         </h1>
 
         <p className="animate-reveal-up-d2 max-w-[440px] text-[15px] leading-[1.55] text-[var(--cmi-on-blue)] md:text-base">
-          {/* "healthcare and life sciences verticals" overstated the corpus: 26
-              of its rows are agritech, climate tech, space economy, quantum
-              technology, digital infrastructure, advanced materials or synthetic
-              biology. Whether those belong here is Siddhant's call (R-10); until
-              then the sentence is written to be true either way, as on /reports. */}
-          {corpusLabel} across {industryCount || 'every'} research{' '}
+          {/* R-10, resolved 2026-10-17: the 26 non-healthcare rows stay, and the
+              positioning widened to match them rather than the pages being
+              orphaned. They had been labelled `Life Sciences` in Supabase, so
+              `industryCount` read 6 while the real answer was 13; relabelled,
+              this sentence now counts them honestly without any wording that
+              has to be kept true by hand. */}
+          {corpusLabel} across {industryCount || 'every'}{' '}
           {industryCount === 1 ? 'vertical' : 'verticals'} — market sizing,
           segmentation, regional and competitive analysis, each with its sources and
           method stated.

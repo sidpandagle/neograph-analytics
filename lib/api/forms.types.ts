@@ -1,6 +1,6 @@
 // Form submission types based on the API design
 
-export type FormCategory = 'contact' | 'request-sample';
+export type FormCategory = 'contact' | 'request-sample' | 'purchase-inquiry';
 
 export type FormStatus = 'pending' | 'processed' | 'archived';
 
@@ -31,6 +31,18 @@ export interface RequestSampleFormData {
   additionalInfo?: string;
 }
 
+// Purchase Inquiry Form Data (checkout page)
+export interface PurchaseInquiryFormData {
+  fullName: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  country?: string;
+  reportTitle: string;
+  reportSlug: string;
+  quotedPrice?: string;
+}
+
 // Metadata for form submissions
 export interface FormMetadata {
   submittedAt: string;
@@ -41,7 +53,7 @@ export interface FormMetadata {
 }
 
 // Base form submission request
-export interface FormSubmissionRequest<T = ContactFormData | RequestSampleFormData> {
+export interface FormSubmissionRequest<T = ContactFormData | RequestSampleFormData | PurchaseInquiryFormData> {
   category: FormCategory;
   data: T;
   metadata?: FormMetadata;

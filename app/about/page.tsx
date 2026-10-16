@@ -97,8 +97,9 @@ export default async function AboutPage() {
               Through an <span className="text-[var(--cmi-on-blue)]">Integrated Approach</span>
             </h1>
             <p className="text-lg text-[var(--cmi-on-blue)] max-w-2xl mx-auto leading-[1.8]">
-              A specialized healthcare consulting firm offering comprehensive advisory services to providers,
-              life sciences companies, payers, and health technology organizations worldwide.
+              A research and advisory firm covering healthcare and life sciences, and the frontier-technology
+              sectors adjacent to them, for providers, life sciences companies, payers, investors and
+              technology organizations worldwide.
             </p>
           </div>
         </div>

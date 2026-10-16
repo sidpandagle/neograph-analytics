@@ -67,6 +67,7 @@ export default async function CheckoutPage({
             <CheckoutForm
               reportSlug={report.slug}
               reportTitle={report.title}
+              quotedPrice={report.discounted_price || report.price}
             />
           </div>
 

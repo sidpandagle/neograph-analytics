@@ -26,6 +26,7 @@ const consultingLinks = [
 ];
 
 const legalLinks = [
+  { href: "/legal/terms-of-use", label: "Terms of Use" },
   { href: "/legal/privacy-policy", label: "Privacy" },
   { href: "/legal/refund-policy", label: "Refund Policy" },
   { href: "/legal/cancellation-policy", label: "Cancellation" },
