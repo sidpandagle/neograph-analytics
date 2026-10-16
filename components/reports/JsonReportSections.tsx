@@ -635,16 +635,38 @@ function JsonFAQSection({ faqs }: { faqs: JsonReport['faqs'] }) {
               onClick={() => setOpen(open === i ? null : i)}
             >
               <span className="font-medium text-sm text-[var(--foreground)] pr-4">{faq.question}</span>
+              {/* The toggle used to be the text character "+", rotated 45deg to
+                  read as a cross. A glyph sits on its own baseline inside a line
+                  box, so `items-center` centres the line box and not the plus's
+                  crossing point — and rotating it turns it about that same
+                  off-centre origin, which is why the cross sat low and left of
+                  the circle it lives in. Two SVG strokes are centred by
+                  geometry, so both states land dead centre in any font. */}
               <span
-                className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-sm font-bold transition-transform duration-200"
+                className="flex-shrink-0 w-5 h-5 rounded-full grid place-items-center transition-colors duration-200"
                 style={{
                   background: open === i ? 'var(--cmi-primary-fill)' : 'var(--muted)',
-                  border: open === i ? 'none' : '1px solid var(--border)',
+                  border: open === i ? '1px solid transparent' : '1px solid var(--border)',
                   color: open === i ? 'var(--primary-foreground)' : 'var(--muted-foreground)',
-                  transform: open === i ? 'rotate(45deg)' : 'none',
                 }}
               >
-                +
+                <svg
+                  viewBox="0 0 16 16"
+                  width="10"
+                  height="10"
+                  aria-hidden="true"
+                  focusable="false"
+                  className="block transition-transform duration-200"
+                  style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}
+                >
+                  <path
+                    d="M8 2.5v11M2.5 8h11"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </span>
             </button>
             <div

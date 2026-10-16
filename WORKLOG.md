@@ -1058,3 +1058,30 @@ done meanwhile is make the page stop asserting something untrue: the listing
 read "{n} healthcare sectors" and now reads "{n} research sectors", which holds
 either way. The `relatedReports` cluster boundary already keeps the two sets
 from appearing next to each other.
+
+### Two defects Siddhant reported from screenshots
+**Header dropdowns painted behind page content.** The Consulting mega-menu was
+underneath the hero search bar and the chart card. The menu panels already set
+`z-50`, which is why this looks impossible until you notice the `<header>`
+carries `backdrop-blur-xl`: a `backdrop-filter` **creates a stacking context**,
+so `z-50` only ranked the panel *inside the header*, while the header itself sat
+at `z-index: auto` in the root context. Any later page element that makes its
+own stacking context — the hero's search suggestions are `z-50`, the panels
+carry shadows and transforms — therefore painted over it.
+
+Fixing it on the menus would have been a patch per menu. The header wrapper is
+now `relative z-[60]`, which lifts the whole subtree, including the mobile
+drawer and its scrim, above page content on **every** page at once. 60 sits
+above the `z-50` used inside pages and below the `z-100` skip link, which must
+stay on top. Verified present in the built HTML of six routes.
+
+**The FAQ +/x toggle sat low and left in its circle.** It was the text character
+`+`, rotated 45 degrees to read as a cross. A glyph is centred by its line box,
+not by the plus's crossing point, and the rotation then turns it about that same
+off-centre origin — so both states were off, and the cross worse than the plus.
+It is now two SVG strokes on a 16-unit viewBox, centred by geometry and rotated
+about the SVG's own centre, so both states land dead centre regardless of font.
+
+Both are structural fixes verified in the built HTML and in the stacking rules;
+the visual confirmation in a browser comes after 21:00 IST, when that window
+opens.
