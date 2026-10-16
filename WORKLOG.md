@@ -1178,3 +1178,41 @@ of finding from the earlier rounds:
 Gaps recorded rather than papered over: no CISA advisory count (the page is
 client-rendered), no Colorado programme count, no absolute cycle count for one
 operator, and Curium and Cardinal's nuclear line are not separately disclosed.
+
+### `scripts/contrast-audit.mjs`, and the two defects it found
+Contrast claims on this project have to carry a number, so the measurement is
+now a committed script: it reads the hex tokens out of `app/globals.css` (the
+`:root` block for light, `.dark` for dark) and measures the pairs the components
+actually use. Exit code is the failure count.
+
+**The audit's own first run was wrong twice, and both corrections are written
+into the file** — the standing rule here is that reviewer output is a hypothesis:
+
+1. It measured each stroke of the two-tone focus ring separately and reported
+   the ink stroke failing on the blue panel at 2.58:1, when the paper stroke
+   beside it is at 7.25:1 — which is the entire reason the ring is two-tone. A
+   ring now passes if *either* stroke clears 3:1.
+2. It failed `--border` against `--card` at 1.22:1. WCAG 1.4.11 does not ask
+   3:1 of a decorative rule — a card outline is not a boundary a user must
+   perceive, and the card has its own background. Those pairs are now printed
+   for information with no threshold.
+
+What survived as real:
+
+- **Form field borders were effectively invisible.** The fields use
+  `--border` — 1.07:1 against the desk, 1.22:1 on a card in light mode — while
+  a `--input` token exists for exactly this and was used nowhere. A field border
+  *is* the affordance, which is the case 1.4.11 covers. `--input` is now
+  #7684A6 light (3.30:1 on the desk, 3.74:1 on a card) and #5A6FA3 dark (3.80
+  and 3.43); the previous dark value cleared the desk at 3.12 but fell to 2.81
+  on a card, where most fields sit. 23 field borders repointed across contact,
+  request-sample, the blog form and the 404 page.
+- **`country-select.tsx` ignored the theme entirely.** It predates the token
+  system: `border-gray-300`, `hover:border-purple-500`, `focus:ring-purple-500`,
+  `text-gray-900`, `bg-purple-100`. Purple appears nowhere else on the site, and
+  in dark mode `text-gray-900` (#111827) on `--card` (#131C30) measures
+  **1.02:1** — the selected country was invisible on both live forms. Every
+  class now reads a token.
+
+Audit after the fixes: **0 failing pairs in both themes**, 16 of 16 pages still
+error-free in the HTML audit.

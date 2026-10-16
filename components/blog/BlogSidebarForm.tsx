@@ -136,7 +136,7 @@ export default function BlogSidebarForm() {
                 required
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
                 placeholder="John Doe"
               />
             </div>
@@ -152,7 +152,7 @@ export default function BlogSidebarForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
                 placeholder="john@company.com"
               />
             </div>
@@ -178,7 +178,7 @@ export default function BlogSidebarForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
                 placeholder="+1 (555) 000-0000"
               />
             </div>
@@ -194,7 +194,7 @@ export default function BlogSidebarForm() {
                 required
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
                 placeholder="Your Company"
               />
             </div>
@@ -209,7 +209,7 @@ export default function BlogSidebarForm() {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] bg-[var(--background)]"
               >
                 <option value="">Select a subject</option>
                 <option value="general">General Inquiry</option>
@@ -232,7 +232,7 @@ export default function BlogSidebarForm() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] resize-none bg-[var(--background)]"
+                className="w-full px-3 py-2 text-sm border border-[var(--input)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] resize-none bg-[var(--background)]"
                 placeholder="Tell us how we can help..."
               />
             </div>
