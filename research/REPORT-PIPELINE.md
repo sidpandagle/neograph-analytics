@@ -25,16 +25,16 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 8 | bispecific-antibodies-market | Biotechnology | 1B | published |
 | 9 | glp-1-receptor-agonists-market | Pharmaceuticals | 1B | published |
 | 10 | phage-therapy-market | Biotechnology | 1B | published |
-| 11 | single-cell-sequencing-market | Life Sciences | 2A | queued |
-| 12 | spatial-biology-market | Life Sciences | 2A | queued |
-| 13 | proteomics-market | Life Sciences | 2A | queued |
-| 14 | pharmacogenomics-market | Life Sciences | 2A | queued |
-| 15 | organoid-and-organ-on-chip-market | Life Sciences | 2A | queued |
-| 16 | decentralized-clinical-trials-market | Healthcare IT | 2B | queued |
-| 17 | real-world-evidence-market | Healthcare IT | 2B | queued |
-| 18 | health-data-interoperability-market | Healthcare IT | 2B | queued |
+| 11 | single-cell-sequencing-market | Life Sciences | 2A | check-passed |
+| 12 | spatial-biology-market | Life Sciences | 2A | check-passed |
+| 13 | proteomics-market | Life Sciences | 2A | check-passed |
+| 14 | pharmacogenomics-market | Life Sciences | 2A | check-passed |
+| 15 | organoid-and-organ-on-chip-market | Life Sciences | 2A | check-passed |
+| 16 | decentralized-clinical-trials-market | Healthcare IT | 2B | check-passed |
+| 17 | real-world-evidence-market | Healthcare IT | 2B | check-passed |
+| 18 | health-data-interoperability-market | Healthcare IT | 2B | check-passed |
 | 19 | ~~revenue-cycle-management-automation-market~~ -> **revenue-cycle-management-market** | Healthcare IT | 2B | check-passed |
-| 20 | hospital-at-home-market | Healthcare IT | 2B | queued |
+| 20 | hospital-at-home-market | Healthcare IT | 2B | check-passed |
 | 21 | proton-therapy-market | Medical Devices | 3A | queued |
 | 22 | surgical-navigation-market | Medical Devices | 3A | queued |
 | 23 | insulin-delivery-systems-market | Medical Devices | 3A | queued |
@@ -55,6 +55,13 @@ four regional clones of fourteen topics, and another clone adds no analysis.
 | 38 | orthopedic-implants-market | Medical Devices | 4B | queued |
 | 39 | rehabilitation-robotics-market | Medical Devices | 4B | queued |
 | 40 | veterinary-diagnostics-market | Life Sciences | 4B | queued |
+
+**Round 2 is drafted and passing `check`, held for the next merge slot.** Ten
+reports: single-cell sequencing, spatial biology, proteomics, pharmacogenomics,
+organoids & organ-on-chip; decentralised trials, real-world evidence, health
+data interoperability, revenue cycle management, hospital-at-home. Publishing
+them before a deploy would list cards pointing at 404s — see the sequencing rule
+in `REPORT-AUTHORING-BRIEF.md`.
 
 States: `queued` -> `drafting` -> `check-passed` -> `published`. A topic that
 turns out to have no defensible public evidence base is marked `dropped` with

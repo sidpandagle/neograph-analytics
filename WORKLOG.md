@@ -687,3 +687,39 @@ inside every published forecast period while none of them says what happens on
 - **R-2** remeasured rather than closed: `/reports` is **508KB -> 284KB** after
   the card projection, still the heaviest route. The rest is 152 cards of real
   data, so the next move is pagination or streaming, not column trimming.
+
+### Round 2, batch 2A — five Life Sciences reports drafted (held with 2B)
+All five pass `check`. Held for the next merge slot for the same reason as 2B.
+
+Two of the five are built on the kind of arithmetic that is hard to argue with:
+
+- **Proteomics** — one publisher's proteomics *instruments* line alone ($8.0B)
+  is **1.06x Thermo Fisher's entire Analytical Instruments segment** ($7.55B,
+  all applications), and its $41.2B total is **3.75x** that segment plus all of
+  Bruker. Meanwhile disclosed pure-play revenue (Quanterix, SomaLogic, Standard
+  BioTools, Seer) sums to **$340.5M — a factor of 121 below the headline.**
+  Illumina paid ~$350M in cash for SomaLogic, roughly the whole pure-play
+  sector's annual revenue.
+- **Pharmacogenomics** — the FDA's Table of Pharmacogenomic Biomarkers in Drug
+  Labeling enumerated on 16 Oct 2026: **692 rows, 439 distinct drug products**,
+  against ~**53** active ingredients with CPIC Level A guidance. Forecasts cite
+  the 439; payers pay for the 53. The high estimate divided by Medicare's
+  $917.08 CLFS rate for CPT 81418 implies **20.98M panels a year — 30.3% of
+  every Medicare beneficiary, annually, for a genotype that never changes.**
+
+Also worth recording:
+
+- **Spatial biology** spreads **16.9x**, and the two extremes claim the *same*
+  narrow scope. One house's subset figure exceeds its own superset figure by
+  5.4x. Here the narrow totals are too *low* — 10x plus Akoya alone are 67.9% of
+  the lowest published total, before Bruker's NanoString — which is why the
+  report publishes the wide scope.
+- **Single-cell sequencing**: the published 12.2% rate needs $1.51B of net new
+  revenue by 2030, **3.9x the market leader's entire Single Cell line** — in a
+  year when that line fell 2% and its instruments fell 36%.
+- **Organoids / organ-on-chip**: the forecast needs $1,710.3M of net new revenue
+  against **one** accepted ISTAND letter of intent (step 1 of 3) and **zero**
+  qualified organ-chip drug development tools as of the FDA's 22 Sep 2026 page.
+  The prose is careful that the April 2025 roadmap *encourages* new-approach
+  data — it mandates no model and qualifies none — and that FDAMA 3.0 passed
+  each chamber separately and **is not law**.

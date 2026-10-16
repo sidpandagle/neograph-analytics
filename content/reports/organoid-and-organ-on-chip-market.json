@@ -1,0 +1,253 @@
+{
+  "report_id": "organoid-and-organ-on-chip-market",
+  "slug": "organoid-and-organ-on-chip-market",
+  "title": "Organoid and Organ-on-Chip Market Size, Share & Forecast 2026-2032",
+  "industry": "Life Sciences",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Million",
+  "market_size": {
+    "current_value": 623.8,
+    "forecast_value": 2334.1,
+    "cagr": 24.6
+  },
+  "market_overview": {
+    "summary": "Published estimates for this market span 23.4x, from $77 million to $1.8 billion for roughly the same year, and the gap runs straight down the middle of the market's own name. Houses sizing organ-on-chip devices cluster tightly between $77 million and $153.2 million; houses sizing organoids publish $1.18 billion to $3.03 billion, 12 to 23 times higher, because they count the whole 3D cell-culture consumables base. The only published series whose scope matches both halves puts the combined market at $500.6 million for 2025 — which is 0.28x another house's organoid-only figure, an arithmetic impossibility that tells you at least one of them is wrong by 3.8x or more. We publish that combined series, $623.8 million in 2026 to $2,334.1 million by 2032 at 24.6%, because it is the only one whose scope matches and the only one whose arithmetic closes on itself, to 0.02%.",
+    "key_trends": [
+      "The demand-side event is a roadmap, not a mandate: FDA's 10 April 2025 announcement phases out the animal testing requirement for monoclonal antibodies and other drugs and encourages new approach methodologies in IND applications — it requires no specific model and qualifies no specific chip or organoid",
+      "Regulatory qualification has barely begun: one organ-on-a-chip letter of intent has been accepted into FDA's ISTAND programme (Emulate's Liver-Chip, 24 September 2024, step 1 of 3) and no organ chip has completed Drug Development Tool qualification",
+      "FDA Modernization Act 3.0 has passed each chamber separately and is not law: S. 355 passed the Senate by unanimous consent on 16 December 2025 and H.R. 2821 passed the House by voice vote on 20 July 2026",
+      "Published figures are internally unreliable even within a single page: IMARC carries a $98.2 million 2025 base alongside a trends statement projecting $220 million by 2025, and Roots Analysis gives North America as both ~45% and ~42%",
+      "The two halves of the market are different businesses: chip devices are capital-and-consumable microfluidics sold to a few hundred toxicology groups, while organoid revenue is largely commodity media, matrices and plates sold to every 3D cell-culture laboratory",
+      "Scientific scale is modest relative to the forecasts: 2,948 PubMed records for organ-on-a-chip and microphysiological systems as of 16 October 2026, against 31,041 for single-cell RNA sequencing — 9.5% of the literature at roughly double the published growth rate"
+    ],
+    "market_stage": "Emerging",
+    "adoption_level": "Exploratory in toxicology; no qualified regulatory tool yet"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "FDA's April 2025 roadmap to phase out animal testing requirements for monoclonal antibodies and other drugs, which encourages inclusion of new approach methodology data in investigational new drug applications and gives sponsors a reason to generate it voluntarily",
+      "FDA Modernization Act 2.0, enacted late 2022, which removed the statutory requirement for animal testing before human trials and so removed the legal obstacle to submitting model-based data instead",
+      "Drug-induced liver injury as a concrete, high-value use case: it is the indication behind the only organ-chip submission accepted into FDA's ISTAND qualification programme",
+      "Patient-derived tumour organoids for therapy selection and for disease modelling in rare genetic conditions, where no animal model exists at all and the comparison is not animal versus chip but chip versus nothing",
+      "Contract research demand that needs no regulatory qualification: a sponsor can commission an organ-chip study today and use the data internally for compound triage"
+    ],
+    "restraints": [
+      "No qualified tool exists: one letter of intent accepted into ISTAND, step 1 of a three-step process, filed September 2024 and not qualified two years later — so no sponsor can yet rely on a chip model across submissions without re-justifying it each time",
+      "The regulatory change is permissive, not compulsory. Nothing requires an organ chip or organoid study, nothing prohibits animal studies, and a sponsor with a working animal model has little incentive to add cost",
+      "Inter-laboratory reproducibility and the absence of accepted qualification standards, which is precisely what a DDT qualification would establish and what has not yet been established",
+      "A very small buyer base for chip devices: preclinical safety and toxicology groups at large pharmaceutical companies and specialist CROs, numbering in the hundreds rather than the thousands",
+      "Published market sizes that disagree by 23.4x give entrants and investors no reliable sense of scale, and the mutually inconsistent figures have repeatedly been cited as if interchangeable"
+    ],
+    "opportunities": [
+      "Completion of the first organ-chip DDT qualification, which would be a step change rather than a growth rate — it converts a bespoke study into a reusable regulatory tool",
+      "Enactment of FDA Modernization Act 3.0, which would direct FDA to issue an interim final rule replacing 'animal' with 'nonclinical' across the IND regulations within a year, moving the change from agency policy into rulemaking",
+      "Patient-derived organoid therapy selection as a clinical service under CLIA, where the buyer is a health system rather than a drug sponsor and the volume scales with patients rather than with programmes",
+      "Cosmetics and chemicals testing, where animal testing is already restricted in the EU and elsewhere and the substitution question is settled rather than pending",
+      "Multi-organ and body-on-chip systems for pharmacokinetic questions that single-tissue models and animal studies both answer badly"
+    ],
+    "challenges": [
+      "The forecast requires $1,710.3 million of net new revenue between 2026 and 2032, against one accepted regulatory letter of intent and zero qualified tools — a claim about how fast a qualification pipeline fills, not an extrapolation of anything measurable",
+      "The published combined-scope figure is 0.28x another house's organoid-only figure, so the market's own published arithmetic does not hold together and must be reconstructed before use",
+      "The large organoid numbers belong to a commodity reagents business that the regulatory narrative does not touch, which means the headline growth story and the headline revenue describe different activities",
+      "Vendors are private: Emulate, CN Bio Innovations, Mimetas, Nortis, InSphero and Hesperos disclose no revenue, and the organoid reagent suppliers report no organoid line, so there is no company-level denominator for any check",
+      "A roadmap statement is being read as a mandate across the sector's marketing material, and a forecast built on that misreading overstates the certainty rather than the direction"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Organoids and spheroids",
+      "Organ-on-chip devices",
+      "Bioreactors and instruments",
+      "Consumables and media",
+      "Services"
+    ],
+    "by_application": [
+      "Drug discovery and screening",
+      "Toxicology and safety assessment",
+      "Disease modelling",
+      "Personalised medicine and therapy selection",
+      "Regulatory testing"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biotechnology companies",
+      "Academic and research institutions",
+      "Contract research organisations",
+      "Cosmetics and chemicals companies"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 623.8 },
+    { "year": 2027, "value": 777.2 },
+    { "year": 2028, "value": 968.4 },
+    { "year": 2029, "value": 1206.6 },
+    { "year": 2030, "value": 1503.4 },
+    { "year": 2031, "value": 1873.3 },
+    { "year": 2032, "value": 2334.1 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at a constant 24.6% CAGR from Astute Analytica's published 2025 base, USD million)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Emulate, Inc.",
+      "headquarters": "Boston, Massachusetts, United States",
+      "market_position": "Holds the only organ-on-a-chip regulatory precedent in existence: the sole organ-chip letter of intent accepted into FDA's ISTAND qualification programme. Private; revenue not disclosed, and no market share is published or assigned.",
+      "description": "Organ-Chip systems based on microfluidic co-culture. CDER accepted its Liver-Chip S1 letter of intent on 24 September 2024, for assessing drug-induced liver injury risk in adults with data intended to support an investigational new drug application. That acceptance is step 1 of a three-step qualification process and had not produced a qualified tool as at FDA's 22 September 2026 ISTAND page update."
+    },
+    {
+      "company": "CN Bio Innovations Limited",
+      "headquarters": "Cambridge, United Kingdom",
+      "market_position": "One of the two most frequently cited independent organ-chip platform companies. Private; revenue not disclosed.",
+      "description": "PhysioMimix single- and multi-organ microphysiological systems, positioned on liver and gut models for drug metabolism and toxicology. Sells both instruments and contract study services, which is the revenue model that does not depend on regulatory qualification."
+    },
+    {
+      "company": "MIMETAS B.V.",
+      "headquarters": "Oegstgeest, Netherlands",
+      "market_position": "Private; revenue not disclosed. Competes on throughput, with plate-format microfluidic devices aimed at screening rather than bespoke single-model studies.",
+      "description": "OrganoPlate platform, a microtitre-plate-format organ-on-chip system supporting parallel perfused tissue cultures. The plate format is a deliberate attempt to move organ-chip work from specialist toxicology into conventional screening workflows."
+    },
+    {
+      "company": "Thermo Fisher Scientific Inc.",
+      "headquarters": "Waltham, Massachusetts, United States",
+      "market_position": "A principal supplier of the organoid media, matrices and plasticware that make up most of the revenue in the large organoid-scope market estimates. Reports no organoid or 3D-culture revenue line, so no figure is extractable and no share is assigned.",
+      "description": "Supplies cell culture media, growth factors, extracellular matrices and labware used in organoid derivation and maintenance. Its presence is the reason the organoid-scope figures are an order of magnitude above the chip-scope figures: this is commodity reagents revenue with a very large installed customer base."
+    },
+    {
+      "company": "Corning Incorporated",
+      "headquarters": "Corning, New York, United States",
+      "market_position": "The other major supplier of the consumables underlying the organoid-scope market estimates, through extracellular matrix products and 3D-culture labware. No organoid revenue line is disclosed.",
+      "description": "Supplies basement-membrane matrix products and spheroid and organoid culture plasticware. Like Thermo Fisher, it sells into routine 3D cell culture far more broadly than into regulatory-grade tissue modelling, which is the distinction the published market scopes handle inconsistently."
+    },
+    {
+      "company": "InSphero AG",
+      "headquarters": "Schlieren, Switzerland",
+      "market_position": "Private; revenue not disclosed. Positioned on 3D microtissue assay services rather than instrument sales, serving pharmaceutical safety and efficacy screening.",
+      "description": "Scaffold-free 3D microtissue models, notably liver and pancreatic islet microtissues, sold as assay-ready products and as contract screening services."
+    },
+    {
+      "company": "Hesperos, Inc.",
+      "headquarters": "Orlando, Florida, United States",
+      "market_position": "Private; revenue not disclosed. Operates primarily as a contract study provider rather than a platform vendor, which is the part of this market that needs no regulatory qualification to generate revenue.",
+      "description": "Multi-organ human-on-a-chip systems with functional readouts, used for toxicology and efficacy studies on a fee-for-study basis, including work on rare-disease compounds where no animal model exists."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "U.S. Food and Drug Administration",
+      "year": 2025,
+      "event": "Announced on 10 April 2025 a phased roadmap to replace animal testing requirements in the development of monoclonal antibody therapies and other drugs with new approach methodologies including AI-based toxicity models, cell lines and organoid testing, applied immediately to investigational new drug applications by encouraging the inclusion of such data rather than requiring any specific model."
+    },
+    {
+      "company": "Emulate, Inc.",
+      "year": 2024,
+      "event": "Had its Liver-Chip S1 letter of intent accepted by FDA's Center for Drug Evaluation and Research into the ISTAND qualification programme on 24 September 2024 — the first organ-on-a-chip technology to reach that milestone — for assessing drug-induced liver injury risk in adults, at step 1 of a three-step qualification process."
+    },
+    {
+      "company": "U.S. Food and Drug Administration",
+      "year": 2026,
+      "event": "Updated its ISTAND programme page with content current as of 22 September 2026, listing no submission table and directing readers to the CDER and CBER Drug Development Tool Qualification Project Search database; its spotlight announcements as at that date were a wearable-sensor outcome measure and the first in-silico drug-induced liver injury tool, neither an organ chip."
+    },
+    {
+      "company": "United States House of Representatives",
+      "year": 2026,
+      "event": "Passed H.R. 2821, the FDA Modernization Act 3.0, under suspension by voice vote on 20 July 2026, with the bill received in the Senate on 21 July 2026; the Senate had passed its own version, S. 355, with an amendment by unanimous consent on 16 December 2025. The measure would direct FDA to issue an interim final rule within a year of enactment replacing references to animal testing with nonclinical testing across the investigational new drug regulations, and has not been enacted."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA Modernization Act 2.0, enacted late 2022: removed the statutory requirement for animal testing before human trials and authorised the use of non-animal alternatives in investigational new drug applications. It requires nothing in place of animal testing.",
+    "FDA announcement of 10 April 2025: a phased roadmap to replace animal testing in the development of monoclonal antibodies and other drugs with new approach methodologies, including AI-based toxicity models, cell lines and organoid testing. It applies immediately to investigational new drug applications by encouraging the inclusion of such data; it does not require any specific model, does not qualify any specific organ chip or organoid, and does not prohibit animal studies. It commits FDA over three years to reviewing existing data, collaborating with sponsors on such studies, and establishing an open-access drug-toxicity repository.",
+    "FDA's Innovative Science and Technology Approaches for New Drugs (ISTAND) programme is the Drug Development Tool qualification route for a microphysiological system, with three steps: letter of intent, qualification plan, full qualification package. As at the programme page's content date of 22 September 2026, one organ-on-a-chip letter of intent had been accepted — Emulate's Liver-Chip, on 24 September 2024 — and no organ chip had completed qualification.",
+    "FDA Modernization Act 3.0 is not law. S. 355 passed the Senate with an amendment by unanimous consent on 16 December 2025; H.R. 2821 passed the House under suspension by voice vote on 20 July 2026 and was received in the Senate on 21 July 2026. It would direct FDA to issue an interim final rule within a year of enactment replacing references to 'animal' with 'nonclinical' across the investigational new drug regulations.",
+    "ICH S-series safety guidelines, which govern the nonclinical package expected in a marketing application, continue to describe animal studies as the reference methodology. Until they are revised, a sponsor substituting a tissue model bears the burden of justifying the substitution in each submission — which is the burden that DDT qualification is designed to remove.",
+    "EU Cosmetics Regulation 1223/2009 prohibits animal testing for cosmetic ingredients and finished products, which makes cosmetics and chemicals the one end market where the substitution question is already settled rather than pending."
+  ],
+  "research_methodology": {
+    "primary_research": [],
+    "secondary_research": [
+      "Astute Analytica, Organoid and Organ-on-Chip Model Market, last updated 15 September 2026 — $500.6M (2025) to $4,515.3M (2035), 24.6% (2026-2035)",
+      "U.S. FDA, 'FDA's ISTAND Pilot Program Accepts Submission for First Organ-Chip Technology Designed to Predict Human Drug-Induced Liver Injury' — letter of intent accepted 24 September 2024",
+      "U.S. FDA, Innovative Science and Technology Approaches for New Drugs (ISTAND) Program page, content current as of 22 September 2026",
+      "U.S. FDA announcement of 10 April 2025 on phasing out animal testing requirements for monoclonal antibodies and other drugs",
+      "FDA Modernization Act 3.0 legislative record: S. 355 (119th Congress) Senate passage 16 December 2025; H.R. 2821 House passage 20 July 2026, received in the Senate 21 July 2026",
+      "BCC Research, Organ-on-a-Chip: Global Markets, report BIO188B, April 2025 — $153.2M (2024) to $651.9M (2029), 33.6%",
+      "IMARC Group, organ-on-chip market, report SR112026A5498, last updated 12 June 2026 — $98.2M (2025) to $727.9M (2034), 24.19%",
+      "Roots Analysis, Organs-on-Chips Market (2nd Edition), last updated September 2026 — $100M (2025), $129M (2026), $944M (2035), 24.8%",
+      "Global Market Insights, organoids and spheroids market — $1.8B (2025) to $9.6B (2034), 20.3%",
+      "The Insight Partners, via PR Newswire, organoids market — $3.03B (2023) base, 22.3%",
+      "PubMed (NCBI E-utilities esearch, db=pubmed), term '\"organ-on-a-chip\" OR \"organ on a chip\" OR \"microphysiological system\"', retrieved 16 October 2026: 2,948 records"
+    ],
+    "data_validation": "The headline advances one house's own published base at its own published rate, labelled as interpolation: Astute Analytica's $500.6 million for 2025 becomes $623.8 million for 2026 and $2,334.1 million for 2032 at 24.6%. Astute was chosen because it is the only published series whose stated scope matches both halves of this market — organoid models and microphysiological systems with consumables and services, explicitly excluding conventional two-dimensional cell culture and animal models — and because its arithmetic closes on itself: $500.6M compounded at 24.6% for ten years gives $4,514.4M against its published $4,515.3M, a 0.02% difference. No alternative is internally consistent: IMARC's page carries a $98.2 million 2025 base alongside a trends statement projecting $220 million by 2025, and Roots Analysis gives North America as both approximately 45% and approximately 42% on one page. Two grounding tests were run. The consistency test shows the published figures cannot all be measurements: the only combined-scope estimate, $500.6 million for 2025, is 0.28x Global Market Insights' organoid-only estimate of $1.8 billion for the same year, and 26.3% of the $1.9 billion implied by adding that figure to Roots Analysis' $100 million organs-on-chips figure, so at least one published number is wrong by 3.8x or more; the reconciling explanation is a use-case restriction, since the large organoid figures count the whole 3D cell-culture consumables base while the combined figure is limited to models used for drug testing, disease modelling and toxicology. The register test counts the regulatory precedent the forecasts rest on: as at FDA's ISTAND page content date of 22 September 2026, one organ-on-a-chip letter of intent had been accepted (Emulate's Liver-Chip, 24 September 2024, step 1 of a three-step process) and no organ chip had completed Drug Development Tool qualification, against a forecast requiring $1,710.3 million of net new revenue between 2026 and 2032. These are plausibility and consistency tests, not market estimates: they establish that the published figures are mutually irreconcilable and that the regulatory substitution underpinning the growth rates has produced one step-one submission and no qualified tool, and they do not establish the correct market size. All platform vendors are private and disclose no revenue, so no company-level denominator exists; regional, country and segment shares are published as empty or as plain strings because no named source gives a defensible percentage for this scope; and no vendor market share is published because none is disclosed."
+  },
+  "faqs": [
+    {
+      "question": "How large is the organoid and organ-on-chip market?",
+      "answer": "We publish $623.8 million for 2026, rising to $2,334.1 million by 2032 at 24.6%, derived from Astute Analytica's published $500.6 million for 2025 and its own rate. Published estimates for roughly the same year span 23.4x, from $77 million to $1.8 billion, so the figure you use depends entirely on whether the publisher is sizing microfluidic chip devices, the whole 3D cell-culture consumables base, or human tissue models used specifically for drug testing and toxicology."
+    },
+    {
+      "question": "Why are organoid estimates 12 to 23 times larger than organ-on-chip estimates?",
+      "answer": "Because they are different businesses. Organ-on-chip figures count microfluidic devices, their consumables and the studies run on them, sold to a few hundred preclinical safety groups — hence the tight $77 million to $153.2 million band. Organoid figures count media, extracellular matrices, scaffolds and plasticware sold to every laboratory doing 3D cell culture, which is a commodity reagents market with a very large customer base. The regulatory narrative about replacing animal testing applies to the first and barely touches the second."
+    },
+    {
+      "question": "Does FDA now require organ-on-chip or organoid data instead of animal testing?",
+      "answer": "No, and this is the most consequential misreading in the sector. FDA's 10 April 2025 announcement is a phased roadmap to phase out the animal testing requirement, beginning with monoclonal antibodies. It applies to investigational new drug applications by encouraging the inclusion of new approach methodology data. It does not require any specific model, does not qualify any specific chip or organoid, and does not prohibit animal studies. The statutory basis, the FDA Modernization Act 2.0 of late 2022, removed the requirement for animal testing without requiring anything in its place."
+    },
+    {
+      "question": "How many organ-on-chip models has FDA qualified?",
+      "answer": "None. As at the ISTAND programme page's content date of 22 September 2026, exactly one organ-on-a-chip letter of intent had been accepted — Emulate's Liver-Chip, on 24 September 2024, for drug-induced liver injury risk in adults. That acceptance is step one of a three-step qualification process: letter of intent, then qualification plan, then full qualification package. No organ chip has completed it. Our published forecast requires $1,710.3 million of net new revenue between 2026 and 2032 on that base of regulatory precedent."
+    },
+    {
+      "question": "What is the status of the FDA Modernization Act 3.0?",
+      "answer": "It has passed each chamber separately and is not law. The Senate passed S. 355 with an amendment by unanimous consent on 16 December 2025; the House passed H.R. 2821 under suspension by voice vote on 20 July 2026, and it was received in the Senate on 21 July 2026. If enacted, it would direct FDA to issue an interim final rule within a year replacing references to 'animal' with 'nonclinical' across the investigational new drug regulations — moving the change from agency policy into rulemaking. That would be a step change in the market, not a growth rate."
+    },
+    {
+      "question": "Can the published market sizes be reconciled with each other?",
+      "answer": "Not as published. A combined-scope figure must be at least as large as its biggest component, and the only combined estimate, $500.6 million for 2025, is 0.28x one house's organoid-only estimate of $1.8 billion for the same year, and 26.3% of the $1.9 billion implied by adding that to another house's $100 million organs-on-chips figure. At least one published number is wrong by 3.8x or more. The explanation that fits the scope language is that the combined figure restricts itself to models used for drug testing, disease modelling and toxicology, while the large organoid figure counts routine 3D cell culture."
+    },
+    {
+      "question": "Where does revenue come from today, if no model is regulatorily qualified?",
+      "answer": "From work that needs no qualification. A sponsor can commission an organ-chip study for internal compound triage and act on the result without telling anyone, and can include the data in an IND voluntarily. Contract study services are therefore the revenue model for most platform companies — Hesperos and CN Bio both sell studies as well as instruments. Separately, cosmetics and chemicals testing operates under the EU Cosmetics Regulation, where animal testing is already prohibited and the substitution question is settled rather than pending."
+    }
+  ],
+  "seo": {
+    "meta_title": "Organoid & Organ-on-Chip Market Size, Forecast to 2032",
+    "meta_description": "Organoid and organ-on-chip market at $623.8M in 2026 to $2,334.1M by 2032 at 24.6%. Published estimates span 23.4x; FDA has qualified no chip model.",
+    "keywords": [
+      "organoid market",
+      "organ-on-chip market",
+      "microphysiological systems market",
+      "FDA ISTAND organ chip",
+      "FDA Modernization Act 3.0",
+      "new approach methodologies"
+    ]
+  },
+  "executive_summary": "This market's published estimates span 23.4x, and the gap falls exactly along the hyphen in its own name. Houses sizing organ-on-chip devices cluster between $77 million and $153.2 million; houses sizing organoids publish $1.18 billion to $3.03 billion, because they count media, matrices and plasticware sold into all 3D cell culture rather than microfluidic tissue models used to replace an animal study. The one series whose stated scope covers both puts the combined market at $500.6 million for 2025 — 0.28x another house's organoid-only figure for the same year, which is arithmetically impossible if both measure what they claim, and means at least one is wrong by 3.8x or more. We publish that combined series, $623.8 million in 2026 rising to $2,334.1 million by 2032 at 24.6%, because it is the only scope match and the only series whose own arithmetic closes, to 0.02%. The second finding concerns the demand-side event everyone cites. FDA's 10 April 2025 announcement is a phased roadmap that encourages new approach methodology data in IND applications. It requires no model, qualifies no model and prohibits no animal study. As at FDA's 22 September 2026 ISTAND page update, exactly one organ-on-a-chip letter of intent had been accepted — Emulate's Liver-Chip, in September 2024 — at step one of three, and no organ chip had been qualified. The FDA Modernization Act 3.0 has passed each chamber separately and is not law. A forecast requiring $1.71 billion of net new revenue by 2032 rests on that. It is a claim about how fast a qualification pipeline fills, and it should be read as one.",
+  "key_highlights": [
+    "Headline: $623.8 million in 2026 to $2,334.1 million in 2032 at 24.6%, interpolated from Astute Analytica's published 2025 base and rate, in USD million",
+    "Published estimates span 23.4x, from $77 million (organ-on-chip only) to $1.8 billion (organoids and spheroids) for roughly the same year",
+    "The only combined-scope estimate, $500.6 million for 2025, is 0.28x another house's organoid-only figure — so at least one published number is wrong by 3.8x or more",
+    "FDA has accepted exactly one organ-on-a-chip letter of intent into ISTAND (Emulate's Liver-Chip, 24 September 2024, step 1 of 3) and has qualified none",
+    "FDA's April 2025 announcement is a roadmap that encourages new approach methodology data in IND applications — it mandates no model and prohibits no animal study",
+    "FDA Modernization Act 3.0 passed the Senate on 16 December 2025 and the House on 20 July 2026 in separate vehicles and is not law",
+    "Astute's series is the only one that closes on itself: $500.6M at 24.6% for ten years gives $4,514.4M against its published $4,515.3M, a 0.02% gap"
+  ],
+  "market_context": "Organoids and organs-on-chips are grouped together because they answer the same question — what would this compound do to a human tissue — and they are commercially nothing alike. An organ chip is a microfluidic device sold with consumables and services to preclinical safety groups, a buyer base numbering in the hundreds; that is why four independent houses put the whole global market between $77 million and $153.2 million. An organoid, commercially, is mostly media, growth factors, extracellular matrix and labware, supplied by Thermo Fisher, Corning, Merck KGaA and STEMCELL Technologies into every laboratory that grows cells in three dimensions; that is why organoid-scope estimates reach $1.8 billion and above. The sector's narrative — regulatory substitution for animal testing — belongs to the first category and is being priced into figures drawn from the second. The actual regulatory position is narrow and countable: one accepted letter of intent, no qualified tool, a permissive roadmap, and a bill that has passed each chamber in a different vehicle. Meanwhile the scientific base is modest relative to the growth rates attached to it: 2,948 PubMed records for organ-on-a-chip and microphysiological systems, against 31,041 for single-cell RNA sequencing, with published CAGRs roughly double single-cell's.",
+  "forecast_analysis": "We publish 24.6%, which sits at the bottom of a published range running to 33.6%, and we publish it with an explicit statement of what it assumes. Astute Analytica's series is the only one in the set that reconciles with itself — $500.6 million compounded at 24.6% over ten years reproduces its published 2035 endpoint to within 0.02% — and the only one whose scope matches both halves of this market. Over our window it implies $1,710.3 million of net new revenue between 2026 and 2032. The regulatory base supporting that is one accepted ISTAND letter of intent at step one of three, filed in September 2024 and not qualified two years later, plus a roadmap that encourages rather than requires, plus a bill that has passed each chamber separately. Nothing about this makes the direction wrong: the statutory obstacle was removed by the FDA Modernization Act 2.0 in 2022, the agency has publicly committed to a three-year programme, and cosmetics and chemicals testing already operate under prohibitions on animal testing in the EU. But the growth mechanism is discrete, not continuous. Completion of a first DDT qualification, or enactment of the Modernization Act 3.0 and the interim final rule it would compel, would each be step changes; absent them, revenue comes from voluntary contract studies and internal compound triage, which grow with pharmaceutical R&D budgets rather than at 24.6%. Readers should model the published rate as a scenario conditional on named events, and should not read the sector's marketing language about FDA requirements as describing current law.",
+  "reader_takeaways": [
+    "Check which half of the market a figure covers. Organ-on-chip devices are a $77-153 million global market; organoid-scope figures reaching $1.8 billion are mostly 3D cell-culture media, matrices and plasticware.",
+    "The published numbers do not reconcile. The only combined-scope estimate is 0.28x one house's organoid-only estimate for the same year, which means at least one is wrong by 3.8x or more.",
+    "FDA has qualified no organ-chip model. One letter of intent has been accepted, at step one of three, in September 2024 — and it had not produced a qualification two years later.",
+    "Read the April 2025 FDA announcement as a roadmap that encourages new approach methodology data, not as a requirement. It mandates no model and prohibits no animal study, and the FDA Modernization Act 3.0 is not law.",
+    "Treat the 24-34% published growth rates as conditional on discrete events — a first qualification, or enactment of the Modernization Act 3.0 — rather than as a trend. Current revenue comes from voluntary contract studies that need no regulatory change at all."
+  ]
+}
