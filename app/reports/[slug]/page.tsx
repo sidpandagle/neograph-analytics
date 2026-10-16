@@ -73,14 +73,10 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime: new Date(Number(jsonReport.published_year), 0, 1).toISOString(),
-      images: [
-        {
-          url: "/assets/images/mr.webp",
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      /* No `images` here on purpose. Setting it would override the file-based
+         `opengraph-image.tsx` in this folder, which renders the report's own
+         figures; every report previously shared one stock photo, so 152
+         distinct reports unfurled identically in Slack, LinkedIn and X. */
     },
     twitter: {
       card: 'summary_large_image',

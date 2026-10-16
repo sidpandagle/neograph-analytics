@@ -1243,3 +1243,37 @@ renders**, which is the mismatch that costs a rich result for a whole domain.
 Checked and correct, so left alone: breadcrumb positions (1,2,3 with names),
 FAQPage parity (6 = 6), `Dataset.temporalCoverage` (`2026/2032`),
 `variableMeasured` carrying the real figures with the right unit suffix.
+
+### Per-report social cards (BACKLOG P1 visuals)
+Every report shared one stock photo as its `og:image`, so 152 distinct reports
+unfurled identically in Slack, LinkedIn and X. `app/reports/[slug]/opengraph-image.tsx`
+renders the report's own figures instead: industry, market name, base-year
+value, forecast value and rate, 1200x630.
+
+Generated at build time next to the page, so there is no image host, no egress
+and no transformation quota — the constraint that keeps Cloudflare and Supabase
+inside their free tiers. No external font is fetched either: a build that reaches
+out to Google Fonts 152 times is slow and fails closed on a flaky network.
+
+The page's `generateMetadata` had an explicit `images: [...]` entry, which
+**overrides** the file-based convention — the cards generated but nothing used
+them until that was removed.
+
+**The bug worth recording.** The title trimmer looked right and did nothing:
+cards kept rendering "North America Cell & Gene Therapy Manufacturing Market —
+Growth Drivers, Restraints and Future Outlook 2032" across four lines, into the
+figures row. The regex `/\bMarket\b/i` had been written through a tool that
+turned the backslash-b escapes into **literal backspace characters (U+0008)**,
+so the pattern was `\x08Market\x08` and matched nothing. It was invisible in the
+editor and in `grep`; `cat -A` showed it as `^HMarket^H`, and the giveaway was
+that the rendered PNG came back **byte-identical** after a rebuild. The pattern
+is now built from a character class, which cannot be mangled the same way, and
+the title falls back to itself when no "Market" appears at all.
+
+Verified: 1200x630 PNG per report, correct units on the million-unit rows
+($66.5M -> $167.9M), and `og:image` / `twitter:image` now point at each report's
+own card.
+
+Also tidied: the six `next start` servers this session left on ports 3101-3106
+are stopped, each confirmed by command line as mine and from this repo first.
+The one on :3100 from an earlier session is left alone.
