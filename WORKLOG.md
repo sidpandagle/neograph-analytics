@@ -1426,3 +1426,29 @@ This is the third time today that a measurement needed the measurement checked:
 the stale `next start` serving old code, the menu probes running against a
 toggled-shut menu, and now an extension's work counted as the site's. The rule
 earns its place — reproduce cleanly before fixing.
+
+### And a correction to the correction
+Re-measured in an **isolated browser context**, which is the clean-profile check
+the last entry said was needed:
+
+```
+                        everyday profile      isolated context
+/methodology LCP            3,921 ms              1,316 ms
+TTFB                           45 ms                 89 ms
+CLS                             0.03                 0.035
+```
+
+So most of the 3.9s was the profile, as suspected. But two things came out of
+the clean run that the "no external scripts" check had got wrong:
+
+1. **Google Analytics is on the site after all.** `app/layout.tsx:114` renders
+   `GoogleAnalytics` from `@next/third-parties/google`, which injects gtag
+   **client-side** — so it is absent from the static HTML I grepped, and present
+   in the live DOM. Checking the delivered HTML was the wrong instrument.
+2. **FCP and LCP are the same event at 1,316ms.** Nothing paints at all for 1.3
+   seconds on a server-rendered text page whose TTFB is 89ms. That part is the
+   site, not the profile, and it is what R-13 now describes.
+
+Three instruments, three different answers, and only the third one was sound.
+Worth the entry even though the finding shrank: the first number would have sent
+the next session optimising charts that are not the problem.
