@@ -23,6 +23,31 @@ export function pct(value: unknown, digits = 1): string {
   return n === null ? '—' : `${n.toFixed(digits)}%`;
 }
 
+/**
+ * The suffix for a report's stated `unit` column.
+ *
+ * Rows are not all in billions. `phage-therapy-market` is stored in millions,
+ * because its disclosed base is $66.5M — rendering that as "$66.5B" overstates
+ * the market by a factor of 1,000, which is the worst class of error this site
+ * can make. The charts and the hero already read the column; the card and
+ * detail-page formatters did not.
+ */
+export function unitSuffix(unit: unknown): string {
+  switch (String(unit ?? '').trim().toLowerCase()) {
+    case 'trillion': return 'T';
+    case 'billion': return 'B';
+    case 'million': return 'M';
+    case 'thousand': return 'K';
+    default: return '';
+  }
+}
+
+/** `66.5` with unit "Million" -> "$66.5M". Missing/!finite -> "—". */
+export function marketValue(value: unknown, unit: unknown, currency = '$'): string {
+  const n = toNum(value);
+  return n === null ? '—' : `${currency}${n.toFixed(1)}${unitSuffix(unit)}`;
+}
+
 /** `1.2` -> "$1.2B". Missing/!finite -> "—". */
 export function money(value: unknown, digits = 1, unit = 'B', currency = '$'): string {
   const n = toNum(value);

@@ -31,15 +31,6 @@ const ITEMS_PER_PAGE = 12;
 
 const LISTING_PARAMS = ['category', 'search'] as const;
 
-const REGIONS = [
-  'Global',
-  'North America',
-  'Europe',
-  'Asia Pacific',
-  'Latin America',
-  'Middle East & Africa',
-];
-
 export default function ReportsListingClient({ reports }: ReportsListingClientProps) {
   const [activeCategory, setActiveCategory] = useState('');
   const [activeRegion, setActiveRegion] = useState('');
@@ -62,6 +53,39 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
     setSearchResults(results);
     if (!loading) setCurrentPage(1);
   }, []);
+
+  /**
+   * Filter options come from the reports themselves.
+   *
+   * `data/categories.json` lists 12 sectors; 6 of them match no report in the
+   * corpus (Clinical Diagnostics, Healthcare Services, Laboratory Equipment,
+   * Therapeutic Area, Dental, Animal Health), so a third of the chips were
+   * guaranteed empty results. The JSON stays as the slug/name mapping used by
+   * `?category=`; it just no longer decides what gets rendered. A category
+   * present in the corpus but absent from the JSON still gets a chip.
+   */
+  const categoryOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const r of reports) {
+      if (r.category) counts.set(r.category, (counts.get(r.category) ?? 0) + 1);
+    }
+    const order = new Map(categories.map((c, i) => [c.name, i]));
+    return [...counts.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => (order.get(a.name) ?? 99) - (order.get(b.name) ?? 99) || a.name.localeCompare(b.name));
+  }, [reports]);
+
+  /**
+   * Same for regions. Every row in the corpus is `Global` today, so a six-option
+   * select offered five choices that returned nothing and one that returned
+   * everything. With a single distinct value the control is dropped entirely —
+   * it reappears on its own once regional reports exist.
+   */
+  const regionOptions = useMemo(() => {
+    const seen = new Set<string>();
+    for (const r of reports) if (r.region) seen.add(r.region);
+    return [...seen].sort();
+  }, [reports]);
 
   const filteredReports = useMemo(() => {
     const base = searchResults !== null ? searchResults : reports;
@@ -112,7 +136,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             <p className="mt-3 text-[15px] leading-[1.55] text-[var(--cmi-on-blue)]">
               {filteredReports.length.toLocaleString()}{' '}
               {filteredReports.length === 1 ? 'report' : 'reports'} across{' '}
-              {categories.length} healthcare sectors
+              {categoryOptions.length} healthcare sectors
             </p>
           </div>
 
@@ -138,17 +162,19 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
             All Reports
           </button>
 
-          {categories.map((cat) => (
+          {categoryOptions.map((cat) => (
             <button
-              key={cat.id}
+              key={cat.name}
               onClick={() => setActiveCategory((prev) => (prev === cat.name ? '' : cat.name))}
               data-active={activeCategory === cat.name}
               className="segmented-item flex-shrink-0 !py-2 !text-[13px]"
             >
               {cat.name}
+              <span className="ml-1.5 tabular-nums opacity-60">{cat.count}</span>
             </button>
           ))}
 
+          {regionOptions.length > 1 && (
           <div className="relative flex-shrink-0">
             <select
               value={activeRegion}
@@ -161,7 +187,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               }`}
             >
               <option value="">All Regions</option>
-              {REGIONS.map((r) => (
+              {regionOptions.map((r) => (
                 <option key={r} value={r}>
                   {r}
                 </option>
@@ -173,6 +199,7 @@ export default function ReportsListingClient({ reports }: ReportsListingClientPr
               }`}
             />
           </div>
+          )}
 
           {hasFilters && (
             <>

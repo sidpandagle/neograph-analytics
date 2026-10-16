@@ -1,0 +1,213 @@
+{
+  "report_id": "phage-therapy-market",
+  "slug": "phage-therapy-market",
+  "title": "Phage Therapy Market Size, Share & Forecast 2026-2032",
+  "industry": "Biotechnology",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Million",
+  "market_size": {
+    "current_value": 66.5,
+    "forecast_value": 167.93,
+    "cagr": 16.7
+  },
+  "market_overview": {
+    "summary": "There is no approved bacteriophage therapeutic for human use in the United States, the European Union or the United Kingdom. Access runs through investigational and expanded-access routes, and ClinicalTrials.gov lists 124 registered studies, 9 of them Phase 3 and 22 currently recruiting. Published estimates of this market spread 33.2x, from $38.6 million to $1,280.9 million, and the per-trial arithmetic rules out the high cluster as a description of human phage therapy. On the most current published base this is a $66.5 million market in 2026 reaching $167.93 million by 2032 at 16.7% - option value, not revenue.",
+    "key_trends": [
+      "No marketing authorisation exists for a human phage therapeutic in the US, EU or UK, so approved-product revenue is approximately zero",
+      "Published estimates spread 33.2x ($38.6 million to $1,280.9 million), the widest spread we have measured in any market in this corpus",
+      "ClinicalTrials.gov lists 124 registered bacteriophage studies, of which only 22 are recruiting and 9 are Phase 3, as of October 2026",
+      "Dividing the high published estimate by the register gives $10.3 million per registered study, which is implausible as either revenue or R&D spend",
+      "Phage products approved as food additives and biocontrol agents - ListShield was cleared by the FDA in 2006 under 21 CFR 172.785 - are a real market and are the most likely explanation for the high cluster",
+      "The most advanced Western therapeutic programme, Armata's AP-SA02, received Fast Track in May 2026 with a Phase 3 planned to start in the second half of 2026"
+    ],
+    "market_stage": "Emerging",
+    "adoption_level": "Pre-approval; compassionate use and magistral preparation only"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Antimicrobial resistance creating demand for mechanisms that do not depend on small-molecule antibiotic classes",
+      "Phage specificity and self-limiting replication, which allow targeted treatment of a single pathogen species",
+      "Regulatory movement toward workable individual-patient access, including updated FDA expanded-access guidance",
+      "Designation incentives in practice: Qualified Infectious Disease Product status and Fast Track granted to AP-SA02 in 2026",
+      "Established non-therapeutic phage markets in food safety and biocontrol, which have built manufacturing and regulatory precedent"
+    ],
+    "restraints": [
+      "No approved human therapeutic anywhere in the US, EU or UK, so there is no commercial market to measure",
+      "Only 22 of 124 registered studies are recruiting, so the clinical programme is thinner than the trial count suggests",
+      "Phage specificity requires susceptibility matching per patient, which fits poorly with a fixed-composition marketing authorisation",
+      "Bacterial resistance to phage develops, and cocktail composition therefore has to be revised over time",
+      "Intellectual property on naturally occurring phages is weak, which limits the incentive to fund registrational trials"
+    ],
+    "opportunities": [
+      "A single positive Phase 3 readout would convert a pre-revenue field into a priced one, which is what the published forecasts are implicitly valuing",
+      "Phage-antibiotic combination regimens, where phage restores sensitivity rather than replacing the antibiotic",
+      "Device- and implant-associated infection, where biofilm penetration is the clinical rationale and the population is identifiable",
+      "Magistral and hospital-exemption frameworks, which allow clinical experience to accumulate before authorisation",
+      "Engineered and synthetic phage constructs, which address both the IP and the composition-consistency problems"
+    ],
+    "challenges": [
+      "Published market sizes differ by 33.2x, and the high cluster cannot be reconciled with the absence of approved products",
+      "Trial endpoints for personalised, susceptibility-matched therapy are difficult to specify in a registrational design",
+      "Manufacturing and release specification for a replicating biological cocktail has no settled regulatory template",
+      "Compassionate-use volumes are not centrally registered anywhere, so even clinical experience cannot be counted"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Natural phage monotherapy",
+      "Defined phage cocktails",
+      "Engineered and synthetic phage",
+      "Phage-derived enzymes (lysins)",
+      "Phage-antibiotic combination regimens"
+    ],
+    "by_application": [
+      "Bacteraemia and endocarditis",
+      "Prosthetic joint and device-associated infection",
+      "Respiratory infection in cystic fibrosis and bronchiectasis",
+      "Urinary tract infection",
+      "Chronic wound and diabetic foot infection"
+    ],
+    "by_end_user": [
+      "Academic medical centres running investigational protocols",
+      "Specialist antimicrobial resistance referral centres",
+      "Compounding and magistral preparation pharmacies",
+      "Biotechnology sponsors and contract manufacturers"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 66.5 },
+    { "year": 2027, "value": 77.59 },
+    { "year": 2028, "value": 90.54 },
+    { "year": 2029, "value": 105.66 },
+    { "year": 2030, "value": 123.31 },
+    { "year": 2031, "value": 143.9 },
+    { "year": 2032, "value": 167.93 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Armata Pharmaceuticals",
+      "headquarters": "United States",
+      "market_position": "Most advanced Western registrational programme",
+      "description": "Lead candidate AP-SA02 for Staphylococcus aureus bacteraemia received Qualified Infectious Disease Product status in February 2026 and Fast Track designation in May 2026, with a Phase 3 superiority protocol submitted to the FDA and the trial planned to begin in the second half of 2026. No approved product and therefore no product revenue."
+    },
+    {
+      "company": "BiomX",
+      "headquarters": "Israel and United States",
+      "market_position": "Clinical-stage, targeted indications",
+      "description": "Develops phage cocktails for defined indications including cystic fibrosis respiratory infection and diabetic foot osteomyelitis. Clinical stage only; no marketing authorisation and no product revenue."
+    },
+    {
+      "company": "Intralytix",
+      "headquarters": "United States",
+      "market_position": "The only segment with approved, revenue-generating phage products",
+      "description": "Holds FDA clearance for ListShield as a food additive for ready-to-eat foods, approved 18 August 2006 under 21 CFR 172.785 and separately registered by the EPA as a microbial pesticide, plus EcoShield, SalmoFresh and CampyShield for food-safety use. This non-therapeutic business is the most plausible explanation for published market sizes near $1.28 billion, and it is not human phage therapy."
+    },
+    {
+      "company": "Eliava Institute",
+      "headquarters": "Georgia",
+      "market_position": "Longest continuous clinical practice",
+      "description": "Operates the longest-running phage therapy practice in the world and supplies preparations used by patients who travel for treatment. Operating outside US, EU and UK marketing authorisation frameworks, so its activity does not appear in any authorisation register and its volume is not publicly quantified."
+    },
+    {
+      "company": "Adaptive Phage Therapeutics",
+      "headquarters": "United States",
+      "market_position": "Phage-bank model, expanded access",
+      "description": "Built a phage-bank approach intended to match preparations to a patient's isolate, and received an FDA expanded-access IND in 2020 for secondary bacterial infections in COVID-19 patients. An expanded-access clearance is not a marketing authorisation."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "FDA investigational new drug application, the only route by which phage preparations are legally administered in the United States",
+    "FDA expanded access (compassionate use) pathway, including updated guidance for individual-patient use, which is how most US phage treatment has occurred",
+    "Qualified Infectious Disease Product designation and Fast Track designation under the GAIN provisions, both granted to AP-SA02 in 2026 - incentives, not approvals",
+    "UK MHRA guidance of November 2025, which states there are no marketing authorisations for bacteriophage medicinal products in the UK",
+    "Belgian magistral preparation framework, under which phage preparations are compounded against a prescription rather than authorised as products",
+    "FDA food additive regulation 21 CFR 172.785 and EPA microbial pesticide registration, the pathways under which phage products are already approved for non-therapeutic use"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. The report rests on public clinical trial registers, regulatory statements and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "ClinicalTrials.gov API v2, intervention 'bacteriophage': 124 registered studies, 22 recruiting, 9 Phase 3, all retrieved 16 October 2026",
+      "Exploration Publishing review (2026) on phage therapy regulation and FDA IND and expanded-access mechanisms",
+      "UK MHRA guidance, November 2025: no marketing authorisations for bacteriophage medicinal products in the UK",
+      "Armata Pharmaceuticals announcements (2026): AP-SA02 Phase 3 protocol submitted, QIDP granted February 2026, Fast Track granted May 2026",
+      "Intralytix product documentation: ListShield FDA food additive approval of 18 August 2006 under 21 CFR 172.785, EPA microbial pesticide registration, CampyShield GRAS notice GRN 966 (2020)",
+      "Published market estimates from QYResearch (2024), Roots Analysis (2026), Verified Market Research via GII (2025) and Coherent Market Insights (2024)"
+    ],
+    "data_validation": "The headline figures are Roots Analysis's published 2026 base of $66.5 million and its published 16.7% CAGR; intermediate years are interpolation on that rate, not separate observations. That base was chosen because its base year is the current year and because it falls inside the only cluster the grounding arithmetic supports. The grounding check divides the high published estimate by a countable register: $1,280.9 million over 124 bacteriophage studies registered on ClinicalTrials.gov is $10.3 million per registered study, against a population in which only 22 studies are recruiting and only 9 have ever been Phase 3. That cannot be product revenue, because no human phage therapeutic holds a marketing authorisation in the US, EU or UK; and it is not credible as sponsor R&D spend either. The low cluster implies $311,000 per registered study, which is consistent with a field funded largely by academic and government grants. The arithmetic therefore rules out the high cluster as a description of human phage therapy - most likely it counts phage products approved for food safety and biocontrol instead. This is a plausibility test, not a market estimate, and the published figures it supports should be read as option value on an unread Phase 3 result rather than as revenue."
+  },
+  "faqs": [
+    {
+      "question": "Is there an approved phage therapy?",
+      "answer": "Not for human therapeutic use in the United States, the European Union or the United Kingdom. The UK regulator stated in November 2025 that no marketing authorisations exist for bacteriophage medicinal products. US access is through investigational new drug and expanded-access routes, and Belgium uses magistral pharmacy preparation. Phage products are approved for food safety, which is a different market."
+    },
+    {
+      "question": "How big is the phage therapy market?",
+      "answer": "On the most current published base, $66.5 million in 2026 reaching $167.93 million by 2032 at 16.7%. That figure should be read as option value rather than revenue, because no approved human therapeutic exists. Published estimates for this market range from $38.6 million to $1,280.9 million, a 33.2x spread."
+    },
+    {
+      "question": "Why do published estimates differ by 33 times?",
+      "answer": "Because the high ones cannot be describing human phage therapy. Dividing $1,280.9 million by the 124 bacteriophage studies registered on ClinicalTrials.gov gives $10.3 million per study, in a field where only 22 studies are recruiting and only 9 have reached Phase 3. With no approved product it cannot be revenue, and that figure is not credible as research spend either. The most likely explanation is that it counts phage approved for food safety and biocontrol."
+    },
+    {
+      "question": "How much clinical evidence exists?",
+      "answer": "ClinicalTrials.gov lists 124 registered studies with a bacteriophage intervention as of 16 October 2026. Nine are Phase 3 and 22 are currently recruiting. The most advanced Western programme, Armata's AP-SA02, had its Phase 3 protocol submitted to the FDA with the trial planned to start in the second half of 2026."
+    },
+    {
+      "question": "Who leads the phage therapy market?",
+      "answer": "Nobody leads it commercially, because there is nothing approved to sell. Armata has the most advanced registrational programme, BiomX is clinical-stage in defined indications, Georgia's Eliava Institute has the longest continuous clinical practice, and Intralytix is the only company here with approved, revenue-generating phage products - in food safety rather than medicine. No market share figures exist and none are published."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no named source quantifies phage therapy revenue or patient volume by country. Georgia, Belgium and Poland have the most developed access routes, but compassionate-use and magistral-preparation volumes are not centrally registered. A regional table would be invented, so the section is omitted."
+    }
+  ],
+  "seo": {
+    "meta_title": "Phage Therapy Market Size and Forecast to 2032",
+    "meta_description": "No approved phage therapeutic exists in the US, EU or UK, and 124 trials are registered. Why published forecasts spread 33x and what the register rules out.",
+    "keywords": [
+      "phage therapy market",
+      "bacteriophage therapy market",
+      "phage therapy market size",
+      "antimicrobial resistance treatment",
+      "AP-SA02",
+      "phage therapy clinical trials",
+      "bacteriophage regulation"
+    ]
+  },
+  "executive_summary": "Published estimates of the phage therapy market run from $38.6 million to $1,280.9 million - a 33.2x spread, the widest we have measured in any market in this corpus. The explanation is not a definition subtlety. It is that most of these figures are describing a market that does not yet exist.\n\nThere is no approved bacteriophage therapeutic for human use in the United States, the European Union or the United Kingdom. The UK regulator's November 2025 guidance says so explicitly. In the US, phage reaches patients only through investigational new drug applications and expanded access; in Belgium, through magistral pharmacy preparation. The most advanced Western registrational programme, Armata's AP-SA02, received Qualified Infectious Disease Product status in February 2026 and Fast Track in May 2026 and planned to begin Phase 3 in the second half of that year. Designations are not approvals, and approved-product revenue for human phage therapy is therefore approximately zero.\n\nThat makes the high published figures testable. ClinicalTrials.gov lists 124 registered studies with a bacteriophage intervention, of which 22 are recruiting and 9 are Phase 3. Divide $1,280.9 million by 124 and you get $10.3 million per registered study - impossible as revenue, since nothing is approved, and not credible as sponsor R&D spend across a population that is mostly closed, terminated or not yet open and mostly early-phase academic work. The low cluster implies $311,000 per study, which is what a grant-funded field looks like. The likeliest reading of the high cluster is that it counts phage products approved for food safety and biocontrol - ListShield was cleared by the FDA as a food additive in 2006 under 21 CFR 172.785 - which is a genuine market and not the one a reader searching for phage therapy is asking about.\n\nThe figures published here, $66.5 million in 2026 to $167.93 million by 2032, should be read for what they are: option value on a Phase 3 result that has not been read out.",
+  "key_highlights": [
+    "No human phage therapeutic holds a marketing authorisation in the US, EU or UK, so approved-product revenue is approximately zero",
+    "Published estimates spread 33.2x, from $38.6 million to $1,280.9 million",
+    "ClinicalTrials.gov lists 124 registered bacteriophage studies, with 22 recruiting and 9 Phase 3, as of 16 October 2026",
+    "The high published estimate implies $10.3 million per registered study, which works as neither revenue nor research spend",
+    "The low cluster implies $311,000 per registered study, consistent with a grant-funded field",
+    "Phage approved for food safety - ListShield, cleared as a food additive in 2006 - is the most plausible subject of the high estimates",
+    "Armata's AP-SA02 planned to start Phase 3 in the second half of 2026 after QIDP and Fast Track designations"
+  ],
+  "market_context": "Phage therapy is older than antibiotics and commercially younger. Bacteriophages were used clinically in the 1920s and 1930s, were displaced in the West by small-molecule antibiotics, and continued in the Soviet sphere - the Eliava Institute in Georgia has the longest continuous practice in the world. The renewed Western interest is a consequence of antimicrobial resistance rather than of new biology.\n\nWhat has not been solved is the regulatory fit. A phage is specific to a narrow range of bacterial strains, which is clinically attractive and commercially awkward: effective treatment usually requires matching a preparation to the patient's own isolate, while a marketing authorisation describes a product of fixed composition. Phage also replicates at the site of infection, so dose-response does not behave the way a small molecule's does, and bacteria acquire resistance to phage, so a cocktail's composition has a shelf life. Each of these is a reason registrational trials have been slow to start rather than a reason they cannot succeed.\n\nThe interim arrangements shape what is observable. Belgium's magistral framework, hospital exemptions elsewhere and the US expanded-access route all allow patients to be treated without a product ever being authorised or a sale ever being recorded in a way an analyst can count. So the register of trials is the only public denominator available, and the number that matters most about this market - how many patients have been treated and with what result - is not centrally recorded anywhere.",
+  "forecast_analysis": "The curve starts at $66.5 million for 2026, the most current published base-year figure, and compounds at the same publisher's 16.7% rate to $167.93 million by 2032. Intermediate years are interpolation on that rate. This series was chosen because its base year is the current year and because it sits inside the only cluster that the per-trial arithmetic supports; the $1.27-1.28 billion cluster is cited in this report as a contrast and is explicitly ruled out, not carried.\n\nThe honest reading of any number on this chart is that it is a valuation, not a measurement. With no approved product in the US, EU or UK, the entire forecast depends on a binary event: whether a registrational trial succeeds and an authorisation follows. Nine Phase 3 studies have ever been registered in this field, and the most advanced Western programme planned to begin its Phase 3 in late 2026. If AP-SA02 or a comparable programme reads out positively and is approved, the realised market will not follow a 16.7% curve from $66.5 million - it will step. If the readouts are negative, the curve has no revenue underneath it at all.\n\nA 16.7% smooth compound rate is therefore the wrong shape for what will actually happen, and we publish it only because it is what the most defensible public source publishes. Readers should treat the 2032 figure as a probability-weighted placeholder and track the Phase 3 register instead.",
+  "reader_takeaways": [
+    "Treat every phage therapy market size as option value: no human therapeutic is approved in the US, EU or UK, so there is no revenue underneath the figures",
+    "Reject the $1.27-1.28 billion cluster for this market - it implies $10.3 million per registered trial and most likely counts food-safety phage instead",
+    "Track the register rather than the forecast: 124 studies, 22 recruiting and 9 ever in Phase 3 is the real state of the field",
+    "The binding problem is regulatory fit, not biology - fixed-composition authorisation versus isolate-matched treatment",
+    "Expect a step change on a positive Phase 3 readout, not the smooth 16.7% curve any published series implies"
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "report_id": "point-of-care-diagnostics-market",
+  "slug": "point-of-care-diagnostics-market",
+  "title": "Point-of-Care Diagnostics Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 35.17,
+    "forecast_value": 52.78,
+    "cagr": 7.0
+  },
+  "executive_summary": "Published estimates of the point-of-care diagnostics market disagree by eleven times about its size and barely at all about its growth. Base-year values run from $4.81 billion for 2025 to $53.1 billion for 2024, an 11.0x spread; restricted strictly to 2025 the range is $4.81 billion to $36.7 billion, 7.63x. Published compound growth rates run from 5.1% to 7.00%, a spread of 1.37x. Everybody is modelling mid-single-digit expansion. Nobody agrees what is expanding.\n\nUnusually, the scope decision is stated rather than hidden. Fortune Business Insights lists blood glucose monitoring and pregnancy and fertility testing among its product categories, and Precedence Research does the same. Self-monitoring of blood glucose and a home pregnancy test are consumer purchases made nowhere near a clinical testing site. Including them roughly multiplies this market; excluding them roughly divides it.\n\nThe United States maintains a complete public census of point-of-care-grade testing sites, which makes the arithmetic checkable. The CMS CLIA database for September 2026 records 301,284 registered laboratories, of which 233,448 hold a Certificate of Waiver -- a certificate that permits only waived testing, the regulatory definition of testing simple enough to perform at the point of care -- and a further 21,736 hold Provider-Performed Microscopy certificates. Divide IMARC's $53.1 billion global figure by those 255,184 sites and the result is $208,087 per site per year, and because that places a global numerator over a US-only denominator the real figure is lower still. Two hundred thousand dollars a year is about $570 of testing every day at a site that typically runs a handful of strep, influenza, urinalysis and glucose tests. The high estimates cannot be describing professional near-patient testing alone.\n\nThe low end fails a different test. Abbott's FY2025 Diagnostics segment booked $8,937 million, which is 1.86 times Credence Research's entire global market of $4.81 billion -- and Abbott's rapid and near-patient lines are only a subset of that segment. A $4.81 billion figure is coherent only as a narrow sub-segment. Between those two bounds sits the one series in this set that states what it counts.",
+  "market_context": "Point-of-care diagnostics is not a technology category. It is a regulatory and logistical one: a test counts as point-of-care when it can be performed competently by someone who is not a laboratory professional, in a place that is not a laboratory. In the United States that boundary is drawn by statute. Under CLIA, a test is waived when the FDA has determined it is simple enough and carries a low enough risk of error, and a site holding only a Certificate of Waiver may perform waived tests and nothing else.\n\nThat makes the installed base of this market unusually well documented and unusually large. The CMS CLIA database recorded 233,448 Certificate of Waiver laboratories in September 2026 out of 301,284 registered in total, with 116,814 physician office laboratories across all certificate types. For comparison, CDC's 2005 survey counted 105,138 waived-only sites out of roughly 180,000, and the CMS historical series peaked at 323,086 total laboratories in 2021, after the pandemic drew tens of thousands of new sites into waived testing.\n\nThe commercial consequence is that this market has two quite separate halves with different buyers. The professional half sells instruments and cartridges to 255,184 waived and microscopy sites, where purchasing is driven by reimbursement, throughput and operator skill. The consumer half sells glucose strips, pregnancy tests and home infectious disease kits to patients, through retail, where purchasing is driven by price and habit. Published estimates differ by eleven times mainly according to whether they count the second half.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 7.00% rate. Fortune Business Insights publishes $32.87 billion for 2025 and $60.43 billion for 2034; those two endpoints imply exactly 7.00% compound growth over nine years. The 2026 base of $35.17 billion is the published 2025 value advanced one year at that implied rate, and the 2032 endpoint of $52.78 billion continues it. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen for a reason that has nothing to do with it being a middle value. It is the only estimate in the set that states what it counts -- blood glucose monitoring, infectious disease, cardiometabolic, pregnancy and fertility, and haematology testing -- and it is therefore the only one a reader can accept or reject on the merits. It also survives both grounding tests: it is small enough that the implied spend per US waived site is not absurd, and large enough that one vendor's diagnostics segment is a plausible fraction of it rather than a multiple.\n\nReaders working to a professional-sites-only definition should expect a materially smaller market and roughly the same growth rate, because the published rates barely differ. Readers wanting a defensible molecular-only figure should use an explicitly labelled sub-scope series rather than a discounted whole-market one. The growth rate is the stable part of this literature; the headline value is a scope statement.",
+  "market_overview": {
+    "summary": "On the stated scope used by the only series in this set that defines itself, the point-of-care diagnostics market is $35.17 billion in 2026, projected to $52.78 billion by 2032 at a 7.00% CAGR. That scope includes blood glucose monitoring and pregnancy and fertility testing alongside professional near-patient testing. Published base-year estimates spread 11.0x, from $4.81 billion to $53.1 billion, while published growth rates spread only 1.37x, from 5.1% to 7.00%. The disagreement is almost entirely about whether consumer self-testing counts, not about how fast the category grows.",
+    "key_trends": [
+      "Base-year estimates spread 11.0x ($4.81B to $53.1B) while published CAGRs spread only 1.37x (5.1% to 7.00%)",
+      "Two large houses state in their own scope definitions that they include blood glucose monitoring and pregnancy testing, which is the main reason the estimates diverge",
+      "The CMS CLIA database recorded 233,448 Certificate of Waiver laboratories and 21,736 Provider-Performed Microscopy sites in September 2026, out of 301,284 registered laboratories",
+      "The high estimates imply $208,087 per US waived or microscopy site per year, which rules out a professional-sites-only reading",
+      "Abbott's FY2025 Diagnostics segment of $8,937 million is 1.86x the entire market as the lowest published estimate sizes it",
+      "Total registered CLIA laboratories peaked at 323,086 in 2021 and stood at 301,284 in September 2026, so the site count is no longer growing"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in primary care and retail; expanding in molecular near-patient testing"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A very large and well-documented installed base of testing sites: 255,184 US waived and Provider-Performed Microscopy certificates that may perform only point-of-care-grade testing",
+      "Decentralisation of chronic disease management, which moves HbA1c, lipid and coagulation testing out of the central laboratory",
+      "Molecular near-patient platforms that bring PCR-grade performance to waived and moderately complex settings, raising the price per test",
+      "Retail and pharmacy testing, where CLIA-waived testing has expanded substantially since 2020",
+      "Antimicrobial stewardship pressure to distinguish viral from bacterial infection within the consultation rather than after it"
+    ],
+    "restraints": [
+      "The US testing-site count is no longer growing: total registered laboratories peaked at 323,086 in 2021 and stood at 301,284 in September 2026, so unit growth cannot carry the market",
+      "Post-pandemic normalisation of respiratory testing volumes, visible in Abbott's FY2025 Diagnostics segment falling 4.5% organically",
+      "Volume-based procurement in China, which Abbott cited as a specific headwind to its diagnostics segment in 2025",
+      "Waived tests are cheap by design, so the revenue per site is intrinsically low and growth has to come from mix rather than volume",
+      "Published market sizes that differ by eleven times make this category an unreliable basis for capital planning"
+    ],
+    "opportunities": [
+      "Replacing single-analyte strips with multiplex molecular panels at the same sites, which raises revenue per visit without needing new sites",
+      "Decentralised testing in health systems with thin central laboratory infrastructure, where point of care is the only practical modality rather than a convenience",
+      "Connectivity and middleware that bring waived results into the electronic record, which is a software margin attached to a consumables business",
+      "Home-collected and self-performed testing, which sits outside the CLIA system entirely and is where the largest published estimates locate their growth"
+    ],
+    "challenges": [
+      "No vendor discloses point-of-care-specific revenue, so share cannot be computed for any participant",
+      "Quality of waived testing has been a documented concern since CDC's 2005 survey of Certificate of Waiver sites, and operator error is the category's structural weakness",
+      "A test must be FDA-determined to be waived before it can be sold into the 233,448 waived sites, which makes the regulatory classification a gate on the addressable market",
+      "Scope inconsistency between estimates means procurement and investment comparisons across published reports are not valid"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Glucose and HbA1c testing",
+      "Infectious disease rapid antigen and molecular testing",
+      "Cardiometabolic and cardiac marker testing",
+      "Coagulation testing",
+      "Blood gas and electrolyte testing",
+      "Pregnancy and fertility testing",
+      "Haematology and urinalysis"
+    ],
+    "by_application": [
+      "Chronic disease monitoring",
+      "Acute infection triage",
+      "Emergency and critical care",
+      "Screening and wellness",
+      "Antimicrobial stewardship"
+    ],
+    "by_end_user": [
+      "Physician office laboratories",
+      "Hospitals and emergency departments",
+      "Retail pharmacies and urgent care",
+      "Home and self-testing",
+      "Long-term care facilities"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    {
+      "year": 2026,
+      "value": 35.17
+    },
+    {
+      "year": 2027,
+      "value": 37.63
+    },
+    {
+      "year": 2028,
+      "value": 40.27
+    },
+    {
+      "year": 2029,
+      "value": 43.09
+    },
+    {
+      "year": 2030,
+      "value": 46.11
+    },
+    {
+      "year": 2031,
+      "value": 49.34
+    },
+    {
+      "year": 2032,
+      "value": 52.78
+    }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Abbott",
+      "headquarters": "United States",
+      "market_position": "Incumbent with the broadest waived and near-patient portfolio",
+      "description": "Carries ID NOW, BinaxNOW, i-STAT, Afinion and Panbio across rapid molecular, rapid antigen and blood gas testing. Abbott does not report point-of-care revenue separately: its FY2025 Diagnostics segment was $8,937 million in total, down 4.3% reported and 4.5% organically on lower COVID-19 test demand and volume-based procurement in China, and roughly flat excluding COVID-19 sales. That segment figure includes core laboratory, molecular and transfusion businesses, so it cannot be used as a point-of-care share numerator. No share percentage is publicly disclosed."
+    },
+    {
+      "company": "Roche Diagnostics",
+      "headquarters": "Switzerland",
+      "market_position": "Incumbent, strongest in professional near-patient and coagulation testing",
+      "description": "Supplies cobas liat molecular testing, Accu-Chek glucose monitoring and CoaguChek coagulation self-testing, spanning both halves of the category -- professional sites and consumer self-testing. Point-of-care revenue is consolidated within Roche Diagnostics divisional reporting and is not broken out, so neither its size nor its share can be stated."
+    },
+    {
+      "company": "Danaher (Cepheid)",
+      "headquarters": "United States",
+      "market_position": "Incumbent in near-patient molecular testing",
+      "description": "Cepheid's GeneXpert placed cartridge-based PCR into decentralised settings including waived configurations, and the installed base expanded substantially during the pandemic. Danaher reports Cepheid within its Diagnostics segment without a point-of-care line item, and no share figure is public."
+    },
+    {
+      "company": "Siemens Healthineers",
+      "headquarters": "Germany",
+      "market_position": "Incumbent in blood gas, urinalysis and immunoassay point of care",
+      "description": "Supplies the epoc and RAPIDPoint blood gas range and CLINITEK urinalysis systems, serving the hospital and physician office segments rather than consumer self-testing. Point-of-care revenue is reported within the Diagnostics segment and is not separately disclosed."
+    },
+    {
+      "company": "QuidelOrtho",
+      "headquarters": "United States",
+      "market_position": "Challenger concentrated in rapid infectious disease testing",
+      "description": "Built on Sofia and QuickVue rapid antigen testing sold heavily into physician offices and retail settings, which makes it unusually exposed to the post-pandemic normalisation of respiratory testing volumes that is visible across the category. No point-of-care share percentage is publicly disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Abbott",
+      "year": 2026,
+      "event": "Reported FY2025 Diagnostics segment net sales of $8,937 million, down 4.3% reported and 4.5% organically, attributing the decline to lower COVID-19 test demand and volume-based procurement in China; excluding COVID-19 testing sales the segment was roughly flat at 0.4% (fourth-quarter and full-year 2025 results, 22 January 2026)."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2026,
+      "event": "The CMS CLIA laboratory statistics release for September 2026 recorded 301,284 registered laboratories, including 233,448 Certificate of Waiver and 21,736 Provider-Performed Microscopy sites and 116,814 physician office laboratories -- below the 323,086 total recorded in the 2021 historical series."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2023,
+      "event": "Final rule on CLIA fees, histocompatibility, personnel and alternative sanctions for Certificate of Waiver laboratories published in the Federal Register on 28 December 2023, introducing alternative sanctions for waived testing sites."
+    }
+  ],
+  "regulatory_landscape": [
+    "CLIA 1988, codified at 42 CFR Part 493: every US testing site must hold a Certificate of Waiver, Provider-Performed Microscopy, Compliance or Accreditation certificate, and a waiver certificate permits only waived testing",
+    "FDA waiver classification, including the CLIA Waiver by Application pathway: a test cannot be sold into the 233,448 waived sites until the FDA determines it is waived, which makes classification a gate on the addressable market",
+    "CMS alternative sanctions for Certificate of Waiver laboratories, finalised in the Federal Register on 28 December 2023, which extended enforcement tools to waived testing sites",
+    "CMS Clinical Laboratory Fee Schedule, which sets the Medicare payment rates that determine whether a waived test is economic at a physician office",
+    "EU In Vitro Diagnostic Regulation (IVDR) 2017/746, which reclassified many self-test and near-patient devices upward and requires notified body involvement for most of them",
+    "WHO prequalification of in vitro diagnostics, which governs procurement of rapid tests by donor-funded programmes in low- and middle-income countries"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public registers, public filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "CMS Division of Clinical Laboratory Improvement and Quality, 'Laboratory Statistics', September 2026: 301,284 registered laboratories; 233,448 Certificate of Waiver; 21,736 Provider-Performed Microscopy; 15,214 Compliance; 15,542 Accreditation; 116,814 physician office laboratories",
+      "CMS CLIA historical laboratory numbers 1993-2021: total registered laboratories peaked at 323,086 in 2021",
+      "Abbott Laboratories, fourth-quarter and full-year 2025 results (22 January 2026) and Form 10-K for FY2025, SEC EDGAR CIK 1800: Diagnostics segment $8,937 million, US $3,535 million, international $5,402 million",
+      "CDC, 'Good Laboratory Practices for Waived Testing Sites', MMWR Recommendations and Reports 54(RR-13), 2005: 105,138 waived-only sites of approximately 180,000 US testing sites",
+      "Gaur R. et al., 'Increases in CLIA-Waived Testing Sites Since the Start of the COVID-19 Pandemic', Laboratory Medicine 54(2):126, 2023",
+      "Federal Register, CLIA fees and alternative sanctions for Certificate of Waiver laboratories final rule, 28 December 2023",
+      "ClinicalTrials.gov API v2, query.term='point-of-care', retrieved 16 October 2026: 2,705 registered studies against 607,160 studies in the register",
+      "Published market estimates from Fortune Business Insights (2025 edition), IMARC Group, Grand View Research, Precedence Research, Meticulous Research, Credence Research, Knowledge Sourcing Intelligence and Spherical Insights (6 November 2023)"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Two plausibility tests were run against countable public records. First, dividing IMARC's $53.1 billion global figure by the 255,184 US Certificate of Waiver and Provider-Performed Microscopy sites in the CMS CLIA database for September 2026 gives $208,087 per site per year; because this places a global numerator over a US-only denominator it is an upper bound and the true figure is lower, and it rules out a professional-sites-only reading of the high estimates. Second, Abbott's FY2025 Diagnostics segment of $8,937 million is 1.86 times Credence Research's entire $4.81 billion global market, and Abbott's rapid and near-patient lines are only a subset of that segment, which rules out the low estimate as a whole-market figure. Neither test establishes the correct market size and neither is offered as an estimate. The 2026 base value is Fortune Business Insights' published 2025 figure advanced one year at the rate implied by its own 2025 and 2034 endpoints, not a separately published observation."
+  },
+  "faqs": [
+    {
+      "question": "How big is the point-of-care diagnostics market?",
+      "answer": "On the only published scope in this set that defines what it counts, $35.17 billion in 2026 rising to $52.78 billion by 2032 at 7.00%. That scope includes blood glucose monitoring and pregnancy and fertility testing. Published base-year estimates range from $4.81 billion for 2025 to $53.1 billion for 2024, an 11.0x spread, so the number you are quoted depends almost entirely on which definition you were handed."
+    },
+    {
+      "question": "Why do published point-of-care estimates differ by eleven times?",
+      "answer": "Because some of them count consumer self-testing and some do not. Fortune Business Insights and Precedence Research both state that their product categories include blood glucose monitoring, and glucose strips and home pregnancy tests are bought by patients at retail, nowhere near a clinical testing site. Growth rates, by contrast, agree closely: published CAGRs run only 5.1% to 7.00%."
+    },
+    {
+      "question": "How can you check whether a point-of-care market size is plausible?",
+      "answer": "Divide it by the number of sites that may legally perform point-of-care testing. The CMS CLIA database for September 2026 lists 233,448 Certificate of Waiver laboratories and 21,736 Provider-Performed Microscopy sites, 255,184 in total. IMARC's $53.1 billion global figure divided by that US denominator gives $208,087 per site per year, or about $570 of testing every day at a site that typically runs a handful of strep, influenza, urinalysis and glucose tests."
+    },
+    {
+      "question": "Is the number of point-of-care testing sites still growing?",
+      "answer": "No. The CMS historical series shows total registered CLIA laboratories peaking at 323,086 in 2021 after the pandemic drew tens of thousands of new sites into waived testing, and the September 2026 release records 301,284. Growth in this market therefore has to come from what is sold into each existing site, not from new sites."
+    },
+    {
+      "question": "Who leads the point-of-care diagnostics market?",
+      "answer": "Abbott, Roche Diagnostics, Danaher's Cepheid, Siemens Healthineers and QuidelOrtho are the recognised participants, but not one of them discloses point-of-care-specific revenue. Abbott's FY2025 Diagnostics segment of $8,937 million includes core laboratory, molecular and transfusion businesses and cannot be used as a point-of-care numerator. No share percentage exists for any participant, so treat any you are shown as unsourced."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no named source publishes a regional split for this scope that survives scrutiny. We have a complete US site register and no comparable register anywhere else, which is enough to test a global figure for plausibility but not enough to apportion one. Publishing a regional table would mean inventing it, so the section is omitted."
+    }
+  ],
+  "key_highlights": [
+    "Base-year estimates spread 11.0x ($4.81 billion to $53.1 billion) while published CAGRs spread only 1.37x (5.1% to 7.00%)",
+    "The scope difference is stated, not hidden: two large houses include blood glucose monitoring and pregnancy testing in their own definitions",
+    "CMS CLIA, September 2026: 301,284 registered laboratories, of which 233,448 hold a Certificate of Waiver and 21,736 Provider-Performed Microscopy",
+    "The high estimates imply $208,087 per US waived or microscopy site per year, an upper bound that rules out a professional-sites-only reading",
+    "Abbott's FY2025 Diagnostics segment of $8,937 million is 1.86x the entire market as the lowest published estimate sizes it",
+    "Total CLIA laboratories peaked at 323,086 in 2021 and have since fallen to 301,284, so the site count is no longer a growth driver",
+    "No participant discloses point-of-care-specific revenue, so no share figure for this market is verifiable"
+  ],
+  "reader_takeaways": [
+    "Before accepting a point-of-care market size, ask whether it includes blood glucose strips and home pregnancy tests, because that single decision moves the base year by up to eleven times",
+    "Use the CMS CLIA register as your own sanity check: divide any figure you are given by 255,184 US waived and microscopy sites and ask whether the per-site result is a believable annual testing spend",
+    "Do not plan on site growth: the US laboratory count peaked in 2021 and has fallen since, so revenue growth has to come from mix within existing sites",
+    "Treat explicitly labelled sub-scope series, such as point-of-care molecular at $11.84 billion by 2032, as more useful than a discounted whole-market number",
+    "Treat any vendor share percentage for this market as unsourced, because no participant discloses point-of-care revenue separately from its diagnostics segment"
+  ],
+  "seo": {
+    "meta_title": "Point-of-Care Diagnostics Market Size & Forecast 2032",
+    "meta_description": "Point-of-care diagnostics estimates spread 11x at the base year but only 1.37x on growth. A per-site test against the CMS CLIA register shows why.",
+    "keywords": [
+      "point of care diagnostics market",
+      "point of care testing market size",
+      "CLIA waived testing",
+      "rapid diagnostics market",
+      "near-patient testing",
+      "point of care molecular diagnostics",
+      "POC diagnostics forecast 2032"
+    ]
+  }
+}

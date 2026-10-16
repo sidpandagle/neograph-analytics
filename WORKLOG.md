@@ -360,3 +360,205 @@ characters and each needs an editorial judgement rather than a substitution.
 Dry-run first, applied second; the script writes nothing without `--apply`.
 Because report pages carry `revalidate = 3600`, these reach production through
 ISR without waiting for a deploy.
+
+## 2026-10-16 — the report pipeline, and making sources visible
+
+### `scripts/report-db.mjs` — one place where a report becomes a row
+Reports were going into Supabase ad hoc, with the evidence discipline enforced
+only by whoever was typing. The tool now holds both halves:
+
+- `count` / `slugs` / `industries` / `dump` for reading the corpus (142 rows,
+  6 industries: Healthcare IT 39, Biotechnology 38, Life Sciences 23,
+  Pharmaceuticals 20, Medical Devices 16, Medical Imaging 6).
+- `check` runs offline and refuses a draft that fails the house rules.
+- `publish` upserts on `slug` — never deletes, never truncates.
+
+The checks that matter, all of them arithmetic rather than taste:
+- **The CAGR must reconcile.** `current * (1+cagr)^years` has to land on
+  `forecast_value` within 0.6 points. A headline that fails its own arithmetic
+  is the most common defect in published market research.
+- The plotted series must start at `base_year` on exactly `current_value`.
+- `competitive_landscape[].market_share` is **rejected outright** — vendor share
+  is almost never publicly disclosed, so a number there is invention by
+  definition.
+- Numeric shares anywhere else require a sourcing statement in the prose.
+- `meta_title` <= 60 chars and never both "Global" and a region; description
+  70-160. These are the two defects the 142-row corpus already had.
+- Every `charts[]` entry needs a `data_source`.
+
+Calibrated against the published OIS row: it passes the CAGR and base-year
+checks and fails three (summary 364 chars, title 61, description 191) — the last
+two are real, already-known defects, which is the right answer for a checker.
+
+### `research/REPORT-AUTHORING-BRIEF.md` and `research/REPORT-PIPELINE.md`
+The brief is the contract for a research pass: the evidence-file format with its
+mandatory "do not publish" list, the grounding-arithmetic requirement, the draft
+JSON shape, the corpus conventions (`report_id` equals the slug; base year 2026;
+forecast 2026-2032). The pipeline file holds 40 topics in 8 batches, picked
+against `research/corpus-slugs.txt` so none duplicates an existing row.
+
+No further regional clones (`north-america-*`, `europe-*`, ...). The corpus
+already carries four regional copies of fourteen topics; a fifth adds no
+analysis, and all 142 rows say `region: Global` anyway.
+
+### Charts now say where their numbers come from (was R-1, R-0g)
+`charts[].data_source` has been populated on every row and rendered nowhere.
+Three charts now sit inside `<figure>` with a `<figcaption>`:
+
+```
+Source: NeoGraph Analytics, tabulated from the base-year and forecast values
+stated in this report. Modelled at constant CAGR between published endpoints.
+How these figures are produced.
+```
+
+Two details worth recording. Some `data_source` values name a real publication;
+others name the column the series was read from (`market_forecast`), which tells
+a reader nothing — `lib/chartAttribution.ts` rephrases those into a true
+statement instead of printing the column name. And the OIS row had buried its
+modelling caveat *inside the chart title*, where it reads as part of the
+chart's name; `chartModellingNote` lifts it into the caption where it belongs.
+
+### `/methodology` — the page three other pages were already promising
+The site said "methodology" and "sources" in three places and had no such
+route, and zero source attributions were reachable anywhere. The page states
+what the checker enforces: estimates collected rather than averaged, the spread
+reported as the finding, every headline divided through by a public register,
+and an explicit list of what gets left out (vendor shares, unsourced regional
+splits, segment percentages, padded development lists). Linked from the footer,
+from every chart caption, and added to both sitemaps.
+
+### Error boundaries (was R-5)
+`app/error.tsx` (retry + browse, logs the digest only) and
+`app/global-error.tsx` (self-contained inline styles, since a root-layout
+failure means no fonts and no theme tokens). Neither existed, so any unhandled
+render error showed the bare Next.js screen.
+
+### Verified
+Build clean, 142 report pages + `/methodology` prerendered. In the built HTML:
+`<figure>` wraps the forecast chart with the caption above; `/methodology`
+renders 1 `<h1>`, 5 `<h2>` and the live corpus count (142 across 6).
+
+### Filters that return nothing (was R-0b, R-0c)
+`/reports` rendered 12 category chips from `data/categories.json` while the
+corpus contains 6 industries. Six chips — Clinical Diagnostics, Healthcare
+Services, Laboratory Equipment, Therapeutic Area, Dental, Animal Health — were
+guaranteed to return an empty page, and the same six were tiles in the
+mega-menu and rows in the mobile drawer. The region select offered six options
+over a corpus where all 142 rows are `Global`: five returned nothing, one
+returned everything.
+
+Both now derive from the data. `getReportCategories()` selects the single
+`industry` column (a few KB over 142 rows, in keeping with the egress rule in
+that file) and the header passes the result to `Navigation` and `MobileNav`;
+`data/categories.json` stays as the slug/description map and as the fallback if
+the query fails, so the menu can never render empty. The listing builds its own
+chip list the same way and prints the count on each chip. The region control is
+dropped while only one distinct value exists and returns on its own when
+regional rows do.
+
+Verified in the built HTML: chips read
+`Biotechnology 38, Healthcare IT 39, Medical Devices 16, Medical Imaging 6,
+Life Sciences 23, Pharmaceuticals 20` — summing to 142 — the hero line reads
+"across 6 healthcare sectors" rather than 12, the header exposes 6 distinct
+`?category=` links rather than 12, and no region select is present.
+
+### Testimonials off the homepage (was R-0f)
+Ten testimonials, each with a five-star rating, under "What healthcare
+executives say". The names are job titles — "Head of Marketing", "Research
+Associate" — and nine of the ten companies are outside healthcare: West Ham
+United, Mitsubishi Motors R&D of America, The Clorox Company, Singapore Tourism
+Board, Beeline, Nissan Chemical, SMS Elotherm, Berumen, Mitsubishi. Only Exact
+Sciences is a healthcare company.
+
+The section is no longer rendered. `data/testimonials.json`,
+`TestimonialsSection` and its skeleton all stay in place and stay exported, for
+when real attributable quotes exist. Nothing was deleted.
+
+Filed alongside it as **R-9, needing Siddhant**: the "Our research shapes
+decisions at" marquee asserts client relationships with twelve third-party
+marks (Meta, Trivago, Suzuki, Kawasaki, Nestlé Professional, CDC, BCG, PwC,
+Argonne, ChampionX, Mitsubishi, SK). Unlike the testimonials this may well be
+true, and it is not mine to judge from inside the repo — it needs a yes or no
+per logo. Left on the page until then.
+
+R-4 was also marked `[H]`: the Product/Offer JSON-LD publishes a hardcoded
+`$2,995` with `InStock`, and the same figure is shown on the page. Making the
+schema disagree with the visible price would be worse than the present state,
+and pricing and checkout are Siddhant's call, so it is flagged rather than
+changed.
+
+Verified in the built homepage: "healthcare executives", "West Ham" and
+"Clorox" all absent.
+
+### Two metered-egress queries that fetched what nothing reads
+- `getReportBySlug` ran a **second corpus-wide query** for the `slug` column of
+  all 142 rows, purely to compute the report's index in listing order so
+  `rowToReport` could use it as `id`. Nothing on a detail page reads that id —
+  checkout and its form key off the slug — so every report view paid for a
+  142-row query it discarded. Removed.
+- `getReports()` does `select('*')`, which pulls `market_dynamics`,
+  `company_profiles`, `research_methodology`, `faqs` and every other large JSONB
+  column so a card can show a title, a category, a year and a description. Two
+  new projections, both additive — `getReportCards()` (11 surface columns) for
+  the listing and `getReportSitemapEntries()` (`slug,published_year`) for
+  `sitemap.ts` and `/api/sitemap-reports/[page]`. `getReports()` is untouched
+  for anything that still wants the whole row.
+
+Measured: the built `/reports` HTML drops from **508KB to 284KB** (-44%) with
+the same 12 cards and the same 142-report count, because the RSC payload no
+longer carries the unread JSONB.
+
+### Round 1 of the expansion — 10 reports, corpus 142 -> 152
+Two research passes ran in parallel (the two-agent limit), one on diagnostics
+and devices, one on therapeutics, both against
+`research/REPORT-AUTHORING-BRIEF.md`. All ten drafts pass
+`node scripts/report-db.mjs check`. Evidence files are in `research/*-notes.md`
+and the headline figures with their grounding arithmetic are tabulated in
+`research/REPORT-PIPELINE.md`.
+
+What makes these different from the corpus they joined: every base year is a
+named publisher's own figure advanced at that publisher's own rate, stated as
+such on the page, and every headline is divided through by something countable.
+Several of those divisions are decisive rather than decorative:
+
+- **CAR-T**: five disclosed product revenues sum to **$5.53B, which exceeds
+  every published market size for the same year.** The bottom-up floor is above
+  the top-down estimates.
+- **GLP-1**: Novo's DKK 234,549m plus Lilly's $36,507m is **$71.94B disclosed**,
+  above three of five published market sizes. One publisher's $2.6B is smaller
+  than a single quarter of Zepbound.
+- **Bispecifics**: two published estimates are below Hemlibra and Vabysmo
+  **alone**; 74% of disclosed revenue is non-oncology.
+- **Liquid biopsy**: the top forecast implies 43.0M tests a year against ~20M
+  annual cancer cases — 2.15x total incidence, so it cannot be therapy
+  selection; it assumes population screening.
+- **Phage therapy**: no marketing authorisation in the US, EU or UK; the top
+  published figure works out at $10.3M per registered trial. Published as
+  option value on an unread Phase 3, explicitly not as revenue.
+
+Three defects surfaced while reviewing the drafts, all fixed before publishing:
+
+1. **Unit blindness, 1,000x.** Two of the ten are stored in millions
+   (`phage-therapy-market` $66.5M, `brain-computer-interface-market` $795.3M).
+   `money()` defaults to `'B'` and two other call sites hardcoded `B`, so the
+   cards and the detail-page metrics would have rendered "$66.5B" — the worst
+   class of error this site can make. `unitSuffix()`/`marketValue()` now read
+   the row's `unit`, and `unit,currency` were added to `CARD_COLUMNS`. The
+   charts and the hero already read the column.
+2. **`recent_developments` keyed `development`** where the renderer reads
+   `event`, which would have printed a company and year above an empty
+   paragraph. Normalised, and the checker now rejects it by name.
+3. **U+FFFD in "bioMérieux"** — a source decoded with the wrong codec upstream.
+   Repaired, and the checker now rejects any draft containing a replacement
+   character.
+
+Verified after publishing: build clean, **200 static pages** (was 190), the two
+million-unit reports render `$66.5M`/`$167.9M` and `$795.3M`/`$2252.5M`, each
+report page carries its chart source caption, and the homepage corpus count
+reads 152.
+
+One thing to flag outside the repo: the diagnostics agent installed `pypdf`
+into the user Python site-packages to read the CMS CLIA statistics PDF. Nothing
+in the project or in global config was touched and nothing was removed, but it
+is a change outside this repo and the standing rule is not to make them. The
+brief for round 2 forbids installing anything.

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getReports } from '@/lib/api/reports';
+import { getReportSitemapEntries } from '@/lib/api/reports';
 import { getBlogs } from '@/lib/api/blogs';
 import { getPressReleases } from '@/lib/api/press-releases';
 
@@ -18,6 +18,7 @@ const STATIC_PAGES = [
   { path: '/blog',            changeFrequency: 'daily'   as const, priority: 0.8 },
   { path: '/press-releases',  changeFrequency: 'weekly'  as const, priority: 0.7 },
   { path: '/about',           changeFrequency: 'monthly' as const, priority: 0.7 },
+  { path: '/methodology',     changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/services',        changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/contact',         changeFrequency: 'monthly' as const, priority: 0.5 },
 ];
@@ -34,15 +35,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Report pages from Supabase
-  const reportsRes = await getReports();
-  const reportEntries: MetadataRoute.Sitemap = reportsRes.success
-    ? reportsRes.data.map((report) => ({
-        url: `${BASE_URL}/reports/${report.slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-      }))
-    : [];
+  const reportSlugs = await getReportSitemapEntries();
+  const reportEntries: MetadataRoute.Sitemap = reportSlugs.map((report) => ({
+    url: `${BASE_URL}/reports/${report.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
 
   // Blog pages from API (graceful fallback)
   const blogsRes = await getBlogs({ status: 'published', page: 1, limit: 500 });

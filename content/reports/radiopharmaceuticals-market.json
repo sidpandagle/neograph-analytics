@@ -1,0 +1,217 @@
+{
+  "report_id": "radiopharmaceuticals-market",
+  "slug": "radiopharmaceuticals-market",
+  "title": "Radiopharmaceuticals Market Size, Share & Forecast 2026-2032",
+  "industry": "Pharmaceuticals",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 8.08,
+    "forecast_value": 12.49,
+    "cagr": 7.53
+  },
+  "market_overview": {
+    "summary": "Published estimates put the radiopharmaceuticals market between $5.8 billion and $10.3 billion at a 2024 or 2025 base year, a 1.78x spread, while the published growth rates run from 4.9% to 16.4% - a 3.35x spread. That is the reverse of the usual pattern, and it is informative: the growth rate is where the scope decision hides, because this market is the sum of a fast-growing therapeutic business and a flat-to-declining diagnostic one. On the most recently based broad-scope series the market is $8.08 billion in 2026, reaching $12.49 billion by 2032 at 7.53%.",
+    "key_trends": [
+      "Published base-year sizes spread 1.78x ($5.8B to $10.3B) but published CAGRs spread 3.35x (4.9% to 16.4%) - the rate, not the base, carries the scope decision",
+      "Therapy and diagnostics moved in opposite directions in FY2025: Pluvicto +43% and Lutathera +13% in USD, while Lantheus's Pylarify fell 6.5%",
+      "Four products from three companies disclosed $4.43 billion of FY2025 revenue, which is 76% of the lowest published market size and rules that estimate out",
+      "Lantheus guided 2026 group revenue down to $1.40-1.45 billion from $1.54 billion in 2025, so the largest disclosed diagnostic tracer is contracting",
+      "102 studies are registered on ClinicalTrials.gov with lutetium Lu 177 as an intervention, which is the pipeline behind the therapy-weighted forecasts",
+      "The two largest suppliers of commodity radiopharmacy - Curium and Cardinal Health Nuclear - are private and disclose no product revenue, so no share table is possible"
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in diagnostics, early in targeted therapy"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Radioligand therapy label expansion, including Pluvicto's March 2025 broadening into an earlier prostate cancer setting",
+      "Disclosed therapy revenue compounding fast from a small base: Pluvicto added roughly $600 million of revenue in FY2025 alone",
+      "PSMA-targeted imaging demand pulling through to therapy selection, which links the diagnostic and therapeutic halves commercially",
+      "Pipeline depth: 102 lutetium-177 studies registered on ClinicalTrials.gov as of October 2026",
+      "New entrants scaling commercially - Telix group revenue reached US$803.8 million in FY2025, up 56%"
+    ],
+    "restraints": [
+      "Short radioisotope half-lives force same-day distribution, which caps geographic reach regardless of demand",
+      "The diagnostic half is price-eroding: Pylarify fell 6.5% in FY2025 and Lantheus guided 2026 revenue lower",
+      "Treatment requires licensed nuclear medicine facilities and radiation-safety handling, which limits the number of delivering sites",
+      "Reimbursement for high-cost radioligand therapy is negotiated country by country, delaying ex-US uptake"
+    ],
+    "opportunities": [
+      "Alpha emitters, principally actinium-225, where supply rather than demand is currently the constraint",
+      "Earlier-line therapy use, which multiplies the eligible population without needing new sites",
+      "Theranostic pairing of an imaging agent with its therapeutic analogue, which raises revenue per patient",
+      "Regional production capacity in markets currently served by imported doses"
+    ],
+    "challenges": [
+      "No public, auditable split between diagnostic and therapeutic revenue, so published CAGRs cannot be checked against a mix assumption",
+      "Isotope supply chains depend on a small number of reactors and cyclotrons, and outages are not substitutable",
+      "Private incumbents in generator and cold-kit supply make the installed commercial base unmeasurable from public sources",
+      "Published estimates differ by definition rather than by judgement, which makes them unsafe as a planning input without reading each scope statement"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Diagnostic radiopharmaceuticals (SPECT)",
+      "Diagnostic radiopharmaceuticals (PET)",
+      "Therapeutic radiopharmaceuticals (beta emitters)",
+      "Therapeutic radiopharmaceuticals (alpha emitters)",
+      "Generators and cold kits"
+    ],
+    "by_application": [
+      "Oncology",
+      "Cardiology",
+      "Neurology",
+      "Endocrinology",
+      "Bone and joint imaging"
+    ],
+    "by_end_user": [
+      "Hospital nuclear medicine departments",
+      "Independent imaging centres",
+      "Radiopharmacies",
+      "Academic and research centres"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 8.08 },
+    { "year": 2027, "value": 8.69 },
+    { "year": 2028, "value": 9.34 },
+    { "year": 2029, "value": 10.05 },
+    { "year": 2030, "value": 10.8 },
+    { "year": 2031, "value": 11.62 },
+    { "year": 2032, "value": 12.49 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Novartis",
+      "headquarters": "Switzerland",
+      "market_position": "Largest disclosed therapeutic radiopharmaceutical revenue",
+      "description": "Reported Pluvicto net sales of USD 1,994 million (+43% in USD) and Lutathera net sales of USD 816 million (+13%) for FY2025, the two largest publicly disclosed radioligand therapy products. Together they are roughly 63% of all radiopharmaceutical product revenue we could find disclosed anywhere. Share of the total market is not disclosed and cannot be computed, because the largest commodity suppliers are private."
+    },
+    {
+      "company": "Lantheus Holdings",
+      "headquarters": "United States",
+      "market_position": "Largest disclosed diagnostic tracer revenue, declining",
+      "description": "Reported FY2025 group revenue of $1.54 billion and Pylarify revenue of $989.1 million, down 6.5%, with Q4 Pylarify down 9.7%. Guided FY2026 group revenue down to $1.40-1.45 billion. The clearest public evidence that the diagnostic half of this market is not growing."
+    },
+    {
+      "company": "Telix Pharmaceuticals",
+      "headquarters": "Australia",
+      "market_position": "Fast-growing challenger",
+      "description": "Reported FY2025 group revenue of US$803.8 million, up 56% from US$502.5 million, including a US$238.4 million distribution segment of which US$170.1 million was third-party product sales and service fees. Guided FY2026 to US$950-970 million. No market share is disclosed."
+    },
+    {
+      "company": "Curium Pharma",
+      "headquarters": "France",
+      "market_position": "Major private supplier of commodity radiopharmacy",
+      "description": "A principal supplier of generators, cold kits and SPECT agents. Privately held and publishes no product revenue, which is one reason no vendor share table in this category can be verified from public sources."
+    },
+    {
+      "company": "Cardinal Health Nuclear and Precision Health Solutions",
+      "headquarters": "United States",
+      "market_position": "Major radiopharmacy distribution network",
+      "description": "Operates a large US nuclear pharmacy network compounding and delivering unit doses. Revenue is not disclosed at product level within Cardinal Health's segment reporting, so its contribution to published market sizes cannot be isolated."
+    },
+    {
+      "company": "Bayer",
+      "headquarters": "Germany",
+      "market_position": "First-approved alpha-emitter therapy",
+      "description": "Markets Xofigo (radium-223), the first approved alpha-emitting therapeutic radiopharmaceutical. Bayer does not break out Xofigo net sales in its public reporting, so the product sits inside published market sizes without a disclosed figure."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "FDA new drug application pathway for radioactive drugs, under which Pluvicto and Lutathera were approved and under which Pluvicto's label was expanded in March 2025",
+    "US Nuclear Regulatory Commission 10 CFR Part 35, Medical Use of Byproduct Material, which sets the authorised-user and facility requirements that determine how many sites can administer radioligand therapy",
+    "NRC Agreement State programmes, which licence medical radioisotope use in most US states and create state-level variation in delivering capacity",
+    "EMA centralised marketing authorisation, the route for radiopharmaceutical authorisation in the European Union",
+    "US Department of Transportation and IATA dangerous-goods rules for radioactive material, which govern same-day dose shipment and constrain distribution radius",
+    "CMS pass-through and separate payment policy for diagnostic radiopharmaceuticals in the hospital outpatient setting, which determines whether a tracer is separately reimbursed or packaged"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of company disclosures, public registers and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "Novartis full-year 2025 results media release (2026): Pluvicto USD 1,994m, Lutathera USD 816m, group net sales USD 54,532m",
+      "Lantheus Holdings Fourth Quarter and Full Year 2025 Financial Results, 26 February 2026: group revenue $1.54bn, Pylarify $989.1m (-6.5%), FY2026 guidance $1.40-1.45bn",
+      "Telix Pharmaceuticals FY2025 Results, February 2026: group revenue US$803.8m, RLS segment US$238.4m including US$170.1m third-party product sales and service fees",
+      "ClinicalTrials.gov API v2 interventional search for 'lutetium Lu 177': 102 registered studies, retrieved 16 October 2026",
+      "Published market estimates from Precedence Research (2025), BCC Research, Towards Healthcare (2025), IMARC Group (2025), Market Research Future (2025), Roots Analysis (2025) and PS Market Research (2024)",
+      "AJMC, 'Will the Coming Radiopharmaceutical Wave Reach More Patients With Cancer?', 10 April 2025, on Pluvicto's March 2025 label expansion"
+    ],
+    "data_validation": "The headline figure is Precedence Research's published 2025 estimate of $7.51 billion advanced one year at Precedence's own published 7.53% CAGR to give a 2026 base of $8.08 billion; the intermediate years are interpolation on that single rate, not separately observed estimates. No methodology behind any published estimate was inspected. The grounding check is arithmetic, not an estimate: summing FY2025 disclosed product revenue for Pluvicto ($1,994m), Lutathera ($816m), Pylarify ($989.1m) and Telix's group revenue excluding its $170.1m of third-party distribution ($633.7m) gives $4.43 billion. That is 76% of IMARC's $5.8 billion market size, 59% of Precedence's $7.51 billion and 43% of BCC Research's $10.3 billion. Because the residual must cover all Tc-99m generator and FDG supply worldwide plus the private incumbents Curium and Cardinal Health Nuclear, the test rules out the bottom of the published range. It establishes a floor; it does not establish the correct market size, and is not offered as one."
+  },
+  "faqs": [
+    {
+      "question": "How big is the radiopharmaceuticals market?",
+      "answer": "On the most recently based broad-scope published series, $8.08 billion in 2026 rising to $12.49 billion by 2032 at 7.53%. Published base-year estimates range from $5.8 billion to $10.3 billion, and the arithmetic in this report rules out the bottom of that range."
+    },
+    {
+      "question": "Why do the published growth rates differ so much more than the market sizes?",
+      "answer": "Because the growth rate encodes an assumption about the therapy/diagnostic mix. In FY2025 Pluvicto grew 43% and Lutathera 13% in USD, while Lantheus's Pylarify fell 6.5% and Lantheus guided 2026 revenue lower. A therapy-weighted view produces BCC Research's 16.4%; a generator-and-tracer-weighted view produces IMARC's 4.9%."
+    },
+    {
+      "question": "How much radiopharmaceutical revenue is actually disclosed by companies?",
+      "answer": "$4.43 billion for FY2025 across four products from three companies: Pluvicto $1,994 million, Lutathera $816 million, Pylarify $989.1 million, and Telix's group revenue excluding third-party distribution, $633.7 million. That is a floor, not a market size, because Curium, Cardinal Health Nuclear and Bayer's Xofigo are not disclosed at product level."
+    },
+    {
+      "question": "Which published estimate does the disclosed revenue rule out?",
+      "answer": "The low end. At IMARC's $5.8 billion, four disclosed products would be 76% of the entire global market, leaving about $1.37 billion for every Tc-99m generator, all FDG production, Xofigo, and the whole of Curium and Cardinal Health Nuclear. That is not credible."
+    },
+    {
+      "question": "Who leads the radiopharmaceuticals market?",
+      "answer": "Novartis holds by far the largest disclosed therapeutic revenue, and Lantheus the largest disclosed diagnostic tracer revenue. Neither share can be quantified, because the biggest commodity suppliers - Curium and Cardinal Health Nuclear - are private and publish no product revenue. Any percentage share you are shown for this market is not derived from public disclosure."
+    },
+    {
+      "question": "Why does this report show no regional breakdown?",
+      "answer": "Because no named public source gives a defensible regional or country split of radiopharmaceutical revenue. Publishing one would mean apportioning by feel. The sections are omitted instead."
+    }
+  ],
+  "seo": {
+    "meta_title": "Radiopharmaceuticals Market Size and Forecast to 2032",
+    "meta_description": "Published radiopharmaceutical market sizes spread 1.78x but their growth rates spread 3.35x. Disclosed FY2025 product revenue of $4.43bn shows why.",
+    "keywords": [
+      "radiopharmaceuticals market",
+      "radiopharmaceuticals market size",
+      "radioligand therapy market",
+      "Pluvicto sales",
+      "Lutathera revenue",
+      "nuclear medicine market",
+      "theranostics market"
+    ]
+  },
+  "executive_summary": "Published estimates of the radiopharmaceuticals market put its base-year size between $5.8 billion (IMARC, 2024) and $10.3 billion (BCC Research, 2024) - a 1.78x spread, modest by the standards of this literature. The published growth rates, however, run from 4.9% to 16.4%, a 3.35x spread. That inversion is the finding. In most healthcare markets the analysts agree about growth and disagree about what to count. Here they disagree about growth, because the growth rate is doing the work of a scope decision.\n\nThe reason is visible in company filings. This market is the sum of two businesses pointing in opposite directions. In FY2025 Novartis reported Pluvicto net sales of $1,994 million, up 43% in USD, and Lutathera at $816 million, up 13%. Over the same year Lantheus reported Pylarify - the largest single disclosed diagnostic tracer - at $989.1 million, down 6.5%, with the fourth quarter down 9.7%, and guided FY2026 group revenue down to $1.40-1.45 billion from $1.54 billion. A 16.4% CAGR is a therapy-weighted forecast. A 4.9% CAGR is a generator-and-tracer-weighted forecast. Both can be internally consistent.\n\nThe disclosed revenue also tests the published sizes directly. Pluvicto, Lutathera, Pylarify and Telix's product revenue excluding third-party distribution sum to $4.43 billion for FY2025. Against IMARC's $5.8 billion that is 76% of the entire world market from four products, leaving roughly $1.37 billion for all Tc-99m generator supply, all FDG production, Xofigo, and the whole of Curium and Cardinal Health Nuclear. That is not credible, so the arithmetic rules out the low end of the published range. It is a plausibility test, not a market estimate: it sets a floor and eliminates candidates, and it says nothing about which of the surviving figures is right.",
+  "key_highlights": [
+    "Published base-year sizes spread 1.78x ($5.8B to $10.3B); published CAGRs spread 3.35x (4.9% to 16.4%) - the reverse of the usual pattern",
+    "The growth rate is a mix assumption: therapy grew (Pluvicto +43%, Lutathera +13% in FY2025 USD) while the largest disclosed diagnostic tracer shrank (Pylarify -6.5%)",
+    "Disclosed FY2025 product revenue across Pluvicto, Lutathera, Pylarify and Telix comes to $4.43 billion",
+    "That is 76% of the lowest published market size, which rules the low end out",
+    "Lantheus guided FY2026 revenue down to $1.40-1.45 billion from $1.54 billion, confirming the diagnostic contraction",
+    "102 lutetium-177 studies are registered on ClinicalTrials.gov, the pipeline behind the therapy-weighted forecasts",
+    "No vendor share is computable: Curium and Cardinal Health Nuclear are private, and Bayer does not disclose Xofigo separately"
+  ],
+  "market_context": "A radiopharmaceutical is a drug whose active principle is a radionuclide, so the product's commercial logic is set by physics before economics. Lutetium-177 has a 6.6-day half-life and fluorine-18 under two hours, which means production, release testing, shipment and administration must happen inside a window measured in hours or days. The result is a market organised around proximity rather than scale: a radiopharmacy network, not a global supply chain.\n\nThat is why the category splits so cleanly in the data. Commodity diagnostics - Tc-99m generators, FDG - behave like regional manufacturing with price erosion, and the one large disclosed example, Lantheus's Pylarify, declined 6.5% in FY2025. Targeted therapy behaves like oncology biologics, with per-patient revenue in the tens of thousands and growth constrained mainly by the number of licensed delivering sites and by label breadth, which is why Pluvicto grew 43% in a single year.\n\nThe administering infrastructure is the real ceiling. Radioligand therapy requires a facility and an authorised user licensed under 10 CFR Part 35 or its Agreement State equivalent, so growth in therapy revenue depends on existing nuclear medicine departments taking on more patients rather than on new sites appearing. Published forecasts rarely state which of these two businesses they are modelling, and that silence is the single largest source of error in using them.",
+  "forecast_analysis": "The series shown here starts from Precedence Research's published 2025 estimate of $7.51 billion, advanced one year at Precedence's own published 7.53% CAGR to a 2026 base of $8.08 billion, and projected to $12.49 billion by 2032 on that same rate. The intermediate years are interpolation, not separately sourced observations. Precedence was chosen because it is the most recently based broad-scope estimate that the disclosed-revenue test does not rule out.\n\nReaders modelling therapy alone should expect a much higher rate and should anchor on disclosed product revenue rather than on any published market size: Pluvicto and Lutathera together were $2.81 billion in FY2025 and grew 33% combined in USD. Readers modelling generator and tracer supply should expect something closer to IMARC's 4.9%, and should note that the only large disclosed diagnostic product declined in 2025 and is guided lower for 2026.\n\nThe 7.53% headline is therefore a blended rate whose accuracy depends entirely on a mix assumption that no published source discloses. Treat it as the midpoint of a genuinely unresolved question rather than as a measurement, and reconcile any forecast you are shown against the roughly $4.43 billion of revenue that companies actually disclose.",
+  "reader_takeaways": [
+    "Before using any radiopharmaceutical forecast, establish whether it is therapy-weighted or generator-weighted - that single assumption moves the growth rate by 3.35x",
+    "Anchor on disclosed revenue, not on market sizes: $4.43 billion was actually reported across four products in FY2025, and it already accounts for 76% of the lowest published estimate",
+    "Do not assume the diagnostic half grows: the largest disclosed tracer fell 6.5% in 2025 and its owner guided 2026 lower",
+    "Treat any vendor share percentage for this market as unsourced, because the two largest commodity suppliers are private and disclose nothing",
+    "The therapy constraint is licensed delivering sites under 10 CFR Part 35, not demand, so model site capacity rather than incidence"
+  ]
+}

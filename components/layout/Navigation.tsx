@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import categories from "@/data/categories.json";
+import staticCategories from "@/data/categories.json";
 import consultingServicesData from "@/data/consulting-services.json";
 import MegaMenu from "./MegaMenu";
 import ConsultingMenu from "./ConsultingMenu";
@@ -25,10 +25,27 @@ const railItem =
 const railActive = "bg-[var(--card)] font-semibold text-[var(--cmi-ink)]";
 const railIdle = "text-[var(--cmi-idle)] hover:bg-[var(--card)] hover:text-[var(--cmi-ink)]";
 
+/**
+ * A nav category. `categories` is passed down from the server-rendered header,
+ * which reads the live corpus; the bundled JSON is the fallback for when that
+ * query fails, so the menu is never empty.
+ */
+export interface NavCategory {
+  id: number;
+  name: string;
+  slug: string;
+  description: string;
+}
+
+interface NavProps {
+  categories?: NavCategory[];
+}
+
 /** Desktop navigation rail. */
-export default function Navigation() {
+export default function Navigation({ categories }: NavProps = {}) {
   const pathname = usePathname();
   const consultingServices = consultingServicesData as ConsultingService[];
+  const navCategories = categories?.length ? categories : staticCategories;
 
   return (
     <nav className="mx-auto hidden items-center gap-1.5 rounded-pill bg-[var(--cmi-rail)] p-1.5 xl:flex">
@@ -39,7 +56,7 @@ export default function Navigation() {
         Home
       </Link>
 
-      <MegaMenu categories={categories} isActive={pathname.startsWith("/reports")} />
+      <MegaMenu categories={navCategories} isActive={pathname.startsWith("/reports")} />
       <ConsultingMenu
         services={consultingServices}
         isActive={pathname.startsWith("/consulting") || pathname.startsWith("/services")}
@@ -59,8 +76,9 @@ export default function Navigation() {
 }
 
 /** Mobile toggle + drawer, rendered from the header's right-hand group. */
-export function MobileNav() {
+export function MobileNav({ categories }: NavProps = {}) {
   const pathname = usePathname();
+  const navCategories = categories?.length ? categories : staticCategories;
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const consultingServices = consultingServicesData as ConsultingService[];
@@ -203,7 +221,7 @@ export function MobileNav() {
                   Industries
                 </span>
                 <div className="mt-2 flex flex-col">
-                  {categories.map((category) => (
+                  {navCategories.map((category) => (
                     <Link
                       key={category.id}
                       href={`/reports?category=${category.slug}`}

@@ -17,6 +17,12 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/methodology`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/services`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly',
