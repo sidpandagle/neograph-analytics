@@ -1,3 +1,25 @@
+/**
+ * UNUSED, deliberately kept. Nothing imports this component.
+ *
+ * It takes `htmlContent` — a rendered HTML blob — and post-processes it in the
+ * DOM: wrapping images in figure containers, setting lazy/async decoding, and
+ * reserving intrinsic dimensions against layout shift. That was the right shape
+ * when report bodies arrived as `sections.marketDetails` HTML.
+ *
+ * The report page no longer has such a body. Every section on
+ * `/reports/[slug]` is rendered from structured Supabase columns through
+ * `JsonReportSections`, which styles its own prose against the measured
+ * contrast tokens (see the `--content-*` ramp in `app/globals.css`), and the
+ * only HTML blob left in the type graph is an optional `marketDetails` field
+ * that no current row populates and no component reads. `.prose` therefore
+ * never applies to a report page, which is the reviewer finding R-0d — and the
+ * resolution is that it should not, not that this component should be wired in.
+ *
+ * Kept because the HTML path is the one a CMS-authored or imported report body
+ * would come back through, and this is where that work would restart. If a row
+ * ever populates `marketDetails`, render it through here rather than writing a
+ * second image post-processor.
+ */
 'use client';
 
 import { useEffect, useRef } from 'react';

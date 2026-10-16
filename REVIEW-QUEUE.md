@@ -50,12 +50,10 @@ land at the first slot after 00:00 UTC.
 |---|---|---|---|
 | R-9 | high **[H]** | "Our research shapes decisions at" runs a logo marquee of Meta, Trivago, Suzuki, Kawasaki, Nestlé Professional, CDC, BCG, PwC, Argonne, ChampionX, Mitsubishi, SK — 12 third-party marks asserting client relationships. Same class as the testimonials, but unlike them it may be **true**, and only Siddhant can say. Needs a yes/no per logo; unverifiable ones come off the page | 12 logos, 0 verifiable from inside the repo |
 | ~~R-0~~ | fixed #14 | `/reports` search filters a **10-row** `all_reports.json`, not the 142 passed from the server — typing anything hides 93% of the catalogue | `len(all_reports.json)` = 10 vs 142 live; also ships 206KB of JSON to the client |
-| R-0d | high | `.prose` never applies to report pages — `StyledReportContent.tsx` (381 lines) is imported nowhere, so the tuned long-form CSS is dead for reports | 0 `prose` matches in built report HTML |
-| R-2 | medium | `/reports` ships ~508KB, nearly all RSC payload for 142 reports | 508KB vs 54-148KB for every other route |
+| R-2 | medium | `/reports` RSC payload. **Remeasured after the `getReportCards()` projection: 508KB -> 284KB** for 152 reports. Still the heaviest route; the remaining weight is 152 cards of real card data, so the next step is paginating or streaming the list rather than trimming columns | 284KB vs 54-148KB for every other route |
 | R-4 | medium **[H]** | Hardcoded `price: '$2,995'` published as Product/Offer JSON-LD with `InStock` while checkout throws | schema asserts purchasability that does not work |
 | R-6 | low | `/design-system` renders 2 `<h1>` and has no canonical | robots-disallowed, so impact is confined |
 | ~~R-7~~ | fixed #15 | CLAUDE.md documents automatic dark mode; no `prefers-color-scheme` block exists | 0 matches in `app/globals.css` |
-| R-8 | low | Author/team avatars point at a non-resolving CDN | repoint to local `public/` assets |
 
 ## Fixed and verified in production
 
@@ -83,6 +81,8 @@ land at the first slot after 00:00 UTC.
 | `/authors/[id]` returns 404 | nothing links it and it is in no sitemap. A legitimate 404, not a defect. |
 | 12px uppercase labels, badges, table headers | 12px is correct for that role. Only *prose* at 12px was a defect. |
 | Competitive share percentages for OIS | current share is not publicly disclosed; circulating figures date to 2011/2013. Deliberately omitted. |
+| **R-8** — author/team avatars point at a non-resolving CDN | Stale. Measured: `image_url` is **empty on all 3** `neograph_team_members` rows and `imageUrl` is empty in `data/team-members.json`, and both render sites guard on it — `MeetTheTeam` falls back to initials, `/authors/[id]` only adds an OG image when one exists. No broken image is served. The only reference left to `cdn.neographanalytics.com` is the `remotePatterns` entry in `next.config.ts`, which costs nothing while the host stays NXDOMAIN. |
+| **R-0d** — `.prose` never applies to a report page | True, and correct as it stands. `StyledReportContent.tsx` post-processes an HTML blob (wrapping images, lazy loading, reserving dimensions) and the report page has no HTML blob: every section comes from structured Supabase columns through `JsonReportSections`, which styles its own prose against the measured `--content-*` ramp. The only HTML field left in the type graph is an optional `marketDetails` that no row populates and no component reads. The component is kept and now carries a header saying when it would be wired back in. |
 
 ## Two audit rules that were themselves wrong
 

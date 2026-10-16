@@ -666,3 +666,24 @@ Consolidated Appropriations Act, 2026 extended it to 30 September 2030**
 **already lapsed once**, in the 2025 shutdown, and that 30 September 2030 falls
 inside every published forecast period while none of them says what happens on
 1 October 2030.
+
+### Two queue items closed by measurement rather than by code
+- **R-0d** (`.prose` never applies to a report page) is true and correct as it
+  stands. `StyledReportContent.tsx` post-processes an **HTML blob** — wrapping
+  images, lazy loading, reserving intrinsic dimensions — and the report page has
+  no HTML blob: every section comes from structured Supabase columns through
+  `JsonReportSections`, which styles its own prose against the measured
+  `--content-*` contrast ramp. The only HTML field left in the type graph is an
+  optional `marketDetails` that no row populates and no component reads. The
+  component keeps its 381 lines and now carries a header saying exactly when it
+  would be wired back in. Nothing deleted, nothing wired in for the sake of it.
+- **R-8** (avatars point at a non-resolving CDN) is stale. `image_url` is
+  **empty on all three** `neograph_team_members` rows, `imageUrl` is empty in
+  the JSON, and both render sites guard on it — initials fallback in
+  `MeetTheTeam`, conditional OG image on `/authors/[id]`. No broken image is
+  served. The only surviving reference to `cdn.neographanalytics.com` is the
+  `remotePatterns` entry in `next.config.ts`, which costs nothing while the host
+  is NXDOMAIN.
+- **R-2** remeasured rather than closed: `/reports` is **508KB -> 284KB** after
+  the card projection, still the heaviest route. The rest is 152 cards of real
+  data, so the next move is pagination or streaming, not column trimming.
