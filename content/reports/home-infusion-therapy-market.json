@@ -1,22 +1,22 @@
 {
   "report_id": "home-infusion-therapy-market",
   "slug": "home-infusion-therapy-market",
-  "title": "Home Infusion Therapy Market Size, Share & Forecast 2025-2032",
+  "title": "Home Infusion Therapy Market Size, Share & Forecast 2026-2032",
   "industry": "Life Sciences",
   "published_year": 2026,
-  "base_year": 2025,
-  "forecast_period": "2025-2032",
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
   "historical_period": "2022-2024",
   "currency": "USD",
   "unit": "Billion",
   "market_size": {
-    "current_value": 39.4,
+    "current_value": 42.47,
     "forecast_value": 66.6,
     "cagr": 7.79
   },
-  "executive_summary": "Thirteen published estimates of the home infusion therapy market were surveyed for this report. Seven put a value on 2032, and those run from $42.5 billion to $76.2 billion -- a spread of 1.793x. Four publish a 2025 base year, and those run from $25.99 billion to $41.65 billion, a spread of 1.603x. The published compound growth rates run from 4.63% to 10.27%, a spread of 2.218x.\n\nThat ordering is the finding, and it is the opposite of the usual pattern. In most markets the base-year figures scatter and the growth rates agree, so the headline disagreement is really a disagreement about scope. Here the growth rates scatter more than the base years do. Matching base years does not reconcile these forecasts; a reader who lines up the 2025 estimates still faces a 2.2x disagreement about the rate of compounding.\n\nThe scope question that would normally explain a spread this wide is whether an estimate counts the infused drug or only the professional service of delivering it. That question can be settled here rather than assumed, because the United States sets a statutory price for the service alone. CMS pays a fixed per-visit amount for home infusion therapy services -- $190.22 for a category 1 subsequent visit in CY2026, $388.89 at the top of the schedule -- and CMS also publishes the visit count: an average of 6,991 visits a quarter from Q1 2023 to Q2 2025. Annualise the most recent quarter at 29,460 visits and multiply by the statutory rate, and the entire Medicare fee-for-service home infusion therapy services benefit comes to between $5.6 million and $11.5 million a year. That is 0.014% of a $39.4 billion headline; the headline is roughly 3,400 times larger.\n\nSo no published figure here is measuring the service as the statute prices it. Every estimate in the table is on the drug-inclusive side of that line, and none is on the other side. The fault line is real, and it is a boundary all thirteen houses share. What is left to disagree about is growth, and they do.",
+  "executive_summary": "Thirteen published estimates of the home infusion therapy market were surveyed for this report. Seven put a value on 2032, and those run from $42.5 billion to $76.2 billion -- a spread of 1.793x. Four publish a 2025 base year, and those run from $25.99 billion to $41.65 billion, a spread of 1.603x measured on that 2025 cohort. The published compound growth rates run from 4.63% to 10.27%, a spread of 2.218x.\n\nThat ordering is the finding, and it is the opposite of the usual pattern. In most markets the base-year figures scatter and the growth rates agree, so the headline disagreement is really a disagreement about scope. Here the growth rates scatter more than the base years do. Matching base years does not reconcile these forecasts; a reader who lines up the 2025 estimates still faces a 2.2x disagreement about the rate of compounding. The series published here is based on 2026 for comparability with the rest of this corpus: Strategic Market Research publishes $39.4 billion for 2025 and $66.6 billion for 2032; advancing its 2025 value one year at the publisher's own 7.79% rate gives the $42.47 billion 2026 base used here, so the base year matches the rest of this corpus while the figure remains the publisher's.\n\nThe scope question that would normally explain a spread this wide is whether an estimate counts the infused drug or only the professional service of delivering it. That question can be settled here rather than assumed, because the United States sets a statutory price for the service alone. CMS pays a fixed per-visit amount for home infusion therapy services -- $190.22 for a category 1 subsequent visit in CY2026, $388.89 at the top of the schedule -- and CMS also publishes the visit count: an average of 6,991 visits a quarter from Q1 2023 to Q2 2025. Annualise the most recent quarter at 29,460 visits and multiply by the statutory rate, and the entire Medicare fee-for-service home infusion therapy services benefit comes to between $5.6 million and $11.5 million a year. That is 0.013% of the $42.47 billion 2026 headline; the headline is roughly 3,700 times larger.\n\nSo no published figure here is measuring the service as the statute prices it. Every estimate in the table is on the drug-inclusive side of that line, and none is on the other side. The fault line is real, and it is a boundary all thirteen houses share. What is left to disagree about is growth, and they do.",
   "market_context": "Home infusion therapy delivers an intravenous or subcutaneous drug in a patient's home instead of a hospital or clinic: anti-infectives, parenteral nutrition, immunoglobulin, chemotherapy, inotropes, pain management. Economically it is two businesses stapled together -- a specialty pharmacy distributing an expensive drug, and a nursing and pharmacist service making it safe to give that drug outside a hospital. The two have completely different sizes, and which one an estimate counts determines the answer by roughly a factor of five.\n\nOption Care Health's audited accounts show the split. In FY2024 the company, which describes itself in its Form 10-K as the largest independent provider of home and alternate-site infusion services in the United States, reported net revenue of $4,998.202 million against cost of revenue of $3,985.209 million, leaving gross profit of $1,012.993 million -- a 20.27% margin, or $3.93 of product cost behind every dollar of margin. Across 185 locations in 43 states that is $27.017 million of revenue per site per year and $5.476 million of gross profit per site.\n\nThe public policy picture sits almost entirely on the smaller half. Medicare's permanent Part B home infusion therapy services benefit, live since 2021, pays only for the service, only on days a nurse is physically present in the home, and only in three drug payment categories. CMS monitoring data reported by the National Home Infusion Association counts 1,081 beneficiaries receiving those services in Q2 2024 and 62 providers billing for them. A benefit used by 62 suppliers is not the market the published forecasts are describing.",
-  "forecast_analysis": "The series shown here interpolates Strategic Market Research's two published endpoints -- $39.4 billion in 2025 and $66.6 billion by 2032 -- at a constant rate. That rate is 7.79%, re-derived from those endpoints over seven years: (66.6 / 39.4) ^ (1/7) - 1 = 7.7875%. Strategic Market Research publishes 7.8%; the two-decimal figure is the same number carried to the precision its own endpoints support. The intermediate years are the shape implied by two observations, not eight separately sourced ones, and the chart title says so.\n\nThat series was chosen because it is the most recently based estimate publishing both a base value and a matching endpoint on a 2032 horizon, which is the horizon seven of the thirteen houses use. It is therefore the one series a reader can set beside the most peers.\n\nIt should not be read as a consensus. The growth rate is the least agreed figure in this literature, not the most: 4.63% at SkyQuest, 6.5% at Mordor Intelligence, 7.0% at Coherent Market Insights, 7.01% at The Insight Partners, 7.8% here, 8.03% at Straits Research, 8.3% at DataHorizzon, 8.36% at SNS Insider, 9.2% at Global Market Insights, 10.27% at Data Bridge. Readers working to a lower base should note the $25.99 billion to $28.25 billion tier -- Mordor Intelligence, Data Bridge and Coherent -- and should not assume it is a service-only definition, because the arithmetic in this report rules that out for every estimate surveyed.",
+  "forecast_analysis": "The series shown here interpolates Strategic Market Research's two published endpoints -- $39.4 billion in 2025 and $66.6 billion by 2032 -- at a constant rate, and is presented from 2026 so that its base year matches the rest of this corpus. That rate is 7.79%, re-derived from the publisher's endpoints over seven years: (66.6 / 39.4) ^ (1/7) - 1 = 7.7875%. The 2026 base of $42.47 billion is the publisher's 2025 value of $39.4 billion advanced one year at that same rate, and it lies on the identical constant-rate line: $42.47 billion compounding to $66.6 billion over the six years to 2032 implies 7.7867%, which is the same 7.79% to two decimals. Rebasing changes the start year and not the growth claim. Strategic Market Research publishes 7.8%; the two-decimal figure is the same number carried to the precision its own endpoints support. The intermediate years are the shape implied by two observations, not eight separately sourced ones, and the chart title says so.\n\nThat series was chosen because it is the most recently based estimate publishing both a base value and a matching endpoint on a 2032 horizon, which is the horizon seven of the thirteen houses use. It is therefore the one series a reader can set beside the most peers.\n\nIt should not be read as a consensus. The growth rate is the least agreed figure in this literature, not the most: 4.63% at SkyQuest, 6.5% at Mordor Intelligence, 7.0% at Coherent Market Insights, 7.01% at The Insight Partners, 7.8% here, 8.03% at Straits Research, 8.3% at DataHorizzon, 8.36% at SNS Insider, 9.2% at Global Market Insights, 10.27% at Data Bridge. Readers working to a lower base should note the $25.99 billion to $28.25 billion tier -- Mordor Intelligence, Data Bridge and Coherent -- and should not assume it is a service-only definition, because the arithmetic in this report rules that out for every estimate surveyed.",
   "seo": {
     "meta_title": "Home Infusion Therapy Market Size and Forecast to 2032",
     "meta_description": "Published home infusion therapy estimates spread 2.2x on growth but only 1.6x at the base year. CMS statutory per-visit rates show why none is service-only.",
@@ -31,14 +31,14 @@
     ]
   },
   "market_overview": {
-    "summary": "On Strategic Market Research's published endpoints the home infusion therapy market is $39.4 billion in 2025, reaching $66.6 billion by 2032 at a 7.79% compound rate. Thirteen houses were surveyed; their 2032 values span 1.793x, their 2025 base values span 1.603x, and their growth rates span 2.218x. Because the growth spread is the widest of the three, this is a disagreement about compounding rather than about scope. The scope question that would normally explain it -- drug included or service only -- is settled by arithmetic against CMS's statutory per-visit rates: every surveyed estimate counts the drug, and none measures the service alone.",
+    "summary": "The home infusion therapy market is $42.47 billion in 2026 on the series published here, reaching $66.6 billion by 2032 at a 7.79% compound rate. That base is Strategic Market Research's published 2025 value of $39.4 billion advanced one year at the publisher's own 7.79% rate; the 2032 endpoint is the publisher's own. Thirteen houses were surveyed. Their 2032 values span 1.793x and their growth rates span 2.218x, while the four that publish a 2025 base span only 1.603x on that 2025 cohort. Because the growth spread is the widest of the three, this is a disagreement about compounding rather than about scope. The scope question that would normally explain it -- drug included or service only -- is settled by arithmetic against CMS's statutory per-visit rates: every surveyed estimate counts the drug, and none measures the service alone.",
     "key_trends": [
-      "Published CAGRs spread 2.218x (4.63% to 10.27%) while 2025 base values spread only 1.603x ($25.99B to $41.65B) -- the growth disagreement is the wider one",
+      "Published CAGRs spread 2.218x (4.63% to 10.27%) while the four houses publishing a 2025 base spread only 1.603x on that base ($25.99B to $41.65B) -- the growth disagreement is the wider one",
       "CY2026 statutory US per-visit amounts for home infusion therapy services run $190.22 to $388.89 across three payment categories and six G-codes",
       "CMS counted an average of 6,991 home infusion therapy service visits per quarter from Q1 2023 to Q2 2025, flat at the endpoints (7,400 to 7,365)",
-      "At 29,460 annualised visits the whole Medicare FFS services benefit is $5.6M-$11.5M a year, roughly 1/3,400th of a $39.4B headline",
+      "At 29,460 annualised visits the whole Medicare FFS services benefit is $5.6M-$11.5M a year, roughly 1/3,700th of the $42.47B 2026 headline",
       "Option Care Health's FY2024 gross margin of 20.27% means $3.93 of drug cost sits behind every $1.00 of service margin at the largest US provider",
-      "Vendor share is not disclosed anywhere in this market; the self-described largest independent provider's $4.998B is 12.7% of the $39.4B headline by division, which is not the same as a reported share"
+      "Vendor share is not disclosed anywhere in this market; the self-described largest independent provider's FY2024 revenue of $4.998B is 11.8% of the $42.47B 2026 headline by division, which is not the same as a reported share"
     ],
     "market_stage": "Growth",
     "adoption_level": "Established in the United States for anti-infectives, nutrition and immunoglobulin; concentrated in a highly fragmented provider base"
@@ -98,19 +98,39 @@
   "regional_analysis": [],
   "country_analysis": [],
   "market_forecast": [
-    { "year": 2025, "value": 39.4 },
-    { "year": 2026, "value": 42.47 },
-    { "year": 2027, "value": 45.78 },
-    { "year": 2028, "value": 49.34 },
-    { "year": 2029, "value": 53.18 },
-    { "year": 2030, "value": 57.32 },
-    { "year": 2031, "value": 61.79 },
-    { "year": 2032, "value": 66.6 }
+    {
+      "year": 2026,
+      "value": 42.47
+    },
+    {
+      "year": 2027,
+      "value": 45.78
+    },
+    {
+      "year": 2028,
+      "value": 49.34
+    },
+    {
+      "year": 2029,
+      "value": 53.18
+    },
+    {
+      "year": 2030,
+      "value": 57.32
+    },
+    {
+      "year": 2031,
+      "value": 61.79
+    },
+    {
+      "year": 2032,
+      "value": 66.6
+    }
   ],
   "charts": [
     {
       "type": "line_chart",
-      "title": "Market size, 2025-2032 (modelled at constant CAGR between published endpoints)",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
       "data_source": "market_forecast"
     }
   ],
@@ -164,21 +184,21 @@
       "Option Care Health, Inc., Form 10-K FY2024 (net revenue $4,998,202K; cost of revenue $3,985,209K; gross profit $1,012,993K; 92 pharmacies, 93 ambulatory infusion suites, 185 locations, 43 states) and Form 10-K FY2025 (196 locations; 87 pharmacies, 109 suites)",
       "Published market estimates from Strategic Market Research, Straits Research, The Insight Partners, Mordor Intelligence, Coherent Market Insights, Global Market Insights, SNS Insider, Data Bridge Market Research, DataHorizzon Research, Zion Market Research, SkyQuest Technology and Credence Research (2024-2026 editions)"
     ],
-    "data_validation": "Market size is taken from published third-party estimates, attributed to each house by name, and presented as published estimates rather than as verified measurements; no methodology behind them was inspected. Two independent grounding divisions were computed to test what those estimates can and cannot be measuring. First, the statutory route: 7,365 CMS-counted home infusion therapy service visits in Q2 2025 annualise to 29,460, which at the CY2026 statutory rates gives 29,460 x $190.22 = $5,603,881 at the lowest category-1 subsequent rate and 29,460 x $388.89 = $11,456,699 at the highest rate in the schedule, an impossible ceiling since a first-visit code can be billed only once per episode. Against Strategic Market Research's $39.4 billion base that is 0.014% to 0.029%, a ratio of about 3,439x. Second, the filed-accounts route: Option Care Health's FY2024 gross margin of $1,012,993K on $4,998,202K is 20.27%, implying $3.93 of product cost per dollar of margin and a service-only equivalent of $39.4B x 20.27% = $7.99 billion; revenue per location is $4,998.202M / 185 = $27.017M and gross profit per location $5.476M. Both divisions are plausibility tests, not market estimates: they establish that no surveyed estimate measures the professional service alone, and they do not establish what the correct market size is. The CMS visit count covers Medicare fee-for-service only and bounds nothing outside it. Regional, country and vendor-share figures are omitted because no public source attributes them.",
-    "limitations": "A count of enrolled qualified home infusion therapy suppliers was not obtained. The CMS register exists and the 14-27 December 2025 CSV was located, but every retrieval path available in this pass returned HTTP 403 from the content delivery network, so no row count is reported. The adjacent figures quoted instead -- 62 providers billing in Q2 2024, and an earlier CMS-reported 203 suppliers having participated -- are labelled by period and are not current enrolment totals. Base-year values for Zion Market Research, SkyQuest Technology and Credence Research were not published on their public pages and were deliberately not back-derived from their stated CAGRs; those houses contribute to the endpoint and growth spreads only. Global Market Insights' 2034 endpoint was likewise not stated and is not computed."
+    "data_validation": "Market size is taken from published third-party estimates, attributed to each house by name, and presented as published estimates rather than as verified measurements; no methodology behind them was inspected. Two independent grounding divisions were computed to test what those estimates can and cannot be measuring. First, the statutory route: 7,365 CMS-counted home infusion therapy service visits in Q2 2025 annualise to 29,460, which at the CY2026 statutory rates gives 29,460 x $190.22 = $5,603,881 at the lowest category-1 subsequent rate and 29,460 x $388.89 = $11,456,699 at the highest rate in the schedule, an impossible ceiling since a first-visit code can be billed only once per episode. Against the $42.47 billion 2026 base published here that is 0.013% to 0.027%, a ratio of about 3,707x; against Strategic Market Research's own $39.4 billion 2025 value it is 0.014% to 0.029%, a ratio of about 3,439x. Second, the filed-accounts route: Option Care Health's FY2024 gross margin of $1,012,993K on $4,998,202K is 20.27%, implying $3.93 of product cost per dollar of margin and a service-only equivalent of $42.47B x 20.27% = $8.61 billion on the 2026 base, or $7.99 billion on the publisher's 2025 value; revenue per location is $4,998.202M / 185 = $27.017M and gross profit per location $5.476M. Both divisions are plausibility tests, not market estimates: they establish that no surveyed estimate measures the professional service alone, and they do not establish what the correct market size is. The CMS visit count covers Medicare fee-for-service only and bounds nothing outside it. Regional, country and vendor-share figures are omitted because no public source attributes them.",
+    "limitations": "A count of enrolled qualified home infusion therapy suppliers was not obtained. The CMS register exists and the 14-27 December 2025 CSV was located, but every retrieval path available in this pass returned HTTP 403 from the content delivery network, so no row count is reported. The adjacent figures quoted instead -- 62 providers billing in Q2 2024, and an earlier CMS-reported 203 suppliers having participated -- are labelled by period and are not current enrolment totals. Base-year values for Zion Market Research, SkyQuest Technology and Credence Research were not published on their public pages and were deliberately not back-derived from their stated CAGRs; those houses contribute to the endpoint and growth spreads only. Global Market Insights' 2034 endpoint was likewise not stated and is not computed. The published base year is 2026 while Strategic Market Research states 2025: the $42.47 billion figure is its $39.4 billion 2025 value advanced one year at its own 7.79% rate, which is the same constant-rate line the 2032 endpoint sits on. The three spreads reported here are left on the cohorts they were measured on -- a 2025-base spread, a 2032-endpoint spread and a CAGR spread -- and are not restated in 2026 terms."
   },
   "faqs": [
     {
       "question": "How big is the home infusion therapy market?",
-      "answer": "On Strategic Market Research's published endpoints, $39.4 billion in 2025 rising to $66.6 billion by 2032, a 7.79% compound rate. That is one of thirteen estimates surveyed. The 2032 values published across seven houses run from $42.5 billion to $76.2 billion, and the 2025 base values across four houses run from $25.99 billion to $41.65 billion."
+      "answer": "$42.47 billion in 2026, rising to $66.6 billion by 2032 at a 7.79% compound rate. Strategic Market Research publishes $39.4 billion for 2025 and $66.6 billion for 2032; advancing its 2025 value one year at the publisher's own 7.79% rate gives the $42.47 billion 2026 base used here, so the base year matches the rest of this corpus while the figure remains the publisher's. That is one of thirteen estimates surveyed. The 2032 values published across seven houses run from $42.5 billion to $76.2 billion, and the 2025 base values across four houses run from $25.99 billion to $41.65 billion."
     },
     {
       "question": "Do these figures count the infused drug or only the service?",
-      "answer": "The drug. Every estimate surveyed is drug-inclusive, and this can be shown rather than assumed. CMS sets a statutory price for the service alone -- $190.22 for a category 1 subsequent visit in CY2026, up to $388.89 -- and publishes the visit count, an average of 6,991 a quarter from Q1 2023 to Q2 2025. Annualising the most recent quarter at 29,460 visits gives a total Medicare services benefit of $5.6 million to $11.5 million a year, about one three-thousand-four-hundredth of a $39.4 billion headline."
+      "answer": "The drug. Every estimate surveyed is drug-inclusive, and this can be shown rather than assumed. CMS sets a statutory price for the service alone -- $190.22 for a category 1 subsequent visit in CY2026, up to $388.89 -- and publishes the visit count, an average of 6,991 a quarter from Q1 2023 to Q2 2025. Annualising the most recent quarter at 29,460 visits gives a total Medicare services benefit of $5.6 million to $11.5 million a year, about one three-thousand-seven-hundredth of the $42.47 billion 2026 headline."
     },
     {
       "question": "Why do published estimates differ so much?",
-      "answer": "Because they disagree about growth, which is unusual. The published CAGRs span 2.218x, from 4.63% to 10.27%, while the 2025 base values span only 1.603x. In most markets the pattern runs the other way and matching base years reconciles the forecasts. Here it does not: a reader who lines up the 2025 estimates still faces a 2.2x disagreement about the rate."
+      "answer": "Because they disagree about growth, which is unusual. The published CAGRs span 2.218x, from 4.63% to 10.27%, while the 2025 base values span only 1.603x on that cohort. In most markets the pattern runs the other way and matching base years reconciles the forecasts. Here it does not: a reader who lines up the 2025 estimates still faces a 2.2x disagreement about the rate."
     },
     {
       "question": "How does Medicare pay for home infusion therapy?",
@@ -190,7 +210,7 @@
     },
     {
       "question": "Who leads the home infusion therapy market?",
-      "answer": "Option Care Health describes itself in its Form 10-K as the largest independent provider of home and alternate-site infusion services in the United States, with 185 locations in 43 states at end-2024 and 196 at end-2025. CVS Health's Coram business and Optum compete from inside integrated payer-pharmacy groups. No market share figure is disclosed by any of them or by any public source. Option Care's $4.998 billion of FY2024 revenue is 12.7% of the $39.4 billion headline by division, which is arithmetic against a third-party estimate and not a reported share."
+      "answer": "Option Care Health describes itself in its Form 10-K as the largest independent provider of home and alternate-site infusion services in the United States, with 185 locations in 43 states at end-2024 and 196 at end-2025. CVS Health's Coram business and Optum compete from inside integrated payer-pharmacy groups. No market share figure is disclosed by any of them or by any public source. Option Care's $4.998 billion of FY2024 revenue is 11.8% of the $42.47 billion 2026 headline by division, which is arithmetic against a third-party estimate and not a reported share."
     },
     {
       "question": "Why does this report show no regional or country breakdown?",
@@ -198,11 +218,11 @@
     }
   ],
   "key_highlights": [
-    "Published CAGRs spread 2.218x (4.63% to 10.27%) against a 1.603x spread in 2025 base values: the disagreement is about growth, not scope",
+    "Published CAGRs spread 2.218x (4.63% to 10.27%) against a 1.603x spread in the 2025 base values of the four houses that publish one: the disagreement is about growth, not scope",
     "2032 endpoints across seven houses run $42.5B to $76.2B, a 1.793x spread",
     "29,460 annualised CMS-counted service visits x $190.22 = $5.60M; x $388.89 = $11.46M, bounding the whole Medicare FFS services benefit",
-    "That makes a $39.4B headline about 3,439x the statutory service line, which rules out a service-only reading of any surveyed estimate",
-    "Option Care Health's FY2024 20.27% gross margin implies a service-only equivalent of $7.99B against the $39.4B headline -- a tier no publisher occupies",
+    "That makes the $42.47B 2026 headline about 3,700x the statutory service line, which rules out a service-only reading of any surveyed estimate",
+    "Option Care Health's FY2024 20.27% gross margin implies a service-only equivalent of $8.61B against the $42.47B 2026 headline -- a tier no publisher occupies",
     "$27.017M of revenue and $5.476M of gross profit per location per year across 185 locations at the largest US provider",
     "No vendor market share is disclosed anywhere in this market by any company or public source"
   ],

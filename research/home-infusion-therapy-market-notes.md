@@ -10,6 +10,7 @@
 | The Insight Partners | 2026 report page | 2025 | $33.25B | 2034 | $61.18B | 7.01% (2026-2034) | Global home infusion therapy market |
 | Mordor Intelligence | 2026 report page | 2025 | $25.99B | 2030 | $35.60B | 6.5% | Global home infusion market |
 | Coherent Market Insights | 2026 report page | 2026 | $28.01B | 2033 | $44.98B | 7.0% | Global home infusion therapy market |
+| Grand View Research | June 2026 report page | 2026 | $45.0B | 2033 | $78.8B | 8.3% (2026-2033) | Global home infusion therapy market |
 | Global Market Insights | 2025 report page | 2024 | $36.6B | 2034 | not stated in the page summary | 9.2% (2025-2034) | Global home infusion therapy market |
 | SNS Insider | 2025 report page | 2024 | $38.98B | 2032 | $71.82B | 8.36% (2025-2032) | Global home infusion therapy market |
 | Data Bridge Market Research | 2025 report page | 2024 | $28.25B | 2032 | $61.77B | 10.27% (2025-2032) | Global home infusion therapy market |
@@ -37,6 +38,15 @@ Three spreads, measured on like-for-like cells only:
   $71.82B, DataHorizzon $76.2B): 76.2 / 42.5 = **1.793x**
 - **CAGR** (SkyQuest 4.63% to Data Bridge 10.27%): 10.27 / 4.63 = **2.218x**
 
+Grand View Research was added to the table after the three spreads above were
+measured, and it changes none of them. Its base year is 2026, so it is not in
+the 2025 base-year cohort; its endpoint is 2033, so it is not in the 2032
+endpoint cohort; and its 8.3% sits inside the existing 4.63%-10.27% CAGR range.
+The spreads are therefore reported unchanged rather than recomputed. Its 2026
+base of $45.0B is, separately, the closest independent corroboration of the
+$42.47B 2026 base published here - 6.0% above it, from a different house on a
+different horizon.
+
 **Verdict: this is a growth disagreement, not a scope disagreement.** That is
 the reverse of the usual pattern in this corpus, and it is worth stating
 plainly. The growth spread (2.218x) is wider than the base-year spread
@@ -58,12 +68,15 @@ Two independent proofs, both printed in full under "Grounding arithmetic":
    the Medicare Part B home infusion therapy services benefit. Multiply the
    actual national visit count by the statutory CY2026 rate and the entire
    service-only Medicare line comes to **$5.3M-$11.5M a year**. Against a
-   $39.4B headline that is 0.014% to 0.029%, a ratio of roughly **3,400x**.
+   $42.47B published 2026 headline that is 0.013% to 0.027%, a ratio of
+   roughly **3,700x** (0.014% to 0.029% and 3,439x against the publisher's own
+   $39.4B 2025 value).
    No published estimate can be measuring that.
 2. The largest US provider's own income statement splits drug from service.
    Option Care Health's FY2024 gross margin is **20.27%**: $3.93 of product
-   cost behind every $1.00 of margin. Apply that margin to the $39.4B headline
-   and the implied service-only market is **$7.99B**. Not one published
+   cost behind every $1.00 of margin. Apply that margin to the $42.47B
+   published 2026 headline and the implied service-only market is **$8.61B**
+   ($7.99B against the publisher's $39.4B 2025 value). Not one published
    estimate sits near $8B; the lowest 2032 endpoint in the table is $42.5B.
 
 So the drug/service question, which would normally explain a spread this wide,
@@ -128,7 +141,11 @@ quarterly average **6,991** HIT service visits; **7,365** visits in Q2 2025;
 
 **What it rules in or out.** The entire US Medicare fee-for-service home
 infusion therapy *services* benefit is a **$5.3M to $11.5M per year** line
-item. Measured against Strategic Market Research's $39.4B base:
+item. Measured against the $42.47B 2026 base published here, and against
+Strategic Market Research's own $39.4B 2025 value:
+
+    $5,603,881 / $42,470,000,000 = 0.01319%
+    $42,470,000,000 / $11,456,699 = 3,707x
 
     $5,603,881 / $39,400,000,000 = 0.01422%
     $39,400,000,000 / $11,456,699 = 3,439x
@@ -168,10 +185,12 @@ revenue **3,985,209**; gross profit **1,012,993**. Prior years: net revenue
     Product cost per $1 margin:  3,985,209 / 1,012,993 = $3.93
 
     Implied service-only market at the headline:
-      $39.4B x 20.27% = $7.99B
+      $42.47B x 20.27% = $8.61B      (2026 base published here)
+      $39.4B  x 20.27% = $7.99B      (publisher's 2025 value)
 
-    Option Care's share of the $39.4B headline:
-      $4.998B / $39.4B = 12.7%
+    Option Care's share of the published headline:
+      $4.998B / $42.47B = 11.8%      (2026 base published here)
+      $4.998B / $39.4B  = 12.7%      (publisher's 2025 value)
 
 **What it rules in or out.** $27.0M of revenue per site per year is a drug
 distribution business with a nursing and pharmacy service attached, not a
@@ -179,7 +198,7 @@ service business. 80% of every revenue dollar at the largest US provider is
 product cost. That makes the drug-inclusive reading of the published headlines
 the only one consistent with the one audited income statement available, and it
 prices the service-only market at roughly a fifth of whatever drug-inclusive
-figure you start from — about $8B against the $39.4B base. A 12.7% share for
+figure you start from — about $8.6B against the $42.47B base. An 11.8% share for
 the self-described largest independent provider is also internally consistent
 with the "large and highly fragmented" market the same filing describes; it
 would not be consistent with a $8B service-only market, where the same revenue
@@ -191,20 +210,43 @@ divided by a site count. Neither is a market estimate.
 
 ## What we publish
 
-- **Base year 2025, $39.4B; 2032, $66.6B; CAGR 7.79%.** Strategic Market
-  Research's endpoints. Chosen because it is the most recently based estimate
-  that publishes *both* a base value and a matching endpoint on a 2032 horizon,
-  which is the horizon seven of the thirteen houses use — so it is the one
-  series a reader can set beside the most peers.
+- **Base year 2026, $42.47B; 2032, $66.6B; CAGR 7.79%.** Strategic Market
+  Research's endpoints, published on a 2026 base. Chosen because it is the most
+  recently based estimate that publishes *both* a base value and a matching
+  endpoint on a 2032 horizon, which is the horizon seven of the thirteen houses
+  use — so it is the one series a reader can set beside the most peers.
+- **The base year is normalised from 2025 to 2026, and the publisher's 2025
+  value is kept visible rather than replaced.** Strategic Market Research
+  publishes **$39.4B for 2025**. Advancing it one year at the publisher's own
+  rate gives the published base:
+
+      $39.4B x 1.077875 = $42.4683B  ->  $42.47B (2026)
+
+  The normalisation does not alter the growth claim, and this was checked rather
+  than assumed. $42.47B compounding to $66.6B over the six years to 2032 implies
+  (66.6 / 42.47)^(1/6) - 1 = **7.7867%**, against the 7.7875% implied by the
+  publisher's own 2025-2032 endpoints — a gap of 0.0008 of a point. The 2026
+  point lies on the identical constant-rate line, so rebasing moves the start
+  year and nothing else. The reason for doing it is comparability: every other
+  report in this corpus carries a 2026 base, and by publish time a 2025 base is
+  two years stale.
+- **The three spreads stay on the cohorts they were measured on.** The 1.603x is
+  a spread across four *2025* base values and is labelled that way wherever it
+  appears. It is **not** restated as a 2026 spread, because advancing four
+  houses to 2026 at four different rates would change the spread, and a
+  2025-base spread presented as a 2026 one is exactly the error this
+  publication exists to avoid.
 - The CAGR is stated as **7.79%**, re-derived from the publisher's own two
   endpoints over 7 years: (66.6 / 39.4)^(1/7) - 1 = 7.7875%. Strategic Market
   Research publishes 7.8%; the two-decimal figure is the same number carried to
   the precision the endpoints support, not a different claim.
 - `market_forecast` interpolates those two endpoints at the constant 7.79%
-  rate: 2025 39.40, 2026 42.47, 2027 45.78, 2028 49.34, 2029 53.18, 2030 57.32,
-  2031 61.79, 2032 66.60. These intermediate years are the shape implied by two
-  published endpoints, not eight separately sourced observations, and the chart
-  title says so.
+  rate, published from the normalised 2026 base: 2026 42.47, 2027 45.78,
+  2028 49.34, 2029 53.18, 2030 57.32, 2031 61.79, 2032 66.60 — seven points.
+  These intermediate years are the shape implied by two published endpoints,
+  not seven separately sourced observations, and the chart title says so.
+  (The same line extended back one year is the publisher's own 2025 base of
+  39.40, which is where the 2026 value comes from.)
 - The three spreads (1.603x, 1.793x, 2.218x) and the growth-not-scope verdict.
 - Both grounding divisions, with the arithmetic printed.
 - The six CY2026 statutory per-visit amounts, the three payment categories, and
@@ -232,7 +274,7 @@ divided by a site count. Neither is a market estimate.
   dressed up as a dated "development".
 - **No `market_share` anywhere** — not in `competitive_landscape`, not in
   `market_segmentation`, not in the regional or country arrays. Option Care's
-  12.7% of the $39.4B headline is arithmetic against a third-party estimate, not
+  11.8% of the $42.47B headline is arithmetic against a third-party estimate, not
   a disclosed share, and it stays in the prose as the division it is.
 - **Segment shares.** Several pages split the market by therapy
   (anti-infectives, parenteral nutrition, chemotherapy, immunotherapy) and by
@@ -248,6 +290,17 @@ divided by a site count. Neither is a market estimate.
   in this pass. The CMS and MedPAC material found covers home health, a
   different benefit, and MedPAC's post-acute tables do not break out home
   infusion.
+- **Grand View Research's own series as the published headline.** Its figures
+  ($45.0B for 2026, $78.8B for 2033, 8.3%) are surveyed, tabled and sourced
+  above, and its 2026 base is the closest independent corroboration of the base
+  we publish. It is not the series published because its endpoint is 2033, not
+  2032: taking a 2032 value from it would mean interpolating a point the
+  publisher never stated, on the shorter of the two available horizons, when a
+  second house already publishes both endpoints on the 2032 horizon that seven
+  of the surveyed thirteen use. Its regional and segment percentages (North
+  America 56.3% of 2025 revenue, services 72.4%) are also excluded — see the
+  `regional_analysis` and segment-share entries above; a single region's share
+  is not a regional split.
 - **A count of enrolled qualified HIT suppliers.** CMS publishes the register
   (data.cms.gov "Home Infusion Therapy Providers", PECOS-derived, biweekly), and
   the CSV for the 14-27 December 2025 period was located, but every retrieval
@@ -348,3 +401,10 @@ divided by a site count. Neither is a market estimate.
     Suppliers —
     https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-486/subpart-I
     (supplier standards and plan-of-care requirements).
+24. Grand View Research, *Home Infusion Therapy Market Size Report, 2026-2033*,
+    published June 2026 —
+    https://www.grandviewresearch.com/industry-analysis/home-infusion-therapy-market
+    ($41.7B in 2025, $45.0B in 2026, $78.8B by 2033 at 8.3% for 2026-2033;
+    segmented by type into product — infusion pumps (elastomeric,
+    electromechanical, gravity), intravenous sets, IV cannulas, needleless
+    connectors — and services).

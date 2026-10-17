@@ -364,7 +364,10 @@ function auditDocument(route, html) {
       errors.push(`${label} does not mark both column headers with scope="col"`);
     }
 
-    const pct = (frag) => [...frag.matchAll(/>\s*([\d.]+)%\s*</g)].map((m) => Number(m[1]));
+    /* React splits `{n.toFixed(1)}%` into two text nodes and marks the seam
+       with `<!-- -->`, so the naive `>55.0%<` never matches the real HTML. */
+    const pct = (frag) =>
+      [...frag.matchAll(/>\s*([\d.]+)(?:<!-- -->)?\s*%\s*</g)].map((m) => Number(m[1]));
     const rows = (tbody.match(/<tr\b/gi) ?? []).length;
     const shares = pct(tbody);
     const totals = pct(tfoot);
@@ -380,13 +383,17 @@ function auditDocument(route, html) {
       if (Math.abs(sum - totals[0]) > 0.051 * shares.length) {
         errors.push(`${label} rows sum to ${sum.toFixed(1)}% but the total row says ${totals[0].toFixed(1)}%`);
       }
-      /* Pin the table to the chart: the donut prints its own total, rounded to
-         a whole number, in the middle of the ring. If the two were built from
-         different arrays this is where it shows. */
+      /* Pin the table to the chart. The donut's own centre label is drawn by
+         Recharts in the browser, so it is absent from built HTML and cannot
+         be compared here; the card's own caption is server-rendered from the
+         same array and says how many segments the chart has. If the table and
+         the chart were built from different arrays, the counts diverge. */
       const chunk = html.split(body)[0];
-      const centre = [...chunk.matchAll(/>(\d+)%<\/tspan>/g)].pop();
-      if (centre && Math.abs(Number(centre[1]) - totals[0]) > 0.5) {
-        errors.push(`${label} totals ${totals[0].toFixed(1)}% but the donut beside it prints ${centre[1]}%`);
+      const declared = [...chunk.matchAll(/across\s*(?:<!-- -->)?\s*(\d+)\s*(?:<!-- -->)?\s*segments/g)].pop();
+      if (declared && Number(declared[1]) !== rows) {
+        errors.push(
+          `${label} lists ${rows} segment(s) but the chart beside it is captioned as ${declared[1]}`
+        );
       }
     }
   }
