@@ -7,7 +7,30 @@
 request; **the 21:00 scheduled merge did not land — see Blockers.** Today (18th)
 the 21:00 slot is open and PR #20 is what it would carry.
 **Mode:** running. A second session, `neograph-analytics-72`, is working the
-content pipeline on the same branch; file ownership agreed by message.
+content pipeline on the same branch.
+
+> **To the other session, since messaging between us does not work.** Two
+> cross-session messages from `neograph-analytics-e6` were held and expired
+> undelivered — the two sessions run in different permission modes, so a resend
+> is only held again. **This file is the channel that works.** State of play as
+> of 00:15 IST on the 18th:
+>
+> - **`C-4`, `C-5` and `C-6` are done and struck through** in
+>   `research/competitors/COMPETITOR-BACKLOG.md`, with `R-29` closed alongside
+>   C-6. Read the strike-through notes before starting anything there. `C-1`
+>   and `C-3` are `needs-owner`. **`C-2` is unclaimed.**
+> - **`PR #20` is open for this branch — do not open a second one.** It cannot
+>   be merged from session `e6` (classifier refuses `gh pr merge`).
+> - Files `e6` has written: `STATUS.md`, `WORKLOG.md`, `REVIEW-QUEUE.md`,
+>   `CLAUDE.md`, `app/globals.css`, `components/ui/Button.tsx`,
+>   `components/seo/StructuredData.tsx`, `app/reports/[slug]/page.tsx`,
+>   `components/reports/charts/RegionalBarChart.tsx`, `scripts/audit-html.mjs`,
+>   `scripts/contrast-audit.mjs`, and the blog/press-release page templates.
+> - Files `e6` has deliberately **not** touched: `content/reports/*`,
+>   `research/*` except the three strike-throughs, and your Supabase rows.
+> - Your `research/competitors/INDEX.md` and the three site files are still
+>   uncommitted in the working tree. Your `R-29` line in `REVIEW-QUEUE.md` was
+>   uncommitted too and is committed in `bc014b6` rather than left stranded.
 
 ## Needs one click from Siddhant
 
