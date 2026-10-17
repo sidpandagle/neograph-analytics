@@ -2295,3 +2295,156 @@ the deploy per `DEPLOY-RUNBOOK.md`.
 Next: the cross-report article on the size-spread-to-CAGR-spread ratio. It cites
 all five, so `blog-db.mjs check --online` will fail until the reports are live —
 which is the ordering working. Draft now, check and publish after them.
+
+---
+
+## 2026-10-17, 22:44-00:0x IST — the night browser window: three findings settled, two defects fixed
+
+Session `neograph-analytics-e6`. Budget at start 23% used against 74.0% pace,
+ceiling 51.8%, headroom +28.8 points — normal running. A second session,
+`neograph-analytics-72`, was working the content pipeline on the same branch
+through this window; file ownership was agreed by message and nothing of theirs
+(`research/competitors/*`, `content/reports/*`) was touched here.
+
+### The 21:00 merge did not land, and why
+
+PR **#20** is open, verified, and not merged: this session's permission
+classifier refused `gh pr merge` as **"Merge Without Review"**. The branch was
+merged with `origin/main` first (main's only commit was the squash of #19, whose
+STATUS/WORKLOG text the branch already supersedes — checked by diffing both
+files, and the tree after the merge is byte-identical to the verified tip), then
+re-verified end to end before the PR was opened:
+
+```
+npm run build          exit 0, 182 report paths + 182 OG images
+tsc --noEmit           clean
+audit-html.mjs         17 of 17 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs     0 failing pairs, both themes
+source-hygiene.mjs     226 files, 0 findings
+seo-unit.mjs           16 of 16
+npm run lint           12 warnings, 0 errors — unchanged from this morning
+```
+
+It needs one click from Siddhant. No second PR was opened for the same branch.
+
+### Method note, because it cost three contradictory readings
+
+The rendered-contrast sweep returned **0 failing**, then **42 failing at
+1.05:1**, then **0 failing** again on the same page. None of those were the
+site. Two separate artefacts, both worth writing down:
+
+1. The themed colours are CSS-transitioned. A sweep taken mid-transition
+   catches text going dark→light while its background goes light→dark; they
+   cross, and contrast passes through ~1.0:1 on every element at once. A
+   whole-page failure that lands on *everything* is a measurement bug, not a
+   finding.
+2. A **backgrounded tab freezes transitions indefinitely** — `rAF` stops, so
+   `.theme-card`'s `transition-all` never completes and its background stays at
+   the previous theme's value while untransitioned text colours update on the
+   next style recalc. A 900ms `setTimeout` does not help. This also hung
+   `take_screenshot` for 120s.
+
+The sweep now injects `transition: none !important` before reading. All three
+independent readings then agree.
+
+### R-19, R-20 — now observed rather than modelled
+
+Per-element sweep in Chrome: composites each text node's effective background
+through its ancestors, reads the real computed colour, and applies 4.5:1 or
+3:1 by measured font size and weight.
+
+```
+/about            66 elements    0 failing    worst 5.72:1 dark / 4.86:1 light
+/services         93 elements    0 failing    worst 5.72:1 dark / 4.86:1 light
+a report page    218 elements    0 failing    worst 4.63:1 dark / 4.85:1 light
+/design-system   122 elements    0 failing    worst 4.86:1 dark / 4.83:1 light
+```
+
+### R-30 — the one thing the sweep found that arithmetic had not
+
+`Button variant="danger"` put hardcoded `text-white` on `--destructive`:
+**2.74:1 dark**, **4.37:1 light**. The dark theme had already computed the right
+answer and then not used it — `--destructive-foreground-hsl` declared #0B1120
+for that fill while `--destructive-foreground` stayed #FFFFFF and the button
+read neither token.
+
+```
+light   --destructive  #E0364F -> #D82B44     white label 4.83:1, 4.27:1 on the desk
+dark    --destructive-foreground -> #0B1120   label 6.87:1
+Button  text-white -> text-[var(--destructive-foreground)]
+```
+
+`var(--destructive)` has exactly one consumer, so the blast radius is that
+button. **`contrast-audit.mjs` had no `--destructive` pair at all**, which is
+why no amount of arithmetic was going to catch this; it has one now, and the
+rule is negative-tested — restoring #E0364F makes the script report 1 failing
+pair at 4.37:1. Commit `7351684`.
+
+### R-22 — real, and not the mechanism the queue guessed
+
+8-column table injected into the article's own `.prose` on
+`/blog/healthcare-data-security`. Nothing was clipped: `overflow` does not apply
+to a `display: table` box. And the table was not what overflowed.
+
+```
+viewport   page horizontal scroll   table
+800px      +240px                   982px wide, nothing clipped
+1024px     +22px                    982px wide, nothing clipped
+1280px     none                     982px, overflowing its 731px column
+```
+
+Below `lg` the article sits in a single-column `grid lg:grid-cols-3` whose track
+is `auto`, i.e. max-content, and whose item carried `min-width: auto`. The
+table's min-content width inflated the **track** to 1,009px inside a 669px
+container, and the table's own `max-width: 100%` then resolved against a box the
+table had just widened — the cyclic case. The affected band is roughly
+769-1045px, which is WCAG 1.4.10 reflow.
+
+Fixed with `min-w-0` on the blog and press-release article columns plus an
+unconditional scroll escape on `.prose table`. `ReportContentWrapper` already
+carried `min-w-0` on both of its columns, so report pages were never exposed.
+Re-verified at 500/800/1024/1280px: track holds, wide table scrolls inside its
+own border (scrollWidth 1,007 vs clientWidth 667 at 800px), a 3-column table
+still fills the measure, no page scroll at any width. Commit `b98baef`.
+
+Still latent in content terms — 0 of 22 snapshot rows contain a `<table>`, so
+this fires on the first published table rather than on anything live today.
+
+### R-13 — both candidate levers refuted
+
+Production `/methodology`, Slow 4G + 4x CPU, cold cache. FCP and LCP are the
+same event at **3,140ms**; TTFB 86ms; render delay 3,054ms (97.3%). The LCP
+element is text and is fetched from nothing.
+
+```
+the two stylesheets   finish 1,854ms and 1,530ms    paint is 1,286ms LATER
+                      Chrome RenderBlocking savings: FCP 0ms, LCP 0ms
+gtag/js               requested 763ms, complete 4,113ms    ~1s AFTER paint
+both woff2            complete by 2,195ms, display: swap on all 26 faces
+```
+
+So neither splitting the 66KB stylesheet nor deferring GA would move first
+paint, which is what the open note assumed. What fills the gap is the first
+style-and-layout pass: Chrome reports a single **968ms layout update over 362
+nodes** on a 298-element DOM, matching the 945ms between fonts-done and paint.
+That is not an intrinsic layout cost — forced relayouts on the settled page
+measure **0.1ms median** over 12 iterations at the same throttle, and
+`text-wrap: pretty` on headings was tested on and off and made no difference.
+At 4x throttle, 968ms is roughly 240ms of real CPU, consistent with the
+1,316ms FCP measured unthrottled.
+
+GA's real cost is **179.5kB and 1,827ms of main-thread time** — the largest
+third-party cost on the page by both measures — all of it after first paint.
+Deferring it is a TBT/INP and mobile-data win, not an LCP one, and
+`@next/third-parties`' `GoogleAnalytics` exposes no `strategy` prop, so it means
+replacing it with a `next/script` at `lazyOnload`. That trades session-count
+fidelity (visitors who leave before `load` stop being counted) for the
+main-thread time, which is an analytics-measurement decision rather than a
+performance fix. Filed as **R-31** for Siddhant instead of shipped.
+
+### Also committed
+
+`ea0d56e` — the `autopilot`, `gather` and `research` skills and the
+`research/competitors/` seed were living untracked, so a fresh clone or a
+context reset lost the operating rules they carry. `research/competitors/raw/`
+stays gitignored.
