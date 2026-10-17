@@ -240,6 +240,46 @@ grep -c "<cagr>" research/<slug>-notes.md              # pairing. zero means uns
 
 ## Round 5 content is written, verified, and still unpublished
 
+> ### STOP. Do not run the sequence below unless the merge can follow it.
+>
+> **The deploy *is* the merge, and the merge is blocked.** `DEPLOY-RUNBOOK.md:3`
+> states "each merge is a deploy", and section 4 implements the deploy as
+> `gh pr create` + `gh pr merge <n> --squash`. There is no production deploy path
+> in the runbook that is not that merge. `gh pr merge` is refused by the
+> permission classifier in both sessions working this branch, so tonight the
+> publish cannot be followed by a build.
+>
+> Publishing the rows without a build behind them is **strictly worse than
+> holding them**. `app/reports/[slug]/page.tsx` sets `dynamicParams = false`
+> while `/reports` is hourly ISR, so within the hour the listing shows five cards
+> that each link to a **hard 404**, and the article links to five of them. Drafts
+> on the branch cost nothing and stay reviewable; five published rows with no
+> build is a visibly broken research site, and it cannot be undone by
+> republishing — the runbook's own note (line 79) says the fix for a 404 after a
+> deploy is to **redeploy**, which is the one action that is unavailable.
+>
+> **Precondition, to check before step 1 and not after:**
+>
+> ```bash
+> gh pr list --base main --state open        # is there a PR, and can it be merged?
+> ```
+>
+> If the merge cannot be executed in this session, **publish nothing** and leave
+> this section exactly as it is. The content keeps indefinitely. This is one
+> click from Siddhant, listed under "Needs one click" above; it is not a thing to
+> work around, and pushing to `main` directly — the obvious workaround — is
+> forbidden outright.
+>
+> **Verified at 02:15 IST on the 18th:** `report-db.mjs slugs` returns **182**
+> and all five slugs report `not published`; `blog-db.mjs list` has no row for
+> the article. Nothing from round 5 has been published. The only Supabase write
+> tonight was `veterinary-diagnostics-market`, a **correction to a row already in
+> a build**, which reaches production through ISR with no deploy — `publish`
+> reported `corpus now 182`, unchanged, which is the proof it overwrote rather
+> than added. That case is the exception that proves the rule: an edit to a built
+> row is safe at any hour, a new row is not.
+
+
 > **STOP — do not run the publish sequence below. It is ready but
 > deploy-blocked, as of 20:25 IST on the 18th.**
 >
