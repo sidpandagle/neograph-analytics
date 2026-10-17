@@ -2641,3 +2641,126 @@ Nothing from round 6A published. Round 5's five rows plus its article remain the
 only set ready for a window. The publish gate must be
 `check content/reports/[a-z]*.json` — the unrestricted glob picks up the
 `_reference-` snapshot, which is not a draft and cannot pass.
+
+
+---
+
+## 2026-10-18, 01:30-02:40 IST — C-2 render half: segment shares published as numbers
+
+**Session `f3ea25fa` (a third session; `e6` and `72` were both already on the
+branch).** Budget at start: 7d used 26%, pace 75.3%, ceiling 52.7%, headroom
++26.7 points — normal running.
+
+### What the item said, and what the corpus actually says
+
+`C-2` was filed against the local drafts: **0 of 129** segmentation dimensions
+carried `market_share`, so the conclusion was that `ComponentSharePieChart`
+never fires. Measured against the **live** corpus instead
+(`select('slug,market_segmentation')`, never `*`):
+
+```
+rows 182   dimensions 470   with market_share 186   rows with shares 141
+share sums: min 100, median 100, max 100 — 0 of 186 differ from 100 by >0.5
+segments per dimension: min 2, max 7     descriptions present: 186 of 186
+dimension keys: by_type 89, by_application 35, by_technology 13,
+                by_product_type 13, by_component 11, + 17 others
+```
+
+So the chart was firing on **141 of 182 published report pages**, and on every
+one of them the only numeric content was a legend — no table, no caption, no
+row/column semantics. The filed evidence was true about drafts and inverted
+about production. Re-measured drafts today: **0 of 141** dimensions across 47
+files, so the drafting gap is real and unchanged; it is the larger half that
+was wrong.
+
+### Shipped
+
+`components/reports/charts/ComponentSharePieChart.tsx` — the legend is now a
+`<table>`: `<caption>`, two `scope="col"` headers, one `scope="row"` per
+segment carrying the swatch, name and description, a right-aligned
+`tabular-nums` share cell, and a `<tfoot>` total. The donut wrapper is
+`role="img"` with a label, which collapses its descendants for assistive tech
+so the same figures are not announced twice. The table cell is `min-w-0` —
+R-22's mechanism was a grid track inflating to a table's min-content width, and
+this is a table in a grid track.
+
+`components/reports/JsonReportSections.tsx` — `by_component` was being drawn
+**twice** on the 11 rows that use that key: once from a hardcoded block in the
+Charts section, once from `MarketSegmentationSection`, which charts every
+dimension that has shares. The hardcoded block is removed and the segmentation
+section now wraps each chart in `ChartFigure`, so the source line and the
+`/methodology` link go out with **all 186** charts rather than only the 11.
+
+`scripts/audit-html.mjs` — five rules: donut count must equal share-table
+count; every table needs a `<caption>` and two `scope="col"` headers; at least
+2 rows; row percentages must sum to the `<tfoot>` total; and the row count must
+match the segment count the card's own caption declares.
+
+### Measured after the build
+
+```
+npm run build        exit 0, 417 static pages, 182 report paths
+tsc --noEmit         clean
+npm run lint         12 warnings, 0 errors — unchanged
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs   0 failing pairs, both themes
+source-hygiene.mjs   232 files, 0 findings
+seo-unit.mjs         all assertions passed
+built HTML           186 share tables, 186 donuts, on 141 of 182 report pages
+                     ai-in-lab-automation-market: 2 donuts -> 1, 3 figcaptions
+```
+
+### The rule was green before it worked
+
+First run reported **4 errors**, all of the form "3 row(s) but 0 percentage
+cells". React splits `{n.toFixed(1)}%` into two text nodes and marks the seam
+with `<!-- -->`, so `>55.0%<` never matches real output; the HTML is
+`>55.0<!-- -->%<`. Worth keeping because the failure mode is the opposite of
+C-4's: there, a rule passed while testing nothing. Here it failed loudly, and
+only because one of the four audited report routes
+(`ai-in-lab-automation-market`) happens to be a row with shares. The other
+three carry none — had the route list been one report shorter, the broken
+regex would have reported 18 of 18 clean.
+
+A second pin had to be dropped for the same reason. The donut's centre total is
+drawn by Recharts in the browser and is simply absent from built HTML, so
+comparing the table total against it would have been an assertion that can
+never fire. It compares against the card's server-rendered
+"across N segments" caption instead.
+
+### Negative tests
+
+Six corruptions of the built HTML, each applied alone and reverted, file
+verified byte-identical afterwards:
+
+```
+CAUGHT  drop a <tfoot>              -> declares 0 total(s), expected exactly 1
+CAUGHT  bend one share value        -> rows sum to 80.0% but the total says 100.0%
+CAUGHT  drop one donut aria-label   -> 1 donut(s) but 2 segment-share table(s)
+CAUGHT  misstate the chart caption  -> lists 3 segment(s), chart captioned as 4
+CAUGHT  drop a <caption>            -> has no <caption>
+CAUGHT  drop scope="col"            -> does not mark both column headers
+```
+
+### C-2 is not closed
+
+Its second condition — dimensions carrying `market_share` across
+`content/reports/*.json` > 0 — is still **0 of 141**. That needs a share field
+in the `research` skill's draft template and real per-segment research behind
+every figure. No number was invented to close a checklist item. The item is
+annotated in place in the competitor backlog, not struck through.
+
+### Commit attribution — read this before trusting `be2d931`
+
+All four files above were **swept into commit `be2d931`** ("Re-pair round 6A
+against its evidence files"), which belongs to the content session and
+describes report rows, not any of this. That session committed the whole
+working tree while these edits were sitting in it unstaged. Nothing is lost and
+nothing is wrong in the tree — `git show HEAD:<file>` confirms all four edits
+are present — but the history says the wrong thing about what that commit
+carried.
+
+**The hazard, for every session on this branch:** a tree-wide commit picks up
+another session's in-progress work, including work that was mid-verification
+and not yet building. Stage by path. This is the second record-correction entry
+on this branch in one night, after `bae7279`.

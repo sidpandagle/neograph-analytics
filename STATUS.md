@@ -315,3 +315,72 @@ permission classifier as "Merge Without Review". Everything else tonight
 proceeded; the branch is verified and waiting. If the merge should be
 self-serviceable in future sessions, that is a permission rule for `Bash`, and
 it is Siddhant's call rather than something to work around.
+
+
+---
+
+## Third session on the branch, 02:40 IST on the 18th — C-2 render half shipped
+
+**Appended, not overwritten.** This file already records what a full rewrite
+cost at 00:15; a third session rewriting it would be the same mistake twice.
+
+**Who is here.** `e6` (infrastructure/SEO), `72` (content pipeline), and this
+session `f3ea25fa`. Budget at 02:40: 7d used 26%, pace 75.3%, ceiling 52.7%,
+**headroom +26.7 points** — normal running.
+
+**Files this session wrote:** `components/reports/charts/ComponentSharePieChart.tsx`,
+`components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`research/competitors/COMPETITOR-BACKLOG.md` (the C-2 entry only),
+`WORKLOG.md`, and this block. **Not touched:** anything under `content/`,
+`research/` apart from that one backlog entry, and no Supabase write of any
+kind.
+
+**What shipped.** `C-2`'s render half. Every share donut now ships the same
+figures as a real table — caption, `scope="col"`/`scope="row"`, `<tfoot>`
+total, `tabular-nums` — and the donut wrapper is `role="img"` so the numbers
+are announced once, not twice. Built output: **186 tables against 186 donuts,
+on 141 of 182 report pages**, 1:1.
+
+The item was filed as "the pie never fires" from the drafts, where 0 of 129
+dimensions had shares. Against the live corpus it is **186 of 470 dimensions
+on 141 of 182 rows**, all summing to exactly 100.0 — so the chart was firing
+on 141 published pages with no numeric equivalent. Found in passing:
+`by_component` was drawn **twice** on the 11 rows using that key; the duplicate
+call site is gone, and all 186 charts now carry a source line and a
+`/methodology` link instead of only 11.
+
+Verified: build exit 0 (417 pages, 182 report paths), `tsc` clean, lint 12
+warnings / 0 errors (unchanged), `audit-html.mjs` 18 of 18 and 0 errors,
+contrast 0 failing pairs, source-hygiene 0 findings, seo-unit all passed.
+Five new audit rules, **negative-tested six ways** against corrupted built
+HTML — every corruption caught, built file restored byte-identical.
+
+**C-2 stays open and is annotated in place, not struck through.** Its second
+condition is still unmet: **0 of 141** dimensions across 47 local drafts carry
+`market_share`. Closing it needs a share field in the `research` skill's draft
+template plus real per-segment research. That half belongs to the content
+session; no figure was invented to tick the box.
+
+### Two things the next session needs to know
+
+1. **`be2d931` does not describe what it committed.** That commit ("Re-pair
+   round 6A against its evidence files") swept up all four of this session's
+   files while they sat unstaged mid-verification. The tree is correct —
+   `git show HEAD:<file>` confirms every edit is present — but the history is
+   mislabelled, and this is the second record-correction on the branch tonight
+   after `bae7279`. **Stage by path on a shared branch.** A tree-wide commit
+   can also capture another session's work in a state that does not build.
+
+2. **A green audit rule proved nothing until it was made to fail.** The new
+   rule's first run reported 4 errors because React writes `55.0<!-- -->%`,
+   not `55.0%`. It only surfaced because exactly one of the four audited report
+   routes (`ai-in-lab-automation-market`) is a row that carries shares; the
+   other three carry none. One route shorter and a broken regex would have
+   reported 18 of 18 clean — the same trap C-4 hit, arriving from the other
+   direction. A second intended pin was dropped for being unfallible: the
+   donut's centre total is drawn by Recharts in the browser and is absent from
+   built HTML entirely.
+
+**Unchanged by this session:** PR #20 still needs one click, the round 5
+publish sequence above is still the thing to run at 21:00 IST, and `C-1` and
+`C-3` are still `needs-owner`.
