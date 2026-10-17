@@ -26,7 +26,17 @@ Standing constraints on anything taken from here:
 
 ## 1. Correctness and honesty
 
-- [ ] **C-6 · content · S** — Add `FilterSidebar.tsx` and `FilterSection.tsx` to
+- [x] ~~**C-6 · content · S**~~ — **DONE 2026-10-18, commit in the same batch as
+  C-5.** Re-verified independently before writing it into the doc that steers
+  every session, and every number in the item held: **0** references to either
+  file outside the two re-export lines in `components/reports/index.ts`;
+  `REPORT_TYPES` and `PRICE_RANGES` commented out as "Reserved for future
+  use" (2 of 4 option arrays) while `hasActiveFilters` at `:77-82` still tests
+  both fields; `app/reports/page.tsx` renders `ReportsListingClient`.
+  `grep -c FilterSidebar CLAUDE.md` returns **2**. Both files stay in place.
+  Original item below.
+
+  - [ ] ~~Add `FilterSidebar.tsx` and `FilterSection.tsx` to~~
   the dead-component list in `CLAUDE.md`, which currently names only the four
   unused charts, `MarketSizeChart`, `SegmentationChart`, `lib/chartUtils.ts` and
   `lib/html-toc-utils.ts`.

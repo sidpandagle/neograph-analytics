@@ -151,6 +151,17 @@ are also unused. They stay in place per the standing no-deletion rule; this
 list says which is which so nobody debugs a chart that never runs.
 `ChartFigure.tsx` is the `<figure>`/`<figcaption>` wrapper and does render.
 
+**Two filter implementations, one live.** `components/reports/FilterSidebar.tsx`
+and `components/reports/FilterSection.tsx` are **unused** — the only references
+anywhere are the two re-export lines in `components/reports/index.ts`. The live
+listing filter is `ReportsListingClient.tsx`, which derives its own category
+counts from the corpus. `FilterSidebar` declares a 5-field `FilterState`
+(industries, regions, reportTypes, priceRanges, searchQuery) while **2 of its 4
+option arrays — `REPORT_TYPES` and `PRICE_RANGES` — are commented out as
+"Reserved for future use"**, so `hasActiveFilters` (`:77-82`) tests two fields
+nothing can set. Both files stay per the no-deletion rule; edit
+`ReportsListingClient.tsx` when changing how the listing filters.
+
 ### Design System
 
 `/components/ui/` — premium B2B component library:
