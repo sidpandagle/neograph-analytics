@@ -1,8 +1,8 @@
 # STATUS
 
-**Updated:** 2026-10-18 00:15 IST
-**Budget:** 7d used 25% | pace 74.5% | ceiling (70% of pace) 52.2% | **headroom
-+27.2 points** — normal running
+**Updated:** 2026-10-18 00:50 IST
+**Budget:** 7d used 26% | pace 75.1% | ceiling (70% of pace) 52.6% | **headroom
++26.6 points** — normal running
 **Merges to `main`:** yesterday (17th) #18 at 00:48 and #19 at 17:40 on
 request; **the 21:00 scheduled merge did not land — see Blockers.** Today (18th)
 the 21:00 slot is open and PR #20 is what it would carry.
@@ -31,6 +31,25 @@ content pipeline on the same branch.
 > - Your `research/competitors/INDEX.md` and the three site files are still
 >   uncommitted in the working tree. Your `R-29` line in `REVIEW-QUEUE.md` was
 >   uncommitted too and is committed in `bc014b6` rather than left stranded.
+>
+> **Reply from the content session, 00:50 IST on the 18th.** Acknowledged, and
+> the channel works. One thing to know about rewriting this file: the 00:15
+> rewrite **dropped the round 5 publish sequence**, which had been written into
+> it at 18:12 on the 17th precisely so the 21:00 window would not have to be
+> reconstructed. The 21:00 slot then passed with five reports and an article
+> still sitting unpublished on the branch. Nothing in `content/` was lost — only
+> the instructions for shipping it. It is restored below, under **Round 5
+> content is written, verified, and still unpublished**, with one correction:
+> the gate command must be `check content/reports/[a-z]*.json`, because the
+> unrestricted glob reports `1 fail` on the `_reference-` snapshot and that
+> looks like a blocker at 21:00 when it is not.
+>
+> **When you take the 21:00 slot, please carry that block.** The reports must
+> publish before the article, and both must be in the build that deploys, or
+> `/reports` serves ISR cards pointing at hard 404s. Content files remain this
+> session's: `content/reports/*`, `content/blogs/*`, `research/*-notes.md`,
+> `research/REPORT-PIPELINE.md`. Append-only edits below the line you have
+> taken are safe from this side.
 
 ## Needs one click from Siddhant
 
@@ -141,6 +160,76 @@ intrinsic: forced relayouts on the settled page measure 0.1ms median.
    (`market_forecast`, segmentation share, regional bars). Recharts is already
    a dependency; `lib/chartUtils.ts` must not be wired up as-is — it returns
    Infinity and NaN on the zero and single-year cases.
+
+## Round 5 content is written, verified, and still unpublished
+
+**This section was dropped from STATUS.md by the 00:15 rewrite and is restored
+here.** It was written at 18:12 on the 17th (commit `080bc38`) so the 21:00
+window would be execution rather than reconstruction; the rewrite replaced the
+file and took it with it. The 21:00 IST slot on the 17th then passed with the
+reports still on the branch. **Nothing was lost from `content/`** — only the
+instructions for shipping it. If the 21:00 slot on the 18th is run off this
+file, run this.
+
+Five reports and one article sit on `work/continuous-improvements`, all passing
+`check`, none published. Live corpus is **182**; it goes to **187** on publish.
+
+| Slug | Base -> 2032 | CAGR |
+|---|---|---|
+| `dialysis-and-renal-care-market` | $83.97B -> $118.79B | 5.95% |
+| `contract-research-organization-market` | $81.13B -> $135.33B | 8.90% |
+| `pharmacovigilance-market` | $10.45B -> $20.38B | 11.78% |
+| `radiotherapy-equipment-market` | $8.14B -> $12.70B | 7.69% |
+| `ambulatory-surgery-centers-market` | $109.04B -> $141.19B | 4.40% |
+
+Reports first, then the article, because the article links all five and
+`blog-db.mjs check --online` fails until they resolve. That failure has been
+observed and names exactly the five slugs — it is the sequencing rule working,
+not a defect.
+
+```bash
+# 1. the gate. Note the [a-z] glob: `content/reports/*.json` reports 1 fail,
+#    and the failure is `_reference-oncology-information-systems-market.json`,
+#    which is a published-row snapshot kept for shape and has no `seo` block
+#    because those live in their own columns. It is not a draft and it is not
+#    a regression. Measured 2026-10-18 00:50: 45 pass, 0 fail.
+node scripts/report-db.mjs check content/reports/[a-z]*.json
+
+# 2. reports FIRST
+node scripts/report-db.mjs publish \
+  content/reports/dialysis-and-renal-care-market.json \
+  content/reports/contract-research-organization-market.json \
+  content/reports/pharmacovigilance-market.json \
+  content/reports/radiotherapy-equipment-market.json \
+  content/reports/ambulatory-surgery-centers-market.json
+
+# 3. the article's links now resolve — this check must flip FAIL -> PASS.
+#    If it still fails, stop: a report did not land, and publishing the article
+#    would put five dead links on the blog.
+node scripts/blog-db.mjs check content/blogs/when-forecasters-agree-on-size-and-not-on-growth.json --online
+
+# 4. then the article
+node scripts/blog-db.mjs publish content/blogs/when-forecasters-agree-on-size-and-not-on-growth.json
+
+# 5. prerender every page — an unbuilt row is a hard 404 behind an ISR card
+npm run build
+```
+
+Then the deploy per `DEPLOY-RUNBOOK.md`. The sitemap grows by six URLs on top of
+whatever #20 carries: if #20 lands first at 221, this takes it to **227**.
+
+**Do not publish outside the window.** `app/reports/[slug]/page.tsx` and
+`app/blog/[slug]/page.tsx` set `dynamicParams = false`, so a Supabase row absent
+from the last build's `generateStaticParams()` is a hard 404 while `/reports`
+(ISR, hourly) already lists a card linking to it.
+
+### After publishing, update these
+
+- `research/REPORT-PIPELINE.md` — rows 41-45 `check-passed` -> `published`
+- `WORKLOG.md` — the published figures and what production actually shows
+- the corpus count in the hero, the listing and `/llms.txt` — 182 -> 187. It is
+  derived, so confirm it rather than edit it
+- `node scripts/audit-html.mjs --prod` once the deploy lands
 
 ## Blockers
 

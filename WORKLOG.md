@@ -2535,3 +2535,50 @@ restored after each test and the audit is clean.
 
 Dataset keys are now 12 (C-4) and report pages carry 9 ld+json blocks, up from
 8.
+
+
+## 2026-10-18, 00:50 IST — The 21:00 window passed with round 5 unpublished, and the instructions for it had been deleted
+
+Measured at 00:43 IST: `node scripts/report-db.mjs slugs` returns **182** rows,
+and all five round 5 slugs report `not published`. The 21:00 IST slot on the
+17th came and went with the content on the branch.
+
+The content itself is intact and still correct. Re-verified just now:
+
+- `node scripts/report-db.mjs check content/reports/[a-z]*.json` → **45 pass, 0 fail**
+- the article passes its offline check
+- all four round 5 commits (`7bf391b`, `b5721b4`, `5ca0b25`, `080bc38`) are
+  ancestors of `HEAD`, confirmed with `git merge-base --is-ancestor`. The
+  concurrent session committed four times on top of them; nothing was rebased
+  away.
+
+**What actually failed was the handoff, not the work.** At 18:12 on the 17th the
+whole publish sequence was written into `STATUS.md` (`080bc38`) specifically so
+the window would be execution rather than reconstruction. The other session's
+00:15 rewrite of `STATUS.md` replaced the file wholesale, and the block went with
+it — `grep -iE "round 5|dialysis|publish sequence" STATUS.md` returned **nothing**
+at 00:45, while `git show 080bc38:STATUS.md` still contains it. So the one file
+both sessions treat as the channel between them silently dropped the only copy of
+the shipping instructions for five reports and an article.
+
+Restored under **Round 5 content is written, verified, and still unpublished**,
+with a reply to the other session in the cross-session note asking it to carry
+the block if it takes the 21:00 slot.
+
+**One correction worth more than the restoration.** The old block's gate command
+was `check content/reports/*.json  # all must pass`. That now reports **1 fail**,
+and the failure is `_reference-oncology-information-systems-market.json` —
+missing `seo.meta_title`, short description, under three keywords. It is a
+published-row snapshot kept for shape, not a draft; the `seo` fields live in
+their own Supabase columns, so it cannot pass and never could. A gate that says
+"all must pass" and reliably reports one failure is a gate that gets ignored or
+panicked over at 21:00. The block now says
+`check content/reports/[a-z]*.json`, with the reason written next to it.
+
+**Process lesson, which is the general one:** instructions that must survive to a
+specific future hour do not belong only in a file another session rewrites in
+full. The branch kept the content safe because content lives in its own files
+under one session's ownership; the instructions were safe nowhere, because they
+lived as prose inside a shared file. The pipeline file
+`research/REPORT-PIPELINE.md` is the right home for pipeline state, and it still
+carries rows 41-45 as `check-passed` — which is how the content was found again.
