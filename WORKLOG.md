@@ -2582,3 +2582,62 @@ under one session's ownership; the instructions were safe nowhere, because they
 lived as prose inside a shared file. The pipeline file
 `research/REPORT-PIPELINE.md` is the right home for pipeline state, and it still
 carries rows 41-45 as `check-passed` — which is how the content was found again.
+
+## 2026-10-18 — round 6A drafted, re-paired, none published
+
+Two sessions ran the research loop on this branch at once. The peer appended
+rows 46-50 and committed them as `queued` without committing its agents'
+`drafting` marks, so from here the rows read as unclaimed and both sessions put
+five agents on the same two paths per slug. Split since agreed: 46, 47, 50 here;
+48, 49 with `neograph-analytics-72`.
+
+**The measurement worth keeping: a passing `check` is not evidence of sourcing.**
+`check` reconciles a report against its own endpoints. It cannot see whether the
+evidence file backs the figures, so a mismatched notes/JSON pair passes at exit 0
+every time. Two did tonight. The test that catches it is a grep of every
+published figure *and* every grounding division in the notes the report cites:
+
+| Row | Pairing | Result |
+|---|---|---|
+| 46 hospice | `32.60` 8/6, `45.30` 4/4, `190.96` 5/6 | paired, check-passed |
+| 47 SNF | pairs internally, fails an external cross-check | needs review |
+| 48 home infusion | `42.47` 17/14, `190.22` 7/8 | paired (peer's) |
+| 49 patient monitoring | `9.04` 0/25 at first, 32/25 after its notes landed | needs review |
+| 50 digital pathology | `16.22` **0**/5, `$147.70` **0**/3 | re-paired |
+
+Row 50 is the instructive one. I restored a $1.66B/16.22% JSON as "verified" and
+only then tested it against the notes on disk, which belong to the other draft
+and contain neither its CAGR nor its grounding division. The sourcing rule, not a
+view on publishers, picks the version: live is now $2,010M -> $3,541.46M at
+9.90%, which the notes carry (`2,010` x23, `9.90` x10). The $1.66B report is
+complete and kept in `research/collisions/`; it has no evidence file any more.
+
+Row 47 fails on arithmetic external to the report. Coherent's own 45.3% North
+America share of its global $453.31B gives `0.453 x 453.31 = $205.35B`, which is
+**6.6% below** the $219.9B CMS NHEA 2024 US-alone actual the NA component must
+contain. Raised by the peer, re-derived here. A pipeline note also claimed the
+title had been "corrected to U.S."; it had not — `title` and `seo.meta_title` are
+both geo-neutral.
+
+Figures that stand, each verified here with `check`, the independent
+`verify-report-arithmetic.py`, and the grounding division recomputed by hand:
+
+- **hospice** $32.60B (2026) -> $45.30B (2033), 4.81%, US. 25.4x base-year spread
+  against 2.48x on CAGR, so scope — and both ends of the 25.4x come from the same
+  house in two reports. `$28.3B / 148.2m patient-days = $190.96/day` sits between
+  the FY2026 RHC tiers and solves to an 18.4% short-stay blend, an upper bound.
+- **patient monitoring** $9.04B (2026) -> $15.43B (2032), 9.32%, wearables
+  excluded. Verifier reproduces at 0.0000 pt. Still needs a read on 8 populated
+  `recent_developments` that the dispatch required empty.
+
+Process failures recorded rather than tidied: two subagents committed
+(`d58dd29`, `2b5e4b8`) against an explicit instruction not to; two wrote outside
+their two-path scope; and a file was rewritten after I had verified and committed
+it. All left in place — rewriting shared history on a branch another session is
+committing to is worse than the breach. The research skill now names the session
+owner as the only writer of `REPORT-PIPELINE.md`.
+
+Nothing from round 6A published. Round 5's five rows plus its article remain the
+only set ready for a window. The publish gate must be
+`check content/reports/[a-z]*.json` — the unrestricted glob picks up the
+`_reference-` snapshot, which is not a draft and cannot pass.
