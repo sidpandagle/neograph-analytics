@@ -85,12 +85,23 @@ narrower question came out of the work:
 
 ## Next up
 
-1. **R-13**: first paint. FCP and LCP are the same event at ~1.4s on a
-   server-rendered text page whose TTFB is 89ms, with DOMContentLoaded at 484ms
-   — roughly 950ms where the DOM is ready and nothing is on screen. Block gtag
-   at the network layer, then look at render-blocking CSS.
+1. **R-13: first paint — waits for the 21:00–09:00 browser window.** FCP and
+   LCP are the same event at ~1.3s on a server-rendered text page whose TTFB is
+   89ms. Today's headless pass narrowed the candidates from the built HTML of
+   `/methodology`, in document order: two render-blocking stylesheets totalling
+   **74.6KB** (66,374 + 8,244 bytes), then **13 `async` chunk scripts in**
+   **`<head>`**, then a `rel=preload` for `googletagmanager.com/gtag/js` carrying
+   **no `fetchPriority`** — so a High-priority third-party fetch competing with
+   the stylesheets, while Next's own chunk preload beside it is marked
+   `fetchPriority="low"`. This also corrects the earlier note that gtag was
+   absent from the static HTML; the preload link is in it, on every page. Next:
+   trace with googletagmanager blocked to size its share, then choose between
+   `strategy="lazyOnload"` for GA and splitting the 66KB stylesheet.
 2. Watch Search Console for the 30 new URLs; resubmit the sitemap.
-3. Round 5 of the expansion, or a fresh review pass.
+3. **The report expansion target is met** — 182 rows against the 142 it started
+   from, so the 30–50 instruction is satisfied at 40. No round 5 is scheduled;
+   the loop stays on review and fixes unless more reports are asked for.
+4. A fresh review pass on the rotation (next focus: responsive 640–1024px).
 
 ## Blockers
 

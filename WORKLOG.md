@@ -1586,3 +1586,88 @@ build renders (local) or return 200 (`--prod`). Negative-tested — repointing i
 at `/legal/nope-does-not-exist` fails the audit, restoring it clears.
 `17 of 17 routes error-free, 0 errors, 1 warning` (the pre-existing short
 `/design-system` description). `contrast-audit.mjs`: 0 failing pairs.
+
+## 2026-10-17 — the homepage band, and a letter missing from 182 pages
+
+### Featured reports: six in a 3-up grid
+Four reports in a 2-up grid gave each card roughly 470px of width, and the
+section read as a pair of oversized tiles stacked twice rather than a shelf of
+reports. Six in `md:2 xl:3` fills the same band at the width the type was sized
+for — title 17/18px, chips and growth rail stepped down to match. Two
+alignment rules make a row of three hold together: `min-h-[2.5em]` on the title
+so the chips, rail and footer line up whether a title wraps once or twice, and
+`mt-auto` on the rail so a short chip row cannot lift it.
+
+Two defects came out of the rework. Every card whose `regional_analysis` was
+empty printed "0 regions · Base year 2026" — the count is now omitted rather
+than rendered as zero, because nothing-shaped text is worse than nothing. And
+each card carried two links to the same page, the title and a "Read more"; the
+title's link now stretches over the card with `after:inset-0`, so the whole
+card is the hit target and the footer arrow is `aria-hidden` decoration. The
+Supabase order gained `report_id desc` as a tiebreaker, so a page of rows
+sharing `published_year` is stable between builds rather than arbitrary.
+
+### Partner logos, and why no two tiles matched
+The 12 source files in `/assets/logos` are all 150×120 with the artwork
+floating in a baked-in white margin that differs per brand. On a 152px tile
+that produced a white rectangle of one size with a dark gutter of another
+beside every logo. `/assets/logos/trimmed` holds the same artwork cropped to
+its ink; each entry declares its real intrinsic size — verified by reading the
+PNG IHDR of all 12, every declared pair matches — so `next/image` reserves the
+right box, and the tile is white so artwork and tile meet with no seam. The
+marquee track gained `pr-4` to pay for the gap that falls between the two
+copies; without it the `-50%` keyframe lands half a gap short and the loop
+visibly jumps once a cycle.
+
+### A letter missing from every trimmed title (R-17)
+`marketName()` in `lib/seo.ts` collapses whitespace, and shipped as `/s+/`
+where `/\s+/` was meant — so it replaced the literal letter **s** with a
+space. Measured on the built HTML of `/reports/liquid-biopsy-market`, the same
+six related-report cards before and after the one-character fix:
+
+```
+Antimicrobial Re i tance Diagno tic  Market  ->  Antimicrobial Resistance Diagnostics Market
+Veterinary Diagno tic  Market                ->  Veterinary Diagnostics Market
+Pharmacogenomic  Market                      ->  Pharmacogenomics Market
+Proteomic  Market                            ->  Proteomics Market
+```
+
+Six cards on each of 182 report pages, plus every report's OpenGraph image,
+which calls the same helper. Nothing failed and no checker fired: the string
+was simply wrong, and a wrong string renders. The function's own docstring
+already recorded a tool turning its escapes into literal control characters
+once — it had happened twice, in the same function, and the second time the
+mangled pattern still matched something, so it did damage instead of nothing.
+A repo-wide scan found no other unescaped `/s+/`-class pattern and no stray
+control characters in any `.ts/.tsx/.mjs/.js/.css` source.
+
+### And a date that depended on where the build ran (R-18)
+Writing assertions for the rest of `lib/seo.ts` turned up a second one on the
+first run. `schemaDate('December 18, 2025')` returned **2025-12-17**: `new
+Date` parses a long-form date as *local* midnight and `toISOString()` converts
+to UTC before slicing, so every build east of Greenwich emitted the previous
+day while Vercel's UTC build emitted the right one. The calendar fields are now
+read back in the zone they were parsed in. A `datePublished` in structured data
+should not be a function of the builder's timezone.
+
+### Checker
+`scripts/seo-unit.mjs` — 16 offline assertions over `marketName`, `pageTitle`,
+`pageDescription` and `schemaDate`, no network and no build, with both
+regressions as named cases. It is what caught R-18. Run it with
+`node --experimental-strip-types scripts/seo-unit.mjs`; it is in the CLAUDE.md
+checker list.
+
+### Housekeeping
+The stale `next start -p 3100` from 2026-10-16 02:24 was still holding the port
+— the exact false-pass trap CLAUDE.md warns about. Ownership confirmed by
+command line before stopping it. Both builds this session ran with `.next`
+moved aside, and `.gitignore` now ignores `/.next.*/` so those set-asides stop
+showing up as untracked noise; they are build output and are never deleted by
+tooling here.
+
+### Verification
+Clean build exit 0, no new lint warnings (the one `region` unused warning in
+`app/reports/[slug]/page.tsx:65` predates this work). `audit-html.mjs`:
+17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
+`contrast-audit.mjs`: 0 failing pairs. `seo-unit.mjs`: 16 of 16.
+Built homepage HTML: 6 `growth-rail` cards, 24 trimmed-logo references.
