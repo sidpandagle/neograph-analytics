@@ -83,7 +83,37 @@ Standing constraints on anything taken from here:
   - **Why `needs-owner`:** changes the `market_dynamics` JSONB shape on 152 rows
     and asserts a per-driver CAGR contribution, which is a publication claim.
 
-- [ ] **C-2 · report · L** — Make segment shares readable as numbers. Populate a
+- [ ] **C-2 · report · L — RENDER HALF DONE 2026-10-18; the drafting half is
+  what keeps it open.** The item was filed against the 43 local drafts, where
+  **0 of 129** dimensions carried `market_share`. Against the **live** corpus
+  the picture is the opposite and much larger: **186 of 470** dimensions on
+  **141 of 182** rows carry shares, so `ComponentSharePieChart` was already
+  firing on 141 published report pages with no numeric equivalent at all. All
+  186 live share sums were measured and every one totals exactly 100.0, over 2
+  to 7 segments, all with descriptions.
+
+  Shipped: the donut's legend is now a real `<table>` — `<caption>`,
+  `scope="col"` headers, one `scope="row"` per segment, a `<tfoot>` total,
+  `tabular-nums`, the wrapper marked `role="img"` so assistive tech reads the
+  figures once rather than twice. Built output: **186 tables against 186
+  donuts on 141 of 182 report pages**, 1:1. Five new `audit-html.mjs` rules
+  pin the table to the chart and were negative-tested six ways against
+  corrupted built HTML — every corruption caught, nothing missed.
+
+  Found and fixed in passing: `by_component` was drawn **twice** on the 11 rows
+  that use that key, once from a hardcoded block in the Charts section and
+  once from `MarketSegmentationSection`. The hardcoded block is gone, and every
+  charted dimension now goes out inside `ChartFigure`, so all 186 carry a
+  source line and a `/methodology` link instead of only the 11.
+
+  **Still open — the only remaining condition:** the count of dimensions
+  carrying `market_share` across `content/reports/*.json` is still **0 of 141**
+  (47 drafts, re-measured 2026-10-18). Drafts publish without shares, so new
+  rows render as `SegmentListCard` bullets. That half needs a share figure in
+  the `research` skill's draft template and real per-segment research behind
+  it — no number gets invented to close a checklist item. Original item below.
+
+  - [ ] Make segment shares readable as numbers. Populate a
   share figure per segment in the drafting pipeline, and render each dimension
   that has shares as a table beside its chart, so exact values are legible and
   the chart has a text equivalent.

@@ -1,6 +1,47 @@
 # Home Infusion Therapy — research notes
 **Slug:** home-infusion-therapy-market   **Drafted:** 2026-10-18
 
+## Provenance of this file — what was verified directly and what is carried forward
+
+This evidence file has had more than one pass over it, and a reader is entitled
+to know which figures were re-derived from the primary document and which are
+carried forward from the survey as tabled. The two are not the same standard.
+
+**Verified directly against the primary source:**
+
+- Every piece of arithmetic in "The spread", "Grounding arithmetic" and "What we
+  publish" — recomputed, with the division printed.
+- The CMS CY2026 per-visit rate table, including the build-up CMS itself prints
+  ($186.16 x 1.0018 x 1.0200 = $190.22) and the same factors reproducing
+  $257.04 and $319.76 from $251.55 and $312.93. Three of three reproduce, which
+  is why the table is used as a denominator.
+- The correction of the payment-category count from four to three (six G-codes =
+  three categories x two visit types), against 42 CFR 414.1505 and 414.1550.
+- Option Care Health's filings, read on EDGAR: the FY2025 Form 10-K (accession
+  0001014739-26-000008, filed 24 February 2026) for net revenue, cost of
+  revenue, gross profit, pharmacy and suite counts, state count, payer mix and
+  the named competitor list; the FY2025 results exhibit (accession
+  0001014739-26-000005); and the Form 8-K of 5 October 2026 (accession
+  0001104659-26-113904) for the merger terms. The grounding divisions below are
+  cut on FY2025 and the FY2024 prior-year figures are retained with their own
+  citation.
+- The Grand View Research row (source 24) and its exclusion reasoning.
+- That the CY2026 Home Health PPS final rule (90 FR 55342, 2 December 2025) does
+  **not** contain the HIT rate table — the full text was read to establish it,
+  which is why the rates are cited to the standalone CMS table and not to the
+  rule.
+
+**Carried forward without independent re-verification:** the published-estimate
+rows for Strategic Market Research, Straits Research, The Insight Partners,
+Mordor Intelligence, Coherent Market Insights (both editions), Global Market
+Insights, SNS Insider, Data Bridge, DataHorizzon, Zion, SkyQuest and Credence
+(sources 10-21). Each row records what that publisher's public page stated, with
+its URL; none of the underlying methodologies was inspected, and these rows were
+not re-read against their pages in the pass that produced the arithmetic above.
+They are the basis of the three spreads and of the published headline, so the
+headline carries that weaker warrant and this note is the place it is recorded.
+No row has been weakened or dropped to make this note tidier.
+
 ## Published estimates (what others say)
 
 | Source | Published | Base year | Base value | Forecast year | Forecast value | CAGR | Scope as stated |
@@ -73,10 +114,10 @@ Two independent proofs, both printed in full under "Grounding arithmetic":
    $39.4B 2025 value).
    No published estimate can be measuring that.
 2. The largest US provider's own income statement splits drug from service.
-   Option Care Health's FY2024 gross margin is **20.27%**: $3.93 of product
+   Option Care Health's FY2025 gross margin is **19.26%**: $4.19 of product
    cost behind every $1.00 of margin. Apply that margin to the $42.47B
-   published 2026 headline and the implied service-only market is **$8.61B**
-   ($7.99B against the publisher's $39.4B 2025 value). Not one published
+   published 2026 headline and the implied service-only market is **$8.18B**
+   ($7.59B against the publisher's $39.4B 2025 value). Not one published
    estimate sits near $8B; the lowest 2032 endpoint in the table is $42.5B.
 
 So the drug/service question, which would normally explain a spread this wide,
@@ -166,31 +207,51 @@ the service. A benefit used by 62 suppliers is not the market anyone is sizing.
 
 ### Register 2 — Option Care Health's filed income statement, per site
 
-Option Care Health describes itself in its FY2024 Form 10-K as the largest
+Option Care Health describes itself in its FY2025 Form 10-K as the largest
 independent provider of home and alternate-site infusion services in the
-United States, operating a national network of **185 locations in 43 states**
-(92 full-service pharmacies, 93 stand-alone ambulatory infusion suites) as of
-31 December 2024. The FY2025 10-K reports **196 locations** (87 pharmacies, 109
-stand-alone ambulatory infusion suites) as of 31 December 2025.
+United States, operating a national network of **196 locations in 43 states**
+(87 full-service pharmacies, of which 73 have ambulatory infusion suites, plus
+109 stand-alone ambulatory infusion suites, 27 of them with advanced
+practitioner capabilities) as of 31 December 2025. The prior-year FY2024 filing
+reported **185 locations** (92 full-service pharmacies, 93 stand-alone suites)
+as of 31 December 2024.
 
-Filed figures, FY2024 (US$ thousands): net revenue **4,998,202**; cost of
-revenue **3,985,209**; gross profit **1,012,993**. Prior years: net revenue
-4,302,324 (2023) and 3,944,735 (2022).
+Filed figures, FY2025 (US$ thousands): net revenue **5,649,519**; cost of
+revenue **4,561,624**; gross profit **1,087,895**. Prior year, FY2024: net
+revenue **4,998,202**; cost of revenue **3,985,209**; gross profit
+**1,012,993**. Earlier: net revenue 4,302,324 (2023) and 3,944,735 (2022).
+
+**The margin moved a full point while the base rose 13.0%, and the service-only
+derivation is sensitive to it.** Gross margin fell from 20.27% in FY2024 to
+19.26% in FY2025 even as net revenue grew from $4,998.202M to $5,649.519M. Every
+ratio below is cut on FY2025 and labelled as such; the FY2024 equivalents are
+shown beside them so a reader can see which year each figure rests on and how
+much the year choice is worth. Using the superseded FY2024 margin would overstate
+the implied service-only market by roughly $0.43B on the published base.
 
 **The divisions.**
 
+    FY2025 (published here):
+    Revenue per location:        $5,649.519M / 196 = $28.824M per site per year
+    Gross profit per location:   $1,087.895M / 196 = $5.550M per site per year
+    Gross margin:                1,087,895 / 5,649,519 = 19.26%
+    Product cost per $1 margin:  4,561,624 / 1,087,895 = $4.19
+
+    FY2024 (prior year, for comparison):
     Revenue per location:        $4,998.202M / 185 = $27.017M per site per year
     Gross profit per location:   $1,012.993M / 185 = $5.476M per site per year
     Gross margin:                1,012,993 / 4,998,202 = 20.27%
     Product cost per $1 margin:  3,985,209 / 1,012,993 = $3.93
 
     Implied service-only market at the headline:
-      $42.47B x 20.27% = $8.61B      (2026 base published here)
-      $39.4B  x 20.27% = $7.99B      (publisher's 2025 value)
+      $42.47B x 19.26% = $8.18B      (FY2025 margin, 2026 base published here)
+      $39.4B  x 19.26% = $7.59B      (FY2025 margin, publisher's 2025 value)
+      $42.47B x 20.27% = $8.61B      (FY2024 margin, for comparison only)
 
     Option Care's share of the published headline:
-      $4.998B / $42.47B = 11.8%      (2026 base published here)
-      $4.998B / $39.4B  = 12.7%      (publisher's 2025 value)
+      $5.6495B / $42.47B = 13.3%     (FY2025 revenue, 2026 base published here)
+      $5.6495B / $39.4B  = 14.3%     (FY2025 revenue, publisher's 2025 value)
+      $4.998B  / $42.47B = 11.8%     (FY2024 revenue, for comparison only)
 
 **What it rules in or out.** $27.0M of revenue per site per year is a drug
 distribution business with a nursing and pharmacy service attached, not a
@@ -198,11 +259,11 @@ service business. 80% of every revenue dollar at the largest US provider is
 product cost. That makes the drug-inclusive reading of the published headlines
 the only one consistent with the one audited income statement available, and it
 prices the service-only market at roughly a fifth of whatever drug-inclusive
-figure you start from — about $8.6B against the $42.47B base. An 11.8% share for
+figure you start from — about $8.2B against the $42.47B base. A 13.3% share for
 the self-described largest independent provider is also internally consistent
 with the "large and highly fragmented" market the same filing describes; it
 would not be consistent with a $8B service-only market, where the same revenue
-would be 63% of the total.
+would be 69% of the total.
 
 The two registers agree, and they were derived from unrelated data: a statutory
 fee schedule times a federal visit count, and an SEC-filed income statement
@@ -253,8 +314,10 @@ divided by a site count. Neither is a market estimate.
   the 1.0018 / 1.0200 derivation.
 - The CMS visit counts (6,991 quarterly average; 7,365 in Q2 2025) and the
   Q2 2024 beneficiary and billing-provider counts (1,081 / 62).
-- Option Care Health's filed FY2024 revenue, cost of revenue, gross profit and
-  site counts for FY2024 and FY2025.
+- Option Care Health's filed FY2025 revenue, cost of revenue, gross profit and
+  196-location site count, with the FY2024 figures retained as the prior year.
+- The CD&R and McKesson merger agreement of 5 October 2026 at $32.05 per share,
+  from Option Care Health's own Form 8-K.
 - Named players in words only, with an explicit statement that share is not
   disclosed.
 
@@ -268,13 +331,17 @@ divided by a site count. Neither is a market estimate.
   material here is a statutory price and a federal visit count, which bounds the
   US *Medicare service* line and nothing else; it is not a US market size and
   must not be presented as one.
-- **`recent_developments`: empty.** Nothing in this pass produced a company,
-  year and verifiable event together. Option Care's site-count change between
-  the FY2024 and FY2025 filings is in the competitive section as filed fact, not
-  dressed up as a dated "development".
+- **`recent_developments`: one entry only.** The Option Care Health merger
+  agreement qualifies on company, year and verifiable event, and is taken from
+  the company's own Form 8-K. The approximately $5.8B enterprise value and the
+  CD&R 51% / McKesson 49% split are **not** in that 8-K; they are attributed in
+  the entry to the parties' announcement, and are the only part of it resting on
+  a secondary source. Option Care's site-count change between the FY2024 and
+  FY2025 filings stays in the competitive section as filed fact rather than
+  being dressed up as a dated "development".
 - **No `market_share` anywhere** — not in `competitive_landscape`, not in
   `market_segmentation`, not in the regional or country arrays. Option Care's
-  11.8% of the $42.47B headline is arithmetic against a third-party estimate, not
+  13.3% of the $42.47B headline is arithmetic against a third-party estimate, not
   a disclosed share, and it stays in the prose as the division it is.
 - **Segment shares.** Several pages split the market by therapy
   (anti-infectives, parenteral nutrition, chemotherapy, immunotherapy) and by
@@ -345,15 +412,44 @@ divided by a site count. Neither is a market estimate.
    enrolment register, updated biweekly; CSV for 14-27 December 2025 at
    https://data.cms.gov/sites/default/files/2025-12/0241c84c-74f5-4f86-b692-d408180a03bd/Home%20Infusion%20Therapy%2012.29.2025.csv
    — located but not retrievable in this pass (HTTP 403). No count reported.
-8. Option Care Health, Inc., Form 10-K for FY2024 (filed 2025) —
+8. Option Care Health, Inc., Form 10-K for FY2024 (filed 2025), accession
+   0001014739-25-000012 — prior-year figures only —
    https://www.sec.gov/Archives/edgar/data/1014739/000101473925000012/bios-20241231.htm
    (net revenue $4,998,202K; cost of revenue $3,985,209K; gross profit
    $1,012,993K; 2023 revenue $4,302,324K; 2022 revenue $3,944,735K; 92
    full-service pharmacies and 93 stand-alone ambulatory infusion suites; 185
    locations in 43 states; "largest independent provider of home and alternate
    site infusion services"; market described as "large and highly fragmented").
-9. Option Care Health, Inc., Form 10-K for FY2025 (196 locations; 87 pharmacies
-   and 109 stand-alone ambulatory infusion suites as of 31 December 2025).
+9. Option Care Health, Inc., Form 10-K for the fiscal year ended 31 December
+   2025, filed 24 February 2026, accession 0001014739-26-000008 —
+   https://www.sec.gov/Archives/edgar/data/1014739/000101473926000008/bios-20251231.htm
+   (net revenue $5,649,519K; cost of revenue $4,561,624K; gross profit
+   $1,087,895K, a 19.26% margin against 20.27% in FY2024; 87 full-service
+   pharmacies, 73 of them with ambulatory infusion suites; 109 stand-alone
+   ambulatory infusion suites, 27 with advanced practitioner capabilities; 196
+   locations in 43 states as of 31 December 2025; 88% of revenue from managed
+   care and other non-governmental payers and 12% from direct federal and state
+   programmes; one payer approximately 14% of revenue; 6,528 full-time and 1,738
+   part-time employees, including a nursing team of approximately 2,700;
+   competitors named as Coram (CVS Health), Amerita (BrightSpring), KabaFusion,
+   Soleo Health, Vital Care, Accredo, CVS Caremark, Optum Rx and Orsini). **This
+   is the filing the grounding divisions are cut on.**
+9a. Option Care Health, Inc., Form 8-K dated 5 October 2026, filed 6 October
+    2026, accession 0001104659-26-113904 —
+    https://www.sec.gov/Archives/edgar/data/1014739/000110465926113904/tm2627097d1_8k.htm
+    (Agreement and Plan of Merger with Onyx Bidco LLC and Onyx Merger Sub, Inc.;
+    acquisition by an investor group of affiliates of Clayton, Dubilier & Rice
+    and McKesson Corporation; $32.05 per share in cash; unanimous board
+    recommendation). The approximately $5.8B enterprise value, the CD&R 51% /
+    McKesson 49% split and the expected first-half-2027 close are **not** in the
+    8-K and are attributed to the parties' announcement of 6 October 2026.
+9b. Option Care Health, Inc., FY2025 results exhibit, accession
+    0001014739-26-000005 —
+    https://www.sec.gov/Archives/edgar/data/1014739/000101473926000005/exhibit991-12312025.htm
+    (FY2025 net revenue $5,649.5M up 13.0%; net income $207.6M down 2.0%;
+    adjusted EBITDA $471.3M up 6.2%; adjusted diluted EPS $1.72; Q4 net revenue
+    $1,465.4M up 8.8%; FY2026 guidance net revenue $5.8B-$6.0B and adjusted
+    EBITDA $480M-$505M, subsequently withdrawn on announcement of the merger).
 10. Strategic Market Research, home infusion therapy market —
     https://www.strategicmarketresearch.com/market-report/home-infusion-therapy-market
     ($39.4B in 2025 to $66.6B by 2032, 7.8%, forecast window 2026-2032).
