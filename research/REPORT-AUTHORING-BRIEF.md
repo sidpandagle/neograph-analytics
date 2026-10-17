@@ -146,6 +146,38 @@ ignored: a "confirm each is sourced" warning means go back to the notes file.
 
 Only the session owner publishes. A research pass stops at a passing `check`.
 
+### Second, independent pass on the arithmetic
+
+```bash
+python -I scripts/verify-report-arithmetic.py <slug> [<slug> ...]
+python -I scripts/verify-report-arithmetic.py --all
+```
+
+**A passing `check` proves the checker's rules were met. It does not prove the
+series says what the headline says.** This script re-derives the figures from
+the file's own contents with separate code that imports nothing from
+`report-db.mjs`, so agreement means two independent computations agree rather
+than one computation run twice. It recomputes the CAGR twice — once from the
+endpoints of `market_forecast`, once from `current_value` and `forecast_value`
+alone — and prints the year-on-year rates, because a series whose implied growth
+jumps between points is a transcription error that both figures can still hide.
+
+Run it on every draft before it goes near a publish, and run `--all` after a
+batch. It is required on anything a subagent produced: an agent reporting its own
+`check` as green is a hypothesis.
+
+Measured corpus-wide on 2026-10-18 at 01:05 IST: **45 of 45 reproduce.** Four
+reconcile within 0.05-0.25 points rather than under 0.01 —
+`decentralized-clinical-trials` (0.145), `health-data-interoperability` (0.241),
+`plasma-fractionation` (0.087) and `sleep-apnea-devices` (0.050). All four are
+earlier reports whose headline CAGR is a publisher's figure rounded to one
+decimal while the endpoints are that publisher's own, so the gap is the rounding
+and not an error; all are far inside the 0.6-point tolerance and **none is being
+changed**, because moving a published figure to make a derived one prettier is
+the thing the house rules forbid. Reports written since state the CAGR to two
+decimals and land under 0.006. If a future draft reconciles loosely, the
+question is which of the two figures the source actually gives.
+
 **Publishing is paired with a deploy, in that order and close together.**
 `app/reports/[slug]/page.tsx` sets `dynamicParams = false`, so a slug that
 exists in Supabase but was not in the last build's `generateStaticParams()`
