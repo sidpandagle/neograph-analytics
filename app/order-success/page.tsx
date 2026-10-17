@@ -14,9 +14,9 @@ export default function OrderSuccessPage() {
       <div className="max-w-lg w-full text-center space-y-6 py-16">
         {/* Success icon */}
         <div className="flex justify-center">
-          <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
+          <div className="w-20 h-20 rounded-full bg-[var(--status-info-chip)] flex items-center justify-center">
             <svg
-              className="w-10 h-10 text-blue-600"
+              className="w-10 h-10 text-[var(--status-info-icon)]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

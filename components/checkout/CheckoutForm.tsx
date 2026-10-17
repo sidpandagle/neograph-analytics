@@ -73,8 +73,8 @@ export function CheckoutForm({ reportSlug, reportTitle, quotedPrice }: CheckoutF
   if (submitted) {
     return (
       <div className="text-center py-10 space-y-4">
-        <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-          <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="w-14 h-14 rounded-full bg-[var(--status-success-surface)] flex items-center justify-center mx-auto">
+          <svg className="w-7 h-7 text-[var(--status-success-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -97,7 +97,7 @@ export function CheckoutForm({ reportSlug, reportTitle, quotedPrice }: CheckoutF
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
-          Full Name <span className="text-red-500">*</span>
+          Full Name <span className="text-[var(--status-error-icon)]">*</span>
         </label>
         <input
           type="text"
@@ -112,7 +112,7 @@ export function CheckoutForm({ reportSlug, reportTitle, quotedPrice }: CheckoutF
 
       <div>
         <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
-          Email Address <span className="text-red-500">*</span>
+          Email Address <span className="text-[var(--status-error-icon)]">*</span>
         </label>
         <input
           type="email"
@@ -173,7 +173,7 @@ export function CheckoutForm({ reportSlug, reportTitle, quotedPrice }: CheckoutF
       {error && (
         <p
           role="alert"
-          className="rounded-md border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-800 dark:border-red-500/40 dark:bg-red-500/10 dark:text-red-200"
+          className="rounded-md border border-[var(--status-error-border)] bg-[var(--status-error-surface)] px-3 py-2 text-sm text-[var(--status-error-text)]"
         >
           {error}
         </p>

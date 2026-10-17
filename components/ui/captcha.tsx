@@ -79,7 +79,7 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
             className={cn(
               "w-24 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 bg-[var(--background)]",
               isValid && userAnswer
-                ? "border-blue-500 focus:ring-blue-500"
+                ? "border-[var(--cmi-primary)] focus:ring-[var(--primary)]"
                 : "border-[var(--border)] focus:ring-[var(--primary)]"
             )}
             placeholder="?"
@@ -89,7 +89,7 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
             <div className="flex-shrink-0">
               {isValid ? (
                 <svg
-                  className="w-5 h-5 text-blue-600"
+                  className="w-5 h-5 text-[var(--cmi-primary)]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -103,7 +103,7 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5 text-red-600"
+                  className="w-5 h-5 text-[var(--status-error-icon)]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

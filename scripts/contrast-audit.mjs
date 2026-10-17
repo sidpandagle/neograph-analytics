@@ -87,10 +87,29 @@ const PAIRS = [
   ['field border', '--input', '--background', 3.0, 'form fields on the desk'],
   ['large text', '--cmi-primary', '--card', 3.0, 'links and headings in accent'],
   ['body text', '--primary-foreground', '--cmi-primary-fill', 4.5, 'white label on the blue panel and buttons'],
+
+  /* Status panels. The message sits on the panel's own surface, not on the
+     card behind it, so that is the pair that has to clear 4.5:1. The icon
+     glyphs are measured at 3:1 as non-text UI under 1.4.11 -- a 20px stroked
+     SVG is a graphic, not text. */
+  ['body text', '--status-error-text', '--status-error-surface', 4.5, 'the message in an error panel (contact, request-sample, blog form, checkout)'],
+  ['icon', '--status-error-icon', '--status-error-surface', 3.0, 'the alert glyph inside an error panel'],
+  ['icon', '--status-error-icon', '--card', 3.0, 'the required-field asterisk on a panel (CheckoutForm)'],
+  ['body text', '--status-info-text', '--status-info-surface', 4.5, 'the privacy note under the request-sample form'],
+  ['icon', '--status-info-icon', '--status-info-chip', 3.0, 'the tick and document glyphs in their round chips'],
+  ['icon', '--status-success-icon', '--status-success-surface', 3.0, 'the order-confirmed tick'],
+  ['icon', '--status-warn-icon', '--status-warn-surface', 3.0, 'the amber accent glyph on /about and /404'],
 ];
 
 /** Decorative only: measured and printed, never failed. See note 2 above. */
 const INFORMATIONAL = [
+  ['--status-error-border', '--status-error-surface', 'the error panel outline against its own fill'],
+  ['--status-info-border', '--status-info-surface', 'the note panel outline against its own fill'],
+  ['--status-error-surface', '--card', 'the error panel separating from the card behind it'],
+  ['--status-info-surface', '--card', 'the note panel separating from the card behind it'],
+  ['--status-info-chip', '--card', 'the round icon chip separating from the card behind it'],
+  ['--status-error-border', '--card', 'what actually makes the error panel perceivable; compare --border on --card below'],
+  ['--status-info-border', '--card', 'what actually makes the note panel perceivable; compare --border on --card below'],
   ['--border', '--card', 'card outlines, FAQ row borders'],
   ['--border', '--background', 'section rules'],
 ];

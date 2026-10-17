@@ -46,7 +46,7 @@ export function OrderSummary({
             </span>
           </div>
           {hasDiscount && (
-            <p className="text-xs text-blue-600 font-medium">
+            <p className="text-xs text-[var(--cmi-primary)] font-medium">
               You save {currency} {(price - discountedPrice).toFixed(2)}
             </p>
           )}

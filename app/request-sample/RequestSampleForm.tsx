@@ -153,8 +153,8 @@ export default function RequestSampleForm() {
               <CardContent>
                 {submitted ? (
                   <div className="py-8 text-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-16 h-16 bg-[var(--status-info-chip)] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-[var(--status-info-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -169,12 +169,12 @@ export default function RequestSampleForm() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {error && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <div className="bg-[var(--status-error-surface)] border border-[var(--status-error-border)] rounded-lg p-4">
                         <div className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="w-5 h-5 text-[var(--status-error-icon)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          <p className="text-sm text-red-800">{error}</p>
+                          <p className="text-sm text-[var(--status-error-text)]">{error}</p>
                         </div>
                       </div>
                     )}
@@ -313,8 +313,8 @@ export default function RequestSampleForm() {
                       onValidationChange={setCaptchaValid}
                     />
 
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-sm text-blue-800">
+                    <div className="bg-[var(--status-info-surface)] border border-[var(--status-info-border)] rounded-lg p-4">
+                      <p className="text-sm text-[var(--status-info-text)]">
                         <strong>Note:</strong> By submitting this form, you agree to receive the sample report and occasional updates about our research. We respect your privacy and never share your information.
                       </p>
                     </div>
@@ -354,8 +354,8 @@ export default function RequestSampleForm() {
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-[var(--status-info-chip)] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-[var(--status-info-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
@@ -368,8 +368,8 @@ export default function RequestSampleForm() {
 
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-[var(--status-info-chip)] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-[var(--status-info-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -382,8 +382,8 @@ export default function RequestSampleForm() {
 
             <Card className="text-center">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-[var(--status-info-chip)] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-[var(--status-info-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>

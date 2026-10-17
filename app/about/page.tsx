@@ -162,7 +162,7 @@ export default async function AboutPage() {
               >
                 <div className={`h-[3px] ${item.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
                 <div className="p-6">
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${item.accent === 'amber' ? 'bg-amber-50 text-amber-600' : 'bg-ocean-50 text-ocean-700'}`}>
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${item.accent === 'amber' ? 'bg-[var(--status-warn-surface)] text-[var(--status-warn-icon)]' : 'bg-ocean-50 text-ocean-700'}`}>
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d={item.icon} />
                     </svg>

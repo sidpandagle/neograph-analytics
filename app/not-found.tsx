@@ -124,8 +124,8 @@ export default function NotFoundPage() {
                 <Link href="/services">
                   <Card hover className="cursor-pointer transition-all">
                     <CardContent className="flex items-start gap-4 pt-6">
-                      <div className="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="w-10 h-10 bg-[var(--status-warn-surface)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[var(--status-warn-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                       </div>
@@ -160,8 +160,8 @@ export default function NotFoundPage() {
                 <Link href="/">
                   <Card hover className="cursor-pointer transition-all">
                     <CardContent className="flex items-start gap-4 pt-6">
-                      <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="w-10 h-10 bg-[var(--cmi-surface)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[var(--cmi-body)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
                       </div>
@@ -192,8 +192,8 @@ export default function NotFoundPage() {
                 <CardContent>
                   {submitted ? (
                     <div className="py-8 text-center">
-                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="w-16 h-16 bg-[var(--status-info-chip)] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-[var(--status-info-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
@@ -268,7 +268,7 @@ export default function NotFoundPage() {
                         />
                         {attemptedUrl && (
                           <p className="text-xs text-[var(--muted-foreground)] mt-1">
-                            You were trying to access: <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">{attemptedUrl}</code>
+                            You were trying to access: <code className="bg-[var(--cmi-surface)] px-1 py-0.5 rounded text-xs">{attemptedUrl}</code>
                           </p>
                         )}
                       </div>

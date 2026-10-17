@@ -80,7 +80,7 @@ export default function ReportsSkeleton() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="border-t border-slate-200 pt-4 mt-4">
+                  <CardFooter className="border-t border-[var(--cmi-line)] pt-4 mt-4">
                     <div className="flex items-center justify-between w-full">
                       <Skeleton className="h-4 w-16" />
                       <Skeleton className="h-4 w-24" />

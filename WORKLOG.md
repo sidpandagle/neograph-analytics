@@ -1744,3 +1744,67 @@ pairs. Built `/about` and `/services`: 0 slate classes, 48/33/16 and 48/79/20
 occurrences of `--cmi-ink` / `--cmi-body` / `--cmi-meta`. The dark-mode numbers
 above are computed from the token hexes, not observed in a browser — the
 rendered check waits for the 21:00-09:00 window.
+
+## 2026-10-17 — a status-colour token set, and the last raw palette class
+
+### What R-20 actually was
+Every status panel, chip and glyph on the site was a hand-written Tailwind
+pair: `bg-red-50 border-red-200 text-red-800` error panels, `bg-blue-100` +
+`text-blue-600` round icon chips, `bg-blue-50` + `text-blue-800` note panels,
+`bg-green-100` + `text-green-600` order-confirmed ticks, `bg-amber-50` +
+`text-amber-600` accents, and one `bg-purple-100` chip of a hue that appears
+nowhere else on the site. None of them were contrast failures — each pale fill
+carries its own dark foreground, so the pair keeps its ratio — which is exactly
+why they survived three contrast passes. They simply did not flip, so every one
+stayed a light chip on a dark page. **One of 35 call sites** had a `dark:`
+variant triple, in `CheckoutForm.tsx:176`, which is what the hand-written
+approach gets you over time.
+
+### 13 tokens instead of 35 `dark:` variants
+`--status-{error,info,success,warn}-{surface,border,text,icon}` now exist in
+both theme blocks. The light values are the exact Tailwind hexes they replace,
+so light mode is unchanged to the pixel; the dark values are new. 68 raw
+classes were repointed across 16 pages and components, and `app/` +
+`components/` now contain **0** raw Tailwind palette classes in live markup —
+the only matches a grep still finds are inside the `country-select` docstring,
+which describes the defect it was fixed for.
+
+The dark fills are deliberately quiet against the card, **1.12 to 1.41:1**,
+which is *below* the site's own card hairline at 1.55:1. A dark panel that
+shouts is worse than one that whispers, and what makes these panels
+perceivable is the border instead: `--status-error-border` is **1.88:1**
+against the card and `--status-info-border` **2.41:1**, both above that
+baseline. The two round icon chips carry no border of their own, which is why
+the chip fill is the loudest of the set.
+
+`scripts/contrast-audit.mjs` gained 12 measured pairs so none of this is
+asserted: message text on its own panel runs **7.60–11.83:1** across both
+themes, and the glyphs **3.00–9.51:1** against 1.4.11's 3:1 floor. The two
+tightest numbers, 3.00 and 3.07, are light-mode amber and green — the existing
+Tailwind values, unchanged, so they are not a regression, but they are the two
+worth revisiting first if the palette is ever retuned.
+
+### Three things that were not status colours at all
+Repointing turned up raw classes doing other jobs:
+- `text-blue-600` meant two different things. Inside a `bg-blue-100` chip it is
+  a status glyph; in `OrderSummary`, `RegionalAnalysisChart` and the checkout
+  bullets it is brand accent text. Mapped per file, to
+  `--status-info-icon` and `--cmi-primary` respectively, rather than globally.
+- `captcha.tsx` painted its valid state `border-blue-500 focus:ring-blue-500`
+  while the invalid branch two lines below already used
+  `border-[var(--border)] focus:ring-[var(--primary)]`. Now both branches speak
+  the same language.
+- Three hand-rolled loading bars in `app/request-sample/page.tsx` and a
+  `border-slate-200` footer in `ReportsSkeleton` used raw greys while the
+  `Skeleton` component beside them paints `--cmi-surface`. Repointed to match.
+
+The `bg-purple-100` / `text-purple-600` chip on `/request-sample` was mapped to
+the info chip rather than given a purple token. Purple was already removed from
+`country-select` for appearing nowhere else on the site; adding a token for it
+would have made one off-brand chip permanent.
+
+### Verification
+`tsc --noEmit` clean. `contrast-audit.mjs` 0 failing pairs in both themes with
+the 12 new pairs in place. The rendered confirmation — that these panels read
+as panels in a real dark-mode browser — still waits for the 21:00-09:00 window;
+every number above is computed from the token hexes.

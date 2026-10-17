@@ -158,7 +158,7 @@ export const RegionalAnalysisChart: React.FC<RegionalAnalysisChartProps> = ({
                 {region.cagr && (
                   <div>
                     <span className="text-muted-foreground">CAGR: </span>
-                    <span className="font-bold text-blue-600">{region.cagr}</span>
+                    <span className="font-bold text-[var(--cmi-primary)]">{region.cagr}</span>
                   </div>
                 )}
               </div>
