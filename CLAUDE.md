@@ -249,6 +249,7 @@ node scripts/report-db.mjs check content/reports/*.json   # drafts, offline
 node scripts/audit-html.mjs [--prod]                      # 16 routes, headless
 node scripts/contrast-audit.mjs                           # token contrast, both themes
 node scripts/report-db.mjs audit                          # SEO lengths corpus-wide
+node --experimental-strip-types scripts/seo-unit.mjs      # lib/seo.ts helpers, offline
 ```
 
 Supabase egress is metered and the report rows carry large JSONB columns: never
