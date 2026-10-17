@@ -1515,3 +1515,511 @@ has 0 failing pairs.
 
 Worth keeping in mind for any future corpus-wide read used during a build: it
 needs a revalidate, or the build will cheerfully serve yesterday's corpus.
+
+## 2026-10-17 — the four owner decisions, answered and implemented
+Siddhant answered the four `[H]` items in one line each: R-10 "go with what is
+better for site", R-9 yes, R-4 yes, R-11 "you draft it and use it in site".
+
+- **R-9 closed as confirmed.** All 12 marks in `TrustedPartnersSection` are
+  authorised by the owner. No code change; the finding is recorded as answered
+  rather than fixed, which is the honest disposition.
+- **R-4: the price is real, the delivery was not.** $2,995 / `InStock` is
+  correct and stays. Verifying it exposed a worse defect: `CheckoutForm`'s
+  `handleSubmit` was `setSubmitted(true)` and nothing else. It rendered "our
+  team will contact you" over a lead that was never sent anywhere — every
+  checkout inquiry since the form shipped was dropped. New
+  `app/api/purchase-inquiry/route.ts` (mirrors `/api/contact`: same
+  `form-guard`, same Resend sender, plus report slug/title and the quoted
+  price), `submitPurchaseInquiry()` in `lib/api/forms.ts`, and the form now
+  flips to the success panel only on a confirmed send, shows the server's
+  message on failure, and keeps what the buyer typed. Its 5 field borders also
+  still used `--border` (1.07:1) and are repointed to `--input` (3.43/3.80:1) —
+  the token pass that fixed contact, request-sample, blog and 404 had missed
+  checkout.
+- **R-11 drafted and published.** `/legal/terms-of-use` exists: 10 sections,
+  ~5.9KB, covering what we publish and that forecasts are estimates, ordering
+  and sales-assisted payment, the report licence (one named user, internal use,
+  quoting with attribution; no resale, no training a competing data product),
+  free material, automated access via `/llms.txt`, IP, liability capped at what
+  was paid, personal data, and who the contracting entity is. Published through
+  a new `scripts/legal-db.mjs` (list/dump/check/publish, upsert on `slug`,
+  nothing deleted). `Dataset.license` is restored on all 182 report pages and
+  the footer carries a Terms of Use link.
+  **Governing law is deliberately not asserted** — the footer says NeoGraph
+  Analytics Pvt. Ltd. (Pune) while `lib/contact.ts` also carries an Austin, TX
+  office, so the page says the contracting entity and governing law are stated
+  on the order. Siddhant's call to name one.
+- **R-10 resolved as "keep all 182 and widen".** Orphaning 26 indexed pages
+  costs more than a broader masthead. Measuring it found the actual defect:
+  **22 of those rows were labelled `Life Sciences` in Supabase** — lunar
+  mining, undersea cable, green hydrogen, high-entropy alloys, precision-farming
+  drones, quantum networking — and both the mega-menu tiles and the `/reports`
+  chips derive from that column, so the taxonomy actively misfiled them.
+  `scripts/relabel-industries.mjs` (dry run by default) relabelled 28 rows into
+  7 honest industries: Advanced Materials 4, Agriculture & Food Tech 6,
+  Climate & Energy 4, Digital Infrastructure 3, Quantum Technology 4, Space
+  Economy 4, Synthetic Biology 3. The corpus now reads 13 verticals, not 6, and
+  the hero and listing counts — which are derived, not written — say so
+  without any wording that has to be kept true by hand. `data/categories.json`
+  gained the 7 with editorial descriptions and slugs matching the runtime
+  derivation. Root, home and `/reports` metadata widened to "healthcare, life
+  sciences and frontier technology" (153 and 151 chars); `/about` no longer
+  calls itself "a specialized healthcare consulting firm". The "Behind
+  Healthcare's Biggest Decisions" h1 stays: healthcare is 156 of 182 rows and
+  the ranking brand anchor.
+
+### A third false pass of the same family, caught
+`npm run build` on a warm `.next` **emitted the previous build's HTML**: the
+compiled server chunk contained the new Terms of Use footer link while
+`.next/server/app/about.html`, written by that same build, carried only the old
+three. Verification against it would have passed a change that had not been
+built. Before that, `next start -p 3100` had failed with `EADDRINUSE` (PID
+15684 already held the port) and the 200s came from a stale server — the exact
+trap CLAUDE.md warns about. Both now have a habit attached: confirm the PID
+owning the port is ours, and move `.next` aside before a build whose output
+will be used as evidence.
+
+### Checker
+`scripts/audit-html.mjs` audits `/legal/terms-of-use` as a 17th route and gains
+a licence rule: a `license` in any ld+json block must point at a route this
+build renders (local) or return 200 (`--prod`). Negative-tested — repointing it
+at `/legal/nope-does-not-exist` fails the audit, restoring it clears.
+`17 of 17 routes error-free, 0 errors, 1 warning` (the pre-existing short
+`/design-system` description). `contrast-audit.mjs`: 0 failing pairs.
+
+## 2026-10-17 — the homepage band, and a letter missing from 182 pages
+
+### Featured reports: six in a 3-up grid
+Four reports in a 2-up grid gave each card roughly 470px of width, and the
+section read as a pair of oversized tiles stacked twice rather than a shelf of
+reports. Six in `md:2 xl:3` fills the same band at the width the type was sized
+for — title 17/18px, chips and growth rail stepped down to match. Two
+alignment rules make a row of three hold together: `min-h-[2.5em]` on the title
+so the chips, rail and footer line up whether a title wraps once or twice, and
+`mt-auto` on the rail so a short chip row cannot lift it.
+
+Two defects came out of the rework. Every card whose `regional_analysis` was
+empty printed "0 regions · Base year 2026" — the count is now omitted rather
+than rendered as zero, because nothing-shaped text is worse than nothing. And
+each card carried two links to the same page, the title and a "Read more"; the
+title's link now stretches over the card with `after:inset-0`, so the whole
+card is the hit target and the footer arrow is `aria-hidden` decoration. The
+Supabase order gained `report_id desc` as a tiebreaker, so a page of rows
+sharing `published_year` is stable between builds rather than arbitrary.
+
+### Partner logos, and why no two tiles matched
+The 12 source files in `/assets/logos` are all 150×120 with the artwork
+floating in a baked-in white margin that differs per brand. On a 152px tile
+that produced a white rectangle of one size with a dark gutter of another
+beside every logo. `/assets/logos/trimmed` holds the same artwork cropped to
+its ink; each entry declares its real intrinsic size — verified by reading the
+PNG IHDR of all 12, every declared pair matches — so `next/image` reserves the
+right box, and the tile is white so artwork and tile meet with no seam. The
+marquee track gained `pr-4` to pay for the gap that falls between the two
+copies; without it the `-50%` keyframe lands half a gap short and the loop
+visibly jumps once a cycle.
+
+### A letter missing from every trimmed title (R-17)
+`marketName()` in `lib/seo.ts` collapses whitespace, and shipped as `/s+/`
+where `/\s+/` was meant — so it replaced the literal letter **s** with a
+space. Measured on the built HTML of `/reports/liquid-biopsy-market`, the same
+six related-report cards before and after the one-character fix:
+
+```
+Antimicrobial Re i tance Diagno tic  Market  ->  Antimicrobial Resistance Diagnostics Market
+Veterinary Diagno tic  Market                ->  Veterinary Diagnostics Market
+Pharmacogenomic  Market                      ->  Pharmacogenomics Market
+Proteomic  Market                            ->  Proteomics Market
+```
+
+Six cards on each of 182 report pages, plus every report's OpenGraph image,
+which calls the same helper. Nothing failed and no checker fired: the string
+was simply wrong, and a wrong string renders. The function's own docstring
+already recorded a tool turning its escapes into literal control characters
+once — it had happened twice, in the same function, and the second time the
+mangled pattern still matched something, so it did damage instead of nothing.
+A repo-wide scan found no other unescaped `/s+/`-class pattern and no stray
+control characters in any `.ts/.tsx/.mjs/.js/.css` source.
+
+### And a date that depended on where the build ran (R-18)
+Writing assertions for the rest of `lib/seo.ts` turned up a second one on the
+first run. `schemaDate('December 18, 2025')` returned **2025-12-17**: `new
+Date` parses a long-form date as *local* midnight and `toISOString()` converts
+to UTC before slicing, so every build east of Greenwich emitted the previous
+day while Vercel's UTC build emitted the right one. The calendar fields are now
+read back in the zone they were parsed in. A `datePublished` in structured data
+should not be a function of the builder's timezone.
+
+### Checker
+`scripts/seo-unit.mjs` — 16 offline assertions over `marketName`, `pageTitle`,
+`pageDescription` and `schemaDate`, no network and no build, with both
+regressions as named cases. It is what caught R-18. Run it with
+`node --experimental-strip-types scripts/seo-unit.mjs`; it is in the CLAUDE.md
+checker list.
+
+### Housekeeping
+The stale `next start -p 3100` from 2026-10-16 02:24 was still holding the port
+— the exact false-pass trap CLAUDE.md warns about. Ownership confirmed by
+command line before stopping it. Both builds this session ran with `.next`
+moved aside, and `.gitignore` now ignores `/.next.*/` so those set-asides stop
+showing up as untracked noise; they are build output and are never deleted by
+tooling here.
+
+### Verification
+Clean build exit 0, no new lint warnings (the one `region` unused warning in
+`app/reports/[slug]/page.tsx:65` predates this work). `audit-html.mjs`:
+17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
+`contrast-audit.mjs`: 0 failing pairs. `seo-unit.mjs`: 16 of 16.
+Built homepage HTML: 6 `growth-rail` cards, 24 trimmed-logo references.
+
+## 2026-10-17 — two pages that never got the theme, and a third stale claim
+
+### `/about` and `/services` were still painted in raw slate (R-19)
+Both pages wrap their content in `bg-[var(--card)]` and
+`bg-[var(--cmi-surface)]` panels — surfaces that do flip for dark mode — with
+type on top that did not. Measured against the dark tokens (`--card #131C30`,
+`--background #0B1120`, `--muted #18223A`):
+
+```
+text-slate-900   1.05 / 1.05 / 1.13 : 1   every h2 and h3 on both pages
+text-slate-700   1.64 / 1.82 / 1.53 : 1   the pull quote
+text-slate-600   2.24 / 2.48 / 2.09 : 1   mission + who-we-are body, service bullets
+text-slate-500   3.57 / 3.96 / 3.32 : 1   all six why-us cards, every service blurb and step
+```
+
+WCAG AA asks 4.5:1 for body text. In dark mode the headings were effectively
+invisible — the same defect that measured 1.02:1 in `country-select`, left
+behind on the two pages that were never converted. 22 classes repointed to
+tokens (14 in `app/about/page.tsx`, 8 in `app/services/page.tsx`): ink to
+`--cmi-ink`, body to `--cmi-body` (6.00:1 light), meta to `--cmi-meta`
+(4.60:1 light), hairlines to `--cmi-line`, and the hover border to
+`--cmi-primary` to match every other card on the site. The served `/about`
+now contains **0** raw slate classes — the 21 `slate-` substrings a naive grep
+finds are all `-translate-`.
+
+A repo-wide scan confirms no `text-slate-*` or `text-gray-*` remains anywhere
+in `app/` or `components/` except one `<svg>` stroke in `not-found.tsx:164`,
+which sits on its own `bg-slate-100` chip and so keeps its ratio. That pair,
+and 34 others like it, are filed as **R-20**: `bg-blue-100`+`text-blue-600`
+chips, `bg-red-50`+`text-red-800` error panels and so on. They are not
+contrast failures — each pale background carries its own dark foreground — but
+they stay light chips on a dark page. `CheckoutForm.tsx:176` is the only one
+with a `dark:` variant triple, and shows what a status-colour token set would
+replace.
+
+### The third hand-maintained corpus claim on the homepage (R-23)
+The featured-reports subheading read "Oncology, medical devices, diagnostics,
+digital health and life sciences" — accurate for a healthcare-only corpus, and
+untrue since R-15 widened the taxonomy to 13 verticals. The cards are ordered
+by publication date, so the first frontier-technology report to top the list
+would have appeared under a healthcare-only heading. Its predecessor on the
+same line was the "2,500 reports spanning 20+ sectors and 50+ countries" claim.
+Rather than rewrite the sentence a third time, it is now `Intl.ListFormat` over
+the distinct `industry` values of the six rows the section already fetches:
+today, "Medical Devices, Life Sciences, Pharmaceuticals, and Healthcare IT."
+from 4 distinct industries across the 6 cards. A sentence derived from its own
+data cannot go stale.
+
+### Also filed, not fixed
+- **R-21**: the four impact stats on `/about` carry `divide-white/[0.06]` with
+  no `divide-x` or `divide-y` beside it, so Tailwind sets a divider colour and
+  a zero border width — **0 of 3 intended rules render**. Left in place rather
+  than guessed at: `divide-x` on a 2-up grid would also stripe the row starts,
+  so which rule was wanted is a design call.
+- **R-22**: `.prose table` sets `width: 100%; overflow: hidden` for its rounded
+  corners, and the only `display:block; overflow-x:auto` escape is inside
+  `@media (max-width: 768px)` — so above 769px a wide table has no scroll
+  container. Whether its cells are then clipped or push the page into
+  horizontal scroll depends on how the browser applies `overflow` to a table
+  box, which this queue may not assert without looking. Doubly latent: **0 of
+  the 22 rows in the local snapshots contain a `<table>`**, so nothing
+  published exercises it. One rendered check with a deliberately wide table,
+  in the night window, before any fix.
+
+### Verification
+`tsc --noEmit` clean. Clean build exit 0, 12 lint warnings — the same 12 as
+before this work. `audit-html.mjs` against the served build: 17 of 17 routes
+error-free, 0 errors, 1 pre-existing warning. `contrast-audit.mjs`: 0 failing
+pairs. Built `/about` and `/services`: 0 slate classes, 48/33/16 and 48/79/20
+occurrences of `--cmi-ink` / `--cmi-body` / `--cmi-meta`. The dark-mode numbers
+above are computed from the token hexes, not observed in a browser — the
+rendered check waits for the 21:00-09:00 window.
+
+## 2026-10-17 — a status-colour token set, and the last raw palette class
+
+### What R-20 actually was
+Every status panel, chip and glyph on the site was a hand-written Tailwind
+pair: `bg-red-50 border-red-200 text-red-800` error panels, `bg-blue-100` +
+`text-blue-600` round icon chips, `bg-blue-50` + `text-blue-800` note panels,
+`bg-green-100` + `text-green-600` order-confirmed ticks, `bg-amber-50` +
+`text-amber-600` accents, and one `bg-purple-100` chip of a hue that appears
+nowhere else on the site. None of them were contrast failures — each pale fill
+carries its own dark foreground, so the pair keeps its ratio — which is exactly
+why they survived three contrast passes. They simply did not flip, so every one
+stayed a light chip on a dark page. **One of 35 call sites** had a `dark:`
+variant triple, in `CheckoutForm.tsx:176`, which is what the hand-written
+approach gets you over time.
+
+### 13 tokens instead of 35 `dark:` variants
+`--status-{error,info,success,warn}-{surface,border,text,icon}` now exist in
+both theme blocks. The light values are the exact Tailwind hexes they replace,
+so light mode is unchanged to the pixel; the dark values are new. 68 raw
+classes were repointed across 16 pages and components, and `app/` +
+`components/` now contain **0** raw Tailwind palette classes in live markup —
+the only matches a grep still finds are inside the `country-select` docstring,
+which describes the defect it was fixed for.
+
+The dark fills are deliberately quiet against the card, **1.12 to 1.41:1**,
+which is *below* the site's own card hairline at 1.55:1. A dark panel that
+shouts is worse than one that whispers, and what makes these panels
+perceivable is the border instead: `--status-error-border` is **1.88:1**
+against the card and `--status-info-border` **2.41:1**, both above that
+baseline. The two round icon chips carry no border of their own, which is why
+the chip fill is the loudest of the set.
+
+`scripts/contrast-audit.mjs` gained 12 measured pairs so none of this is
+asserted: message text on its own panel runs **7.60–11.83:1** across both
+themes, and the glyphs **3.00–9.51:1** against 1.4.11's 3:1 floor. The two
+tightest numbers, 3.00 and 3.07, are light-mode amber and green — the existing
+Tailwind values, unchanged, so they are not a regression, but they are the two
+worth revisiting first if the palette is ever retuned.
+
+### Three things that were not status colours at all
+Repointing turned up raw classes doing other jobs:
+- `text-blue-600` meant two different things. Inside a `bg-blue-100` chip it is
+  a status glyph; in `OrderSummary`, `RegionalAnalysisChart` and the checkout
+  bullets it is brand accent text. Mapped per file, to
+  `--status-info-icon` and `--cmi-primary` respectively, rather than globally.
+- `captcha.tsx` painted its valid state `border-blue-500 focus:ring-blue-500`
+  while the invalid branch two lines below already used
+  `border-[var(--border)] focus:ring-[var(--primary)]`. Now both branches speak
+  the same language.
+- Three hand-rolled loading bars in `app/request-sample/page.tsx` and a
+  `border-slate-200` footer in `ReportsSkeleton` used raw greys while the
+  `Skeleton` component beside them paints `--cmi-surface`. Repointed to match.
+
+The `bg-purple-100` / `text-purple-600` chip on `/request-sample` was mapped to
+the info chip rather than given a purple token. Purple was already removed from
+`country-select` for appearing nowhere else on the site; adding a token for it
+would have made one off-brand chip permanent.
+
+### Verification
+`tsc --noEmit` clean. `contrast-audit.mjs` 0 failing pairs in both themes with
+the 12 new pairs in place. The rendered confirmation — that these panels read
+as panels in a real dark-mode browser — still waits for the 21:00-09:00 window;
+every number above is computed from the token hexes.
+
+## 2026-10-17 — 17 pages nobody was told about
+
+### The sitemap robots points at was missing three whole families (R-24)
+`robots.ts` advertises exactly one sitemap, `/sitemap.xml`. That route listed
+8 static pages, 182 reports, 8 articles and 6 press releases — and none of the
+4 legal pages, none of the 10 consulting services, and none of the 3 author
+profiles, all of which the build renders. The consulting pages did have a
+sitemap of their own, `/sitemap-consulting.xml`, but `robots.ts` never names
+it, so no crawler was ever told it exists. With Search Console reporting
+**7 pages indexed of 158**, a sitemap that omits 17 real pages is not a
+rounding error.
+
+`/sitemap.xml` now emits all three families. The legal query is a deliberate
+lean `select('slug,last_updated')` rather than the existing `getLegalPages()`,
+which selects `*`: that would pull four policies' full text out of a metered
+database every hour to print four URLs. `/sitemap-pages.xml` and
+`/sitemap-consulting.xml` keep serving their own subsets unchanged — this route
+is simply the complete one, and the one robots points at.
+
+### A component that links to 404s, rendered by nothing (R-25)
+`/authors/<n>` is positional: n is the 1-based rank of the row in
+`neograph_team_members` ordered by id, because the real ids are strings
+(`tm001`, `tm002`, `tm003`) and `app/authors/[id]/page.tsx` does
+`parseInt(id)`. `MeetTheTeam` built its two profile links from `member.id`, so
+a caller handing it the real rows would have produced `/authors/tm001` →
+`parseInt` → `NaN` → `notFound()`. It has never fired, because grep finds
+**0 imports** of `MeetTheTeam` outside its own file — which is the other half
+of the finding: every build generates 3 author pages and **0 pages link to
+them**.
+
+Both hrefs now take the 1-based array index, which is what the route means, and
+the positional contract is written down in all four places that have to agree:
+`lib/api/authors.ts`, the route's `generateStaticParams`, `app/sitemap.ts` and
+the card itself. Three places silently encoding the same off-by-one convention
+is how this kind of thing survives.
+
+### Filed for the owner, not guessed (R-26)
+No published figure on the site carries a named analyst. `neograph_reports` has
+no author column — 32 columns, checked against the live table — and
+`lib/jsonReports.ts:170` hardcodes `authors: []`, so the report page's JSON-LD
+falls back to `author: {Organization, NeoGraph Analytics}` on all 182 pages.
+That is normal for market research and the schema is not wrong. But three
+analyst profiles with bios are sitting unlinked, and on a publication whose
+differentiator is checkable figures, a named analyst is worth more than a logo.
+Who wrote which report is not mine to assign.
+
+### Checker
+`scripts/audit-html.mjs` gains a sitemap rule, `--prod` only because
+`/sitemap.xml` is a route handler with no artefact under `.next/server/app`
+to read locally. It asserts that each of the six published page families is
+represented, and that nothing advertised 404s — a sitemap full of dead URLs
+is worse than a short one. The 182 report URLs are sampled rather than all
+fetched, since the per-route pass already covers report pages.
+
+Negative-tested against production before the merge, which is still serving
+the old sitemap:
+
+```
+sitemap.xml  HTTP 200
+  204 urls
+  ok 182 x /reports/
+  ok   8 x /blog/
+  ok   6 x /press-releases/
+  x no /consulting/ urls - a published page family is absent from the sitemap
+  x no /legal/ urls - a published page family is absent from the sitemap
+  x no /authors/ urls - a published page family is absent from the sitemap
+  ok 27 of 204 urls fetched (every non-report url, plus a 5-report sample): 0 dead
+```
+
+### Verification
+`tsc --noEmit` clean. Build exit 0, 12 lint warnings — the same 12.
+`audit-html.mjs` locally: 17 of 17 routes error-free, 0 errors, 1 pre-existing
+warning. The served `/sitemap.xml` from this build carries **221 URLs**:
+8 static + 182 reports + 8 articles + 6 press releases + 10 consulting +
+4 legal + 3 authors, and all **17** newly advertised URLs were fetched
+individually and returned **200**. `contrast-audit.mjs`: 0 failing pairs.
+`seo-unit.mjs`: 16 of 16.
+
+## 2026-10-17 — 39KB of research the site was storing and not showing
+
+### What a section census turned up
+Scanning all 182 built report pages for the sections they render, against the
+32 columns the table actually has, produced one real gap. `reader_takeaways`
+looked absent but renders as "Strategic Takeaways" — 545 takeaways across all
+182 rows, working. `company_profiles` was the real find.
+
+### R-27: the overview nobody could read
+Every one of the **418** objects in `company_profiles` carries an `overview`,
+and 39KB of that prose was going nowhere. The landscape card matches profiles
+to players by company name and reads exactly two fields off the match —
+`profile.revenue` for the figure in the corner and
+`profile.ai_healthcare_products` for the chips. The paragraph was never
+referenced.
+
+Two measurements decided the fix rather than one:
+
+- **246 of the 418 overviews repeat the landscape row's own `description`
+  verbatim.** Rendering all of them would have printed the same sentence twice
+  on 246 cards. The overview is therefore shown only when it differs, which
+  surfaces the **172** that were saying something new.
+- **19 of 418 profiles match no player by exact name.** The first instinct was
+  a name-matching bug — "Siemens Healthineers" against a list of startups looks
+  like a punctuation problem. A normaliser (case, brackets, punctuation,
+  corporate suffixes) recovers exactly **2**: "Novartis (Hexal)" and "Teladoc
+  Health", which are the same companies spelled differently in the two columns.
+  The remaining **17, across 15 reports**, are companies that were researched
+  and written up and genuinely are not in that report's player list. They now
+  follow the cards under an "Also profiled" sub-heading instead of being
+  discarded.
+
+  The normaliser stays, because it earns its place in the other direction: with
+  exact matching those 2 profiles lose their revenue and product chips from the
+  player card *and* get printed a second time below it as unlisted. The built
+  corpus went from 19 cards on 16 pages to 17 on 15.
+
+That second measurement is the one worth keeping: the obvious fix — fuzzy
+matching — would have recovered 2 profiles of 19, left 15 still invisible, and
+introduced a new way to match the wrong company.
+
+### And the same regex hazard, a third time
+The first draft of the normaliser used `` word boundaries. A tool ate the
+backslashes and left literal backspace characters in the source, exactly as
+recorded twice in `lib/seo.ts` — and this time the mangled pattern still
+matched things, so `co` matched inside "Covestro" and `sa` inside "Samsung".
+Caught by reading the bytes rather than the rendered file, where a backspace is
+invisible. The pieces are now built with `new RegExp` from plain strings, the
+suffix list is anchored on spaces, and `normName` pads the name so those
+anchors work at both ends. A string has no escape to lose. Verified on the real
+names: "Covestro AG" → "covestro", "Samsung Electronics" → "samsung
+electronics", "Dexcom, Inc." → "dexcom".
+
+### Not fixed, noted
+`CompanyProfile.founded` and `market_position` are also never read off a
+profile. `founded` is a single number and its absence costs little; it stays
+unused rather than being worked into a card that already carries five fields.
+
+### Checker
+`scripts/source-hygiene.mjs` — 221 source files, offline, scanning bytes rather
+than text for two things nothing else catches:
+
+- **Stray control characters.** A backspace, vertical tab or form feed in source
+  is a regex escape that lost its backslash. None of them are visible in an
+  editor or in `cat`, which is how three of them survived here.
+- **Regex literals that start `/s+`, `/d{4}`, `/w+`** — the exact shape a lost
+  backslash leaves behind.
+
+Negative-tested by reintroducing the real `/s+/` bug into `lib/seo.ts`:
+
+```
+x lib\seo.ts:119  regex literal starts (/s+ — a lost backslash looks exactly like this
+1 finding
+```
+
+restored, 0 findings. Worth stating why this earns a checker: none of the three
+instances failed a build, a typecheck or a lint, and two of them matched
+*something*, so they did damage instead of nothing. A silent wrong string is
+the hardest class of defect on a site whose value is that its figures are
+checkable.
+
+### Verification
+`tsc --noEmit` clean. Build exit 0, 12 lint warnings — the same 12 as before
+today's work. Built corpus: `"Also profiled"` on **15 pages with 17 cards**,
+matching the live-table measurement exactly (418 profiles, 399 exact matches,
+2 recovered by normalising, 17 unlisted across 15 reports), and
+`europe-biosimilars-market` correctly shows **0** unlisted now that
+"Novartis (Hexal)" matches "Novartis (via Hexal)". The overview paragraph
+renders as visible HTML, confirmed on `/reports/ai-in-lab-automation-market`.
+`audit-html.mjs`: 17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
+`contrast-audit.mjs`: 0 failing pairs. `source-hygiene.mjs`: 0 findings.
+`seo-unit.mjs`: 16 of 16.
+
+## 2026-10-17 — auditing the file that tells the next session what is true
+
+### R-28: CLAUDE.md was wrong in six places
+Chasing a BACKLOG item about NaN in chart projections turned into a check of
+CLAUDE.md itself, and the doc that steers every session had drifted:
+
+- **Chart components.** The list named six under `components/reports/charts/`.
+  Two of them, `MarketSizeChart` and `SegmentationChart`, are not in that
+  directory at all — they sit a level up. And only **3 of the 7** files that
+  *are* there get imported by anything: `MarketForecastLineChart`,
+  `ComponentSharePieChart` and `RegionalBarChart`, all from
+  `JsonReportSections.tsx`.
+- **`lib/chartUtils.ts`** was listed as "Chart data processing" and is imported
+  by nothing. That matters more than a stale line usually would, because its
+  arithmetic is unsafe. Measured:
+
+  ```
+  calculateCAGR(0, 5.6, 9)              -> Infinity
+  calculateCAGR(1, 5.6, 0)              -> Infinity
+  generateMarketProjection(0, 5.6, 2023, 2032) -> NaN from the second point on
+  generateMarketProjection(1, 5.6, 2024, 2024) -> NaN
+  parseCurrencyValue('—')               -> NaN
+  parsePercentage('N/A')                -> NaN
+  ```
+
+  The BACKLOG entry "Chart projection math yields NaN when market size is
+  0/absent" is real, and it is in dead code. Writing that down is worth more
+  than fixing it: the next person to need a projection helper now knows not to
+  reach for this one unexamined.
+- **`lib/html-toc-utils.ts`** is unused too; the report page uses
+  `lib/reportToc.ts`.
+- **The routes list** omitted `/methodology` — the page R-13's measurements were
+  taken on — and `/design-system`.
+- **The sitemap line** named `/sitemap-pages.xml` and `/sitemap-consulting.xml`
+  and not `/sitemap.xml`, which is the only one `robots.ts` advertises and now
+  the complete one.
+- **`lib/api`** omitted 5 modules, `relatedReports.ts` among them;
+  **`components/ui`** omitted 6, including `country-select`, which has its own
+  defect history in this queue.
+
+Nothing was deleted, per the standing rule. The doc now says which files are
+live and which are not, which is the part that saves time: a dead component and
+a broken one look identical from a stale index.

@@ -70,5 +70,47 @@
     "name": "Animal Health",
     "slug": "animal-health",
     "description": "Veterinary medicine, animal pharmaceuticals, and companion animal care"
+  },
+  {
+    "id": 13,
+    "name": "Advanced Materials",
+    "slug": "advanced-materials",
+    "description": "High-entropy alloys, graphene, engineered ceramics and self-healing polymers across aerospace, defence and industry"
+  },
+  {
+    "id": 14,
+    "name": "Agriculture & Food Tech",
+    "slug": "agriculture-food-tech",
+    "description": "Precision farming, crop-disease detection, controlled-environment agriculture, agricultural biotech and cultivated protein"
+  },
+  {
+    "id": 15,
+    "name": "Climate & Energy",
+    "slug": "climate-energy",
+    "description": "Carbon capture and sequestration, green hydrogen and sustainable aviation fuel"
+  },
+  {
+    "id": 16,
+    "name": "Digital Infrastructure",
+    "slug": "digital-infrastructure",
+    "description": "Edge computing, undersea cable and 5G-enabled smart grid build-out"
+  },
+  {
+    "id": 17,
+    "name": "Quantum Technology",
+    "slug": "quantum-technology",
+    "description": "Quantum computing applied to drug discovery, plus quantum networking, post-quantum cryptography and quantum sensing"
+  },
+  {
+    "id": 18,
+    "name": "Space Economy",
+    "slug": "space-economy",
+    "description": "Earth observation, in-orbit servicing, commercial space stations and lunar resource extraction"
+  },
+  {
+    "id": 19,
+    "name": "Synthetic Biology",
+    "slug": "synthetic-biology",
+    "description": "Engineered microbes, programmable gene editing platforms and bio-based materials"
   }
 ]

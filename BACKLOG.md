@@ -75,6 +75,19 @@ Priority order. `[P0]` = site is broken / losing traffic. `[P1]` = high value.
       exports `slugify` (it does not). It now carries the data table, the
       publish/deploy sequencing rule, the egress discipline and the checkers.
 
+## P1 — owner decisions, answered 2026-10-17
+- [x] **R-9** client-logo marquee — owner confirms all 12 relationships. No change.
+- [x] **R-4** $2,995 / `InStock` — owner confirms the price. Schema stays. Verifying
+      it exposed that the checkout form never sent the lead anywhere; fixed with
+      `/api/purchase-inquiry`.
+- [x] **R-11** terms of use — drafted and published to `neograph_legal_pages`;
+      `Dataset.license` restored on 182 pages; footer link added.
+      **Governing law is not asserted** — Pune Pvt. Ltd. and an Austin office both
+      appear in the repo. Naming the contracting entity is Siddhant's call.
+- [x] **R-10** 26 non-healthcare reports — **kept, positioning widened.** 28 rows
+      relabelled out of `Life Sciences` into 7 honest industries; the corpus now
+      reads 13 verticals. Copy widened at root, home, `/reports` and `/about`.
+
 ## P1 — new content
 - [ ] Research + publish new reports into `neograph_reports`, full schema,
       primary sources cited. Target 2-3/day once P0 is clear.

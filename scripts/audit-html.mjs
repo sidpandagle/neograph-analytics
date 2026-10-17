@@ -42,6 +42,7 @@ const ROUTES = [
   ['/contact', 'contact.html'],
   ['/request-sample', 'request-sample.html'],
   ['/legal/privacy-policy', 'legal/privacy-policy.html'],
+  ['/legal/terms-of-use', 'legal/terms-of-use.html'],
   ['/design-system', 'design-system.html'],
 ];
 
@@ -73,6 +74,9 @@ async function load(route, file) {
   if (!fs.existsSync(p)) return { status: 0, html: null };
   return { status: 200, html: fs.readFileSync(p, 'utf8') };
 }
+
+/** Licence URLs seen in --prod mode, verified once after the per-route pass. */
+const licenceRoutes = new Set();
 
 function auditDocument(route, html) {
   const errors = [];
@@ -156,6 +160,24 @@ function auditDocument(route, html) {
       const v = parsed[field];
       if (v !== undefined && !/^\d{4}-\d{2}-\d{2}/.test(String(v))) {
         errors.push(`${label}.${field} is "${v}" — not a calendar date`);
+      }
+    }
+
+    /* `Dataset.license` once pointed at /legal/terms-of-use while no such page
+       existed - 152 pages asserting a licence URL that 404'd, invisibly. The
+       page exists now, so the rule is not "never assert a licence" but "only
+       assert one this build actually renders". */
+    if (parsed.license !== undefined) {
+      const lic = String(parsed.license);
+      const route = lic.startsWith(BASE) ? lic.slice(BASE.length) : lic.startsWith('/') ? lic : null;
+      if (!route) {
+        warnings.push(`${label}.license is off-site (${lic}) - not checkable here`);
+      } else if (!PROD) {
+        const file = path.join('.next', 'server', 'app', `${route.replace(/^\//, '')}.html`);
+        if (!fs.existsSync(file)) errors.push(`${label}.license points at ${route}, which this build does not render`);
+      } else {
+        /* auditDocument is synchronous; defer the network check to the run loop. */
+        licenceRoutes.add(route);
       }
     }
 
@@ -259,6 +281,74 @@ for (const [route, file] of ROUTES) {
   if (!errors.length && !warnings.length) console.log('  clean');
   errors.forEach((e) => console.log(`  x ${e}`));
   warnings.forEach((w) => console.log(`  ! ${w}`));
+}
+
+/* The deferred half of the licence rule: in --prod the URL is fetched once per
+   distinct route rather than once per page that asserts it. */
+for (const route of licenceRoutes) {
+  const res = await fetch(`${BASE}${route}`, { redirect: 'follow' });
+  if (res.status === 200) {
+    console.log(`
+ld+json license -> ${route}  HTTP 200`);
+  } else {
+    console.log(`
+ld+json license -> ${route}`);
+    console.log(`  x HTTP ${res.status} - a licence URL that does not resolve`);
+    totalErrors++;
+  }
+}
+
+/* The sitemap rule, --prod only, because `/sitemap.xml` is a route handler and
+   has no artefact under `.next/server/app` to read locally.
+
+   Why it exists: `robots.ts` advertises exactly one sitemap, and that one was
+   silently missing three whole page families -- 4 legal pages, 10 consulting
+   services and 3 author profiles, 17 URLs the build renders and no crawler was
+   told about. The consulting pages even had a sitemap of their own that robots
+   never names. Nothing failed; the pages were just invisible.
+
+   Two things are checked: that every family the site publishes is represented,
+   and that nothing advertised 404s -- a sitemap full of dead URLs is worse than
+   a short one. The 182 report URLs are sampled rather than all fetched, because
+   the per-route pass above already covers report pages and 182 extra requests
+   per audit is not worth the signal. */
+if (PROD) {
+  const FAMILIES = ['/reports/', '/blog/', '/press-releases/', '/consulting/', '/legal/', '/authors/'];
+  const res = await fetch(`${BASE}/sitemap.xml`, { redirect: 'follow' });
+  console.log(`\nsitemap.xml  HTTP ${res.status}`);
+  if (res.status !== 200) {
+    console.log('  x the only sitemap robots.ts advertises does not resolve');
+    totalErrors++;
+  } else {
+    const xml = await res.text();
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    console.log(`  ${locs.length} urls`);
+    for (const family of FAMILIES) {
+      const n = locs.filter((u) => u.includes(family)).length;
+      if (n === 0) {
+        console.log(`  x no ${family} urls - a published page family is absent from the sitemap`);
+        totalErrors++;
+      } else {
+        console.log(`  ok ${String(n).padStart(3)} x ${family}`);
+      }
+    }
+    const reports = locs.filter((u) => u.includes('/reports/'));
+    const step = Math.max(1, Math.ceil(reports.length / 5));
+    const sample = [
+      ...locs.filter((u) => !u.includes('/reports/')),
+      ...reports.filter((_, i) => i % step === 0),
+    ];
+    let dead = 0;
+    for (const u of sample) {
+      const r = await fetch(u, { method: 'HEAD', redirect: 'follow' });
+      if (r.status !== 200) {
+        console.log(`  x HTTP ${r.status}  ${u}`);
+        dead++;
+      }
+    }
+    totalErrors += dead;
+    console.log(`  ${dead === 0 ? 'ok' : 'x '} ${sample.length} of ${locs.length} urls fetched (every non-report url, plus a 5-report sample): ${dead} dead`);
+  }
 }
 
 console.log('\n' + '-'.repeat(60));

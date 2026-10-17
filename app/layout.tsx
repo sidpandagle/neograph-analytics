@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     default: "NeoGraph Analytics | Healthcare Market Research",
     template: "%s | NeoGraph Analytics",
   },
-  description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
-  keywords: ["neograph analytics", "healthcare insights", "healthcare industry trends", "medical market analysis", "healthcare reports"],
+  description: "Market research across healthcare, life sciences and frontier technology: market sizing, segmentation, regional and competitive analysis, sources stated.",
+  keywords: ["neograph analytics", "healthcare market research", "life sciences research reports", "market sizing and forecasts", "frontier technology research"],
   authors: [{ name: "NeoGraph Analytics Team" }],
   icons: {
     icon: "/favicon.svg",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "NeoGraph Analytics",
-    title: "NeoGraph Analytics | Healthcare Market Insights & Research Reports",
-    description: "NeoGraph Analytics delivers trusted neograph analytics, industry insights, trends, forecasts, and data-driven analysis across global healthcare sectors.",
+    title: "NeoGraph Analytics | Healthcare & Frontier Tech Research",
+    description: "Market research across healthcare, life sciences and frontier technology: market sizing, segmentation, regional and competitive analysis, sources stated.",
     images: [
       {
         url: "/assets/images/mr.webp",

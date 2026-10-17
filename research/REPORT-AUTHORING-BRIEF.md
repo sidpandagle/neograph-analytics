@@ -151,9 +151,9 @@ Only the session owner publishes. A research pass stops at a passing `check`.
 exists in Supabase but was not in the last build's `generateStaticParams()`
 returns a hard 404 — while `/reports` (ISR, hourly) will already be listing a
 card that links to it. That is the soft-404 class of defect PR #4 existed to
-fix, pointed the other way. So: publish only when a merge slot is available to
-follow it within the hour; otherwise hold the drafts on the branch, which costs
-nothing. Supabase-only edits to rows that are **already** built (meta fields,
+fix, pointed the other way. So: publish to Supabase only in the run-up to the
+21:00 IST merge, which is the one deploy of the day; at any other hour hold the
+drafts on the branch, which costs nothing. Supabase-only edits to rows that are **already** built (meta fields,
 corrections to prose) are different and reach production through ISR with no
 deploy at all.
 

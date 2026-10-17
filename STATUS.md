@@ -1,88 +1,168 @@
 # STATUS
 
-**Updated:** 2026-10-16 23:40 IST
-**Budget:** 7d used 15% | ceiling (70% of pace) ~39% | headroom +23 points | 5h used 14%
-**Merges to `main` today (IST):** 5 of 5 used — #13, #14, #15, #16, #17 (round 1
-of the reports). The next slot opens at **00:00 IST**, twenty minutes from now.
-**Commits on `work/continuous-improvements`:** 40, all pushed.
+**Updated:** 2026-10-17 17:2x IST
+**Budget:** 7d used 22% | ceiling (70% of pace) 49% | headroom +27 points
+**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change). Next
+scheduled merge **21:00 IST** — one scheduled merge a day now; extra merges
+only on the owner's request.
 **Mode:** running
 
-## The deploy, ready to go
+## On the branch, verified locally, awaiting a merge slot
 
-Everything below is staged and checked; `DEPLOY-RUNBOOK.md` has the sequence and
-`.pr-body.md` holds the PR text.
+The four owner decisions, implemented. This bundle needs a deploy for the code
+half to reach production — it goes out at the 21:00 IST merge.
 
 ```
-report drafts   40 pass, 0 fail      (10 already live, 30 to publish)
-articles         2 pass, 0 fail
-press release    1 pass, 0 fail
-HTML audit      16 of 16 routes clean, 0 errors
-contrast audit   0 failing pairs, both themes
-build           clean, 200 static pages
+/legal/terms-of-use            200, 10 sections (published to Supabase, live now)
+Dataset.license                restored, 1 assertion per report page
+footer                         4 legal links (was 3)
+/api/purchase-inquiry          400 on missing email, bad email, malformed body
+corpus by industry             13 verticals (was 6; 28 rows were mislabelled)
+hero / listing counts          "182 reports across 13 verticals", derived
+audit-html.mjs                 17 of 17 routes, 0 errors, 1 warning
+contrast-audit.mjs             0 failing pairs
+tsc --noEmit                   clean
 ```
 
-Order inside the deploy, because `dynamicParams = false` makes an unpublished
-page a 404 while the listing already shows its card: **reports first**, then the
-articles that link to them, then build, merge, verify. The corpus goes from
-**152 to 182**.
+The Supabase half — the terms page and the 13 chips — reaches production
+through ISR within the hour without a deploy. The licence assertion, the
+checkout fix, the footer link and the widened copy need the merge.
 
-## The 40-topic expansion is complete
+## Added to the same bundle, 2026-10-17 daytime
 
-Ten published this afternoon, thirty drafted and held. Every base year is a
-named publisher's own figure advanced at that publisher's own rate, and every
-headline is divided through by something countable. The results that contradict
-the published literature outright are tabulated in `research/REPORT-PIPELINE.md`;
-the strongest are orthopaedic implants (five disclosures = **120.8%** of one
-publisher's whole global market), sleep apnoea (**104.5%**), veterinary
-diagnostics (one company = **92.6%**), psychedelics (two non-psychedelic
-products = **113.5%**, leaving the psychedelics a negative implied value) and
-hearing aids, which resolves its own spread: **$380 per aid** at the factory
-gate against **$1,347** at retail, proven inside one company's two revenue lines.
+Ten commits, each verified before the next began. In defect order rather than
+commit order:
 
-## Shipped to the branch since the last merge
+```
+R-17  every trimmed report title lost its letter "s"    6 cards x 182 pages + every OG image
+      marketName() collapsed whitespace with /s+/        "Antimicrobial Re i tance Diagno tic  Market"
+R-18  datePublished a day early, build-host dependent    IST build emitted 2025-12-17 for Dec 18
+R-19  /about + /services unreadable in dark mode         h2 1.05:1, body 2.24:1, meta 3.57:1
+R-20  every status chip stayed light on a dark page       68 raw classes -> 13 tokens, 1 of 35 had dark:
+R-23  featured subheading was a stale industry list      now Intl.ListFormat over the 6 rows on screen
+R-24  17 indexable pages in no advertised sitemap        4 legal + 10 consulting + 3 authors
+R-25  MeetTheTeam linked to URLs that 404                parseInt('tm001') -> NaN; 0 imports, 0 inbound
+R-27  39KB of company research stored and not rendered   418 overviews, 172 distinct; 17 unlisted profiles
+R-28  CLAUDE.md wrong in six places                      3 of 7 chart files live; chartUtils dead and unsafe
+```
 
-Credibility: chart source captions and `/methodology`; `/llms.txt` rebuilt
-(12 -> 152 report URLs, 24 dead category links -> 0); `Dataset.license` no longer
-points at a 404; `datePublished` is a calendar date everywhere; related-research
-blocks (152 pages had **zero** outbound report links); per-report social cards.
+New checkers, both offline, both negative-tested:
 
-Correctness and a11y: two-tone focus ring (1.00:1 -> 7.70:1 on the blue CTA,
-confirmed in Chrome); form field borders 1.07:1 -> 3.30:1; `country-select`
-rescued from 1.02:1 in dark mode; heading outlines; `/design-system` canonical
-and single `<h1>`; `/reports` payload 508KB -> 184KB.
+```
+scripts/seo-unit.mjs         16 assertions over lib/seo.ts; it is what caught R-18
+scripts/source-hygiene.mjs   221 files, byte-level; catches an eaten regex escape
+contrast-audit.mjs           +12 status pairs: text 7.60-11.83:1, glyphs 3.00-9.51:1
+audit-html.mjs               + a sitemap rule (--prod); fires on production today
+```
 
-Reported by Siddhant and fixed: header dropdowns painting behind page content
-(the header's `backdrop-filter` creates a stacking context, so the menu's z-50
-never applied against the page) and the FAQ +/x toggle, now centred by geometry
-at 0.00px on both axes.
+All four green on the final build: `audit-html.mjs` 17 of 17 routes error-free
+(0 errors, 1 pre-existing warning), `contrast-audit.mjs` 0 failing pairs,
+`source-hygiene.mjs` 0 findings, `seo-unit.mjs` 16 of 16. `tsc --noEmit` clean.
+Build exit 0 with the same 12 lint warnings it started the day with.
 
-Tooling so none of it regresses: `audit-html.mjs`, `contrast-audit.mjs`,
-`report-db.mjs`, `blog-db.mjs`, `DEPLOY-RUNBOOK.md`, and corrected `AGENTS.md`
-and `CLAUDE.md`.
+**What needs the merge:** all of it except the nothing — every item above is
+code. The served `/sitemap.xml` goes from 204 URLs to **221**, and all 17 new
+URLs were fetched individually against the local build and returned 200.
+
+## Deployed and verified in production
+
+**Corpus 152 -> 182.** Thirty reports, two analysis articles and the press
+release went out in one deploy, reports first, then the articles that link to
+them.
+
+```
+new report URLs                200 (spot-checked across rounds 2, 3 and 4)
+both analysis articles         200
+press release                  200
+/llms.txt report URLs          182
+listing chips                  41 + 47 + 28 + 6 + 31 + 29 = 182
+audit-html.mjs --prod          16 of 16 routes error-free, 0 errors
+isotope report (unit Million)  $963.7M -> $1,177.8M, 6 related links, caption, own OG card
+```
+
+Production was reporting **5 errors** before this deploy; it reports none now.
+
+## What the deploy exposed, and what it cost to find
+
+The new report pages built with **no related-research block at all** while the
+old ones kept theirs. Three wrong explanations were discarded on evidence — a
+transient query failure, stale build artefacts, bad data — before instrumenting
+the build showed the corpus query returning **152 rows inside the build and 182
+outside it**.
+
+Next's Data Cache wraps `fetch`, supabase-js queries through it, and a fetch
+with no cache hint is cached **indefinitely**, so the query was served from the
+previous build's entry. `generateStaticParams` had fresh data, so all 182 pages
+generated; the 30 new ones each failed to find themselves in a 152-row corpus
+and rendered nothing. No error, no empty section.
+
+`cache: 'no-store'` was the wrong fix and the build said so: it makes the route
+dynamic, and with `dynamicParams = false` **all 182** pages then shipped without
+the block. A 60-second revalidate on that one query keeps the route static.
+
+PR #17 having been squash-merged also meant nine files conflicted on this merge;
+the branch side was strictly newer in every case.
 
 ## Needs Siddhant
 
-- **R-9** — the "Our research shapes decisions at" marquee asserts client
-  relationships with 12 third-party marks. One yes/no per logo.
-- **R-10** — 26 of the reports are not healthcare (agritech, climate tech, space
-  economy, quantum, advanced materials, digital infrastructure, synthetic
-  biology). Keep and widen the positioning, or separate them? The homepage and
-  listing now say "research verticals", true either way.
-- **R-4** — the Product/Offer schema publishes a hardcoded $2,995 with
-  `InStock`, matching the visible price. Pricing and checkout are yours.
-- **R-11** — no terms-of-use page exists; the Dataset schema wanted to cite one.
+All four `[H]` items are answered and implemented (R-9, R-4, R-10, R-11). One
+narrower question came out of the work:
+
+- **Who is the contracting entity, and under which law?** The footer says
+  NeoGraph Analytics Pvt. Ltd. (Pune) while `lib/contact.ts` also lists an
+  Austin, TX office. `/legal/terms-of-use` therefore says the entity and
+  governing law are stated on each order rather than naming one. One line from
+  you replaces that paragraph with a real governing-law clause.
+- **One live send of the new purchase-inquiry route is unverified.** Its
+  validation path is tested (400 on missing email, bad email, malformed body)
+  and the Resend sender is the one `/api/contact` already uses, but no real
+  email was sent to `support@` without being asked. To confirm delivery:
+  `curl -X POST https://www.neographanalytics.com/api/purchase-inquiry -H 'Content-Type: application/json' -d '{"fullName":"Test","email":"you@example.com","reportTitle":"Test","reportSlug":"femtech-market"}'`
 
 ## Next up
 
-1. **00:00 IST** — run the runbook: publish 30 reports, 2 articles and the press
-   release, merge, verify in production.
-2. Re-measure first paint with gtag blocked (**R-13**: FCP and LCP are the same
-   event at 1,316ms on a server-rendered text page with an 89ms TTFB).
-3. Fix the production audit's remaining errors — all already fixed on the
-   branch, so the deploy should clear them.
-4. Round 5 of the expansion, or a fresh review pass, depending on what the
-   deploy turns up.
+Three findings are open and **all three need the 21:00-09:00 browser window**,
+which opens at the same hour as the merge:
 
+1. **R-13, first paint.** FCP and LCP are the same event at ~1.3s on a
+   server-rendered text page whose TTFB is 89ms. Today's headless pass narrowed
+   the candidates from the built HTML of `/methodology`, in document order: two
+   render-blocking stylesheets totalling **74.6KB** (66,374 + 8,244 bytes), then
+   **13 `async` chunk scripts in `<head>`**, then a `rel=preload` for
+   `googletagmanager.com/gtag/js` carrying **no `fetchPriority`** — a
+   High-priority third-party fetch competing with the stylesheets, while Next's
+   own chunk preload beside it is marked `fetchPriority="low"`. This also
+   corrects the earlier note that gtag was absent from the static HTML; the
+   preload link is in it, on every page. Next: trace with googletagmanager
+   blocked to size its share, then choose between `strategy="lazyOnload"` for GA
+   and splitting the 66KB stylesheet.
+2. **R-19, R-20 rendered confirmation.** Every dark-mode ratio shipped today was
+   computed from token hexes, not observed. The arithmetic says `/about`,
+   `/services` and all the status panels now read correctly in dark mode; one
+   pass in a real browser would make that observed rather than modelled.
+3. **R-22, prose tables.** `.prose table` sets `width: 100%; overflow: hidden`
+   and the only scroll escape is behind `@media (max-width: 768px)`. Whether a
+   wide table above 769px is clipped or pushes the page into horizontal scroll
+   depends on how the browser applies `overflow` to a table box, which this
+   queue may not assert without looking. Doubly latent: 0 of 22 snapshot rows
+   contain a `<table>`.
+
+Not browser-dependent:
+
+4. **R-21** — the four `/about` impact stats carry `divide-white/[0.06]` with no
+   `divide-x`, so 0 of 3 intended rules render. Left alone deliberately:
+   `divide-x` on a 2-up grid also stripes the row starts, so which rule was
+   wanted is a design call, not a bug fix.
+5. **R-26** — no published figure carries a named analyst.
+   `neograph_reports` has no author column (32, checked) and
+   `lib/jsonReports.ts:170` hardcodes `authors: []`. Three analyst profiles sit
+   unlinked. One mapping from Siddhant and the byline, the profile links and the
+   schema `author` all follow.
+6. Watch Search Console for the 30 newer URLs and resubmit the sitemap after the
+   merge — it is the sitemap itself that changed this time, 204 URLs to 221.
+7. **The report-expansion target is met** — 182 rows against the 142 it started
+   from is 40, inside the 30-50 asked for. No round 5 is scheduled; the loop
+   stays on review and fixes unless more reports are asked for.
 ## Blockers
 
 None.

@@ -15,6 +15,21 @@
 
 # next.js
 /.next/
+# A build whose output will be used as evidence is run with the previous
+# .next moved aside (`mv .next .next.<label>`), because `next build` on a
+# warm cache has three times emitted the previous build's HTML and caused a
+# false pass. Those set-asides are build output too, and are never deleted
+# by this repo's tooling -- remove them by hand when the disk is wanted.
+/.next.*/
+
+# Throwaway one-off scripts. They live in scripts/ rather than the scratchpad
+# because node resolves node_modules from the file's directory upward, so a
+# script importing @supabase/supabase-js has to sit inside the repo to run at
+# all. Anything worth keeping gets a name without the underscore and a
+# docstring saying why it exists.
+scripts/_*.mjs
+scripts/_*.py
+
 /out/
 
 # production

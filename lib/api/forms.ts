@@ -1,6 +1,7 @@
 import type {
   ContactFormData,
   RequestSampleFormData,
+  PurchaseInquiryFormData,
   FormSubmissionResponse,
 } from './forms.types';
 import type { ApiResponse } from './config';
@@ -56,6 +57,29 @@ export async function submitRequestSampleForm(
       success: false,
       error: 'network_error',
       message: 'Unable to send request. Please check your connection and try again.',
+    };
+  }
+}
+
+/**
+ * Submit a checkout purchase inquiry — sends email via Resend through API route
+ */
+export async function submitPurchaseInquiry(
+  data: PurchaseInquiryFormData
+): Promise<ApiResponse<FormSubmissionResponse>> {
+  try {
+    const res = await fetch('/api/purchase-inquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const json = await res.json();
+    return json;
+  } catch {
+    return {
+      success: false,
+      error: 'network_error',
+      message: 'Unable to send your inquiry. Please check your connection and try again.',
     };
   }
 }

@@ -8,8 +8,8 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Healthcare Market Research Reports",
-  description: "Browse in-depth healthcare market research covering industry trends, competitive analysis, forecasts, and strategic insights across 140+ reports.",
-  keywords: ["healthcare market research", "healthcare reports", "medical industry reports", "healthcare forecast", "healthcare industry analysis"],
+  description: "Browse market research across healthcare, life sciences and frontier technology: market sizing, segmentation, regional detail and competitive analysis.",
+  keywords: ["market research reports", "healthcare market research", "life sciences reports", "market forecast", "industry analysis"],
   alternates: {
     canonical: '/reports',
   },

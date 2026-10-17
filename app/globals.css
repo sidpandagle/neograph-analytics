@@ -129,6 +129,34 @@
      18.72:1 against each other. */
   --focus-ring: #0B1220;
   --focus-ring-inner: #FFFFFF;
+
+  /* ── Status surfaces ──────────────────────────────────────────
+     Error, info, success and warning panels were written as raw Tailwind
+     pairs (`bg-red-50 border-red-200 text-red-800`, `bg-blue-100` +
+     `text-blue-600`, and so on) across 8 files. They were never contrast
+     failures -- each pale background carries its own dark foreground, so the
+     pair keeps its ratio -- but none of them flip, so every one stayed a
+     light chip on a dark page. Exactly one call site had a `dark:` variant
+     triple (CheckoutForm.tsx), which is 1 of 35.
+
+     The light values below are the Tailwind hexes they replace, so light mode
+     is unchanged to the pixel. The dark values are new and are measured by
+     `scripts/contrast-audit.mjs` in both themes: text on its own surface at
+     4.5:1, and each surface distinguishable from --card at 1.4.11's 3:1 only
+     where it carries a border of its own. ── */
+  --status-error-surface: #FEF2F2;   /* red-50                      */
+  --status-error-border: #FECACA;    /* red-200                     */
+  --status-error-text: #991B1B;      /* red-800, the message        */
+  --status-error-icon: #DC2626;      /* red-600, glyph + required * */
+  --status-info-surface: #EFF6FF;    /* blue-50, note panels        */
+  --status-info-chip: #DBEAFE;       /* blue-100, round icon chips  */
+  --status-info-border: #BFDBFE;     /* blue-200                    */
+  --status-info-text: #1E40AF;       /* blue-800                    */
+  --status-info-icon: #2563EB;       /* blue-600                    */
+  --status-success-surface: #DCFCE7; /* green-100                   */
+  --status-success-icon: #16A34A;    /* green-600                   */
+  --status-warn-surface: #FFFBEB;    /* amber-50                    */
+  --status-warn-icon: #D97706;       /* amber-600                   */
   --card: #FFFFFF;
   --card-foreground: #0A1633;
   --popover: #FFFFFF;
@@ -1076,6 +1104,32 @@
   /* Inverted in dark mode: the outer ring is paper, the inner is ink. */
   --focus-ring: #FFFFFF;
   --focus-ring-inner: #0B1220;
+
+  /* ── Status surfaces, dark. Each surface is the hue pulled down to sit on
+        --card #131C30 without glowing, with the text lifted into the 300 range
+        so it clears 4.5:1 on its own panel (measured 6.36-11.83:1).
+
+        The fills are deliberately quiet against the card -- 1.12 to 1.41:1 --
+        because a dark panel that shouts is worse than one that whispers, and
+        the site's own card hairline sits at 1.55:1, so a fill louder than that
+        would read as a different kind of element. What makes these panels
+        perceivable is the border: --status-error-border is 1.88:1 against the
+        card and --status-info-border 2.41:1, both above that 1.55 baseline.
+        The two round icon chips carry no border, which is why the chip fill is
+        the loudest of the set at 1.41:1. ── */
+  --status-error-surface: #3A1D25;
+  --status-error-border: #7D2E3C;
+  --status-error-text: #FFC9CD;
+  --status-error-icon: #FF9DA6;
+  --status-info-surface: #1C2B4E;
+  --status-info-chip: #22355E;
+  --status-info-border: #39569B;
+  --status-info-text: #CBDCFF;
+  --status-info-icon: #9CBCFF;
+  --status-success-surface: #15321F;
+  --status-success-icon: #7BE0A3;
+  --status-warn-surface: #33280F;
+  --status-warn-icon: #F7C863;
   /* The fill stays deep in dark mode, which is what lets every white label
      sitting on a blue panel stay white -- the hero, the price panel, the
      badges. Measured: white on #3356DE = 5.95:1, and the panel still separates

@@ -8,6 +8,7 @@
  *
  *   node scripts/report-db.mjs count
  *   node scripts/report-db.mjs slugs
+ *   node scripts/report-db.mjs columns
  *   node scripts/report-db.mjs dump <slug> [outfile]
  *   node scripts/report-db.mjs check content/reports/*.json
  *   node scripts/report-db.mjs publish content/reports/*.json
@@ -257,6 +258,21 @@ async function main() {
     return;
   }
 
+  /* The table's column list. Asked often enough -- "is there an author
+     column?", "where does the byline come from?" -- to be worth a command
+     instead of a throwaway script each time. One row is pulled, which does
+     include the large JSONB columns, so this is a `limit(1)` on purpose and
+     prints keys only, never values. */
+  if (cmd === 'columns') {
+    const { data, error } = await client().from('neograph_reports').select('*').limit(1);
+    if (error) { console.error(error.message); process.exit(1); }
+    if (!data.length) { console.log('(table is empty)'); return; }
+    const keys = Object.keys(data[0]);
+    console.log(`${keys.length} columns`);
+    console.log(keys.map((k) => `  ${k}`).join('\n'));
+    return;
+  }
+
   if (cmd === 'slugs') {
     const { data, error } = await client().from('neograph_reports').select('slug');
     if (error) { console.error(error.message); process.exit(1); }
@@ -353,7 +369,7 @@ async function main() {
     return;
   }
 
-  console.log('usage: node scripts/report-db.mjs <count|slugs|industries|audit|dump|check|publish> [args]');
+  console.log('usage: node scripts/report-db.mjs <count|slugs|columns|industries|audit|dump|check|publish> [args]');
   process.exit(2);
 }
 

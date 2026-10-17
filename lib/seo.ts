@@ -81,7 +81,14 @@ export function schemaDate(value: string | number | undefined | null): string | 
   if (/^\d{4}-\d{2}-\d{2}/.test(v)) return v.slice(0, 10);
   if (/^\d{4}$/.test(v)) return `${v}-01-01`;
   const parsed = new Date(v);
-  return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  /* Read the calendar fields back in the same zone `Date` parsed them in.
+     "December 18, 2025" parses as local midnight, so `toISOString()` — which
+     converts to UTC first — returned 2025-12-17 for every build east of
+     Greenwich, and the correct date on Vercel. The emitted `datePublished`
+     should not depend on where the build ran. */
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${parsed.getFullYear()}-${pad(parsed.getMonth() + 1)}-${pad(parsed.getDate())}`;
 }
 
 /**
@@ -96,6 +103,12 @@ export function schemaDate(value: string | number | undefined | null): string | 
  * The pattern is built from a character class rather than a word-boundary
  * escape: an earlier copy of this logic had its escapes turned into literal
  * backspace characters by a tool, matched nothing, and silently did nothing.
+ *
+ * The same hazard bit the whitespace collapse below, which shipped as `/s+/`
+ * and so replaced every literal letter "s" with a space — "Global Liquid
+ * Biopsy Market" rendered as "Global Liquid Biop y Market" on related-report
+ * cards and in the OpenGraph image. `scripts/seo-unit.mjs` now asserts both
+ * patterns offline so neither can regress silently again.
  */
 export function marketName(title: string | undefined | null): string {
   const raw = String(title ?? '');
@@ -103,5 +116,5 @@ export function marketName(title: string | undefined | null): string {
   const cut = match
     ? raw.slice(0, match.index + match[0].indexOf('Market') + 'Market'.length)
     : raw;
-  return cut.replace(/s+/g, ' ').trim();
+  return cut.replace(/\s+/g, ' ').trim();
 }

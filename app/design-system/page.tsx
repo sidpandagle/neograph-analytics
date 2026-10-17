@@ -282,7 +282,7 @@ export default function DesignSystemPage() {
                 </Card>
 
                 <Card>
-                  <div className="w-full h-32 bg-blue-600 rounded-lg mb-4" />
+                  <div className="w-full h-32 bg-[var(--cmi-primary-fill)] rounded-lg mb-4" />
                   <CardTitle className="mb-2">Market Insights</CardTitle>
                   <CardDescription>
                     Key findings from our recent industry survey

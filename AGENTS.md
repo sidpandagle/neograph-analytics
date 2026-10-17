@@ -129,7 +129,7 @@ both and shipped 24 dead links to crawlers.
 
 ## Where the state lives
 
-- `STATUS.md` — current task, budget, merge slots used today (IST), blockers.
+- `STATUS.md` — current task, budget, today's merge state (IST), blockers.
 - `WORKLOG.md` — append-only; every change with the measurement behind it.
 - `BACKLOG.md`, `REVIEW-QUEUE.md` — queues; items move, never vanish.
 - `research/REPORT-PIPELINE.md` — the report expansion, topic by topic.

@@ -3,10 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui';
+import { submitPurchaseInquiry, isFormError } from '@/lib/api/forms';
 
 interface CheckoutFormProps {
   reportSlug: string;
   reportTitle: string;
+  /** Formatted price as the page shows it, e.g. "$2,995". Sent with the lead so
+   *  sales answers against the figure the buyer actually saw. */
+  quotedPrice?: string;
 }
 
 interface CustomerDetails {
@@ -25,24 +29,52 @@ const INITIAL_DETAILS: CustomerDetails = {
   customer_country: '',
 };
 
-export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
+export function CheckoutForm({ reportSlug, reportTitle, quotedPrice }: CheckoutFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [details, setDetails] = useState<CustomerDetails>(INITIAL_DETAILS);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setDetails(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  /* This used to be `setSubmitted(true)` and nothing more - the success panel
+     was shown over a lead that was never sent. Only a confirmed send flips
+     `submitted` now; a failure says so and keeps the filled-in form. */
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (sending) return;
+
+    setSending(true);
+    setError(null);
+
+    const response = await submitPurchaseInquiry({
+      fullName: details.customer_name,
+      email: details.customer_email,
+      company: details.customer_company,
+      phone: details.customer_phone,
+      country: details.customer_country,
+      reportTitle,
+      reportSlug,
+      quotedPrice,
+    });
+
+    setSending(false);
+
+    if (isFormError(response)) {
+      setError(response.message);
+      return;
+    }
+
     setSubmitted(true);
   };
 
   if (submitted) {
     return (
       <div className="text-center py-10 space-y-4">
-        <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-          <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="w-14 h-14 rounded-full bg-[var(--status-success-surface)] flex items-center justify-center mx-auto">
+          <svg className="w-7 h-7 text-[var(--status-success-icon)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -65,7 +97,7 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
-          Full Name <span className="text-red-500">*</span>
+          Full Name <span className="text-[var(--status-error-icon)]">*</span>
         </label>
         <input
           type="text"
@@ -74,13 +106,13 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
           onChange={handleChange}
           required
           placeholder="John Smith"
-          className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+          className="w-full border border-[var(--input)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
         />
       </div>
 
       <div>
         <label className="block text-sm font-medium text-[var(--foreground)] mb-1">
-          Email Address <span className="text-red-500">*</span>
+          Email Address <span className="text-[var(--status-error-icon)]">*</span>
         </label>
         <input
           type="email"
@@ -89,7 +121,7 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
           onChange={handleChange}
           required
           placeholder="john@company.com"
-          className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+          className="w-full border border-[var(--input)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
         />
         <p className="text-xs text-[var(--muted-foreground)] mt-1">We will reach out to this address to complete your order.</p>
       </div>
@@ -104,7 +136,7 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
           value={details.customer_company}
           onChange={handleChange}
           placeholder="Acme Corp"
-          className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+          className="w-full border border-[var(--input)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
         />
       </div>
 
@@ -119,7 +151,7 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
             value={details.customer_phone}
             onChange={handleChange}
             placeholder="+1 234 567 8900"
-            className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full border border-[var(--input)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
           />
         </div>
 
@@ -133,14 +165,23 @@ export function CheckoutForm({ reportSlug, reportTitle }: CheckoutFormProps) {
             value={details.customer_country}
             onChange={handleChange}
             placeholder="United States"
-            className="w-full border border-[var(--border)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full border border-[var(--input)] rounded-md px-3 py-2 text-sm bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
           />
         </div>
       </div>
 
+      {error && (
+        <p
+          role="alert"
+          className="rounded-md border border-[var(--status-error-border)] bg-[var(--status-error-surface)] px-3 py-2 text-sm text-[var(--status-error-text)]"
+        >
+          {error}
+        </p>
+      )}
+
       <div className="pt-2">
-        <Button type="submit" size="lg" className="w-full">
-          Submit Purchase Inquiry
+        <Button type="submit" size="lg" className="w-full" isLoading={sending}>
+          {sending ? 'Sending inquiry...' : 'Submit Purchase Inquiry'}
         </Button>
       </div>
 
