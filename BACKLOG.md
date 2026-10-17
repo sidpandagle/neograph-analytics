@@ -137,20 +137,60 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       author-less Article schema. Add analyst attribution.
 - [ ] Charts have no `<figure>/<figcaption>`, no source note, no figure number;
       `charts[].data_source` is unused.
-- [ ] Base-year figure disagrees with the chart's first plotted point ($64.5B tile
-      above a line starting at $68.2B). `historical_period` 2019-2023 is never
-      plotted, so there is no actual-vs-forecast distinction.
-- [ ] Analyst prose is `text-xs` (12px) at ~2.9:1 contrast — fails WCAG AA — and
+- [ ] ~~Base-year figure disagrees with the chart's first plotted point ($64.5B tile
+      above a line starting at $68.2B).~~ **FIRST HALF FIXED 2026-10-18.**
+      Mechanism measured: `base_year` is outside `market_forecast` on **141 of
+      182 rows**, with the gap exactly 1 year in all 141, while the other 41
+      include it and its value equals `market_size.current_value` exactly in
+      all 41. The series now starts at the base year on all 182 — which also
+      made the chart's `ReferenceLine` labelled "Base" render for the first
+      time; it had been anchored to a year the axis did not contain on 77% of
+      report pages. **Still open:** `historical_period` 2019-2023 is never
+      plotted, so there is no actual-vs-forecast distinction. No historical
+      series is stored, so that half needs data before it needs code.
+- [ ] ~~Analyst prose is `text-xs` (12px) at ~2.9:1 contrast — fails WCAG AA~~ — and
       the measure runs ~95 characters. Promote to 16-17px/1.65, cap at ~68ch.
+      **RE-MEASURED 2026-10-18 and mostly stale, with one real defect found and
+      fixed.** Body prose on a report page is `text-sm`, not `text-xs`: across
+      all 182 built pages, **1,669** paragraphs over 120 characters are
+      `text-sm` and **0** are `text-xs`. The contrast half was settled by R-19,
+      R-20 and R-30 — 0 failing pairs in both themes, 0 failing elements in a
+      rendered per-element sweep. What was real: `KeyHighlightsSection` split
+      each highlight on its **first colon** and set everything before it in
+      12px bold uppercase. Measured over the live corpus — 757 highlights on
+      182 rows, 49 containing a colon, median prefix **44** characters, maximum
+      **142**, and exactly **10** of the 49 a genuine label (all of them the
+      word "Headline"). So the heuristic was right 10 times and wrong 39,
+      shouting whole findings. A label is now required to be at most 2 words
+      and 24 characters with no sentence punctuation; `audit-html.mjs` fails
+      any uppercase paragraph over 40 characters, negative-tested at the
+      boundary (41 caught, 40 passes). Built pages now carry **0** `text-xs`
+      paragraphs over 120 characters, down from 3.
+      **Still open:** the promotion of body prose from 14px to 16-17px and a
+      ~68ch measure is a typography decision across every report page, so it
+      stays here rather than being taken unilaterally.
 - [x] MegaMenu renders 28 `<h3>`s before the page `<h1>`, wrecking the document
       outline for crawlers. Make them spans.
       **DONE 2026-10-15 — PR #8 — now 0 headings before h1 on all 13 pages.**
 - [ ] Both SearchBars import the whole corpus into a client component and match
       contiguous substrings only. Will ship multi-MB once 140 reports load.
-- [ ] A11y: two `<main>` landmarks, no skip link, FAQ accordion lacks
+- [x] ~~A11y: two `<main>` landmarks, no skip link, FAQ accordion lacks
       `aria-expanded`/`hidden` (collapsed links stay tabbable), mobile drawer's
       ~40 links stay focusable when closed, country table clips instead of
-      scrolling, heading levels skip h2->h4.
+      scrolling, heading levels skip h2->h4.~~
+      **ALL SIX VERIFIED FIXED 2026-10-18** — re-measured against the current
+      build rather than taken on the item's word, across a report page, `/`,
+      `/about`, `/reports` and `/blog`: **1** `<main>` per page (not 2), a skip
+      link present on all five, **1** `h1` per page, **0** heading-level skips,
+      and the FAQ accordion emits `aria-expanded="false"` with
+      `aria-controls` on all 4 buttons against 4 panels that each carry
+      `hidden`, `role="region"` and `aria-labelledby`. The mobile drawer sets
+      `visibility: hidden` plus `aria-hidden` when closed
+      (`Navigation.tsx:150-161`), which is what takes its links out of the tab
+      order; the code even carries the comment explaining it. The country table
+      scrolls rather than clips (R-22), and the h2->h4 jump was the
+      `RegionalBarChart` heading, fixed alongside C-4. Fixed in pieces by other
+      items; nothing was outstanding by the time this was checked.
 
 ## Added 2026-10-15 — technical/functional audit
 ### P0

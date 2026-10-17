@@ -520,3 +520,49 @@ is a verdict on the rule.
 pipeline — 0 of 141 draft dimensions carry `market_share` — and that is the
 content session's file territory. PR #20 still needs one click; the round 5
 publish sequence is still the 21:00 IST job.
+
+
+---
+
+## Same session, 02:40 IST — backlog triage, and a heuristic that was shouting
+
+Appended. Session `f3ea25fa`. Budget: 7d used 31%, pace 75.9%, ceiling 53.1%,
+**headroom +22.1 points**. **Clock correction:** my two blocks above are
+headed 03:50 and earlier; the real times were 00:57, 01:41 and 02:00 IST. The
+work and its order are unaffected — the headings are simply wrong, and the
+correction is appended in `WORKLOG.md` rather than edited in.
+
+**Files written since the last block:**
+`components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`BACKLOG.md`, `WORKLOG.md`, this block. Still nothing under `content/`,
+nothing in `research/` beyond the one C-2 entry, and no Supabase write.
+
+**Three backlog items re-measured rather than implemented.**
+`BACKLOG.md:150`'s six accessibility defects are **all six already fixed** —
+1 `<main>` per page not 2, skip link present, 1 `h1`, 0 heading skips, the FAQ
+accordion correct on all 4 buttons and panels, and the mobile drawer taking
+its links out of the tab order with `visibility: hidden` plus `aria-hidden`.
+Struck with the measurements. `BACKLOG.md:140` is half closed by tonight's
+forecast work; its remaining half needs historical data that is not stored.
+
+**The real defect was inside the third item.** `BACKLOG.md:143` claimed body
+prose is 12px at 2.9:1 — stale on both counts (1,669 long paragraphs are
+`text-sm`, 0 are `text-xs`; contrast settled by R-19/R-20/R-30). But the scan
+found 3 long `text-xs` paragraphs, all one bug: `KeyHighlightsSection` split
+each highlight on its **first colon** and set everything before it in 12px
+bold uppercase. Over the live corpus that is **757 highlights, 49 with a
+colon, median prefix 44 characters, maximum 142, and exactly 10 genuine
+labels — all of them the word "Headline"**. Right 10 times, wrong 39. A label
+now has to look like one (≤2 words, ≤24 characters, no sentence punctuation);
+`audit-html.mjs` fails any uppercase paragraph over 40 characters,
+negative-tested at the boundary (41 caught, 40 passes). Long `text-xs`
+paragraphs: 3 → 0.
+
+Verified: build exit 0, `tsc` clean, `audit-html.mjs` 18 of 18, source-hygiene
+232 files / 0 findings.
+
+**Still open and unchanged by this session:** PR #20 needs one click; the
+round 5 publish sequence is the 21:00 IST job; `C-2`'s drafting half (0 of 141
+draft dimensions carry `market_share`) belongs to the content session; and
+promoting report body prose from 14px to 16-17px at ~68ch is a typography
+decision left in `BACKLOG.md` rather than taken here.

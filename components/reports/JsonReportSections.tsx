@@ -880,9 +880,26 @@ function KeyHighlightsSection({ highlights }: { highlights: string[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
       {highlights.map((highlight, i) => {
+        /* Splitting on the first colon and shouting everything before it in
+           12px bold uppercase was right 10 times and wrong 39. Measured over
+           the live corpus: 757 highlights on 182 rows, 49 of them containing a
+           colon, and the median prefix is 44 characters with a maximum of 142
+           -- whole sentences set as labels, because analyst prose uses colons
+           mid-sentence. Of the 49, exactly 10 are a real label and all 10 are
+           the word "Headline"; the rest are clauses like "Published estimates
+           are bimodal" or a 142-character finding about CAGR reconciliation.
+           A label is short and nominal, so that is what is required of it:
+           at most 2 words, at most 24 characters, and no sentence
+           punctuation. Everything else reads as the prose it is. */
         const colonIdx = highlight.indexOf(':')
-        const label = colonIdx > -1 ? highlight.slice(0, colonIdx) : null
-        const body = colonIdx > -1 ? highlight.slice(colonIdx + 1).trim() : highlight
+        const candidate = colonIdx > -1 ? highlight.slice(0, colonIdx).trim() : ''
+        const isLabel =
+          candidate.length > 0 &&
+          candidate.length <= 24 &&
+          !/[.,;]/.test(candidate) &&
+          candidate.split(/\s+/).length <= 2
+        const label = isLabel ? candidate : null
+        const body = isLabel ? highlight.slice(colonIdx + 1).trim() : highlight
         return (
           <div
             key={i}

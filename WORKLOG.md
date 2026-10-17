@@ -3063,3 +3063,93 @@ Retargeted at the third `<th scope="row">` after the forecast caption, it is
 caught. **A negative test can fail for the same reason a checker can: it can
 miss the thing it believes it is touching.** Worth more than the seven that
 passed first time.
+
+
+---
+
+## 2026-10-18, 02:00-02:40 IST — backlog triage by measurement, and one shouting heuristic
+
+Session `f3ea25fa`. Budget at start: 7d used 31%, pace 75.9%, ceiling 53.1%,
+headroom +22.1 points.
+
+**Timestamp correction for the two entries above.** Both carry wrong clock
+times in their headings — the first is headed 01:30-02:40 and the second
+02:40-03:50, where `date` actually read 00:57, 01:41 and 02:00 at the three
+points they were written. The work, the order and the measurements are
+unaffected; only the headings are wrong, and they are corrected here rather
+than edited, because this file is append-only.
+
+### Three backlog items re-measured instead of implemented
+
+`BACKLOG.md:150` listed six accessibility defects. Re-measured against the
+current build across a report page, `/`, `/about`, `/reports` and `/blog`,
+**all six are already fixed**:
+
+```
+<main> landmarks per page      1   (claim: 2)
+skip link                      present on all 5 pages
+h1 per page                    1
+heading-level skips            0
+FAQ buttons                    4, all aria-expanded="false" + aria-controls
+FAQ panels                     4, all hidden + role="region" + aria-labelledby
+mobile drawer when closed      visibility: hidden + aria-hidden
+                               (Navigation.tsx:150-161, with the comment
+                                explaining exactly this)
+country table                  scrolls, does not clip  (R-22)
+h2 -> h4 jump                  RegionalBarChart, fixed alongside C-4
+```
+
+Struck with the measurements rather than left open. A backlog that lies about
+six things is worse than a shorter one.
+
+`BACKLOG.md:140` is half closed by tonight's forecast work and the remaining
+half is a data gap, not a code gap: no historical series is stored, so
+actual-vs-forecast cannot be plotted without inventing one.
+
+### The one real defect, and it was in the third item
+
+`BACKLOG.md:143` claimed analyst prose is 12px at ~2.9:1. Both halves are
+stale — contrast was settled by R-19/R-20/R-30, and across all 182 built
+pages **1,669** paragraphs over 120 characters are `text-sm` while **0** are
+`text-xs`. But the scan that settled it turned up 3 paragraphs that *were*
+long and `text-xs`, and all 3 were the same bug.
+
+`KeyHighlightsSection` split each highlight on its **first colon** and set
+everything before it in 12px bold uppercase. Measured over the live corpus:
+
+```
+highlights                       757 across 182 rows
+containing a colon                49
+prefix length  min 8 / median 44 / p90 85 / max 142
+prefixes over 40 chars            28
+prefixes over 60 chars            14
+genuinely a label                 10 — and all 10 are the word "Headline"
+```
+
+So the heuristic was right 10 times and wrong 39, and the worst case set a
+142-character finding about CAGR reconciliation as a shouted label. A label is
+now required to look like one: at most 2 words, at most 24 characters, no
+sentence punctuation. The other 39 read as the prose they are — `text-sm`
+long paragraphs rose by exactly 23 and `text-xs` paragraphs over 120
+characters fell from 3 to 0.
+
+`audit-html.mjs` now fails any uppercase paragraph over 40 characters.
+
+### Verified
+
+```
+npm run build        exit 0
+tsc --noEmit         clean
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+source-hygiene.mjs   232 files, 0 findings  (the new rule uses \s+, which is
+                     exactly the escape class R-17 was eaten by)
+built HTML           0 text-xs paragraphs over 120 chars, down from 3
+```
+
+Negative tests, each applied alone, file restored byte-identical:
+
+```
+CAUGHT  an 88-char sentence re-shouted as a label
+CAUGHT  a 41-character uppercase label  (just over the line)
+PASSES  a 40-character uppercase label  (on the line — the intended boundary)
+```

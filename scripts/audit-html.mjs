@@ -458,6 +458,20 @@ function auditDocument(route, html) {
     }
   }
 
+  // ── no sentence is set as a label ─────────────────────────────────────────
+  /* A 12px bold uppercase run is a label. The key-highlights block used to
+     derive one by splitting on the first colon, which turned analyst prose
+     into shouting -- measured at up to 142 characters. Anything that long in
+     label type is prose that lost an argument with a heuristic. */
+  const shouted = [...html.matchAll(/<p\b[^>]*class="[^"]*\buppercase\b[^"]*"[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => textOf(m[1]))
+    .filter((t) => t.length > 40);
+  if (shouted.length) {
+    errors.push(
+      `${shouted.length} uppercase label(s) longer than 40 characters, e.g. "${shouted[0].slice(0, 60)}…" — that is prose, not a label`
+    );
+  }
+
   // ── language ──────────────────────────────────────────────────────────────
   if (!/<html[^>]+lang="/i.test(html)) errors.push('<html> has no lang attribute');
 
