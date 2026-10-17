@@ -2096,3 +2096,86 @@ Every dark-mode contrast ratio in this deploy is computed from the token hexes.
 Production confirms the tokens shipped with both values; it does not confirm
 what a person sees. That, R-13's first-paint trace and R-22's table check all
 wait for the 21:00-09:00 browser window.
+
+
+## 2026-10-17, 17:20-18:0x IST — Round 5 opened; dialysis-and-renal-care-market drafted and passing
+
+`/research` was invoked with the queue empty. Rounds 1-4 are all published and
+the live corpus reads **182** slugs (verified against `report-db.mjs slugs`;
+every one of the 40 drafted files in `content/reports/` resolves to a live row,
+so the pipeline prose claiming "thirty reports held for the 21:00 IST merge"
+described a state that had already cleared). The 30-50 target is met. The skill's
+answer to an empty queue is to propose five topics, so round 5 is appended with
+five, each admitted on one test: a public countable register exists to divide
+through, and the register is named in the row.
+
+**Report 41, `dialysis-and-renal-care-market`, passes `check` clean — no
+warnings.** Published: **$83.97B (2026) -> $118.79B (2032), 5.95% CAGR**,
+dialysis services scope.
+
+**Spread: 6.65x** at a common 2026 base, $20.29B to $134.90B. It resolves into
+four tiers rather than a range — machines $20.29B, equipment $30.01B, services
+$83.97B, undifferentiated $130.4-134.9B — while the CAGRs span only 1.80x
+(4.60%-8.30%). Near-consensus on the growth rate, a factor of six-and-a-half
+disagreement about what is being grown. The two 2025-base estimates were each
+advanced one year at their own publisher's stated CAGR before any comparison, so
+the 6.65x is a like-for-like figure and not a base-year artefact.
+
+**Four independent groundings, all reconciling** — the most this loop has
+managed on one topic:
+
+1. **Disclosed revenue.** FMC EUR 19,628M at the ECB 2025 annual average of
+   1.1300 USD/EUR (Bank of Finland) = $22.180B, + DaVita $13.643B = **$35.823B**,
+   which is **1.77x the entire published machines market** and 42.7% of the
+   services market. + Vantive's last public $4.5B (2023) = $40.323B = **48.0%**.
+   The $130-135B readings need a $90-95B remainder, 2.3x those three combined.
+2. **Revenue per patient-year, two unrelated filings.** DaVita
+   0.86 x $13,643M / 200,500 U.S. patients = **$58,519**. FMC $15,522M Care
+   Delivery / 291,902 patients = **$53,176**. Agreement within 10%, with FMC the
+   lower as its international mix predicts.
+3. **The regulatory price.** CMS CY2026 ESRD PPS base rate **$281.71/treatment**
+   x 156 thrice-weekly treatments = **$43,947/patient-year**, which is 1.33x
+   below DaVita's realised rate — the commercial and Medicare Advantage uplift,
+   arrived at from a payment rule rather than from a company.
+4. **The national register.** 516,837 U.S. dialysis patients x $58,519 =
+   **$30.245B** ceiling for U.S. dialysis services; / 7,556 centres =
+   **$4.003M per centre**, against **$4.416M** at DaVita's own 2,657 centres —
+   9% apart, in the right direction, because the census includes small
+   hospital-based and rural units. Patients per centre agrees too: 68.4 census,
+   75.5 DaVita, 81.1 FMC.
+
+**The finding worth an article.** MedPAC puts fee-for-service Medicare and
+beneficiary spending on outpatient dialysis at **$7.6B in 2024, down from $8.1B
+in 2023** — nominally falling. That is **25.1%** of the $30.2B U.S. services
+ceiling and **9.1%** of the published global services market. The programme that
+created this industry by extending Medicare on diagnosis in 1972 now pays under
+a tenth of the lowest credible global figure, and is shrinking in nominal terms
+while operator revenue grows 6.5%. Dialysis is the cleanest case in the corpus of
+a market whose headline payer is sixteen times smaller than its headline size.
+
+**CAGR correction carried on the page.** The publisher states 5.93%; its own
+endpoints imply (118.79/83.97)^(1/6)-1 = 5.9523%. We publish **5.95%** so the
+endpoints, the rate and the seven forecast points reconcile exactly, and say so
+in `forecast_analysis` rather than absorbing the 0.02 points silently.
+
+**Not published,** and empty in the JSON: `regional_analysis`,
+`country_analysis`, all vendor revenue shares, any global dialysis patient count
+as a hard figure, any full-year treatment total (DaVita disclosed 21,469,460 for
+nine months only, in a quarter it attributes to flu mortality — annualising it
+would manufacture precision), Vantive's post-2023 revenue, and any
+haemodialysis-vs-peritoneal or in-centre-vs-home percentage. One ratio *is*
+published and labelled: DaVita's 200,500 U.S. patients are **38.8%** of the
+516,837 in the census — a share of patients from two public registers, not a
+share of revenue, and `competitive_landscape[].market_share` is absent
+throughout. Vendor share in dialysis became *less* computable in 2025, not more:
+Vantive's $4.5B went private on 31 January and the third-largest U.S. operator
+does not file.
+
+Held on the branch. 17:20 IST at draft time is not the publish window, and
+`dynamicParams = false` makes an unbuilt row a hard 404 behind an ISR card.
+Publish in the run-up to the 21:00 IST merge, reports before anything linking to
+them.
+
+Next: report 42, `contract-research-organization-market`, against
+ClinicalTrials.gov registered-study counts and IQVIA/ICON/Fortrea segment
+revenue.

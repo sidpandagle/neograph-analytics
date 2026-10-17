@@ -1,7 +1,11 @@
 # STATUS
 
-**Updated:** 2026-10-17 17:45 IST
-**Budget:** 7d used 22% | ceiling (70% of pace) 49% | headroom +27 points
+**Updated:** 2026-10-17 18:05 IST
+**Budget:** 7d used 23% | ceiling (70% of pace) 51.8% | headroom +28.8 points
+**Current task:** `/research` round 5. Report 41
+`dialysis-and-renal-care-market` drafted and **passing `check` clean**; held on
+the branch for the 21:00 IST publish window. Next: report 42,
+`contract-research-organization-market`.
 **Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change), **#19 at
 17:40 on Siddhant's request** (`576143e`, live in ~2 min, production verified).
 Extra merges on request are uncapped; the 21:00 scheduled slot is now free for

@@ -160,4 +160,23 @@ Then go back to step 1.
   a list view.
 - Port 3000 is Siddhant's. Serve builds on 3100+ and confirm the process owns
   the port before trusting local output.
-- Two subagents at most in flight at once.
+- **Five subagents at most in flight at once**, and only as many as the work
+  actually needs — one topic does not want five agents. One agent per topic is
+  the unit: the topic is independent of every other, so five topics research
+  cleanly in parallel while five agents on one topic duplicate searches and
+  contradict each other on the same figure.
+  - Each agent gets a brief **by path** — `research/REPORT-AUTHORING-BRIEF.md`,
+    its slug, and the register named in its pipeline row — not a restated copy
+    of the brief, and never a hypothesis about what it will find. An agent handed
+    a conclusion returns it confirmed.
+  - **Never two agents writing one file.** Each owns exactly two paths,
+    `research/<slug>-notes.md` and `content/reports/<slug>.json`, and touches
+    nothing else — not `WORKLOG.md`, not `STATUS.md`, not the pipeline. The
+    session owner records state after they return, so their writes cannot race.
+  - Treat what an agent returns as a hypothesis. Re-run
+    `node scripts/report-db.mjs check` on its file yourself, and spot-check its
+    grounding division before the figure goes near a published row — a passing
+    `check` proves the arithmetic reconciles, not that the source says what the
+    agent claims.
+  - Budget headroom of 0-5 points means **no agents at all**; a fan-out of five
+    is the most expensive thing this loop does.

@@ -4,8 +4,11 @@ Standing instruction (2026-10-16): add **30-50 new research reports** to the
 corpus, held to `REPORT-AUTHORING-BRIEF.md`. Corpus was **142** rows at the
 start of this expansion.
 
-Research runs in batches of 5, two batches in flight at a time (the two-subagent
-limit). A batch is done when every draft in it passes
+Research runs in batches of 5, now **one agent per topic with up to five in
+flight at once** (raised from two on Siddhant's instruction, 2026-10-17; the cap
+lives in `.claude/skills/research/SKILL.md`). Each agent owns only its own
+`research/<slug>-notes.md` and `content/reports/<slug>.json`, so no two write the
+same file. A batch is done when every draft in it passes
 `node scripts/report-db.mjs check`. Publishing is the session owner's step.
 
 Topics were chosen against `research/corpus-slugs.txt` so none duplicates an
@@ -93,3 +96,23 @@ than no report.
 Every one of the ten: `regional_analysis` and `country_analysis` empty, no vendor
 market shares anywhere, base years derived from a named publisher's own figure
 advanced at that publisher's own rate, and the derivation stated on the page.
+
+## Round 5 queue — appended 2026-10-17
+
+Rounds 1-4 are all **published**; the live corpus is **182** rows (142 at the
+start of the expansion, +40), so the prose above about "thirty reports held for
+the 21:00 IST merge" describes a state that has already cleared. The 30-50
+target is met. This round exists because `/research` was invoked again with the
+queue empty, which the skill answers by proposing five topics.
+
+Each topic below was admitted on one test: a public, countable register exists
+to divide a headline figure through. The register is named in the row, because a
+topic with no register is dropped rather than drafted.
+
+| # | Slug | Industry | Round | Countable register | State |
+|---|---|---|---|---|---|
+| 41 | dialysis-and-renal-care-market | Medical Devices | 5A | ESRD Networks national census (7,556 centres / 516,837 dialysis patients, 31 Mar 2025); CMS CY2026 ESRD PPS base rate $281.71/treatment; MedPAC FFS dialysis spending; FMC / DaVita / Vantive disclosed revenue | check-passed (2026-10-17) |
+| 42 | contract-research-organization-market | Life Sciences | 5A | ClinicalTrials.gov registered-study counts; IQVIA R&DS, ICON, Fortrea segment revenue | queued |
+| 43 | pharmacovigilance-market | Healthcare IT | 5A | FDA FAERS quarterly received-report counts | queued |
+| 44 | radiotherapy-equipment-market | Medical Devices | 5A | IAEA DIRAC radiotherapy centre and teletherapy unit counts | queued |
+| 45 | ambulatory-surgery-centers-market | Healthcare IT | 5A | CMS Medicare-certified ASC counts and ASC payment-system data | queued |

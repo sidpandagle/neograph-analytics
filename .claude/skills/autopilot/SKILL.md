@@ -91,8 +91,11 @@ flight.
   verify ownership (`netstat -ano | grep ":3100"` then
   `Get-CimInstance Win32_Process -Filter "ProcessId=<pid>"`) rather than killing
   by port. A stale `next start` serving old code has produced a false pass twice.
-- **Max 2 subagents** at a time, research or review only, never concurrent writes
-  to one file. Hand each one a brief by path, not a restated version of it.
+- **Max 2 subagents** at a time for review, audit and codebase work, never
+  concurrent writes to one file. Hand each one a brief by path, not a restated
+  version of it. **Research fan-out is the exception** and is governed by the
+  `research` skill, which allows up to **five** — one per independent topic,
+  each owning only its own two files. Outside that skill the cap stays 2.
 - Treat subagent output as a hypothesis. Reproduce a finding cleanly before
   acting on it; past findings were harness artefacts.
 
