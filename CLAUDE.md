@@ -246,6 +246,7 @@ through ISR with no deploy.
 
 ```bash
 node scripts/report-db.mjs check content/reports/*.json   # drafts, offline
+node scripts/report-db.mjs columns                        # the table's 32 columns
 node scripts/audit-html.mjs [--prod]                      # 16 routes, headless
 node scripts/contrast-audit.mjs                           # token contrast, both themes
 node scripts/report-db.mjs audit                          # SEO lengths corpus-wide
