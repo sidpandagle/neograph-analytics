@@ -432,3 +432,51 @@ session; no figure was invented to tick the box.
 **Unchanged by this session:** PR #20 still needs one click, the round 5
 publish sequence above is still the thing to run at 21:00 IST, and `C-1` and
 `C-3` are still `needs-owner`.
+
+
+---
+
+## Same session, 03:50 IST — the regional and forecast charts now ship their numbers too
+
+Appended. Continues the C-2 block above; same session `f3ea25fa`. Budget:
+7d used 30%, pace 75.7%, ceiling 53.0%, **headroom +23.0 points**.
+
+**Files written since the last block:**
+`components/reports/charts/RegionalBarChart.tsx`,
+`components/reports/charts/MarketForecastLineChart.tsx`,
+`scripts/audit-html.mjs`, `WORKLOG.md`, this block. Still nothing under
+`content/`, nothing in `research/` beyond the one C-2 entry, and no Supabase
+write.
+
+**What shipped.** The same gap as C-2, on the two charts that render far more
+widely. Measured live: **229 of 509 regional rows** had their share and growth
+rate in no HTML at all (only the top two of 3-5 regions were printed as text),
+and **all 1,556 forecast points on all 182 rows** were unreadable without
+JavaScript. Both charts now carry a full table and a `role="img"` wrapper.
+Built output: **140/140 regional, 182/182 forecast**, 1:1.
+
+**The new rule found a real defect on its first run, and it is now fixed.**
+`base_year` is outside the forecast series on **141 of 182 rows** (gap exactly
+1 year in all 141), so the chart's `ReferenceLine` at `baseYear` labelled
+"Base" was anchored to a year the axis did not contain and **rendered nothing
+on 77% of report pages**. The remaining 41 rows include the base year and its
+value equals `market_size.current_value` exactly in all 41 — which is what made
+the fix safe. The base point is prepended where missing, from the value the
+metric tile already prints. All 182 pages now carry a base-year row. This also
+closes the mechanism behind `BACKLOG.md:140`.
+
+Verified: build exit 0 (417 pages), `tsc` clean, lint unchanged at 12
+warnings / 0 errors, `audit-html.mjs` 18 of 18, contrast 0 failing pairs,
+source-hygiene 0 findings. Six new audit rules, **negative-tested eight ways**.
+
+**One method note worth carrying.** One negative test reported MISSED while the
+rule it was testing was correct: the corruption hit the first `>2026<` on the
+page, which is not inside the forecast table, so it edited something the rule
+never reads. A negative test can be blind in exactly the way a checker can.
+Retargeted, it catches. Treat a MISSED as a question about the test before it
+is a verdict on the rule.
+
+**Next in this session:** `C-2`'s remaining half is still the drafting
+pipeline — 0 of 141 draft dimensions carry `market_share` — and that is the
+content session's file territory. PR #20 still needs one click; the round 5
+publish sequence is still the 21:00 IST job.

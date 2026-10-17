@@ -50,7 +50,23 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
   const unitShort = unit === 'Billion' ? 'B' : unit === 'Million' ? 'M' : unit
   const currencySymbol = currency === 'USD' ? '$' : currency
 
-  const chartData = data.map((d) => ({
+  /* 141 of the 182 live rows store the series as the forecast period alone --
+     base_year 2023, points 2024-2032 -- and keep the base year's value in
+     market_size.current_value, which is what `currentValue` already resolves
+     to. The other 41 carry the base year as the first point, and in all 41 of
+     those its value equals current_value exactly, so the two conventions
+     describe the same series and only one of them writes the first point
+     down. Prepending it where it is missing makes every report's series start
+     where its own metric tile says the market was measured -- and it is why
+     the `ReferenceLine` at `baseYear` below drew nothing at all on those 141
+     pages: it was anchored to a year the axis did not contain. Nothing is
+     invented here; the number is already printed in the tile above. */
+  const series =
+    data.some((d) => d.year === baseYear) || !data.length || baseYear > data[0].year
+      ? data
+      : [{ year: baseYear, value: currentValue }, ...data]
+
+  const chartData = series.map((d) => ({
     year: d.year.toString(),
     value: d.value,
   }))
@@ -184,7 +200,7 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
               </tr>
             </thead>
             <tbody>
-              {data.map((d) => (
+              {series.map((d) => (
                 <tr key={d.year} className="border-b border-[var(--border)] last:border-0">
                   <th scope="row" className="py-2 pr-3 text-left font-normal tabular-nums text-foreground">
                     {d.year}

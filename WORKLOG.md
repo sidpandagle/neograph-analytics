@@ -2959,3 +2959,107 @@ reconstructed, which is research, not a fix; the veterinary slip needs a
 decision about which of the two figures the source actually supports. Both
 reach production through ISR with no deploy once settled, so neither is
 blocked on a window.
+
+
+---
+
+## 2026-10-18, 02:40-03:50 IST — the other two charts: 1,556 forecast points and 229 regional rows that were in no HTML
+
+Same session `f3ea25fa`, same defect class as C-2's render half, two charts
+further on. Budget at start: 7d used 30%, pace 75.7%, ceiling 53.0%, headroom
++23.0 points.
+
+### What was missing
+
+Recharts draws every label in the browser, so anything whose only home is a
+chart is in no delivered HTML at all. Measured against the live corpus:
+
+```
+regional_analysis   140 of 182 rows, 509 regions, 3 to 5 per row
+                    RegionalBarChart printed the top TWO as text
+                    -> 229 of 509 regions had share and growth rate nowhere
+                       in the HTML, and 509 of 509 carry a largest_country
+                       of which only the top two were ever printed
+market_forecast     182 of 182 rows, 1,556 points, 7 to 9 per row
+                    MarketForecastLineChart printed none of them
+                    -> the entire series was unreadable without JavaScript.
+                       The three tiles carry base year, end year and CAGR;
+                       the path between them was the gap
+```
+
+Both charts now carry a full table — `<caption>`, `scope="col"` headers, a
+`scope="row"` per row, `tabular-nums`, `min-w-0` against R-22's grid-track
+mechanism — and both chart wrappers are `role="img"` so the figures are
+announced once rather than twice. Built output: **140 regional tables against
+140 regional charts, 182 forecast tables against 182 forecast charts**, 1:1 on
+every page that has the chart.
+
+### The rule's first run found a real defect, in 141 of 182 rows
+
+`forecast table 1 marks no base year`. Not a bug in the page — two conventions
+in the data:
+
+```
+rows with a forecast series                182
+base year present in the series             41  - and in all 41 the plotted
+                                                  value equals current_value
+                                                  exactly, 0 mismatches
+base year absent from the series           141  - gap is exactly 1 year in
+                                                  all 141, no scatter
+```
+
+So 141 rows store the series as the forecast period alone (`base_year` 2023,
+points 2024-2032, matching `forecast_period`) and keep the base year's value in
+`market_size.current_value`; 41 rows write that first point down. The two
+describe the same series.
+
+**The consequence nobody had seen:** `MarketForecastLineChart` draws a
+`ReferenceLine` at `baseYear` labelled "Base". On those 141 pages it was
+anchored to a year the axis did not contain, so **the marker rendered nothing
+at all** — coded for, shipped, and invisible on 77% of report pages. This is
+also the mechanism behind `BACKLOG.md:140`, "base-year figure disagrees with
+the chart's first plotted point": the tile was right and the series simply
+started a year later.
+
+Fixed by prepending the base-year point where it is absent, from
+`currentValue` — which `JsonReportSections.tsx:1002` already resolves to the
+base-year forecast point when there is one and `market_size.current_value`
+otherwise, and which is the number the tile prints. No figure is invented; the
+41 well-formed rows are the evidence that this is the right value. All **182**
+pages now carry a base-year row, and the "Base" marker lands on an axis tick.
+
+### Verified
+
+```
+npm run build        exit 0, 417 static pages
+tsc --noEmit         clean
+npm run lint         12 warnings, 0 errors - unchanged
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs   0 failing pairs, both themes
+source-hygiene.mjs   232 files, 0 findings
+built HTML           140/140 regional, 182/182 forecast, 182 base-year rows
+```
+
+### Negative tests — and one that lied
+
+Eight corruptions of the built HTML, each alone, file restored byte-identical:
+
+```
+CAUGHT  regional: drop the chart aria-label   -> 0 chart(s) but 1 table(s)
+CAUGHT  regional: drop a scope="col"          -> not all 4 headers marked
+CAUGHT  regional: truncate to 2 rows          -> lists 1 region(s), corpus has 3-5
+CAUGHT  regional: drop one <td>               -> 3 row(s) but 8 cells, expected 9
+CAUGHT  forecast: drop the chart aria-label   -> 0 chart(s) but 1 table(s)
+CAUGHT  forecast: cut the series to 4 years   -> plots 4 year(s), corpus has 7-9
+CAUGHT  forecast: scramble the year order     -> 2019 does not follow 2024
+CAUGHT  forecast: drop the base-year marker   -> marks no base year
+```
+
+The year-order case reported **MISSED** on the first pass and the rule was
+fine. The corruption replaced the first `>2026<` on the page, which is not in
+the forecast table — the page contains that string earlier, so the test edited
+something the rule does not read and then reported the rule as blind.
+Retargeted at the third `<th scope="row">` after the forecast caption, it is
+caught. **A negative test can fail for the same reason a checker can: it can
+miss the thing it believes it is touching.** Worth more than the seven that
+passed first time.
