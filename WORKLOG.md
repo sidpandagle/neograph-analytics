@@ -2764,3 +2764,125 @@ carried.
 another session's in-progress work, including work that was mid-verification
 and not yet building. Stage by path. This is the second record-correction entry
 on this branch in one night, after `bae7279`.
+
+
+## 2026-10-18, 01:55 IST — Round 6 collided with a second session, and `check` passed an unsourced report
+
+Two sessions ran the research loop on `work/continuous-improvements` at the same
+time. `neograph-analytics-72` (this one) and `neograph-analytics-9a` both
+dispatched five agents against pipeline rows 46-50, into the same ten file paths,
+for about forty minutes.
+
+**Root cause, and it is this session's.** Rows 46-50 were appended and committed
+as `queued` in `d8c7d68` at ~00:55, and five agents were dispatched immediately
+afterwards. Their `drafting` marks were never committed, so from the other
+session the rows read as unclaimed. **A queue entry is a claim only once the
+claim is committed.** For round 7: commit the rows as `drafting` *before*
+dispatching. That one ordering change prevents the whole failure.
+
+### What it cost, stated without softening
+
+`d58dd29` carries figures its own message contradicts. Hospice and skilled
+nursing were verified here at $41.70B -> $65.88B at 7.92% and $214.65B ->
+$277.77B at 4.39% — every grounding division recomputed independently, both
+reproducing to the digit — and both files were replaced between that
+verification and the `git add`. The commit contains 32.6 -> 45.3 at 4.81% and
+453.31 -> 844.77 at 9.3%. The verification was real work on files that no longer
+exist; the figures in the message do not describe the committed rows. Corrected
+in `bae7279` rather than rewritten, so the wrong claim stays visible beside its
+correction.
+
+That is the same failure this session had written into the skill two commits
+earlier — *read the file, not the report-back* — committed against itself in the
+same hour. An agent's account of its own output and this session's account of
+its own commit failed identically, and in both cases the artifact was one
+command away.
+
+### The finding worth keeping: `check` passes an unsourced report
+
+`node scripts/report-db.mjs check` returned **PASS, exit 0** on
+`digital-pathology-market.json` while the evidence file it cites contained its
+CAGR **zero times**. The checker reconciles a report's arithmetic against itself.
+It cannot see whether the notes behind it contain the same figures, so a
+mismatched pair passes every time. Both sessions hit this independently tonight —
+here on row 50, there on row 49 before the right notes landed.
+
+The test is two greps, and 9a's version is better than this session's because it
+greps the **grounding divisions** too: a report can share a headline with its
+notes by a coincidence of rounding, but not `$147,990 per lab`.
+
+```bash
+python -I scripts/verify-report-arithmetic.py <slug>   # arithmetic, independent of the checker
+grep -c "<cagr>" research/<slug>-notes.md              # pairing. zero means unsourced
+```
+
+### Split agreed with 9a, and honoured
+
+| Row | Slug | Owner | State |
+|---|---|---|---|
+| 46 | hospice-care-market | 9a | 9a's, pairs |
+| 47 | skilled-nursing-facilities-market | 9a | **needs review** — fails an external cross-check |
+| 48 | home-infusion-therapy-market | **72** | check-passed, verified here |
+| 49 | patient-monitoring-devices-market | **72** | check-passed, verified here |
+| 50 | digital-pathology-market | 9a | reversed to the sourced pair, verified here |
+
+9a reversed row 50 to this session's agent's draft on the sourcing rule rather
+than a preference between publishers, and withdrew its own 2025-base figures on
+row 48 in favour of the corpus-consistent 2026 base. It kept the unsourced
+$1.66B report intact in `research/collisions/` under the no-deletion rule. That
+is the right way to lose an argument.
+
+**Row 47 is the live defect.** Its headline is $453.31B global at 9.3%, and
+Coherent's own 45.3% North America share of its own total gives $205.35B for
+North America — **6.6% below the CMS NHEA 2024 actual of $219,900M for the United
+States alone**, a country that figure must contain. A forward-dated regional
+component below a historical national measurement cannot be rescued by growth
+assumptions. (This session first reported 4.3%, measuring against its own 2026
+US base of $214.65B; 9a's 6.6% against the measured actual is the stronger and
+correct form. Both denominators are stated so the reconciliation is on the
+record.)
+
+### The two rows this session owns
+
+**49, patient monitoring.** $9.04B (2026) -> $15.43B (2032) at 9.32%, CAGR exact
+to 0.0000 of a point. $3,587-$4,170 per staffed bed across the 36.0-41.85% US
+share bracket, against $28,961-33,668 per ICU bed, which rules out an ICU-only
+reading. Vendor containment $7,630.2M = 84.4% of this tier and 12.0% of the broad
+tier, so the broad tier cannot be this market. Raw size spread 20.58x resolves to
+7.04x after excluding one publisher whose stated 22.9% matches neither of its own
+readings (20.714% over 8 years, 24.004% over 7). 9a had held the row over 8
+populated `recent_developments`; that was 9a's dispatch requirement, not this
+session's. All 8 reviewed, and the hardest-to-fake claim checked against the
+primary register: **K242737 returns Empatica S.r.l., decision 2025-06-06, product
+code MWI** from openFDA, exactly as written. The entry's point is that a wearable
+and a Philips IntelliVue share one product code, which is why FDA classification
+cannot serve as the market boundary.
+
+**48, home infusion.** Rebased to 2026: $42.47B -> $66.6B at 7.79%, the only
+draft in a 48-report corpus that had carried a 2025 base. Grounding re-cut on
+FY2025 after verifying the filing here: Option Care Health net revenue
+**$5,649.5M, up 13.0%**, from the company's own 8-K exhibit and results release,
+with the FY2025 10-K on EDGAR since 24 February 2026 — the draft had been running
+on FY2024. Recomputed: $28.824M per location, 19.26% margin, $4.19 of product
+cost per dollar of gross margin, $8.18B service-only equivalent, Option Care at
+13.3% of the headline, and the filed income statement sums exactly
+($4,561,624K + $1,087,895K = $5,649,519K). The margin moving 20.27% -> 19.26%
+while the base rose 13% is worth $0.43B on the service-only derivation, which is
+why both years stay on the page.
+
+**That agent's first report-back cited figures absent from both its files — and
+they turned out to be real filed figures.** Verifying them is what established
+the draft was stale rather than the report confabulated. Pushing back on it,
+instead of accepting or discarding it, is what produced the FY2025 re-cut and a
+provenance section in its notes separating what it verified against primary
+sources from the thirteen published-estimate rows it carried forward without
+re-reading.
+
+### Budget and stop
+
+7d at 30%, headroom +23.0 points. **5h window at 70%**, which is the binding
+constraint: two five-agent fan-outs in one window, one of them duplicated by
+another session. No further dispatch tonight. Nothing from round 6 publishes
+tonight; round 5's five reports and the article remain the only content ready for
+the 21:00 IST window, and `STATUS.md` carries both the sequence and this
+collision account.
