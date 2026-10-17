@@ -3153,3 +3153,104 @@ CAUGHT  an 88-char sentence re-shouted as a label
 CAUGHT  a 41-character uppercase label  (just over the line)
 PASSES  a 40-character uppercase label  (on the line — the intended boundary)
 ```
+
+
+---
+
+## 2026-10-18, ~02:40 IST onward — lib/api: escaping, egress, and a sitemap date that lies quietly
+
+Session `f3ea25fa`. Budget at start: 7d used 31%, pace 76.0%, ceiling 53.2%,
+headroom +22.2 points.
+
+A verification subagent (read-only, 1 of the 2 permitted) checked the 19 open
+items in `BACKLOG.md`'s two 2026-10-15 audit blocks against current code. Its
+findings were treated as hypotheses: the two acted on here were reproduced
+first, by reading the code itself rather than its comments.
+
+### Three fixed, all in `lib/api`
+
+**Filter injection, 3 sites.** `reports.ts:58`, `blogs.ts:13` and
+`press-releases.ts:15` each built a PostgREST `or()` filter by interpolating
+the search term into the filter grammar. In that grammar a comma separates
+alternatives, a dot separates column from operator and parentheses group, so
+a search for `a,b` was not a search for `a,b`. All three still have 0 callers
+outside their own files, so nothing was exploitable — which is exactly why it
+would have survived until someone wired up the search box. New
+`lib/api/pgrst.ts` double-quotes the value, escapes `\` and `"` inside the
+quotes, makes a user's own `%` and `_` literal, and clamps to 120 characters.
+
+**Pagination that was not pagination.** `getLegalPages` selected `*` and then
+sliced in JS, so page 2 of 10 still pulled every policy's full text across
+metered egress; `getBlogs` and `getPressReleases` had stopped slicing but
+still selected `*` over the whole table with their page/limit arguments
+ignored. All three now apply a `.range()` window. **A caller that passes
+neither still gets the whole table**, so no existing call site changes
+behaviour.
+
+**A sitemap date that is wrong rather than loud — see below.**
+
+### The filed RangeError does not exist
+
+`BACKLOG.md:259` says `sitemap-reports` throws a RangeError on a null
+`published_year` and drops all report URLs from that sitemap. The guard was
+written, and then the unit test asserting the premise failed. Measured on
+Node 24:
+
+```
+new Date("")                -> Invalid Date   -> toISOString() THROWS RangeError
+new Date("-01-01")          -> Mon Jan 01 2001 -> 2000-12-31T18:30:00.000Z
+new Date("soon-01-01")      -> Mon Jan 01 2001 -> 2000-12-31T18:30:00.000Z
+new Date("null-01-01")      -> Mon Jan 01 2001 -> 2000-12-31T18:30:00.000Z
+```
+
+The template is `` `${year}-01-01` ``, so it can never produce the bare empty
+string that throws. Nothing crashes and no URL is dropped. What actually
+happens is quieter: the URL is published with a `lastModified` of 2001, and
+since that string is parsed as *local* midnight and written out with
+`toISOString()`, the published value reads **2000-12-31** from IST — a wrong
+date asserted to crawlers that also varies with the build machine's timezone.
+That is R-18's defect class, arriving by a different route.
+
+The guard is still right; only its justification was wrong. The corrected
+mechanism is written into `lib/api/pgrst.ts`, into the call site, and into
+four assertions in `scripts/api-unit.mjs`, so the rationale cannot drift back
+to the version that was filed. Whether any live row actually has a null
+`published_year` was not checked against Supabase and is not claimed.
+
+**This is the third filed claim this session whose mechanism was wrong** —
+after C-2 ("the pie never fires": it fires on 141 of 182 pages) and
+`BACKLOG.md:143` ("prose is 12px at 2.9:1": 0 of 1,669 long paragraphs are
+12px, but the colon heuristic really was shouting). In all three the defect
+was real and the stated cause was not. Writing the test that asserts the
+premise is what separated them.
+
+### New checker
+
+`scripts/api-unit.mjs` — 24 offline assertions over `lib/api/pgrst.ts`, in the
+same spirit as `seo-unit.mjs`: no network, no build, no Supabase. It covers
+each separator of the `or()` grammar, the backslash-then-quote break-out, the
+page/limit clamps, and the corrected `new Date` behaviour. Added to the
+checker list in `CLAUDE.md` along with the new module.
+
+### Verified
+
+```
+npm run build        exit 0
+tsc --noEmit         clean
+npm run lint         0 errors
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+source-hygiene.mjs   234 files, 0 findings
+seo-unit.mjs         all assertions passed
+api-unit.mjs         all assertions passed  (new)
+```
+
+### Still open from the sweep, and why
+
+Left alone deliberately: the hardcoded `$2,995` Product/Offer (owner — it is a
+pricing claim), positional author URLs (changing them breaks live URLs), the
+`neograph_reports` synthetic positional `id`, generated Supabase types (needs
+a CLI install, which this session may not do), and `/reports` server-rendering
+12 of 182 report links. `lib/chartUtils.ts` and `MarketGrowthChart` still
+return Infinity/NaN on the zero and single-year cases but are imported by
+nothing; they stay in place per the no-deletion rule, and `CLAUDE.md` already
+warns about them.

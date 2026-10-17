@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase/client';
+import { ilikeAny, rangeFor } from './pgrst';
 import type { Blog, BlogFilters } from './blogs.types';
 import type { ApiResponse } from './config';
 
@@ -8,10 +9,15 @@ export async function getBlogs(filters?: BlogFilters): Promise<ApiResponse<Blog[
     .select('*')
     .order('id');
 
-  if (filters?.search) {
-    const q = filters.search;
-    query = query.or(`title.ilike.%${q}%,excerpt.ilike.%${q}%`);
-  }
+  const searchFilter = ilikeAny(['title', 'excerpt'], filters?.search ?? '');
+  if (searchFilter) query = query.or(searchFilter);
+
+  /* page/limit were accepted and then ignored, so every caller that asked for
+     one page still pulled the whole table across metered egress. They are
+     applied server-side now. A caller that passes neither still gets the
+     whole table, so no existing call site changes behaviour. */
+  const window = rangeFor(filters?.page, filters?.limit);
+  if (window) query = query.range(window.from, window.to);
 
   const { data, error } = await query;
   if (error) return { success: false, error: 'fetch_error', message: error.message };

@@ -256,16 +256,49 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       **DONE 2026-10-15 — PR #7 — lib/format.ts; 1 bad row found and corrected.**
 - [ ] Chart projection math yields NaN when market size is 0/absent
       (`MarketGrowthChart.tsx:33-44`, `lib/chartUtils.ts:73,90`).
-- [ ] `sitemap-reports/[page]/route.ts:29` throws RangeError on a null
-      `published_year`, dropping all 140 report URLs from that sitemap.
+- [x] ~~`sitemap-reports/[page]/route.ts:29` throws RangeError on a null
+      `published_year`, dropping all 140 report URLs from that sitemap.~~
+      **FIXED 2026-10-18 — and the filed mechanism was wrong.** The route is
+      now `app/api/sitemap-reports/[page]/route.ts:28`. It does **not** throw:
+      measured on Node 24, `new Date("")` is an Invalid Date and would throw,
+      but the template is `${year}-01-01`, so the empty year makes
+      `new Date("-01-01")`, which parses cleanly as **1 January 2001** — as
+      does `new Date("soon-01-01")`. Nothing crashes and no URL is dropped.
+      The row is published with a `lastModified` of 2001 instead, and because
+      that string is parsed as *local* midnight and written out with
+      `toISOString()`, it reads 2000-12-31 from IST — a wrong date asserted to
+      crawlers that also varies with the build machine's timezone, which is
+      R-18's class of defect. Quieter than the filed bug and harder to notice.
+      `safeYear()` now keeps such a row out of the sitemap, and
+      `scripts/api-unit.mjs` asserts the corrected mechanism so the rationale
+      cannot drift back. Whether any row actually has a null `published_year`
+      was not checked against Supabase.
 - [ ] Synthetic `id` is a position in a year-sorted list; publishing one report
       renumbers every older one. `neograph_reports` has no `id` column — use
       `slug`/`report_id` as the stable key.
 
 ### P2
-- [ ] PostgREST filter injection in `.or()` search paths (currently dead code).
-- [ ] `getLegalPages`/`getBlogs`/`getPressReleases` accept page/limit then
-      fetch whole tables and slice in JS — wasted metered egress.
+- [x] ~~PostgREST filter injection in `.or()` search paths (currently dead code).~~
+      **FIXED 2026-10-18.** 3 sites confirmed before the fix
+      (`lib/api/reports.ts:58`, `blogs.ts:13`, `press-releases.ts:15`), all
+      still with 0 callers outside their own files. Each now builds its filter
+      with `ilikeAny()` from the new `lib/api/pgrst.ts`, which double-quotes
+      the value so a comma cannot open a new alternative, a parenthesis cannot
+      close the group and a dot cannot start an operator, escapes `\` and `"`
+      inside the quotes, makes a user's own `%`/`_` literal, and clamps the
+      term to 120 characters. 24 offline assertions in
+      `scripts/api-unit.mjs`, including the backslash-then-quote break-out.
+- [x] ~~`getLegalPages`/`getBlogs`/`getPressReleases` accept page/limit then
+      fetch whole tables and slice in JS — wasted metered egress.~~
+      **FIXED 2026-10-18.** Reproduced first: `getLegalPages` was the literal
+      fetch-then-slice (`select('*')` then `pages.slice(start, …)`), while
+      `getBlogs` and `getPressReleases` had stopped slicing but still
+      `select('*')` over the whole table with their page/limit ignored. All
+      three now apply the window with `.range()` via `rangeFor()`, and
+      `getLegalPages` names its 8 columns instead of `*`. **A caller that
+      passes neither page nor limit still gets the whole table**, so no
+      existing call site changes behaviour — the fix is that asking for one
+      page now costs one page.
 - [ ] `<img>` instead of `next/image` on author/team avatars, which point at the
       non-resolving CDN, so they are broken images today. `logo.png` is 185KB.
 - [ ] Generate Supabase types (`supabase gen types typescript`) to turn the

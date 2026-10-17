@@ -566,3 +566,65 @@ round 5 publish sequence is the 21:00 IST job; `C-2`'s drafting half (0 of 141
 draft dimensions carry `market_share`) belongs to the content session; and
 promoting report body prose from 14px to 16-17px at ~68ch is a typography
 decision left in `BACKLOG.md` rather than taken here.
+
+
+---
+
+## Same session, ~03:10 IST — lib/api hardening, and a filed RangeError that is not one
+
+Appended. Session `f3ea25fa`. Budget: 7d used 31%, pace 76.0%, ceiling 53.2%,
+**headroom +22.2 points**.
+
+**Files written since the last block:** `lib/api/pgrst.ts` (new),
+`lib/api/reports.ts`, `lib/api/blogs.ts`, `lib/api/press-releases.ts`,
+`lib/api/legal-pages.ts`, `scripts/api-unit.mjs` (new), `CLAUDE.md` (two
+additive entries), `BACKLOG.md`, `WORKLOG.md`, this block. Still nothing under
+`content/`, nothing in `research/` beyond the one C-2 entry, and no Supabase
+write of any kind.
+
+**What shipped.** A read-only subagent checked all 19 open items in
+`BACKLOG.md`'s 2026-10-15 audit blocks; its findings were reproduced before
+anything was acted on. Three fixed:
+
+- **PostgREST filter injection, 3 sites.** A comma in a search term opened a
+  new alternative in the `or()` filter grammar. All three paths still have 0
+  callers, so nothing was exploitable — which is why it would have survived
+  until someone wired the search box up. New `lib/api/pgrst.ts` quotes and
+  escapes the value.
+- **Pagination that was not pagination.** `getLegalPages` selected `*` and
+  sliced in JS; `getBlogs` and `getPressReleases` selected `*` over the whole
+  table with page/limit ignored. All three use `.range()` now, and a caller
+  that passes neither still gets the whole table, so nothing existing changes.
+- **A sitemap date that lies quietly** — see below.
+
+**The filed RangeError does not exist.** `BACKLOG.md:259` says the sitemap
+route throws on a null `published_year` and drops every report URL. It does
+not: `new Date("")` throws, but the template is `${year}-01-01`, and
+`new Date("-01-01")` parses cleanly as 1 January 2001. Nothing crashes. The
+URL is published with a `lastModified` of 2001 — read out through
+`toISOString()` from local midnight, so **2000-12-31 from IST** — a wrong date
+asserted to crawlers that also varies with the build machine's timezone. That
+is R-18's defect class by another route. The guard was right; its stated
+reason was wrong, and the corrected mechanism is now asserted in four unit
+tests so it cannot drift back.
+
+**That is the third filed claim this session whose mechanism was wrong**,
+after C-2 and `BACKLOG.md:143`. In all three the defect was real and the
+stated cause was not. The thing that caught each one was writing the
+assertion that states the premise.
+
+**New checker:** `node --experimental-strip-types scripts/api-unit.mjs` — 24
+offline assertions, no network, no build, no Supabase. Listed in `CLAUDE.md`.
+
+Verified: build exit 0, `tsc` clean, lint 0 errors, `audit-html.mjs` 18 of 18,
+source-hygiene 234 files / 0 findings, `seo-unit.mjs` and `api-unit.mjs` both
+fully passing.
+
+**Deliberately left for Siddhant, not worked around:** the hardcoded
+`$2,995` Product/Offer (a pricing claim), positional author URLs (changing
+them breaks live URLs), the synthetic positional report `id`, generated
+Supabase types (needs a CLI install this session will not make), and
+`/reports` server-rendering 12 of 182 report links.
+
+**Unchanged:** PR #20 needs one click; the round 5 publish sequence is the
+21:00 IST job; `C-2`'s drafting half belongs to the content session.

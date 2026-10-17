@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase/client';
+import { ilikeAny, safeYear } from './pgrst';
 import type { Report, ReportFilters } from './reports.types';
 import type { ApiResponse } from './config';
 import { marketValue } from '@/lib/format';
@@ -53,10 +54,8 @@ export async function getReports(filters?: ReportFilters): Promise<ApiResponse<R
     .select('*')
     .order('published_year', { ascending: false });
 
-  if (filters?.search) {
-    const q = filters.search;
-    query = query.or(`title.ilike.%${q}%,meta_description.ilike.%${q}%,industry.ilike.%${q}%`);
-  }
+  const searchFilter = ilikeAny(['title', 'meta_description', 'industry'], filters?.search ?? '');
+  if (searchFilter) query = query.or(searchFilter);
 
   const { data, error } = await query;
   if (error) return { success: false, error: 'fetch_error', message: error.message };
@@ -146,7 +145,15 @@ export async function getReportSitemapEntries(): Promise<
     return [];
   }
 
+  /* A row with no usable published_year came through as year: ''. The filed
+     claim was that this throws a RangeError and kills the whole sitemap
+     response; measured, it does not -- `new Date("-01-01")` parses as
+     1 January 2001. The row is published with a confidently wrong
+     lastModified instead, which is quieter and worse. Such a row is dropped
+     from the sitemap. See lib/api/pgrst.ts for the measurement. */
   return data
     .filter((r): r is { slug: string; published_year: number } => Boolean(r.slug))
-    .map((r) => ({ slug: String(r.slug), year: String(r.published_year ?? '') }));
+    .map((r) => ({ slug: String(r.slug), year: safeYear(r.published_year) }))
+    .filter((r): r is { slug: string; year: number } => r.year !== null)
+    .map((r) => ({ slug: r.slug, year: String(r.year) }));
 }
