@@ -96,6 +96,14 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
           </div>
         </div>
 
+        {/* role="img": the series is published as a table below, so the SVG's
+            own axis and tooltip labels would be a second reading of the same
+            numbers. */}
+        <div
+          role="img"
+          aria-label={`Area chart of market size by year, ${forecastPeriod}. The same figures are listed in the table below.`}
+          className="min-w-0"
+        >
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
           <AreaChart
             data={chartData}
@@ -152,6 +160,48 @@ export const MarketForecastLineChart: React.FC<MarketForecastLineChartProps> = (
             />
           </AreaChart>
         </ChartContainer>
+        </div>
+
+        {/* The forecast series as numbers. Recharts draws the line in the
+            browser, so before this the whole series existed nowhere in the
+            delivered HTML: measured across the live corpus, 1,556 forecast
+            points on 182 rows, 7 to 9 per report, none of them readable
+            without JavaScript. The three tiles above carry the base year, the
+            end year and the CAGR -- the path between them was the gap. */}
+        <div className="mt-6 min-w-0 overflow-x-auto">
+          <table className="w-full text-sm">
+            <caption className="sr-only">
+              Market size by year, {forecastPeriod}, in {currency} {unit}.
+            </caption>
+            <thead>
+              <tr className="border-b border-[var(--border)]">
+                <th scope="col" className="py-2 pr-3 text-left font-medium text-muted-foreground">
+                  Year
+                </th>
+                <th scope="col" className="py-2 text-right font-medium text-muted-foreground">
+                  Market size ({currencySymbol} {unit})
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((d) => (
+                <tr key={d.year} className="border-b border-[var(--border)] last:border-0">
+                  <th scope="row" className="py-2 pr-3 text-left font-normal tabular-nums text-foreground">
+                    {d.year}
+                    {d.year === baseYear && (
+                      <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+                        Base year
+                      </span>
+                    )}
+                  </th>
+                  <td className="whitespace-nowrap py-2 text-right font-bold tabular-nums text-foreground">
+                    {currencySymbol}{d.value.toFixed(2)}{unitShort}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </CardContent>
     </Card>
   )

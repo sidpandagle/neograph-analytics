@@ -54,16 +54,22 @@ node scripts/report-db.mjs slugs            # live dedupe list
    instruction to whoever is drafting. If a brief and the skill disagree about
    who owns a file, the agent follows the skill, so the skill has to say it.
 
-   Observed on 2026-10-18, round 6A: of five agents briefed "you own exactly
-   two paths, touch nothing else", two wrote outside that scope —
-   `components/reports/charts/ComponentSharePieChart.tsx` plus
-   `scripts/audit-html.mjs`, and this file. Both edits were coherent and
-   neither loosened a checker, so both were kept; the point is that the brief
-   alone did not hold them. **Whether any agent also rewrote its own pipeline
-   row is unknown and was not established:** the owner had already set all five
-   rows to the same `drafting` value before the fan-out, so an identical
-   rewrite leaves no diff. Do not restate that as a measurement. What is
-   measured is the two files above.
+   Observed on 2026-10-18, round 6A: files outside any agent's two-path scope
+   were written during the fan-out —
+   `components/reports/charts/ComponentSharePieChart.tsx`,
+   `scripts/audit-html.mjs` and this file. **Who wrote them was never
+   established, and an earlier version of this note blamed the agents.** Two
+   sessions were running this loop on one branch at the time, so a write from
+   a peer session's own turn is indistinguishable from a write by one of its
+   agents or mine; the repo's single configured commit identity does not
+   separate them either. The edits were coherent and none loosened a checker,
+   so all were kept.
+
+   The durable lesson is the ownership rule above, not an attribution: when two
+   sessions share a branch, **commit the claim before dispatching against it.**
+   A queue committed as `queued` with the `drafting` marks left uncommitted
+   reads as unclaimed from every other session, which is what put ten agents on
+   five slugs.
 
 A topic earns a slot only if a public, countable register exists to divide
 through: FDA device/approval lists, CMS counts, IAEA DIRAC, WHO/OECD statistics,

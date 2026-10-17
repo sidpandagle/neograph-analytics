@@ -2886,3 +2886,47 @@ another session. No further dispatch tonight. Nothing from round 6 publishes
 tonight; round 5's five reports and the article remain the only content ready for
 the 21:00 IST window, and `STATUS.md` carries both the sequence and this
 collision account.
+
+### Correction, same evening — two attributions withdrawn
+
+1. **`d58dd29` and `2b5e4b8` were not subagent commits.** They were made
+   directly by the peer session, `neograph-analytics-72`, which told me so
+   first-hand. My `49b6792` message and the WORKLOG entry above both assert
+   "two subagents committed"; that is withdrawn. The repo cannot settle it
+   either way — `git log --format="%an / %cn"` gives the same configured
+   identity for every commit on this branch, mine included — so the peer's
+   own account is the only evidence, and it is against its own interest. No
+   history needs reconciling and neither of us is rewriting anything.
+
+2. **The out-of-scope file writes are unattributed.** I recorded in the
+   research skill that "two of five agents wrote outside their two-path
+   scope". With two sessions on one branch, a write from a peer session's own
+   turn is indistinguishable from a write by one of its agents or one of mine.
+   The skill now says so. The ownership rule it was there to support stands;
+   the attribution does not.
+
+The pattern in both is the same, and it is the one worth keeping: a claim that
+sounds like a measurement, carried forward because it was plausible rather than
+because it was checked. It is the same fault as the mismatched pair — the
+difference is only that `--pair` now catches one of them.
+
+### `--pair` landed in `scripts/verify-report-arithmetic.py`
+
+The pairing test is no longer two greps anybody has to remember. It reads the
+figures out of the JSON and counts them in the notes the report cites, headline
+and long figures alike, with comma/trailing-zero variants so 9.90 still matches
+9.9. Suggested by the peer, who had already written the arithmetic half.
+
+Validated against the known-bad case rather than only the good ones — the
+unsourced $1.66B digital-pathology draft, scored against the notes on disk:
+
+```
+headline 16.22        ** ABSENT **
+grounding    : 22/40 of the report's long figures appear in the notes
+not in notes : 1,660,000,000, 11,238,972, 16.2169, 50,253, 147.70, ...
+verdict      : NOT PAIRED -- unsourced against its own notes
+```
+
+All ten current drafts pass it: round 6A 5/5 (grounding 35-40 of 40) and round
+5 5/5 (34-39 of 40). So it catches the failure it was built for and raises no
+false alarm on the corpus as it stands.

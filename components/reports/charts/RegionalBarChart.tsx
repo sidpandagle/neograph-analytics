@@ -53,6 +53,14 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
         <CardDescription>Market share and growth rate by region</CardDescription>
       </CardHeader>
       <CardContent>
+        {/* role="img" collapses the bars for assistive tech: every figure in
+            them is repeated in the table below, so reading the SVG as well
+            would announce the same numbers twice. */}
+        <div
+          role="img"
+          aria-label="Bar chart of market share and growth rate by region. The same figures are listed in the table below."
+          className="min-w-0"
+        >
         <ChartContainer config={chartConfig} className="h-[340px] w-full">
           <BarChart
             data={chartData}
@@ -99,6 +107,56 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
             </Bar>
           </BarChart>
         </ChartContainer>
+        </div>
+
+        {/* The numeric equivalent of the bars. Before this, only the top two
+            regions appeared as text -- measured across the live corpus, 229 of
+            509 regional rows had their share and growth rate nowhere in the
+            delivered HTML at all, because Recharts draws the labels in the
+            browser. A reader with JS off, a screen reader and a crawler all
+            saw a two-region summary of a five-region market. min-w-0 keeps the
+            table's min-content width from inflating its track (R-22). */}
+        <div className="mt-6 min-w-0 overflow-x-auto">
+          <table className="w-full text-sm">
+            <caption className="sr-only">
+              Regional market analysis — market share, growth rate and largest market by region.
+            </caption>
+            <thead>
+              <tr className="border-b border-[var(--border)]">
+                <th scope="col" className="py-2 pr-3 text-left font-medium text-muted-foreground">
+                  Region
+                </th>
+                <th scope="col" className="py-2 pr-3 text-right font-medium text-muted-foreground">
+                  Market share
+                </th>
+                <th scope="col" className="py-2 pr-3 text-right font-medium text-muted-foreground">
+                  Growth rate
+                </th>
+                <th scope="col" className="py-2 text-left font-medium text-muted-foreground">
+                  Largest market
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {regions.map((r, i) => (
+                <tr key={i} className="border-b border-[var(--border)] last:border-0">
+                  <th scope="row" className="py-2 pr-3 text-left font-medium text-foreground">
+                    {r.region}
+                  </th>
+                  <td className="whitespace-nowrap py-2 pr-3 text-right font-bold tabular-nums text-foreground">
+                    {pct(r.market_share)}
+                  </td>
+                  <td className="whitespace-nowrap py-2 pr-3 text-right font-bold tabular-nums text-[var(--accent)]">
+                    {pct(r.growth_rate)}
+                  </td>
+                  <td className="py-2 text-left text-muted-foreground">
+                    {r.largest_country || '—'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {topTwo.map((r, i) => (
