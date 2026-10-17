@@ -72,6 +72,13 @@ to Supabase, not to the files. `AGENTS.md` carries the full table. The files:
 - `orders.ts` - Checkout/order data
 - `mappers.ts` - Transforms API responses to UI-ready format
 - `config.ts` - API base URL configuration
+- `relatedReports.ts` - the related-report block; enforces the healthcare /
+  frontier-tech boundary so the two sets never appear beside each other
+- `home.ts` - homepage queries
+- `llmtxt.ts` - the `/llms.txt` payload
+- `form-guard.ts` - shared validation for the contact, request-sample and
+  purchase-inquiry routes
+- `index.ts` - barrel re-export
 
 Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` for full documentation.
 
@@ -92,8 +99,14 @@ Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` f
 - `/request-sample` - Request sample form
 - `/checkout/[reportSlug]` - PayPal-powered checkout
 - `/order-success` - Post-purchase confirmation
+- `/methodology` - how the figures are produced; linked from report pages
+- `/design-system` - live component gallery, `noindex, nofollow`
 - `/llms.txt` - LLM crawler endpoint
-- `/sitemap-pages.xml`, `/sitemap-consulting.xml` - SEO sitemaps
+- `/sitemap.xml` - **the only sitemap `robots.ts` advertises**, and the
+  complete one: static pages, reports, articles, press releases, consulting,
+  legal and author profiles. `/sitemap-pages.xml` and
+  `/sitemap-consulting.xml` serve their own older subsets and are not
+  advertised anywhere
 
 ### External Integrations
 
@@ -119,9 +132,24 @@ The `/reports/[slug]` page includes:
 - Key findings bullets, FAQ accordion, competitive landscape / key players
 - Report code in `HF{id}` format
 
-**Chart components** (`components/reports/charts/`):
-- MarketSizeChart, SegmentationChart, RegionalAnalysisChart
-- MarketForecastLineChart, MarketSharePieChart, ComponentSharePieChart
+**Chart components.** Three render, all imported by
+`components/reports/JsonReportSections.tsx`:
+- `charts/MarketForecastLineChart.tsx`
+- `charts/ComponentSharePieChart.tsx`
+- `charts/RegionalBarChart.tsx`
+
+Four more exist and are imported by nothing: `charts/MarketGrowthChart.tsx`,
+`charts/MarketSharePieChart.tsx`, `charts/RegionalAnalysisChart.tsx`, and
+`lib/chartUtils.ts`. Before wiring any of them up, note that `chartUtils`
+divides by its start value and by `years - 1`, measured:
+`calculateCAGR(0, 5.6, 9)` -> **Infinity**, `calculateCAGR(1, 5.6, 0)` ->
+**Infinity**, and `generateMarketProjection(0, 5.6, 2023, 2032)` -> every point
+after the first is **NaN**. A single-year period (`2024, 2024`) is NaN too.
+`MarketSizeChart.tsx` and
+`SegmentationChart.tsx` sit at `components/reports/`, not under `charts/`, and
+are also unused. They stay in place per the standing no-deletion rule; this
+list says which is which so nobody debugs a chart that never runs.
+`ChartFigure.tsx` is the `<figure>`/`<figcaption>` wrapper and does render.
 
 ### Design System
 
@@ -131,6 +159,9 @@ The `/reports/[slug]` page includes:
 - `Badge` - Status indicators with 6 color variants
 - `Section/Container/Grid` - Layout system with responsive behavior
 - `Skeleton` - Loading states with pulse animations
+- Also in `components/ui/`, undocumented until now: `Breadcrumb`, `SearchBar`,
+  `country-select` (the only themed `<select>`), `captcha`, `chart` (the
+  Recharts container primitives) and `StyledArticleContent`
 
 All UI components use `forwardRef` and accept a `className` prop merged with `cn()`.
 
@@ -162,8 +193,10 @@ Use via Tailwind: `bg-[var(--primary)]`. Dark mode is **class/attribute driven**
 - `lib/format.ts` - JSONB-safe formatters. **Use `marketValue()` / `unitSuffix()`**:
   not every report is in billions, and a hardcoded "B" renders $66.5M as $66.5B
 - `lib/seo.ts` - `pageTitle()` (<=60 chars), `pageDescription()` (<=160), `schemaDate()`
-- `lib/toc-utils.ts`, `lib/html-toc-utils.ts` - Table of contents parsing from JSON/HTML
-- `lib/chartUtils.ts` - Chart data processing
+- `lib/toc-utils.ts` - Table of contents parsing. `lib/html-toc-utils.ts` is
+  the HTML variant and is **imported by nothing**; `lib/reportToc.ts` is what
+  the report page actually uses
+- `lib/chartUtils.ts` - **imported by nothing.** See the chart note above
 - `lib/jsonReports.ts` - JSON report file utilities
 - `lib/data/countries.ts` - Country + dial code list for forms
 

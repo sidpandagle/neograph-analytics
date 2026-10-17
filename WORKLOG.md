@@ -1979,3 +1979,47 @@ renders as visible HTML, confirmed on `/reports/ai-in-lab-automation-market`.
 `audit-html.mjs`: 17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
 `contrast-audit.mjs`: 0 failing pairs. `source-hygiene.mjs`: 0 findings.
 `seo-unit.mjs`: 16 of 16.
+
+## 2026-10-17 — auditing the file that tells the next session what is true
+
+### R-28: CLAUDE.md was wrong in six places
+Chasing a BACKLOG item about NaN in chart projections turned into a check of
+CLAUDE.md itself, and the doc that steers every session had drifted:
+
+- **Chart components.** The list named six under `components/reports/charts/`.
+  Two of them, `MarketSizeChart` and `SegmentationChart`, are not in that
+  directory at all — they sit a level up. And only **3 of the 7** files that
+  *are* there get imported by anything: `MarketForecastLineChart`,
+  `ComponentSharePieChart` and `RegionalBarChart`, all from
+  `JsonReportSections.tsx`.
+- **`lib/chartUtils.ts`** was listed as "Chart data processing" and is imported
+  by nothing. That matters more than a stale line usually would, because its
+  arithmetic is unsafe. Measured:
+
+  ```
+  calculateCAGR(0, 5.6, 9)              -> Infinity
+  calculateCAGR(1, 5.6, 0)              -> Infinity
+  generateMarketProjection(0, 5.6, 2023, 2032) -> NaN from the second point on
+  generateMarketProjection(1, 5.6, 2024, 2024) -> NaN
+  parseCurrencyValue('—')               -> NaN
+  parsePercentage('N/A')                -> NaN
+  ```
+
+  The BACKLOG entry "Chart projection math yields NaN when market size is
+  0/absent" is real, and it is in dead code. Writing that down is worth more
+  than fixing it: the next person to need a projection helper now knows not to
+  reach for this one unexamined.
+- **`lib/html-toc-utils.ts`** is unused too; the report page uses
+  `lib/reportToc.ts`.
+- **The routes list** omitted `/methodology` — the page R-13's measurements were
+  taken on — and `/design-system`.
+- **The sitemap line** named `/sitemap-pages.xml` and `/sitemap-consulting.xml`
+  and not `/sitemap.xml`, which is the only one `robots.ts` advertises and now
+  the complete one.
+- **`lib/api`** omitted 5 modules, `relatedReports.ts` among them;
+  **`components/ui`** omitted 6, including `country-select`, which has its own
+  defect history in this queue.
+
+Nothing was deleted, per the standing rule. The doc now says which files are
+live and which are not, which is the part that saves time: a dead component and
+a broken one look identical from a stale index.
