@@ -337,6 +337,60 @@ function auditDocument(route, html) {
   if (figures > figcaptions) warnings.push(`${figures - figcaptions} <figure> without a <figcaption>`);
   if (route.startsWith('/reports/') && figures === 0) warnings.push('report page renders no <figure>');
 
+  // ── segment shares are readable as numbers (C-2) ──────────────────────────
+  /* A donut says which wedge is bigger; it does not say 31.4%. Every share
+     chart must ship the same figures as a table, and the two must agree, or
+     the "text equivalent" is a second, unchecked set of numbers. The donut is
+     found by the aria-label its wrapper carries, the table by its caption. */
+  const donutLabels = (html.match(/aria-label="Donut chart:/g) ?? []).length;
+  const shareTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market share by segment, in percent/i.test(body));
+
+  if (donutLabels !== shareTables.length) {
+    errors.push(
+      `${donutLabels} share donut(s) but ${shareTables.length} segment-share table(s) — every donut needs its numeric equivalent`
+    );
+  }
+
+  for (const [n, body] of shareTables.entries()) {
+    const label = `segment-share table ${n + 1}`;
+    const head = body.split(/<tbody\b/i)[0];
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const tfoot = (body.match(/<tfoot\b[^>]*>([\s\S]*?)<\/tfoot>/i) ?? [, ''])[1];
+
+    if (!/<caption\b/i.test(head)) errors.push(`${label} has no <caption>`);
+    if ((head.match(/scope="col"/g) ?? []).length < 2) {
+      errors.push(`${label} does not mark both column headers with scope="col"`);
+    }
+
+    const pct = (frag) => [...frag.matchAll(/>\s*([\d.]+)%\s*</g)].map((m) => Number(m[1]));
+    const rows = (tbody.match(/<tr\b/gi) ?? []).length;
+    const shares = pct(tbody);
+    const totals = pct(tfoot);
+
+    if (rows < 2) errors.push(`${label} renders ${rows} segment row(s) — a share split needs at least 2`);
+    if (shares.length !== rows) {
+      errors.push(`${label} has ${rows} row(s) but ${shares.length} percentage cell(s)`);
+    }
+    if (totals.length !== 1) {
+      errors.push(`${label} declares ${totals.length} total(s) in <tfoot>, expected exactly 1`);
+    } else if (shares.length) {
+      const sum = shares.reduce((a, b) => a + b, 0);
+      if (Math.abs(sum - totals[0]) > 0.051 * shares.length) {
+        errors.push(`${label} rows sum to ${sum.toFixed(1)}% but the total row says ${totals[0].toFixed(1)}%`);
+      }
+      /* Pin the table to the chart: the donut prints its own total, rounded to
+         a whole number, in the middle of the ring. If the two were built from
+         different arrays this is where it shows. */
+      const chunk = html.split(body)[0];
+      const centre = [...chunk.matchAll(/>(\d+)%<\/tspan>/g)].pop();
+      if (centre && Math.abs(Number(centre[1]) - totals[0]) > 0.5) {
+        errors.push(`${label} totals ${totals[0].toFixed(1)}% but the donut beside it prints ${centre[1]}%`);
+      }
+    }
+  }
+
   // ── language ──────────────────────────────────────────────────────────────
   if (!/<html[^>]+lang="/i.test(html)) errors.push('<html> has no lang attribute');
 
