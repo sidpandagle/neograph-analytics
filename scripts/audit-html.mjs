@@ -398,6 +398,66 @@ function auditDocument(route, html) {
     }
   }
 
+  // ── the other two charts ship their figures as text too (C-2, same class) ─
+  /* Recharts draws every label in the browser, so anything that exists only
+     inside a chart exists nowhere in the delivered HTML. These two rules say
+     that if the chart is on the page, its table is on the page with it, and
+     that the table is complete rather than a summary of the top few rows. */
+  const regionTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market share, growth rate and largest market by region/i.test(body));
+  const regionCharts = (html.match(/aria-label="Bar chart of market share and growth rate by region/g) ?? []).length;
+
+  if (regionCharts !== regionTables.length) {
+    errors.push(
+      `${regionCharts} regional bar chart(s) but ${regionTables.length} regional table(s) — the bars are drawn client-side, so the table is the only copy in the HTML`
+    );
+  }
+  for (const [n, body] of regionTables.entries()) {
+    const label = `regional table ${n + 1}`;
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const rows = (tbody.match(/<tr\b/gi) ?? []).length;
+    const cells = (tbody.match(/<td\b/gi) ?? []).length;
+    if ((body.match(/scope="col"/g) ?? []).length !== 4) {
+      errors.push(`${label} does not mark all 4 column headers with scope="col"`);
+    }
+    if (rows < 3) {
+      errors.push(`${label} lists ${rows} region(s) — the corpus carries 3 to 5, so this is a truncated set`);
+    }
+    if (cells !== rows * 3) {
+      errors.push(`${label} has ${rows} row(s) but ${cells} data cell(s), expected ${rows * 3}`);
+    }
+  }
+
+  const forecastTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market size by year/i.test(body));
+  const forecastCharts = (html.match(/aria-label="Area chart of market size by year/g) ?? []).length;
+
+  if (forecastCharts !== forecastTables.length) {
+    errors.push(
+      `${forecastCharts} forecast chart(s) but ${forecastTables.length} forecast series table(s) — the line is drawn client-side, so the table is the only copy in the HTML`
+    );
+  }
+  for (const [n, body] of forecastTables.entries()) {
+    const label = `forecast table ${n + 1}`;
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const years = [...tbody.matchAll(/<th scope="row"[^>]*>\s*(\d{4})/g)].map((m) => Number(m[1]));
+    if (years.length < 5) {
+      errors.push(`${label} plots ${years.length} year(s) — every row in the corpus carries 7 to 9`);
+    }
+    const unsorted = years.findIndex((y, i) => i > 0 && y <= years[i - 1]);
+    if (unsorted !== -1) {
+      errors.push(`${label} year ${years[unsorted]} does not follow ${years[unsorted - 1]} — the series must read in order`);
+    }
+    /* One row must be the base year, and the metric tiles above the chart name
+       that year. A series that does not contain it is a different claim from
+       the one the tiles make. */
+    if (!/Base year/.test(tbody)) {
+      errors.push(`${label} marks no base year, so the series cannot be anchored to the metric tiles`);
+    }
+  }
+
   // ── language ──────────────────────────────────────────────────────────────
   if (!/<html[^>]+lang="/i.test(html)) errors.push('<html> has no lang attribute');
 

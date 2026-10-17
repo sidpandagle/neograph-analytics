@@ -186,10 +186,20 @@ def pair(slug):
             missing_head.append(h)
         out.append('  headline %-12s %s' % (h, 'found' if hit else '** ABSENT **'))
 
+    # market_forecast is interpolated from the headline pair, not cited, so its
+    # intermediate points are not expected in an evidence file and counting them
+    # as unsourced penalised every report with a long series.
     figs = set()
-    figures_in({k: v for k, v in d.items() if k not in ('slug', 'title', 'seo')}, figs)
+    figures_in({k: v for k, v in d.items()
+                if k not in ('slug', 'title', 'seo', 'market_forecast')}, figs)
+    def is_year(f):
+        """A bare 4-digit year is not a grounding figure; it inflated the
+        absent list with 2016/2027/2028 before this."""
+        return f.isdigit() and len(f) == 4 and 1900 <= int(f) <= 2100
+
     long_figs = sorted((f for f in figs
-                        if len(f.replace(',', '').replace('.', '')) >= 4),
+                        if len(f.replace(',', '').replace('.', '')) >= 4
+                        and not is_year(f)),
                        key=lambda x: -len(x))[:40]
     absent = [f for f in long_figs if not any(v in notes for v in variants(f))]
     found = len(long_figs) - len(absent)

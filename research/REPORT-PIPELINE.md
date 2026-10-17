@@ -166,6 +166,18 @@ has had from a market where the answer is independently knowable.
 | 49 | patient-monitoring-devices-market | Medical Devices | 6A | AHA Annual Survey hospital and **staffed bed** counts; CMS Provider of Services hospital file; FDA 510(k) product codes for physiological monitors; Philips Monitoring & Analytics, GE HealthCare PCS and Baxter (Hillrom) Front Line Care disclosed segment revenue | **needs review (2026-10-18)** — two agents drafted this slug at once. Resolved: agent B's evidence file landed and now matches its JSON (`9.04` 32/25, `9.32` 7/7), so the sourcing gap is closed. Live: $9.04B (2026) -> $15.43B (2032) at 9.32%, 360iResearch, wearables excluded; `check` exit 0, verifier reproduces at 0.0000 pt. **Not check-passed** only because the JSON carries 8 populated `recent_developments` against a dispatch requiring `[]` — a read, not a re-draft. Agent A's independent draft kept in `research/collisions/`. **Blocker closed by 72 (owner of the surviving JSON) at 01:50:** the `[]` requirement was 9a's dispatch, not 72's — 72's brief required well-formed objects. All 8 entries read: each carries a company, an integer year and a dated event, and **K242737 was confirmed against openFDA** (applicant Empatica S.r.l., decision 2025-06-06, product code MWI) exactly as stated. **check-passed (2026-10-18).** |
 | 50 | digital-pathology-market | Healthcare IT | 6A | FDA cleared/de novo whole-slide-imaging device list (DEN and 510(k) numbers); CMS CLIA-certified laboratory counts by type; CMS Clinical Lab Fee Schedule and PFS amounts for 88305 and the digital add-on codes; Roche / Leica (Danaher) / Philips disclosed pathology lines | **re-paired (2026-10-18)** — the $1.66B/16.22% draft was live but **unsourced against the notes on disk**: "16.22" appeared 0 times in them and its grounding division `$147.70/specimen` 0 times, because the surviving notes file belongs to the other draft. The sourcing rule therefore picks the version, not a view on publishers: the live pair is now $2,010M (2026) -> $3,541.46M at 9.90%, which the notes do carry (`2,010` x23, `9.90` x10). `check` exit 0. The unsourced $1.66B JSON is kept at `research/collisions/digital-pathology-market.unsourced-1.66B.json`; it is a complete report and only wants an evidence file, which no longer exists on disk. |
 
+### Pairing debt found by `--pair`, 2026-10-18 (pre-existing, both live)
+
+Two published rows fail the pairing test and are queued for repair rather than
+left silent. Neither is a round 6 row.
+
+| Slug | Defect | Fix |
+|---|---|---|
+| `revenue-cycle-management-market` | no `research/<slug>-notes.md` exists at all | reconstruct the evidence file |
+| `veterinary-diagnostics-market` | JSON `forecast_value` 16.48 vs notes 16.49 (x2); 16.48 absent from notes | decide which the source supports |
+
+Both reach production through ISR with no deploy, so neither waits on a window.
+
 Admission test applied as usual: a public, countable register must exist to
 divide a headline through, and the register is named in the row. Rejections from
 this pass, recorded so they are not re-proposed: **medical-device sterilization**

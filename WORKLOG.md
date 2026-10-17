@@ -2930,3 +2930,32 @@ verdict      : NOT PAIRED -- unsourced against its own notes
 All ten current drafts pass it: round 6A 5/5 (grounding 35-40 of 40) and round
 5 5/5 (34-39 of 40). So it catches the failure it was built for and raises no
 false alarm on the corpus as it stands.
+
+### `--pair` run corpus-wide: two pre-existing findings, both outside round 6
+
+Two refinements first, each found by the tool contradicting a draft I had
+reason to trust. Bare 4-digit years were being scored as grounding figures,
+and `market_forecast` points were too — they are interpolated from the
+headline pair, not cited, so a report with a 9-point series was penalised for
+7 figures no evidence file should be expected to carry. Excluding the series
+cleared `phage-therapy-market`, which was a false positive. Detection was
+re-validated against the known-bad draft after both changes: still
+`16.22 ** ABSENT **`, 22/40, NOT PAIRED.
+
+Of 50 drafts, 48 pair. The two that do not are **both live on the site**, and
+neither is from round 6:
+
+- **`revenue-cycle-management-market` has no evidence file at all.**
+  `research/revenue-cycle-management-market-notes.md` does not exist. The
+  report is published; nothing on disk records where its figures came from.
+- **`veterinary-diagnostics-market` disagrees with its own notes.** The JSON's
+  `forecast_value` is **16.48**; the notes say **16.49**, twice, and 16.48
+  appears nowhere in them. A one-hundredth-of-a-billion transcription slip
+  rather than a wrong market, but the headline a reader sees is not the figure
+  the evidence file supports.
+
+Neither is being changed tonight. The RCM gap needs an evidence file
+reconstructed, which is research, not a fix; the veterinary slip needs a
+decision about which of the two figures the source actually supports. Both
+reach production through ISR with no deploy once settled, so neither is
+blocked on a window.
