@@ -1,10 +1,11 @@
 # STATUS
 
-**Updated:** 2026-10-17 17:2x IST
+**Updated:** 2026-10-17 17:45 IST
 **Budget:** 7d used 22% | ceiling (70% of pace) 49% | headroom +27 points
-**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change). Next
-scheduled merge **21:00 IST** — one scheduled merge a day now; extra merges
-only on the owner's request.
+**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change), **#19 at
+17:40 on Siddhant's request** (`576143e`, live in ~2 min, production verified).
+Extra merges on request are uncapped; the 21:00 scheduled slot is now free for
+whatever the evening produces.
 **Mode:** running
 
 ## On the branch, verified locally, awaiting a merge slot
@@ -28,7 +29,7 @@ The Supabase half — the terms page and the 13 chips — reaches production
 through ISR within the hour without a deploy. The licence assertion, the
 checkout fix, the footer link and the widened copy need the merge.
 
-## Added to the same bundle, 2026-10-17 daytime
+## Shipped 2026-10-17 17:40 IST in #19, verified in production
 
 Ten commits, each verified before the next began. In defect order rather than
 commit order:
@@ -60,9 +61,25 @@ All four green on the final build: `audit-html.mjs` 17 of 17 routes error-free
 `source-hygiene.mjs` 0 findings, `seo-unit.mjs` 16 of 16. `tsc --noEmit` clean.
 Build exit 0 with the same 12 lint warnings it started the day with.
 
-**What needs the merge:** all of it except the nothing — every item above is
-code. The served `/sitemap.xml` goes from 204 URLs to **221**, and all 17 new
-URLs were fetched individually against the local build and returned 200.
+**Verified live, not inferred from a green deploy.** `audit-html.mjs --prod`:
+17 of 17 pages error-free, 0 errors, 1 pre-existing warning; the ld+json
+licence resolves 200; `/sitemap.xml` carries **221 URLs** (was 204) with all
+six page families present and **0 dead** among the 44 fetched. Spot checks on
+the live site: the related cards read "Antimicrobial Resistance Diagnostics
+Market" (was "Re i tance Diagno tic"), `/about` has 0 `text-slate-*` classes,
+the production stylesheet carries `--status-error-surface` as #FEF2F2 light and
+#3A1D25 dark, the homepage subheading reads "Medical Devices, Life Sciences,
+Pharmaceuticals, and Healthcare IT.", `/authors/1..3` and the 4 legal and 10
+consulting URLs all return 200, and
+`/reports/europe-clinical-decision-support-market` now shows IBM Watson Health
+and Siemens Healthineers under "Also profiled" — the report whose three
+company profiles previously rendered nothing at all.
+
+The merge needed one commit of care: #18 was squash-merged, so 17 files
+conflicted against content `main` already had under a single commit. `main`
+held no independent work — checked by diffing each file, not assumed — and the
+tree after the merge is byte-identical to the pre-merge tip, so the verified
+build is exactly what shipped.
 
 ## Deployed and verified in production
 

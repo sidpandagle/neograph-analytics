@@ -2023,3 +2023,76 @@ CLAUDE.md itself, and the doc that steers every session had drifted:
 Nothing was deleted, per the standing rule. The doc now says which files are
 live and which are not, which is the part that saves time: a dead component and
 a broken one look identical from a stale index.
+
+## 2026-10-17 17:40 IST — merged on request (#19), verified in production
+
+Siddhant asked for a merge outside the 21:00 slot; extra merges on request are
+uncapped. `576143e`, squashed. Vercel had it live in roughly two minutes.
+
+### The merge itself cost one commit of care
+#18 was squash-merged, so all of its content sits in `main` under one commit the
+branch did not have, and **17 files conflicted**. `git log origin/main --not
+work/continuous-improvements` returns exactly that one squash commit, so `main`
+held no independent work — but that was checked rather than assumed, by diffing
+each conflicted file's two versions. Everything present only on main's side was
+the *older* form of a line the branch had since changed: the `/s+/` bug, the
+`toISOString()` date, the comment explaining the removed licence (superseded now
+that `/legal/terms-of-use` exists), the usage string without `columns`, and
+"Five merges a day". Resolved to the branch version in all 17.
+
+`git diff` between the pre-merge branch tip and the merge result is **empty** —
+the merge is purely a history-linking commit, so what shipped is byte-identical
+to what the checkers had already passed. No rebuild was needed, and that was
+verified rather than hoped: the three previous false passes in this repo all
+came from trusting a build that did not match the source.
+
+`git checkout --ours` was refused by the harness as irreversible local
+destruction. Writing each file from `git show HEAD:<path>` reaches the same
+state without a destructive checkout, and is what was used.
+
+### Production verification
+
+```
+audit-html.mjs --prod        17 of 17 pages error-free, 0 errors, 1 warning
+  ld+json license            -> /legal/terms-of-use  HTTP 200
+  sitemap.xml                221 urls, all six families present
+                             44 of 221 fetched (every non-report url + a 5-report sample): 0 dead
+sitemap composition          182 reports / 8 blog / 6 PR / 10 consulting / 4 legal / 3 authors
+                             was 204 urls with three families missing entirely
+```
+
+Each fix checked on the live site rather than inferred from the deploy
+succeeding:
+
+```
+R-17  /reports/liquid-biopsy-market related cards
+        "Antimicrobial Resistance Diagnostics Market"   (was "Re i tance Diagno tic")
+        "Pharmacogenomics Market", "Proteomics Market", "Veterinary Diagnostics Market"
+R-18  /blog/when-disclosed-revenue-exceeds-the-market
+        "datePublished":"2026-10-16"                    a calendar date, single value
+R-19  /about                                            0 occurrences of text-slate-*
+R-20  production stylesheet 9ee8b620361267b1.css
+        --status-error-surface  #FEF2F2 light / #3A1D25 dark
+        --status-info-chip      #DBEAFE light / #22355E dark
+R-23  /                                                 "Medical Devices, Life Sciences,
+                                                          Pharmaceuticals, and Healthcare IT."
+R-24  /legal/terms-of-use /legal/privacy-policy /consulting/market-assessment
+      /authors/1 /authors/3                              200 each
+R-25  /authors/2                                        h1 "Aditi Shivarkar"
+R-27  /reports/europe-clinical-decision-support-market
+        "Also profiled": IBM Watson Health, Siemens Healthineers
+        — the report whose 3 profiles previously rendered nothing at all
+```
+
+Corpus still reads 182 across the hero, the listing and `/llms.txt`.
+
+The sitemap rule added to `audit-html.mjs` this morning now passes in
+production, having correctly failed there an hour before the merge with all
+three missing families named. That is the negative and positive test of the same
+rule inside one day.
+
+### Still unobserved
+Every dark-mode contrast ratio in this deploy is computed from the token hexes.
+Production confirms the tokens shipped with both values; it does not confirm
+what a person sees. That, R-13's first-paint trace and R-22's table check all
+wait for the 21:00-09:00 browser window.
