@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui";
 // import { Download } from "lucide-react";
 import { ReportContentWrapper } from "@/components/reports/ReportContentWrapper";
 import type { SidebarTOCItem } from "@/lib/toc-utils";
-import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
+import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema, generateItemListSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
 import { marketValue } from "@/lib/format";
 import { schemaDate } from "@/lib/seo";
@@ -373,6 +373,20 @@ export default async function ReportPage({
     { name: report.title, url: reportUrl },
   ]);
 
+  /* The outline the sidebar already renders, declared as an ItemList from the
+     same `sidebarTOC` array rather than rebuilt -- a machine-readable outline
+     that disagrees with the visible one would be worse than none. Every url is
+     an on-page anchor the sidebar links to, so each position resolves to a
+     heading that exists. */
+  const tocSchema =
+    sidebarTOC.length > 0
+      ? generateItemListSchema({
+          name: `${report.title} — report contents`,
+          url: reportUrl,
+          items: sidebarTOC.map((item) => ({ id: item.id, title: item.title })),
+        })
+      : null;
+
   const faqSchema = report.faqs && report.faqs.length > 0 ? generateFAQSchema(report.faqs) : null;
 
   return (
@@ -381,6 +395,7 @@ export default async function ReportPage({
       <StructuredData data={productSchema} />
       <StructuredData data={datasetSchema} />
       <StructuredData data={breadcrumbSchema} />
+      {tocSchema && <StructuredData data={tocSchema} />}
       {faqSchema && <StructuredData data={faqSchema} />}
 
       <div className="rounded-panel bg-[var(--card)] px-6 py-4 md:px-11">

@@ -219,6 +219,55 @@ function auditDocument(route, html) {
       }
     }
 
+    /* C-5: the declared outline has to be the rendered one. The TOC an
+       ItemList describes is built from buildReportTOC and so is the sidebar, but
+       nothing stops a later edit from rendering one and declaring the other, and
+       a machine-readable outline that disagrees with the page is worse than
+       none. So this compares the ItemList against the anchors actually present
+       in nav[aria-label="Report details"], not against the generator. */
+    if (parsed['@type'] === 'ItemList') {
+      const entries = Array.isArray(parsed.itemListElement) ? parsed.itemListElement : [];
+      if (entries.length === 0) {
+        errors.push(`${label} has no itemListElement`);
+      }
+      if (parsed.numberOfItems !== undefined && Number(parsed.numberOfItems) !== entries.length) {
+        errors.push(`${label}.numberOfItems is ${parsed.numberOfItems} but it lists ${entries.length}`);
+      }
+      const positions = entries.map((e) => Number(e?.position));
+      const expected = entries.map((_, i) => i + 1);
+      if (positions.join(',') !== expected.join(',')) {
+        errors.push(`${label} positions are ${positions.join(',')} - expected 1..${entries.length} in order`);
+      }
+      for (const e of entries) {
+        if (!String(e?.name ?? '').trim()) errors.push(`${label} holds a ListItem with no name`);
+      }
+
+      const nav = html.match(/<nav[^>]+aria-label="Report details"[\s\S]*?<\/nav>/i);
+      if (nav) {
+        const rendered = [...nav[0].matchAll(/href="#([a-z0-9-]+)"/gi)].map((m) => m[1]);
+        if (rendered.length !== entries.length) {
+          errors.push(
+            `${label} declares ${entries.length} sections but the rendered TOC links ${rendered.length}`
+          );
+        } else {
+          const declared = entries.map((e) => String(e?.url ?? '').split('#')[1] ?? '');
+          const mismatch = declared.findIndex((id, i) => id !== rendered[i]);
+          if (mismatch !== -1) {
+            errors.push(
+              `${label} entry ${mismatch + 1} points at #${declared[mismatch]} but the rendered TOC links #${rendered[mismatch]}`
+            );
+          }
+          /* Every declared anchor must be a heading id that exists on the page,
+             or the outline sends a crawler to a fragment that goes nowhere. */
+          for (const id of declared) {
+            if (id && !new RegExp(`id="${id}"`).test(html)) {
+              errors.push(`${label} points at #${id}, which no element on the page has`);
+            }
+          }
+        }
+      }
+    }
+
     if (parsed['@type'] === 'BreadcrumbList') {
       const items = parsed.itemListElement ?? [];
       const positions = items.map((it) => it.position);

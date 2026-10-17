@@ -265,6 +265,33 @@ export const generateDatasetSchema = (params: {
 });
 
 /**
+ * Generate an ItemList for a report's table of contents (C-4's sibling, C-5).
+ *
+ * Built from the same `buildReportTOC` output the sidebar renders, passed in
+ * rather than recomputed, so the declared list cannot drift from the visible
+ * one -- a machine-readable outline that disagrees with the page is worse than
+ * none. Each entry's url is the on-page anchor the sidebar links to, so every
+ * position resolves to a heading that exists.
+ */
+export const generateItemListSchema = (params: {
+  name: string;
+  url: string;
+  items: Array<{ id: string; title: string }>;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: params.name,
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: params.items.length,
+  itemListElement: params.items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `${params.url}#${item.id}`,
+  })),
+});
+
+/**
  * Generate LocalBusiness schema for the organization
  * Enables Local businesses rich results in Google Search
  */
