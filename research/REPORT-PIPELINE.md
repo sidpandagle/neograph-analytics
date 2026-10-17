@@ -137,3 +137,41 @@ recomputed independently. All reproduced.
 Every one: `regional_analysis` and `country_analysis` empty, no vendor
 `market_share` anywhere, 20-28 numbered sources per notes file, no U+FFFD, and
 the CAGR reconciling to its own endpoints within **0.005 points** on all five.
+
+
+## Round 6 queue — appended 2026-10-18
+
+Round 5's five rows are `check-passed` and held, so the queue was again empty
+and the skill's answer is again to propose five. Live corpus at 00:43 IST on the
+18th: **182** rows, none of the five slugs below among them, and none a regional
+clone.
+
+**This round is deliberately homogeneous, and that is the design.** Four of the
+five are Medicare-rate-regulated service markets where **the price is published
+by law** — CMS prints the per-visit, per-diem or per-treatment amount, and CMS
+also prints how many certified providers exist. In those markets the grounding
+division is not an estimate dressed as arithmetic: rate x volume x providers is
+most of the market, from two public tables. That makes them the sharpest possible
+test of the finding round 5 produced. If the size spread in a market whose price
+is statutory is still wide, the spread cannot be a forecasting problem and cannot
+be a data problem — it can only be a scope problem, and the tiers should be
+nameable exactly. If it is narrow, that is the first confirmation the diagnostic
+has had from a market where the answer is independently knowable.
+
+| # | Slug | Industry | Round | Countable register | State |
+|---|---|---|---|---|---|
+| 46 | hospice-care-market | Healthcare IT | 6A | CMS Medicare-certified hospice count and Care Compare file; MedPAC hospice chapter FFS spending and margin; CY2026 hospice wage-index final rule per-diem rates (RHC days 1-60 / 61+, CHC, IRC, GIP) and the aggregate cap; Chemed/VITAS and Addus disclosed revenue | queued |
+| 47 | skilled-nursing-facilities-market | Healthcare IT | 6A | CMS certified SNF count (Care Compare / Provider of Services file); MedPAC SNF chapter FFS spending, occupancy and margin; FY2026 SNF PPS final rule PDPM base rates; Ensign / PACS / Brookdale disclosed revenue and facility counts | queued |
+| 48 | home-infusion-therapy-market | Life Sciences | 6A | CMS qualified Home Infusion Therapy supplier enrollment list; CY2026 HIT per-visit payment amounts by payment category (1-4, initial vs subsequent); Medicare DME/HIT claims; Option Care Health disclosed revenue and site count | queued |
+| 49 | patient-monitoring-devices-market | Medical Devices | 6A | AHA Annual Survey hospital and **staffed bed** counts; CMS Provider of Services hospital file; FDA 510(k) product codes for physiological monitors; Philips Monitoring & Analytics, GE HealthCare PCS and Baxter (Hillrom) Front Line Care disclosed segment revenue | queued |
+| 50 | digital-pathology-market | Healthcare IT | 6A | FDA cleared/de novo whole-slide-imaging device list (DEN and 510(k) numbers); CMS CLIA-certified laboratory counts by type; CMS Clinical Lab Fee Schedule and PFS amounts for 88305 and the digital add-on codes; Roche / Leica (Danaher) / Philips disclosed pathology lines | queued |
+
+Admission test applied as usual: a public, countable register must exist to
+divide a headline through, and the register is named in the row. Rejections from
+this pass, recorded so they are not re-proposed: **medical-device sterilization**
+(FDA publishes a contract EO-facility list, but no count of cycles or devices
+processed, so the denominator is a facility count against a market whose unit is
+a device-load — not divisible); **single-use bioprocessing** (no public register
+at all; the only denominators available are vendor-reported and so are the
+numerators); **clinical trial site management** (not separable from row 42's
+CRO register without double-counting the same trial starts).
