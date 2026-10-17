@@ -110,27 +110,27 @@ export default async function AboutPage() {
         <Container size="lg">
           <div className="max-w-3xl mx-auto space-y-12">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl text-slate-900">Our Mission</h2>
-              <p className="text-base text-slate-600 leading-[1.85]">
+              <h2 className="text-3xl md:text-4xl text-[var(--cmi-ink)]">Our Mission</h2>
+              <p className="text-base text-[var(--cmi-body)] leading-[1.85]">
                 Our mission is to enable healthcare stakeholders to utilize data for their decision-making process, leading to improved system resilience and providing high-quality healthcare services to patients at a reasonable cost throughout many locations. We use innovative methods and maintain ethical standards to assist healthcare organizations facing challenges from new reimbursement methods, digital technology changes, and increased patient demands.
               </p>
             </div>
 
-            <div className="h-px bg-slate-100" />
+            <div className="h-px bg-[var(--cmi-line)]" />
 
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl text-slate-900">Who We Are</h2>
-              <p className="text-base text-slate-600 leading-[1.85]">
+              <h2 className="text-3xl md:text-4xl text-[var(--cmi-ink)]">Who We Are</h2>
+              <p className="text-base text-[var(--cmi-body)] leading-[1.85]">
                 Our firm was founded on the belief that sustainable healthcare transformation requires an integrated approach that combines clinical expertise, regulatory intelligence, operational excellence, and advanced analytics. We assist healthcare providers throughout their operational process — helping them understand regulatory requirements, manage expenses, enhance patient care, and develop strategies for future growth.
               </p>
-              <p className="text-base text-slate-600 leading-[1.85]">
+              <p className="text-base text-[var(--cmi-body)] leading-[1.85]">
                 Our team consists of experts with multiple professional competencies in clinical practice, healthcare management, health economics, data science, and policy advisory. Our consulting method establishes a direct link between strategic planning and execution, delivering operational recommendations that staff members can implement during transformation projects.
               </p>
             </div>
 
             {/* Pull quote */}
             <blockquote className="border-l-4 border-ocean-600 pl-6 py-2">
-              <p className="text-xl text-slate-700 font-medium leading-[1.6] italic">
+              <p className="text-xl text-[var(--cmi-body)] font-medium leading-[1.6] italic">
                 &ldquo;Our portfolio covers strategic planning, market assessment, operational efficiency, digital health transformation, regulatory compliance, and performance enhancement programs.&rdquo;
               </p>
             </blockquote>
@@ -146,10 +146,10 @@ export default async function AboutPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-ocean-500 shrink-0" />
               Why Choose Us
             </span>
-            <h2 className="text-3xl md:text-4xl text-slate-900">
+            <h2 className="text-3xl md:text-4xl text-[var(--cmi-ink)]">
               What Sets Us Apart
             </h2>
-            <p className="text-base text-slate-500 max-w-2xl mx-auto">
+            <p className="text-base text-[var(--cmi-meta)] max-w-2xl mx-auto">
               Six pillars that define our approach to healthcare research and consulting excellence.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default async function AboutPage() {
             {whyUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-[var(--card)] border border-slate-100 rounded-card overflow-hidden hover:shadow-lg hover:border-slate-200 hover:-translate-y-0.5 transition-all duration-200"
+                className="bg-[var(--card)] border border-[var(--cmi-line)] rounded-card overflow-hidden hover:shadow-lg hover:border-[var(--cmi-primary)] hover:-translate-y-0.5 transition-all duration-200"
               >
                 <div className={`h-[3px] ${item.accent === 'amber' ? 'bg-bright-500' : 'bg-ocean-600'}`} />
                 <div className="p-6">
@@ -167,8 +167,8 @@ export default async function AboutPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d={item.icon} />
                     </svg>
                   </div>
-                  <h3 className="text-base font-semibold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-base font-semibold text-[var(--cmi-ink)] mb-2">{item.title}</h3>
+                  <p className="text-sm text-[var(--cmi-meta)] leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -197,7 +197,7 @@ export default async function AboutPage() {
       {/* Supporting text */}
       <section className="rounded-panel bg-[var(--card)] px-6 py-7 md:px-11 md:py-11">
         <Container size="lg">
-          <div className="max-w-3xl mx-auto space-y-5 text-base text-slate-600 leading-[1.85]">
+          <div className="max-w-3xl mx-auto space-y-5 text-base text-[var(--cmi-body)] leading-[1.85]">
             <p>
               We assist clients in achieving operational improvement through the application of real-world data, benchmarking insights, and international best practices — resulting in better financial outcomes and improved patient care systems.
             </p>

@@ -1671,3 +1671,76 @@ Clean build exit 0, no new lint warnings (the one `region` unused warning in
 17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
 `contrast-audit.mjs`: 0 failing pairs. `seo-unit.mjs`: 16 of 16.
 Built homepage HTML: 6 `growth-rail` cards, 24 trimmed-logo references.
+
+## 2026-10-17 — two pages that never got the theme, and a third stale claim
+
+### `/about` and `/services` were still painted in raw slate (R-19)
+Both pages wrap their content in `bg-[var(--card)]` and
+`bg-[var(--cmi-surface)]` panels — surfaces that do flip for dark mode — with
+type on top that did not. Measured against the dark tokens (`--card #131C30`,
+`--background #0B1120`, `--muted #18223A`):
+
+```
+text-slate-900   1.05 / 1.05 / 1.13 : 1   every h2 and h3 on both pages
+text-slate-700   1.64 / 1.82 / 1.53 : 1   the pull quote
+text-slate-600   2.24 / 2.48 / 2.09 : 1   mission + who-we-are body, service bullets
+text-slate-500   3.57 / 3.96 / 3.32 : 1   all six why-us cards, every service blurb and step
+```
+
+WCAG AA asks 4.5:1 for body text. In dark mode the headings were effectively
+invisible — the same defect that measured 1.02:1 in `country-select`, left
+behind on the two pages that were never converted. 22 classes repointed to
+tokens (14 in `app/about/page.tsx`, 8 in `app/services/page.tsx`): ink to
+`--cmi-ink`, body to `--cmi-body` (6.00:1 light), meta to `--cmi-meta`
+(4.60:1 light), hairlines to `--cmi-line`, and the hover border to
+`--cmi-primary` to match every other card on the site. The served `/about`
+now contains **0** raw slate classes — the 21 `slate-` substrings a naive grep
+finds are all `-translate-`.
+
+A repo-wide scan confirms no `text-slate-*` or `text-gray-*` remains anywhere
+in `app/` or `components/` except one `<svg>` stroke in `not-found.tsx:164`,
+which sits on its own `bg-slate-100` chip and so keeps its ratio. That pair,
+and 34 others like it, are filed as **R-20**: `bg-blue-100`+`text-blue-600`
+chips, `bg-red-50`+`text-red-800` error panels and so on. They are not
+contrast failures — each pale background carries its own dark foreground — but
+they stay light chips on a dark page. `CheckoutForm.tsx:176` is the only one
+with a `dark:` variant triple, and shows what a status-colour token set would
+replace.
+
+### The third hand-maintained corpus claim on the homepage (R-23)
+The featured-reports subheading read "Oncology, medical devices, diagnostics,
+digital health and life sciences" — accurate for a healthcare-only corpus, and
+untrue since R-15 widened the taxonomy to 13 verticals. The cards are ordered
+by publication date, so the first frontier-technology report to top the list
+would have appeared under a healthcare-only heading. Its predecessor on the
+same line was the "2,500 reports spanning 20+ sectors and 50+ countries" claim.
+Rather than rewrite the sentence a third time, it is now `Intl.ListFormat` over
+the distinct `industry` values of the six rows the section already fetches:
+today, "Medical Devices, Life Sciences, Pharmaceuticals, and Healthcare IT."
+from 4 distinct industries across the 6 cards. A sentence derived from its own
+data cannot go stale.
+
+### Also filed, not fixed
+- **R-21**: the four impact stats on `/about` carry `divide-white/[0.06]` with
+  no `divide-x` or `divide-y` beside it, so Tailwind sets a divider colour and
+  a zero border width — **0 of 3 intended rules render**. Left in place rather
+  than guessed at: `divide-x` on a 2-up grid would also stripe the row starts,
+  so which rule was wanted is a design call.
+- **R-22**: `.prose table` sets `width: 100%; overflow: hidden` for its rounded
+  corners, and the only `display:block; overflow-x:auto` escape is inside
+  `@media (max-width: 768px)` — so above 769px a wide table has no scroll
+  container. Whether its cells are then clipped or push the page into
+  horizontal scroll depends on how the browser applies `overflow` to a table
+  box, which this queue may not assert without looking. Doubly latent: **0 of
+  the 22 rows in the local snapshots contain a `<table>`**, so nothing
+  published exercises it. One rendered check with a deliberately wide table,
+  in the night window, before any fix.
+
+### Verification
+`tsc --noEmit` clean. Clean build exit 0, 12 lint warnings — the same 12 as
+before this work. `audit-html.mjs` against the served build: 17 of 17 routes
+error-free, 0 errors, 1 pre-existing warning. `contrast-audit.mjs`: 0 failing
+pairs. Built `/about` and `/services`: 0 slate classes, 48/33/16 and 48/79/20
+occurrences of `--cmi-ink` / `--cmi-body` / `--cmi-meta`. The dark-mode numbers
+above are computed from the token hexes, not observed in a browser — the
+rendered check waits for the 21:00-09:00 window.

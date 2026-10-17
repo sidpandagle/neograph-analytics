@@ -140,15 +140,15 @@ export default function ServicesPage() {
                       </svg>
                     </div>
                     <div>
-                      <h2 className="text-xl font-semibold text-slate-900 leading-snug">{svc.title}</h2>
-                      <p className="text-sm text-slate-500 mt-1 leading-relaxed">{svc.desc}</p>
+                      <h2 className="text-xl font-semibold text-[var(--cmi-ink)] leading-snug">{svc.title}</h2>
+                      <p className="text-sm text-[var(--cmi-meta)] mt-1 leading-relaxed">{svc.desc}</p>
                     </div>
                   </div>
 
                   {/* Feature list */}
                   <ul className="space-y-2.5 flex-1">
                     {svc.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-sm text-slate-600">
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-[var(--cmi-body)]">
                         <svg className="w-4 h-4 text-ocean-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
@@ -183,10 +183,10 @@ export default function ServicesPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-ocean-500 shrink-0" />
               Our Methodology
             </span>
-            <h2 className="text-3xl md:text-4xl text-slate-900">
+            <h2 className="text-3xl md:text-4xl text-[var(--cmi-ink)]">
               A Rigorous Research Process
             </h2>
-            <p className="text-base text-slate-500 max-w-2xl mx-auto">
+            <p className="text-base text-[var(--cmi-meta)] max-w-2xl mx-auto">
               Every report and engagement follows a four-stage methodology ensuring accuracy and actionable insights.
             </p>
           </div>
@@ -196,15 +196,15 @@ export default function ServicesPage() {
               <div key={step.num} className="relative">
                 {/* Connector line */}
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-[-50%] h-px bg-slate-200" />
+                  <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] right-[-50%] h-px bg-[var(--cmi-line)]" />
                 )}
                 <div className="flex flex-col items-center text-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-[var(--cmi-primary-fill)] flex items-center justify-center text-[var(--primary-foreground)] text-lg font-bold shadow-[var(--shadow-blue)] shrink-0 relative z-10">
                     {step.num}
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-slate-900 mb-1.5">{step.title}</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
+                    <h3 className="text-base font-semibold text-[var(--cmi-ink)] mb-1.5">{step.title}</h3>
+                    <p className="text-sm text-[var(--cmi-meta)] leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               </div>

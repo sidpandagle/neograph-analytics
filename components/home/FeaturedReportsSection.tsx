@@ -51,6 +51,15 @@ export default async function FeaturedReportsSection() {
   const reports = (data ?? []) as FeaturedReport[];
   if (reports.length === 0) return null;
 
+  /* Distinct industries of the six rows on screen, in the order they appear,
+     read back as an English list. `Intl.ListFormat` rather than a hand-rolled
+     join so the final "and" and the Oxford comma follow one rule. */
+  const industries = Array.from(
+    new Set(reports.map((r) => r.industry).filter((i): i is string => Boolean(i)))
+  );
+  const industryList = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' })
+    .format(industries) + '.';
+
   return (
     <section className="flex flex-col gap-6.5 rounded-panel bg-[var(--card)] p-7 md:p-11">
       {/* Header */}
@@ -64,8 +73,17 @@ export default async function FeaturedReportsSection() {
                 142 across 6 verticals. Three different corpus sizes were
                 visible on one page. The hero already states the real count
                 from a live query, so this sentence states no number at all
-                rather than inventing a second source of truth. */}
-            Oncology, medical devices, diagnostics, digital health and life sciences.
+                rather than inventing a second source of truth.
+
+                It then read "Oncology, medical devices, diagnostics, digital
+                health and life sciences" — a hand-written list that was true
+                of a healthcare-only corpus and stopped being true when the
+                taxonomy widened to 13 verticals. Since the cards are ordered
+                by publication date, the first frontier-technology report to
+                top the list would have appeared under a healthcare-only
+                heading. The sentence now names the industries of the six rows
+                actually on screen, so it cannot fall out of step with them. */}
+            {industryList}
           </p>
         </div>
         <Link
