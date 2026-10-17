@@ -1,0 +1,275 @@
+{
+  "report_id": "dialysis-and-renal-care-market",
+  "slug": "dialysis-and-renal-care-market",
+  "title": "Dialysis and Renal Care Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 83.97,
+    "forecast_value": 118.79,
+    "cagr": 5.95
+  },
+  "market_overview": {
+    "summary": "Dialysis replaces the filtration function of failed kidneys for people who are not transplanted, and it is delivered as a recurring clinical service rather than sold as a product. That distinction is the whole difficulty in sizing it. Published 2026 estimates run from $20.29B to roughly $134.90B once each is advanced to a common base year — a 6.65x spread — while the same publishers' growth rates sit between 4.60% and 8.30%. The disagreement is therefore not about growth but about what counts: the machine, the machine plus its consumables, the clinic business that performs the treatment, or all of that plus dialysis drugs. We publish the services reading, $83.97B in 2026 rising to $118.79B by 2032 at 5.95%, because it is the only tier whose magnitude survives a check against what the largest operators actually disclose. Fresenius Medical Care and DaVita together booked $35.82B in FY2025, and with Vantive's last public figure the three largest reach $40.32B — 48.0% of the services market and 1.77x the entire published machines market.",
+    "key_trends": [
+      "The four published size tiers — machines at $20.29B, equipment at $30.01B, services at $83.97B and undifferentiated at $130-135B for 2026 — are routinely quoted interchangeably as 'the dialysis market', and only the services tier reconciles with operator disclosure.",
+      "Revenue per patient-year converges on $53,000-58,500 from two independent directions: DaVita's U.S. dialysis revenue over its own patient count gives $58,519, and Fresenius Care Delivery over its global patient count gives $53,176.",
+      "The CMS CY2026 bundled rate of $281.71 per treatment implies $43,947 per patient-year for a thrice-weekly schedule — 1.33x below DaVita's realised rate, which is the size of the commercial and Medicare Advantage uplift the operators never quantify.",
+      "Medicare fee-for-service spending on outpatient dialysis is falling in nominal terms, $8.1B in 2023 to $7.6B in 2024, as beneficiaries shift into Medicare Advantage; the service line is growing while its largest single traditional payer shrinks.",
+      "Baxter's $4.5B-revenue Kidney Care business became private-equity-owned Vantive Health on 31 January 2025, removing a tenth of the sector's disclosed revenue from public filings and making vendor share less computable than it was in 2024, not more.",
+      "Patients per centre cluster tightly — 68.4 across the U.S. census, 75.5 at DaVita, 81.1 at Fresenius — so growth in this market is substantially a question of how many centres exist, not of utilisation within them."
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal within the diagnosed population; constrained by diagnosis and access, not by acceptance"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Diabetes and hypertension prevalence feeding the incident end-stage kidney disease population; USRDS recorded 131,564 people starting ESRD treatment in the United States in 2023 alone.",
+      "A transplant supply ceiling: 273,041 Americans were living with a functioning kidney transplant at end-2024 against 516,837 on dialysis, so dialysis remains the modality for the majority and the waiting population is itself a dialysis population.",
+      "Annual regulatory price increases in the largest market — the CMS ESRD bundled base rate rose from $273.82 to $281.71 for CY2026, approximately 2.2% in total facility payments.",
+      "Payer-mix uplift as beneficiaries move from fee-for-service Medicare into Medicare Advantage and commercial coverage, which pay above the bundled rate.",
+      "Expansion of dialysis provision in middle-income health systems where incidence is rising faster than treated prevalence, leaving a large untreated gap."
+    ],
+    "restraints": [
+      "The bundled prospective payment system fixes the price of the core service, so an operator cannot grow revenue per treatment by delivering more within the bundle.",
+      "Clinical staffing — dialysis requires licensed nurses and technicians per station, and centre capacity is labour-bound rather than capital-bound.",
+      "Falling fee-for-service volumes: MedPAC recorded nominal outpatient dialysis spending dropping from $8.1B in 2023 to $7.6B in 2024.",
+      "Mortality in the treated population caps prevalence growth; DaVita attributed a 1.4% decline in nine-month 2025 U.S. treatments partly to a severe influenza season.",
+      "Home modalities shift revenue away from the fixed-cost centre base that the incumbent operators have already built."
+    ],
+    "opportunities": [
+      "Home haemodialysis and peritoneal dialysis, where the CMS ESRD Treatment Choices Model deliberately tilts payment toward home modality and transplant.",
+      "Ex-U.S. treated-prevalence growth, where provision is largely public and the gap between incidence and treatment is widest.",
+      "Value-based kidney care contracting, which pays for total cost of care across the ESRD patient rather than per treatment.",
+      "Earlier-stage chronic kidney disease management, which is adjacent to the dialysis chair and is where the newer cardiorenal drug classes act.",
+      "Smaller, simpler haemodialysis systems designed for home and acute settings rather than the in-centre station."
+    ],
+    "challenges": [
+      "Scope confusion in the published literature is itself a commercial problem: a buyer sizing an opportunity from a $130B headline is overstating the addressable service revenue by roughly four times.",
+      "Vendor share is not publicly computable. One of the three largest operators is now private, and none of the public ones disclose revenue share.",
+      "The core service is a regulated commodity with a published price, which limits differentiation to cost structure and payer mix.",
+      "Capital intensity per centre is high — roughly $4.0-4.4M of annual revenue per centre on a fixed station and staffing base — so utilisation shortfalls are expensive.",
+      "Quality penalties under the ESRD Quality Incentive Program reduce payment for facilities that miss thresholds, independent of volume."
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "In-centre haemodialysis",
+      "Home haemodialysis",
+      "Peritoneal dialysis",
+      "Continuous renal replacement therapy",
+      "Dialysis equipment and consumables"
+    ],
+    "by_application": [
+      "End-stage kidney disease",
+      "Acute kidney injury",
+      "Inpatient and hospital-contracted dialysis",
+      "Transplant-waiting-list maintenance"
+    ],
+    "by_end_user": [
+      "Freestanding outpatient dialysis centres",
+      "Hospital-based dialysis units",
+      "Home and self-care settings",
+      "Intensive care units"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 83.97 },
+    { "year": 2027, "value": 88.97 },
+    { "year": 2028, "value": 94.26 },
+    { "year": 2029, "value": 99.87 },
+    { "year": 2030, "value": 105.81 },
+    { "year": 2031, "value": 112.1 },
+    { "year": 2032, "value": 118.79 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Fresenius Medical Care",
+      "headquarters": "Bad Homburg, Germany",
+      "market_position": "Largest operator by patients, and the only one that is also a major equipment maker",
+      "description": "Reported FY2025 revenue of EUR 19,628M, split between Care Delivery at EUR 13,736M — of which EUR 11,507M was in the United States — and Care Enablement, its products business, at EUR 5,476M. It treated 291,902 patients across 3,601 clinics at 31 December 2025, giving EUR-converted Care Delivery revenue of $53,176 per patient-year on a blend of U.S. and international reimbursement. Its vertical integration across both the clinic and the machine is unique at this scale, and is the reason the services and equipment tiers of the published market overlap in its accounts. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "DaVita Inc.",
+      "headquarters": "Denver, United States",
+      "market_position": "Largest U.S. operator by patient count, services-only",
+      "description": "Reported FY2025 consolidated revenues of $13.643B, up 6.5% from $12.816B, with U.S. dialysis approximately 86% of that total. It operated 2,657 U.S. outpatient centres in 46 states serving approximately 200,500 patients, plus 585 international centres in 14 countries serving approximately 94,500, and held inpatient dialysis contracts with roughly 740 hospitals. Dividing its own disclosures gives $58,519 of revenue per U.S. patient-year and $4.416M per U.S. centre. Its 200,500 U.S. patients are 38.8% of the 516,837 counted in the national ESRD census — a share of patients, not of revenue, and the two are not interchangeable. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Vantive Health LLC",
+      "headquarters": "Deerfield, United States",
+      "market_position": "Leading peritoneal dialysis supplier; private since 2025 and no longer publicly reported",
+      "description": "The former Baxter International Kidney Care segment, sold to Carlyle in partnership with Atmas Health and closed on 31 January 2025 for an aggregate $3.80B. Its last publicly disclosed revenue is $4.5B for 2023, the figure Baxter cited when announcing the divestiture. It supplies chronic and acute therapies spanning peritoneal dialysis, haemodialysis, continuous renal replacement and other organ support. Its move into private ownership removed roughly a tenth of the sector's disclosed revenue from the public record, which is one reason share estimates for this market became less verifiable after 2024."
+    },
+    {
+      "company": "Nipro Corporation",
+      "headquarters": "Osaka, Japan",
+      "market_position": "Major dialyser and consumables supplier, with its own clinic network",
+      "description": "One of the largest producers of hollow-fibre dialysers and dialysis consumables, and an operator of dialysis clinics in its own right. It sits in the equipment tier of the published market rather than the services tier, which is part of why the two tiers cannot be added together without double counting. No revenue market share for this market is publicly disclosed."
+    },
+    {
+      "company": "Asahi Kasei Medical",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "Dialyser and blood-purification membrane supplier",
+      "description": "Supplies dialysis membranes and blood-purification devices to operators and equipment makers rather than treating patients directly. Its position illustrates the component structure beneath the $30.01B published equipment reading: a large share of that figure is consumables consumed per treatment, not capital equipment. No revenue market share for this market is publicly disclosed."
+    },
+    {
+      "company": "B. Braun Melsungen",
+      "headquarters": "Melsungen, Germany",
+      "market_position": "Haemodialysis systems supplier and clinic operator in Europe",
+      "description": "Supplies haemodialysis machines, dialysers and extracorporeal therapy consumables, and operates dialysis centres principally in Europe. Privately held, so its renal revenue is not separately disclosed and cannot be added to the disclosed-revenue floor computed for this report. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Nikkiso Co., Ltd.",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "Haemodialysis machine manufacturer",
+      "description": "Builds haemodialysis machines and related blood-purification systems, competing in the narrowest of the four published tiers — the $20.29B machines reading. That the two largest operators' combined revenue is 1.77x that entire figure is the clearest signal that the machines tier is a component of the market and not the market. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Outset Medical",
+      "headquarters": "San Jose, United States",
+      "market_position": "Challenger in simplified haemodialysis for home and acute settings",
+      "description": "Supplies the Tablo haemodialysis system, designed to operate without dedicated water treatment infrastructure and cleared for use in the home as well as in acute and clinic settings. Its relevance to this market is structural rather than scalar: the CMS ESRD Treatment Choices Model pays to move patients toward home modalities, and the economics of doing so depend on equipment that does not require a built station. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "US Renal Care",
+      "headquarters": "Plano, United States",
+      "market_position": "Third-largest U.S. operator by centre count; privately held",
+      "description": "A privately held outpatient dialysis operator and the largest of the U.S. providers outside Fresenius and DaVita. Because it does not file, its revenue is part of the unobserved half of the services market: the $40.32B disclosed by the three largest operators is 48.0% of the published global services figure, and operators of this kind account for a substantial part of the remainder. No revenue market share is publicly disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Baxter International / Carlyle",
+      "year": 2025,
+      "event": "Baxter completed the sale of its Kidney Care segment to Carlyle, in partnership with Atmas Health, on 31 January 2025 for an aggregate purchase price of $3.80B, receiving approximately $3.71B in pre-tax cash proceeds. The business now operates as Vantive Health LLC; its last publicly disclosed revenue is $4.5B for 2023, so roughly a tenth of the sector's disclosed revenue left the public record."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2025,
+      "event": "CMS issued the CY2026 ESRD Prospective Payment System final rule on 20 November 2025, setting the bundled base rate at $281.71 per treatment, up $7.89 from $273.82 in CY2025, and projecting an approximately 2.2% increase in total payments to ESRD facilities. The same $281.71 rate applies to dialysis furnished for acute kidney injury. The rule was published in the Federal Register on 24 November 2025."
+    },
+    {
+      "company": "Fresenius Medical Care",
+      "year": 2025,
+      "event": "Reported FY2025 revenue of EUR 19,628M and 27% earnings growth, with U.S. same-market treatment growth of 0.0% for the year and international same-market treatment growth of 2.0%. Growth in its largest market came from price and mix rather than from volume."
+    },
+    {
+      "company": "DaVita Inc.",
+      "year": 2025,
+      "event": "Reported FY2025 consolidated revenues of $13.643B against $12.816B in 2024, up 6.5%. Its Q3 Form 10-Q recorded 21,469,460 U.S. dialysis treatments for the nine months to 30 September, down 1.4% year over year, which the company attributed to higher mortality and missed treatments during a severe influenza season alongside fewer treatment days."
+    },
+    {
+      "company": "Medicare Payment Advisory Commission",
+      "year": 2026,
+      "event": "MedPAC's March 2026 report put fee-for-service Medicare and beneficiary spending on outpatient dialysis at $7.6B for 2024, down from $8.1B in 2023, attributing the decline largely to beneficiaries moving out of fee-for-service enrolment rather than to falling treatment volumes."
+    }
+  ],
+  "regulatory_landscape": [
+    "Medicare ESRD Prospective Payment System (42 CFR Part 413, Subpart H), which pays a bundled per-treatment rate — $281.71 for CY2026 — covering the treatment, most dialysis drugs and ESRD-related laboratory tests, and so fixes the unit price of the core service",
+    "Conditions for Coverage for End-Stage Renal Disease Facilities (42 CFR Part 494), which set the staffing, water quality, infection control and patient assessment requirements a certified dialysis facility must meet",
+    "ESRD Quality Incentive Program, which reduces a facility's payment by up to 2% for failing to meet published clinical and reporting measures, independent of its treatment volume",
+    "ESRD Treatment Choices (ETC) Model, a mandatory randomised CMS payment model that adjusts payment to selected facilities and clinicians to encourage home dialysis and transplantation",
+    "Transitional Add-on Payment Adjustment for New and Innovative Equipment and Supplies (TPNIES) and the Transitional Drug Add-on Payment Adjustment (TDAPA), the two routes by which new devices and drugs are paid outside the bundle before being folded into it",
+    "FDA Class II premarket notification (510(k)) for haemodialysis machines, dialysers, peritoneal dialysis systems and dialysate concentrates, under which substantial equivalence rather than a new clinical trial is the usual route to market",
+    "Medicare Secondary Payer coordination-of-benefits rules for ESRD, which determine the 30-month period during which group health coverage pays before Medicare becomes primary and therefore shape the payer mix an operator realises"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Line-item extraction from operator filings and results releases: Fresenius Medical Care FY2025 segment revenue, DaVita's FY2025 Form 10-K and Q4 2025 results release, DaVita's Q3 2025 Form 10-Q, and Baxter International's FY2025 Form 10-K for the Vantive divestiture terms",
+      "Reconciliation of each operator's disclosed revenue against its own disclosed patient, centre and country counts, so that every per-unit figure in this report has both numerator and denominator from the same filing",
+      "Normalisation of every published third-party estimate to a common 2026 base year at that publisher's own stated CAGR before any comparison was drawn"
+    ],
+    "secondary_research": [
+      "CMS, Calendar Year 2026 End-Stage Renal Disease Prospective Payment System final rule and fact sheet, 20 November 2025 (base rate $281.71; approximately $8.2B projected to ESRD facilities)",
+      "Federal Register, Vol. 90, No. 224, 24 November 2025, document 2025-20681, the CY2026 ESRD PPS, AKI, QIP and ETC Model final rule",
+      "MedPAC, Report to the Congress, March 2025 Chapter 5 and March 2026 Executive Summary, for fee-for-service outpatient dialysis spending of $8.1B in 2023 and $7.6B in 2024",
+      "USRDS 2025 Annual Data Report (831,192 people treated for ESRD at end-2023; 131,564 incident cases in 2023; 273,041 living with a transplant at end-2024; $55.3B total Medicare ESRD cost in 2023)",
+      "ESRD Networks National ESRD Census Data as of 31 March 2025 (7,556 dialysis centres; 516,837 patients on dialysis; 316,873 with a functioning transplant)",
+      "Published market estimates from Research and Markets, GII Research, Data Bridge Market Research, Coherent Market Insights, Reanin, Spherical Insights, Global Market Insights and IMARC",
+      "Bank of Finland, average annual ECB reference exchange rates for 2025, for the 1.1300 USD/EUR conversion applied to all Fresenius figures"
+    ],
+    "data_validation": "Four independent divisions were computed and cross-checked against each other. First, disclosed revenue: Fresenius EUR 19,628M converted at the ECB 2025 annual average of 1.1300 USD/EUR gives $22.180B, plus DaVita's $13.643B, is $35.823B, which is 1.77x the entire published dialysis-machines market of $20.29B and 42.7% of the published services market of $83.97B; adding Vantive's last public figure of $4.5B for 2023 brings the three largest operators to $40.323B, or 48.0% of the services reading. Second, revenue per patient-year: DaVita's U.S. dialysis revenue of 0.86 x $13,643M over approximately 200,500 U.S. patients is $58,519, and Fresenius Care Delivery of $15,522M over 291,902 patients is $53,176 — agreement within 10% from two unrelated filings. Third, the regulatory price: the CY2026 bundled rate of $281.71 times 156 thrice-weekly treatments is $43,947 per patient-year, which is 1.33x below DaVita's realised rate in exactly the direction commercial and Medicare Advantage payment predicts. Fourth, the national register: 516,837 U.S. dialysis patients at DaVita's realised rate gives a $30.245B ceiling for U.S. dialysis services, or $4.003M across the 7,556 counted centres, against $4.416M per centre at DaVita itself — 9% apart, in the right direction, because the census includes small hospital-based and rural units. These are plausibility tests that bound the published figures and rule three of the four published tiers out as readings of the whole market; none of them is itself a market estimate, and none of the derived values is published as a market size. Figures that no source supports are left as empty arrays: regional analysis, country analysis and all vendor revenue shares."
+  },
+  "faqs": [
+    {
+      "question": "How large is the dialysis and renal care market?",
+      "answer": "On the services reading we publish, $83.97B in 2026, rising to $118.79B by 2032 at a 5.95% CAGR. That figure counts the clinic business that performs dialysis. Published estimates for 2026 range from $20.29B to roughly $134.90B, a 6.65x spread, because different publishers count different things — the machine alone, the machine plus consumables, the service, or the service plus products plus dialysis drugs. The number you quote should name which of those four it is."
+    },
+    {
+      "question": "Why do published dialysis market estimates differ by more than six times?",
+      "answer": "Because they are measuring four different markets. Advanced to a common 2026 base, the published figures fall into clear tiers: machines at $20.29B, equipment including dialysers and consumables at $30.01B, dialysis services at $83.97B, and undifferentiated readings at $130-135B. The growth rates, by contrast, agree closely — 4.60% to 8.30%, a 1.80x spread. The publishers broadly concur on how fast dialysis grows and disagree by a factor of six-and-a-half about what dialysis is."
+    },
+    {
+      "question": "Which estimate does this report use, and why that one?",
+      "answer": "The services reading, because it is the only tier that survives a check against what the operators actually book. Fresenius Medical Care and DaVita disclosed $35.82B of FY2025 revenue between them; add Vantive's last public figure and the three largest reach $40.32B. That is 1.77x the entire published machines market — so the machines figure cannot be the market — and 48.0% of the services figure, which leaves a credible remainder for every other provider worldwide. The $130-135B readings would require the rest of the world to supply $90-95B, or 2.3x the three largest disclosed operators combined."
+    },
+    {
+      "question": "How much does a dialysis operator earn per patient per year?",
+      "answer": "Roughly $53,000 to $58,500, and two unrelated filings agree on it. DaVita's U.S. dialysis revenue — approximately 86% of its $13.643B FY2025 consolidated total — over approximately 200,500 U.S. patients is $58,519. Fresenius Care Delivery revenue of $15.52B over 291,902 patients is $53,176, lower because it blends in lower-reimbursement international business. Per centre, the same arithmetic gives $4.416M a year at DaVita's 2,657 U.S. centres."
+    },
+    {
+      "question": "What does Medicare pay for a dialysis treatment, and how much of the market is that?",
+      "answer": "CMS set the CY2026 ESRD bundled base rate at $281.71 per treatment, up from $273.82. At the standard thrice-weekly schedule that is $43,947 per patient-year — 1.33x below DaVita's realised $58,519, which is the scale of the commercial and Medicare Advantage uplift. In aggregate, MedPAC reports fee-for-service Medicare and its beneficiaries spent $7.6B on outpatient dialysis in 2024, which is about a quarter of the $30.2B ceiling we derive for U.S. dialysis services and under a tenth of the published global services market."
+    },
+    {
+      "question": "How many dialysis patients and centres are there in the United States?",
+      "answer": "516,837 patients on dialysis across 7,556 centres in the U.S. and its territories, per the ESRD Networks national census as of 31 March 2025. A further 316,873 people were living with a functioning kidney transplant and are not dialysis patients, which is why the dialysis census rather than the broader ESRD total of 831,192 is the right denominator for any revenue-per-patient calculation. Patients per centre is 68.4 nationally, against 75.5 at DaVita and 81.1 at Fresenius."
+    },
+    {
+      "question": "Why does this report publish no vendor market shares?",
+      "answer": "Because they are not publicly computable, and became less so in 2025. None of the public operators discloses a revenue share of this market. Baxter's $4.5B-revenue Kidney Care business went private as Vantive Health on 31 January 2025, taking roughly a tenth of the sector's disclosed revenue out of public filings, and the third-largest U.S. operator does not file at all. We do publish one ratio, clearly labelled: DaVita's approximately 200,500 U.S. patients are 38.8% of the 516,837 in the national census. That is a share of patients, from two public registers, and it is not a share of revenue."
+    },
+    {
+      "question": "Why are there no regional or country figures in this report?",
+      "answer": "Because no source gives a regional split of the services scope we publish. We derive a $22.7-30.2B range for U.S. dialysis services ourselves, by scaling the operators' realised revenue per patient-year across the national census, and that derivation is set out in the analysis where a reader can audit it. Putting it into a regional table would present our own arithmetic as a published regional estimate. An omitted section is honest; an invented percentage is not."
+    }
+  ],
+  "seo": {
+    "meta_title": "Dialysis & Renal Care Market Size, Share & Forecast 2032",
+    "meta_description": "Dialysis services reach $83.97B in 2026 and $118.79B by 2032 at 5.95% CAGR. Published estimates span 6.65x; we show which tier survives operator disclosure.",
+    "keywords": [
+      "dialysis market size",
+      "renal care market forecast",
+      "dialysis services market",
+      "ESRD prospective payment system",
+      "haemodialysis market",
+      "peritoneal dialysis market",
+      "dialysis equipment market"
+    ]
+  },
+  "executive_summary": "Dialysis is among the most thoroughly documented markets in healthcare and among the worst reported. The documentation is unusual: a near-complete national census of patients and facilities, a payment rate published annually to the cent, and two listed operators who disclose revenue, patients, centres and countries in the same filings. The reporting is poor because almost every published figure is quoted without saying which of four quite different things it counts. Advanced to a common 2026 base, the public estimates run from $20.29B to roughly $134.90B — a 6.65x spread — while the same publishers' growth rates sit in a narrow 4.60% to 8.30% band. There is near-consensus on how fast dialysis grows and a factor-of-six disagreement about what dialysis is. We publish the services tier: $83.97B in 2026 to $118.79B in 2032 at 5.95%. It is the tier that survives arithmetic. Fresenius Medical Care's FY2025 revenue of EUR 19,628M converts at the ECB 2025 annual average to $22.18B; DaVita booked $13.643B; together $35.82B, which is 1.77x the entire published machines market and 42.7% of the services market. Add Vantive's last public figure of $4.5B and the three largest operators reach $40.32B, or 48.0% — leaving a believable half for US Renal Care, Satellite Healthcare, Nipro's clinics and the hospital and public-system units that treat most of Asia and Europe. The $130-135B readings would require that remainder to be $90-95B, 2.3x the three largest operators combined, which is a statement about what has been added to the definition rather than about who treats patients. Three further divisions corroborate it. Operator revenue per patient-year lands at $58,519 for DaVita's U.S. business and $53,176 for Fresenius blended across all geographies — within 10%, from unrelated filings. The CMS CY2026 bundled rate of $281.71 per treatment is $43,947 per patient-year at a thrice-weekly schedule, 1.33x below DaVita's realised rate, exactly the uplift that commercial and Medicare Advantage payment imply. And scaling the realised rate across the 516,837 patients in the national census bounds U.S. dialysis services at $22.7-30.2B, or $4.003M across 7,556 centres against $4.416M at DaVita's own 2,657. Four independent calculations, each from a different source, all agreeing. Against that, the figure most often cited as the market's engine — Medicare fee-for-service outpatient dialysis spending — was $7.6B in 2024 and falling in nominal terms. The programme that created this industry now pays about a quarter of U.S. dialysis services revenue and under a tenth of the lowest credible global figure.",
+  "key_highlights": [
+    "Dialysis services: $83.97B in 2026 to $118.79B in 2032, a 5.95% CAGR derived from the publisher's own endpoints rather than its rounded 5.93%.",
+    "Published 2026 estimates span $20.29B to $134.90B — a 6.65x spread — across four scope tiers: machines, equipment, services, and services plus products plus drugs.",
+    "The CAGRs span only 1.80x (4.60% to 8.30%). The disagreement is about definition, not growth.",
+    "Fresenius $22.18B plus DaVita $13.643B is $35.82B of FY2025 disclosed revenue — 1.77x the entire published dialysis-machines market.",
+    "The three largest operators reach $40.32B, or 48.0% of the services reading; the $130-135B readings need a $90-95B remainder, 2.3x those three combined.",
+    "Revenue per patient-year converges from two filings: $58,519 at DaVita's U.S. business, $53,176 at Fresenius blended — and $43,947 at the CMS CY2026 bundled rate of $281.71 per treatment.",
+    "Medicare fee-for-service paid $7.6B for outpatient dialysis in 2024, down from $8.1B in 2023: about a quarter of the $30.2B U.S. services ceiling we derive, and 9.1% of the global services figure."
+  ],
+  "market_context": "Dialysis occupies an unusual position in healthcare economics: it is the one condition for which the United States extended Medicare eligibility on the basis of diagnosis rather than age, in 1972, and that decision built the industry whose structure persists today. The consequence is a market whose unit price is set by regulation and published annually — $281.71 per treatment for CY2026 — and whose volume is set by epidemiology rather than by demand generation. Nobody chooses dialysis; the treated population is the diagnosed population minus those transplanted, and at end-2024 that was 516,837 Americans on dialysis against 273,041 living with a functioning graft. Growth therefore comes from three places only: incidence, which tracks diabetes and hypertension; regulated price, which rises a couple of percent a year; and payer mix, which is where the real variance sits, because commercial and Medicare Advantage payment runs about a third above the bundled rate. That structure explains why the sector consolidated into a small number of very large operators and why its economics are legible per centre and per patient rather than per product. It also explains the reporting problem this report exists to address. Because the same companies manufacture machines, sell consumables and run clinics — Fresenius does all three, booking EUR 5,476M of products revenue alongside EUR 13,736M of care delivery — the four tiers of the published market overlap in a single set of accounts, and adding them double counts. The wider system context is that dialysis is the expensive failure mode of a chronic disease that is increasingly treatable earlier. Every cardiorenal drug that delays progression, and every transplant performed, removes a patient-year worth $44,000 to $58,500 from this market. The forecast below is a forecast of a treatment of last resort.",
+  "forecast_analysis": "The 5.95% CAGR is not our estimate of how fast dialysis will grow; it is the rate implied by the two endpoints of the one published estimate that survives a reconciliation check, and we state it that way deliberately. Research and Markets gives $83.97B for 2026 and $118.79B for 2032 and labels the path 5.93%; its own endpoints imply 5.9523%, so we use 5.95% in order that the headline, the growth rate and the seven annual points reconcile exactly rather than to within a rounding error. The intermediate years are interpolation at constant rate, which is what the chart caption says, because no publisher reports annual observations for this scope. What makes the forecast credible is not the model but the bracket around its base year. Four independent calculations place 2026 dialysis services revenue where this estimate places it. The three largest operators disclose $40.32B, 48.0% of it. Revenue per patient-year, computed separately from two companies' own filings, agrees within 10% at $53,176 and $58,519, and the CMS bundled rate independently gives $43,947 — a 1.33x spread in the direction payer mix predicts. Scaling across the national census bounds the U.S. at $22.7-30.2B, which makes the U.S. roughly 36% of global services revenue on about 13% of a global dialysis population commonly put near four million. Every one of those checks is consistent with $83.97B and inconsistent with both $20.29B and $134.90B. The risks to the forecast are asymmetric and run in opposite directions on volume and price. On volume: transplant supply, earlier chronic kidney disease management, and mortality. DaVita's U.S. treatments fell 1.4% over the nine months to September 2025, which it attributed partly to a severe influenza season, and Fresenius recorded 0.0% U.S. same-market treatment growth for the full year. Neither is consistent with a market growing near 6% on volume in its largest geography. On price and mix: the bundled rate rose 2.9% for CY2026 and beneficiaries continue to migrate into Medicare Advantage, where payment is higher — which is why fee-for-service outpatient dialysis spending fell nominally from $8.1B to $7.6B while operator revenue rose 6.5%. A reader should therefore read this forecast as price-and-mix-led in the mature markets and volume-led only outside them.",
+  "reader_takeaways": [
+    "Never quote a dialysis market size without naming its tier. The same year supports $20.29B, $30.01B, $83.97B and $134.90B, and the gap between the first and last is 6.65x — larger than any plausible forecast error.",
+    "Check any dialysis figure against two numbers that are public and exact: $35.82B of FY2025 revenue disclosed by Fresenius and DaVita, and 516,837 U.S. dialysis patients across 7,556 centres. A market size that the two largest operators out-earn is a component; one that needs a $90B unobserved remainder is a definition.",
+    "Model this market as price and mix in the United States and Europe, and as volume elsewhere. Fresenius recorded 0.0% U.S. same-market treatment growth in FY2025 and DaVita's nine-month treatments fell 1.4%, yet DaVita's revenue rose 6.5%.",
+    "Treat the Medicare bundle as the floor of realised revenue, not its level. $281.71 per treatment is $43,947 a patient-year; DaVita realises $58,519. The 1.33x gap is the entire commercial and Medicare Advantage story, and no operator quantifies it directly.",
+    "Expect vendor share in this market to stay uncomputable. Vantive's $4.5B of revenue left the public record on 31 January 2025 and the third-largest U.S. operator does not file. Anyone publishing a share percentage for dialysis after 2024 is estimating, not reporting."
+  ]
+}

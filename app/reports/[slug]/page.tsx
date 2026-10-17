@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui";
 // import { Download } from "lucide-react";
 import { ReportContentWrapper } from "@/components/reports/ReportContentWrapper";
 import type { SidebarTOCItem } from "@/lib/toc-utils";
-import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema } from "@/components/seo/StructuredData";
+import { StructuredData, generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateProductSchema, generateDatasetSchema, generateItemListSchema } from "@/components/seo/StructuredData";
 import { jsonReportToUIReport } from "@/lib/jsonReports";
 import { marketValue } from "@/lib/format";
 import { schemaDate } from "@/lib/seo";
@@ -347,6 +347,24 @@ export default async function ReportPage({
       ...(report.marketSize2032 ? [`Market Size (${forecastEndYear}): ${report.marketSize2032}`] : []),
       ...(report.cagr ? [`CAGR (${report.forecastPeriod || `${baseYearLabel}–${forecastEndYear}`}): ${report.cagr}`] : []),
     ],
+    /* The regions this row actually breaks out, deduplicated and in its own
+       order. The 'Report Coverage' card shows only regional_analysis[0], so
+       before this the schema described a multi-region dataset as whatever one
+       region happened to sort first. A row with no regional_analysis emits no
+       spatialCoverage rather than a guessed 'Global'. */
+    spatialCoverage: Array.from(
+      new Set(
+        jsonReport.regional_analysis
+          .map((r) => r.region)
+          .filter((r): r is string => typeof r === 'string' && r.trim().length > 0)
+      )
+    ),
+    /* Purchasable, with a free sample on request -- both routes exist
+       (/checkout/<slug> and /request-sample). Stated rather than left blank
+       because a Dataset with no conditionsOfAccess reads as openly available. */
+    conditionsOfAccess:
+      'The summary, market metrics and section outline on this page are free to read. ' +
+      'The full report body is available for purchase, and a sample section is available on request.',
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -354,6 +372,20 @@ export default async function ReportPage({
     { name: 'Reports', url: 'https://www.neographanalytics.com/reports' },
     { name: report.title, url: reportUrl },
   ]);
+
+  /* The outline the sidebar already renders, declared as an ItemList from the
+     same `sidebarTOC` array rather than rebuilt -- a machine-readable outline
+     that disagrees with the visible one would be worse than none. Every url is
+     an on-page anchor the sidebar links to, so each position resolves to a
+     heading that exists. */
+  const tocSchema =
+    sidebarTOC.length > 0
+      ? generateItemListSchema({
+          name: `${report.title} — report contents`,
+          url: reportUrl,
+          items: sidebarTOC.map((item) => ({ id: item.id, title: item.title })),
+        })
+      : null;
 
   const faqSchema = report.faqs && report.faqs.length > 0 ? generateFAQSchema(report.faqs) : null;
 
@@ -363,6 +395,7 @@ export default async function ReportPage({
       <StructuredData data={productSchema} />
       <StructuredData data={datasetSchema} />
       <StructuredData data={breadcrumbSchema} />
+      {tocSchema && <StructuredData data={tocSchema} />}
       {faqSchema && <StructuredData data={faqSchema} />}
 
       <div className="rounded-panel bg-[var(--card)] px-6 py-4 md:px-11">

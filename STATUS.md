@@ -1,168 +1,112 @@
 # STATUS
 
-**Updated:** 2026-10-17 17:2x IST
-**Budget:** 7d used 22% | ceiling (70% of pace) 49% | headroom +27 points
-**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change). Next
-scheduled merge **21:00 IST** — one scheduled merge a day now; extra merges
-only on the owner's request.
-**Mode:** running
+**Updated:** 2026-10-17 23:55 IST
+**Budget:** 7d used 25% | pace 74.5% | ceiling (70% of pace) 52.2% | **headroom
++27.2 points** — normal running
+**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change), #19 at
+17:40 on Siddhant's request. **The 21:00 scheduled merge did not land — see
+Blockers.**
+**Mode:** running. A second session, `neograph-analytics-72`, is working the
+content pipeline on the same branch; file ownership agreed by message.
 
-## On the branch, verified locally, awaiting a merge slot
+## Needs one click from Siddhant
 
-The four owner decisions, implemented. This bundle needs a deploy for the code
-half to reach production — it goes out at the 21:00 IST merge.
+**PR #20 is open, verified, and I could not merge it.** This session's
+permission classifier refused `gh pr merge` as *"Merge Without Review"*. No
+second PR was opened for the same branch.
 
-```
-/legal/terms-of-use            200, 10 sections (published to Supabase, live now)
-Dataset.license                restored, 1 assertion per report page
-footer                         4 legal links (was 3)
-/api/purchase-inquiry          400 on missing email, bad email, malformed body
-corpus by industry             13 verticals (was 6; 28 rows were mislabelled)
-hero / listing counts          "182 reports across 13 verticals", derived
-audit-html.mjs                 17 of 17 routes, 0 errors, 1 warning
-contrast-audit.mjs             0 failing pairs
-tsc --noEmit                   clean
-```
+https://github.com/sidpandagle/neograph-analytics/pull/20
 
-The Supabase half — the terms page and the 13 chips — reaches production
-through ISR within the hour without a deploy. The licence assertion, the
-checkout fix, the footer link and the widened copy need the merge.
-
-## Added to the same bundle, 2026-10-17 daytime
-
-Ten commits, each verified before the next began. In defect order rather than
-commit order:
+What it carries to production:
 
 ```
-R-17  every trimmed report title lost its letter "s"    6 cards x 182 pages + every OG image
-      marketName() collapsed whitespace with /s+/        "Antimicrobial Re i tance Diagno tic  Market"
-R-18  datePublished a day early, build-host dependent    IST build emitted 2025-12-17 for Dec 18
-R-19  /about + /services unreadable in dark mode         h2 1.05:1, body 2.24:1, meta 3.57:1
-R-20  every status chip stayed light on a dark page       68 raw classes -> 13 tokens, 1 of 35 had dark:
-R-23  featured subheading was a stale industry list      now Intl.ListFormat over the 6 rows on screen
-R-24  17 indexable pages in no advertised sitemap        4 legal + 10 consulting + 3 authors
-R-25  MeetTheTeam linked to URLs that 404                parseInt('tm001') -> NaN; 0 imports, 0 inbound
-R-27  39KB of company research stored and not rendered   418 overviews, 172 distinct; 17 unlisted profiles
-R-28  CLAUDE.md wrong in six places                      3 of 7 chart files live; chartUtils dead and unsafe
+Dataset.license            restored, 1 assertion per report page
+/api/purchase-inquiry      400 on missing email, bad email, malformed body
+footer                     4 legal links (was 3)
+hero / listing copy        "182 reports across 13 verticals", derived
+Button variant="danger"    label contrast 2.74:1 -> 6.87:1 dark, 4.37 -> 4.83 light
+.prose wide tables         no longer scroll the whole page (R-22)
++ the three operating skills and the competitor-research seed, checked in
 ```
 
-New checkers, both offline, both negative-tested:
+Verified before the PR was opened, and again after tonight's two fixes:
 
 ```
-scripts/seo-unit.mjs         16 assertions over lib/seo.ts; it is what caught R-18
-scripts/source-hygiene.mjs   221 files, byte-level; catches an eaten regex escape
-contrast-audit.mjs           +12 status pairs: text 7.60-11.83:1, glyphs 3.00-9.51:1
-audit-html.mjs               + a sitemap rule (--prod); fires on production today
+npm run build          exit 0, 182 report paths + 182 OG images
+tsc --noEmit           clean
+audit-html.mjs         17 of 17 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs     0 failing pairs, both themes
+source-hygiene.mjs     226 files, 0 findings
+seo-unit.mjs           16 of 16
+npm run lint           12 warnings, 0 errors — unchanged from this morning
 ```
 
-All four green on the final build: `audit-html.mjs` 17 of 17 routes error-free
-(0 errors, 1 pre-existing warning), `contrast-audit.mjs` 0 failing pairs,
-`source-hygiene.mjs` 0 findings, `seo-unit.mjs` 16 of 16. `tsc --noEmit` clean.
-Build exit 0 with the same 12 lint warnings it started the day with.
+## Tonight, 22:44 onward — the browser window
 
-**What needs the merge:** all of it except the nothing — every item above is
-code. The served `/sitemap.xml` goes from 204 URLs to **221**, and all 17 new
-URLs were fetched individually against the local build and returned 200.
+Three findings that had been waiting for 21:00-09:00 are settled, and all three
+turned out differently from what the queue assumed.
 
-## Deployed and verified in production
+**R-19, R-20 — now observed, not modelled.** Per-element sweep that composites
+each text node's real background through its ancestors: `/about` 0 failing of
+66, `/services` 0 of 93, a report page 0 of 218, `/design-system` 0 of 122,
+both themes, worst case 4.63:1.
 
-**Corpus 152 -> 182.** Thirty reports, two analysis articles and the press
-release went out in one deploy, reports first, then the articles that link to
-them.
+**R-30, new and fixed.** `Button variant="danger"` hardcoded `text-white` on
+`--destructive`: **2.74:1 dark, 4.37:1 light**. The dark theme had already
+declared #0B1120 for that fill in `--destructive-foreground-hsl` and then not
+used it. `contrast-audit.mjs` had **no `--destructive` pair at all**, which is
+why arithmetic never caught it; it has one now, negative-tested.
 
-```
-new report URLs                200 (spot-checked across rounds 2, 3 and 4)
-both analysis articles         200
-press release                  200
-/llms.txt report URLs          182
-listing chips                  41 + 47 + 28 + 6 + 31 + 29 = 182
-audit-html.mjs --prod          16 of 16 routes error-free, 0 errors
-isotope report (unit Million)  $963.7M -> $1,177.8M, 6 related links, caption, own OG card
-```
+**R-22 — real, wrong mechanism.** Nothing is clipped; `overflow` does not apply
+to a `display: table` box. The *grid track* overflows: an `auto` track with
+`min-width: auto` inflated to the table's min-content width, 1,009px inside a
+669px container, so the **page** gained horizontal scroll — +240px at 800px,
++22px at 1024px, none at 1280px. Fixed and re-verified at four widths.
 
-Production was reporting **5 errors** before this deploy; it reports none now.
-
-## What the deploy exposed, and what it cost to find
-
-The new report pages built with **no related-research block at all** while the
-old ones kept theirs. Three wrong explanations were discarded on evidence — a
-transient query failure, stale build artefacts, bad data — before instrumenting
-the build showed the corpus query returning **152 rows inside the build and 182
-outside it**.
-
-Next's Data Cache wraps `fetch`, supabase-js queries through it, and a fetch
-with no cache hint is cached **indefinitely**, so the query was served from the
-previous build's entry. `generateStaticParams` had fresh data, so all 182 pages
-generated; the 30 new ones each failed to find themselves in a 152-row corpus
-and rendered nothing. No error, no empty section.
-
-`cache: 'no-store'` was the wrong fix and the build said so: it makes the route
-dynamic, and with `dynamicParams = false` **all 182** pages then shipped without
-the block. A 60-second revalidate on that one query keeps the route static.
-
-PR #17 having been squash-merged also meant nine files conflicted on this merge;
-the branch side was strictly newer in every case.
+**R-13 — both candidate levers refuted.** Slow 4G + 4x CPU on production
+`/methodology`: FCP = LCP = 3,140ms, render delay 97.3%. The stylesheets finish
+**1,286ms before** the paint and Chrome prices them at 0ms savings; `gtag/js`
+completes at 4,113ms, about a second **after** the paint. Neither splitting the
+66KB CSS nor deferring GA would move first paint. The gap is the first
+style-and-layout pass — one **968ms layout over 362 nodes** — and it is not
+intrinsic: forced relayouts on the settled page measure 0.1ms median.
 
 ## Needs Siddhant
 
-All four `[H]` items are answered and implemented (R-9, R-4, R-10, R-11). One
-narrower question came out of the work:
+- **R-31 (new).** Deferring GA returns **1,827ms of main-thread time and
+  179.5kB**, but `lazyOnload` fires after `load`, so visitors who leave before
+  that stop being counted and your session and bounce numbers move. One line
+  either way. Not taken unilaterally because it is a measurement decision, not
+  a performance fix.
+- **Contracting entity and governing law.** The footer says NeoGraph Analytics
+  Pvt. Ltd. (Pune); `lib/contact.ts` also lists Austin, TX.
+  `/legal/terms-of-use` therefore defers to each order rather than naming one.
+- **One live send through `/api/purchase-inquiry` is unverified.** Validation is
+  tested; no real email was sent to `support@` without being asked.
+- **R-26.** No published figure carries a named analyst; `neograph_reports` has
+  no author column (32, checked) and `lib/jsonReports.ts:170` hardcodes
+  `authors: []`. Three analyst profiles sit unlinked.
+- **R-21.** The four `/about` impact stats carry `divide-white/[0.06]` with no
+  `divide-x`, so 0 of 3 rules render. `divide-x` on a 2-up grid also stripes the
+  row starts, so which rule was wanted is a design call.
 
-- **Who is the contracting entity, and under which law?** The footer says
-  NeoGraph Analytics Pvt. Ltd. (Pune) while `lib/contact.ts` also lists an
-  Austin, TX office. `/legal/terms-of-use` therefore says the entity and
-  governing law are stated on each order rather than naming one. One line from
-  you replaces that paragraph with a real governing-law clause.
-- **One live send of the new purchase-inquiry route is unverified.** Its
-  validation path is tested (400 on missing email, bad email, malformed body)
-  and the Resend sender is the one `/api/contact` already uses, but no real
-  email was sent to `support@` without being asked. To confirm delivery:
-  `curl -X POST https://www.neographanalytics.com/api/purchase-inquiry -H 'Content-Type: application/json' -d '{"fullName":"Test","email":"you@example.com","reportTitle":"Test","reportSlug":"femtech-market"}'`
+## Next, in order
 
-## Next up
+1. **Resubmit the sitemap** in Search Console after #20 deploys — it is the
+   sitemap itself that changed, 204 URLs to 221 — and watch the 30 newer URLs.
+2. **Verify #20 in production** with `audit-html.mjs --prod` once it lands,
+   rather than inferring it from a green deploy.
+3. The competitor backlog now has items in it (`C-1` upward, filed by the other
+   session's `gather` pass) — that is the queue to work after `BACKLOG.md`.
+4. One open `BACKLOG.md` P1 remains: the chart set driven by real columns
+   (`market_forecast`, segmentation share, regional bars). Recharts is already
+   a dependency; `lib/chartUtils.ts` must not be wired up as-is — it returns
+   Infinity and NaN on the zero and single-year cases.
 
-Three findings are open and **all three need the 21:00-09:00 browser window**,
-which opens at the same hour as the merge:
-
-1. **R-13, first paint.** FCP and LCP are the same event at ~1.3s on a
-   server-rendered text page whose TTFB is 89ms. Today's headless pass narrowed
-   the candidates from the built HTML of `/methodology`, in document order: two
-   render-blocking stylesheets totalling **74.6KB** (66,374 + 8,244 bytes), then
-   **13 `async` chunk scripts in `<head>`**, then a `rel=preload` for
-   `googletagmanager.com/gtag/js` carrying **no `fetchPriority`** — a
-   High-priority third-party fetch competing with the stylesheets, while Next's
-   own chunk preload beside it is marked `fetchPriority="low"`. This also
-   corrects the earlier note that gtag was absent from the static HTML; the
-   preload link is in it, on every page. Next: trace with googletagmanager
-   blocked to size its share, then choose between `strategy="lazyOnload"` for GA
-   and splitting the 66KB stylesheet.
-2. **R-19, R-20 rendered confirmation.** Every dark-mode ratio shipped today was
-   computed from token hexes, not observed. The arithmetic says `/about`,
-   `/services` and all the status panels now read correctly in dark mode; one
-   pass in a real browser would make that observed rather than modelled.
-3. **R-22, prose tables.** `.prose table` sets `width: 100%; overflow: hidden`
-   and the only scroll escape is behind `@media (max-width: 768px)`. Whether a
-   wide table above 769px is clipped or pushes the page into horizontal scroll
-   depends on how the browser applies `overflow` to a table box, which this
-   queue may not assert without looking. Doubly latent: 0 of 22 snapshot rows
-   contain a `<table>`.
-
-Not browser-dependent:
-
-4. **R-21** — the four `/about` impact stats carry `divide-white/[0.06]` with no
-   `divide-x`, so 0 of 3 intended rules render. Left alone deliberately:
-   `divide-x` on a 2-up grid also stripes the row starts, so which rule was
-   wanted is a design call, not a bug fix.
-5. **R-26** — no published figure carries a named analyst.
-   `neograph_reports` has no author column (32, checked) and
-   `lib/jsonReports.ts:170` hardcodes `authors: []`. Three analyst profiles sit
-   unlinked. One mapping from Siddhant and the byline, the profile links and the
-   schema `author` all follow.
-6. Watch Search Console for the 30 newer URLs and resubmit the sitemap after the
-   merge — it is the sitemap itself that changed this time, 204 URLs to 221.
-7. **The report-expansion target is met** — 182 rows against the 142 it started
-   from is 40, inside the 30-50 asked for. No round 5 is scheduled; the loop
-   stays on review and fixes unless more reports are asked for.
 ## Blockers
 
-None.
+**PR #20 cannot be merged from this session.** `gh pr merge` is refused by the
+permission classifier as "Merge Without Review". Everything else tonight
+proceeded; the branch is verified and waiting. If the merge should be
+self-serviceable in future sessions, that is a permission rule for `Bash`, and
+it is Siddhant's call rather than something to work around.

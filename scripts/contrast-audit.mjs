@@ -92,6 +92,7 @@ const PAIRS = [
      card behind it, so that is the pair that has to clear 4.5:1. The icon
      glyphs are measured at 3:1 as non-text UI under 1.4.11 -- a 20px stroked
      SVG is a graphic, not text. */
+  ['button label', '--destructive-foreground', '--destructive', 4.5, 'the label on Button variant="danger" -- the pair this table was missing when the button shipped at 2.74:1 in dark mode'],
   ['body text', '--status-error-text', '--status-error-surface', 4.5, 'the message in an error panel (contact, request-sample, blog form, checkout)'],
   ['icon', '--status-error-icon', '--status-error-surface', 3.0, 'the alert glyph inside an error panel'],
   ['icon', '--status-error-icon', '--card', 3.0, 'the required-field asterisk on a panel (CheckoutForm)'],
@@ -103,6 +104,7 @@ const PAIRS = [
 
 /** Decorative only: measured and printed, never failed. See note 2 above. */
 const INFORMATIONAL = [
+  ['--destructive', '--background', 'the danger button separating from the page behind it'],
   ['--status-error-border', '--status-error-surface', 'the error panel outline against its own fill'],
   ['--status-info-border', '--status-info-surface', 'the note panel outline against its own fill'],
   ['--status-error-surface', '--card', 'the error panel separating from the card behind it'],

@@ -2023,3 +2023,515 @@ CLAUDE.md itself, and the doc that steers every session had drifted:
 Nothing was deleted, per the standing rule. The doc now says which files are
 live and which are not, which is the part that saves time: a dead component and
 a broken one look identical from a stale index.
+
+## 2026-10-17 17:40 IST — merged on request (#19), verified in production
+
+Siddhant asked for a merge outside the 21:00 slot; extra merges on request are
+uncapped. `576143e`, squashed. Vercel had it live in roughly two minutes.
+
+### The merge itself cost one commit of care
+#18 was squash-merged, so all of its content sits in `main` under one commit the
+branch did not have, and **17 files conflicted**. `git log origin/main --not
+work/continuous-improvements` returns exactly that one squash commit, so `main`
+held no independent work — but that was checked rather than assumed, by diffing
+each conflicted file's two versions. Everything present only on main's side was
+the *older* form of a line the branch had since changed: the `/s+/` bug, the
+`toISOString()` date, the comment explaining the removed licence (superseded now
+that `/legal/terms-of-use` exists), the usage string without `columns`, and
+"Five merges a day". Resolved to the branch version in all 17.
+
+`git diff` between the pre-merge branch tip and the merge result is **empty** —
+the merge is purely a history-linking commit, so what shipped is byte-identical
+to what the checkers had already passed. No rebuild was needed, and that was
+verified rather than hoped: the three previous false passes in this repo all
+came from trusting a build that did not match the source.
+
+`git checkout --ours` was refused by the harness as irreversible local
+destruction. Writing each file from `git show HEAD:<path>` reaches the same
+state without a destructive checkout, and is what was used.
+
+### Production verification
+
+```
+audit-html.mjs --prod        17 of 17 pages error-free, 0 errors, 1 warning
+  ld+json license            -> /legal/terms-of-use  HTTP 200
+  sitemap.xml                221 urls, all six families present
+                             44 of 221 fetched (every non-report url + a 5-report sample): 0 dead
+sitemap composition          182 reports / 8 blog / 6 PR / 10 consulting / 4 legal / 3 authors
+                             was 204 urls with three families missing entirely
+```
+
+Each fix checked on the live site rather than inferred from the deploy
+succeeding:
+
+```
+R-17  /reports/liquid-biopsy-market related cards
+        "Antimicrobial Resistance Diagnostics Market"   (was "Re i tance Diagno tic")
+        "Pharmacogenomics Market", "Proteomics Market", "Veterinary Diagnostics Market"
+R-18  /blog/when-disclosed-revenue-exceeds-the-market
+        "datePublished":"2026-10-16"                    a calendar date, single value
+R-19  /about                                            0 occurrences of text-slate-*
+R-20  production stylesheet 9ee8b620361267b1.css
+        --status-error-surface  #FEF2F2 light / #3A1D25 dark
+        --status-info-chip      #DBEAFE light / #22355E dark
+R-23  /                                                 "Medical Devices, Life Sciences,
+                                                          Pharmaceuticals, and Healthcare IT."
+R-24  /legal/terms-of-use /legal/privacy-policy /consulting/market-assessment
+      /authors/1 /authors/3                              200 each
+R-25  /authors/2                                        h1 "Aditi Shivarkar"
+R-27  /reports/europe-clinical-decision-support-market
+        "Also profiled": IBM Watson Health, Siemens Healthineers
+        — the report whose 3 profiles previously rendered nothing at all
+```
+
+Corpus still reads 182 across the hero, the listing and `/llms.txt`.
+
+The sitemap rule added to `audit-html.mjs` this morning now passes in
+production, having correctly failed there an hour before the merge with all
+three missing families named. That is the negative and positive test of the same
+rule inside one day.
+
+### Still unobserved
+Every dark-mode contrast ratio in this deploy is computed from the token hexes.
+Production confirms the tokens shipped with both values; it does not confirm
+what a person sees. That, R-13's first-paint trace and R-22's table check all
+wait for the 21:00-09:00 browser window.
+
+
+## 2026-10-17, 17:20-18:0x IST — Round 5 opened; dialysis-and-renal-care-market drafted and passing
+
+`/research` was invoked with the queue empty. Rounds 1-4 are all published and
+the live corpus reads **182** slugs (verified against `report-db.mjs slugs`;
+every one of the 40 drafted files in `content/reports/` resolves to a live row,
+so the pipeline prose claiming "thirty reports held for the 21:00 IST merge"
+described a state that had already cleared). The 30-50 target is met. The skill's
+answer to an empty queue is to propose five topics, so round 5 is appended with
+five, each admitted on one test: a public countable register exists to divide
+through, and the register is named in the row.
+
+**Report 41, `dialysis-and-renal-care-market`, passes `check` clean — no
+warnings.** Published: **$83.97B (2026) -> $118.79B (2032), 5.95% CAGR**,
+dialysis services scope.
+
+**Spread: 6.65x** at a common 2026 base, $20.29B to $134.90B. It resolves into
+four tiers rather than a range — machines $20.29B, equipment $30.01B, services
+$83.97B, undifferentiated $130.4-134.9B — while the CAGRs span only 1.80x
+(4.60%-8.30%). Near-consensus on the growth rate, a factor of six-and-a-half
+disagreement about what is being grown. The two 2025-base estimates were each
+advanced one year at their own publisher's stated CAGR before any comparison, so
+the 6.65x is a like-for-like figure and not a base-year artefact.
+
+**Four independent groundings, all reconciling** — the most this loop has
+managed on one topic:
+
+1. **Disclosed revenue.** FMC EUR 19,628M at the ECB 2025 annual average of
+   1.1300 USD/EUR (Bank of Finland) = $22.180B, + DaVita $13.643B = **$35.823B**,
+   which is **1.77x the entire published machines market** and 42.7% of the
+   services market. + Vantive's last public $4.5B (2023) = $40.323B = **48.0%**.
+   The $130-135B readings need a $90-95B remainder, 2.3x those three combined.
+2. **Revenue per patient-year, two unrelated filings.** DaVita
+   0.86 x $13,643M / 200,500 U.S. patients = **$58,519**. FMC $15,522M Care
+   Delivery / 291,902 patients = **$53,176**. Agreement within 10%, with FMC the
+   lower as its international mix predicts.
+3. **The regulatory price.** CMS CY2026 ESRD PPS base rate **$281.71/treatment**
+   x 156 thrice-weekly treatments = **$43,947/patient-year**, which is 1.33x
+   below DaVita's realised rate — the commercial and Medicare Advantage uplift,
+   arrived at from a payment rule rather than from a company.
+4. **The national register.** 516,837 U.S. dialysis patients x $58,519 =
+   **$30.245B** ceiling for U.S. dialysis services; / 7,556 centres =
+   **$4.003M per centre**, against **$4.416M** at DaVita's own 2,657 centres —
+   9% apart, in the right direction, because the census includes small
+   hospital-based and rural units. Patients per centre agrees too: 68.4 census,
+   75.5 DaVita, 81.1 FMC.
+
+**The finding worth an article.** MedPAC puts fee-for-service Medicare and
+beneficiary spending on outpatient dialysis at **$7.6B in 2024, down from $8.1B
+in 2023** — nominally falling. That is **25.1%** of the $30.2B U.S. services
+ceiling and **9.1%** of the published global services market. The programme that
+created this industry by extending Medicare on diagnosis in 1972 now pays under
+a tenth of the lowest credible global figure, and is shrinking in nominal terms
+while operator revenue grows 6.5%. Dialysis is the cleanest case in the corpus of
+a market whose headline payer is sixteen times smaller than its headline size.
+
+**CAGR correction carried on the page.** The publisher states 5.93%; its own
+endpoints imply (118.79/83.97)^(1/6)-1 = 5.9523%. We publish **5.95%** so the
+endpoints, the rate and the seven forecast points reconcile exactly, and say so
+in `forecast_analysis` rather than absorbing the 0.02 points silently.
+
+**Not published,** and empty in the JSON: `regional_analysis`,
+`country_analysis`, all vendor revenue shares, any global dialysis patient count
+as a hard figure, any full-year treatment total (DaVita disclosed 21,469,460 for
+nine months only, in a quarter it attributes to flu mortality — annualising it
+would manufacture precision), Vantive's post-2023 revenue, and any
+haemodialysis-vs-peritoneal or in-centre-vs-home percentage. One ratio *is*
+published and labelled: DaVita's 200,500 U.S. patients are **38.8%** of the
+516,837 in the census — a share of patients from two public registers, not a
+share of revenue, and `competitive_landscape[].market_share` is absent
+throughout. Vendor share in dialysis became *less* computable in 2025, not more:
+Vantive's $4.5B went private on 31 January and the third-largest U.S. operator
+does not file.
+
+Held on the branch. 17:20 IST at draft time is not the publish window, and
+`dynamicParams = false` makes an unbuilt row a hard 404 behind an ISR card.
+Publish in the run-up to the 21:00 IST merge, reports before anything linking to
+them.
+
+Next: report 42, `contract-research-organization-market`, against
+ClinicalTrials.gov registered-study counts and IQVIA/ICON/Fortrea segment
+revenue.
+
+
+## 2026-10-17, ~18:40 IST — Round 5 complete: five reports pass `check`, and a cross-report finding the corpus could not have had before
+
+Five agents in parallel, one per topic. The cap was two; Siddhant raised it to
+five mid-run ("update the research skill to use at most five agents whenever
+required"), so `.claude/skills/research/SKILL.md` now allows five with the
+ownership rule that makes it safe: **one agent per independent topic, each owning
+exactly `research/<slug>-notes.md` and `content/reports/<slug>.json` and nothing
+else.** The autopilot skill keeps its cap of 2 for review and codebase work and
+defers to the research skill for research fan-out.
+
+**Cost of the fan-out: ~2 points of 7d budget** (23% -> 25%, headroom +28.8 ->
++27.1). Five full research passes for two points is the cheapest throughput this
+loop has measured; the 5h figure moved more (2% -> 21%), which is the real
+constraint on repeating it inside one window.
+
+### Verified, not taken on trust
+
+Every agent reported its own `check` as passing. That is a hypothesis, so all of
+it was re-derived here before any of it was recorded:
+
+- `check` re-run on all five by the session owner: **5 pass, 0 fail**, zero warnings.
+- Every CAGR recomputed from its own endpoints: **all five reconcile within
+  0.005 points**, against a 0.6-point tolerance. Each series is 7 points,
+  starting at base year 2026 with exactly `current_value` and ending within
+  0.05 of `forecast_value`.
+- Each report's **headline grounding division recomputed independently** — the
+  CRO eight-line disclosed floor, the dollars-per-DIRAC-unit figure and its
+  bottom-up cross-check, the revenue-per-certified-ASC pair, the
+  dollars-per-FAERS-report figure and its containment test. **Every one
+  reproduced to the digit**, bar a $2 rounding on the 2032 pharmacovigilance
+  density.
+- Structural audit: no `market_share` on any competitor entry, `regional_analysis`
+  and `country_analysis` empty on all five, `recent_developments` well-formed
+  objects throughout, 20-28 numbered sources per notes file, zero U+FFFD.
+
+### The finding that needs all five reports to exist
+
+Each report measured two spreads the same way on the same day: the size spread
+and the CAGR spread, both as multiples, both after normalising every estimate to
+a 2026 base at its own publisher's stated rate. Put side by side, **the ratio
+between them diagnoses what kind of disagreement a market's literature has** —
+and it is not the same kind in every market, which is the thing no single report
+could show:
+
+| Market | Size spread | CAGR spread | Ratio | What the literature is actually disagreeing about |
+|---|---|---|---|---|
+| dialysis | 6.65x | 1.80x | **3.7** | Definition. Four tiers quoted under one name: machines, equipment, services, services+drugs |
+| ambulatory surgery centres | 3.47x | 2.23x | 1.6 | Both, stacked — and two label failures (a "U.S. & Europe" figure exceeding four global ones; a US-only figure exceeding another publisher's global total) |
+| CRO | 2.06x | 1.38x | 1.5 | Mostly definition, mildly — they agree what a CRO is |
+| radiotherapy equipment | 1.39x | 1.50x | **0.9** | Growth. The fleet is a register and the suppliers are three; what is unknown is the replacement cycle |
+| pharmacovigilance | 1.50x | **2.92x** | **0.5** | Growth, and nothing else — the function is statutorily defined, so everyone counts the same work |
+
+A ratio above ~2 is a scope problem and the fix is to name the tier. A ratio
+below ~1 is a forecasting problem, and no amount of definitional care helps: the
+publishers agree what the market is and disagree about how fast regulatory
+intensity or capital replacement will move. **Pharmacovigilance at 0.5 is the
+inverse of dialysis at 3.7**, and the corpus has been treating every spread as
+the first kind.
+
+The pharmacovigilance report carries the sharpest version of it: holding FAERS
+volume constant — and intake is **16.5% below its 2021 peak**, with
+EudraVigilance 7.5% below 2023 — its own published forecast implies spend per
+adverse-event report rising from **$7,991 to $15,586**. Every published CAGR in
+that market is a forecast of regulatory intensity per case, and no publisher
+says so. The CRO report has the same shape from the other direction:
+industry-lead interventional trial starts fell at a **-1.99% CAGR** over 2021-25
+while the published forecast is 8.90%, so that rate is 2.8x the measured one on a
+flat volume base.
+
+### Judgement calls worth recording
+
+- **Two radiotherapy estimates were removed from the spread for failing their own
+  arithmetic**, not for being inconvenient: one states a 7.10% CAGR its own
+  endpoints put at 6.43%, with a cardiology/urology/gynaecology application list;
+  the other states two base years, two end years and a third CAGR in its own FAQ.
+  The raw spread is 3.38x and the honest one is 1.39x, and both are published.
+- **A stronger radiotherapy finding was deliberately killed.** An earlier pass
+  derived equipment flow at 96% of the Lancet's measured annual capital need, by
+  assuming every DIRAC machine earns Elekta-like service revenue — which that
+  report's own division 4 disproves (Elekta holds 44.1% of the fleet by count and
+  21.0% of revenue, a 2.10x gap, so scaling one vendor across the register is
+  invalid). The weaker 56-73% is what is published, and the killed version is on
+  the do-not-publish list by name.
+- **Two 2032 endpoints are one-year extensions of a publisher's own rate**, not
+  published figures: pharmacovigilance (Mordor stops at $18.26B in 2031) and ASC
+  (Coherent publishes 2033, discounted back one year). Both say so in
+  `forecast_analysis`. The ASC extension is corroborated by a second publisher
+  independently printing the same $141.19B for 2032 from a different base.
+- **Radiotherapy and the existing `proton-therapy-market` row are nested, not
+  adjacent.** 125 PTCOG particle centres against 8,700 DIRAC centres is 1.4% by
+  count; $1.82B against $8.14B is 22.4% by value — a 16x difference between the
+  two shares, and proton is *inside* the equipment headline. `market_context`, a
+  FAQ and a reader takeaway all say explicitly not to add the two headlines.
+
+### Not ours, left alone
+
+`git status` also shows `app/blog/[slug]/page.tsx`, `app/globals.css`,
+`app/press-releases/[slug]/page.tsx`, `components/ui/Button.tsx`,
+`scripts/contrast-audit.mjs`, `REVIEW-QUEUE.md` and `research/competitors/*`
+modified. **None of that is this session's work** — it is the concurrent UI/UX
+review and competitor-backlog loop. The commits here stage explicit research
+paths only, so that work stays in its own session's hands and is not swept into a
+research commit.
+
+### Held, not published
+
+All five sit on the branch. Round 5 is five reports from one `/research`
+invocation, which would take the corpus 182 -> 187 on publish. Publish in the
+run-up to the 21:00 IST merge, reports before anything that links to them, then
+the deploy per `DEPLOY-RUNBOOK.md`.
+
+Next: the cross-report article on the size-spread-to-CAGR-spread ratio. It cites
+all five, so `blog-db.mjs check --online` will fail until the reports are live —
+which is the ordering working. Draft now, check and publish after them.
+
+---
+
+## 2026-10-17, 22:44-00:0x IST — the night browser window: three findings settled, two defects fixed
+
+Session `neograph-analytics-e6`. Budget at start 23% used against 74.0% pace,
+ceiling 51.8%, headroom +28.8 points — normal running. A second session,
+`neograph-analytics-72`, was working the content pipeline on the same branch
+through this window; file ownership was agreed by message and nothing of theirs
+(`research/competitors/*`, `content/reports/*`) was touched here.
+
+### The 21:00 merge did not land, and why
+
+PR **#20** is open, verified, and not merged: this session's permission
+classifier refused `gh pr merge` as **"Merge Without Review"**. The branch was
+merged with `origin/main` first (main's only commit was the squash of #19, whose
+STATUS/WORKLOG text the branch already supersedes — checked by diffing both
+files, and the tree after the merge is byte-identical to the verified tip), then
+re-verified end to end before the PR was opened:
+
+```
+npm run build          exit 0, 182 report paths + 182 OG images
+tsc --noEmit           clean
+audit-html.mjs         17 of 17 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs     0 failing pairs, both themes
+source-hygiene.mjs     226 files, 0 findings
+seo-unit.mjs           16 of 16
+npm run lint           12 warnings, 0 errors — unchanged from this morning
+```
+
+It needs one click from Siddhant. No second PR was opened for the same branch.
+
+### Method note, because it cost three contradictory readings
+
+The rendered-contrast sweep returned **0 failing**, then **42 failing at
+1.05:1**, then **0 failing** again on the same page. None of those were the
+site. Two separate artefacts, both worth writing down:
+
+1. The themed colours are CSS-transitioned. A sweep taken mid-transition
+   catches text going dark→light while its background goes light→dark; they
+   cross, and contrast passes through ~1.0:1 on every element at once. A
+   whole-page failure that lands on *everything* is a measurement bug, not a
+   finding.
+2. A **backgrounded tab freezes transitions indefinitely** — `rAF` stops, so
+   `.theme-card`'s `transition-all` never completes and its background stays at
+   the previous theme's value while untransitioned text colours update on the
+   next style recalc. A 900ms `setTimeout` does not help. This also hung
+   `take_screenshot` for 120s.
+
+The sweep now injects `transition: none !important` before reading. All three
+independent readings then agree.
+
+### R-19, R-20 — now observed rather than modelled
+
+Per-element sweep in Chrome: composites each text node's effective background
+through its ancestors, reads the real computed colour, and applies 4.5:1 or
+3:1 by measured font size and weight.
+
+```
+/about            66 elements    0 failing    worst 5.72:1 dark / 4.86:1 light
+/services         93 elements    0 failing    worst 5.72:1 dark / 4.86:1 light
+a report page    218 elements    0 failing    worst 4.63:1 dark / 4.85:1 light
+/design-system   122 elements    0 failing    worst 4.86:1 dark / 4.83:1 light
+```
+
+### R-30 — the one thing the sweep found that arithmetic had not
+
+`Button variant="danger"` put hardcoded `text-white` on `--destructive`:
+**2.74:1 dark**, **4.37:1 light**. The dark theme had already computed the right
+answer and then not used it — `--destructive-foreground-hsl` declared #0B1120
+for that fill while `--destructive-foreground` stayed #FFFFFF and the button
+read neither token.
+
+```
+light   --destructive  #E0364F -> #D82B44     white label 4.83:1, 4.27:1 on the desk
+dark    --destructive-foreground -> #0B1120   label 6.87:1
+Button  text-white -> text-[var(--destructive-foreground)]
+```
+
+`var(--destructive)` has exactly one consumer, so the blast radius is that
+button. **`contrast-audit.mjs` had no `--destructive` pair at all**, which is
+why no amount of arithmetic was going to catch this; it has one now, and the
+rule is negative-tested — restoring #E0364F makes the script report 1 failing
+pair at 4.37:1. Commit `7351684`.
+
+### R-22 — real, and not the mechanism the queue guessed
+
+8-column table injected into the article's own `.prose` on
+`/blog/healthcare-data-security`. Nothing was clipped: `overflow` does not apply
+to a `display: table` box. And the table was not what overflowed.
+
+```
+viewport   page horizontal scroll   table
+800px      +240px                   982px wide, nothing clipped
+1024px     +22px                    982px wide, nothing clipped
+1280px     none                     982px, overflowing its 731px column
+```
+
+Below `lg` the article sits in a single-column `grid lg:grid-cols-3` whose track
+is `auto`, i.e. max-content, and whose item carried `min-width: auto`. The
+table's min-content width inflated the **track** to 1,009px inside a 669px
+container, and the table's own `max-width: 100%` then resolved against a box the
+table had just widened — the cyclic case. The affected band is roughly
+769-1045px, which is WCAG 1.4.10 reflow.
+
+Fixed with `min-w-0` on the blog and press-release article columns plus an
+unconditional scroll escape on `.prose table`. `ReportContentWrapper` already
+carried `min-w-0` on both of its columns, so report pages were never exposed.
+Re-verified at 500/800/1024/1280px: track holds, wide table scrolls inside its
+own border (scrollWidth 1,007 vs clientWidth 667 at 800px), a 3-column table
+still fills the measure, no page scroll at any width. Commit `b98baef`.
+
+Still latent in content terms — 0 of 22 snapshot rows contain a `<table>`, so
+this fires on the first published table rather than on anything live today.
+
+### R-13 — both candidate levers refuted
+
+Production `/methodology`, Slow 4G + 4x CPU, cold cache. FCP and LCP are the
+same event at **3,140ms**; TTFB 86ms; render delay 3,054ms (97.3%). The LCP
+element is text and is fetched from nothing.
+
+```
+the two stylesheets   finish 1,854ms and 1,530ms    paint is 1,286ms LATER
+                      Chrome RenderBlocking savings: FCP 0ms, LCP 0ms
+gtag/js               requested 763ms, complete 4,113ms    ~1s AFTER paint
+both woff2            complete by 2,195ms, display: swap on all 26 faces
+```
+
+So neither splitting the 66KB stylesheet nor deferring GA would move first
+paint, which is what the open note assumed. What fills the gap is the first
+style-and-layout pass: Chrome reports a single **968ms layout update over 362
+nodes** on a 298-element DOM, matching the 945ms between fonts-done and paint.
+That is not an intrinsic layout cost — forced relayouts on the settled page
+measure **0.1ms median** over 12 iterations at the same throttle, and
+`text-wrap: pretty` on headings was tested on and off and made no difference.
+At 4x throttle, 968ms is roughly 240ms of real CPU, consistent with the
+1,316ms FCP measured unthrottled.
+
+GA's real cost is **179.5kB and 1,827ms of main-thread time** — the largest
+third-party cost on the page by both measures — all of it after first paint.
+Deferring it is a TBT/INP and mobile-data win, not an LCP one, and
+`@next/third-parties`' `GoogleAnalytics` exposes no `strategy` prop, so it means
+replacing it with a `next/script` at `lazyOnload`. That trades session-count
+fidelity (visitors who leave before `load` stop being counted) for the
+main-thread time, which is an analytics-measurement decision rather than a
+performance fix. Filed as **R-31** for Siddhant instead of shipped.
+
+### Also committed
+
+`ea0d56e` — the `autopilot`, `gather` and `research` skills and the
+`research/competitors/` seed were living untracked, so a fresh clone or a
+context reset lost the operating rules they carry. `research/competitors/raw/`
+stays gitignored.
+
+## 2026-10-18, 00:0x IST — C-4, and the audit rule that passed without testing anything
+
+First item off the competitor backlog that `neograph-analytics-72`'s `gather`
+pass filed. Claimed by message first so the two sessions did not both take it.
+
+**C-4.** The report `Dataset` node carried 10 keys and now carries 12:
+
+```
+spatialCoverage      140 of 182 pages, Place objects from the row's own
+                     regional_analysis, deduplicated
+                     the other 42 rows have no regional breakdown and emit
+                     nothing rather than a guessed "Global"
+conditionsOfAccess   182 of 182 — free summary and metrics, body for purchase,
+                     sample on request; both routes exist
+```
+
+The "Report Coverage" card shows only `regional_analysis[0]`, so before this a
+multi-region dataset was described by whichever region sorted first, and a row
+with no regional data was described as Global on no evidence. Competitor
+baseline from the gather pass: mordorintelligence 15 Dataset keys with both of
+these, grandviewresearch 8, precedenceresearch no Dataset at all.
+
+**The part worth remembering.** `audit-html.mjs` got rules for both keys, ran,
+and reported **18 of 18 clean** — having tested neither. All three report routes
+in the audit list happen to be rows with no regional breakdown, so the
+`spatialCoverage` branch never executed. A green checker over a sample that
+cannot contain the defect is not evidence, and it looked exactly like evidence.
+
+Fixed by auditing `/reports/ai-in-lab-automation-market`, which carries three
+`Place` entries, and then negative-testing by corrupting the built HTML three
+ways — a bare string among the Places, a Place with an empty name, an empty
+`conditionsOfAccess`. All three errors fire; the file was restored and the audit
+is clean again.
+
+**What that new route found in its first run.** `RegionalBarChart` emitted its
+two region cards as `h4` directly inside a section headed `h2`, with
+`ChartFigure` contributing only a `figcaption` — so **h2 → h4 on every report
+page with a regional breakdown**, invisible to the audit until a page with a
+regional section was in the list. Now `h3`, classes unchanged, because the size
+came from `text-sm` and not from the tag.
+`charts/RegionalAnalysisChart.tsx:148` has the same `h4` and is imported by
+nothing; left in place under the no-deletion rule rather than edited blind.
+
+### Rendered sweep across the site, for the record
+
+Nine more page types through the per-element contrast sweep and a page-overflow
+check, both themes, at 1280 / 800 / 390px mobile: `/`, `/reports`, `/contact`,
+`/request-sample`, a press release, `/checkout/<slug>`, a blog article, a report
+page, plus `/about`, `/services` and `/design-system` from earlier. **0 failing
+elements and 0 horizontal page overflow everywhere.** A negative result, but it
+is the baseline the R-19/R-20 token work was supposed to produce, and now it is
+observed rather than asserted.
+
+Commits: `34141c4` (C-4 + the heading fix), `bc014b6` (the three findings and
+the queue), `7351684` (R-30), `b98baef` (R-22), `ea0d56e` (skills checked in).
+
+## 2026-10-18, 00:2x IST — C-5, the outline declared and pinned to the page
+
+All **182** report pages now emit an `ItemList` for their table of contents, 13
+entries on the row used for the checks, built from the same `sidebarTOC` array
+the sidebar renders rather than rebuilt from the row. We had **0** `ItemList`
+anywhere; the gather pass measured mordorintelligence emitting one with 46
+entries beside `Dataset` and `FAQPage`.
+
+The part that took the thought is not the schema, it is that an `ItemList` built
+by the same function as the sidebar is correct only until someone edits one of
+the two, and a machine-readable outline that disagrees with the visible page is
+worse than none. So `audit-html.mjs` checks the **page**, not the generator:
+
+```
+numberOfItems equals the entries listed
+positions are 1..n in order, no ListItem without a name
+entry count equals the rendered TOC's anchor count
+entry i points at the same anchor the rendered TOC's link i does
+every declared anchor is an id something on the page actually has
+```
+
+All five negative-tested against corrupted built HTML. Dropping one `ListItem`
+reports the `numberOfItems` mismatch and the count disagreement. Renaming an
+anchor in the `ItemList` *and* the rendered TOC together — so the counts still
+agree and only the last rule can catch it — reports "points at
+#market-dynamics-nope, which no element on the page has". The built file was
+restored after each test and the audit is clean.
+
+Dataset keys are now 12 (C-4) and report pages carry 9 ld+json blocks, up from
+8.

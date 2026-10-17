@@ -163,7 +163,11 @@
   --popover-foreground: #0A1633;
   --muted: #F4F7FE;
   --muted-foreground: #4F5B76;
-  --destructive: #E0364F;
+  /* --destructive was #E0364F, which is 4.37:1 under the white text the only
+     consumer (Button variant="danger") puts on it -- 0.13 short of 4.5:1 at
+     15px/600. #D82B44 is the same hue at 4.83:1, and stays 4.27:1 against the
+     page desk so the button's own shape is still perceivable. */
+  --destructive: #D82B44;
   --destructive-foreground: #FFFFFF;
 
   /* ── Geometry ──────────────────────────────────────────────── */
@@ -834,13 +838,33 @@
   }
   .prose pre code { background: transparent; color: inherit; padding: 0; }
 
+  /* The scroll escape used to live only inside @media (max-width: 768px), so
+     `width: 100%` was the whole story above 769px -- and a table's min-content
+     width beats `width: 100%`. Measured in a browser on /blog at 8 columns:
+     the table rendered 982px wide and pushed the *page* into horizontal scroll
+     by 240px at a 800px viewport and 22px at 1024px, the band being roughly
+     769-1045px. `overflow: hidden` clipped nothing, because overflow does not
+     apply to a `display: table` box, so no data was lost -- the page just
+     scrolled sideways, which is WCAG 1.4.10 reflow.
+
+     `display: block` + `overflow-x: auto` is the same escape the 768px block
+     already used, now unconditional, so a wide table scrolls inside its own
+     border instead of widening the article. `width: fit-content` with
+     `max-width: 100%` keeps the border drawn around the table rather than
+     around the column, and `min-width: 100%` keeps a narrow table filling the
+     measure as `width: 100%` used to. The 768px block below is left in place
+     and is now redundant rather than load-bearing. */
   .prose table {
-    width: 100%;
+    display: block;
+    width: fit-content;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-spacing: 0;
     border-collapse: separate;
     border: 1px solid var(--cmi-line);
     border-radius: var(--radius-tile);
-    overflow: hidden;
     background: var(--card);
     margin: 1.25rem 0;
   }
@@ -1157,7 +1181,12 @@
   --cmi-on-blue-dim: #B4C8FF;
 
   /* ── Semantic ── */
+  /* The dark fill stayed #FF6B80 while --destructive-foreground kept the light
+     theme's #FFFFFF, so the danger button read 2.74:1. --destructive-foreground-hsl
+     below already declared #0B1120 for this fill; this names the same value in
+     the token the components actually read. #0B1120 on #FF6B80 is 6.87:1. */
   --destructive: #FF6B80;
+  --destructive-foreground: #0B1120;
   --content-success-bg: #10291E;
   --content-success-border: #1F5B3F;
   --content-success-text: #6EE7A8;

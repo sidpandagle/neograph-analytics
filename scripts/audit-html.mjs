@@ -29,6 +29,12 @@ const ONLY = onlyArg > -1 ? process.argv[onlyArg + 1].split(',') : null;
 const ROUTES = [
   ['/', 'index.html'],
   ['/reports', 'reports.html'],
+  /* Added 2026-10-17 for C-4. The three report routes already audited all
+     happen to be rows with no regional breakdown, so they emit no
+     spatialCoverage and the Dataset rules below never ran on them -- the
+     audit passed without exercising the thing it had just been taught to
+     check. This row carries three Place entries. */
+  ['/reports/ai-in-lab-automation-market', 'reports/ai-in-lab-automation-market.html'],
   ['/reports/glp-1-receptor-agonists-market', 'reports/glp-1-receptor-agonists-market.html'],
   ['/reports/oncology-information-systems-market', 'reports/oncology-information-systems-market.html'],
   ['/reports/phage-therapy-market', 'reports/phage-therapy-market.html'],
@@ -178,6 +184,87 @@ function auditDocument(route, html) {
       } else {
         /* auditDocument is synchronous; defer the network check to the run loop. */
         licenceRoutes.add(route);
+      }
+    }
+
+    /* spatialCoverage and conditionsOfAccess (C-4). The point of asserting
+       them is that both are easy to emit as something a validator silently
+       drops: spatialCoverage wants Place objects with a name, not a bare
+       string, and an empty array is worse than an absent field because it
+       claims coverage of nowhere. conditionsOfAccess is Text, and a Dataset
+       without one reads as openly available, so a report body behind a
+       purchase has to say so. Absence is allowed -- 42 of 182 rows carry no
+       regional breakdown and correctly omit spatialCoverage -- but a present
+       field has to be well formed. */
+    if (parsed['@type'] === 'Dataset') {
+      const sc = parsed.spatialCoverage;
+      if (sc !== undefined) {
+        const list = Array.isArray(sc) ? sc : [sc];
+        if (list.length === 0) {
+          errors.push(`${label}.spatialCoverage is an empty array - omit the field instead`);
+        }
+        for (const place of list) {
+          if (typeof place !== 'object' || place === null) {
+            errors.push(`${label}.spatialCoverage holds a bare ${typeof place}; schema.org wants a Place`);
+          } else if (place['@type'] !== 'Place') {
+            errors.push(`${label}.spatialCoverage entry is @type "${place['@type']}", not Place`);
+          } else if (!String(place.name ?? '').trim()) {
+            errors.push(`${label}.spatialCoverage holds a Place with no name`);
+          }
+        }
+      }
+      const coa = parsed.conditionsOfAccess;
+      if (coa !== undefined && !String(coa).trim()) {
+        errors.push(`${label}.conditionsOfAccess is present but empty`);
+      }
+    }
+
+    /* C-5: the declared outline has to be the rendered one. The TOC an
+       ItemList describes is built from buildReportTOC and so is the sidebar, but
+       nothing stops a later edit from rendering one and declaring the other, and
+       a machine-readable outline that disagrees with the page is worse than
+       none. So this compares the ItemList against the anchors actually present
+       in nav[aria-label="Report details"], not against the generator. */
+    if (parsed['@type'] === 'ItemList') {
+      const entries = Array.isArray(parsed.itemListElement) ? parsed.itemListElement : [];
+      if (entries.length === 0) {
+        errors.push(`${label} has no itemListElement`);
+      }
+      if (parsed.numberOfItems !== undefined && Number(parsed.numberOfItems) !== entries.length) {
+        errors.push(`${label}.numberOfItems is ${parsed.numberOfItems} but it lists ${entries.length}`);
+      }
+      const positions = entries.map((e) => Number(e?.position));
+      const expected = entries.map((_, i) => i + 1);
+      if (positions.join(',') !== expected.join(',')) {
+        errors.push(`${label} positions are ${positions.join(',')} - expected 1..${entries.length} in order`);
+      }
+      for (const e of entries) {
+        if (!String(e?.name ?? '').trim()) errors.push(`${label} holds a ListItem with no name`);
+      }
+
+      const nav = html.match(/<nav[^>]+aria-label="Report details"[\s\S]*?<\/nav>/i);
+      if (nav) {
+        const rendered = [...nav[0].matchAll(/href="#([a-z0-9-]+)"/gi)].map((m) => m[1]);
+        if (rendered.length !== entries.length) {
+          errors.push(
+            `${label} declares ${entries.length} sections but the rendered TOC links ${rendered.length}`
+          );
+        } else {
+          const declared = entries.map((e) => String(e?.url ?? '').split('#')[1] ?? '');
+          const mismatch = declared.findIndex((id, i) => id !== rendered[i]);
+          if (mismatch !== -1) {
+            errors.push(
+              `${label} entry ${mismatch + 1} points at #${declared[mismatch]} but the rendered TOC links #${rendered[mismatch]}`
+            );
+          }
+          /* Every declared anchor must be a heading id that exists on the page,
+             or the outline sends a crawler to a fragment that goes nowhere. */
+          for (const id of declared) {
+            if (id && !new RegExp(`id="${id}"`).test(html)) {
+              errors.push(`${label} points at #${id}, which no element on the page has`);
+            }
+          }
+        }
       }
     }
 
