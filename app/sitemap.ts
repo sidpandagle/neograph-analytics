@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { getReportSitemapEntries } from '@/lib/api/reports';
 import { getBlogs } from '@/lib/api/blogs';
 import { getPressReleases } from '@/lib/api/press-releases';
+import { getAllConsultingServices } from '@/lib/api/consulting';
+import { supabase } from '@/lib/supabase/client';
 
 
 // Content is served from Supabase and must not be cached forever. Without this,
@@ -67,5 +69,63 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }))
       : [];
 
-  return [...pageEntries, ...reportEntries, ...blogEntries, ...pressReleaseEntries];
+  /* Three page families were indexable, rendered by the build, and in no
+     sitemap that robots.ts advertises: 4 legal pages, 10 consulting services
+     and 3 author profiles — 17 URLs. The consulting ones did have a sitemap
+     of their own, `/sitemap-consulting.xml`, which `robots.ts` never names,
+     so no crawler was told it exists. With Search Console reporting 7 pages
+     indexed of 158, a sitemap that omits real pages is not a small gap.
+     `/sitemap-pages.xml` and `/sitemap-consulting.xml` still serve their own
+     subsets; this route is the complete one, and the one robots points at. */
+
+  // Legal pages. A lean select: the table's `content` is a large column and
+  // this route revalidates hourly, so `getLegalPages` (which selects *) would
+  // pull every policy's full text to print four URLs.
+  const { data: legalRows } = await supabase
+    .from('neograph_legal_pages')
+    .select('slug,last_updated')
+    .order('id');
+  const legalEntries: MetadataRoute.Sitemap = (legalRows ?? []).map(
+    (row: { slug: string; last_updated?: string | null }) => ({
+      url: `${BASE_URL}/legal/${row.slug}`,
+      lastModified: row.last_updated ? new Date(row.last_updated) : now,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    })
+  );
+
+  // Consulting service pages from /consulting/[slug].
+  const consultingServices = await getAllConsultingServices();
+  const consultingEntries: MetadataRoute.Sitemap = consultingServices.map((service) => ({
+    url: `${BASE_URL}/consulting/${service.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  /* Author profiles. The route param is positional, not the team member's own
+     id — `/authors/1` is the first row of `neograph_team_members` ordered by
+     id, because the real ids are strings ("tm001") and cannot be the numeric
+     param. `lib/api/authors.ts` and `app/authors/[id]/generateStaticParams`
+     both build the range this same way; this is the third place that has to
+     agree, so it counts rows rather than reading ids. */
+  const { data: teamRows } = await supabase
+    .from('neograph_team_members')
+    .select('id');
+  const authorEntries: MetadataRoute.Sitemap = (teamRows ?? []).map((_, index) => ({
+    url: `${BASE_URL}/authors/${index + 1}`,
+    lastModified: now,
+    changeFrequency: 'yearly' as const,
+    priority: 0.4,
+  }));
+
+  return [
+    ...pageEntries,
+    ...reportEntries,
+    ...blogEntries,
+    ...pressReleaseEntries,
+    ...consultingEntries,
+    ...legalEntries,
+    ...authorEntries,
+  ];
 }

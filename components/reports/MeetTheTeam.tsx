@@ -19,7 +19,17 @@ interface MeetTheTeamProps {
   teamMembers: TeamMember[];
 }
 
-function TeamMemberCard({ member }: { member: TeamMember }) {
+/**
+ * `/authors/<n>` is **positional**: n is the 1-based rank of the team member in
+ * `neograph_team_members` ordered by id, not their own id. The real ids are
+ * strings ("tm001") and `app/authors/[id]/page.tsx` does `parseInt(id)`, so a
+ * link built from `member.id` resolves to `NaN` and the page 404s. The index
+ * this card is given is therefore the link, and `member.id` is only a key.
+ * `lib/api/authors.ts`, that route's `generateStaticParams` and `app/sitemap.ts`
+ * all build the same range the same way; this is the fourth place that has to
+ * agree with them.
+ */
+function TeamMemberCard({ member, position }: { member: TeamMember; position: number }) {
   // const [isExpanded, setIsExpanded] = useState(false);
 
   const getInitials = (name: string) => {
@@ -51,7 +61,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
           <div className="flex-1">
             <div className="flex items-center gap-2">
               <Link
-                href={`/authors/${member.id}`}
+                href={`/authors/${position}`}
                 className="hover:text-[var(--primary)] transition-colors"
               >
                 <CardTitle className="text-lg mb-1">{member.name}</CardTitle>
@@ -87,7 +97,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
         {/* View Profile Button */}
         <Link
-          href={`/authors/${member.id}`}
+          href={`/authors/${position}`}
           className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--primary-hover)] transition-colors pt-2"
         >
           View Author Profile
@@ -200,8 +210,8 @@ export default function MeetTheTeam({ teamMembers }: MeetTheTeamProps) {
       </p>
 
       <Grid cols={2} gap="lg">
-        {teamMembers.map((member) => (
-          <TeamMemberCard key={member.id} member={member} />
+        {teamMembers.map((member, index) => (
+          <TeamMemberCard key={member.id} member={member} position={index + 1} />
         ))}
       </Grid>
     </section>

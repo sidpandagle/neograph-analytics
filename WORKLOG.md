@@ -1808,3 +1808,81 @@ would have made one off-brand chip permanent.
 the 12 new pairs in place. The rendered confirmation — that these panels read
 as panels in a real dark-mode browser — still waits for the 21:00-09:00 window;
 every number above is computed from the token hexes.
+
+## 2026-10-17 — 17 pages nobody was told about
+
+### The sitemap robots points at was missing three whole families (R-24)
+`robots.ts` advertises exactly one sitemap, `/sitemap.xml`. That route listed
+8 static pages, 182 reports, 8 articles and 6 press releases — and none of the
+4 legal pages, none of the 10 consulting services, and none of the 3 author
+profiles, all of which the build renders. The consulting pages did have a
+sitemap of their own, `/sitemap-consulting.xml`, but `robots.ts` never names
+it, so no crawler was ever told it exists. With Search Console reporting
+**7 pages indexed of 158**, a sitemap that omits 17 real pages is not a
+rounding error.
+
+`/sitemap.xml` now emits all three families. The legal query is a deliberate
+lean `select('slug,last_updated')` rather than the existing `getLegalPages()`,
+which selects `*`: that would pull four policies' full text out of a metered
+database every hour to print four URLs. `/sitemap-pages.xml` and
+`/sitemap-consulting.xml` keep serving their own subsets unchanged — this route
+is simply the complete one, and the one robots points at.
+
+### A component that links to 404s, rendered by nothing (R-25)
+`/authors/<n>` is positional: n is the 1-based rank of the row in
+`neograph_team_members` ordered by id, because the real ids are strings
+(`tm001`, `tm002`, `tm003`) and `app/authors/[id]/page.tsx` does
+`parseInt(id)`. `MeetTheTeam` built its two profile links from `member.id`, so
+a caller handing it the real rows would have produced `/authors/tm001` →
+`parseInt` → `NaN` → `notFound()`. It has never fired, because grep finds
+**0 imports** of `MeetTheTeam` outside its own file — which is the other half
+of the finding: every build generates 3 author pages and **0 pages link to
+them**.
+
+Both hrefs now take the 1-based array index, which is what the route means, and
+the positional contract is written down in all four places that have to agree:
+`lib/api/authors.ts`, the route's `generateStaticParams`, `app/sitemap.ts` and
+the card itself. Three places silently encoding the same off-by-one convention
+is how this kind of thing survives.
+
+### Filed for the owner, not guessed (R-26)
+No published figure on the site carries a named analyst. `neograph_reports` has
+no author column — 32 columns, checked against the live table — and
+`lib/jsonReports.ts:170` hardcodes `authors: []`, so the report page's JSON-LD
+falls back to `author: {Organization, NeoGraph Analytics}` on all 182 pages.
+That is normal for market research and the schema is not wrong. But three
+analyst profiles with bios are sitting unlinked, and on a publication whose
+differentiator is checkable figures, a named analyst is worth more than a logo.
+Who wrote which report is not mine to assign.
+
+### Checker
+`scripts/audit-html.mjs` gains a sitemap rule, `--prod` only because
+`/sitemap.xml` is a route handler with no artefact under `.next/server/app`
+to read locally. It asserts that each of the six published page families is
+represented, and that nothing advertised 404s — a sitemap full of dead URLs
+is worse than a short one. The 182 report URLs are sampled rather than all
+fetched, since the per-route pass already covers report pages.
+
+Negative-tested against production before the merge, which is still serving
+the old sitemap:
+
+```
+sitemap.xml  HTTP 200
+  204 urls
+  ok 182 x /reports/
+  ok   8 x /blog/
+  ok   6 x /press-releases/
+  x no /consulting/ urls - a published page family is absent from the sitemap
+  x no /legal/ urls - a published page family is absent from the sitemap
+  x no /authors/ urls - a published page family is absent from the sitemap
+  ok 27 of 204 urls fetched (every non-report url, plus a 5-report sample): 0 dead
+```
+
+### Verification
+`tsc --noEmit` clean. Build exit 0, 12 lint warnings — the same 12.
+`audit-html.mjs` locally: 17 of 17 routes error-free, 0 errors, 1 pre-existing
+warning. The served `/sitemap.xml` from this build carries **221 URLs**:
+8 static + 182 reports + 8 articles + 6 press releases + 10 consulting +
+4 legal + 3 authors, and all **17** newly advertised URLs were fetched
+individually and returned **200**. `contrast-audit.mjs`: 0 failing pairs.
+`seo-unit.mjs`: 16 of 16.
