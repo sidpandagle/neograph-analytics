@@ -240,6 +240,32 @@ grep -c "<cagr>" research/<slug>-notes.md              # pairing. zero means uns
 
 ## Round 5 content is written, verified, and still unpublished
 
+> **STOP — do not run the publish sequence below. It is ready but
+> deploy-blocked, as of 20:25 IST on the 18th.**
+>
+> The deploy *is* the blocked merge. `DEPLOY-RUNBOOK.md:3` states "each merge
+> is a deploy" and its section 4 implements the deploy as `gh pr create` +
+> `gh pr merge --squash`; there is no other deploy path in the runbook. That
+> command is refused by the permission classifier in every session that has
+> tried it, so nothing can follow a publish tonight.
+>
+> Consequences of publishing anyway, verified rather than assumed:
+> `app/reports/[slug]/page.tsx:34` sets `dynamicParams = false` and `:33`
+> `revalidate = 3600`; `app/reports/page.tsx:7` is hourly ISR too. None of the
+> five slugs is live (`report-db.mjs slugs` greps 0 of 5). So publishing puts
+> five cards on `/reports` within the hour, each linking to a **hard 404**,
+> plus the article linking to five of them. The runbook's own line 79 says a
+> post-deploy 404 is fixed by redeploying — which is the one thing we cannot
+> do, so it is not walk-backable.
+>
+> Holding costs nothing: the drafts sit on the branch and stay reviewable.
+> **Publish only once the merge is possible**, and in the runbook's order,
+> reports before the article.
+>
+> This does not apply to edits to rows that are already built. Those reach
+> production through ISR with no build and no window — that is why the
+> veterinary headline fix shipped tonight and left the corpus at 182.
+
 **This section was dropped from STATUS.md by the 00:15 rewrite and is restored
 here.** It was written at 18:12 on the 17th (commit `080bc38`) so the 21:00
 window would be execution rather than reconstruction; the rewrite replaced the
