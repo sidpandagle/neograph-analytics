@@ -628,3 +628,71 @@ Supabase types (needs a CLI install this session will not make), and
 
 **Unchanged:** PR #20 needs one click; the round 5 publish sequence is the
 21:00 IST job; `C-2`'s drafting half belongs to the content session.
+
+
+---
+
+## MERGED — PR #20 is in production as of ~03:00 IST on the 18th
+
+Session `f3ea25fa`, on Siddhant's explicit instruction. **This was an
+owner-requested extra merge, not the 21:00 slot — the 21:00 IST slot on the
+18th is still open and still carries the round 5 publish sequence.**
+
+**Merge commit `02fa7b1`, 100 commits.** The "needs one click" block earlier
+in this file is now closed; `gh pr merge` was not refused in this session.
+
+**The PR did not carry tonight's work until it was pushed.** It stood at 75
+commits against a branch that was **26 commits ahead of its own remote** —
+everything from tonight was missing from it. The branch was pushed first
+(`666c878..eaba86a`), the PR went to 100 commits, then it was merged. Anyone
+merging #20 as it stood would have shipped the branch as it was 9 hours
+earlier.
+
+**Verified at the merged HEAD before pushing:** build exit 0, `tsc` clean,
+lint 0 errors, `audit-html.mjs` 18 of 18, contrast 0 failing pairs in both
+themes, source-hygiene 234 files / 0 findings, `seo-unit` and `api-unit` both
+fully passing. The PR sat at `MERGEABLE / UNSTABLE` only because the Vercel
+preview was still deploying; it was waited out, both checks passed, and the
+production deployment for `02fa7b1` reports success.
+
+**No Supabase row was published** — code-only merge, so the
+`dynamicParams = false` hazard does not apply. Round 5 is still unpublished on
+the branch.
+
+**Verified in production in a browser at 02:57 IST** (inside the window), on
+`/reports/ai-in-lab-automation-market`: 1 share-segment table (3 rows) beside
+**1** donut not 2, 1 regional table (3 rows), 1 forecast table (10 rows), all
+three `role="img"` wrappers present, and the series reading
+`2023 Base year $0.60B` → `2032 $5.60B` against a tile that says
+"Base Year (2023) → $0.6B". The chart's "Base" marker renders; before this
+deploy it drew nothing on 141 of 182 report pages. Site-wide `/sitemap.xml`
+**221 URLs** (182 reports), `/llms.txt` 182 report URLs.
+`audit-html.mjs --prod`: **18 of 18 pages error-free, 0 errors**, 44 of 221
+URLs fetched, 0 dead.
+
+### Warning for the next session: curl cannot check production from here
+
+The first production check reported the new markup missing on 25 consecutive
+polls. **It was a false negative.** `curl` gets **HTTP 403** with
+`x-vercel-mitigated: challenge`, and the 34KB challenge page contains none of
+the markers. A browser user-agent does not help — the challenge needs JS.
+
+This matters because **step 5 of `DEPLOY-RUNBOOK.md` recommends three bare
+`curl` checks**, and all three now return the challenge page: a new-slug 404
+check would report every new report as broken, and the corpus-count check
+returns nothing. Use `node scripts/audit-html.mjs --prod`, which does get
+through, or a browser inside the 21:00-09:00 window. The runbook was not
+edited — it is a shared file and that is the owner's call — but do not trust
+a bare `curl` result against production.
+
+### Still needs Siddhant
+
+- **Resubmit the sitemap in Search Console.** The sitemap itself changed,
+  204 URLs → 221. Then watch the 30 newer URLs.
+- Everything in the "Needs Siddhant" list earlier in this file still stands:
+  R-31 (GA deferral), contracting entity and governing law, the one live send
+  through `/api/purchase-inquiry`, R-26 (analyst attribution), R-21 (the
+  `/about` dividers).
+- From tonight's lib/api sweep: the hardcoded `$2,995` Product/Offer, the
+  positional author URLs, the synthetic positional report `id`, generated
+  Supabase types, and `/reports` server-rendering 12 of 182 report links.

@@ -3254,3 +3254,101 @@ a CLI install, which this session may not do), and `/reports` server-rendering
 return Infinity/NaN on the zero and single-year cases but are imported by
 nothing; they stay in place per the no-deletion rule, and `CLAUDE.md` already
 warns about them.
+
+
+---
+
+## 2026-10-18, ~03:00 IST — PR #20 merged on request, and verified in production
+
+Session `f3ea25fa`. Merged on Siddhant's explicit instruction ("Merge"), which
+is an owner-requested extra merge, not the 21:00 slot. The 21:00 IST slot on
+the 18th is therefore still open and still carries the round 5 publish
+sequence.
+
+### What was merged
+
+`gh pr merge 20 --merge` → merge commit **`02fa7b1`**, 100 commits from
+`work/continuous-improvements` into `main`.
+
+The PR stood at 75 commits and had not been pushed since `666c878`, so the
+branch was **26 commits ahead of its own remote** — everything from tonight
+was absent from the PR. The branch was pushed first (`666c878..eaba86a`), the
+PR went to 100 commits, and only then was it merged. Merging it as it stood
+would have shipped the state of the branch 9 hours earlier.
+
+### Verified at the exact merged HEAD, before pushing
+
+```
+npm run build        exit 0
+tsc --noEmit         clean
+npm run lint         0 errors
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs   0 failing pairs, both themes
+source-hygiene.mjs   234 files, 0 findings
+seo-unit.mjs         all assertions passed
+api-unit.mjs         all assertions passed
+```
+
+Then the Vercel **preview** check was waited out rather than skipped — the PR
+sat at `MERGEABLE / UNSTABLE` only because that deployment was still running.
+Both checks passed before the merge, and the production deployment for
+`02fa7b1` reports `success`.
+
+**No Supabase row was published.** This was a code-only merge, so the
+`dynamicParams = false` hazard does not apply: the danger is a published row
+without a deploy, not a deploy without rows. Round 5's five reports and one
+article are still unpublished on the branch.
+
+### A false negative worth recording
+
+First production check reported the new markup absent on 25 consecutive
+polls. It was not absent. `curl` gets **HTTP 403** from
+`www.neographanalytics.com` with `x-vercel-mitigated: challenge` — Vercel's
+bot challenge — and the 34KB challenge page contains none of the markers, so
+the loop was faithfully reporting on a page that was not the site. A browser
+user-agent does not help; the challenge needs JavaScript. The loop also ran
+its 25 attempts in seconds, because nothing in it actually waited.
+
+Two things follow. `scripts/audit-html.mjs --prod` **does** get through and is
+the right tool — it fetched 44 of 221 URLs with 0 dead. And a bare `curl`
+against production is not a usable check from this machine, which matters
+because step 5 of `DEPLOY-RUNBOOK.md` currently recommends exactly that:
+
+```bash
+curl -sI https://www.neographanalytics.com/reports/<new-slug> | head -1
+curl -s https://www.neographanalytics.com/llms.txt | grep -c "^URL: ..."
+curl -s https://www.neographanalytics.com/reports | grep -o "[0-9]* research reports"
+```
+
+All three return the challenge page. A 404 check written that way would report
+every new report as broken, and a corpus-count check would report nothing at
+all. The runbook is not edited here because it is a shared file and the owner
+may have a reason for it; the measurement is recorded and flagged instead.
+
+### Measured in production, in a browser (02:57 IST, inside the window)
+
+`/reports/ai-in-lab-automation-market`, live DOM:
+
+```
+share-segment table      1   (3 rows)   — and 1 donut, not 2
+regional table           1   (3 rows)
+forecast series table    1  (10 rows)
+country table            1   (3 rows)   — pre-existing
+role="img" wrappers      1 donut + 1 bar + 1 area
+forecast series          2023 Base year = $0.60B, then 2024..2032 -> $5.60B
+base-year tile           "Base Year (2023) -> $0.6B"
+```
+
+The tile and the prepended base row agree exactly, which is the claim the fix
+rested on. The chart's `ReferenceLine` label "Base" now renders; before this
+deploy it drew nothing on the 141 of 182 rows whose base year sits outside
+the series.
+
+Site-wide: `/sitemap.xml` **221 URLs**, 182 of them reports; `/llms.txt` 182
+report URLs. Both match what the merge was expected to carry.
+
+### Next
+
+- **Resubmit the sitemap in Search Console** — it is the sitemap itself that
+  changed, 204 URLs to 221. Owner action.
+- The 21:00 IST slot on the 18th is unused and round 5 is still unpublished.
