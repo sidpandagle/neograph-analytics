@@ -2179,3 +2179,119 @@ them.
 Next: report 42, `contract-research-organization-market`, against
 ClinicalTrials.gov registered-study counts and IQVIA/ICON/Fortrea segment
 revenue.
+
+
+## 2026-10-17, ~18:40 IST — Round 5 complete: five reports pass `check`, and a cross-report finding the corpus could not have had before
+
+Five agents in parallel, one per topic. The cap was two; Siddhant raised it to
+five mid-run ("update the research skill to use at most five agents whenever
+required"), so `.claude/skills/research/SKILL.md` now allows five with the
+ownership rule that makes it safe: **one agent per independent topic, each owning
+exactly `research/<slug>-notes.md` and `content/reports/<slug>.json` and nothing
+else.** The autopilot skill keeps its cap of 2 for review and codebase work and
+defers to the research skill for research fan-out.
+
+**Cost of the fan-out: ~2 points of 7d budget** (23% -> 25%, headroom +28.8 ->
++27.1). Five full research passes for two points is the cheapest throughput this
+loop has measured; the 5h figure moved more (2% -> 21%), which is the real
+constraint on repeating it inside one window.
+
+### Verified, not taken on trust
+
+Every agent reported its own `check` as passing. That is a hypothesis, so all of
+it was re-derived here before any of it was recorded:
+
+- `check` re-run on all five by the session owner: **5 pass, 0 fail**, zero warnings.
+- Every CAGR recomputed from its own endpoints: **all five reconcile within
+  0.005 points**, against a 0.6-point tolerance. Each series is 7 points,
+  starting at base year 2026 with exactly `current_value` and ending within
+  0.05 of `forecast_value`.
+- Each report's **headline grounding division recomputed independently** — the
+  CRO eight-line disclosed floor, the dollars-per-DIRAC-unit figure and its
+  bottom-up cross-check, the revenue-per-certified-ASC pair, the
+  dollars-per-FAERS-report figure and its containment test. **Every one
+  reproduced to the digit**, bar a $2 rounding on the 2032 pharmacovigilance
+  density.
+- Structural audit: no `market_share` on any competitor entry, `regional_analysis`
+  and `country_analysis` empty on all five, `recent_developments` well-formed
+  objects throughout, 20-28 numbered sources per notes file, zero U+FFFD.
+
+### The finding that needs all five reports to exist
+
+Each report measured two spreads the same way on the same day: the size spread
+and the CAGR spread, both as multiples, both after normalising every estimate to
+a 2026 base at its own publisher's stated rate. Put side by side, **the ratio
+between them diagnoses what kind of disagreement a market's literature has** —
+and it is not the same kind in every market, which is the thing no single report
+could show:
+
+| Market | Size spread | CAGR spread | Ratio | What the literature is actually disagreeing about |
+|---|---|---|---|---|
+| dialysis | 6.65x | 1.80x | **3.7** | Definition. Four tiers quoted under one name: machines, equipment, services, services+drugs |
+| ambulatory surgery centres | 3.47x | 2.23x | 1.6 | Both, stacked — and two label failures (a "U.S. & Europe" figure exceeding four global ones; a US-only figure exceeding another publisher's global total) |
+| CRO | 2.06x | 1.38x | 1.5 | Mostly definition, mildly — they agree what a CRO is |
+| radiotherapy equipment | 1.39x | 1.50x | **0.9** | Growth. The fleet is a register and the suppliers are three; what is unknown is the replacement cycle |
+| pharmacovigilance | 1.50x | **2.92x** | **0.5** | Growth, and nothing else — the function is statutorily defined, so everyone counts the same work |
+
+A ratio above ~2 is a scope problem and the fix is to name the tier. A ratio
+below ~1 is a forecasting problem, and no amount of definitional care helps: the
+publishers agree what the market is and disagree about how fast regulatory
+intensity or capital replacement will move. **Pharmacovigilance at 0.5 is the
+inverse of dialysis at 3.7**, and the corpus has been treating every spread as
+the first kind.
+
+The pharmacovigilance report carries the sharpest version of it: holding FAERS
+volume constant — and intake is **16.5% below its 2021 peak**, with
+EudraVigilance 7.5% below 2023 — its own published forecast implies spend per
+adverse-event report rising from **$7,991 to $15,586**. Every published CAGR in
+that market is a forecast of regulatory intensity per case, and no publisher
+says so. The CRO report has the same shape from the other direction:
+industry-lead interventional trial starts fell at a **-1.99% CAGR** over 2021-25
+while the published forecast is 8.90%, so that rate is 2.8x the measured one on a
+flat volume base.
+
+### Judgement calls worth recording
+
+- **Two radiotherapy estimates were removed from the spread for failing their own
+  arithmetic**, not for being inconvenient: one states a 7.10% CAGR its own
+  endpoints put at 6.43%, with a cardiology/urology/gynaecology application list;
+  the other states two base years, two end years and a third CAGR in its own FAQ.
+  The raw spread is 3.38x and the honest one is 1.39x, and both are published.
+- **A stronger radiotherapy finding was deliberately killed.** An earlier pass
+  derived equipment flow at 96% of the Lancet's measured annual capital need, by
+  assuming every DIRAC machine earns Elekta-like service revenue — which that
+  report's own division 4 disproves (Elekta holds 44.1% of the fleet by count and
+  21.0% of revenue, a 2.10x gap, so scaling one vendor across the register is
+  invalid). The weaker 56-73% is what is published, and the killed version is on
+  the do-not-publish list by name.
+- **Two 2032 endpoints are one-year extensions of a publisher's own rate**, not
+  published figures: pharmacovigilance (Mordor stops at $18.26B in 2031) and ASC
+  (Coherent publishes 2033, discounted back one year). Both say so in
+  `forecast_analysis`. The ASC extension is corroborated by a second publisher
+  independently printing the same $141.19B for 2032 from a different base.
+- **Radiotherapy and the existing `proton-therapy-market` row are nested, not
+  adjacent.** 125 PTCOG particle centres against 8,700 DIRAC centres is 1.4% by
+  count; $1.82B against $8.14B is 22.4% by value — a 16x difference between the
+  two shares, and proton is *inside* the equipment headline. `market_context`, a
+  FAQ and a reader takeaway all say explicitly not to add the two headlines.
+
+### Not ours, left alone
+
+`git status` also shows `app/blog/[slug]/page.tsx`, `app/globals.css`,
+`app/press-releases/[slug]/page.tsx`, `components/ui/Button.tsx`,
+`scripts/contrast-audit.mjs`, `REVIEW-QUEUE.md` and `research/competitors/*`
+modified. **None of that is this session's work** — it is the concurrent UI/UX
+review and competitor-backlog loop. The commits here stage explicit research
+paths only, so that work stays in its own session's hands and is not swept into a
+research commit.
+
+### Held, not published
+
+All five sit on the branch. Round 5 is five reports from one `/research`
+invocation, which would take the corpus 182 -> 187 on publish. Publish in the
+run-up to the 21:00 IST merge, reports before anything that links to them, then
+the deploy per `DEPLOY-RUNBOOK.md`.
+
+Next: the cross-report article on the size-spread-to-CAGR-spread ratio. It cites
+all five, so `blog-db.mjs check --online` will fail until the reports are live —
+which is the ordering working. Draft now, check and publish after them.

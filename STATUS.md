@@ -1,11 +1,15 @@
 # STATUS
 
 **Updated:** 2026-10-17 18:05 IST
-**Budget:** 7d used 23% | ceiling (70% of pace) 51.8% | headroom +28.8 points
-**Current task:** `/research` round 5. Report 41
-`dialysis-and-renal-care-market` drafted and **passing `check` clean**; held on
-the branch for the 21:00 IST publish window. Next: report 42,
-`contract-research-organization-market`.
+**Budget:** 7d used 25% | ceiling (70% of pace) 52.1% | headroom +27.1 points
+(5h window 21% — the tighter of the two after a five-agent fan-out)
+**Current task:** `/research` round 5 **complete — five reports pass `check`,
+verified by re-derivation, held on the branch for the 21:00 IST window.**
+`dialysis-and-renal-care-market`, `contract-research-organization-market`,
+`pharmacovigilance-market`, `radiotherapy-equipment-market`,
+`ambulatory-surgery-centers-market`. Corpus 182 -> 187 on publish. Next: the
+cross-report article on the size-spread-to-CAGR-spread ratio, which cannot pass
+its own `--online` check until those five are live.
 **Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change), **#19 at
 17:40 on Siddhant's request** (`576143e`, live in ~2 min, production verified).
 Extra merges on request are uncapped; the 21:00 scheduled slot is now free for

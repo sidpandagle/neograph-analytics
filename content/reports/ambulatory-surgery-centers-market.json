@@ -1,0 +1,246 @@
+{
+  "report_id": "ambulatory-surgery-centers-market",
+  "slug": "ambulatory-surgery-centers-market",
+  "title": "Ambulatory Surgery Centers Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 109.04,
+    "forecast_value": 141.19,
+    "cagr": 4.4
+  },
+  "market_overview": {
+    "summary": "An ambulatory surgery centre is a licensed facility that performs same-day surgery on patients who do not stay overnight. It bills a facility fee; the surgeon bills separately under the physician fee schedule, and the equipment makers sell into the building. Those are three different revenue pools, and the published estimates for this market silently pick different ones. Advanced to a common 2026 base at each publisher's own stated growth rate, thirteen published readings run from $5.34B to $165.61B — a 31.0x spread — while the growth rates run from 4.4% to 9.80%, a 2.23x spread. That is unusual: in most markets the sizes disagree far more than the rates, which identifies a pure labelling problem. Here the two disagreements are of comparable width, so there are two questions to settle rather than one. We publish $109.04B for 2026 rising to $141.19B by 2032 at 4.40%, because dividing that reading's own published North American share into the CMS census of 6,436 Medicare-certified ASCs gives $7.40M of revenue per centre per year — within 2.3% of what a wholly independent US-only estimate implies, and a credible 59% of the per-facility revenue the largest listed chain actually discloses.",
+    "key_trends": [
+      "The number of Medicare-certified ASCs reached 6,436 in 2024, up 2.2% on the year and growing at 2.2% a year since 2019, with 248 opened and 108 closed or merged in 2024 alone (MedPAC, March 2026, from the CMS Provider of Services file).",
+      "Case mix, not volume, is what is actually growing: of the 13.2% rise in total Medicare fee-for-service ASC payments in 2024, MedPAC attributes 8.4 points to the rising average relative weight of procedures performed and only 0.8 points to volume per beneficiary.",
+      "CMS began phasing out the inpatient-only list in the CY2026 final rule, removing 285 codes from it and adding 271 of them to the ASC covered procedures list, alongside 276 further additions under revised criteria — 573 additions in total on the Ambulatory Surgery Center Association's count.",
+      "Total knee arthroplasty volume in ASCs rose 27.6% and total hip 28.7% in a single year to 2024, while cataract removal with intraocular lens insertion remained 18.0% of all fee-for-service ASC volume: the sector is adding high-acuity orthopaedics on top of an ophthalmology and endoscopy base, not replacing it.",
+      "ASCs file no Medicare cost reports, so no sector margin exists. The only published figure is Pennsylvania's state collection — a 29.5% operating margin for Pennsylvania ASCs in 2024 against a 22.3-25.6% historical range — and MedPAC has recommended every year from 2010 to 2022, and again in 2024 and 2025, that Congress require ASC cost data.",
+      "Fee-for-service Medicare is about a sixth of US ASC facility revenue (15.4-15.7% on two independent readings), and MedPAC excludes Medicare Advantage ASC volume from its chapter entirely for want of data, so the best-instrumented payer in the sector still measures a minority of it."
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Established in the United States and institutionalised in Medicare payment policy; uneven elsewhere"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Regulated expansion of what may be done in an ASC: CMS added 573 codes to the ASC covered procedures list for CY2026 on ASCA's count, including 271 removed from the inpatient-only list as that list begins to be phased out.",
+      "A durable payment differential that favours the setting: the CY2026 ASC conversion factor is $56.32 against an OPPS conversion factor of $90.97, so the same relative weight pays materially less in an ASC and both Medicare and the beneficiary pay less than in a hospital outpatient department.",
+      "Migration of high-acuity orthopaedics out of the hospital, visible in the register as 27.6% growth in ASC total knee arthroplasty volume and 28.7% in total hip in 2024, with total shoulder arthroplasty becoming payable in ASCs that year.",
+      "Physician economics: MedPAC notes ASCs let physicians perform more procedures in the same time than an HOPD, earning more in professional fees, and physician owners additionally receive distributions of facility profits.",
+      "Chain capital continuing to enter: Tenet's USPI segment grew ambulatory revenue 14.1% to $5,172M in FY2025 and guides to $5.5-5.7B for 2026, while Surgery Partners opened eight de novo facilities and deployed $182M on acquisitions in 2025."
+    ],
+    "restraints": [
+      "The unit price is set by regulation, not negotiation, for the Medicare book: the CY2026 update was 2.6%, being a 3.3% market basket inflation update less a 0.7-percentage-point productivity adjustment.",
+      "A shrinking fee-for-service denominator: FFS Part B beneficiaries fell from 33.1 million in 2019 to 27.9 million in 2024, a 3.6% annual decline, as enrolment moves to Medicare Advantage, where ASC volume is not publicly measured.",
+      "State licensure and certificate-of-need regimes produce order-of-magnitude differences in supply, from more than 36 ASCs per 100,000 Part B beneficiaries in Maryland to three or fewer in the District of Columbia, West Virginia and Vermont.",
+      "ASC coinsurance is not subject to the cap that applies to hospital outpatient services, so for a minority of codes the beneficiary's share can exceed what the same procedure would cost them in an HOPD.",
+      "Volume is fragile at the margin: HCA's outpatient surgical cases fell slightly to 1,022,812 in 2025 from 1,024,998 in 2024, and its own management described same-facility ASC cases as down about 1.5% in the fourth quarter."
+    ],
+    "opportunities": [
+      "The inpatient-only list phase-out is a multi-year pipeline rather than a single event, and MedPAC explicitly says it is not yet known to what extent more than 500 newly added procedures will convert into ASC volume.",
+      "Multi-specialty consolidation of a fragmented census: 68% of ASCs billing fee-for-service Medicare in 2024 were single-specialty, and the four largest operators together account for a low share of the 6,436-facility count.",
+      "Pain management and cardiology were the fastest-growing ASC specialties from 2023 to 2024, giving operators two expansion lines that do not depend on orthopaedic case migration.",
+      "The cost-data gap is itself an opportunity for operators with real cost accounting: if Congress ever acts on MedPAC's standing recommendation, facilities that can already evidence their costs are the ones positioned to argue for rate relief.",
+      "Reporting and analytics capability is becoming a payment variable rather than an overhead: performance in the ASC Quality Reporting Program carries a 2-percentage-point payment consequence and MedPAC is pressing CMS to add claims-based outcome measures."
+    ],
+    "challenges": [
+      "The published estimates cannot be used interchangeably. On a common 2026 base they span 31.0x, one publisher's United-States-only figure exceeds another's entire global market, and a third's 'U.S. and Europe' reading exceeds four separate global readings.",
+      "Scope conflation between the services a facility bills and the equipment sold into it: the lowest reading in this file, $4.76B globally for 2024, lists General Electric, Philips and Getinge among its key players, which is an equipment slice carrying a facility-market name.",
+      "No sector cost or margin data exists, because ASCs are the only major facility type CMS has never required to file cost reports, so payment rates are derived from hospital outpatient relative weights rather than from ASC costs.",
+      "Chain revenue cannot be compared with chain revenue: USPI consolidates 401 of the 533 ASCs it holds interests in, Surgery Partners' revenue includes 19 surgical hospitals, SCA Health discloses no segment revenue at all and HCA does not break out ASC revenue.",
+      "Concentration risk inside operators is material and disclosed: three consolidated surgical hospitals and four consolidated ASCs in Idaho produced about 28% of Surgery Partners' 2025 revenue."
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Single-specialty ambulatory surgery centres",
+      "Multi-specialty ambulatory surgery centres",
+      "Freestanding ambulatory surgery centres",
+      "Hospital-affiliated outpatient surgery centres",
+      "Licensed surgical hospitals operated alongside ASC portfolios"
+    ],
+    "by_application": [
+      "Ophthalmology, including cataract removal with intraocular lens insertion",
+      "Gastroenterology and endoscopy",
+      "Orthopaedics, including total knee, hip and shoulder arthroplasty",
+      "Pain management",
+      "Cardiology",
+      "Otolaryngology, urology, podiatry and plastic surgery"
+    ],
+    "by_end_user": [
+      "Physician-owned centres",
+      "Corporate chain-operated centres",
+      "Physician and health-system joint ventures",
+      "Hospital-owned outpatient surgery centres",
+      "Payer-owned centres operated within an integrated insurer"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 109.04 },
+    { "year": 2027, "value": 113.84 },
+    { "year": 2028, "value": 118.85 },
+    { "year": 2029, "value": 124.08 },
+    { "year": 2030, "value": 129.54 },
+    { "year": 2031, "value": 135.23 },
+    { "year": 2032, "value": 141.19 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Tenet Healthcare Corporation (USPI)",
+      "headquarters": "Dallas, United States",
+      "market_position": "Largest disclosed ambulatory surgery business by revenue among listed operators",
+      "description": "Tenet's Ambulatory Care segment, operated as United Surgical Partners International, reported FY2025 net operating revenues of $5,172M against $4,534M in 2024, a 14.1% increase, with fourth-quarter segment adjusted EBITDA of $580M. At 31 December 2025 it held interests in 533 ambulatory surgery centres, of which 401 are consolidated, plus 26 surgical hospitals of which eight are consolidated, across 37 states. Dividing the segment's revenue by its 409 consolidated facilities gives $12.65M per facility per year, which is the single most useful benchmark in this sector because both numerator and denominator come from the same filing. Guidance for 2026 is $5.5-5.7B. No revenue market share is publicly disclosed, and the 132 ASCs it holds interests in without consolidating contribute no revenue to that figure."
+    },
+    {
+      "company": "SCA Health (Optum, UnitedHealth Group)",
+      "headquarters": "Birmingham, Alabama, United States",
+      "market_position": "Largest operator by facility count; owned by a payer and not separately reported",
+      "description": "SCA Health operates more than 370 ambulatory surgery centres across 35 states, having entered 2025 with more than 320 and added 24 gastroenterology centres through its January 2025 acquisition of U.S. Digestive Health. It is the clearest case of a structural data gap in this market: SCA is consolidated inside Optum Health within UnitedHealth Group, which discloses no ASC segment revenue, so the largest operator by count has no published numerator at all. Any revenue share attributed to it anywhere is therefore an estimate of an undisclosed figure. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Surgery Partners, Inc.",
+      "headquarters": "Brentwood, Tennessee, United States",
+      "market_position": "Largest listed pure-play surgical facility operator in the United States",
+      "description": "Reported FY2025 total revenues of approximately $3.31B, up 6.2%, with adjusted EBITDA of $526.2M at a 15.9% margin and a net loss attributable to the company of $77.9M, improved from $168.1M in 2024. Its 10-K states that it owned or operated 176 surgical facilities at 31 December 2025, comprising 157 ASCs and 19 licensed surgical hospitals across more than 200 locations in 30 states, and that patient services in those facilities generated approximately $3.2B during 2025 — $18.18M per facility, the highest per-facility figure here precisely because 19 surgical hospitals sit inside the denominator. It discloses that three consolidated surgical hospitals and four consolidated ASCs in Idaho produced about 28% of 2025 revenue. In June 2025 its special committee concluded discussions with Bain Capital over a $25.75-per-share proposal. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "HCA Healthcare, Inc.",
+      "headquarters": "Nashville, United States",
+      "market_position": "Largest hospital operator, with a deliberately smaller and shrinking freestanding ASC footprint",
+      "description": "Reported total FY2025 revenue of $75.6B and operated 190 hospitals and approximately 2,500 ambulatory sites of care at 31 December 2025. Its freestanding outpatient surgery centre count fell to 121 from 124 at the end of both 2024 and 2023, excluding 31 freestanding endoscopy centres, and full-year outpatient surgical cases were 1,022,812 against 1,024,998 in 2024. It does not break out ASC revenue. HCA is the counterweight to a simple migration narrative: the largest provider of outpatient surgery in the United States is running a flat-to-shrinking freestanding centre count while the national census grows 2.2% a year. No revenue market share is publicly disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2025,
+      "event": "CMS released the CY2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems final rule on 21 November 2025, published in the Federal Register on 25 November. It set the ASC conversion factor at $56.322 against an HOPD factor of $91.415, an effective 2.6% update comprising a 3.3% market basket inflation update less a 0.7-percentage-point productivity adjustment. It also finalised the start of the phase-out of the inpatient-only list, removing 285 codes from that list and adding 271 of them to the ASC covered procedures list, plus 302 further procedures on ASCA's count — 573 additions in total."
+    },
+    {
+      "company": "Medicare Payment Advisory Commission",
+      "year": 2026,
+      "event": "MedPAC's March 2026 report, Chapter 11, counted 6,436 Medicare-certified ASCs in 2024, up 2.2% from 6,296, with 248 opened and 108 closed or merged. Fee-for-service Medicare payments and beneficiary cost sharing totalled $7.5B — $6B of programme spending and $1.5B of cost sharing — across 3.4 million beneficiaries and 6.4 million services. The Commission reiterated its recommendation, made every year from 2010 to 2022 and again in 2024 and 2025, that Congress require ASCs to submit cost data, noting that payment rates are derived from hospital outpatient relative weights rather than from ASC costs."
+    },
+    {
+      "company": "Tenet Healthcare Corporation",
+      "year": 2026,
+      "event": "Reported FY2025 results on 11 February 2026: USPI ambulatory net operating revenues of $5,172M against $4,534M in 2024, a 14.1% increase, with fourth-quarter revenue of $1,433M and segment adjusted EBITDA of $580M, up 9.4%. At year-end it held interests in 533 ASCs, 401 of them consolidated, and 26 surgical hospitals in 37 states. It guided FY2026 USPI revenue to $5.5-5.7B with adjusted EBITDA of $2.13-2.23B, implying continued double-digit ambulatory growth against a hospital segment growing 7.3% in the fourth quarter."
+    },
+    {
+      "company": "Surgery Partners, Inc.",
+      "year": 2025,
+      "event": "Bain Capital Private Equity submitted a non-binding proposal on 27 January 2025 to acquire the roughly 61% of Surgery Partners it did not already own, at $25.75 per share in cash. On 17 June 2025 the company announced that its special committee had concluded discussions, determining that its prospects as an independent public company exceeded the value of the proposal. The episode is the clearest public mark on the private value of a US surgical facility portfolio in the period, and it was declined."
+    },
+    {
+      "company": "SCA Health (Optum, UnitedHealth Group)",
+      "year": 2025,
+      "event": "Acquired U.S. Digestive Health in January 2025, adding 24 gastroenterology ambulatory surgery centres, having entered the year with more than 320 facilities. SCA Health's portfolio has since passed 370 ASCs across 35 states, making it the largest operator in the sector by facility count while remaining consolidated inside Optum Health with no separately disclosed segment revenue."
+    }
+  ],
+  "regulatory_landscape": [
+    "The Medicare ASC payment system (42 CFR Part 416, Subpart F), under which a facility's payment is an OPPS-derived relative weight multiplied by a single published conversion factor — $56.32 for CY2026 against an OPPS factor of $90.97 — so the unit price of the core service is set by rule rather than negotiated for the Medicare book",
+    "The ASC Covered Procedures List, which determines what may be paid in the setting at all: more than 3,700 procedures are covered, and CMS added 573 codes for CY2026 on the Ambulatory Surgery Center Association's count",
+    "The phase-out of the inpatient-only list, finalised in the CY2026 OPPS/ASC final rule, under which 285 codes were removed from that list for 2026 and 271 added to the ASC covered procedures list — a multi-year regulatory transfer of surgical volume whose eventual size MedPAC says is not yet known",
+    "The Conditions for Coverage for Ambulatory Surgical Centers (42 CFR Part 416, Subparts B and C), which set the governance, staffing, infection control, emergency preparedness and patient assessment requirements a certified ASC must meet",
+    "The ASC Quality Reporting Program, which reduces a facility's annual payment update by 2 percentage points for failure to meet reporting requirements, and which MedPAC is pressing CMS to expand with claims-based outcome measures aligned to the Hospital Outpatient Quality Reporting Program",
+    "The absence of any ASC Medicare cost-reporting requirement, unlike every other major facility type — the reason payment rates rest on hospital outpatient charge data and the reason no sector margin exists outside Pennsylvania's state collection",
+    "The Anti-Kickback Statute safe harbour for investments in ambulatory surgical centres (42 CFR 1001.952(r)), which is the legal basis on which physician ownership — the dominant ownership model in the sector — is structured",
+    "Non-application of the Emergency Medical Treatment and Labor Act to ASCs, unlike most hospital outpatient departments, which is one reason the two settings' patient mixes differ and why ASCs treat proportionally fewer disabled, Medicaid-covered and over-85 beneficiaries",
+    "State licensure and certificate-of-need regimes, whose effect is visible as an order-of-magnitude difference in supply: more than 36 ASCs per 100,000 Part B beneficiaries in Maryland, which MedPAC attributes in part to hospitals operating under the Total Cost of Care global-budget waiver, against three or fewer in the District of Columbia, West Virginia and Vermont"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Line-item extraction from operator filings: Tenet Healthcare's 8-K Exhibit 99.1 for FY2025 segment revenue and facility counts, Surgery Partners' FY2025 Form 10-K and Q4 results release, and HCA Healthcare's FY2025 Form 10-K outpatient facility and case tables",
+      "Full-text extraction of MedPAC's March 2026 Chapter 11 tables (11-1, 11-4, 11-5 and 11-8) so that the facility count, the spending, the volume and the per-beneficiary figures are read from the source rather than from secondary summaries of it",
+      "Reconciliation of each operator's disclosed revenue against its own disclosed facility count, consolidated and unconsolidated separately, so every per-facility figure has numerator and denominator from the same filing",
+      "Normalisation of every third-party estimate to a common 2026 base year at that publisher's own stated CAGR before any comparison, and recomputation of each publisher's implied CAGR from its own published endpoints"
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 11, Ambulatory surgical center services: Status report (6,436 Medicare-certified ASCs in 2024; $7.5B of FFS payments and cost sharing; 3.4 million beneficiaries; 6.4 million services; ASC conversion factor $56.32 in 2026)",
+      "CMS, CY2026 Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems final rule, Federal Register document 2025-20907, 25 November 2025, and the Ambulatory Surgery Center Association's 21 November 2025 analysis of it ($56.322 conversion factor; 2.6% effective update; 573 ASC-CPL additions)",
+      "CMS Provider of Services file, as analysed by MedPAC for the 2019-2024 ASC facility counts, cross-checked against the Ambulatory Surgery Center Association's September 2024 count of 6,394 Medicare-certified ASCs",
+      "Tenet Healthcare Corporation, Form 8-K Exhibit 99.1, Q4 and FY2025 results, 11 February 2026; Surgery Partners, Inc., Form 10-K for the year ended 31 December 2025 and FY2025 results release; HCA Healthcare, Inc., Form 10-K for the year ended 31 December 2025",
+      "Published market estimates from Coherent Market Insights (2026), The Business Research Company via Research and Markets (2026), Research and Markets (2026), The Insight Partners (2026), Grand View Research (2025 and 2026), Persistence Market Research (2025), Precision Business Insights (2025), Fortune Business Insights (2025), Data Bridge Market Research (2025), Kings Research (2025), MarkWide Research (2026) and Technavio (2026)",
+      "Pennsylvania Health Care Cost Containment Council, 2025 release, for the only published ASC operating margin in existence (29.5% for Pennsylvania ASCs in 2024, against 22.3-25.6% for 2015-2023), as reported by MedPAC"
+    ],
+    "data_validation": "Four independent divisions against public registers were computed and cross-checked against each other. First, Medicare fee-for-service spending per certified facility: $7,500M over MedPAC's count of 6,436 Medicare-certified ASCs is $1.1653M per ASC per year, and against that floor the lowest published global reading of $5.34B on a 2026 basis fails outright, because Tenet's USPI segment at $5,172M plus Surgery Partners at $3,200M is $8,372M, or 1.57x that entire claimed global market, from two operators holding 8.7% of only the US facility count. Second, and centrally, revenue per certified ASC per year: the reading we publish, $109.04B for 2026, multiplied by that publisher's own published North American share of 43.70%, gives $47.65B over 6,436 centres, or $7.404M per ASC per year; an entirely separate publisher's United-States-only estimate of $46.83B for 2025 advanced one year at its own 4.1% gives $48.75B over the same census, or $7.575M — the two land 2.3% apart. Both sit at 59% of the $12.65M per consolidated facility that Tenet's USPI segment discloses and 42% of the $18.18M that Surgery Partners discloses, which is the right direction and the right magnitude given that 68% of certified ASCs are single-specialty while the chain figures include 27 surgical hospitals between them. The same division rules out every reading above $138B, each of which implies $9.69M to $11.58M per certified centre, or 77-92% of a large chain's per-facility revenue for a census two-thirds of which is single-specialty. Third, the payer share: $7.5B against both the derived North American and the independent United States figures is 15.7% and 15.4% respectively, so fee-for-service Medicare is about a sixth of US ASC facility revenue; and the average facility payment per service, $7,500M over 6.4 million services, is $1,172, against $1,176 derived from MedPAC's separate per-user figures of $2,211 and 1.88 services per user — 0.3% apart from two different tables. Fourth, the growth decomposition: MedPAC's own 2024 components of 3.2% conversion factor, 0.8% per-capita volume, 8.4% average relative weight and 0.4% separately paid drugs multiply to 1.1321, reproducing the published 13.0% rise in total payments to within 0.2 points, and divided by the 2.5% decline in fee-for-service Part B beneficiaries give 16.1% against the published 15.9% rise per beneficiary. That composition is what rules out a 9.80% market CAGR: two-thirds of growth in the sector's fastest recorded year was case mix, a finite migration rather than a rate. None of this is a market estimate. Each division is a plausibility test on someone else's published figure, computed from a United States register against a global headline, and the derived North American and United States values stay in prose for that reason — regional_analysis and country_analysis are both empty, no vendor market share appears anywhere, and two of the four largest operators disclose no ASC revenue from which a share could be computed at all."
+  },
+  "faqs": [
+    {
+      "question": "How large is the ambulatory surgery centers market?",
+      "answer": "We publish $109.04B globally for 2026, rising to $141.19B by 2032 at a 4.40% CAGR, on a facility-services scope. That figure is one of thirteen published readings, which span $5.34B to $165.61B once each is advanced to a common 2026 base at its own stated growth rate — a 31.0x spread. We publish this one because it is the only reading whose own published North American share divides into the CMS census of 6,436 Medicare-certified ASCs at a revenue-per-centre figure that matches both an independent US-only estimate and what the listed chains actually disclose."
+    },
+    {
+      "question": "Why do published estimates of this market differ by 31 times?",
+      "answer": "Three separate reasons, and only one of them is about growth. First, scope: an ASC bills a facility fee, the surgeon bills separately under the physician fee schedule, and equipment makers sell into the building, so a 'services' reading and an equipment-adjacent reading are different markets. The lowest reading in our file, $4.76B globally for 2024, lists General Electric, Philips and Getinge among its key players, which is the tell. Second, geography labels: one publisher's United-States-only figure for 2026 exceeds another's entire global market, and a third's 'U.S. and Europe' reading exceeds four separate global readings. Third, genuine disagreement about the rate, which spans 4.4% to 9.80%."
+    },
+    {
+      "question": "How many ambulatory surgery centres are there, and how much does Medicare pay them?",
+      "answer": "MedPAC counted 6,436 Medicare-certified ASCs in 2024 from the CMS Provider of Services file, up 2.2% on the year, with 248 opened and 108 closed or merged. Fee-for-service Medicare payments and beneficiary cost sharing came to $7.5B — $6B of programme spending and $1.5B of cost sharing — across 3.4 million beneficiaries and 6.4 million services. That is $1.17M per certified ASC per year from fee-for-service Medicare alone, and $1,172 per service. The Ambulatory Surgery Center Association's independent count for 2024 was 6,394, 0.7% apart from MedPAC's."
+    },
+    {
+      "question": "What does an ambulatory surgery centre earn in a year?",
+      "answer": "Three figures, each with its numerator and denominator from the same source. Tenet's USPI segment reported $5,172M of FY2025 revenue across 409 consolidated facilities, or $12.65M each. Surgery Partners reported approximately $3.2B across 176 facilities, or $18.18M each — higher because 19 of those are licensed surgical hospitals. Dividing a published North American market figure by the full CMS census gives $7.40M per certified ASC, about 59% of USPI's figure. The census average must be lower, because 68% of certified ASCs are single-specialty, most commonly gastroenterology or ophthalmology, while the chains concentrate on multi-specialty and orthopaedic assets."
+    },
+    {
+      "question": "Is this market really growing at close to 10% a year?",
+      "answer": "No, and the register is explicit about why. MedPAC's own decomposition of the sector's fastest recorded year attributes 8.4 of the 13.2 percentage points of growth in total Medicare ASC spending in 2024 to rising case mix — the same centres doing more expensive operations as knees, hips and shoulders migrate out of the hospital — against 0.8 points from volume per beneficiary and 3.2 points from the conversion factor. Case migration is a finite, one-way transfer, not a compounding rate. Over the longer run the facility count grows 2.2% a year, volume per beneficiary 1.3%, and the CY2026 regulated price update was 2.6%. A 9.80% six-year CAGR is not supported by any component of that."
+    },
+    {
+      "question": "Why is there no regional or country breakdown in this report?",
+      "answer": "Because publishing one would misrepresent our own arithmetic as someone else's estimate. Every countable register for this market is United States only — CMS certification counts, MedPAC spending and volume, the ASC conversion factor, and three listed operators' filings. The $47.65B North American figure that our central check turns on is our own multiplication of one publisher's global total by that publisher's share, and the $48.75B US figure is another publisher's 2025 estimate advanced by us. Both appear in the prose, where the multiplication is visible and reversible, and neither appears in a regional or country table. Four publishers' North American shares span seven points on four different base years, which is a further reason not to table one."
+    },
+    {
+      "question": "Why does no one publish ASC profitability?",
+      "answer": "Because the data does not exist. ASCs are the only major facility type CMS has never required to file Medicare cost reports, which is why their payment rates are derived from hospital outpatient relative weights — based on hospital charges adjusted to cost — rather than from ASC costs at all. MedPAC has recommended every year from 2010 to 2022, and again in 2024 and 2025, that Congress close that gap. The single published margin figure in existence comes from the Pennsylvania Health Care Cost Containment Council: 29.5% for Pennsylvania ASCs in 2024, against a 22.3-25.6% range for 2015-2023. It covers one state and is not generalised here."
+    }
+  ],
+  "seo": {
+    "meta_title": "Ambulatory Surgery Centers Market Size & Forecast 2032",
+    "meta_description": "ASCs reach $109.04B in 2026 and $141.19B by 2032 at 4.40% CAGR. Published estimates span 31x; we show which survives the CMS count of 6,436 centres.",
+    "keywords": [
+      "ambulatory surgery centers market size",
+      "ambulatory surgical centers market forecast",
+      "ASC market",
+      "ASC payment system conversion factor",
+      "Medicare certified ASC count",
+      "outpatient surgery market",
+      "ambulatory surgery center services market"
+    ]
+  },
+  "executive_summary": "Thirteen publishers size the ambulatory surgery centre market. Advanced to a common 2026 base at each publisher's own stated growth rate, their figures run from $5.34B to $165.61B — a 31.0x spread — and their growth rates from 4.4% to 9.80%, a 2.23x spread. That pairing is itself the finding. In most markets the levels disagree far more than the rates, which identifies a single labelling problem; here the two disagreements are of comparable width, so there are two questions to answer. The first is scope. An ASC bills a facility fee, the surgeon bills separately, and equipment makers sell into the building; the lowest reading in this file names General Electric, Philips and Getinge among its key players, which is an equipment-adjacent slice wearing a facility-market name. The geography labels are no better: one publisher's United-States-only figure exceeds another's entire global market, and a third's 'U.S. and Europe' reading exceeds four separate global readings. The second question is the rate, and the register settles it. We publish $109.04B for 2026 rising to $141.19B by 2032 at 4.40%, because that reading's own published North American share of 43.70% divides into the CMS census of 6,436 Medicare-certified ASCs at $7.404M of revenue per centre per year — within 2.3% of the $7.575M an entirely independent United-States-only estimate implies, and a credible 59% of the $12.65M per consolidated facility that Tenet's USPI segment actually discloses. Every reading above $138B implies $9.69M to $11.58M per certified centre, which would require the average single-specialty endoscopy or cataract centre to book what a facility inside the largest multi-specialty chain books. It cannot, and that is what rules them out.",
+  "key_highlights": [
+    "Global ambulatory surgery centre facility services of $109.04B in 2026, reaching $141.19B by 2032 at a 4.40% CAGR — the rate the published endpoints imply to four decimal places, and the conservative end of the range the US register supports.",
+    "Published 2026 readings span $5.34B to $165.61B, a 31.0x spread; the CAGRs span 4.4% to 9.80%, a 2.23x spread. Unusually, the market disagrees about growth almost as widely as it disagrees about size.",
+    "6,436 Medicare-certified ASCs in 2024, growing 2.2% a year since 2019, treating 3.4 million fee-for-service beneficiaries across 6.4 million services (MedPAC, March 2026, from the CMS Provider of Services file).",
+    "$7.5B of fee-for-service Medicare payments and beneficiary cost sharing in 2024 — $1.17M per certified ASC per year, $1,172 per service, and about a sixth of US ASC facility revenue on two independent readings.",
+    "$7.40M of revenue per certified ASC per year on the reading we publish, against $7.58M from an independent US-only estimate, $12.65M per consolidated facility at Tenet's USPI and $18.18M at Surgery Partners.",
+    "Two US operators with 558 ASCs — 8.7% of the American count and nothing outside it — book 1.57x the entirety of the lowest published global market in this file.",
+    "Of the 13.2% rise in total Medicare ASC spending in 2024, MedPAC attributes 8.4 points to case mix and 0.8 points to volume per beneficiary: the growth is procedure migration, which has an endpoint, not a compounding rate."
+  ],
+  "market_context": "Ambulatory surgery sits at the junction of three payment systems and belongs to none of them. The facility is paid a bundle under the ASC payment system; the surgeon is paid separately under the physician fee schedule; and the same operation performed a mile away in a hospital outpatient department is paid under OPPS at a materially higher rate — the CY2026 conversion factors are $56.32 and $90.97 respectively. Everything that happens in this sector is a consequence of that gap. CMS controls which procedures may cross it through the ASC covered procedures list, and for CY2026 it added 573 codes on ASCA's count, including 271 removed from the inpatient-only list as that list begins to be phased out. The sector's economics also explain why it is so poorly measured. ASCs are the only major facility type CMS has never required to file cost reports, so their payment rates are derived from hospital outpatient charge data rather than from their own costs, and the single published margin figure in existence covers one state. Ownership compounds the opacity: the largest operator by facility count, SCA Health with more than 370 centres, is consolidated inside a health insurer and discloses no segment revenue, while HCA does not break out ASC revenue at all. That leaves CMS certification counts, MedPAC's annual chapter and two listed operators' filings as the whole audited basis for a market that publishers size anywhere between $5B and $166B.",
+  "forecast_analysis": "The 4.40% we publish is Coherent Market Insights' own stated rate, and it reconciles with its own endpoints: $109.04B for 2026 and $147.39B for 2033 imply 4.399%. Our 2032 value is that 2033 figure discounted one year at that same rate — $147.39B / 1.044 = $141.18B — and compounding the published base forward gives $109.04B x 1.044^6 = $141.19B, so the series closes from both directions. Two publishers in this file state a CAGR their own endpoints contradict. Persistence Market Research states 5.8% while its $88.40B for 2025 and $141.19B for 2032 imply 6.92%; Research and Markets states 9.67% while its $100.65B and $176.40B imply 9.80%. Where that happens we would publish the rate the endpoints imply and say so — here it is moot, because we publish neither series, though Persistence's 2032 figure of $141.19B independently corroborates ours to the cent from a different base year and a different stated rate. The real question is whether 4.40% is too low rather than too high. MedPAC's register shows fee-for-service Medicare ASC payments growing 5.6% a year from 2019 to 2023 and 13.0% in 2024, so 4.40% sits below the measured US trend and is the conservative end of the plausible range. We publish it anyway, for a reason the register itself supplies: MedPAC attributes 8.4 of 2024's 13.2 percentage points of growth to rising case mix as knees, hips and shoulders migrate out of hospitals, and a further 2.7 points of the headline per-beneficiary figure to the fee-for-service denominator shrinking as beneficiaries move to Medicare Advantage. Neither is a compounding growth rate. Underlying volume per beneficiary grew 1.3% a year to 2023, the facility count grows 2.2% a year, and the regulated CY2026 price update was 2.6%. A mid-single-digit forecast is what those components support; 9.80% is not, and the principal risk to 4.40% is that the inpatient-only list phase-out delivers more migration faster than the published series assumes.",
+  "reader_takeaways": [
+    "Check the scope before quoting any ASC market figure. The published readings span 31x on a common 2026 base, one of them lists equipment manufacturers as its key players, and two of them carry geography labels that contradict other publishers' global totals.",
+    "Divide by the census. There are 6,436 Medicare-certified ASCs in the United States and the count is published annually; any market estimate that implies more than about $8M of revenue per certified centre is describing something wider than facility services, whatever its title says.",
+    "Do not treat Medicare as a proxy for the sector. Fee-for-service Medicare is about a sixth of US ASC facility revenue, and MedPAC excludes Medicare Advantage ASC volume from its own analysis for want of data.",
+    "Separate the migration from the rate. Two-thirds of the growth in Medicare ASC spending in its fastest recorded year was case mix — procedures moving out of hospitals — which is a transfer with an endpoint, not a compounding growth rate.",
+    "Expect no share data and no margin data. Two of the four largest operators disclose no ASC revenue, and ASCs file no Medicare cost reports, so any vendor share or sector margin you are shown has been estimated rather than observed."
+  ]
+}

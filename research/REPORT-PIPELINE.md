@@ -112,7 +112,28 @@ topic with no register is dropped rather than drafted.
 | # | Slug | Industry | Round | Countable register | State |
 |---|---|---|---|---|---|
 | 41 | dialysis-and-renal-care-market | Medical Devices | 5A | ESRD Networks national census (7,556 centres / 516,837 dialysis patients, 31 Mar 2025); CMS CY2026 ESRD PPS base rate $281.71/treatment; MedPAC FFS dialysis spending; FMC / DaVita / Vantive disclosed revenue | check-passed (2026-10-17) |
-| 42 | contract-research-organization-market | Life Sciences | 5A | ClinicalTrials.gov registered-study counts; IQVIA R&DS, ICON, Fortrea segment revenue | queued |
-| 43 | pharmacovigilance-market | Healthcare IT | 5A | FDA FAERS quarterly received-report counts | queued |
-| 44 | radiotherapy-equipment-market | Medical Devices | 5A | IAEA DIRAC radiotherapy centre and teletherapy unit counts | queued |
-| 45 | ambulatory-surgery-centers-market | Healthcare IT | 5A | CMS Medicare-certified ASC counts and ASC payment-system data | queued |
+| 42 | contract-research-organization-market | Life Sciences | 5A | ClinicalTrials.gov API v2 industry-lead interventional starts and ongoing counts; eight disclosed FY2025 CRO revenue lines | check-passed (2026-10-17) |
+| 43 | pharmacovigilance-market | Healthcare IT | 5A | openFDA `drug/event` counts by receivedate; EudraVigilance ICSRs processed (EMA/371010/2025); FDA's own $37M/6M-reports disclosure | check-passed (2026-10-17) |
+| 44 | radiotherapy-equipment-market | Medical Devices | 5A | IAEA DIRAC centre and teletherapy-unit counts; Varian / Elekta / Accuray disclosed revenue; PTCOG particle-centre count | check-passed (2026-10-17) |
+| 45 | ambulatory-surgery-centers-market | Healthcare IT | 5A | MedPAC certified-ASC count and FFS ASC spending; CMS CY2026 ASC payment system; USPI / Surgery Partners facility counts | check-passed (2026-10-17) |
+
+### Round 5 — all five pass `check`, held for the publish window
+
+Five topics, five agents in parallel (the cap raised from two to five on
+Siddhant's instruction mid-run), one agent per topic, each owning only its own
+notes and report JSON. Every figure below was re-derived by the session owner
+rather than taken from the agent's report: `check` re-run on all five, every CAGR
+recomputed from its own endpoints, and each report's headline grounding division
+recomputed independently. All reproduced.
+
+| Slug | Base -> forecast | CAGR | Size spread | CAGR spread | Grounding |
+|---|---|---|---|---|---|
+| dialysis-and-renal-care-market | $83.97B -> $118.79B | 5.95% | **6.65x** | 1.80x | FMC $22.18B + DaVita $13.643B = $35.823B, **1.77x the whole published machines market**; $281.71 CMS bundle x 156 = $43,947/patient-yr against DaVita's realised $58,519; 516,837 patients x $58,519 = $30.245B US ceiling = $4.003M across 7,556 centres vs $4.416M at DaVita's own 2,657 |
+| contract-research-organization-market | $81.13B -> $135.33B | 8.90% | 2.06x | 1.38x | Eight disclosed FY2025 CRO lines = **$36.768B**, 49.3% of R&M's implied 2025 base; $81.13B / 16,499 ongoing trials = $4.917M/trial-yr, x3 yrs = 77.6% of the $19.0M median pivotal cost; industry-lead starts **-1.99% CAGR** 2021-25 against a published 8.90% |
+| pharmacovigilance-market | $10.45B -> $20.38B | 11.78% | 1.50x | **2.92x** | $10.45B / 1,307,769 FAERS reports = **$7,991 per report**, 13.3-40.0x the only published per-case rate card; FDA's own $37M / 6M reports = **$6.17**, a 1,295x ratio; containment at Mordor's 54.88% outsourced ratio = 64.5% of all IQVIA R&DS, against 84.6% for the $13.71B reading |
+| radiotherapy-equipment-market | $8.14B -> $12.70B | 7.69% | 1.39x (3.38x raw) | 1.50x | $8,140M / 17,000 DIRAC teletherapy units = **$478,824/unit/yr**, against $100,648 measured Elekta service + $406,630 Lancet capital per year = $507,277, **5.9% apart**; Varian + Elekta + Accuray = $6,720.4M = 82.6% of the headline |
+| ambulatory-surgery-centers-market | $109.04B -> $141.19B | 4.40% | 3.47x (31.0x raw) | 2.23x | Coherent's own NA share x headline / 6,436 certified ASCs = **$7.404M per ASC**, against $7.575M from Fortune's US figure — **2.3% apart**; Medicare FFS $7,500M / 6,436 = $1.1653M; MedPAC's own components 1.032 x 1.008 x 1.084 x 1.004 = 1.1321, reproducing its published 13.0% rise to 0.2 points |
+
+Every one: `regional_analysis` and `country_analysis` empty, no vendor
+`market_share` anywhere, 20-28 numbered sources per notes file, no U+FFFD, and
+the CAGR reconciling to its own endpoints within **0.005 points** on all five.
