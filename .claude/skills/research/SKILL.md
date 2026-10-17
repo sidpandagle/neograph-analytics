@@ -50,12 +50,20 @@ node scripts/report-db.mjs slugs            # live dedupe list
    topics and another one is filler.
 4. Mark the row `drafting` with the date, then stop re-reading the queue.
    **Only the session owner writes to `research/REPORT-PIPELINE.md`** — this
-   step is the owner's, not a subagent's. Measured on 2026-10-18: five agents
-   were briefed "touch nothing but your own two files" and all five marked their
-   own row anyway, because this line reads as an instruction to whoever is
-   drafting. Every edit happened to survive; nothing guaranteed that. If a brief
-   and the skill disagree about who owns a file, the agent follows the skill, so
-   the skill has to say it.
+   step is the owner's, not a subagent's, because as written it reads as an
+   instruction to whoever is drafting. If a brief and the skill disagree about
+   who owns a file, the agent follows the skill, so the skill has to say it.
+
+   Observed on 2026-10-18, round 6A: of five agents briefed "you own exactly
+   two paths, touch nothing else", two wrote outside that scope —
+   `components/reports/charts/ComponentSharePieChart.tsx` plus
+   `scripts/audit-html.mjs`, and this file. Both edits were coherent and
+   neither loosened a checker, so both were kept; the point is that the brief
+   alone did not hold them. **Whether any agent also rewrote its own pipeline
+   row is unknown and was not established:** the owner had already set all five
+   rows to the same `drafting` value before the fan-out, so an identical
+   rewrite leaves no diff. Do not restate that as a measurement. What is
+   measured is the two files above.
 
 A topic earns a slot only if a public, countable register exists to divide
 through: FDA device/approval lists, CMS counts, IAEA DIRAC, WHO/OECD statistics,
