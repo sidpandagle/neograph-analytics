@@ -107,7 +107,12 @@ export const RegionalBarChart: React.FC<RegionalBarChartProps> = ({
               className="p-3 rounded-lg border border-border bg-card"
             >
               <div className="flex items-center justify-between mb-1">
-                <h4 className="font-semibold text-sm">{r.region}</h4>
+                {/* h3, not h4: this card sits directly inside the section whose
+                    heading is an h2 ("Market Forecast & Data") and ChartFigure
+                    contributes only a figcaption, so an h4 here skipped a level on
+                    every report page that has a regional breakdown. Classes are
+                    unchanged -- the size came from text-sm, not from the tag. */}
+                <h3 className="font-semibold text-sm">{r.region}</h3>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
                   #{i + 1}
                 </span>

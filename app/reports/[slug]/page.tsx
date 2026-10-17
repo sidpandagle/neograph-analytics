@@ -347,6 +347,24 @@ export default async function ReportPage({
       ...(report.marketSize2032 ? [`Market Size (${forecastEndYear}): ${report.marketSize2032}`] : []),
       ...(report.cagr ? [`CAGR (${report.forecastPeriod || `${baseYearLabel}–${forecastEndYear}`}): ${report.cagr}`] : []),
     ],
+    /* The regions this row actually breaks out, deduplicated and in its own
+       order. The 'Report Coverage' card shows only regional_analysis[0], so
+       before this the schema described a multi-region dataset as whatever one
+       region happened to sort first. A row with no regional_analysis emits no
+       spatialCoverage rather than a guessed 'Global'. */
+    spatialCoverage: Array.from(
+      new Set(
+        jsonReport.regional_analysis
+          .map((r) => r.region)
+          .filter((r): r is string => typeof r === 'string' && r.trim().length > 0)
+      )
+    ),
+    /* Purchasable, with a free sample on request -- both routes exist
+       (/checkout/<slug> and /request-sample). Stated rather than left blank
+       because a Dataset with no conditionsOfAccess reads as openly available. */
+    conditionsOfAccess:
+      'The summary, market metrics and section outline on this page are free to read. ' +
+      'The full report body is available for purchase, and a sample section is available on request.',
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([

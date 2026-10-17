@@ -29,6 +29,12 @@ const ONLY = onlyArg > -1 ? process.argv[onlyArg + 1].split(',') : null;
 const ROUTES = [
   ['/', 'index.html'],
   ['/reports', 'reports.html'],
+  /* Added 2026-10-17 for C-4. The three report routes already audited all
+     happen to be rows with no regional breakdown, so they emit no
+     spatialCoverage and the Dataset rules below never ran on them -- the
+     audit passed without exercising the thing it had just been taught to
+     check. This row carries three Place entries. */
+  ['/reports/ai-in-lab-automation-market', 'reports/ai-in-lab-automation-market.html'],
   ['/reports/glp-1-receptor-agonists-market', 'reports/glp-1-receptor-agonists-market.html'],
   ['/reports/oncology-information-systems-market', 'reports/oncology-information-systems-market.html'],
   ['/reports/phage-therapy-market', 'reports/phage-therapy-market.html'],
@@ -178,6 +184,38 @@ function auditDocument(route, html) {
       } else {
         /* auditDocument is synchronous; defer the network check to the run loop. */
         licenceRoutes.add(route);
+      }
+    }
+
+    /* spatialCoverage and conditionsOfAccess (C-4). The point of asserting
+       them is that both are easy to emit as something a validator silently
+       drops: spatialCoverage wants Place objects with a name, not a bare
+       string, and an empty array is worse than an absent field because it
+       claims coverage of nowhere. conditionsOfAccess is Text, and a Dataset
+       without one reads as openly available, so a report body behind a
+       purchase has to say so. Absence is allowed -- 42 of 182 rows carry no
+       regional breakdown and correctly omit spatialCoverage -- but a present
+       field has to be well formed. */
+    if (parsed['@type'] === 'Dataset') {
+      const sc = parsed.spatialCoverage;
+      if (sc !== undefined) {
+        const list = Array.isArray(sc) ? sc : [sc];
+        if (list.length === 0) {
+          errors.push(`${label}.spatialCoverage is an empty array - omit the field instead`);
+        }
+        for (const place of list) {
+          if (typeof place !== 'object' || place === null) {
+            errors.push(`${label}.spatialCoverage holds a bare ${typeof place}; schema.org wants a Place`);
+          } else if (place['@type'] !== 'Place') {
+            errors.push(`${label}.spatialCoverage entry is @type "${place['@type']}", not Place`);
+          } else if (!String(place.name ?? '').trim()) {
+            errors.push(`${label}.spatialCoverage holds a Place with no name`);
+          }
+        }
+      }
+      const coa = parsed.conditionsOfAccess;
+      if (coa !== undefined && !String(coa).trim()) {
+        errors.push(`${label}.conditionsOfAccess is present but empty`);
       }
     }
 

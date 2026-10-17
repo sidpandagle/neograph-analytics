@@ -214,6 +214,12 @@ export const generateDatasetSchema = (params: {
   keywords?: string[];
   temporalCoverage?: string; // e.g. "2024/2032"
   variableMeasured?: string[];
+  /* The regions the row's own regional_analysis covers, in its order. Passed
+     rather than derived here so the schema cannot claim coverage the page does
+     not show -- a row with no regional breakdown emits no spatialCoverage at
+     all rather than a guessed "Global". */
+  spatialCoverage?: string[];
+  conditionsOfAccess?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Dataset',
@@ -246,6 +252,15 @@ export const generateDatasetSchema = (params: {
       '@type': 'PropertyValue',
       name: v,
     })),
+  }),
+  ...(params.spatialCoverage && params.spatialCoverage.length > 0 && {
+    spatialCoverage: params.spatialCoverage.map((name) => ({
+      '@type': 'Place',
+      name,
+    })),
+  }),
+  ...(params.conditionsOfAccess && {
+    conditionsOfAccess: params.conditionsOfAccess,
   }),
 });
 
