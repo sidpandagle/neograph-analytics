@@ -1,11 +1,11 @@
 # STATUS
 
-**Updated:** 2026-10-17 23:55 IST
+**Updated:** 2026-10-18 00:15 IST
 **Budget:** 7d used 25% | pace 74.5% | ceiling (70% of pace) 52.2% | **headroom
 +27.2 points** — normal running
-**Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change), #19 at
-17:40 on Siddhant's request. **The 21:00 scheduled merge did not land — see
-Blockers.**
+**Merges to `main`:** yesterday (17th) #18 at 00:48 and #19 at 17:40 on
+request; **the 21:00 scheduled merge did not land — see Blockers.** Today (18th)
+the 21:00 slot is open and PR #20 is what it would carry.
 **Mode:** running. A second session, `neograph-analytics-72`, is working the
 content pipeline on the same branch; file ownership agreed by message.
 
@@ -26,6 +26,13 @@ footer                     4 legal links (was 3)
 hero / listing copy        "182 reports across 13 verticals", derived
 Button variant="danger"    label contrast 2.74:1 -> 6.87:1 dark, 4.37 -> 4.83 light
 .prose wide tables         no longer scroll the whole page (R-22)
+Dataset node               10 keys -> 12: spatialCoverage on 140 of 182, and
+                           conditionsOfAccess on all 182 (C-4)
+report ItemList            182 of 182 pages declare their TOC, pinned to the
+                           rendered one by five audit rules (C-5)
+RegionalBarChart           h2 -> h4 heading jump fixed on every report page
+                           that has a regional section
+CLAUDE.md                  names the second, dead filter implementation (C-6)
 + the three operating skills and the competitor-research seed, checked in
 ```
 
@@ -34,9 +41,9 @@ Verified before the PR was opened, and again after tonight's two fixes:
 ```
 npm run build          exit 0, 182 report paths + 182 OG images
 tsc --noEmit           clean
-audit-html.mjs         17 of 17 routes error-free, 0 errors, 1 pre-existing warning
+audit-html.mjs         18 of 18 routes error-free, 0 errors, 1 pre-existing warning
 contrast-audit.mjs     0 failing pairs, both themes
-source-hygiene.mjs     226 files, 0 findings
+source-hygiene.mjs     227 files, 0 findings
 seo-unit.mjs           16 of 16
 npm run lint           12 warnings, 0 errors — unchanged from this morning
 ```
@@ -96,8 +103,17 @@ intrinsic: forced relayouts on the settled page measure 0.1ms median.
    sitemap itself that changed, 204 URLs to 221 — and watch the 30 newer URLs.
 2. **Verify #20 in production** with `audit-html.mjs --prod` once it lands,
    rather than inferring it from a green deploy.
-3. The competitor backlog now has items in it (`C-1` upward, filed by the other
-   session's `gather` pass) — that is the queue to work after `BACKLOG.md`.
+3. **Competitor backlog: C-4, C-5 and C-6 are closed** (and R-29 with C-6).
+   `C-1` and `C-3` are marked `needs-owner`. **`C-2` is the next unblocked
+   item** — make segment shares readable as numbers.
+
+   The one thing worth carrying forward from C-4: the new audit rule reported
+   **18 of 18 clean while exercising neither key**, because all three report
+   routes in the audit list happen to be rows with no regional breakdown. A
+   green checker over a sample that cannot contain the defect is not evidence,
+   and it looks exactly like evidence. Adding one route that does carry regional
+   data immediately found the h2 → h4 jump. Worth checking, for any new rule,
+   that the sample can actually fail it.
 4. One open `BACKLOG.md` P1 remains: the chart set driven by real columns
    (`market_forecast`, segmentation share, regional bars). Recharts is already
    a dependency; `lib/chartUtils.ts` must not be wired up as-is — it returns
