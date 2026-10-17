@@ -2448,3 +2448,59 @@ performance fix. Filed as **R-31** for Siddhant instead of shipped.
 `research/competitors/` seed were living untracked, so a fresh clone or a
 context reset lost the operating rules they carry. `research/competitors/raw/`
 stays gitignored.
+
+## 2026-10-18, 00:0x IST — C-4, and the audit rule that passed without testing anything
+
+First item off the competitor backlog that `neograph-analytics-72`'s `gather`
+pass filed. Claimed by message first so the two sessions did not both take it.
+
+**C-4.** The report `Dataset` node carried 10 keys and now carries 12:
+
+```
+spatialCoverage      140 of 182 pages, Place objects from the row's own
+                     regional_analysis, deduplicated
+                     the other 42 rows have no regional breakdown and emit
+                     nothing rather than a guessed "Global"
+conditionsOfAccess   182 of 182 — free summary and metrics, body for purchase,
+                     sample on request; both routes exist
+```
+
+The "Report Coverage" card shows only `regional_analysis[0]`, so before this a
+multi-region dataset was described by whichever region sorted first, and a row
+with no regional data was described as Global on no evidence. Competitor
+baseline from the gather pass: mordorintelligence 15 Dataset keys with both of
+these, grandviewresearch 8, precedenceresearch no Dataset at all.
+
+**The part worth remembering.** `audit-html.mjs` got rules for both keys, ran,
+and reported **18 of 18 clean** — having tested neither. All three report routes
+in the audit list happen to be rows with no regional breakdown, so the
+`spatialCoverage` branch never executed. A green checker over a sample that
+cannot contain the defect is not evidence, and it looked exactly like evidence.
+
+Fixed by auditing `/reports/ai-in-lab-automation-market`, which carries three
+`Place` entries, and then negative-testing by corrupting the built HTML three
+ways — a bare string among the Places, a Place with an empty name, an empty
+`conditionsOfAccess`. All three errors fire; the file was restored and the audit
+is clean again.
+
+**What that new route found in its first run.** `RegionalBarChart` emitted its
+two region cards as `h4` directly inside a section headed `h2`, with
+`ChartFigure` contributing only a `figcaption` — so **h2 → h4 on every report
+page with a regional breakdown**, invisible to the audit until a page with a
+regional section was in the list. Now `h3`, classes unchanged, because the size
+came from `text-sm` and not from the tag.
+`charts/RegionalAnalysisChart.tsx:148` has the same `h4` and is imported by
+nothing; left in place under the no-deletion rule rather than edited blind.
+
+### Rendered sweep across the site, for the record
+
+Nine more page types through the per-element contrast sweep and a page-overflow
+check, both themes, at 1280 / 800 / 390px mobile: `/`, `/reports`, `/contact`,
+`/request-sample`, a press release, `/checkout/<slug>`, a blog article, a report
+page, plus `/about`, `/services` and `/design-system` from earlier. **0 failing
+elements and 0 horizontal page overflow everywhere.** A negative result, but it
+is the baseline the R-19/R-20 token work was supposed to produce, and now it is
+observed rather than asserted.
+
+Commits: `34141c4` (C-4 + the heading fix), `bc014b6` (the three findings and
+the queue), `7351684` (R-30), `b98baef` (R-22), `ea0d56e` (skills checked in).
