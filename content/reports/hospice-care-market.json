@@ -1,0 +1,222 @@
+{
+  "report_id": "hospice-care-market",
+  "slug": "hospice-care-market",
+  "title": "U.S. Hospice Care Market Size, Share and Forecast 2026-2033",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2033",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 32.6,
+    "forecast_value": 45.3,
+    "cagr": 4.81
+  },
+  "executive_summary": "Published estimates of the hospice market spread 25.4x at the base year. Research and Markets publishes a 2026 figure of $5.93 billion in one report and $150.40 billion in another. Across every house surveyed, 2026 base values run from $5.93 billion to $150.40 billion while compound growth rates run only from 4.71% to 11.7% -- a 2.48x spread, and even that is a scope artefact, because the low rates belong to the United States reports and the high rates to the global ones.\n\nHospice is unusually easy to audit. CMS sets the unit price by statute: for FY2026, routine home care pays $230.83 a day for the first 60 days and $181.94 a day from day 61, with an aggregate cap of $35,361.44 per beneficiary. MedPAC publishes the denominator. In 2024, Medicare hospice expenditures were $28.3 billion across 148.2 million patient-days furnished to 1.82 million beneficiaries by 6,706 Medicare-certified hospices.\n\nDivide: $28,300,000,000 / 148,200,000 patient-days = $190.96 per patient-day. That lands between the two statutory routine-home-care tiers -- 4.96% above the day-61+ rate and 17.3% below the day-1-60 rate -- which is exactly where a real national average should sit. The same division eliminates most of the literature. US Medicare fee-for-service hospice spending alone is 5.33 times the whole of the $4.7-9.1 billion tier's claimed global market, so that tier is not measuring hospice care delivery at all. At the other end, Fortune Business Insights publishes a North America component of $27.85 billion for 2025, which is 1.6% below US Medicare fee-for-service spending for 2024 -- a figure that component must by construction contain.\n\nOne tier survives. Grand View Research puts the United States at $32.60 billion in 2026 and Precedence Research at $32.72 billion, 0.4% apart, independently derived, and consistent with $28.3 billion of 2024 Medicare spending once two years of growth and non-Medicare payers are allowed for. That is the series published here, labelled United States, because publishing a global headline would mean choosing between four tiers whose own components do not reconcile.",
+  "market_context": "Hospice is a statutory benefit before it is a market. A Medicare beneficiary elects hospice on a certification of six months or less life expectancy and agrees to forgo curative treatment for the terminal condition. Payment is a prospective per diem at one of four levels of care, not a fee for what was done, and the whole programme is truncated by an aggregate cap.\n\nThat structure dictates the economics. The marginal day is cheaper than the first: $181.94 against $230.83 in FY2026, so the day-61 patient is worth 78.8% of the day-1 patient. MedPAC's 2024 data makes the consequence visible. Average lifetime length of stay among decedents was 99.6 days against a median of 19, meaning a small number of very long stays carry a large share of days, all of them paid at the lower tier and all of them pressing against a cap of $35,361.44 -- equivalent to 194 days of day-61+ routine home care.\n\nThe supply side has been reshaped by exactly those incentives. Medicare-certified hospices went from 4,840 in 2019 to 6,706 in 2024, with for-profit providers accounting for 3,435 of the first figure and 5,497 of the second. Growth averaged 7.8% a year from 2019 to 2023 before slowing to 2.6% in 2024, as California -- which placed a moratorium on new hospice licences in 2022 after its state auditor found numerous indicators of fraud and abuse in Los Angeles County -- Arizona and Texas decelerated. By 2024, 82% of hospices were for profit but furnished care to only 60% of patients, because for-profit censuses are smaller. Divide the spend by the register and the average certified hospice is a $4.22 million business with an average daily census of 60.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 4.8121% CAGR between Grand View Research's published 2026 and 2033 endpoints of $32.60 billion and $45.30 billion. Grand View states 4.8%; 4.81% is that same rate taken to two decimals from its own two endpoints, so the series reconciles rather than carrying a rounding gap. The intermediate years are interpolation, not separately sourced observations.\n\nThis series was chosen for one reason: it is the only tier that survives division against a public register. Grand View's $32.60 billion for 2026 implies Medicare fee-for-service was 86.8% of the United States total two years earlier, which is the right order given Chemed's disclosure that Medicare and Medicaid are in excess of 95% of VITAS net patient revenue and Addus's that Medicare alone is 93.1% of its hospice revenue. Precedence Research, working independently to a 2035 horizon, lands at $32.72 billion for the same year.\n\nReaders working to a global definition should know that no published global figure reconciles with its own parts. The $81-91 billion cluster requires roughly $50.6 billion of hospice spending outside North America -- 61.8% of its own global total -- in a world where the United States puts 52.9% of its decedents through a statutory hospice benefit and most countries have no comparable one. Growth, meanwhile, is the stable part of the literature: MedPAC reports an 8.0% aggregate fee-for-service margin for 2023, down from 9.8% in 2022, and projects about 9% for 2026, and has recommended Congress eliminate the FY2027 base rate update outright. A market whose regulator is asking for a 0% update is not a market where the forecast rate is the interesting variable.",
+  "market_overview": {
+    "summary": "On the United States definition that survives an arithmetic check against a public register, the hospice care market is $32.60 billion in 2026, projected to $45.30 billion by 2033 at a 4.81% CAGR. Published estimates across all houses spread 25.4x at the base year -- $5.93 billion to $150.40 billion for 2026, both ends from the same publisher -- while growth rates spread only 2.48x. The variable is scope, and four distinct tiers can be identified and tested against CMS statutory per-diem rates and MedPAC's count of 148.2 million Medicare hospice patient-days.",
+    "key_trends": [
+      "2026 base-year estimates spread 25.4x ($5.93B to $150.40B) while published CAGRs spread 2.48x (4.71% to 11.7%)",
+      "Measured Medicare spend per patient-day is $190.96 ($28.3B / 148.2m days, 2024), sitting between the FY2026 statutory routine home care tiers of $230.83 and $181.94",
+      "The marginal hospice day pays 78.8% of the first: $181.94 from day 61 against $230.83 for days 1-60, under an aggregate cap of $35,361.44",
+      "Average lifetime length of stay among decedents reached 99.6 days in 2024 against a median of 19, so a minority of long stays carries most of the days",
+      "Medicare-certified hospices rose from 4,840 in 2019 to 6,706 in 2024; 82% are for profit but furnish care to only 60% of patients",
+      "No vendor market share is publicly disclosed; the largest publicly traded operator, VITAS, accounts for roughly 5.5% of Medicare hospice days on its own disclosed census"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "52.9% of Medicare decedents used hospice in 2024, a record high"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A statutory per-diem benefit with no utilisation risk at the day level, which makes revenue a direct function of census",
+      "Hospice use among Medicare decedents reached a record 52.9% in 2024, up from 51.7% in 2023, with total days furnished up 7.7% to 148.2 million",
+      "Average lifetime length of stay among decedents rose about 3 days to 99.6 days in 2024, and median stay rose a day to 19",
+      "Low capital intensity -- MedPAC notes hospices do not require extensive physical infrastructure -- which keeps entry cheap and keeps investor interest available",
+      "Reported margins that support entry: an 8.0% aggregate fee-for-service Medicare margin in 2023 and a MedPAC-projected ~9% for 2026"
+    ],
+    "restraints": [
+      "The marginal day is paid less than the first: $181.94 from day 61 against $230.83 for days 1-60 in FY2026",
+      "The aggregate cap of $35,361.44 per beneficiary truncates revenue on long-stay books; VITAS accrued $2.4 million of cap limitation in a single quarter",
+      "MedPAC has recommended Congress eliminate the FY2027 update entirely, against a 2.3% increase projected under current law",
+      "The 80/20 rule pays inpatient days above 20% of a hospice's total Medicare days at the routine home care rate",
+      "Rural provider counts have declined roughly 1% a year since 2019, and 12% of hospices serve rural areas"
+    ],
+    "opportunities": [
+      "Scale against a fragmented register: the average Medicare-certified hospice is a $4.22 million business with an average daily census of 60",
+      "For-profit consolidation of a base where 82% of providers hold only 60% of patients",
+      "Acuity mix: continuous home care pays $1,674.29 a day and general inpatient care $1,199.86, against $230.83 for routine home care",
+      "Quality differentiation while process measures are topped out -- CMS's admission composite is so high and unvarying that it no longer distinguishes providers"
+    ],
+    "challenges": [
+      "Published market sizes disagree by 25.4x at the base year, so market-sizing is an unreliable basis for planning in this sector",
+      "Programme-integrity scrutiny: California imposed a licensing moratorium in 2022 after its auditor found numerous indicators of fraud and abuse in Los Angeles County",
+      "MedPAC publishes margins only through 2023 because of the data lag needed to compute cap overpayments, so current profitability is not externally measurable",
+      "Short stays persist for reasons outside hospice control -- delayed referral conversations and the requirement to forgo curative treatment"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Routine home care",
+      "Continuous home care",
+      "Inpatient respite care",
+      "General inpatient care"
+    ],
+    "by_application": [
+      "Dementia",
+      "Circulatory and heart disease",
+      "Cancer",
+      "Respiratory disease",
+      "Stroke",
+      "Chronic kidney disease"
+    ],
+    "by_end_user": [
+      "Home hospice care",
+      "Freestanding hospice centre",
+      "Hospital",
+      "Skilled nursing facility"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 32.6 },
+    { "year": 2027, "value": 34.17 },
+    { "year": 2028, "value": 35.81 },
+    { "year": 2029, "value": 37.54 },
+    { "year": 2030, "value": 39.34 },
+    { "year": 2031, "value": 41.24 },
+    { "year": 2032, "value": 43.22 },
+    { "year": 2033, "value": 45.3 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "U.S. hospice care market size, 2026-2033 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Chemed Corporation (VITAS Healthcare)",
+      "headquarters": "United States",
+      "market_position": "Largest publicly traded pure-play hospice operator",
+      "description": "VITAS reported net patient revenue of $1,630.1 million for 2025, up 6.5% on $1,531.0 million in 2024, and an average daily census of 22,462 in the fourth quarter. Its disclosed average revenue per patient day was $208.01, with routine home care averaging $187.19 and high-acuity care $1,153.55 -- every one of those figures inside the FY2026 statutory envelope. Chemed states that Medicare and Medicaid supply in excess of 95% of VITAS net patient revenue and that 15-20% of days are furnished to nursing home residents. At 22,462 average daily census, VITAS furnishes about 8.20 million patient-days a year, roughly 5.5% of the 148.2 million Medicare hospice days MedPAC counted for 2024; that is a division of two disclosed public figures across two different years, not a disclosed share. No vendor share is published."
+    },
+    {
+      "company": "Addus HomeCare Corporation",
+      "headquarters": "United States",
+      "market_position": "Diversified home-care operator with a growing hospice segment",
+      "description": "Hospice net service revenue of $262.5 million in 2025, up 15.1% from $228.2 million, within group revenue of about $1.42 billion. Hospice gross profit rose to 48.7% of hospice revenue from 47.0%, and Medicare supplied 93.1% of hospice revenue against 91.2% a year earlier. Addus attributes the growth to organic gains in average daily census and in revenue per patient day. Hospice was 18.8% of group revenue in the fourth quarter of 2025. Addus's hospice line is 16.1% the size of VITAS's. No share figure is disclosed."
+    },
+    {
+      "company": "Amedisys",
+      "headquarters": "United States",
+      "market_position": "One of five publicly traded hospice companies MedPAC tracks for capital access",
+      "description": "Named by MedPAC in its March 2026 chapter as one of the five publicly traded hospice companies whose filings it reviews when assessing providers' access to capital. MedPAC records that admissions and average daily census grew at all five companies over the first nine months of 2025 -- the first six for Amedisys -- against the same period in 2024. No share percentage is publicly disclosed."
+    },
+    {
+      "company": "Enhabit",
+      "headquarters": "United States",
+      "market_position": "Publicly traded home health and hospice operator",
+      "description": "One of the five publicly traded hospice companies MedPAC reviews. MedPAC records that among the four such companies reporting hospice-specific margins, margins rose at three and fell at one in 2025, and that one company closed or consolidated hospice branches during the year. MedPAC does not state which company did which, and this report does not guess. No share percentage is disclosed."
+    },
+    {
+      "company": "Pennant Group",
+      "headquarters": "United States",
+      "market_position": "Publicly traded home health, hospice and senior living operator",
+      "description": "One of the five publicly traded hospice companies MedPAC reviews for evidence on capital access. MedPAC notes that two publicly traded hospice companies expanded by acquiring other hospices in 2025, without naming them. Pennant's hospice-specific position is not separately quantified in public material at the level needed for a share estimate, and none is given here."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "Medicare hospice prospective payment system: four prospectively determined per-diem rate categories -- routine home care, continuous home care, inpatient respite care and general inpatient care -- set annually by CMS on an October-to-September fiscal year",
+    "FY2026 Hospice Wage Index and Payment Rate Update final rule (CMS-1835-F, Federal Register 5 August 2025): a 2.6% update, being a 3.3% inpatient hospital market basket increase less a 0.7 percentage point productivity adjustment, worth about $750 million in aggregate",
+    "Hospice aggregate cap, set at $35,361.44 per beneficiary for the 12 months ending 30 September 2026, up from $34,465.34; payments above the cap must be refunded, and the cap applies separately to each hospice billing number",
+    "The 80/20 inpatient rule: inpatient care days above 20% of a hospice's total Medicare days are paid at the routine home care rate",
+    "Hospice Quality Reporting Program: hospices that fail to submit required quality data take a 4.0 percentage point reduction to the annual payment update",
+    "HOPE (Hospice Outcomes and Patient Evaluation) assessment instrument, finalised in the FY2025 final rule (CMS-1810-F), replacing the Hospice Item Set from 1 October 2025 and submitted through iQIES; the FY2026 final rule finalised no delay to it",
+    "Hospice election requirements: certification of a life expectancy of six months or less if the illness runs its normal course, and agreement to forgo care related to the terminal illness outside the hospice benefit",
+    "State-level programme integrity, including California's 2022 moratorium on new hospice licences and its strengthened laws on referral and patient-enrolment practices"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of statutory payment rates, a federal advisory commission's published data and public company disclosure, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 10 Hospice Services (12 March 2026): Table 10-3 gives $28.3 billion of Medicare hospice expenditures, 1.82 million users and 148.2 million hospice days for 2024; Table 10-1 gives 6,706 Medicare-certified hospices in 2024 against 4,840 in 2019, with for-profits at 5,497 and 3,435",
+      "MedPAC, Report to the Congress, March 2025, Chapter 9 Hospice Services (13 March 2025): $25.7 billion, more than 1.7 million beneficiaries and about 6,500 providers for 2023",
+      "CMS, Medicare Program; FY 2026 Hospice Wage Index and Payment Rate Update and Hospice Quality Reporting Program Requirements (CMS-1835-F), final rule, Federal Register 5 August 2025: routine home care $230.83 (days 1-60) and $181.94 (days 61+), continuous home care $1,674.29 per 24 hours or $69.76 per hour, inpatient respite care $532.48, general inpatient care $1,199.86, aggregate cap $35,361.44",
+      "Chemed Corporation Form 10-K for fiscal 2025 and fourth-quarter 2025 results release (25 February 2026): VITAS revenue $1,630.1 million, average revenue per patient day $208.01, routine home care $187.19, high acuity $1,153.55, average daily census 22,462, Medicare Cap accrual $2.4 million",
+      "Addus HomeCare Corporation Form 10-K for fiscal 2025 and year-end results release: hospice net service revenue $262.5 million against $228.2 million, hospice gross profit 48.7% of hospice revenue, Medicare 93.1% of hospice revenue",
+      "Published market estimates, each attributed by name and date: Grand View Research (U.S. Hospice Market, April 2026), Precedence Research (U.S. Hospice databook, 9 April 2026), Fortune Business Insights (FBI119279, September 2026), Mordor Intelligence (September 2026), Market Data Forecast, SNS Insider, Reports and Data, Dataintelo, Data Bridge Market Research and Research and Markets",
+      "CMS Hospice Quality Reporting Program documentation on the HOPE instrument and its replacement of the Hospice Item Set from 1 October 2025, with the 4.0 percentage point annual payment update penalty for non-compliance"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. The published 4.81% CAGR is recomputed from Grand View Research's own 2026 and 2033 endpoints as (45.30/32.60)^(1/7)-1 = 4.8121%, against the 4.8% Grand View states. The grounding arithmetic is a plausibility test: dividing MedPAC's $28.3 billion of 2024 Medicare hospice spending by its own count of 148.2 million patient-days gives $190.96 per patient-day, which falls between the FY2026 statutory routine home care rates of $230.83 and $181.94, and solving the two-tier blend gives 18.4% of days at the day-1-60 rate -- an upper bound, since continuous home care, respite and general inpatient days all pay more and pull the average up. The same division rules out the $4.7-9.1 billion tier, because US Medicare fee-for-service alone is 5.33 times its claimed global base, and shows that Fortune Business Insights' North America component for 2025 ($27.85 billion) is 1.6% below US Medicare fee-for-service spending for 2024 alone. This establishes which published figure can be divided by a real denominator without producing an absurdity. It does not establish that $32.60 billion is correct and is not offered as an independent estimate. VITAS's disclosed per-day rates are compared against unadjusted national statutory rates; the hospice wage index adjusts the labour share county by county, so the 10.7% implied tier share for VITAS is directional and not a measurement of its day mix. The 5.5% of Medicare days attributed to VITAS divides its calendar-2025 census against MedPAC's calendar-2024 day count and is an order of magnitude, not a share. MedPAC publishes hospice margins only through 2023 because of the data lag required to compute cap overpayments, so no 2024 or 2025 margin is asserted here. A FY2027 hospice final rule took effect on 1 October 2026; its rate tables were not retrieved, so all per-diem figures here are dated FY2026.",
+    "data_sources": "Federal statute and rulemaking (CMS hospice prospective payment system), a federal advisory commission's published tables (MedPAC), and SEC filings and earnings releases from publicly traded hospice operators, supplemented by eleven named commercial market estimates."
+  },
+  "faqs": [
+    {
+      "question": "How big is the hospice care market?",
+      "answer": "It depends entirely on scope, and the published range is extreme. For the United States, $32.60 billion in 2026 rising to $45.30 billion by 2033 at 4.81%, which is the figure that survives an arithmetic check against public data. Published 2026 base values across all houses run from $5.93 billion to $150.40 billion -- a 25.4x spread, with both of those ends published by the same house in different reports."
+    },
+    {
+      "question": "Why do published hospice estimates differ by 25 times?"
+      ,
+      "answer": "Because they count different things, not because they disagree about growth. Base-year values spread 25.4x while compound growth rates spread 2.48x, and even that narrower spread tracks scope: the 4.71-4.8% rates are United States reports, the 7.3-9.4% rates are global ones. Four tiers are identifiable: a $4.7-9.1 billion tier that cannot be hospice delivery at all, a $28-33 billion United States tier, a $44-91 billion global tier, and a $150 billion-plus tier that is really palliative care."
+    },
+    {
+      "question": "How can a hospice market estimate be checked against public data?",
+      "answer": "Because CMS sets the price by statute and MedPAC publishes the volume. For FY2026, routine home care pays $230.83 a day for days 1-60 and $181.94 from day 61. MedPAC reports $28.3 billion of Medicare hospice spending across 148.2 million patient-days in 2024. Divide: $28,300,000,000 / 148,200,000 = $190.96 per patient-day, which sits between the two statutory tiers, exactly where a real national average should. Few healthcare markets can be audited this directly."
+    },
+    {
+      "question": "Which published estimates fail that check?",
+      "answer": "The $4.7-9.1 billion tier fails outright: US Medicare fee-for-service hospice spending alone was $28.3 billion in 2024, 5.33 times that tier's claimed global 2025 base. Fortune Business Insights' global figure fails on its own components -- its North America value for 2025, $27.85 billion, is 1.6% below US Medicare fee-for-service spending for 2024, which that component must contain. The $81-91 billion cluster requires about $50.6 billion of hospice spending outside North America, 61.8% of its own global total, with no public register behind it."
+    },
+    {
+      "question": "Why does a longer hospice stay earn less per day?",
+      "answer": "Because the statute is built that way. Routine home care pays $230.83 a day for the first 60 days and $181.94 from day 61 in FY2026, so the marginal day earns 78.8% of the first. On top of that an aggregate cap of $35,361.44 per beneficiary applies, equivalent to 194 days of day-61+ routine home care. With average lifetime length of stay among decedents at 99.6 days in 2024 against a median of 19, most days are paid at the lower tier."
+    },
+    {
+      "question": "Who leads the hospice market?",
+      "answer": "No share is publicly disclosed. MedPAC tracks five publicly traded hospice companies -- Addus, Amedisys, Chemed (VITAS), Enhabit and Pennant Group -- and reports that admissions and average daily census grew at all five through most of 2025. VITAS is the largest pure-play: $1,630.1 million of 2025 revenue and an average daily census of 22,462, which works out to about 8.20 million patient-days a year against the 148.2 million Medicare days MedPAC counted for 2024. That is a division of two public figures across two years, not a disclosed share. The register itself is highly fragmented: 6,706 certified hospices averaging $4.22 million of Medicare revenue each."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because the published regional splits are the specific thing the arithmetic falsifies. Fortune Business Insights' North America figure is below US Medicare fee-for-service spending alone, and Dataintelo's is below it by half. A regional table would mean inventing one, so the sections are omitted rather than filled with placeholder figures. The United States is published as the report's stated scope instead of as a share of an unreconcilable global total."
+    }
+  ],
+  "seo": {
+    "meta_title": "U.S. Hospice Care Market Size and Forecast to 2033",
+    "meta_description": "Published hospice estimates spread 25.4x at the base year. Dividing MedPAC's $28.3B by 148.2m patient-days gives $190.96/day, between the statutory CMS tiers.",
+    "keywords": [
+      "hospice care market",
+      "hospice market size",
+      "hospice per diem rates",
+      "routine home care rate",
+      "Medicare hospice spending",
+      "hospice aggregate cap",
+      "end-of-life care market"
+    ]
+  },
+  "key_highlights": [
+    "2026 base-year estimates spread 25.4x ($5.93B to $150.40B) while published CAGRs spread 2.48x: the disagreement is scope, not growth",
+    "Both ends of that 25.4x spread are published by the same house, Research and Markets, in two different reports",
+    "$28,300,000,000 / 148,200,000 Medicare patient-days = $190.96 per day, between the FY2026 statutory tiers of $230.83 (days 1-60) and $181.94 (days 61+)",
+    "That division rules out the $4.7-9.1B tier: US Medicare fee-for-service alone is 5.33x its claimed global base",
+    "Fortune Business Insights' North America figure for 2025 ($27.85B) is 1.6% below US Medicare fee-for-service hospice spending for 2024 alone",
+    "Grand View ($32.60B) and Precedence ($32.72B) agree on the United States for 2026 to within 0.4%, independently derived",
+    "The register is fragmented: 6,706 certified hospices averaging $4.22M of Medicare revenue and an average daily census of 60; 82% are for profit but serve 60% of patients"
+  ],
+  "reader_takeaways": [
+    "Before comparing two hospice forecasts, establish which of the four tiers each one is in, because that single decision moves the base year by 25.4x",
+    "Test any hospice market figure by dividing it by patient-days and comparing against the statutory per-diem rates; a figure that cannot clear $181.94 a day is not measuring hospice care delivery",
+    "Model the economics around the day-61 rate of $181.94 and the $35,361.44 aggregate cap, not the day-1 rate, because mean length of stay among decedents is 99.6 days",
+    "Treat any vendor share percentage you are shown as unsourced: none is publicly disclosed, and the certified register averages $4.22 million of Medicare revenue per provider",
+    "Do not plan on the published 4.8% rate as a given: MedPAC has recommended Congress eliminate the FY2027 update entirely against the 2.3% projected under current law"
+  ]
+}

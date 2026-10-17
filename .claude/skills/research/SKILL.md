@@ -49,6 +49,13 @@ node scripts/report-db.mjs slugs            # live dedupe list
    `united-states-*`. The corpus already carries four regional clones of fourteen
    topics and another one is filler.
 4. Mark the row `drafting` with the date, then stop re-reading the queue.
+   **Only the session owner writes to `research/REPORT-PIPELINE.md`** — this
+   step is the owner's, not a subagent's. Measured on 2026-10-18: five agents
+   were briefed "touch nothing but your own two files" and all five marked their
+   own row anyway, because this line reads as an instruction to whoever is
+   drafting. Every edit happened to survive; nothing guaranteed that. If a brief
+   and the skill disagree about who owns a file, the agent follows the skill, so
+   the skill has to say it.
 
 A topic earns a slot only if a public, countable register exists to divide
 through: FDA device/approval lists, CMS counts, IAEA DIRAC, WHO/OECD statistics,
@@ -173,10 +180,19 @@ Then go back to step 1.
     `research/<slug>-notes.md` and `content/reports/<slug>.json`, and touches
     nothing else — not `WORKLOG.md`, not `STATUS.md`, not the pipeline. The
     session owner records state after they return, so their writes cannot race.
-  - Treat what an agent returns as a hypothesis. Re-run
-    `node scripts/report-db.mjs check` on its file yourself, and spot-check its
-    grounding division before the figure goes near a published row — a passing
-    `check` proves the arithmetic reconciles, not that the source says what the
-    agent claims.
+    Say this in the brief *and* expect step 2.4 above to pull against it: an
+    agent that has read the skill believes marking its own row is part of the
+    job. Five did on 2026-10-18, to one shared file, concurrently.
+  - Treat what an agent returns as a hypothesis — including its own account of
+    what it wrote. Re-run `node scripts/report-db.mjs check` **and**
+    `python -I scripts/verify-report-arithmetic.py <slug>` on its files
+    yourself, and recompute its grounding division before the figure goes near a
+    published row — a passing `check` proves the arithmetic reconciles, not that
+    the source says what the agent claims.
+  - **Read the file, not the report-back.** On 2026-10-18 an agent reported a
+    base, a forecast, a CAGR, a visit count and two spreads that appear nowhere
+    in either file it wrote; both files were internally consistent on entirely
+    different figures. Believing the message would have published a row whose
+    headline contradicted its own evidence file.
   - Budget headroom of 0-5 points means **no agents at all**; a fan-out of five
     is the most expensive thing this loop does.
