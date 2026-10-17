@@ -166,7 +166,16 @@ the 21:00-09:00 IST browser window.)_
     `distribution`/`DataDownload` — see **Rejected**.
   - **Checker:** `node scripts/audit-html.mjs`
 
-- [ ] **C-5 · seo · M** — Declare the report table of contents as an `ItemList`
+- [x] ~~**C-5 · seo · M**~~ — **DONE 2026-10-18, commit `bec488f`.** All **182**
+  report pages now emit an `ItemList` (13 entries on the audited row), built
+  from the same `sidebarTOC` array the sidebar renders. `audit-html.mjs`
+  compares the declared list against the anchors actually in
+  `nav[aria-label="Report details"]` — count, order, per-entry anchor, and
+  that every declared anchor is an id the page really has — so the two cannot
+  drift. Five rules, all negative-tested against corrupted built HTML.
+  Original item below.
+
+  - [ ] ~~Declare the report table of contents as an `ItemList`~~
   in JSON-LD, built from the same source the rendered TOC uses, so the section
   structure is machine-readable as well as visible.
   - **Evidence:** mordorintelligence.com's report page emits an `ItemList` with

@@ -2504,3 +2504,34 @@ observed rather than asserted.
 
 Commits: `34141c4` (C-4 + the heading fix), `bc014b6` (the three findings and
 the queue), `7351684` (R-30), `b98baef` (R-22), `ea0d56e` (skills checked in).
+
+## 2026-10-18, 00:2x IST — C-5, the outline declared and pinned to the page
+
+All **182** report pages now emit an `ItemList` for their table of contents, 13
+entries on the row used for the checks, built from the same `sidebarTOC` array
+the sidebar renders rather than rebuilt from the row. We had **0** `ItemList`
+anywhere; the gather pass measured mordorintelligence emitting one with 46
+entries beside `Dataset` and `FAQPage`.
+
+The part that took the thought is not the schema, it is that an `ItemList` built
+by the same function as the sidebar is correct only until someone edits one of
+the two, and a machine-readable outline that disagrees with the visible page is
+worse than none. So `audit-html.mjs` checks the **page**, not the generator:
+
+```
+numberOfItems equals the entries listed
+positions are 1..n in order, no ListItem without a name
+entry count equals the rendered TOC's anchor count
+entry i points at the same anchor the rendered TOC's link i does
+every declared anchor is an id something on the page actually has
+```
+
+All five negative-tested against corrupted built HTML. Dropping one `ListItem`
+reports the `numberOfItems` mismatch and the count disagreement. Renaming an
+anchor in the `ItemList` *and* the rendered TOC together — so the counts still
+agree and only the last rule can catch it — reports "points at
+#market-dynamics-nope, which no element on the page has". The built file was
+restored after each test and the audit is clean.
+
+Dataset keys are now 12 (C-4) and report pages carry 9 ld+json blocks, up from
+8.
