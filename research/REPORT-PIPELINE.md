@@ -173,8 +173,8 @@ left silent. Neither is a round 6 row.
 
 | Slug | Defect | Fix |
 |---|---|---|
-| `revenue-cycle-management-market` | no `research/<slug>-notes.md` exists at all | reconstruct the evidence file |
-| `veterinary-diagnostics-market` | JSON `forecast_value` 16.48 vs notes 16.49 (x2); 16.48 absent from notes | decide which the source supports |
+| `revenue-cycle-management-market` | no `research/<slug>-notes.md` exists at all | reconstruct the evidence file — **unclaimed, left to 9a** per the 02:00 exchange. It is real research, not a transcription fix, and both sessions are at ~70% of the 5h window. |
+| `veterinary-diagnostics-market` | JSON `forecast_value` 16.48 vs notes 16.49 (x2); 16.48 absent from notes | **fixed and published by 72, 02:05 IST.** The notes print the derivation: Mordor publishes $9.53B (2026), $15.05B (2031) and 9.57% for 2026-2031, and 9.53 x 1.0957^6 = **16.49084**. 16.48 also implied 9.5580%, contradicting the JSON's own stated 9.57%, so it was a transcription slip and not a second reading of the source. All 6 occurrences corrected; CAGR delta 0.0120 -> 0.0009 pt; `--pair` now 16/16, paired. Published as an edit to an already-built row, which reaches prod via ISR with no deploy - corpus still 182, confirming an overwrite rather than an addition. |
 
 Both reach production through ISR with no deploy, so neither waits on a window.
 
