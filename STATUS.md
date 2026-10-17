@@ -1,7 +1,7 @@
 # STATUS
 
-**Updated:** 2026-10-17 02:50 IST
-**Budget:** 7d used ~15% | ceiling (70% of pace) ~39% | headroom ~+23 points
+**Updated:** 2026-10-17 17:2x IST
+**Budget:** 7d used 22% | ceiling (70% of pace) 49% | headroom +27 points
 **Merges to `main` today (IST):** #18 at 00:48 (pre-policy-change). Next
 scheduled merge **21:00 IST** — one scheduled merge a day now; extra merges
 only on the owner's request.
@@ -27,6 +27,42 @@ tsc --noEmit                   clean
 The Supabase half — the terms page and the 13 chips — reaches production
 through ISR within the hour without a deploy. The licence assertion, the
 checkout fix, the footer link and the widened copy need the merge.
+
+## Added to the same bundle, 2026-10-17 daytime
+
+Ten commits, each verified before the next began. In defect order rather than
+commit order:
+
+```
+R-17  every trimmed report title lost its letter "s"    6 cards x 182 pages + every OG image
+      marketName() collapsed whitespace with /s+/        "Antimicrobial Re i tance Diagno tic  Market"
+R-18  datePublished a day early, build-host dependent    IST build emitted 2025-12-17 for Dec 18
+R-19  /about + /services unreadable in dark mode         h2 1.05:1, body 2.24:1, meta 3.57:1
+R-20  every status chip stayed light on a dark page       68 raw classes -> 13 tokens, 1 of 35 had dark:
+R-23  featured subheading was a stale industry list      now Intl.ListFormat over the 6 rows on screen
+R-24  17 indexable pages in no advertised sitemap        4 legal + 10 consulting + 3 authors
+R-25  MeetTheTeam linked to URLs that 404                parseInt('tm001') -> NaN; 0 imports, 0 inbound
+R-27  39KB of company research stored and not rendered   418 overviews, 172 distinct; 17 unlisted profiles
+R-28  CLAUDE.md wrong in six places                      3 of 7 chart files live; chartUtils dead and unsafe
+```
+
+New checkers, both offline, both negative-tested:
+
+```
+scripts/seo-unit.mjs         16 assertions over lib/seo.ts; it is what caught R-18
+scripts/source-hygiene.mjs   221 files, byte-level; catches an eaten regex escape
+contrast-audit.mjs           +12 status pairs: text 7.60-11.83:1, glyphs 3.00-9.51:1
+audit-html.mjs               + a sitemap rule (--prod); fires on production today
+```
+
+All four green on the final build: `audit-html.mjs` 17 of 17 routes error-free
+(0 errors, 1 pre-existing warning), `contrast-audit.mjs` 0 failing pairs,
+`source-hygiene.mjs` 0 findings, `seo-unit.mjs` 16 of 16. `tsc --noEmit` clean.
+Build exit 0 with the same 12 lint warnings it started the day with.
+
+**What needs the merge:** all of it except the nothing — every item above is
+code. The served `/sitemap.xml` goes from 204 URLs to **221**, and all 17 new
+URLs were fetched individually against the local build and returned 200.
 
 ## Deployed and verified in production
 
@@ -85,24 +121,48 @@ narrower question came out of the work:
 
 ## Next up
 
-1. **R-13: first paint — waits for the 21:00–09:00 browser window.** FCP and
-   LCP are the same event at ~1.3s on a server-rendered text page whose TTFB is
-   89ms. Today's headless pass narrowed the candidates from the built HTML of
-   `/methodology`, in document order: two render-blocking stylesheets totalling
-   **74.6KB** (66,374 + 8,244 bytes), then **13 `async` chunk scripts in**
-   **`<head>`**, then a `rel=preload` for `googletagmanager.com/gtag/js` carrying
-   **no `fetchPriority`** — so a High-priority third-party fetch competing with
-   the stylesheets, while Next's own chunk preload beside it is marked
-   `fetchPriority="low"`. This also corrects the earlier note that gtag was
-   absent from the static HTML; the preload link is in it, on every page. Next:
-   trace with googletagmanager blocked to size its share, then choose between
-   `strategy="lazyOnload"` for GA and splitting the 66KB stylesheet.
-2. Watch Search Console for the 30 new URLs; resubmit the sitemap.
-3. **The report expansion target is met** — 182 rows against the 142 it started
-   from, so the 30–50 instruction is satisfied at 40. No round 5 is scheduled;
-   the loop stays on review and fixes unless more reports are asked for.
-4. A fresh review pass on the rotation (next focus: responsive 640–1024px).
+Three findings are open and **all three need the 21:00-09:00 browser window**,
+which opens at the same hour as the merge:
 
+1. **R-13, first paint.** FCP and LCP are the same event at ~1.3s on a
+   server-rendered text page whose TTFB is 89ms. Today's headless pass narrowed
+   the candidates from the built HTML of `/methodology`, in document order: two
+   render-blocking stylesheets totalling **74.6KB** (66,374 + 8,244 bytes), then
+   **13 `async` chunk scripts in `<head>`**, then a `rel=preload` for
+   `googletagmanager.com/gtag/js` carrying **no `fetchPriority`** — a
+   High-priority third-party fetch competing with the stylesheets, while Next's
+   own chunk preload beside it is marked `fetchPriority="low"`. This also
+   corrects the earlier note that gtag was absent from the static HTML; the
+   preload link is in it, on every page. Next: trace with googletagmanager
+   blocked to size its share, then choose between `strategy="lazyOnload"` for GA
+   and splitting the 66KB stylesheet.
+2. **R-19, R-20 rendered confirmation.** Every dark-mode ratio shipped today was
+   computed from token hexes, not observed. The arithmetic says `/about`,
+   `/services` and all the status panels now read correctly in dark mode; one
+   pass in a real browser would make that observed rather than modelled.
+3. **R-22, prose tables.** `.prose table` sets `width: 100%; overflow: hidden`
+   and the only scroll escape is behind `@media (max-width: 768px)`. Whether a
+   wide table above 769px is clipped or pushes the page into horizontal scroll
+   depends on how the browser applies `overflow` to a table box, which this
+   queue may not assert without looking. Doubly latent: 0 of 22 snapshot rows
+   contain a `<table>`.
+
+Not browser-dependent:
+
+4. **R-21** — the four `/about` impact stats carry `divide-white/[0.06]` with no
+   `divide-x`, so 0 of 3 intended rules render. Left alone deliberately:
+   `divide-x` on a 2-up grid also stripes the row starts, so which rule was
+   wanted is a design call, not a bug fix.
+5. **R-26** — no published figure carries a named analyst.
+   `neograph_reports` has no author column (32, checked) and
+   `lib/jsonReports.ts:170` hardcodes `authors: []`. Three analyst profiles sit
+   unlinked. One mapping from Siddhant and the byline, the profile links and the
+   schema `author` all follow.
+6. Watch Search Console for the 30 newer URLs and resubmit the sitemap after the
+   merge — it is the sitemap itself that changed this time, 204 URLs to 221.
+7. **The report-expansion target is met** — 182 rows against the 142 it started
+   from is 40, inside the 30-50 asked for. No round 5 is scheduled; the loop
+   stays on review and fixes unless more reports are asked for.
 ## Blockers
 
 None.
