@@ -1886,3 +1886,96 @@ warning. The served `/sitemap.xml` from this build carries **221 URLs**:
 4 legal + 3 authors, and all **17** newly advertised URLs were fetched
 individually and returned **200**. `contrast-audit.mjs`: 0 failing pairs.
 `seo-unit.mjs`: 16 of 16.
+
+## 2026-10-17 — 39KB of research the site was storing and not showing
+
+### What a section census turned up
+Scanning all 182 built report pages for the sections they render, against the
+32 columns the table actually has, produced one real gap. `reader_takeaways`
+looked absent but renders as "Strategic Takeaways" — 545 takeaways across all
+182 rows, working. `company_profiles` was the real find.
+
+### R-27: the overview nobody could read
+Every one of the **418** objects in `company_profiles` carries an `overview`,
+and 39KB of that prose was going nowhere. The landscape card matches profiles
+to players by company name and reads exactly two fields off the match —
+`profile.revenue` for the figure in the corner and
+`profile.ai_healthcare_products` for the chips. The paragraph was never
+referenced.
+
+Two measurements decided the fix rather than one:
+
+- **246 of the 418 overviews repeat the landscape row's own `description`
+  verbatim.** Rendering all of them would have printed the same sentence twice
+  on 246 cards. The overview is therefore shown only when it differs, which
+  surfaces the **172** that were saying something new.
+- **19 of 418 profiles match no player by exact name.** The first instinct was
+  a name-matching bug — "Siemens Healthineers" against a list of startups looks
+  like a punctuation problem. A normaliser (case, brackets, punctuation,
+  corporate suffixes) recovers exactly **2**: "Novartis (Hexal)" and "Teladoc
+  Health", which are the same companies spelled differently in the two columns.
+  The remaining **17, across 15 reports**, are companies that were researched
+  and written up and genuinely are not in that report's player list. They now
+  follow the cards under an "Also profiled" sub-heading instead of being
+  discarded.
+
+  The normaliser stays, because it earns its place in the other direction: with
+  exact matching those 2 profiles lose their revenue and product chips from the
+  player card *and* get printed a second time below it as unlisted. The built
+  corpus went from 19 cards on 16 pages to 17 on 15.
+
+That second measurement is the one worth keeping: the obvious fix — fuzzy
+matching — would have recovered 2 profiles of 19, left 15 still invisible, and
+introduced a new way to match the wrong company.
+
+### And the same regex hazard, a third time
+The first draft of the normaliser used `` word boundaries. A tool ate the
+backslashes and left literal backspace characters in the source, exactly as
+recorded twice in `lib/seo.ts` — and this time the mangled pattern still
+matched things, so `co` matched inside "Covestro" and `sa` inside "Samsung".
+Caught by reading the bytes rather than the rendered file, where a backspace is
+invisible. The pieces are now built with `new RegExp` from plain strings, the
+suffix list is anchored on spaces, and `normName` pads the name so those
+anchors work at both ends. A string has no escape to lose. Verified on the real
+names: "Covestro AG" → "covestro", "Samsung Electronics" → "samsung
+electronics", "Dexcom, Inc." → "dexcom".
+
+### Not fixed, noted
+`CompanyProfile.founded` and `market_position` are also never read off a
+profile. `founded` is a single number and its absence costs little; it stays
+unused rather than being worked into a card that already carries five fields.
+
+### Checker
+`scripts/source-hygiene.mjs` — 221 source files, offline, scanning bytes rather
+than text for two things nothing else catches:
+
+- **Stray control characters.** A backspace, vertical tab or form feed in source
+  is a regex escape that lost its backslash. None of them are visible in an
+  editor or in `cat`, which is how three of them survived here.
+- **Regex literals that start `/s+`, `/d{4}`, `/w+`** — the exact shape a lost
+  backslash leaves behind.
+
+Negative-tested by reintroducing the real `/s+/` bug into `lib/seo.ts`:
+
+```
+x lib\seo.ts:119  regex literal starts (/s+ — a lost backslash looks exactly like this
+1 finding
+```
+
+restored, 0 findings. Worth stating why this earns a checker: none of the three
+instances failed a build, a typecheck or a lint, and two of them matched
+*something*, so they did damage instead of nothing. A silent wrong string is
+the hardest class of defect on a site whose value is that its figures are
+checkable.
+
+### Verification
+`tsc --noEmit` clean. Build exit 0, 12 lint warnings — the same 12 as before
+today's work. Built corpus: `"Also profiled"` on **15 pages with 17 cards**,
+matching the live-table measurement exactly (418 profiles, 399 exact matches,
+2 recovered by normalising, 17 unlisted across 15 reports), and
+`europe-biosimilars-market` correctly shows **0** unlisted now that
+"Novartis (Hexal)" matches "Novartis (via Hexal)". The overview paragraph
+renders as visible HTML, confirmed on `/reports/ai-in-lab-automation-market`.
+`audit-html.mjs`: 17 of 17 routes error-free, 0 errors, 1 pre-existing warning.
+`contrast-audit.mjs`: 0 failing pairs. `source-hygiene.mjs`: 0 findings.
+`seo-unit.mjs`: 16 of 16.

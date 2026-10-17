@@ -403,6 +403,49 @@ const POSITION_STYLE: Record<string, { bg: string; color: string; border: string
   Niche:      { bg: 'var(--content-niche-bg)',          color: 'var(--content-niche-text)', border: 'var(--content-niche-border)' },
 }
 
+/* Pieces of the company-name normaliser that matches a `company_profiles`
+   entry to its `competitive_landscape` row.
+
+   They are built from strings via `new RegExp` rather than written as /../
+   literals on purpose. The first draft of the normaliser used word-boundary
+   escapes and a tool ate the backslashes, leaving literal backspace
+   characters in the source -- which silently made `co` match inside
+   "Covestro" and `sa` inside "Samsung". lib/seo.ts records the same hazard
+   twice in one function. A string has no escape to lose, so the suffix
+   pattern is anchored on spaces instead, which is why normName pads the name
+   before that pass. */
+const PARENS = new RegExp('[(][^)]*[)]', 'g')
+const NON_WORD = new RegExp('[^a-z0-9 ]+', 'g')
+const SUFFIXES = new RegExp(
+  ' (inc|corp|corporation|co|company|ltd|limited|plc|llc|lp|gmbh|ag|sa|nv|bv|holdings|group|international) ',
+  'g'
+)
+const RUNS = new RegExp('[ ]+', 'g')
+
+/**
+ * The landscape cards are driven by `competitive_landscape`, with
+ * `company_profiles` matched in by company name for the revenue figure and the
+ * product chips.
+ *
+ * Two things were being written by the research pipeline and never shown:
+ *
+ *   - **`profile.overview`** — 418 of 418 profiles carry one, 39KB of prose in
+ *     all. 246 of them repeat the landscape row's own `description` verbatim,
+ *     so the overview is rendered only when it says something different. That
+ *     leaves 172 paragraphs that were stored and dropped.
+ *   - **profiles with no matching player** — 19 of 418 match no player by
+ *     exact name. Normalising with the pieces above recovers exactly 2 of them,
+ *     "Novartis (Hexal)" and "Teladoc Health", which are the same companies
+ *     spelled differently in the two columns. That matters in both directions:
+ *     without normalising, those two lose their revenue and chips from the
+ *     player card *and* get printed a second time below it. The remaining 17,
+ *     across 15 reports, are companies that were researched and written up and
+ *     genuinely are not in that report's player list — Siemens Healthineers,
+ *     Philips Healthcare, QIAGEN N.V., Prysmian Group. Fuzzy matching was the
+ *     obvious fix and would have recovered 2 of 19, left 15 invisible, and
+ *     added a new way to match the wrong company. They now follow the cards
+ *     under their own sub-heading instead of being discarded.
+ */
 function CompetitiveLandscapeSection({
   players,
   profiles,
@@ -410,11 +453,26 @@ function CompetitiveLandscapeSection({
   players: JsonReport['competitive_landscape']
   profiles: JsonReport['company_profiles']
 }) {
+  /* Matching is normalised, which matters in both directions. Exact names
+     leave 19 of 418 profiles unmatched; 2 of those 19 are the same company
+     spelled differently in the two columns, so exact matching would have both
+     dropped their revenue and chips from the player card *and* printed them a
+     second time under "Also profiled". Normalising recovers exactly those 2
+     and leaves 17 genuinely unlisted companies. */
+  const normName = (name: string) => {
+    const padded = ' ' + name.toLowerCase().replace(PARENS, ' ').replace(NON_WORD, ' ') + ' '
+    return padded.replace(SUFFIXES, ' ').replace(RUNS, ' ').trim()
+  }
+
+  const playerKeys = new Set(players.map((p) => normName(p.company)))
+  const profileByKey = new Map(profiles.map((pr) => [normName(pr.company), pr]))
+  const unlisted = profiles.filter((pr) => !playerKeys.has(normName(pr.company)))
+
   return (
     <section className="mb-14">
       <div className="grid gap-3">
         {players.map((p, i) => {
-          const profile = profiles.find((pr) => pr.company === p.company)
+          const profile = profileByKey.get(normName(p.company))
           const posStyle = POSITION_STYLE[p.market_position ?? ''] ?? POSITION_STYLE.Follower
 
           return (
@@ -464,6 +522,13 @@ function CompetitiveLandscapeSection({
                 </p>
               )}
 
+              {/* Only when it is not the description again. */}
+              {profile?.overview && profile.overview.trim() !== (p.description ?? '').trim() && (
+                <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--content-muted)' }}>
+                  {profile.overview}
+                </p>
+              )}
+
               {profile?.ai_healthcare_products && profile.ai_healthcare_products.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
                   {profile.ai_healthcare_products.map((prod, j) => (
@@ -481,6 +546,68 @@ function CompetitiveLandscapeSection({
           )
         })}
       </div>
+
+      {unlisted.length > 0 && (
+        <div className="mt-5">
+          <h3
+            className="text-xs font-bold uppercase tracking-[0.08em] mb-3"
+            style={{ color: 'var(--content-muted)' }}
+          >
+            Also profiled
+          </h3>
+          <div className="grid gap-3">
+            {unlisted.map((pr, i) => (
+              <div
+                key={`unlisted-${i}`}
+                className="rounded-xl p-5"
+                style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
+              >
+                <div className="flex items-start justify-between flex-wrap gap-3 mb-3">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="w-9 h-9 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0"
+                      style={{ background: 'hsl(var(--primary-hsl) / 0.07)', color: 'var(--primary)' }}
+                    >
+                      {pr.company.charAt(0)}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm text-[var(--foreground)]">{pr.company}</h4>
+                      {pr.headquarters && (
+                        <p className="text-xs" style={{ color: 'var(--content-muted)' }}>{pr.headquarters}</p>
+                      )}
+                    </div>
+                  </div>
+                  {pr.revenue && (
+                    <span className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>
+                      {pr.revenue}
+                    </span>
+                  )}
+                </div>
+
+                {pr.overview && (
+                  <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--content-text)' }}>
+                    {pr.overview}
+                  </p>
+                )}
+
+                {pr.ai_healthcare_products && pr.ai_healthcare_products.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {pr.ai_healthcare_products.map((prod, j) => (
+                      <span
+                        key={j}
+                        className="text-xs px-2 py-0.5 rounded-md"
+                        style={{ background: 'var(--content-surface)', color: 'var(--content-text)', border: '1px solid var(--content-border)' }}
+                      >
+                        {prod}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
