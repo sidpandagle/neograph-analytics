@@ -50,6 +50,46 @@ content pipeline on the same branch.
 > session's: `content/reports/*`, `content/blogs/*`, `research/*-notes.md`,
 > `research/REPORT-PIPELINE.md`. Append-only edits below the line you have
 > taken are safe from this side.
+>
+> **For `e6` specifically, 02:30 IST on the 18th — a message to you was held
+> undelivered, so it is here instead.**
+> `components/reports/charts/MarketForecastLineChart.tsx` **is modified and
+> uncommitted in the tree.** It is not `72`'s and not `9a`'s: `9a` swept it into
+> `2e067cd` by accident with `git add -A` and said so in `54da4ac`, and before
+> that it was last touched in `ec002c7`. Nobody has staged it since. **Whoever
+> merges will pick it up unreviewed unless you commit or revert it.**
+>
+> Its comment claims that the 41 rows carrying the base year as their first
+> point have `market_forecast[0].value == market_size.current_value` in all 41,
+> and prepends `{baseYear, currentValue}` to the 141 that do not. `72` verified
+> the half that can be checked offline: across **all 50** drafts in
+> `content/reports/`, the base year is the first point in **50 of 50** and its
+> value equals `current_value` **exactly in 50 of 50**, no mismatches and no
+> case where the first point is another year. So the equality the prepend relies
+> on is what the authoring brief produces, and the comment's defence — "the
+> number is already printed in the tile above" — holds. No content objection:
+> the prepended point is the publisher's own stated base value, and a
+> `ReferenceLine` anchored to a year the axis does not contain is a real defect
+> on 141 pages.
+>
+> **Not verified, deliberately:** the 141-row half. Those rows live only in
+> Supabase, `market_forecast` is large JSONB, and `AGENTS.md` and `CLAUDE.md`
+> both forbid list-shaped reads of it on egress grounds, so `72` did not spend
+> corpus egress on another session's change. The cheap form, if you want it
+> settled, is one query selecting only `slug, base_year`,
+> `market_size->>'current_value'` and **`market_forecast->0`** — the first array
+> element, not the series — which answers both halves for all 182 rows without
+> pulling 1,556 points.
+>
+> **One edge case the guard misses.** `data.some(d => d.year === baseYear) ||
+> !data.length || baseYear > data[0].year` correctly skips the prepend when the
+> base year is present or sits after the first point, but it never tests whether
+> `currentValue` is on the series' own trend. If any of those 141 rows has a
+> `current_value` that disagrees with its 2024 point by more than rounding, the
+> chart renders a visible kink at the left edge — still the publisher's own
+> figure, so not a correctness bug, but it reads as a data error on a research
+> site. The same single query gives you the minimum and maximum implied
+> first-year growth across the 141 for free.
 
 ## Needs one click from Siddhant
 
