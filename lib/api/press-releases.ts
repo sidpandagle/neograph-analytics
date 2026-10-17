@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase/client';
+import { ilikeAny, rangeFor } from './pgrst';
 import type { PressRelease, PressReleaseFilters } from './press-releases.types';
 import type { ApiResponse } from './config';
 
@@ -10,10 +11,12 @@ export async function getPressReleases(
     .select('*')
     .order('id', { ascending: false });
 
-  if (filters?.search) {
-    const q = filters.search;
-    query = query.or(`title.ilike.%${q}%,excerpt.ilike.%${q}%`);
-  }
+  const searchFilter = ilikeAny(['title', 'excerpt'], filters?.search ?? '');
+  if (searchFilter) query = query.or(searchFilter);
+
+  // Same as blogs: page/limit were accepted and ignored. See lib/api/pgrst.ts.
+  const window = rangeFor(filters?.page, filters?.limit);
+  if (window) query = query.range(window.from, window.to);
 
   const { data, error } = await query;
   if (error) return { success: false, error: 'fetch_error', message: error.message };

@@ -1,14 +1,25 @@
 import { supabase } from '@/lib/supabase/client';
+import { rangeFor } from './pgrst';
 import type { ApiResponse } from './config';
 import type { LegalPageFilters, LegalPage } from './legal-pages.types';
 
 export async function getLegalPages(
   filters?: LegalPageFilters
 ): Promise<ApiResponse<LegalPage[]>> {
-  const { data, error } = await supabase
+  /* This selected the whole table and then sliced it in JS, so asking for
+     page 2 of 10 still pulled every policy's full `content` across metered
+     egress. The window is applied by the database now. The column list is
+     explicit for the same reason: `select('*')` on a table with a long text
+     column is the pattern the egress budget is spent on. */
+  let query = supabase
     .from('neograph_legal_pages')
-    .select('*')
+    .select('id,slug,title,excerpt,content,last_updated,category,metadata')
     .order('id');
+
+  const window = rangeFor(filters?.page, filters?.limit);
+  if (window) query = query.range(window.from, window.to);
+
+  const { data, error } = await query;
 
   if (error) return { success: false, error: 'fetch_error', message: error.message };
 
@@ -23,11 +34,7 @@ export async function getLegalPages(
     metadata: row.metadata,
   }));
 
-  const page = filters?.page ?? 1;
-  const limit = filters?.limit ?? 100;
-  const start = (page - 1) * limit;
-
-  return { success: true, data: pages.slice(start, start + limit) };
+  return { success: true, data: pages };
 }
 
 export async function getLegalPageBySlug(slug: string): Promise<ApiResponse<LegalPage>> {

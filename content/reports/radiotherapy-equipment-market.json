@@ -1,0 +1,291 @@
+{
+  "report_id": "radiotherapy-equipment-market",
+  "slug": "radiotherapy-equipment-market",
+  "title": "Radiotherapy Equipment Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 8.14,
+    "forecast_value": 12.70,
+    "cagr": 7.69
+  },
+  "market_overview": {
+    "summary": "Radiotherapy equipment is the linear accelerators, cobalt-60 teletherapy units, stereotactic and robotic radiosurgery platforms, brachytherapy afterloaders, treatment planning software and manufacturer service contracts that sit behind external-beam cancer treatment. It is one of the few medical device markets with a real denominator: the IAEA has counted the world's radiotherapy infrastructure since 1959 and its DIRAC directory records nearly 8,700 radiotherapy centres and over 17,000 teletherapy machines across more than 150 countries. We publish $8.14B in 2026 rising to $12.70B by 2032 at 7.69%. On a common 2026 base, twelve published estimates span $4.13B to $13.95B, a 3.38x spread — but two of those twelve fail their own internal arithmetic, and with them removed the remaining ten span only $7.21B to $10.01B, a 1.39x spread. The growth rates across those same ten span 6.0% to 9.0%, a 1.50x spread. That is the finding and it is the reverse of what this corpus usually reports: the publishers agree about the size of radiotherapy equipment and disagree about how fast it grows, because the fleet is countable and the suppliers number three, while the replacement cycle is genuinely unknown.",
+    "key_trends": [
+      "The published market works out to $478,824 per installed teletherapy unit per year across DIRAC's 17,000 machines, and to $935,632 per radiotherapy centre per year across its 8,700 centres — equipment-and-service magnitudes, not treatment-billing magnitudes.",
+      "Three suppliers — Varian inside Siemens Healthineers, Elekta and Accuray — disclosed $6.72B of revenue in their most recent completed fiscal years, which is 82.6% of the $8.14B we publish. Radiotherapy equipment is among the most concentrated large markets in medical devices.",
+      "Service is now about half the business and the more reliable half: Elekta reports service at 44.2% of FY2025/26 net sales and Accuray at 57.0% of fiscal 2026, and Accuray's service revenue rose 4% in a year its product revenue fell 27%.",
+      "Capital spending in the United States has been the brake rather than the engine. Accuray's own 10-K language cites reduced budgets, lower capital deployment priority for radiotherapy equipment and longer installation timelines in the U.S. as weighing on revenue since fiscal 2024.",
+      "The access gap is enormous and almost entirely outside the buying markets: one teletherapy machine serves about 140,000 people in high-income countries against over 15 million in low-income countries, a 107x ratio, and only 21% of the world's countries met the IAEA's minimum radiotherapy resource requirements in 2022.",
+      "The platform is starting to leave oncology. In March 2026 the FDA cleared Varian's TrueBeam family for low-dose radiotherapy in adults with medically refractory osteoarthritis — the first clearance of a Varian radiotherapy system for a chronic musculoskeletal indication rather than cancer."
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in high-income health systems; the binding constraint elsewhere is capital and staffing, not clinical acceptance"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A countable replacement cycle. An installed base of over 17,000 teletherapy machines turning over every ten to twelve years generates recurring capital demand independent of any growth in cancer incidence.",
+      "Attached service revenue on that installed base. Elekta books SEK 7,393M of service across approximately 7,500 installed devices, about $100,648 per device per year, and describes a high attach rate of service contracts.",
+      "Documented unmet capacity. The Lancet Oncology linac-requirements study (February 2025) found a median Linear Accelerator Shortage Index of 130 across 181 countries, read as an approximately 30% global capacity shortfall, and estimated 30,470 linacs required by 2045 including replacements.",
+      "Multilateral procurement that bypasses national capital budgets. The IAEA's Rays of Hope programme has drawn more than 100 participating countries and 18 anchor centres, and has taken equipment donations directly from Varian.",
+      "Indication expansion beyond oncology, now with a regulatory precedent: FDA clearance in March 2026 of low-dose radiotherapy on TrueBeam, TrueBeam STx, VitalBeam and Edge for medically refractory osteoarthritis."
+    ],
+    "restraints": [
+      "Hospital capital budgets, which are the single gate. Accuray's fiscal 2025 Form 10-K attributes revenue pressure since fiscal 2024 to reduced budgets and a lower capital deployment priority for radiotherapy equipment in the United States.",
+      "A bunker, not just a machine. The Lancet study costs new and replacement linacs at $4.07M per unit inclusive of centre costs, so a purchase decision is a construction decision and moves on multi-year timelines.",
+      "Geopolitics and tariffs in the one large growth market: Accuray's fiscal 2026 revenue fell $56.6M to $401.9M and roughly $58M of the full-year decline was attributed to China alone, meaning the rest of the world was flat to slightly positive while one country erased the year.",
+      "Order visibility that deteriorates faster than revenue. Accuray's backlog fell about 27% to $312.5M at 30 June 2026 and Elekta's book-to-bill slipped to 1.04 from 1.09.",
+      "Staffing. A linac without radiation oncologists, medical physicists and therapists is not capacity, which is why the IAEA measures readiness as minimum resource requirements rather than machine counts alone."
+    ],
+    "opportunities": [
+      "Closing the 56-73% gap between what the world spends on radiotherapy capital each year and the $6.20B annual average the Lancet study implies is needed to 2045 — the demand is documented, the financing is not.",
+      "Low- and middle-income fleet build-out, where the IAEA puts the requirement at more than eight times current machines in low-income countries on an earlier dataset and more than 21 times on a later one.",
+      "Service and software on an ageing installed base, which grew at both disclosing suppliers in a year when equipment revenue fell at both.",
+      "Replacement of the remaining cobalt-60 teletherapy fleet with linacs, a substitution the IAEA tracks directly and which has already run to 87% linacs in Latin America and the Caribbean.",
+      "Non-oncology indications on installed machines, which monetise existing capacity rather than requiring a new bunker — the osteoarthritis clearance is the first regulated example."
+    ],
+    "challenges": [
+      "Forecast disagreement is concentrated exactly where it matters commercially. Ten coherent published estimates agree on size to within 1.39x but disagree on growth by 1.50x, so a buyer modelling this market is modelling the replacement cycle, not the market definition.",
+      "Segment splits in the published literature are unusable. The external-beam share of radiotherapy revenue is given as 48.7%, 58.6%, 82.11% and 96.0% by four different publishers — a 1.97x spread on a single segment, wider in proportion than the spread of the size estimates themselves.",
+      "Two published series in circulation are internally inconsistent: one forecasts a $5.93B market for 2032 that three suppliers already out-earn today by 1.13x, and another states three different base years and three different CAGRs on the same page.",
+      "Single-vendor extrapolation fails here. Scaling Elekta's revenue per installed device across the DIRAC fleet yields $3.87B, which is below the $6.72B three companies actually disclose, so the method that works for a pure-play proton supplier does not transfer.",
+      "Concentration cuts both ways: with three suppliers of any scale, one company's bad year in one country moves the whole published market, as Accuray's China exposure did in fiscal 2026."
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Linear accelerators (photon external-beam)",
+      "Cobalt-60 teletherapy units",
+      "Stereotactic radiosurgery and robotic radiosurgery systems",
+      "Tomotherapy and helical delivery systems",
+      "Particle therapy systems (proton and carbon ion)",
+      "Brachytherapy afterloaders and applicators",
+      "Treatment planning, simulation and verification software",
+      "Manufacturer service and maintenance contracts"
+    ],
+    "by_application": [
+      "Breast cancer",
+      "Lung and thoracic cancer",
+      "Prostate cancer",
+      "Brain and central nervous system tumours",
+      "Head and neck cancer",
+      "Cervical and gynaecological cancer",
+      "Gastrointestinal cancer",
+      "Non-oncological indications (low-dose radiotherapy, functional radiosurgery)"
+    ],
+    "by_end_user": [
+      "Hospital radiation oncology departments",
+      "Dedicated cancer centres and comprehensive cancer institutes",
+      "Academic medical centres and university hospitals",
+      "Freestanding and ambulatory radiation oncology clinics",
+      "National cancer programmes and multilateral procurement initiatives"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 8.14 },
+    { "year": 2027, "value": 8.77 },
+    { "year": 2028, "value": 9.44 },
+    { "year": 2029, "value": 10.17 },
+    { "year": 2030, "value": 10.95 },
+    { "year": 2031, "value": 11.79 },
+    { "year": 2032, "value": 12.70 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Varian, a Siemens Healthineers business",
+      "headquarters": "Palo Alto, California, United States (parent: Erlangen, Germany)",
+      "market_position": "The largest supplier by revenue, and the only one whose results are reported inside a diversified imaging group rather than standalone",
+      "description": "Siemens Healthineers reported Varian segment revenue of EUR 4,081M for fiscal 2025, ended 30 September 2025, up from EUR 3,866M a year earlier and 6.9% higher on a comparable basis; at the ECB 2025 annual average of 1.1300 USD/EUR that is $4,611.5M, or 56.7% of the market we publish on its own. The segment also contains proton therapy, interventional oncology and oncology software, so the external-beam equipment portion is less than the whole. Varian does not disclose an installed-base count. In March 2026 the FDA cleared TrueBeam, TrueBeam STx, VitalBeam and Edge for low-dose radiotherapy in adults with medically refractory osteoarthritis, the first clearance of the platform for a chronic musculoskeletal indication."
+    },
+    {
+      "company": "Elekta AB",
+      "headquarters": "Stockholm, Sweden",
+      "market_position": "The only pure-play radiotherapy supplier of scale, and the only one that publishes its installed-base count",
+      "description": "Net sales of SEK 16,718M for fiscal 2025/26, the year to 30 April 2026, down 7% as reported but up 1% at constant exchange rates against SEK 18,016M; $1,707.0M at the derived 2025 average of 9.7939 SEK/USD. Service was SEK 7,393M, 44.2% of sales. Elekta disclosed an installed base of approximately 7,500 devices at year end, which is 44.1% of DIRAC's 17,000 teletherapy machines by count while its revenue is 21.0% of the published market — a count ratio against a value ratio, not a market share. Book-to-bill was 1.04 against 1.09. The Evo CT-Linac received FDA 510(k) clearance on 16 January 2026."
+    },
+    {
+      "company": "Accuray Incorporated",
+      "headquarters": "Madison, Wisconsin, United States",
+      "market_position": "The third listed supplier, concentrated in stereotactic and helical delivery, and the most exposed of the three to single-country capital cycles",
+      "description": "Fiscal 2026 net revenue of $401.9M, down 12% from $458.5M, with product revenue down 27% to $172.7M and service revenue up 4% to $229.2M — service was 57.0% of the total. Order backlog fell about 27% to $312.5M at 30 June 2026. Roughly $58M of the full-year decline was attributed to China. Its fiscal 2025 Form 10-K states that reduced budgets and lower capital deployment priority for radiotherapy equipment, plus longer installation timelines, in the United States have weighed on revenue since fiscal 2024. The CyberKnife and TomoTherapy lines are not broken out separately."
+    },
+    {
+      "company": "IBA (Ion Beam Applications SA)",
+      "headquarters": "Louvain-la-Neuve, Belgium",
+      "market_position": "The listed pure-play in particle therapy, which is inside this scope by radiation type but is a separate market by economics",
+      "description": "IBA supplies proton therapy accelerators and beam delivery, a segment NeoGraph sizes separately at $1.82B in 2026. The relationship matters for anyone adding headlines together: proton therapy is 1.4% of DIRAC's 8,700 radiotherapy centres but 22.4% of the equipment spend we publish here. Share is not disclosed."
+    },
+    {
+      "company": "Hitachi, Ltd.",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "Particle therapy supplier inside a diversified industrial group, with no separately reported radiotherapy segment",
+      "description": "Hitachi's particle therapy business sits within a conglomerate that does not publish a radiotherapy revenue line, so its contribution to the market total cannot be measured from public disclosure. Share is not disclosed."
+    },
+    {
+      "company": "Sumitomo Heavy Industries, Ltd.",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "Particle therapy supplier inside a diversified industrial group; no separate radiotherapy disclosure",
+      "description": "As with Hitachi, the radiotherapy activity is not reported as a segment, which is part of why only three of the suppliers in this market can be measured at all. Share is not disclosed."
+    },
+    {
+      "company": "Mevion Medical Systems, Inc.",
+      "headquarters": "Littleton, Massachusetts, United States",
+      "market_position": "Private supplier of compact single-room proton systems",
+      "description": "Privately held and publishing no revenue. Named here because the supplier tail of this market is frequently invoked to justify larger market sizes; the measurable part of that tail is small, which is what rules out the $13.95B reading. Share is not disclosed."
+    },
+    {
+      "company": "Eckert & Ziegler BEBIG",
+      "headquarters": "Berlin, Germany",
+      "market_position": "Brachytherapy sources and afterloading systems — the internal-beam side of the equipment scope",
+      "description": "DIRAC records more than 3,000 brachytherapy units worldwide against over 17,000 teletherapy machines, so the internal-beam fleet is roughly a sixth of the external-beam fleet by count. No publisher in our evidence base gives a brachytherapy revenue split that survives comparison with the others, so none is published. Share is not disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Siemens Healthineers / Varian",
+      "year": 2026,
+      "event": "On 19 March 2026 the FDA granted 510(k) clearance for low-dose radiation therapy in adults with medically refractory osteoarthritis across the Varian TrueBeam, TrueBeam STx, VitalBeam and Edge systems — the first clearance of Varian's radiotherapy platform for a chronic musculoskeletal condition rather than cancer, and the first regulated route to monetising installed linac capacity outside oncology."
+    },
+    {
+      "company": "Elekta AB",
+      "year": 2026,
+      "event": "The Elekta Evo CT-Linac received FDA 510(k) clearance on 16 January 2026 (premarket notification K252188, submitted December 2025, clearance letter dated 15 January 2026, with Harmony, Synergy, Infinity and Versa HD cited as predicates), bringing its Iris AI-enhanced per-fraction imaging to the U.S. market."
+    },
+    {
+      "company": "Elekta AB",
+      "year": 2026,
+      "event": "Fiscal 2025/26, the year to 30 April 2026, closed with net sales of SEK 16,718M against SEK 18,016M — down 7% as reported but up 1% at constant exchange rates — service sales of SEK 7,393M, book-to-bill of 1.04 against 1.09, a Q4 adjusted EBIT margin of 18.9% against 16.3%, and annualised cost savings above SEK 500M from an operating-model reset completed in the fourth quarter."
+    },
+    {
+      "company": "Accuray Incorporated",
+      "year": 2026,
+      "event": "Fiscal 2026, ended 30 June 2026, brought net revenue of $401.9M, down 12%, with product revenue down 27% to $172.7M while service revenue rose 4% to $229.2M; order backlog fell about 27% to $312.5M and roughly $58M of the full-year decline was attributed to China amid tariff and trade-policy uncertainty."
+    },
+    {
+      "company": "Elekta AB",
+      "year": 2025,
+      "event": "Elekta applied a firmer interpretation of its order-intake criteria in the second quarter of fiscal 2025/26, producing a single cancellation valued at SEK 2,197M — which is why year-on-year order-intake comparisons for this supplier are not reliable and book-to-bill is cited instead."
+    },
+    {
+      "company": "Elekta AB",
+      "year": 2025,
+      "event": "The FDA cleared an expanded indication for Leksell Gamma Knife in July 2025, adding treatment of adults with refractory, drug-resistant mesial temporal lobe epilepsy — a functional rather than oncological use of stereotactic radiosurgery."
+    },
+    {
+      "company": "Moraes et al., The Lancet Oncology",
+      "year": 2025,
+      "event": "A cross-sectional study published in February 2025 analysed IAEA DIRAC and GLOBOCAN 2022 data for 181 countries to a 15 September 2024 cutoff, reporting a median Linear Accelerator Shortage Index of 130 (IQR 96-319) — an approximately 30% global capacity shortfall — and an estimated 30,470 linacs required by 2045 including replacement of obsolete devices, against a total investment requirement of $123.9 billion."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA 510(k) premarket notification, 21 CFR Part 807 Subpart E, is the route for medical linear accelerators and their indications; Elekta's Evo cleared as K252188 in January 2026 citing Harmony, Synergy, Infinity and Versa HD as predicates, which shows how incremental the pathway is for an established platform.",
+    "FDA clearance is granted per indication, not per machine, so an installed linac can gain new addressable use without new capital — the March 2026 TrueBeam-family clearance for medically refractory osteoarthritis is the first non-oncological example on the Varian platform.",
+    "EU Medical Device Regulation 2017/745 governs CE marking for radiotherapy equipment and software in the European market, with treatment planning software classified as a medical device in its own right.",
+    "IAEA safety standards and the Basic Safety Standards (GSR Part 3) set the radiation protection and justification requirements that a radiotherapy installation must satisfy; the IAEA also maintains DIRAC, the register of centres and machines that this report uses as its denominator.",
+    "National radiation-source licensing applies in parallel to device clearance: cobalt-60 teletherapy units and brachytherapy sources are regulated as sealed radioactive sources, which is one reason the installed cobalt fleet is being substituted toward linacs.",
+    "Bunker shielding and siting rules make the regulated unit of this market a facility rather than a device; the Lancet Oncology study costs new and replacement linacs at $4.07M per unit inclusive of centre costs for that reason.",
+    "Export controls, tariffs and trade policy are now a material regulatory variable rather than a background one: Accuray attributed roughly $58M of its fiscal 2026 revenue decline to China specifically, citing geopolitical developments, trade policy and tariffs."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Line-item extraction from supplier disclosure: Siemens Healthineers' fiscal 2025 fourth-quarter and full-year release for Varian segment revenue; Elekta's fiscal 2025/26 year-end report and annual report for net sales, service sales, installed-base count and book-to-bill; Accuray's fiscal 2026 results exhibit filed with the SEC and its fiscal 2025 Form 10-K for revenue, product and service split, backlog and management's own statement on U.S. capital budgets.",
+      "Currency normalisation at a single stated basis — the ECB 2025 annual average reference rates as published by the Bank of Finland, EUR/USD 1.1300 and EUR/SEK 11.0671 — with the USD/SEK cross derived and printed rather than taken from an undated spot source.",
+      "Normalisation of every published estimate to a 2026 base at that publisher's own stated CAGR before any comparison, with the arithmetic for each shown in the evidence file rather than asserted."
+    ],
+    "secondary_research": [
+      "IAEA DIRAC (DIrectory of RAdiotherapy Centres) and the IAEA's own 2026 statement of its contents: nearly 8,700 radiotherapy centres, over 17,000 teletherapy machines and more than 3,000 brachytherapy units worldwide, across more than 150 countries",
+      "Moraes, F. et al., 'Global linear accelerator requirements and personalised country recommendations: a cross-sectional, population-based study', The Lancet Oncology, Vol. 26 Issue 2, February 2025 (181 countries, 15 September 2024 data cutoff; median LSI 130; 30,470 linacs required by 2045; $123.9B investment requirement)",
+      "Siemens Healthineers AG, fiscal 2025 fourth-quarter and full-year results, 5 November 2025 (Varian segment revenue EUR 4,081M against EUR 3,866M; group revenue EUR 23,375M)",
+      "Elekta AB, Year-end report May-April 2025/26 and Annual Report 2025/26 (net sales SEK 16,718M; service SEK 7,393M; installed base approximately 7,500 devices; book-to-bill 1.04; SEK 2,197M order cancellation in Q2)",
+      "Accuray Incorporated, fourth-quarter and fiscal 2026 results, Form 8-K exhibit filed 19 August 2026, and Form 10-K for the fiscal year ended 30 June 2025",
+      "Research and Markets, Radiation Therapy Equipment Market - Global Forecast 2026-2032, published September 2026 ($8.14B in 2026 to $12.70B in 2032), and Radiotherapy Market - Global Forecast 2026-2032, published September 2026 ($10.01B to $15.72B)",
+      "Mordor Intelligence, Radiotherapy Market, updated 11 September 2026 ($9.14B in 2026 to $12.87B in 2031 at 7.08%; definition explicitly excludes diagnostic imaging, oncology drugs and radiopharmaceutical consumables)",
+      "The Business Research Company, Radiotherapy Devices Global Market Report 2026, published September 2026 ($7.21B in 2026 to $10.18B in 2030 at factory-gate values including manufacturer service)",
+      "Knowledge Sourcing Intelligence (May 2026), MarketsandMarkets (2026), Precedence Research (26 November 2025), Towards Healthcare (2025), Verified Market Reports, Verified Market Research (May 2025) and Precision Business Insights (August 2025) for the remainder of the published estimate set",
+      "Bank of Finland, 'Average annual exchange rates for the year 2025', from the ECB euro reference rate daily fixings",
+      "IAEA Rays of Hope programme materials and IAEA statements on radiotherapy access, including the one-machine-per-500-patients benchmark and the 140,000-against-15-million people-per-machine distribution"
+    ],
+    "data_validation": "Five independent divisions were computed and cross-checked. First, dollars per installed teletherapy unit: $8,140M over DIRAC's 17,000 teletherapy machines gives $478,824 per unit per year, and a bottom-up build from two unrelated sources — Elekta's disclosed service sales of SEK 7,393M over its approximately 7,500 installed devices, $100,648 per device per year, plus the Lancet Oncology study's $123,900M over 30,470 units, $4.0663M each, amortised over a ten-year replacement cycle at $406,630 — gives $507,277, which is 5.9% higher; on a twelve-year cycle the build gives $439,506, 8.2% lower. Second, dollars per centre: $8,140M over 8,700 centres is $935,632 per centre per year, and at the IAEA's own benchmark of one machine per 500 patients the 17,000-unit fleet supports 8.5 million patients of annual capacity, so the market is $958 per patient of capacity — a figure that rules out any reading of it as treatment billing. Third, the disclosed floor: Varian's EUR 4,081M at 1.1300 is $4,611.5M, Elekta's SEK 16,718M at the derived 9.7939 SEK/USD is $1,707.0M, and Accuray's $401.9M brings three suppliers to $6,720.4M, which is 82.6% of the figure we publish and 1.13x the entire 2032 market one rejected series forecasts. Fourth, counts against values: Elekta's 7,500 devices are 44.1% of the DIRAC fleet while its revenue is 21.0% of the market, a 2.10x gap which invalidates scaling any single vendor's unit economics across the fleet — doing so yields $3.87B, below the disclosed floor, and is therefore rejected. Fifth, capital flow against capital need: a 44.2-57.0% service-share bracket taken from the two suppliers who disclose one implies $3.50-4.54B of equipment flow against the $6.20B annual average the Lancet requirement implies, or 56-73%. These are plausibility tests against public registers and audited disclosure, not a market estimate of our own: no number in this report is modelled, every figure traces to a numbered source in research/radiotherapy-equipment-market-notes.md, and the regional and country arrays are empty because no named source gives a revenue split of the scope published here. DIRAC country unit counts are a register of machines, and no country's machine count was converted into a country revenue figure anywhere in this work."
+  },
+  "faqs": [
+    {
+      "question": "How large is the radiotherapy equipment market?",
+      "answer": "We publish $8.14B in 2026, rising to $12.70B by 2032 at a 7.69% CAGR. That counts linear accelerators, cobalt-60 teletherapy, stereotactic and robotic radiosurgery systems, brachytherapy afterloaders, treatment planning and verification software, and the manufacturer service contracts attached to the installed base. Twelve published estimates normalised to a 2026 base span $4.13B to $13.95B, a 3.38x spread, but two of the twelve fail their own internal arithmetic; the remaining ten span $7.21B to $10.01B, a 1.39x spread, which is unusually tight."
+    },
+    {
+      "question": "Why do the published estimates agree on size but not on growth?",
+      "answer": "Because the denominator is countable and the suppliers are few. The IAEA's DIRAC directory records nearly 8,700 radiotherapy centres and over 17,000 teletherapy machines, and three suppliers of any scale disclose $6.72B of revenue between them — 82.6% of the figure we publish. There is very little room to disagree about the level. What is genuinely unknown is how fast a 17,000-machine fleet turns over and how much of the documented unmet need in low- and middle-income countries converts into orders. A 6.0% forecast and a 9.0% forecast are two answers to that question, not two definitions of the market."
+    },
+    {
+      "question": "What does the market work out to per installed machine?",
+      "answer": "$478,824 per installed teletherapy unit per year, dividing $8.14B by DIRAC's 17,000 machines. Built from the other direction it comes to $507,277: Elekta's disclosed service sales give $100,648 per installed device per year, and the Lancet Oncology study's $123.9B over 30,470 linacs gives $4.07M per unit, which amortises to $406,630 a year on a ten-year replacement cycle. Two constructions sharing no input land 5.9% apart. Per radiotherapy centre the figure is $935,632 a year, across 1.95 machines per centre."
+    },
+    {
+      "question": "Is this the same as the radiation oncology services market?",
+      "answer": "No, and the arithmetic settles it. At the IAEA's own benchmark of one machine per 500 patients, the 17,000-unit world fleet supports 8.5 million patients of annual capacity, so $8.14B is $958 per patient treated. That is less than a planning CT costs. The published figure is the equipment-and-service cost of the capacity, amortised across the throughput it supports — not what hospitals bill for radiotherapy, which is larger by at least an order of magnitude. We do not publish a price per course of treatment because no source in our evidence base gives one."
+    },
+    {
+      "question": "How does this relate to the proton therapy market?",
+      "answer": "Proton therapy is inside this scope by radiation type and is a separate market by economics. NeoGraph sizes proton therapy at $1.82B in 2026 against the PTCOG register of roughly 125 particle therapy centres in clinical operation. So proton is 1.4% of DIRAC's 8,700 radiotherapy centres but 22.4% of the equipment spend published here — a 16x difference between its share by count and its share by value. Proton therapy is a building project with an accelerator in it at $33-160M a facility; photon radiotherapy is a $4.07M machine in a bunker, deployed 17,000 times. Do not add the two headlines together: the smaller is a component of the larger."
+    },
+    {
+      "question": "Why are there no regional or country figures in this report?",
+      "answer": "Because no named source gives a revenue split of the scope we publish, and the ones that give splits of adjacent scopes contradict each other. The external-beam share of radiotherapy revenue alone is reported as 48.7%, 58.6%, 82.11% and 96.0% by four publishers — a 1.97x spread on a single segment, wider in proportion than the spread of the size estimates. DIRAC does publish country-level machine counts, but those are a register of machines, not of revenue, and converting one into a country market size would manufacture a figure no source gives. The IAEA's access data appears in the analysis, where its derivation is visible, rather than in a regional table where it would read as sourced revenue."
+    },
+    {
+      "question": "Who are the suppliers, and what share does each hold?",
+      "answer": "Varian inside Siemens Healthineers, Elekta and Accuray are the three of any scale; IBA, Hitachi, Sumitomo Heavy Industries, Mevion, ProTom and Eckert & Ziegler BEBIG make up a small measurable tail. None of them discloses a market share and we publish none. What is public is revenue: Varian EUR 4,081M for fiscal 2025, Elekta SEK 16,718M for fiscal 2025/26, Accuray $401.9M for fiscal 2026 — $6.72B converted, or 82.6% of the market we publish. Elekta separately discloses approximately 7,500 installed devices, which is 44.1% of the DIRAC teletherapy fleet by count while its revenue is 21.0% of the market by value. That is a ratio of registers, not a market share, and the gap between the two numbers is why neither should be quoted as one."
+    },
+    {
+      "question": "How big is the global radiotherapy access gap, and is it being closed?",
+      "answer": "The Lancet Oncology linac-requirements study found a median Linear Accelerator Shortage Index of 130 across 181 countries, an approximately 30% global capacity shortfall, and put the requirement at 30,470 linacs by 2045 including replacements, costing $123.9B. That annualises to $6.20B a year. Applying the 44.2-57.0% service-share bracket disclosed by Elekta and Accuray to the $8.14B market implies $3.50-4.54B of actual equipment flow — 56% to 73% of the need. And almost all of it is spent where machines already are: the IAEA reports one machine per 140,000 people in high-income countries against over 15 million in low-income countries, with only 21% of countries meeting its minimum resource requirements in 2022."
+    }
+  ],
+  "seo": {
+    "meta_title": "Radiotherapy Equipment Market Size & Forecast 2032",
+    "meta_description": "Radiotherapy equipment: $8.14B in 2026 to $12.70B by 2032 at 7.69%. $478,824 per installed teletherapy unit, checked against IAEA DIRAC and supplier filings.",
+    "keywords": [
+      "radiotherapy equipment market size",
+      "radiation therapy equipment market",
+      "linear accelerator market",
+      "IAEA DIRAC radiotherapy centres",
+      "external beam radiotherapy market",
+      "Varian Elekta Accuray revenue",
+      "brachytherapy equipment market"
+    ]
+  },
+  "executive_summary": "Radiotherapy equipment is the rare medical device market where the published estimates broadly agree, and where that agreement can be tested rather than taken on trust. The IAEA has counted the world's radiotherapy infrastructure since 1959; its DIRAC directory records nearly 8,700 radiotherapy centres and over 17,000 teletherapy machines in more than 150 countries. Three suppliers of any scale publish audited revenue, and one of them publishes its own installed-base count. So the market has a real denominator and a measurable floor, and both can be divided through. We publish $8.14B in 2026 rising to $12.70B by 2032 at 7.69% — the rate the publisher's own endpoints imply rather than the 7.63% it states. On a common 2026 base, twelve published estimates span $4.13B to $13.95B, a 3.38x spread. But two of the twelve fail their own arithmetic: one forecasts a $5.93B market for 2032 that three suppliers already out-earn today by 1.13x, and the other states three different base years and three different growth rates on the same page. Set them aside and the remaining ten span $7.21B to $10.01B — a 1.39x spread — while their growth rates span 6.0% to 9.0%, a 1.50x spread. The growth rates disagree proportionally more than the sizes do, which is the reverse of what this corpus usually finds, and it tells you where the uncertainty actually sits: not in what radiotherapy equipment is, but in how fast a 17,000-machine fleet turns over and whether the documented capacity gap outside the buying markets ever converts into orders. The grounding reconciles unusually well. $8.14B over 17,000 teletherapy machines is $478,824 per installed unit per year; built from Elekta's disclosed service economics plus the Lancet Oncology study's costed unit price on a ten-year cycle it is $507,277 — two constructions sharing no input, 5.9% apart. Per centre the figure is $935,632 a year, and per patient of fleet capacity $958, which is what finally rules out reading these numbers as radiation oncology service revenue. Varian, Elekta and Accuray together disclosed $6.72B, which is 82.6% of what we publish: tight, and consistent with a market that really is supplied by three companies.",
+  "key_highlights": [
+    "Radiotherapy equipment: $8.14B in 2026 to $12.70B in 2032, a 7.69% CAGR derived from the publisher's own endpoints rather than its rounded 7.63%.",
+    "Twelve published estimates normalised to 2026 span $4.13B to $13.95B, a 3.38x spread; with the two internally inconsistent series removed, the remaining ten span $7.21B to $10.01B — just 1.39x.",
+    "The CAGRs across those ten span 6.0% to 9.0%, a 1.50x spread — proportionally wider than the size spread. The disagreement here is about the replacement cycle, not about the definition.",
+    "$478,824 per installed teletherapy unit per year across DIRAC's 17,000 machines, against $507,277 built bottom-up from Elekta's service economics and the Lancet Oncology study's $4.07M per unit on a ten-year cycle — 5.9% apart.",
+    "$935,632 per radiotherapy centre per year across DIRAC's 8,700 centres, and $958 per patient of fleet capacity at the IAEA's one-machine-per-500-patients benchmark: equipment magnitudes, not treatment-billing magnitudes.",
+    "Varian (EUR 4,081M), Elekta (SEK 16,718M) and Accuray ($401.9M) disclosed $6.72B between them, 82.6% of the market we publish — and 1.13x the entire 2032 market that one rejected series forecasts.",
+    "Elekta's approximately 7,500 installed devices are 44.1% of the DIRAC teletherapy fleet by count while its revenue is 21.0% of the market by value. That 2.10x gap is why no single vendor's unit economics can be scaled across this fleet."
+  ],
+  "market_context": "Radiotherapy equipment sits between two markets NeoGraph has already published, and the boundaries are countable rather than argued. Proton therapy is the component below it: at $1.82B in 2026 against the PTCOG register of roughly 125 particle therapy centres in clinical operation, proton is 1.4% of DIRAC's 8,700 radiotherapy centres but 22.4% of the equipment spend published here — a 16x difference between its share of the world's radiotherapy infrastructure by count and its share by value. The two reports are nested, not duplicated, and they are grounded differently on purpose. Proton therapy is a building project with an accelerator in it, at $33-160M a facility on a decades-long asset, which is why its central arithmetic is $13.1M per operating centre per year and why IBA's pure-play disclosure scales across its fleet. Photon radiotherapy is a $4.07M machine in a bunker on a ten-to-twelve-year cycle, deployed 17,000 times, which is why its central arithmetic is $478,824 per installed unit per year — and why the same scaling method fails: Elekta's revenue per installed device, multiplied across the DIRAC fleet, yields $3.87B, less than the $6.72B three companies actually disclose. A reader must not add the two headlines together, because the smaller is inside the larger. On the third side is oncology information systems: the treatment planning and verification software that Mordor Intelligence explicitly includes in its radiotherapy definition is the same software an OIS report counts, and no source in our evidence base separates that line, so the overlap is named here rather than netted out. Beyond the supplier economics sits the thing this market is actually for, and the gap is extreme. The IAEA reports one teletherapy machine serving about 140,000 people in high-income countries against over 15 million in low-income countries, a 107x ratio; only 21% of the world's countries met its minimum radiotherapy resource requirements in 2022; more than 20 African Union members had no radiotherapy machine at all when Rays of Hope launched. A 2025 geospatial study put the population within 120 minutes of a radiotherapy facility at 17.1% in low-income countries against 93.1% in high-income ones. The market grows at 6-9% a year while serving a documented 30% capacity shortfall, because the shortfall is not where the capital budgets are.",
+  "forecast_analysis": "The 7.69% CAGR is not our estimate of how fast radiotherapy equipment will grow; it is the rate the two endpoints of the published series we take actually imply. Research and Markets states 7.63% for $8.14B in 2026 to $12.70B in 2032, but (12.70/8.14)^(1/6) - 1 = 7.6953%. The difference is rounding, and we publish the endpoint-implied rate rather than the stated one so that the headline, the endpoints and the seven forecast points reconcile exactly instead of to within a rounding error. The intermediate years are arithmetic at that constant rate, and the chart says so. Why this series and not another: it is the only estimate with a 2026 base and a 2032 endpoint whose stated scope is explicitly equipment — external beam devices plus brachytherapy — and it sits inside the coherent cluster at $8.14B rather than at either edge. More importantly it survives the grounding. The three-supplier disclosed floor of $6.72B is 82.6% of it, which is tight but right for a three-supplier market, and two things loosen it honestly: Varian's EUR 4,081M segment also contains proton therapy, interventional oncology and oncology software, and Accuray's $401.9M was a trough year in which product revenue fell 27% with roughly $58M of the decline attributed to China. Both corrections move the ratio down. The $10.01B broad-radiotherapy reading would put three suppliers at 67.1%, leaving a $3.29B tail that is not visible in this market; the $13.95B reading would leave $7.23B and would require every machine on earth to be replaced every 5.6 years at the Lancet study's own unit cost. The real uncertainty in the forecast is not the level but the slope, and the published range makes that explicit. Across the ten coherent estimates the growth rates span 6.0% to 9.0% while the sizes span only 1.39x. The low readings model replacement inside already-equipped health systems; the high readings assume the global capacity gap starts closing. Our own flow arithmetic says it is not closing fast: applying the 44.2-57.0% service-share bracket that Elekta and Accuray disclose to $8.14B implies $3.50-4.54B of equipment spending a year, against the $6.20B annual average the Lancet Oncology requirement of 30,470 linacs and $123.9B by 2045 implies — 56% to 73% of the need, and spent overwhelmingly where machines already are.",
+  "reader_takeaways": [
+    "Never quote a radiotherapy equipment figure without checking it against the fleet. The market divides to $478,824 per installed teletherapy unit and $935,632 per radiotherapy centre per year; any published size that does not land in that band is describing something else.",
+    "The spread in this market is 1.39x once two internally inconsistent series are removed, not the 3.38x the raw range suggests. Check whether a publisher's own endpoints reconcile with its own CAGR before you average it in with the others.",
+    "The forecast disagreement is about the replacement cycle, not the definition. If you are modelling this market, you are modelling how fast 17,000 machines turn over and whether the unmet need converts to orders — the growth rates span 6.0% to 9.0% for exactly that reason.",
+    "Three companies disclose 82.6% of this market. That is not evidence the market figure is too small; it is what a three-supplier market looks like, and it is the reason no vendor market share appears in this report while all three revenue figures do.",
+    "Do not add the proton therapy headline to this one. Proton therapy is 1.4% of the world's radiotherapy centres and 22.4% of the equipment spend published here; it is a component of this number, measured differently because its economics are different."
+  ]
+}

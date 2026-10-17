@@ -239,7 +239,16 @@ function segmentLabel(key: string): string {
  * elsewhere, by_modality in the cancer diagnostics report. Any other key was
  * silently dropped, leaving a "Market Segmentation" heading above nothing.
  */
-function MarketSegmentationSection({ segmentation }: { segmentation: JsonReport['market_segmentation'] }) {
+function MarketSegmentationSection({
+  segmentation,
+  source,
+  modelling,
+}: {
+  segmentation: JsonReport['market_segmentation']
+  /** Required, like ChartFigure's own prop: a figure without a source is not publishable. */
+  source: string
+  modelling?: string
+}) {
   const entries = Object.entries(
     (segmentation ?? {}) as Record<string, (SegmentItem | string)[] | undefined>
   )
@@ -258,9 +267,17 @@ function MarketSegmentationSection({ segmentation }: { segmentation: JsonReport[
 
   return (
     <section className="mb-14">
+      {/* Every charted dimension goes out inside a ChartFigure, so each one
+          carries its source line and its /methodology link. Before this, only
+          the by_component chart did -- and it did so from a second, hardcoded
+          call site in the Charts section, which rendered the same donut twice
+          on the 11 rows that use that key. That call site is gone; this is now
+          the only place a share donut is drawn. */}
       {charted.map((entry) => (
         <div key={entry.key} className="mb-8">
-          <ComponentSharePieChart title={entry.label} segments={entry.segments} />
+          <ChartFigure source={source} modelling={modelling}>
+            <ComponentSharePieChart title={entry.label} segments={entry.segments} />
+          </ChartFigure>
         </div>
       ))}
       {listed.length > 0 && (
@@ -863,9 +880,26 @@ function KeyHighlightsSection({ highlights }: { highlights: string[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
       {highlights.map((highlight, i) => {
+        /* Splitting on the first colon and shouting everything before it in
+           12px bold uppercase was right 10 times and wrong 39. Measured over
+           the live corpus: 757 highlights on 182 rows, 49 of them containing a
+           colon, and the median prefix is 44 characters with a maximum of 142
+           -- whole sentences set as labels, because analyst prose uses colons
+           mid-sentence. Of the 49, exactly 10 are a real label and all 10 are
+           the word "Headline"; the rest are clauses like "Published estimates
+           are bimodal" or a 142-character finding about CAGR reconciliation.
+           A label is short and nominal, so that is what is required of it:
+           at most 2 words, at most 24 characters, and no sentence
+           punctuation. Everything else reads as the prose it is. */
         const colonIdx = highlight.indexOf(':')
-        const label = colonIdx > -1 ? highlight.slice(0, colonIdx) : null
-        const body = colonIdx > -1 ? highlight.slice(colonIdx + 1).trim() : highlight
+        const candidate = colonIdx > -1 ? highlight.slice(0, colonIdx).trim() : ''
+        const isLabel =
+          candidate.length > 0 &&
+          candidate.length <= 24 &&
+          !/[.,;]/.test(candidate) &&
+          candidate.split(/\s+/).length <= 2
+        const label = isLabel ? candidate : null
+        const body = isLabel ? highlight.slice(colonIdx + 1).trim() : highlight
         return (
           <div
             key={i}
@@ -1085,23 +1119,6 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
           )}
           {report.forecast_analysis && <ForecastAnalysisBlock analysis={report.forecast_analysis} />}
           <div className="grid grid-cols-1 gap-6">
-            {(report.market_segmentation.by_component ?? []).some(
-              (item): item is SegmentItem =>
-                typeof item === 'object' && item !== null && 'market_share' in item
-            ) && (
-              <ChartFigure
-                source={chartSourceNote(segmentationChart)}
-                modelling={chartModellingNote(segmentationChart)}
-              >
-                <ComponentSharePieChart
-                  title="Market Share by Component"
-                  segments={(report.market_segmentation.by_component ?? []).filter(
-                    (item): item is SegmentItem =>
-                      typeof item === 'object' && item !== null && 'market_share' in item
-                  )}
-                />
-              </ChartFigure>
-            )}
             {report.regional_analysis.length > 0 && (
               <ChartFigure
                 source={chartSourceNote(regionalChart)}
@@ -1125,7 +1142,11 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
       {/* ── Segmentation ── */}
       <section className="mb-14">
         <SectionHeading id="segmentation" num={nextSection()}>Market Segmentation</SectionHeading>
-        <MarketSegmentationSection segmentation={report.market_segmentation} />
+        <MarketSegmentationSection
+          segmentation={report.market_segmentation}
+          source={chartSourceNote(segmentationChart)}
+          modelling={chartModellingNote(segmentationChart)}
+        />
       </section>
 
 

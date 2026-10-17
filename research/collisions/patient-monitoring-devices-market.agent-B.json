@@ -1,0 +1,302 @@
+{
+  "report_id": "patient-monitoring-devices-market",
+  "slug": "patient-monitoring-devices-market",
+  "title": "Patient Monitoring Devices Market Size, Share & Forecast 2026-2032",
+  "industry": "Medical Devices",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 9.04,
+    "forecast_value": 15.43,
+    "cagr": 9.32
+  },
+  "market_overview": {
+    "summary": "This report sizes hospital and acute-care bedside multiparameter patient monitoring: the monitor at the bed across high, mid and low acuity, the transport and telemetry monitors, the central station at the nursing desk, the measurement modules and clinical software that run on them, and the manufacturer service and accessory revenue attached to the installed base. We publish $9.04B in 2026 rising to $15.43B by 2032 at 9.32%. The published literature on \"patient monitoring\" is wider apart than almost anything else in this corpus: fourteen global estimates normalised to a 2026 base span $9.04B to $186.07B, a 20.58x spread, and with the one series that fails its own arithmetic removed they still span $9.04B to $63.61B, a 7.04x spread, while their growth rates span only 5.66% to 10.46%, a 1.85x spread. Sizes disagree 3.80x more than growth rates do, and that ratio is the diagnosis: this is a definition problem, not a forecasting problem. Sorted by what each publisher's own segmentation contains, the 7.04x spread collapses into three tiers that each agree internally to within 1.6x. This report is the first tier, and it is deliberately not additive with the remote patient monitoring or wearable medical devices rows already in this corpus.",
+    "key_trends": [
+      "The market divides to $3,587-4,170 per U.S. staffed bed per year — the global figure apportioned to the United States at a published 36.0-41.85% share, then divided by the 907,216 staffed beds the AHA's 2024 Annual Survey counts. That is a hospital capital-budget magnitude, and it is the number worth quoting.",
+      "The same publisher's bedside figure is 42.9% of its own wearable-inclusive figure: $9.04B against $21.07B for 2026, same method, same window. Adding wearable and home-care monitoring to a bedside scope multiplies it by 2.33x, which is the measured size of the scope trap.",
+      "Philips Monitoring, GE HealthCare Patient Care Solutions and Baxter Front Line Care disclosed $7.63B between them for calendar 2025 — 84.4% of the figure we publish, and only 12.0-13.7% of the broad patient monitoring estimates. Three of the few firms that make hospital monitors cannot be an eighth of the hospital monitoring market.",
+      "The FDA product code does not draw the market boundary. Of 46 distinct applicants cleared under MWI and MHX between 2021 and 2026, 11 are remote, home or wearable monitoring companies: Empatica's EmbracePlus wrist wearable and Cosinuss's in-ear sensor share a product code with a Philips IntelliVue bedside monitor.",
+      "Two hospital registers disagree by 1.386x and the gap matters. The AHA counts 6,100 U.S. hospitals; CMS Provider of Services data, as analysed by MedPAC, counts about 4,400 general acute care hospitals, roughly 30% of them critical access hospitals with 25 or fewer beds running at 38% occupancy. Monitoring capital concentrates in the smaller register.",
+      "ICU beds are 12.2% of staffed beds, and the arithmetic proves this is not an ICU market: pushing the U.S. slice onto 112,369 ICU beds gives $28,961-33,668 per ICU bed per year, which would replace every ICU monitor roughly annually. The market spans all three acuity tiers, as the publisher's own segmentation states."
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in acute care in high-income health systems; the growth variable is acuity coverage and network refresh, not clinical acceptance"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A large, countable installed denominator. The AHA's 2024 Annual Survey counts 907,216 staffed beds in 6,100 U.S. hospitals, and 775,297 of those beds are in community hospitals — a base that generates recurring monitor, module and central-station replacement independent of patient volume growth.",
+      "Acuity creep down the hospital. The published scope segments monitors into high, mid and low acuity, and the per-bed arithmetic ($3,587-4,170 per staffed bed against $28,961-33,668 per ICU bed) only works if monitoring has already spread well beyond the 12.2% of staffed beds that are ICU beds.",
+      "Network and software refresh rather than device refresh. GE HealthCare cleared the Carescape Canvas 1000 display platform in August 2026 and Carescape ONE with its TruSignal module family in September 2026; Philips cleared the IntelliVue MX100 and MMX in February 2026; Baxter cleared the WAVE Clinical Platform 2.0 in January 2026. The capital event is increasingly the platform, not the box.",
+      "Attached service, consumables and digital revenue. GE describes both halves of Patient Care Solutions as including services, consumables and digital applications, and Philips' Monitoring business is presented as a platform partnership rather than a device sale — integrating data from more than 1,200 unique medical devices and processing more than 1 billion real-time patient data points daily.",
+      "A steady flow of cleared entrants keeping the category competitive: 95 clearances from 46 distinct applicants under the two physiological-monitor product codes between 2021 and 2026, against 738 clearances across the two codes since 1987."
+    ],
+    "restraints": [
+      "Hospital capital budgets are the single gate, and the per-bed figure shows how little room there is: $3,587-4,170 per staffed bed per year has to cover the monitor, the module, the central station, the network and the service contract.",
+      "The empty-bed problem in the denominator. Critical access hospitals are about 30% of the roughly 4,400 general acute care hospitals CMS counts, they have 25 or fewer inpatient beds, and MedPAC puts their FY2024 occupancy at 38% with 5% of them under 10%. A staffed bed is not automatically a monitored bed.",
+      "Incumbency and standardisation. Philips describes its installed base as the default standardisation partner with a presence across 90% of the top 100 health systems globally; replacing a monitoring estate means replacing the network, the modules and the clinical workflow at once.",
+      "Scope confusion suppresses the category's apparent growth and distorts procurement benchmarking. A buyer comparing a $9.04B bedside figure with a $63.61B \"patient monitoring\" figure is comparing a hospital equipment market with one that contains self-monitoring glucose strips, consumer wearables and telehealth services.",
+      "Segment-level data in the published literature is unusable for planning. The hospital end-user share is given as 45.6%, 52.3%, about 52%, 57.2%, 65.98% and 67.94% by six different publishers, and the regional North America share as 34.9%, 40.73%, 41.2%, 41.85%, 42.1% and more than 43%."
+    ],
+    "opportunities": [
+      "Mid- and low-acuity coverage. If high-acuity beds are already monitored and ICU beds are 12.2% of staffed beds, the addressable growth is in the other 87.8% — which is precisely the acuity tiering the published scope already contains.",
+      "Platform and software monetisation on an installed base that is already there, which is how both disclosing vendors describe their own strategy rather than a forecast we are making for them.",
+      "Vital-signs devices in ambulatory and physician-office settings, where Midmark's 800 Digital Vital Signs Device cleared in June 2026 and Baxter launched the Welch Allyn Connex 360 in September 2025 — the low-acuity end of the same register.",
+      "Consolidating the measurement-module estate. The 2026 clearances are dominated by module and display families — Philips' Multi-Measurement Module X3 and MMX, GE's TruSignal ECG, pressure, temperature and SpO2 modules — which is a replacement cycle that does not require a new bedside monitor.",
+      "Telemetry and transport monitoring as a distinct refresh: Edan's iT30/iT50 telemetry monitors cleared in August 2026 and Global Instrumentation's M12 telemetry system in May 2026, both inside the published scope and both independent of the bedside estate."
+    ],
+    "challenges": [
+      "The headline risk is scope, not forecast. Fourteen global estimates span 20.58x raw and 7.04x after excluding the one that fails its own arithmetic, while their growth rates span only 1.85x. Anyone who quotes a \"patient monitoring\" number without naming its tier is quoting a scope decision.",
+      "Three named vendor segments are 84.4% of the figure we publish, which is tight. It is loosened only by what those segments contain that is not bedside monitoring — GE's Patient Care Solutions also holds Maternal Infant Care and Anesthesia, Baxter's Front Line Care holds physical assessment and diagnostic cardiology, and Philips' Monitoring line includes Emergency Care.",
+      "No vendor publishes a monitoring revenue line that matches this scope. Philips' Monitoring figure has to be derived from an approximate percentage of a disclosed segment, and the derivation is printed rather than smoothed over.",
+      "The one quantified vendor position in the public record is a self-estimate. Philips asserts a roughly 54% equipment share for Patient Monitors and one in every two monitors globally, both footnoted to data on file. Backed out, they reconstruct $6.27B and $6.77B against a published $9.04B — corroboration of magnitude only.",
+      "Double counting with adjacent published markets is a real risk and has to be bounded rather than denied. At most $2.90B of our $9.04B sits outside hospitals and ICUs, which is at most 2.20% of the remote patient monitoring and wearable medical devices rows combined — a ceiling, not an estimate."
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "High-acuity bedside multiparameter monitors",
+      "Mid-acuity bedside multiparameter monitors",
+      "Low-acuity and spot-check vital signs monitors",
+      "Transport and transportable monitors",
+      "Telemetry and wireless ambulatory monitors",
+      "Central stations and monitoring networks",
+      "Measurement modules and parameter boards",
+      "Clinical surveillance, alarm and device-integration software",
+      "Manufacturer service, maintenance and accessory supply"
+    ],
+    "by_application": [
+      "Cardiology and cardiac surveillance",
+      "Emergency and trauma care",
+      "Surgery and anaesthesia",
+      "Neonatal and paediatric care",
+      "Respiratory care",
+      "Neurology and neurocritical care",
+      "General ward and step-down monitoring"
+    ],
+    "by_end_user": [
+      "Hospital intensive care and high-dependency units",
+      "Hospital general wards and step-down units",
+      "Hospital emergency departments and operating theatres",
+      "Ambulatory surgery centres",
+      "Specialty clinics and physician offices"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 9.04 },
+    { "year": 2027, "value": 9.88 },
+    { "year": 2028, "value": 10.80 },
+    { "year": 2029, "value": 11.81 },
+    { "year": 2030, "value": 12.91 },
+    { "year": 2031, "value": 14.11 },
+    { "year": 2032, "value": 15.43 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Philips (Koninklijke Philips N.V.) — Monitoring, within Connected Care",
+      "headquarters": "Amsterdam, Netherlands",
+      "market_position": "The largest supplier by derived segment revenue, and the only one that publicly quantifies its own position — in claims we report and do not adopt",
+      "description": "Philips does not publish a Monitoring revenue line. Connected Care sales were EUR 5,076M for calendar 2025 against EUR 5,134M in 2024, and Philips' Capital Markets Day of 10 February 2026 puts Monitoring at approximately 59% of Connected Care, Enterprise Informatics at approximately 22% and Sleep & Respiratory Care at approximately 19%, footnoting Monitoring as including Emergency Care with a divestment completed in Q4 2025. That gives EUR 2,994.8M, or $3,384.2M at the ECB 2025 annual average of 1.1300 USD/EUR — 37.4% of the market we publish, before stripping out Emergency Care, which overstates the bedside monitoring portion. The same presentation claims '1 out of every 2 patient monitors, globally', '#1 patient monitoring device player' and a share of approximately 54%, footnoted as a Philips estimated equipment market share for Patient Monitors based on the last twelve months, data on file. Those are vendor self-estimates on undisclosed data and are not published here as a market share; backed out they imply a $6.27B to $6.77B market against our $9.04B. Philips also states an installed base across 90% of the top 100 health systems globally, integration of data from more than 1,200 unique medical devices and data systems, and more than 1 billion real-time patient data points processed daily. The IntelliVue Multi-Measurement Module X3, IntelliVue MX100 and IntelliVue MMX cleared as K252726 on 6 February 2026. Share is not disclosed."
+    },
+    {
+      "company": "GE HealthCare — Patient Care Solutions",
+      "headquarters": "Chicago, Illinois, United States",
+      "market_position": "The second-largest disclosed segment, and the clearest example of why a reported segment is wider than this market",
+      "description": "Patient Care Solutions revenue was $3,086M for calendar 2025, down 1.2% from $3,125M, within total GE HealthCare revenue of $20,625M. The FY2025 Form 10-K describes the segment as two groups: Monitoring Solutions, holding Patient Monitoring and Diagnostic Cardiology, and Life Support Solutions, holding Maternal Infant Care and Anesthesia, with services, consumables and digital applications across both. Only part of that is inside this report's scope, which is why the three-vendor total of $7.63B should be read as a ceiling on concentration rather than a floor. GE's recent clearances show where the capital event now sits: the Monitor B105M/B125M/B155M/B105P/B125P family as K253277 on 24 July 2026, Carescape Canvas 1000 and Carescape Canvas Smart Display as K260343 on 28 August 2026, and Carescape ONE with the TruSignal ECG, pressure, temperature and SpO2 measurement modules as K260656 on 1 September 2026. Share is not disclosed."
+    },
+    {
+      "company": "Baxter International — Front Line Care, within Healthcare Systems & Technologies",
+      "headquarters": "Deerfield, Illinois, United States",
+      "market_position": "The third disclosed segment, weighted toward the low-acuity and ambulatory end of the register through the Welch Allyn line",
+      "description": "Front Line Care net sales were $1,160M for calendar 2025 against $1,137M, up 2% at both actual and constant rates, inside a Healthcare Systems & Technologies segment of $3,071M. Baxter's FY2025 Form 10-K attributes the increase 'primarily driven by growth in our cardiology products partially offset by a strategic product exit within our respiratory health products business', which is a reminder that the segment spans diagnostic cardiology and physical-assessment instruments as well as vital-signs monitors. Baxter launched the Welch Allyn Connex 360 vital signs monitor in September 2025, covering adult, paediatric and neonatal patients, and cleared the WAVE Clinical Platform 2.0.000 as K250135 on 16 January 2026. Share is not disclosed."
+    },
+    {
+      "company": "Shenzhen Mindray Bio-Medical Electronics Co., Ltd.",
+      "headquarters": "Shenzhen, China",
+      "market_position": "The most active non-Western entrant in the clearance register, and the largest supplier whose monitoring revenue cannot be isolated from public disclosure",
+      "description": "Mindray is among the most frequent applicants under both physiological-monitor product codes, with 22 MHX and 7 MWI clearances all-time and two in 2026 alone: the ePM Series as K260098 on 20 May 2026 and the uMEC 60 to uMEC 150 family as K253170 on 16 April 2026. Its reported Life Information and Support segment spans ventilators, anaesthesia machines, defibrillators and infusion pumps alongside monitors, so no part of it is added to the three-segment disclosed floor in this report and no revenue figure for Mindray is published here. Share is not disclosed."
+    },
+    {
+      "company": "Drägerwerk AG & Co. KGaA",
+      "headquarters": "Lübeck, Germany",
+      "market_position": "A long-standing acute-care monitoring supplier, strongest in the high-acuity and operating-theatre estate",
+      "description": "Dräger is the single most frequent MHX applicant of all time at 25 clearances under its U.S. entity plus further clearances through Shanghai Draeger Medical Instrument. Recent records inside this scope: the Infinity Acute Care System VG8.1 as K260579 on 20 August 2026, and the Vista 300 family and Vista CMS central monitoring system as K252250 and K250349 in April 2026. Dräger does not publish a patient monitoring revenue line separable from its wider medical division, so none is used in the grounding arithmetic. Share is not disclosed."
+    },
+    {
+      "company": "Nihon Kohden Corporation",
+      "headquarters": "Tokyo, Japan",
+      "market_position": "An established bedside and central-station supplier, strongest in Japan and in neurophysiology-adjacent monitoring",
+      "description": "Nihon Kohden appears in the clearance register under both its Japanese parent and Nihon Kohden Digital Health Solutions, with 11 MHX clearances under its America entity and further clearances in the 2021-2026 window. No segment revenue figure for Nihon Kohden was read off a primary filing in this research pass, so none is published and none enters the disclosed floor. Share is not disclosed."
+    },
+    {
+      "company": "Masimo Corporation",
+      "headquarters": "Irvine, California, United States",
+      "market_position": "A parameter and platform supplier rather than a full bedside-estate vendor, named by iData Research as the third-leading competitor in the U.S. monitoring market for 2025",
+      "description": "Masimo is the second most frequent MWI applicant of all time at 13 clearances, and cleared Radius VSM as K254209 on 4 June 2026 and the Masimo Root Monitoring System as K253417 on 12 August 2026. Its position rests on measurement technology adopted onto other vendors' platforms as much as on its own monitors, which is a structural reason share in this market is not cleanly attributable even in principle. No segment revenue figure is published here. Share is not disclosed."
+    },
+    {
+      "company": "Welch Allyn, Schiller, Edan Instruments, Comen, Infinium Medical, Midmark, ZOLL and Zoe Medical",
+      "headquarters": "Multiple — United States, Switzerland, China and Germany",
+      "market_position": "The measurable supplier tail, concentrated in low-acuity vital signs, telemetry and ambulatory monitoring",
+      "description": "These firms account for a substantial share of the 95 clearances from 46 distinct applicants recorded under MWI and MHX between 2021 and 2026, including Edan's iT30/iT50 telemetry monitors as K251508 on 6 August 2026, Midmark's 800 Digital Vital Signs Device as K253196 on 12 June 2026 and Infinium Medical's CLEO2 vital signs monitor as K260438 on 14 August 2026. None of them publishes a separable monitoring revenue line. They are named because the size of the supplier tail is what a reader has to judge when deciding whether a $9.04B or a $63.61B figure describes hospital monitoring; the measurable tail here is real but small. Share is not disclosed."
+    },
+    {
+      "company": "Empatica, Cosinuss, AliveCor, iHealth Labs, Casana Care, Happy Health, Medopad, Medwand, AMC Health, Aidar Health and Ward 24/7",
+      "headquarters": "Multiple — Italy, Germany, United States, United Kingdom and Denmark",
+      "market_position": "Not competitors in this market, and listed to mark the boundary: remote and wearable monitoring firms that clear under the same FDA product codes as hospital bedside monitors",
+      "description": "These eleven are the remote, home and wearable monitoring applicants among the 46 distinct applicant strings cleared under MWI and MHX between 2021 and 2026 — 23.9% of the active register. Empatica's EmbracePlus wrist platform cleared as K242737 on 6 June 2025 and Cosinuss's c-med0 alpha in-ear sensor as K253436 on 30 April 2026, both under MWI, the same code as a Philips IntelliVue or a Dräger Infinity. They are outside this report's scope and inside the remote patient monitoring and wearable medical devices rows published separately in this corpus. They appear here because the regulatory classification cannot be used as a market boundary, and anyone who builds a market by counting cleared devices under these codes will have crossed that boundary without noticing. Share is not disclosed."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "Koninklijke Philips N.V.",
+      "year": 2026,
+      "event": "At its Capital Markets Day on 10 February 2026 Philips disclosed, for the first time in this form, the internal composition of its Connected Care segment: Monitoring at approximately 59% of EUR 5.1 billion of 2025 sales, Enterprise Informatics at approximately 22% and Sleep & Respiratory Care at approximately 19%, with Monitoring footnoted as including Emergency Care following a divestment completed in the fourth quarter of 2025. The presentation also set out Monitoring's strategic framing as transforming from device vendor to platform partner, and claimed one in every two patient monitors globally, an installed base across 90% of the top 100 health systems, and a Philips-estimated equipment share of approximately 54% for Patient Monitors on last-twelve-months data held on file."
+    },
+    {
+      "company": "GE HealthCare Technologies Inc.",
+      "year": 2026,
+      "event": "Calendar 2025 Patient Care Solutions revenue of $3,086M, down 1.2% from $3,125M, was the only one of GE HealthCare's four segments to decline in a year when total revenue rose 4.8% to $20,625M — Imaging grew 4.4% to $9,245M, Advanced Visualization Solutions 4.3% to $5,354M and Pharmaceutical Diagnostics 15.6% to $2,900M. The segment's clearance activity ran the other way: the Monitor B105M/B125M/B155M/B105P/B125P family cleared as K253277 on 24 July 2026, Carescape Canvas 1000 and Carescape Canvas Smart Display as K260343 on 28 August 2026, and Carescape ONE with the TruSignal measurement-module family as K260656 on 1 September 2026."
+    },
+    {
+      "company": "Baxter International Inc.",
+      "year": 2026,
+      "event": "Front Line Care net sales reached $1,160M for calendar 2025 against $1,137M, up 2% at both actual and constant exchange rates, within a Healthcare Systems & Technologies segment of $3,071M. Baxter's FY2025 Form 10-K attributed the increase primarily to cardiology products, partly offset by a strategic product exit within its respiratory health products business — a deliberate narrowing of the segment's scope rather than a demand event. Baxter also cleared the WAVE Clinical Platform 2.0.000 as K250135 on 16 January 2026."
+    },
+    {
+      "company": "Philips Medizin Systeme Boeblingen GmbH",
+      "year": 2026,
+      "event": "The IntelliVue Multi-Measurement Module X3 (867030), IntelliVue Patient Monitor MX100 (867033) and IntelliVue MMX (867036) received FDA 510(k) clearance as K252726 on 6 February 2026 under product code MHX, physiological patient monitor with arrhythmia detection or alarms. The grouping of a module, a compact bedside monitor and a multi-measurement unit in a single submission is characteristic of how this market's capital cycle now runs: the platform and its modules refresh together."
+    },
+    {
+      "company": "Baxter International Inc.",
+      "year": 2025,
+      "event": "Baxter launched the Welch Allyn Connex 360 vital signs monitor in September 2025, capturing vital signs across adult, paediatric and neonatal patients, under Julie Foster as president of Front Line Care. It is the low-acuity and ambulatory end of the same register that the high-acuity bedside estate occupies, and the launch is the visible counterpart to the cardiology-led growth Baxter reported in the segment for the year."
+    },
+    {
+      "company": "Empatica S.r.l.",
+      "year": 2025,
+      "event": "The Empatica Health Monitoring Platform, EmbracePlus, Empatica Care and Care Portal cleared as K242737 on 6 June 2025 under product code MWI — the same physiological-monitor product code that covers hospital bedside monitors. A wrist-worn wearable platform and an ICU bedside monitor therefore share a regulatory classification, which is the single clearest demonstration that the FDA product code cannot be used to separate hospital monitoring from remote and wearable monitoring."
+    },
+    {
+      "company": "Cosinuss GmbH",
+      "year": 2026,
+      "event": "The c-med0 alpha in-ear sensor cleared as K253436 on 30 April 2026, also under product code MWI. It is one of eleven remote, home or wearable monitoring applicants among the 46 distinct applicants cleared under MWI and MHX between 2021 and 2026 — 23.9% of the active register — alongside AliveCor, iHealth Labs, Casana Care, Happy Health, Medopad, Medwand, AMC Health, Aidar Health, Ward 24/7 and Empatica."
+    },
+    {
+      "company": "American Hospital Association",
+      "year": 2026,
+      "event": "The 2026 edition of Fast Facts on U.S. Hospitals, drawn from the 2024 AHA Annual Survey and sampling AHA Hospital Statistics 2026, put the United States at 6,100 hospitals with 907,216 total staffed beds, of which 5,121 community hospitals hold 775,297 staffed beds, against 35,658,583 total admissions. The hospital count rose from the 6,093 the 2025 edition reported from the 2023 survey. These are the denominators every per-bed figure in this report divides by."
+    }
+  ],
+  "regulatory_landscape": [
+    "FDA 510(k) premarket notification is the route for these devices, under two product codes that this report uses as its regulatory register: MWI, monitor, physiological, patient (without arrhythmia detection or alarms), regulation 21 CFR 870.2300; and MHX, the same device with arrhythmia detection or alarms, regulation 21 CFR 870.1025. Both are Class II and many clearance letters list the two together.",
+    "The product codes do not separate hospital monitoring from remote or wearable monitoring, which is a regulatory fact with direct commercial consequence: 11 of the 46 distinct applicants cleared under MWI and MHX between 2021 and 2026 are remote, home or wearable monitoring companies. A market built by counting cleared devices under these codes will silently include remote monitoring.",
+    "Clearance is granted per device family and per claim rather than per installed estate, which is why the 2026 clearance record is dominated by module and display refreshes — Philips' Multi-Measurement Module X3 and MMX, GE's Carescape Canvas and Carescape ONE with the TruSignal modules — rather than by wholly new monitors.",
+    "EU Medical Device Regulation 2017/745 governs CE marking for patient monitors, central stations and the clinical software that runs on them in the European market, with monitoring and surveillance software classified as a medical device in its own right.",
+    "Alarm management is a regulated and accredited practice as well as a design problem: alarm signal safety is a standing accreditation concern for U.S. hospitals, and it is the clinical driver behind the surveillance and device-integration software inside this scope — Baxter's WAVE Clinical Platform, cleared as K250135 in January 2026, is in that category.",
+    "Device interoperability and cybersecurity obligations now attach to the monitoring network rather than to the monitor. Philips describes integrating data from more than 1,200 unique medical devices and data systems, which places the regulated unit at the level of the estate and its connections.",
+    "Medicare certification, not device clearance, governs which facilities buy: CMS Provider of Services data counts roughly 4,400 general acute care hospitals, about two-thirds paid under the inpatient prospective payment system and about 30% designated critical access hospitals at 25 or fewer beds, which is a materially smaller addressable base than the AHA's 6,100 hospitals."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Line-item extraction from vendor disclosure for the three segments the research plan names: Philips' Q4 and full-year 2025 report for Connected Care sales of EUR 5,076M and its Capital Markets Day of 10 February 2026 for the approximately 59% Monitoring share of that segment; GE HealthCare's fourth-quarter and full-year 2025 results exhibit for Patient Care Solutions revenue of $3,086M and its FY2025 Form 10-K for what that segment contains; Baxter's FY2025 Form 10-K for Front Line Care net sales of $1,160M and management's own explanation of the movement.",
+      "Direct query of the openFDA 510(k) endpoint on 18 October 2026 (dataset last updated 5 October 2026) for product codes MWI and MHX: all-time clearance counts, all-time distinct applicant counts, the decision-year distribution from 1987, and the clearance and applicant counts for the 1 January 2021 to 31 December 2026 window, with every named clearance in this report carrying its K number and decision date.",
+      "Currency normalisation at a single stated basis — the ECB 2025 annual average reference rate of EUR 1 = USD 1.1300 as published by the Bank of Finland. Philips' fiscal year is the calendar year, so the annual average is an exact match rather than an approximation, and GE HealthCare and Baxter report in US dollars with no conversion applied.",
+      "Recomputation of every published series from its own stated endpoints over its own stated period before any of them was compared, and classification of each estimate into a scope tier on the basis of its own published segmentation rather than on its title."
+    ],
+    "secondary_research": [
+      "American Hospital Association, Fast Facts on U.S. Hospitals, 2026 edition, from the 2024 AHA Annual Survey — 6,100 hospitals, 907,216 total staffed beds, 5,121 community hospitals with 775,297 staffed beds, 35,658,583 total admissions",
+      "Medicare Payment Advisory Commission, A Data Book: Health Care Spending and the Medicare Program, July 2026, Section 6 — approximately 4,400 general acute care hospitals in FY 2024 from MedPAC analysis of hospital cost-report and CMS Provider of Services data, about two-thirds IPPS and about 30% critical access hospitals, with CAH occupancy at 38%",
+      "Society of Critical Care Medicine, Critical Care Statistics, on the AHA 2023 annual survey — 112,369 ICU beds in more than 5,000 ICUs across 5,222 hospitals, 12.2% of the 916,752 staffed beds at those hospitals",
+      "openFDA 510(k) endpoint and the FDA Product Classification database for product codes MWI (21 CFR 870.2300) and MHX (21 CFR 870.1025), including the individual clearance records K252726, K253277, K260343, K260656, K250135, K260098, K253170, K260579, K252250, K250349, K254209, K253417, K251508, K252840, K253196, K260438, K252589, K253436 and K242737",
+      "360iResearch, Bedside Multi-parameter Patient Monitor Market - Global Forecast 2026-2032, published 13 January 2026 ($8.43B in 2025, $9.04B in 2026, $15.43B by 2032 at a stated 9.01%), and Multi-Parameter Patient Monitoring Systems Market - Global Forecast 2026-2032, published 14 July 2026 ($19.34B in 2025, $21.07B in 2026, $35.63B by 2032 at 9.11%, with Wearable as a portability segment and Home Care as an end user)",
+      "The Business Research Company, Multi-Parameter Patient Monitoring Equipment Global Market Report 2026, published September 2026 ($10.34B in 2026 to $14.04B in 2030 at 7.9%, at factory-gate values including services sold by the manufacturers)",
+      "Mordor Intelligence, Multiparameter Patient Monitoring Market and Patient Monitoring Market, both last updated 11 September 2026 ($13.2B and $63.61B in 2026 respectively; the first includes a Wearable/Remote Monitors device type, the second explicitly includes RPM hubs and gateways, patch monitors and telehealth and managed-monitoring services)",
+      "Polaris Market Research (December 2025, updated 10 July 2026), Research Nester (31 August 2026), Next Move Strategy Consulting (23 August 2026), Coherent Market Insights (21 May 2026), Global Market Insights (March 2026), Precedence Research (updated 10 September 2026), Fortune Business Insights (updated 28 September 2026), Grand View Research (June 2026) and Verified Market Research (updated September 2026) for the remainder of the published estimate set",
+      "iData Research, US Patient Monitoring Equipment Market, published 25 May 2026 — the United States at over $10B in 2025 to over $13B by 2032 at 3.7%, across 16 named segments of which Multi-Parameter Vital Signs Monitoring is the first and Remote Patient Monitoring the third",
+      "Bank of Finland, Average annual exchange rates for the year 2025, from the ECB euro reference rate daily fixings"
+    ],
+    "data_validation": "Five independent divisions were computed, and the arithmetic for each is printed in research/patient-monitoring-devices-market-notes.md. First, dollars per staffed bed: the global $9,040M apportioned to the United States at a published 36.0% (Fortune Business Insights' U.S. share of global sales for 2026) to 41.85% (Mordor's North America share of the multiparameter market for 2025) gives $3,254.4M to $3,783.2M, which over the AHA's 907,216 staffed beds is $3,587 to $4,170 per staffed bed per year, or $4,198 to $4,880 across the 775,297 community-hospital beds. Second, the same numerator against ICU beds: $28,961 to $33,668 per ICU bed across SCCM's 112,369, which would replace every ICU monitor roughly annually and therefore rules out an ICU-only reading and rules in the all-acuity reading the publisher's own segmentation describes. Third, the disclosed floor: Philips' Connected Care EUR 5,076M at approximately 59% Monitoring is EUR 2,994.8M, or $3,384.2M at 1.1300 USD/EUR, plus GE HealthCare Patient Care Solutions at $3,086M and Baxter Front Line Care at $1,160M, for $7,630.2M — 84.4% of the figure we publish and only 12.0% to 13.7% of the broad patient monitoring estimates, which is what rules the broad tier out as a description of hospital monitoring. That 84.4% is a ceiling on concentration, not a floor, because GE's segment also contains Maternal Infant Care and Anesthesia, Baxter's also contains physical assessment and diagnostic cardiology, and Philips' Monitoring line includes Emergency Care. Fourth, Philips' own two quantified claims backed out: $3,384.2M divided by its self-estimated 54% equipment share gives $6,267M, and doubling it on its one-in-every-two-monitors claim gives $6,768M — 69.3% and 74.9% of $9,040M, corroborating the magnitude from vendor claims that are reported but never adopted as a market share. Fifth, the register cross-check: the AHA's 6,100 hospitals against CMS Provider of Services' approximately 4,400 general acute care hospitals is a 1.386x gap, and about 30% of the smaller figure are critical access hospitals at 25 or fewer beds and 38% occupancy, so neither register is presented as the number of hospitals that buy monitoring. These are plausibility tests against public registers and audited disclosure, not a market estimate of our own: no number in this report is modelled, every figure traces to a numbered source in the notes file, and the regional and country arrays are empty because no named source gives a revenue split of the bedside multiparameter scope published here. No bed count was converted into a national market size anywhere in this work, and no monitor price or replacement cycle is used because no source in the evidence base gives one."
+  },
+  "faqs": [
+    {
+      "question": "How large is the hospital patient monitoring devices market?",
+      "answer": "We publish $9.04B in 2026 rising to $15.43B by 2032 at a 9.32% CAGR. That counts bedside multiparameter monitors across high, mid and low acuity, transport and telemetry monitors, central stations and monitoring networks, measurement modules, clinical surveillance and device-integration software, and the manufacturer service and accessory revenue attached to the installed base. Fourteen global estimates normalised to a 2026 base span $9.04B to $186.07B, a 20.58x spread; excluding the one series that fails its own arithmetic they still span $9.04B to $63.61B, a 7.04x spread. That spread is a definition problem, and the report resolves it into three named tiers."
+    },
+    {
+      "question": "Is this the same market as remote patient monitoring or wearable medical devices?",
+      "answer": "No, and this report is not additive with either of them. NeoGraph publishes remote patient monitoring and wearable medical devices as separate rows, worth $44.82B and $86.94B respectively on a 2026-equivalent basis at their own stated rates. Three bounds keep the boundary measurable rather than asserted. One publisher sizes both scopes with the same method and the same 2026-2032 window: its bedside figure is $9.04B and its wearable-inclusive figure is $21.07B, so our scope is 42.9% of its own wider reading and adding wearable and home-care monitoring multiplies a bedside scope by 2.33x. Second, at most $2.90B of our $9.04B sits outside hospitals and ICUs, which is at most 2.20% of the remote and wearable rows combined, and the true figure is lower because that ceiling includes ambulatory surgery centres and specialty clinics. Third, in a publisher that sizes the United States across all sixteen monitoring segments at over $10B, bedside multiparameter is 32.5% to 37.8% of the total. Do not add these headlines together."
+    },
+    {
+      "question": "Why are the published estimates seven times apart?",
+      "answer": "Because three different markets share the name. Sorted by what each publisher's own segmentation contains, the surviving thirteen estimates form three tiers that each agree internally to within 1.6x. The hospital and bedside tier, with no wearable or patch device type and no glucose monitoring, runs $9.04B to $14.29B, a 1.58x spread. Add a wearable or remote device type or a home-and-remote end-user segment and the tier runs $13.20B to $21.07B. The broad tier, in which four of six publishers include blood glucose monitoring and one adds remote monitoring hubs, patch monitors and telehealth services, runs $55.40B to $63.61B. Across the full set the sizes disagree 7.04x while the growth rates disagree only 1.85x — a ratio of 3.80 — which is the signature of a scope disagreement rather than a forecasting one."
+    },
+    {
+      "question": "What does the market work out to per hospital bed?",
+      "answer": "$3,587 to $4,170 per U.S. staffed bed per year. The global $9,040M is apportioned to the United States at a published share of 36.0% (Fortune Business Insights for 2026) to 41.85% (Mordor's North America share for 2025), giving $3,254.4M to $3,783.2M, which over the 907,216 staffed beds in the AHA's 2024 Annual Survey is that range; over the 775,297 community-hospital beds alone it is $4,198 to $4,880. Pushed onto ICU beds instead it is $28,961 to $33,668 per ICU bed per year across SCCM's 112,369 — which is not a credible monitoring magnitude and is what proves this is not an ICU market. ICU beds are only 12.2% of staffed beds, and the market is spread across all three acuity tiers."
+    },
+    {
+      "question": "Who supplies this market, and what share does each hold?",
+      "answer": "None of them discloses a market share and we publish none. What is public is revenue for three reported segments: Philips Monitoring, derived as approximately 59% of EUR 5,076M of Connected Care sales for calendar 2025, or $3,384.2M at the ECB 2025 annual average; GE HealthCare Patient Care Solutions at $3,086M; and Baxter Front Line Care at $1,160M — $7,630.2M together, or 84.4% of the figure we publish. Read that as a ceiling on concentration rather than a floor, because GE's segment also holds Maternal Infant Care and Anesthesia, Baxter's also holds physical assessment and diagnostic cardiology, and Philips' Monitoring line includes Emergency Care. Mindray, Dräger, Nihon Kohden and Masimo are the next tier by clearance activity and none of them publishes a separable monitoring revenue line. Philips does assert a roughly 54% equipment share for Patient Monitors and one in every two monitors globally, both footnoted to data on file; we report those as vendor claims and do not adopt them."
+    },
+    {
+      "question": "Can the FDA clearance register be used to size this market?",
+      "answer": "No, and that is a finding rather than a caveat. The two physiological-monitor product codes carry 738 clearances since 1987 — 430 under MHX and 308 under MWI — and 95 clearances from 46 distinct applicants between 2021 and 2026. But 11 of those 46 are remote, home or wearable monitoring companies: Empatica's EmbracePlus wrist platform cleared under MWI, the same product code as a Philips IntelliVue or a Dräger Infinity bedside monitor, as did Cosinuss's in-ear sensor. The regulatory classification does not distinguish a wrist sensor from an ICU monitor, so anyone who builds a patient monitoring market by counting cleared devices under these codes will have included remote monitoring without knowing it."
+    },
+    {
+      "question": "Why are there no regional or country figures in this report?",
+      "answer": "Because no named source gives a revenue split of the bedside multiparameter scope we publish, and the sources that give splits of adjacent scopes contradict each other. The North America share is reported as 34.9%, 40.73%, 41.2%, 41.85%, 42.1% and more than 43% by six different publishers across scopes that themselves differ by 7x. The hospital end-user share is reported as 45.6%, 52.3%, about 52%, 57.2%, 65.98% and 67.94%. One publisher states its Asia Pacific market at both $134.05 million and $13.55 billion for adjacent years on the same page. We use a 36.0% to 41.85% U.S. bracket once, inside the per-bed arithmetic, where the derivation and the scope mismatch are both visible — and never as a regional revenue figure. The AHA and CMS counts in this report are registers of hospitals and beds, not of revenue, and no bed count was converted into a national market size."
+    },
+    {
+      "question": "Which estimate did you exclude, and why?",
+      "answer": "Verified Market Research's series, at $151.40B in 2025 to $682.63B by 2033 with a stated 22.9% CAGR. There is no reading of its own endpoints that produces that rate: over 2025-2033 they imply 20.71%, and over 2025-2032 they imply 24.00%. The page also names 2024 as its base year while quoting 2025 values, and it claims to exclude consumer wearables not integrated into clinical monitoring while landing at 2.9x the next-highest estimate. Normalised to 2026 it would be $186.07B, at which level the three named vendor segments would be 4.1% of the market — a structure that does not exist in medical devices. Every other series we collected reconciles with its own stated CAGR to within 0.12 points, and thirteen of fifteen to within 0.06, which is itself evidence that these publishers are making scope decisions rather than arithmetic errors."
+    }
+  ],
+  "seo": {
+    "meta_title": "Patient Monitoring Devices Market Size & Forecast 2032",
+    "meta_description": "Hospital patient monitoring: $9.04B in 2026 to $15.43B by 2032 at 9.32%. $3,587-4,170 per U.S. staffed bed, checked against AHA, CMS and vendor filings.",
+    "keywords": [
+      "patient monitoring devices market size",
+      "multiparameter patient monitoring market",
+      "bedside patient monitor market",
+      "hospital patient monitoring equipment",
+      "Philips GE Baxter patient monitoring revenue",
+      "AHA staffed beds patient monitoring",
+      "FDA 510k physiological monitor product code"
+    ]
+  },
+  "executive_summary": "Patient monitoring is the market in this corpus where the published literature disagrees most, and almost none of the disagreement is about the future. Fourteen global estimates normalised to a 2026 base span $9.04B to $186.07B — a 20.58x spread. Exclude the one series that fails its own arithmetic under every reading of its own endpoints and thirteen remain, spanning $9.04B to $63.61B, a 7.04x spread, while their growth rates span only 5.66% to 10.46%, a 1.85x spread. The sizes disagree 3.80x more than the growth rates do, and in a market with no single countable fleet that ratio is the diagnosis: nobody is forecasting badly, and everybody is sizing something different. Sort the thirteen by what their own segmentation contains and the 7.04x collapses. The hospital and bedside tier, with no wearable or patch device type and no glucose monitoring, runs $9.04B to $14.29B — a 1.58x spread. Add a wearable or remote device type and the tier runs $13.20B to $21.07B. The broad tier, in which four of six publishers put blood glucose monitoring inside patient monitoring and one adds remote monitoring hubs, patch monitors and telehealth services, runs $55.40B to $63.61B. Each tier agrees internally to within 1.6x; across the tiers they differ by 7x. We publish the first tier: $9.04B in 2026 to $15.43B by 2032 at 9.32%, which is the rate the publisher's own endpoints imply rather than the 9.01% it states from a 2025 base. The grounding holds in both directions. Apportioned to the United States at a published 36.0% to 41.85% share and divided by the 907,216 staffed beds the AHA's 2024 Annual Survey counts, the market is $3,587 to $4,170 per staffed bed per year — a hospital capital-budget magnitude. Pushed onto the 112,369 ICU beds SCCM counts it is $28,961 to $33,668, which rules out an ICU-only reading. And the three reported vendor segments the research plan names — Philips Monitoring at $3,384.2M derived from EUR 5,076M of Connected Care sales, GE HealthCare Patient Care Solutions at $3,086M and Baxter Front Line Care at $1,160M — come to $7,630.2M, which is 84.4% of what we publish and only 12.0% to 13.7% of the broad tier. Three of the handful of firms that make hospital bedside monitors cannot be an eighth of the hospital monitoring market. That single ratio settles the scope question that fourteen published estimates leave open.",
+  "key_highlights": [
+    "Hospital and acute-care bedside multiparameter patient monitoring: $9.04B in 2026 to $15.43B in 2032, a 9.32% CAGR derived from the publisher's own endpoints rather than the 9.01% it states from a 2025 base.",
+    "Fourteen global estimates normalised to 2026 span $9.04B to $186.07B, a 20.58x spread; excluding the one that fails its own arithmetic, thirteen span $9.04B to $63.61B — still 7.04x.",
+    "The CAGRs across those thirteen span only 5.66% to 10.46%, a 1.85x spread. Sizes disagree 3.80x more than growth rates do, which is the signature of a definition problem rather than a forecasting one.",
+    "The 7.04x spread is three tiers, each internally agreeing to within 1.6x: hospital bedside at $9.04-14.29B, wearable-inclusive multiparameter at $13.20-21.07B, and broad patient monitoring at $55.40-63.61B.",
+    "$3,587 to $4,170 per U.S. staffed bed per year across the AHA's 907,216 staffed beds, or $4,198 to $4,880 across the 775,297 community-hospital beds — against $28,961 to $33,668 per ICU bed, which rules out an ICU-only reading.",
+    "Philips Monitoring ($3,384.2M derived), GE HealthCare Patient Care Solutions ($3,086M) and Baxter Front Line Care ($1,160M) disclosed $7,630.2M for calendar 2025 — 84.4% of the figure we publish and 12.0-13.7% of the broad tier.",
+    "One publisher sizes bedside monitoring at $9.04B and wearable-inclusive multiparameter at $21.07B for the same 2026 base and the same 2032 endpoint: a 2.33x multiple for the same scope decision, which is how the overlap with the remote and wearable rows is bounded rather than asserted."
+  ],
+  "market_context": "This report must be read alongside three rows already in this corpus, and it is not additive with any of them. NeoGraph publishes remote-patient-monitoring-market at $26.0B in 2023 to $133.15B by 2032 at 19.9%, and wearable-medical-devices-market at $55.7B in 2023 to $211.82B by 2032 at 16.0%; advanced to a 2026 base at their own stated rates those are $44.82B and $86.94B, or $131.76B together, against our $9.04B. A third adjacency, continuous-glucose-monitoring-market, is the single largest reason the broad tier of patient monitoring estimates is seven times the hospital tier: four of the six broad publishers put self-monitoring and continuous glucose monitoring inside patient monitoring devices, and one of them states cardiac monitoring at only 14.8% of its 2025 revenue while naming blood glucose as its largest product line. Three bounds quantify the overlap rather than asserting there is none. First, one publisher sizes both scopes with the same method and the same 2026-2032 window: bedside multiparameter at $9.04B in 2026 to $15.43B in 2032, and multiparameter systems with Wearable as a portability segment and Home Care as an end user at $21.07B to $35.63B. The difference is $12.03B, our scope is 42.9% of its own wider reading, and the multiple for that one scope decision is 2.33x. Second, the only named end-user split available for a multiparameter scope puts hospitals and ICUs at 67.94% of revenue, so at most $2,898M of our $9,040M sits outside hospitals and ICUs — at most 6.47% of the remote patient monitoring row and 2.20% of the two rows combined, and lower still because that ceiling includes ambulatory surgery centres and specialty clinics, which are facility settings rather than remote monitoring. Third, a publisher that sizes the United States across all sixteen monitoring segments at over $10B in 2025 — with Multi-Parameter Vital Signs Monitoring as segment one and Remote Patient Monitoring as segment three — puts bedside multiparameter at 32.5% to 37.8% of the U.S. total. The regulatory register offers no help with the boundary and is worth stating as part of the context: 11 of the 46 distinct applicants cleared under FDA product codes MWI and MHX between 2021 and 2026 are remote, home or wearable monitoring companies, and Empatica's wrist platform shares a product code with a Dräger Infinity bedside monitor. The boundary in this market has to be drawn on what the device is for and where it sits, and this report draws it at the bed.",
+  "forecast_analysis": "The 9.32% CAGR is not our estimate of how fast hospital monitoring will grow; it is the rate the two endpoints of the published series we take actually imply. 360iResearch states 9.01% for its bedside multiparameter series, and that rate reconciles exactly over 2025-2032 from its own $8.43B base — 8.43 times 1.0901 to the seventh is 15.42 against a stated 15.43. But its own 2026 estimate of $9.04B sits below that curve: the trend line passes through $9.19B, and $8.43B to $9.04B is only 7.24% growth. So from a 2026 base the endpoints imply 9.32%, not 9.01%. We publish the publisher's 2026 point, the publisher's 2032 point and the rate they imply, so that the headline, the endpoints and the seven forecast points reconcile exactly rather than to within 0.31 points; 9.04 times 1.0932 to the sixth is 15.4300 against a forecast value of 15.43. The intermediate years are arithmetic at that constant rate and the chart says so. Why this series and not another: it is the only estimate in the evidence base with a 2026 base, a 2032 endpoint and a published segmentation that contains no wearable, patch or remote device type — portability is fixed and portable bedside, device type is high, mid and low acuity, and technology is cloud-connected, wired and wireless telemetry. It also survives the grounding. The three named vendor segments are 84.4% of it, which is tight but right for a concentrated capital market and loosens in the honest direction once GE's Maternal Infant Care and Anesthesia lines, Baxter's physical assessment and diagnostic cardiology lines and Philips' Emergency Care content are set aside. Backing out Philips' own two quantified claims — an approximately 54% equipment share for Patient Monitors, and one in every two monitors globally — reconstructs $6.27B and $6.77B, or 69.3% and 74.9% of our figure, which is where vendor claims on undisclosed data should land relative to a scope that also contains central stations, networks and software. The real uncertainty here is not the slope but the level, and the published range makes that explicit: within the hospital tier the sizes span 1.58x and the growth rates 1.65x, essentially equal, so once the definition is fixed the remaining disagreement is evenly split. It is only across the tiers that the picture breaks down, and it breaks down 7.04x in size against 1.85x in growth. Fix the scope and this is a well-behaved forecast; leave it unfixed and the headline is meaningless.",
+  "reader_takeaways": [
+    "Never quote a patient monitoring figure without naming its tier. Hospital bedside multiparameter runs $9.04-14.29B in 2026; add wearable or remote device types and it runs $13.20-21.07B; broad patient monitoring runs $55.40-63.61B. The 7.04x gap between the ends is a scope decision, not a disagreement about the market.",
+    "This report is not additive with the remote patient monitoring or wearable medical devices rows, and the overlap is bounded rather than asserted: at most $2.90B of our $9.04B sits outside hospitals and ICUs, which is at most 2.20% of those two rows combined, and one publisher's own pair of reports puts the same scope decision at a 2.33x multiple.",
+    "Check any published figure against the bed register before using it. The market divides to $3,587-4,170 per U.S. staffed bed per year; a figure that implies $28,888 per staffed bed, as the broad tier does, is not describing hospital capital spending.",
+    "Three companies disclose 84.4% of this market, and that number is a ceiling rather than a floor. GE's Patient Care Solutions also contains Maternal Infant Care and Anesthesia, Baxter's Front Line Care also contains physical assessment and diagnostic cardiology, and Philips' Monitoring line includes Emergency Care — so the true bedside concentration is lower, and no vendor market share appears anywhere in this report.",
+    "Do not use the FDA product code as a market boundary. Of 46 distinct applicants cleared under MWI and MHX between 2021 and 2026, 11 are remote, home or wearable monitoring companies — a wrist-worn wearable and an ICU bedside monitor share a regulatory classification, and a market built by counting clearances under these codes has already crossed the boundary."
+  ]
+}

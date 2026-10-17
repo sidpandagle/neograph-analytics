@@ -4,8 +4,11 @@ Standing instruction (2026-10-16): add **30-50 new research reports** to the
 corpus, held to `REPORT-AUTHORING-BRIEF.md`. Corpus was **142** rows at the
 start of this expansion.
 
-Research runs in batches of 5, two batches in flight at a time (the two-subagent
-limit). A batch is done when every draft in it passes
+Research runs in batches of 5, now **one agent per topic with up to five in
+flight at once** (raised from two on Siddhant's instruction, 2026-10-17; the cap
+lives in `.claude/skills/research/SKILL.md`). Each agent owns only its own
+`research/<slug>-notes.md` and `content/reports/<slug>.json`, so no two write the
+same file. A batch is done when every draft in it passes
 `node scripts/report-db.mjs check`. Publishing is the session owner's step.
 
 Topics were chosen against `research/corpus-slugs.txt` so none duplicates an
@@ -93,3 +96,94 @@ than no report.
 Every one of the ten: `regional_analysis` and `country_analysis` empty, no vendor
 market shares anywhere, base years derived from a named publisher's own figure
 advanced at that publisher's own rate, and the derivation stated on the page.
+
+## Round 5 queue — appended 2026-10-17
+
+Rounds 1-4 are all **published**; the live corpus is **182** rows (142 at the
+start of the expansion, +40), so the prose above about "thirty reports held for
+the 21:00 IST merge" describes a state that has already cleared. The 30-50
+target is met. This round exists because `/research` was invoked again with the
+queue empty, which the skill answers by proposing five topics.
+
+Each topic below was admitted on one test: a public, countable register exists
+to divide a headline figure through. The register is named in the row, because a
+topic with no register is dropped rather than drafted.
+
+| # | Slug | Industry | Round | Countable register | State |
+|---|---|---|---|---|---|
+| 41 | dialysis-and-renal-care-market | Medical Devices | 5A | ESRD Networks national census (7,556 centres / 516,837 dialysis patients, 31 Mar 2025); CMS CY2026 ESRD PPS base rate $281.71/treatment; MedPAC FFS dialysis spending; FMC / DaVita / Vantive disclosed revenue | check-passed (2026-10-17) |
+| 42 | contract-research-organization-market | Life Sciences | 5A | ClinicalTrials.gov API v2 industry-lead interventional starts and ongoing counts; eight disclosed FY2025 CRO revenue lines | check-passed (2026-10-17) |
+| 43 | pharmacovigilance-market | Healthcare IT | 5A | openFDA `drug/event` counts by receivedate; EudraVigilance ICSRs processed (EMA/371010/2025); FDA's own $37M/6M-reports disclosure | check-passed (2026-10-17) |
+| 44 | radiotherapy-equipment-market | Medical Devices | 5A | IAEA DIRAC centre and teletherapy-unit counts; Varian / Elekta / Accuray disclosed revenue; PTCOG particle-centre count | check-passed (2026-10-17) |
+| 45 | ambulatory-surgery-centers-market | Healthcare IT | 5A | MedPAC certified-ASC count and FFS ASC spending; CMS CY2026 ASC payment system; USPI / Surgery Partners facility counts | check-passed (2026-10-17) |
+
+### Round 5 — all five pass `check`, held for the publish window
+
+Five topics, five agents in parallel (the cap raised from two to five on
+Siddhant's instruction mid-run), one agent per topic, each owning only its own
+notes and report JSON. Every figure below was re-derived by the session owner
+rather than taken from the agent's report: `check` re-run on all five, every CAGR
+recomputed from its own endpoints, and each report's headline grounding division
+recomputed independently. All reproduced.
+
+| Slug | Base -> forecast | CAGR | Size spread | CAGR spread | Grounding |
+|---|---|---|---|---|---|
+| dialysis-and-renal-care-market | $83.97B -> $118.79B | 5.95% | **6.65x** | 1.80x | FMC $22.18B + DaVita $13.643B = $35.823B, **1.77x the whole published machines market**; $281.71 CMS bundle x 156 = $43,947/patient-yr against DaVita's realised $58,519; 516,837 patients x $58,519 = $30.245B US ceiling = $4.003M across 7,556 centres vs $4.416M at DaVita's own 2,657 |
+| contract-research-organization-market | $81.13B -> $135.33B | 8.90% | 2.06x | 1.38x | Eight disclosed FY2025 CRO lines = **$36.768B**, 49.3% of R&M's implied 2025 base; $81.13B / 16,499 ongoing trials = $4.917M/trial-yr, x3 yrs = 77.6% of the $19.0M median pivotal cost; industry-lead starts **-1.99% CAGR** 2021-25 against a published 8.90% |
+| pharmacovigilance-market | $10.45B -> $20.38B | 11.78% | 1.50x | **2.92x** | $10.45B / 1,307,769 FAERS reports = **$7,991 per report**, 13.3-40.0x the only published per-case rate card; FDA's own $37M / 6M reports = **$6.17**, a 1,295x ratio; containment at Mordor's 54.88% outsourced ratio = 64.5% of all IQVIA R&DS, against 84.6% for the $13.71B reading |
+| radiotherapy-equipment-market | $8.14B -> $12.70B | 7.69% | 1.39x (3.38x raw) | 1.50x | $8,140M / 17,000 DIRAC teletherapy units = **$478,824/unit/yr**, against $100,648 measured Elekta service + $406,630 Lancet capital per year = $507,277, **5.9% apart**; Varian + Elekta + Accuray = $6,720.4M = 82.6% of the headline |
+| ambulatory-surgery-centers-market | $109.04B -> $141.19B | 4.40% | 3.47x (31.0x raw) | 2.23x | Coherent's own NA share x headline / 6,436 certified ASCs = **$7.404M per ASC**, against $7.575M from Fortune's US figure — **2.3% apart**; Medicare FFS $7,500M / 6,436 = $1.1653M; MedPAC's own components 1.032 x 1.008 x 1.084 x 1.004 = 1.1321, reproducing its published 13.0% rise to 0.2 points |
+
+Every one: `regional_analysis` and `country_analysis` empty, no vendor
+`market_share` anywhere, 20-28 numbered sources per notes file, no U+FFFD, and
+the CAGR reconciling to its own endpoints within **0.005 points** on all five.
+
+
+## Round 6 queue — appended 2026-10-18
+
+Round 5's five rows are `check-passed` and held, so the queue was again empty
+and the skill's answer is again to propose five. Live corpus at 00:43 IST on the
+18th: **182** rows, none of the five slugs below among them, and none a regional
+clone.
+
+**This round is deliberately homogeneous, and that is the design.** Four of the
+five are Medicare-rate-regulated service markets where **the price is published
+by law** — CMS prints the per-visit, per-diem or per-treatment amount, and CMS
+also prints how many certified providers exist. In those markets the grounding
+division is not an estimate dressed as arithmetic: rate x volume x providers is
+most of the market, from two public tables. That makes them the sharpest possible
+test of the finding round 5 produced. If the size spread in a market whose price
+is statutory is still wide, the spread cannot be a forecasting problem and cannot
+be a data problem — it can only be a scope problem, and the tiers should be
+nameable exactly. If it is narrow, that is the first confirmation the diagnostic
+has had from a market where the answer is independently knowable.
+
+| # | Slug | Industry | Round | Countable register | State |
+|---|---|---|---|---|---|
+| 46 | hospice-care-market | Healthcare IT | 6A | CMS Medicare-certified hospice count and Care Compare file; MedPAC hospice chapter FFS spending and margin; **FY**2026 hospice final rule CMS-1835-F, 90 FR 37404 (5 Aug 2025) per-diem rates (RHC days 1-60 / 61+, CHC, IRC, GIP) and the $35,361.44 aggregate cap; Chemed/VITAS and Addus disclosed revenue | check-passed (2026-10-18) — **row corrected:** it said "CY2026", and there is no CY2026 hospice rule; Medicare hospice is paid on the federal fiscal year. The agent caught the error in the brief it was given. |
+| 47 | skilled-nursing-facilities-market | Healthcare IT | 6A | CMS certified SNF count (Care Compare / Provider of Services file); MedPAC SNF chapter FFS spending, occupancy and margin; FY2026 SNF PPS final rule PDPM base rates; Ensign / PACS / Brookdale disclosed revenue and facility counts | **needs review (2026-10-18)** — two defects, both found by cross-checking rather than by `check`. (a) The note that said "scope corrected to U.S. in the title" was **false**: `title` and `seo.meta_title` are both geo-neutral, and the headline is Coherent's **global** $453.31B. (b) That source fails a US register cross-check — its own 45.3% North America share gives `0.453 x 453.31 = $205.35B`, which is **6.6% below** the CMS NHEA 2024 US-alone actual of $219.9B, a figure the NA component must contain (`(219.9 - 205.35) / 219.9 = 6.62%`). Raised by peer session neograph-analytics-72 and re-derived here. The peer first put it at 4.3%; both are right against different denominators — 4.3% measures against $214.65B, a *published 2026 US estimate*, while 6.6% measures against the *measured 2024 actual*. **6.6% is the version to use:** a forward-dated regional component falling below a historical national measurement cannot be rescued by a growth assumption, whereas falling below another house's estimate can. Do not publish until re-sourced or the contradiction is stated on the page. |
+| 48 | home-infusion-therapy-market | Life Sciences | 6A | CMS qualified Home Infusion Therapy supplier enrollment list; CY2026 HIT per-visit payment amounts by payment category (**three** categories x initial vs subsequent = six HCPCS codes, per 42 CFR 414.1505 — this row said "1-4", which the agent corrected); Medicare DME/HIT claims; Option Care Health disclosed revenue and site count | check-passed (2026-10-18), **owned by peer session neograph-analytics-72** — committed here at 8ceaf73 as $39.4B (2025) -> $66.6B, then superseded in the tree by $42.47B (2026) -> $66.6B at 7.79%, 2026-2032. The surviving version is the coherently paired one (`42.47` x17 in the notes, `190.22` x7 including the statutory per-visit grounding), so it stands; the 2025 figures are withdrawn. `check` exit 0, verifier reproduces. |
+| 49 | patient-monitoring-devices-market | Medical Devices | 6A | AHA Annual Survey hospital and **staffed bed** counts; CMS Provider of Services hospital file; FDA 510(k) product codes for physiological monitors; Philips Monitoring & Analytics, GE HealthCare PCS and Baxter (Hillrom) Front Line Care disclosed segment revenue | **needs review (2026-10-18)** — two agents drafted this slug at once. Resolved: agent B's evidence file landed and now matches its JSON (`9.04` 32/25, `9.32` 7/7), so the sourcing gap is closed. Live: $9.04B (2026) -> $15.43B (2032) at 9.32%, 360iResearch, wearables excluded; `check` exit 0, verifier reproduces at 0.0000 pt. **Not check-passed** only because the JSON carries 8 populated `recent_developments` against a dispatch requiring `[]` — a read, not a re-draft. Agent A's independent draft kept in `research/collisions/`. **Blocker closed by 72 (owner of the surviving JSON) at 01:50:** the `[]` requirement was 9a's dispatch, not 72's — 72's brief required well-formed objects. All 8 entries read: each carries a company, an integer year and a dated event, and **K242737 was confirmed against openFDA** (applicant Empatica S.r.l., decision 2025-06-06, product code MWI) exactly as stated. **check-passed (2026-10-18).** |
+| 50 | digital-pathology-market | Healthcare IT | 6A | FDA cleared/de novo whole-slide-imaging device list (DEN and 510(k) numbers); CMS CLIA-certified laboratory counts by type; CMS Clinical Lab Fee Schedule and PFS amounts for 88305 and the digital add-on codes; Roche / Leica (Danaher) / Philips disclosed pathology lines | **re-paired (2026-10-18)** — the $1.66B/16.22% draft was live but **unsourced against the notes on disk**: "16.22" appeared 0 times in them and its grounding division `$147.70/specimen` 0 times, because the surviving notes file belongs to the other draft. The sourcing rule therefore picks the version, not a view on publishers: the live pair is now $2,010M (2026) -> $3,541.46M at 9.90%, which the notes do carry (`2,010` x23, `9.90` x10). `check` exit 0. The unsourced $1.66B JSON is kept at `research/collisions/digital-pathology-market.unsourced-1.66B.json`; it is a complete report and only wants an evidence file, which no longer exists on disk. |
+
+### Pairing debt found by `--pair`, 2026-10-18 (pre-existing, both live)
+
+Two published rows fail the pairing test and are queued for repair rather than
+left silent. Neither is a round 6 row.
+
+| Slug | Defect | Fix |
+|---|---|---|
+| `revenue-cycle-management-market` | no `research/<slug>-notes.md` exists at all | reconstruct the evidence file — **unclaimed, left to 9a** per the 02:00 exchange. It is real research, not a transcription fix, and both sessions are at ~70% of the 5h window. |
+| `veterinary-diagnostics-market` | JSON `forecast_value` 16.48 vs notes 16.49 (x2); 16.48 absent from notes | **fixed and published by 72, 02:05 IST.** The notes print the derivation: Mordor publishes $9.53B (2026), $15.05B (2031) and 9.57% for 2026-2031, and 9.53 x 1.0957^6 = **16.49084**. 16.48 also implied 9.5580%, contradicting the JSON's own stated 9.57%, so it was a transcription slip and not a second reading of the source. All 6 occurrences corrected; CAGR delta 0.0120 -> 0.0009 pt; `--pair` now 16/16, paired. Published as an edit to an already-built row, which reaches prod via ISR with no deploy - corpus still 182, confirming an overwrite rather than an addition. |
+
+Both reach production through ISR with no deploy, so neither waits on a window.
+
+Admission test applied as usual: a public, countable register must exist to
+divide a headline through, and the register is named in the row. Rejections from
+this pass, recorded so they are not re-proposed: **medical-device sterilization**
+(FDA publishes a contract EO-facility list, but no count of cycles or devices
+processed, so the denominator is a facility count against a market whose unit is
+a device-load — not divisible); **single-use bioprocessing** (no public register
+at all; the only denominators available are vendor-reported and so are the
+numerators); **clinical trial site management** (not separable from row 42's
+CRO register without double-counting the same trial starts).

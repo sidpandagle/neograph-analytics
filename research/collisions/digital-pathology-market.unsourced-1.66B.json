@@ -1,0 +1,258 @@
+{
+  "report_id": "digital-pathology-market",
+  "slug": "digital-pathology-market",
+  "title": "Digital Pathology Market Size, Share and Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 1.66,
+    "forecast_value": 4.09,
+    "cagr": 16.22
+  },
+  "executive_summary": "Seventeen published estimates of the digital pathology market put its 2025 base-year size between $777.7 million and $4.25 billion, and its 2030 endpoint between $1.79 billion and $17.28 billion. Read quickly, that looks like disagreement about growth. It is not. Across the global, whole-market estimates with a 2025 base year, the base-year figures spread 5.47x while the compound growth rates spread only 1.79x -- and on the narrower comparison that drops the single highest outlier, 1.83x against 1.46x. Base-year disagreement dominates on either reading.\n\nThe scope boundary can be measured rather than guessed at, because one publisher measures it accidentally. The Business Research Company publishes a digital pathology report and a separate whole slide imaging report in the same 2026 edition against the same 2025 base year: $1.42 billion for the first, $0.88 billion for the second. On one house holding its own definition constant, 62% of the digital pathology market is whole-slide-imaging scanner hardware. MarketsandMarkets independently states that hardware accounts for the largest share of its product split, and Allied Market Research put scanners above two-thirds of product revenue in 2020.\n\nThat makes the AI-algorithm figures hard to accept as published. Coherent Market Insights scopes AI-based digital pathology at $1.19 billion for 2025 -- 84% of The Business Research Company's whole-market figure for the same year. If scanners are 62% of the market, AI cannot also be 84% of it. The AI-labelled series must be re-cutting the same hardware and platform base rather than sizing algorithm licences.\n\nThe reimbursement register settles how this market is actually funded. CPT 88305, level IV surgical pathology, carries 2.10 total RVUs in the CMS CY2026 fee schedule at a $33.4009 conversion factor, so $70.14 nationally. The digital pathology add-on codes 0751T-0763T are Category III, carry no assigned RVU, and two Medicare contractors confirmed no additional payment for dates of service from 19 February 2024. Digitisation is therefore a cost with a zero reimbursement increment. Divide the $1.66 billion 2026 world market by the 11,238,972 Medicare Part B 88305 services counted in a peer-reviewed analysis of CMS claims and you get $147.70 per Medicare level-IV specimen, 2.11x what Medicare pays for the specimen itself. Against total Medicare 88305 dollars -- $931 million in CY2024 -- the whole world market is 1.78x. Every dollar of it comes out of laboratory operating budgets, not a payment stream.",
+  "market_context": "Digital pathology is the replacement of a glass slide and a microscope with a scanned image and a monitor. The clinical act does not change; what changes is that the specimen becomes a file, which can be routed, archived, measured and handed to an algorithm. The regulatory category is young and countable. Digital pathology sits under three FDA device regulations -- 21 CFR 864.3700 for whole slide imaging systems, viewing software, displays and artifact detection; 864.3750 for algorithms that assist the pathologist; 864.3755 for prognostic algorithms -- and the openFDA extract dated 5 October 2026 holds 46 marketing authorisations across all three.\n\nThree of those are de novo grants, in the entire category's history: the Philips IntelliSite Pathology Solution in April 2017, which created the whole-slide-imaging device type; Paige Prostate in September 2021, the first AI pathology algorithm; and ArteraAI Prostate in July 2025. Everything else is a 510(k) against those predicates. Ten distinct companies hold a whole-slide-imaging-system authorisation.\n\nThe economics are set outside the device register. US anatomic pathology is paid per specimen under the Physician Fee Schedule, and the digitisation add-on codes carry no RVU. A lab that digitises therefore pays for scanners, storage and software out of the same $70.14 it was already receiving for the specimen. That constraint, not the technology, is what paces adoption -- and it is why the published growth rates, clustered at 12-18%, describe a substitution of labour and throughput inside the lab rather than new money entering it.",
+  "forecast_analysis": "The series shown here runs from the published 2026 base of $1.66 billion to the published 2032 endpoint of $4.09 billion, both from 360iResearch via Research and Markets, published September 2026. It was chosen because it is the only estimate found that carries a 2026 base year, a 2032 endpoint and a fully published product scope -- hardware comprising brightfield and fluorescence scanners, displays and storage; software comprising image management, laboratory information and PACS; and services comprising consulting, implementation, maintenance and training. The intermediate years are geometric interpolation between those two endpoints, not separately sourced observations, and should be read as the shape the endpoints imply.\n\n360iResearch states a CAGR of 16.05%, which its own data table rounds to 16.0%. Its two published endpoints imply 16.2169% over the six years, computed as (4.09 / 1.66) raised to the power of one sixth, less one. The 0.17-point gap is the publisher's own rounding. The 16.22% published here is that reconciling rate, so that the headline values, the growth rate and the plotted series are one self-consistent arithmetic object; 1.66, 4.09 and 16.05 are all the publisher's figures and none has been moved.\n\nThis is a mid-to-broad scope series. It sits above the $1.20 to $1.42 billion cluster that several houses give for 2025 because it adds professional services, and well below the $4.25 billion that Trend X Insights gives for the same base year. Readers working to a scanner-only definition should anchor near $0.88 billion for 2025 and expect a lower rate, around 10.7%. Readers whose own definition reaches the anatomic pathology lab as a whole should note that Roche's Pathology Lab customer area alone was CHF 1,723 million in 2025 -- larger, at parity, than this entire market as the research houses scope it.",
+  "meta_title": "Digital Pathology Market Size and Forecast to 2032",
+  "meta_description": "Digital pathology estimates spread 5.47x at the base year but only 1.79x on growth. CPT 88305 and the FDA cleared-device register show why scope is the story.",
+  "meta_keywords": [
+    "digital pathology market",
+    "whole slide imaging market",
+    "digital pathology market size",
+    "computational pathology",
+    "pathology scanner market",
+    "AI pathology market",
+    "CPT 88305"
+  ],
+  "market_overview": {
+    "summary": "On the scope used by the only published estimate with both a 2026 base year and a 2032 endpoint, the digital pathology market is $1.66 billion in 2026, projected to $4.09 billion by 2032 at a 16.22% CAGR reconciling those two published endpoints. That scope covers scanners, displays and storage, image management and laboratory software, and professional services. A scanner-only definition starts near $0.88 billion for 2025; a definition reaching the whole anatomic pathology lab starts above $4 billion. The gap between them is scope, not growth: base-year estimates spread 5.47x while published growth rates spread 1.79x.",
+    "market_stage": "Growth",
+    "adoption_level": "Early clinical adoption, concentrated in high-volume laboratories",
+    "key_trends": [
+      "Base-year 2025 estimates spread 5.47x ($777.7M to $4.25B) while published CAGRs spread 1.79x (12.5% to 22.4%)",
+      "One publisher's own 2026 report pair puts whole-slide-imaging scanners at 62% of digital pathology ($0.88B of $1.42B for 2025), making hardware the majority of the modal definition",
+      "Coherent Market Insights scopes AI-based digital pathology at 84% of another house's whole-market 2025 figure, so AI-labelled series are re-cuts of the hardware base rather than algorithm-licence sizing",
+      "The digitisation add-on codes 0751T-0763T are Category III, carry no assigned RVU, and two Medicare contractors confirmed no additional payment from 19 February 2024",
+      "The FDA register holds 46 marketing authorisations across the three digital pathology regulations and only 3 de novo grants in the category's history, as of the 5 October 2026 openFDA extract",
+      "Vendor share is not computable: Roche discloses a Pathology Lab line far wider than digital pathology, Danaher discloses no Leica Biosystems revenue, and Philips discloses no pathology line at all"
+    ],
+    "market_drivers": [
+      "Pathologist supply constraints, which make image routing and workload balancing across sites valuable without new reimbursement",
+      "An expanding cleared-device base -- 23 whole-slide-imaging system authorisations and 14 viewing-software clearances -- lowering the regulatory barrier for primary diagnosis",
+      "Prognostic algorithm clearances under 21 CFR 864.3755 creating a clinical use for the archive that scanning produces"
+    ],
+    "market_challenges": [
+      "A zero reimbursement increment for digitisation, so the capital case must be made entirely on laboratory operating cost",
+      "Scope inconsistency across published estimates, making market sizing an unreliable basis for planning",
+      "No public measure of vendor share, so competitive claims cannot be checked"
+    ]
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Pathologist workload and subspecialist scarcity, which digital routing addresses without requiring new payment",
+      "A maturing cleared-device base: 23 whole-slide-imaging system authorisations, 14 viewing and image-management software clearances, 3 display clearances",
+      "Algorithm clearances that give the digitised archive a clinical, not merely administrative, purpose",
+      "Pharmaceutical and CRO demand for quantifiable tissue endpoints in trials, which is paid for outside the clinical fee schedule",
+      "Consolidation of anatomic pathology into larger reference laboratories, where the fixed cost of a scanner fleet spreads over more specimens"
+    ],
+    "restraints": [
+      "Category III digitisation codes carry no assigned RVU and no national Medicare payment, so there is no incremental revenue to fund the change",
+      "Whole-slide images are large, and storage and network cost recurs for the life of the retention obligation",
+      "Validation of a scanner for primary diagnosis is a per-laboratory burden, not a one-off vendor certification",
+      "Scanner hardware is the majority of the spend, which makes adoption a capital decision subject to capital rationing",
+      "Glass-slide workflow already works, so the displaced cost base is labour and logistics rather than a failing system"
+    ],
+    "opportunities": [
+      "Prognostic and second-read algorithms, where only five authorisations exist across 864.3750 and 864.3755 and the register is nearly empty",
+      "Cloud deployment, which converts the storage capital problem into an operating line and is the direction Philips signalled with its HealthSuite announcement",
+      "Pharmaceutical and clinical-trial tissue analysis, which pays outside the Physician Fee Schedule and is not constrained by the zero digitisation increment",
+      "Markets outside the United States, where the specimen is not priced by a per-code fee schedule and the funding constraint takes a different shape"
+    ],
+    "challenges": [
+      "Base-year estimates spread 5.47x, so two forecasts of this market frequently are not describing the same market",
+      "AI-labelled market figures overlap whole-market figures to the point of contradiction, making the algorithm opportunity hard to size from public sources",
+      "No vendor discloses a digital pathology revenue line, so share and concentration cannot be measured",
+      "CMS publishes no count of CLIA laboratories certified in histopathology, so penetration rates cannot be computed from a public register",
+      "Primary-diagnosis use carries a diagnostic-safety evidential bar that slows substitution of a working manual workflow"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Whole slide imaging scanners",
+      "Displays",
+      "Storage systems",
+      "Image management and viewing software",
+      "Laboratory information system and PACS software",
+      "Consulting, implementation, maintenance and training services"
+    ],
+    "by_application": [
+      "Primary clinical diagnosis",
+      "Telepathology and remote consultation",
+      "Pre-clinical research and drug discovery",
+      "Clinical trial tissue endpoints",
+      "Education and training",
+      "Quality assurance and second read"
+    ],
+    "by_end_user": [
+      "Hospitals and health systems",
+      "Diagnostic and reference laboratories",
+      "Pharmaceutical and biotechnology companies",
+      "Contract research organisations",
+      "Academic and research institutes",
+      "Veterinary laboratories"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 1.66 },
+    { "year": 2027, "value": 1.93 },
+    { "year": 2028, "value": 2.24 },
+    { "year": 2029, "value": 2.61 },
+    { "year": 2030, "value": 3.03 },
+    { "year": 2031, "value": 3.52 },
+    { "year": 2032, "value": 4.09 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Philips",
+      "headquarters": "Netherlands",
+      "market_position": "Pathway originator",
+      "description": "Holder of DEN160056, the April 2017 de novo authorisation that created the whole-slide-imaging device type and made primary diagnosis from a scanned slide possible in the United States. Eight of the 23 whole-slide-imaging system entries in the openFDA register are Philips entries, the most of any company, running through IntelliSite Pathology Solution 5.1 clearances in 2024 and 2025. A cloud-enabled IntelliSite on HealthSuite was announced in March 2026. Philips reported group sales of EUR 17.8 billion for 2025 and discloses no pathology revenue line; digital pathology sits unseparated inside Diagnosis & Treatment. No share percentage is publicly disclosed."
+    },
+    {
+      "company": "Roche (Ventana Medical Systems)",
+      "headquarters": "Switzerland",
+      "market_position": "Incumbent on the tissue-diagnostics base",
+      "description": "Holds two whole-slide-imaging system clearances for Roche Digital Pathology Dx -- K232879 in June 2024 with the VENTANA DP 200 scanner and K242783 in December 2024. Roche's Pathology Lab customer area reported CHF 1,723 million in 2025 against CHF 1,599 million in 2024, up 14% at constant exchange rates, inside a Diagnostics Division of CHF 13,847 million. That line is wider than digital pathology -- it covers tissue-diagnostics instruments, staining and consumables, and from 2025 it absorbed sales previously reported under Molecular Lab, so it is not comparable even with its own prior years. It cannot be read as digital pathology revenue or converted into a share."
+    },
+    {
+      "company": "Leica Biosystems (Danaher)",
+      "headquarters": "Germany",
+      "market_position": "Incumbent in histology workflow",
+      "description": "Holds three whole-slide-imaging system entries, including K253554 in August 2026 covering Aperio GT 450 DX and the Aperio GT 180 DX, and the single clearance under the artifact-detection product code SIX (K253561, Aperio iQC DX Software). Danaher reports three segments and places Leica Biosystems inside Diagnostics without a revenue figure; the only Leica-specific disclosure found is a growth rate, over 10% core growth in Q3 2025, with digital pathology named alongside core histology and advanced staining. No revenue or share figure is disclosed."
+    },
+    {
+      "company": "Hamamatsu Photonics",
+      "headquarters": "Japan",
+      "market_position": "Scanner specialist",
+      "description": "Holds four whole-slide-imaging system entries, the NanoZoomer S360MD line from 2022 and 2023 and the S20MD/S360M and S540MD clearances in July 2026, making it the second most frequent applicant in the register after Philips. Approaches the category from optics and imaging hardware rather than from a laboratory installed base. No revenue or share figure is disclosed."
+    },
+    {
+      "company": "Paige.AI",
+      "headquarters": "United States",
+      "market_position": "Algorithm pathway originator",
+      "description": "Holder of DEN200080, the September 2021 de novo for Paige Prostate -- the first authorisation under 21 CFR 864.3750 for a software algorithm assisting the pathologist, and one of only two entries under that regulation. Also holds viewing-software clearances for FullFocus (2020 and 2025) and AISight Dx is held by PathAI under the same product code. The algorithm register remains close to empty, which is both the opportunity and the measure of how early this is."
+    },
+    {
+      "company": "Artera",
+      "headquarters": "United States",
+      "market_position": "Prognostic algorithm entrant",
+      "description": "Holder of DEN240068, the July 2025 de novo for ArteraAI Prostate -- the third and most recent de novo grant in the whole digital pathology category, creating the prostate-prognosis product code under 21 CFR 864.3755. Followed by K254115 for ArteraAI Breast in May 2026. These are prognostic rather than detection devices, and they are the clearest evidence that the scanned archive is acquiring clinical uses beyond the original diagnosis."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "21 CFR 864.3700, the whole slide imaging regulation, covering four Class II product codes: PSY whole slide imaging systems, QKQ image viewing and management software, PZZ digital pathology displays and SIX artifact detection software",
+    "21 CFR 864.3750, product code QPN, for software algorithm devices that assist users in digital pathology -- established by the September 2021 de novo for Paige Prostate and holding only two entries",
+    "21 CFR 864.3755, for pathology software algorithms analysing digital images for cancer prognosis, established by the July 2025 de novo for ArteraAI Prostate and extended to breast prognosis",
+    "The de novo premarket review pathway, which created the whole-slide-imaging device type in April 2017 and is the predicate route for the 510(k) clearances that followed",
+    "CLIA 1988, which governs the laboratories that would operate these systems and requires per-laboratory validation; CMS reports approximately 320,000 CLIA-certified entities, of which roughly 33,000 hold a certificate of compliance or accreditation",
+    "CMS Physician Fee Schedule pricing of the underlying service: CPT 88305 at 2.10 total RVUs and a CY2026 non-QP conversion factor of $33.4009",
+    "CPT Category III add-on codes 0751T-0763T (2023) and 0827T-0856T (2024) for digitisation of glass microscope slides, which carry no assigned RVU; First Coast and Novitas confirmed no additional Medicare payment for dates of service from 19 February 2024",
+    "HIPAA Privacy and Security Rules, applying to the whole-slide images and their long-term archives"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public sources and public registers, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "openFDA device classification and 510(k) endpoints, extract last_updated 2026-10-05: 21 CFR 864.3700 product codes PSY (23 entries), QKQ (14), PZZ (3), SIX (1); 864.3750 QPN (2); 864.3755 SFH (1) and SHW (2); de novo grants DEN160056 (2017-04-12), DEN200080 (2021-09-21), DEN240068 (2025-07-31)",
+      "CMS CY2026 National Physician Fee Schedule Relative Value File (PPRRVU2026_Apr_nonQPP) for CPT 88305: work 0.73, practice expense 1.35, malpractice 0.02, total 2.10 RVU; CY2026 non-QP conversion factor $33.4009",
+      "First Coast Service Options and Novitas Solutions Medicare contractor notices on CPT 0751T-0763T, digitisation of glass microscope slides: no additional payment for dates of service on or after 2024-02-19; College of American Pathologists, Digital Pathology Codes, for the 0751T-0763T and 0827T-0856T code lists",
+      "Metter DM et al., Medicare Trends in Pathologist Participation, Service Utilization, and Payments, American Journal of Clinical Pathology 155(5):674 (2021), from the CMS Medicare Provider Utilization and Payment Data Public Use File 2012-2017: 11,238,972 CPT 88305 services in 2017, 57.2% facility-based, average Medicare payment $33",
+      "Analysis of the CMS CY2024 Medicare Physician & Other Practitioners by Provider and Service file published at Discoveries in Health Policy (August 2026): $931 million paid for 88305 across 17,430 providers, of which 576 clinical laboratories took $226 million",
+      "Xia Y, Taylor TH Jr, Chen J, Hsia J, Archives of Pathology & Laboratory Medicine 148(4):443-452 (2024) on CLIA laboratory populations: end-2021 approximately 16,000 certificate of accreditation, 17,000 certificate of compliance, 260,000 certificate of waiver and 31,000 provider-performed microscopy laboratories, 33,033 combined CoC and CoA per a 2021-07-16 QIES extract, and no breakdown by specialty",
+      "F. Hoffmann-La Roche Investor Update, full-year 2025 results (2026-01-29): Diagnostics Division customer areas including Pathology Lab at CHF 1,723 million for 2025 against CHF 1,599 million for 2024, Division total CHF 13,847 million, with the note that 2025 Pathology Lab sales include sales previously reported in Molecular Lab",
+      "Danaher Corporation 2025 Annual Report and Q3 2025 earnings call (Leica Biosystems inside Diagnostics, no revenue figure, over 10% core growth in Q3 2025); Koninklijke Philips N.V. Annual Report 2025 published 2026-02-19 (group sales EUR 17.8 billion, no pathology revenue line)",
+      "Published market estimates from 360iResearch via Research and Markets (September 2026), MarketsandMarkets (June 2026, HIT 2608), The Business Research Company (digital pathology and whole slide imaging, 2026 editions), Global Market Insights, Emergen Research, Data Bridge Market Research, SNS Insider (2025-02-04), Meticulous Research, Precision Business Insights, Coherent Market Insights, Allied Market Research, Next Move Strategy Consulting, Trend X Insights, The Research Insights and Grand View Research (North America)"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed to each house by name, with base year, base value, forecast year, forecast value, CAGR and stated scope recorded for each; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. The headline CAGR of 16.22% is derived from the publisher's own two published endpoints as (4.09 / 1.66) to the power of one sixth, less one, which gives 16.2169%; the publisher states 16.05% and the 0.17-point difference is its rounding, so the figures here reconcile exactly while no published value has been altered. Two independent grounding divisions were computed against countable public registers and both are plausibility tests, not market estimates. First, against the published price: CPT 88305 pays $70.14 nationally in CY2026 (2.10 total RVU times a $33.4009 conversion factor), the digitisation add-on codes carry no RVU and no payment, and $1,660,000,000 divided by the 11,238,972 Medicare Part B 88305 services counted for 2017 gives $147.70 per Medicare level-IV specimen, or 2.106 times the payment for the specimen itself; against the $931 million Medicare paid for 88305 in CY2024 the whole world market is 1.783 times. That establishes the funding mechanism -- laboratory operating budget, not reimbursement -- and rules out a reading in which a payment stream funds digitisation; it does not establish the correct market size. Second, against the cleared-device register: $1,660,000,000 divided by the 10 distinct holders of a whole-slide-imaging system authorisation gives a $166 million average that is arithmetically correct and descriptively false, since Roche's Pathology Lab line alone is CHF 1,723 million; the division bounds the category and confirms the scope tiers rather than estimating any vendor's revenue. A third division, $1,660,000,000 over the 33,033 CLIA certificate-of-compliance-or-accreditation laboratories, gives $50,253 per laboratory per year but is not carried into this report as a finding, because CMS publishes no count of laboratories certified in the histopathology specialty and the denominator therefore cannot be narrowed. The CMS relative value file, the CMS fact sheet, federalregister.gov and the contractor notices were not directly reachable from the drafting environment, so those values rest on reproductions and indexed content and are labelled as such in the evidence file. Regional and country sections are empty because no source surveyed publishes a split on a scope matching the base figure, and no vendor market share appears anywhere because three of the four largest players in the cleared-device register disclose no digital pathology revenue at all."
+  },
+  "faqs": [
+    {
+      "question": "How big is the digital pathology market?",
+      "answer": "It depends entirely on scope. On the scope used by the only estimate with both a 2026 base year and a 2032 endpoint, $1.66 billion in 2026 rising to $4.09 billion by 2032, a CAGR of 16.22% reconciling those two published endpoints against the publisher's stated 16.05%. On a scanner-only definition the 2025 base is nearer $0.88 billion. Published 2025 base-year values across the houses surveyed run from $777.7 million to $4.25 billion."
+    },
+    {
+      "question": "Why do published digital pathology estimates differ so much?",
+      "answer": "Because they start in different places, not because they disagree about growth. Base-year 2025 sizes spread 5.47x across the global whole-market estimates, while compound growth rates spread only 1.79x. Dropping the single highest outlier, the figures are 1.83x on the base year against 1.46x on growth. The variable is what counts as digital pathology."
+    },
+    {
+      "question": "How much of the digital pathology market is scanner hardware rather than software?",
+      "answer": "About 62%, on the only measurement available from a publisher holding its own definition constant. The Business Research Company publishes a digital pathology report at $1.42 billion for 2025 and a separate whole slide imaging report at $0.88 billion for the same year in the same edition; 0.88 divided by 1.42 is 0.620. MarketsandMarkets separately states hardware accounts for the largest share of its product split, and Allied Market Research put scanners above two-thirds of product revenue in 2020."
+    },
+    {
+      "question": "Does Medicare pay more for a digitally examined slide?",
+      "answer": "No. CPT 88305, level IV surgical pathology, carries 2.10 total RVUs and pays $70.14 nationally at the CY2026 conversion factor of $33.4009, before geographic adjustment. The digital pathology add-on codes 0751T-0763T are Category III codes with no assigned RVU, and First Coast and Novitas both concluded that no additional payment is made for them for dates of service from 19 February 2024. Digitisation is a cost with a zero reimbursement increment."
+    },
+    {
+      "question": "How many digital pathology devices has the FDA cleared?",
+      "answer": "Forty-six marketing authorisations across the three relevant regulations, as of the openFDA extract dated 5 October 2026: 23 whole-slide-imaging systems, 14 image viewing and management software, 3 displays and 1 artifact-detection device under 21 CFR 864.3700, plus 2 assistive algorithms under 864.3750 and 3 prognostic algorithms under 864.3755. Only three are de novo grants -- Philips IntelliSite in 2017, Paige Prostate in 2021 and ArteraAI Prostate in 2025. Ten distinct companies hold a whole-slide-imaging system authorisation."
+    },
+    {
+      "question": "Who leads the digital pathology market?",
+      "answer": "Philips holds the most whole-slide-imaging entries in the FDA register, eight of twenty-three including the 2017 de novo that created the device type, followed by Hamamatsu with four and Leica Biosystems with three. No share percentage exists to report. Roche discloses a Pathology Lab line of CHF 1,723 million for 2025 that is much wider than digital pathology and whose definition changed that year; Danaher discloses no Leica Biosystems revenue, only a growth rate; Philips discloses no pathology line at all. Any share figure you are shown is an apportionment, not a measurement."
+    },
+    {
+      "question": "Is AI pathology a separate market with its own size?",
+      "answer": "Not as published. Coherent Market Insights scopes AI-based digital pathology at $1.19 billion for 2025, which is 84% of The Business Research Company's whole-market figure of $1.42 billion for the same year. If scanners are 62% of the market, AI algorithms cannot also be 84% of it. The AI-labelled series must be re-cutting the same hardware and platform base. The clearest measure of how early algorithms actually are is the register: five authorisations in total across the two algorithm regulations."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because no source surveyed publishes a split on a scope that matches the base figure. The one regional series found, Grand View Research's North America estimate of $449.0 million for 2024 at 7.8% to 2030, comes from a different publisher on a different scope; pairing it with our base figure would manufacture a share rather than report one. The sections are omitted rather than filled with placeholder percentages."
+    }
+  ],
+  "key_highlights": [
+    "Base-year 2025 estimates spread 5.47x ($777.7M to $4.25B) while published CAGRs spread 1.79x: the disagreement is about scope, not growth",
+    "Published 2030 endpoints range from $1.79 billion to $17.28 billion, a 9.65x spread across houses",
+    "Whole-slide-imaging scanners are 62% of digital pathology on one publisher's own report pair -- $0.88B of $1.42B for 2025 -- making hardware the majority of the modal definition",
+    "An AI-scoped estimate of $1.19 billion for 2025 is 84% of another house's whole-market figure, so AI-labelled series re-cut the hardware base rather than sizing algorithm licences",
+    "CPT 88305 pays $70.14 nationally in CY2026 (2.10 RVU at $33.4009) while the digitisation add-on codes carry no RVU and no payment from 19 February 2024",
+    "$1.66 billion over 11,238,972 Medicare Part B 88305 services is $147.70 per specimen, 2.11x what Medicare pays for the specimen itself, and 1.78x all $931 million Medicare paid for 88305 in CY2024",
+    "The FDA register holds 46 authorisations and just 3 de novo grants across the category, with 10 distinct holders of a whole-slide-imaging system authorisation",
+    "Roche's Pathology Lab line of CHF 1,723 million for 2025 exceeds the entire published 2026 market at parity, which is why vendor shares are not computable"
+  ],
+  "reader_takeaways": [
+    "Before comparing two digital pathology forecasts, establish whether either one counts the scanner, because that single decision is worth about 38% of the modal definition and moves the base year by more than 5x across the literature",
+    "Treat any quoted base-year value as a scope statement; growth rate is the stable part of the published literature, clustered at 12-18%",
+    "Do not model this market as reimbursement-funded: the digitisation add-on codes carry no RVU, so the capital case rests entirely on laboratory operating cost and throughput",
+    "Treat any AI pathology market size as unverified until the publisher says whether it includes the scanners and platform the algorithms run on, because the published figures overlap whole-market figures to the point of contradiction",
+    "Treat any vendor share percentage as an apportionment: Roche's disclosure is wider than the category, and Danaher and Philips disclose no pathology revenue line at all"
+  ],
+  "seo": {
+    "meta_title": "Digital Pathology Market Size and Forecast to 2032",
+    "meta_description": "Digital pathology estimates spread 5.47x at the base year but only 1.79x on growth. CPT 88305 and the FDA cleared-device register show why scope is the story.",
+    "keywords": [
+      "digital pathology market",
+      "whole slide imaging market",
+      "digital pathology market size",
+      "computational pathology",
+      "pathology scanner market",
+      "AI pathology market",
+      "CPT 88305"
+    ]
+  }
+}

@@ -214,6 +214,12 @@ export const generateDatasetSchema = (params: {
   keywords?: string[];
   temporalCoverage?: string; // e.g. "2024/2032"
   variableMeasured?: string[];
+  /* The regions the row's own regional_analysis covers, in its order. Passed
+     rather than derived here so the schema cannot claim coverage the page does
+     not show -- a row with no regional breakdown emits no spatialCoverage at
+     all rather than a guessed "Global". */
+  spatialCoverage?: string[];
+  conditionsOfAccess?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Dataset',
@@ -247,6 +253,42 @@ export const generateDatasetSchema = (params: {
       name: v,
     })),
   }),
+  ...(params.spatialCoverage && params.spatialCoverage.length > 0 && {
+    spatialCoverage: params.spatialCoverage.map((name) => ({
+      '@type': 'Place',
+      name,
+    })),
+  }),
+  ...(params.conditionsOfAccess && {
+    conditionsOfAccess: params.conditionsOfAccess,
+  }),
+});
+
+/**
+ * Generate an ItemList for a report's table of contents (C-4's sibling, C-5).
+ *
+ * Built from the same `buildReportTOC` output the sidebar renders, passed in
+ * rather than recomputed, so the declared list cannot drift from the visible
+ * one -- a machine-readable outline that disagrees with the page is worse than
+ * none. Each entry's url is the on-page anchor the sidebar links to, so every
+ * position resolves to a heading that exists.
+ */
+export const generateItemListSchema = (params: {
+  name: string;
+  url: string;
+  items: Array<{ id: string; title: string }>;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: params.name,
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: params.items.length,
+  itemListElement: params.items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.title,
+    url: `${params.url}#${item.id}`,
+  })),
 });
 
 /**

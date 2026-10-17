@@ -29,6 +29,12 @@ const ONLY = onlyArg > -1 ? process.argv[onlyArg + 1].split(',') : null;
 const ROUTES = [
   ['/', 'index.html'],
   ['/reports', 'reports.html'],
+  /* Added 2026-10-17 for C-4. The three report routes already audited all
+     happen to be rows with no regional breakdown, so they emit no
+     spatialCoverage and the Dataset rules below never ran on them -- the
+     audit passed without exercising the thing it had just been taught to
+     check. This row carries three Place entries. */
+  ['/reports/ai-in-lab-automation-market', 'reports/ai-in-lab-automation-market.html'],
   ['/reports/glp-1-receptor-agonists-market', 'reports/glp-1-receptor-agonists-market.html'],
   ['/reports/oncology-information-systems-market', 'reports/oncology-information-systems-market.html'],
   ['/reports/phage-therapy-market', 'reports/phage-therapy-market.html'],
@@ -181,6 +187,87 @@ function auditDocument(route, html) {
       }
     }
 
+    /* spatialCoverage and conditionsOfAccess (C-4). The point of asserting
+       them is that both are easy to emit as something a validator silently
+       drops: spatialCoverage wants Place objects with a name, not a bare
+       string, and an empty array is worse than an absent field because it
+       claims coverage of nowhere. conditionsOfAccess is Text, and a Dataset
+       without one reads as openly available, so a report body behind a
+       purchase has to say so. Absence is allowed -- 42 of 182 rows carry no
+       regional breakdown and correctly omit spatialCoverage -- but a present
+       field has to be well formed. */
+    if (parsed['@type'] === 'Dataset') {
+      const sc = parsed.spatialCoverage;
+      if (sc !== undefined) {
+        const list = Array.isArray(sc) ? sc : [sc];
+        if (list.length === 0) {
+          errors.push(`${label}.spatialCoverage is an empty array - omit the field instead`);
+        }
+        for (const place of list) {
+          if (typeof place !== 'object' || place === null) {
+            errors.push(`${label}.spatialCoverage holds a bare ${typeof place}; schema.org wants a Place`);
+          } else if (place['@type'] !== 'Place') {
+            errors.push(`${label}.spatialCoverage entry is @type "${place['@type']}", not Place`);
+          } else if (!String(place.name ?? '').trim()) {
+            errors.push(`${label}.spatialCoverage holds a Place with no name`);
+          }
+        }
+      }
+      const coa = parsed.conditionsOfAccess;
+      if (coa !== undefined && !String(coa).trim()) {
+        errors.push(`${label}.conditionsOfAccess is present but empty`);
+      }
+    }
+
+    /* C-5: the declared outline has to be the rendered one. The TOC an
+       ItemList describes is built from buildReportTOC and so is the sidebar, but
+       nothing stops a later edit from rendering one and declaring the other, and
+       a machine-readable outline that disagrees with the page is worse than
+       none. So this compares the ItemList against the anchors actually present
+       in nav[aria-label="Report details"], not against the generator. */
+    if (parsed['@type'] === 'ItemList') {
+      const entries = Array.isArray(parsed.itemListElement) ? parsed.itemListElement : [];
+      if (entries.length === 0) {
+        errors.push(`${label} has no itemListElement`);
+      }
+      if (parsed.numberOfItems !== undefined && Number(parsed.numberOfItems) !== entries.length) {
+        errors.push(`${label}.numberOfItems is ${parsed.numberOfItems} but it lists ${entries.length}`);
+      }
+      const positions = entries.map((e) => Number(e?.position));
+      const expected = entries.map((_, i) => i + 1);
+      if (positions.join(',') !== expected.join(',')) {
+        errors.push(`${label} positions are ${positions.join(',')} - expected 1..${entries.length} in order`);
+      }
+      for (const e of entries) {
+        if (!String(e?.name ?? '').trim()) errors.push(`${label} holds a ListItem with no name`);
+      }
+
+      const nav = html.match(/<nav[^>]+aria-label="Report details"[\s\S]*?<\/nav>/i);
+      if (nav) {
+        const rendered = [...nav[0].matchAll(/href="#([a-z0-9-]+)"/gi)].map((m) => m[1]);
+        if (rendered.length !== entries.length) {
+          errors.push(
+            `${label} declares ${entries.length} sections but the rendered TOC links ${rendered.length}`
+          );
+        } else {
+          const declared = entries.map((e) => String(e?.url ?? '').split('#')[1] ?? '');
+          const mismatch = declared.findIndex((id, i) => id !== rendered[i]);
+          if (mismatch !== -1) {
+            errors.push(
+              `${label} entry ${mismatch + 1} points at #${declared[mismatch]} but the rendered TOC links #${rendered[mismatch]}`
+            );
+          }
+          /* Every declared anchor must be a heading id that exists on the page,
+             or the outline sends a crawler to a fragment that goes nowhere. */
+          for (const id of declared) {
+            if (id && !new RegExp(`id="${id}"`).test(html)) {
+              errors.push(`${label} points at #${id}, which no element on the page has`);
+            }
+          }
+        }
+      }
+    }
+
     if (parsed['@type'] === 'BreadcrumbList') {
       const items = parsed.itemListElement ?? [];
       const positions = items.map((it) => it.position);
@@ -249,6 +336,141 @@ function auditDocument(route, html) {
   const figcaptions = (html.match(/<figcaption\b/gi) ?? []).length;
   if (figures > figcaptions) warnings.push(`${figures - figcaptions} <figure> without a <figcaption>`);
   if (route.startsWith('/reports/') && figures === 0) warnings.push('report page renders no <figure>');
+
+  // ── segment shares are readable as numbers (C-2) ──────────────────────────
+  /* A donut says which wedge is bigger; it does not say 31.4%. Every share
+     chart must ship the same figures as a table, and the two must agree, or
+     the "text equivalent" is a second, unchecked set of numbers. The donut is
+     found by the aria-label its wrapper carries, the table by its caption. */
+  const donutLabels = (html.match(/aria-label="Donut chart:/g) ?? []).length;
+  const shareTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market share by segment, in percent/i.test(body));
+
+  if (donutLabels !== shareTables.length) {
+    errors.push(
+      `${donutLabels} share donut(s) but ${shareTables.length} segment-share table(s) — every donut needs its numeric equivalent`
+    );
+  }
+
+  for (const [n, body] of shareTables.entries()) {
+    const label = `segment-share table ${n + 1}`;
+    const head = body.split(/<tbody\b/i)[0];
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const tfoot = (body.match(/<tfoot\b[^>]*>([\s\S]*?)<\/tfoot>/i) ?? [, ''])[1];
+
+    if (!/<caption\b/i.test(head)) errors.push(`${label} has no <caption>`);
+    if ((head.match(/scope="col"/g) ?? []).length < 2) {
+      errors.push(`${label} does not mark both column headers with scope="col"`);
+    }
+
+    /* React splits `{n.toFixed(1)}%` into two text nodes and marks the seam
+       with `<!-- -->`, so the naive `>55.0%<` never matches the real HTML. */
+    const pct = (frag) =>
+      [...frag.matchAll(/>\s*([\d.]+)(?:<!-- -->)?\s*%\s*</g)].map((m) => Number(m[1]));
+    const rows = (tbody.match(/<tr\b/gi) ?? []).length;
+    const shares = pct(tbody);
+    const totals = pct(tfoot);
+
+    if (rows < 2) errors.push(`${label} renders ${rows} segment row(s) — a share split needs at least 2`);
+    if (shares.length !== rows) {
+      errors.push(`${label} has ${rows} row(s) but ${shares.length} percentage cell(s)`);
+    }
+    if (totals.length !== 1) {
+      errors.push(`${label} declares ${totals.length} total(s) in <tfoot>, expected exactly 1`);
+    } else if (shares.length) {
+      const sum = shares.reduce((a, b) => a + b, 0);
+      if (Math.abs(sum - totals[0]) > 0.051 * shares.length) {
+        errors.push(`${label} rows sum to ${sum.toFixed(1)}% but the total row says ${totals[0].toFixed(1)}%`);
+      }
+      /* Pin the table to the chart. The donut's own centre label is drawn by
+         Recharts in the browser, so it is absent from built HTML and cannot
+         be compared here; the card's own caption is server-rendered from the
+         same array and says how many segments the chart has. If the table and
+         the chart were built from different arrays, the counts diverge. */
+      const chunk = html.split(body)[0];
+      const declared = [...chunk.matchAll(/across\s*(?:<!-- -->)?\s*(\d+)\s*(?:<!-- -->)?\s*segments/g)].pop();
+      if (declared && Number(declared[1]) !== rows) {
+        errors.push(
+          `${label} lists ${rows} segment(s) but the chart beside it is captioned as ${declared[1]}`
+        );
+      }
+    }
+  }
+
+  // ── the other two charts ship their figures as text too (C-2, same class) ─
+  /* Recharts draws every label in the browser, so anything that exists only
+     inside a chart exists nowhere in the delivered HTML. These two rules say
+     that if the chart is on the page, its table is on the page with it, and
+     that the table is complete rather than a summary of the top few rows. */
+  const regionTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market share, growth rate and largest market by region/i.test(body));
+  const regionCharts = (html.match(/aria-label="Bar chart of market share and growth rate by region/g) ?? []).length;
+
+  if (regionCharts !== regionTables.length) {
+    errors.push(
+      `${regionCharts} regional bar chart(s) but ${regionTables.length} regional table(s) — the bars are drawn client-side, so the table is the only copy in the HTML`
+    );
+  }
+  for (const [n, body] of regionTables.entries()) {
+    const label = `regional table ${n + 1}`;
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const rows = (tbody.match(/<tr\b/gi) ?? []).length;
+    const cells = (tbody.match(/<td\b/gi) ?? []).length;
+    if ((body.match(/scope="col"/g) ?? []).length !== 4) {
+      errors.push(`${label} does not mark all 4 column headers with scope="col"`);
+    }
+    if (rows < 3) {
+      errors.push(`${label} lists ${rows} region(s) — the corpus carries 3 to 5, so this is a truncated set`);
+    }
+    if (cells !== rows * 3) {
+      errors.push(`${label} has ${rows} row(s) but ${cells} data cell(s), expected ${rows * 3}`);
+    }
+  }
+
+  const forecastTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market size by year/i.test(body));
+  const forecastCharts = (html.match(/aria-label="Area chart of market size by year/g) ?? []).length;
+
+  if (forecastCharts !== forecastTables.length) {
+    errors.push(
+      `${forecastCharts} forecast chart(s) but ${forecastTables.length} forecast series table(s) — the line is drawn client-side, so the table is the only copy in the HTML`
+    );
+  }
+  for (const [n, body] of forecastTables.entries()) {
+    const label = `forecast table ${n + 1}`;
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const years = [...tbody.matchAll(/<th scope="row"[^>]*>\s*(\d{4})/g)].map((m) => Number(m[1]));
+    if (years.length < 5) {
+      errors.push(`${label} plots ${years.length} year(s) — every row in the corpus carries 7 to 9`);
+    }
+    const unsorted = years.findIndex((y, i) => i > 0 && y <= years[i - 1]);
+    if (unsorted !== -1) {
+      errors.push(`${label} year ${years[unsorted]} does not follow ${years[unsorted - 1]} — the series must read in order`);
+    }
+    /* One row must be the base year, and the metric tiles above the chart name
+       that year. A series that does not contain it is a different claim from
+       the one the tiles make. */
+    if (!/Base year/.test(tbody)) {
+      errors.push(`${label} marks no base year, so the series cannot be anchored to the metric tiles`);
+    }
+  }
+
+  // ── no sentence is set as a label ─────────────────────────────────────────
+  /* A 12px bold uppercase run is a label. The key-highlights block used to
+     derive one by splitting on the first colon, which turned analyst prose
+     into shouting -- measured at up to 142 characters. Anything that long in
+     label type is prose that lost an argument with a heuristic. */
+  const shouted = [...html.matchAll(/<p\b[^>]*class="[^"]*\buppercase\b[^"]*"[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => textOf(m[1]))
+    .filter((t) => t.length > 40);
+  if (shouted.length) {
+    errors.push(
+      `${shouted.length} uppercase label(s) longer than 40 characters, e.g. "${shouted[0].slice(0, 60)}…" — that is prose, not a label`
+    );
+  }
 
   // ── language ──────────────────────────────────────────────────────────────
   if (!/<html[^>]+lang="/i.test(html)) errors.push('<html> has no lang attribute');

@@ -1,0 +1,270 @@
+{
+  "report_id": "pharmacovigilance-market",
+  "slug": "pharmacovigilance-market",
+  "title": "Pharmacovigilance Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 10.45,
+    "forecast_value": 20.38,
+    "cagr": 11.78
+  },
+  "market_overview": {
+    "summary": "Pharmacovigilance is the statutory obligation to collect, assess, report and act on the safety of medicines once they are in use, and it is unusual among healthcare markets in having an exact public denominator: the individual case safety reports it exists to produce are counted and published by the FDA, the EMA and the WHO. We publish the whole-function reading, $10.45B in 2026 rising to $20.38B by 2032 at 11.78%. Normalised to a common 2026 base, eight independent publishers give $9.14B to $13.71B — a 1.50x spread, unusually tight for this literature — while their growth rates run from 5.6% to 16.34%, a 2.92x spread. That inverts the usual pattern. Publishers broadly agree what pharmacovigilance is and what it is worth today, and disagree by nearly threefold about how fast it grows. The 36.95x headline spread in the wider literature comes entirely from two deliberately narrow sub-scopes, software at $0.371B and outsourced services at $3.07B, that are nonetheless quoted as though they were the market.",
+    "key_trends": [
+      "Report volume is flat to falling while the market is forecast to compound at double digits. FAERS intake peaked at 1,566,148 reports in 2021 and was 1,307,769 in 2025, down 16.5%; EudraVigilance processed 1,765,581 ICSRs in 2025 against 1,908,605 in 2023, down 7.5%. Every published forecast therefore embeds a rising cost per report, and none says so.",
+      "Regulatory consolidation on the authority side. The FDA retired FAERS, VAERS and AERS on 11 March 2026 in favour of a single Adverse Event Monitoring System, replacing quarterly releases with real-time publication, with MAUDE, HFCS and CTPAE to follow; the agency put the old estate at approximately 6 million reports a year across seven databases costing approximately $37 million a year to run.",
+      "Signal management, not case intake, is where the regulatory work has moved. EMA's signal management team reviewed 1,201 potential safety signals across 995 active substances in 2025, from which the PRAC prioritised and assessed 60 confirmed signals, about 85% of them using EudraVigilance data.",
+      "The buyer base is widening, not deepening: 1,174 marketing authorisation holders sent reports to EudraVigilance at headquarter level in 2025, up 2.9%, while clinical trial sponsors reporting SUSARs fell 6% to 690.",
+      "Outsourcing is a slim majority of spend and the publishers disagree about how slim: contract outsourcing is put at 54.88% (Mordor), 57.03% (Fortune Business Insights) and 60% (Precedence) of the same nominal market, which means between 40% and 45% of this market is internal headcount that was never priced per case.",
+      "The software tier is not where the money is. The entire global pharmacovigilance and drug-safety software market is published at $0.371B for 2026 by one house, which is 11.6% of Veeva Systems' total FY2026 revenue of $3,195.3M on its own — and Veeva is a challenger in safety rather than the incumbent."
+    ],
+    "market_stage": "Growth",
+    "adoption_level": "Universal and statutory for any marketed medicine; the variable is depth, not adoption"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Pharmacovigilance is not discretionary. EU Directive 2010/84/EU and Regulation (EU) No 1235/2010, and 21 CFR 314.80 and 600.80 in the United States, make a safety system a condition of holding a marketing authorisation, so the spend floor is set by law rather than by budget cycles.",
+      "Obligations per case have risen without reports rising. ICH E2B(R3) electronic transmission, the GVP modules' pharmacovigilance system master file, risk management plan and PSUR requirements, and EudraVigilance's 15-day and 90-day reporting clocks all add work to each case rather than adding cases.",
+      "Portfolio complexity: biosimilars, cell and gene therapies, bispecifics and digital therapeutics each carry bespoke risk minimisation and long-term follow-up obligations that a small-molecule safety system was not built for.",
+      "Signal-management intensity on the authority side pulls effort from sponsors: EMA reviewed 1,201 potential safety signals in 2025 and 32 of the 71 signals assessed by the PRAC in 2024 ended in a product-information change, each of which is work for the holder.",
+      "A widening base of obligated companies — 1,174 MAHs reported to EudraVigilance at headquarter level in 2025, up 2.9% on 2024 — spreads a fixed compliance cost across more, and smaller, holders.",
+      "Real-time public disclosure raises the stakes of the same data. The FDA's AEMS publishes adverse event reports in real time rather than quarterly, which shortens the window between a report arriving and a sponsor having to explain it."
+    ],
+    "restraints": [
+      "The countable work is shrinking. FAERS received 1,307,769 reports in 2025 against 1,566,148 in 2021, a 16.5% fall, and EudraVigilance is 7.5% below its 2023 level. A market whose volume driver is flat has to grow on price and scope.",
+      "Case processing is commoditised and priced per unit — an outsourcing provider's published rate card runs $200 to $400 a case for standard processing and $400 to $600 for expedited — so the largest single activity in the function is under permanent deflationary pressure.",
+      "Roughly 40% to 45% of spend is internal headcount on the publishers' own outsourcing ratios, and internal headcount is a cost line that pharmaceutical companies cut in restructuring rather than a market a vendor can win.",
+      "Automation is explicitly sold as a cost reduction: Indegene's own white paper claims about 35% savings on case processing, which is revenue removed from the market it is sold into.",
+      "Authority-side consolidation reduces, rather than adds, infrastructure spend. The FDA expects AEMS to save approximately $120 million over five years against a $37 million annual run cost.",
+      "Pharmacovigilance has no revenue of its own inside a sponsor. It competes for budget against commercial and development programmes that can be modelled as returns, which caps how fast it can grow in a flat pharmaceutical R&D cycle."
+    ],
+    "opportunities": [
+      "Signal detection and validation, where the work is analytical rather than transactional and therefore does not deflate with per-case automation.",
+      "Aggregate reporting — PSURs, PBRERs, development safety update reports and risk management plans — which scales with the number of products and markets rather than with the number of adverse events.",
+      "Medical device and combination-product vigilance, pulled into the same operating model by the EU Medical Device Regulation and by the FDA's migration of MAUDE into AEMS.",
+      "Emerging-market registration and local literature screening, where a holder entering a new country acquires a new reporting obligation without acquiring new cases.",
+      "Replacing legacy safety databases, where the incumbent installed base is old enough that migration rather than greenfield adoption is the addressable event — a one-off services opportunity far larger than the licence it carries.",
+      "Real-world and post-authorisation safety studies, which the GVP modules and the PRAC's signal outcomes increasingly require as the resolution of a signal rather than a label change alone."
+    ],
+    "challenges": [
+      "The literature's scope confusion is a commercial problem in itself: the same year supports $0.371B, $3.07B and $13.71B for 'pharmacovigilance', and a buyer who sizes an opportunity from the wrong one is wrong by up to 37x.",
+      "No participant discloses the relevant revenue. IQVIA reports R&D Solutions at $8,896M for FY2025 without breaking out safety; Veeva does not report Vault Safety separately; Accenture, Cognizant and the privately held ArisGlobal disclose nothing. Share in this market is not measurable from public filings.",
+      "The forecasts imply a near doubling of dollars per adverse-event report by 2032 at constant volume, which is a bet on regulatory intensity rather than on patient safety activity, and it is not underwritten anywhere in the published literature.",
+      "Regional estimates are irreconcilable: North America is put at 31.14%, 31.7%, 40.84% and 43.62% of the same nominal market in the same year by four publishers, a 1.40x disagreement wider than their disagreement about the global total.",
+      "Segment estimates contradict each other outright. Phase IV is 76% of the market for Grand View and Precedence and 32.05% for Mordor — the single largest contradiction in the public evidence base for this market."
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Case data management and ICSR processing",
+      "Signal detection and validation",
+      "Risk management and risk minimisation",
+      "Aggregate and periodic safety reporting",
+      "Medical literature monitoring",
+      "Drug safety software and databases"
+    ],
+    "by_application": [
+      "Post-authorisation (Phase IV) safety surveillance",
+      "Clinical trial safety and SUSAR reporting",
+      "Spontaneous reporting",
+      "Cohort event monitoring and targeted spontaneous reporting",
+      "Electronic health record and real-world data mining"
+    ],
+    "by_end_user": [
+      "Pharmaceutical and biotechnology marketing authorisation holders",
+      "Contract research and business process outsourcing providers",
+      "Medical device and combination-product manufacturers",
+      "Regulatory authorities and national competent authorities",
+      "Hospitals and academic pharmacovigilance centres"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 10.45 },
+    { "year": 2027, "value": 11.68 },
+    { "year": 2028, "value": 13.06 },
+    { "year": 2029, "value": 14.6 },
+    { "year": 2030, "value": 16.32 },
+    { "year": 2031, "value": 18.24 },
+    { "year": 2032, "value": 20.38 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR from the published 2026 base)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "IQVIA Holdings Inc.",
+      "headquarters": "Durham, North Carolina, United States",
+      "market_position": "Largest disclosed provider of outsourced research and safety services; pharmacovigilance is not separately reported",
+      "description": "Reported full-year 2025 revenue of $16,310M, up 5.9%, of which R&D Solutions was $8,896M, up 4.3%, with Q4 R&DS of $2,333M and contracted R&DS backlog of $32.7B at year end. Pharmacovigilance sits inside R&D Solutions alongside clinical trials, laboratories, sites and data, and is not broken out. That single disclosure is the sharpest available constraint on this market: applying Mordor's 54.88% outsourcing ratio to a $10.45B market gives $5.74B of outsourced pharmacovigilance across every vendor on earth, or 64.5% of all IQVIA R&D Solutions revenue, which is survivable; applying it to a $13.71B market gives $7.52B, or 84.6%, which is not. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Veeva Systems Inc.",
+      "headquarters": "Pleasanton, California, United States",
+      "market_position": "Fast-growing challenger in safety software; the only large pure-play vendor whose revenue is audited and public",
+      "description": "Reported total revenue of $3,195.3M for fiscal 2026, the year ended 31 January 2026, up 16%, with subscription revenue of $2,684.2M, up 17%, and professional services of $511.1M. Vault Safety revenue is not disclosed separately, and the company's own release frames its safety business as still being won: 'Veeva's sixth top 20 win and its first top 20 biopharma live on Workbench and Signal.' The comparison that matters is arithmetic rather than competitive — the entire global pharmacovigilance and drug-safety software market is published at $371.02M for 2026 by one house, which is 11.6% of Veeva's total revenue alone. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Oracle Corporation",
+      "headquarters": "Austin, Texas, United States",
+      "market_position": "Long-standing incumbent safety database through Argus; the installed base against which replacement cycles are measured",
+      "description": "Oracle Argus has been the default enterprise safety database across large biopharma for two decades and is the system most migration projects migrate from. Oracle reports Health Sciences within a broader cloud applications line and discloses neither Argus revenue nor its customer count, so claims circulating in trade write-ups about hundreds of customers and tens of millions of cases processed annually could not be traced to an Oracle release or filing and are excluded from this report. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "ArisGlobal",
+      "headquarters": "Miami, Florida, United States",
+      "market_position": "Privately held specialist safety and regulatory platform vendor; the clearest example of why share is unmeasurable here",
+      "description": "ArisGlobal's LifeSphere platform spans safety, regulatory and medical affairs and is widely deployed by both sponsors and regulators. The company is privately held and publishes no revenue. Customer counts quoted in industry write-ups could not be traced to a company release and are not reported here. Its absence from the public record, alongside Accenture's and Cognizant's, is the reason this report grounds its figures on adverse-event register counts rather than on a bottom-up vendor build: the vendors that would make such a build possible do not disclose the relevant line."
+    },
+    {
+      "company": "Accenture and Cognizant",
+      "headquarters": "Dublin, Ireland and Teaneck, New Jersey, United States",
+      "market_position": "Large-scale business-process providers of case processing and safety operations; no segment disclosure",
+      "description": "Both run substantial offshore and nearshore drug-safety operations for biopharma clients, delivering case intake, triage, narrative writing, coding, quality review and submission at volume. Neither reports a pharmacovigilance, drug safety or life-sciences-safety revenue line in its segment disclosure; both report life sciences within broader industry groupings. Their operations are where the commoditised end of this market actually sits, priced at the per-case rates that make the published per-report density of $7,991 impossible to read as a unit cost. No revenue market share is publicly disclosed."
+    },
+    {
+      "company": "Uppsala Monitoring Centre",
+      "headquarters": "Uppsala, Sweden",
+      "market_position": "Not a commercial participant; the global aggregator whose register is the outer bound on worldwide case volume",
+      "description": "The WHO Collaborating Centre for International Drug Monitoring maintains VigiBase, which held over 40 million individual case reports coded in WHODrug and MedDRA as of 31 December 2024, from over 160 countries, roughly 80% medicines and 20% vaccines, against over 35 million in July 2023. It is included in this section because no commercial estimate of this market can exceed what the global register implies about case volume, and because its cumulative milestones are the only worldwide count that exists. It sells data access and tooling rather than services, and no revenue figure is published."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "U.S. Food and Drug Administration",
+      "year": 2026,
+      "event": "On 11 March 2026 the FDA launched the Adverse Event Monitoring System, retiring FAERS, VAERS and AERS and replacing quarterly data releases with real-time publication, with MAUDE, the Human Foods Complaint System and CTPAE scheduled to migrate in May 2026. The agency stated that the legacy estate handled approximately 6 million adverse event reports per year across a patchwork of seven databases at a cost of approximately $37 million per year to operate, and projected savings of approximately $120 million over the next five years. Those two figures together give $6.17 per report to run the entire national infrastructure, or 0.354% of the published pharmacovigilance market."
+    },
+    {
+      "company": "European Medicines Agency",
+      "year": 2026,
+      "event": "The 2025 Annual Report on EudraVigilance (EMA/371010/2025) recorded 1,765,581 EVPM individual case safety reports processed during 2025, a 0.5% increase on the 1,757,524 of 2024, which had itself been a 7.9% fall from 1,908,605 in 2023. The database held 31,253,245 ICSRs referring to 17,898,709 individual cases at 31 December 2025, of which the clinical trial module accounted for 2,155,443 ICSRs and 550,836 SUSAR cases. Reporting marketing authorisation holders rose 2.9% to 1,174 at headquarter level while clinical trial sponsors reporting SUSARs fell 6% to 690."
+    },
+    {
+      "company": "European Medicines Agency Pharmacovigilance Risk Assessment Committee",
+      "year": 2026,
+      "event": "EMA's signal management team undertook a detailed review of 1,201 potential safety signals related to 995 active substances during 2025, from which the PRAC prioritised and assessed 60 confirmed signals, with about 85% drawing on EudraVigilance data as part of their evidence base. For comparison, the 2024 report recorded 1,254 potential signals across 990 substances and 71 confirmed signals assessed, of which 67 used EudraVigilance data and 32 ended in a product-information update."
+    },
+    {
+      "company": "IQVIA Holdings Inc.",
+      "year": 2026,
+      "event": "Reported full-year 2025 revenue of $16,310M, up 5.9% as reported and 4.8% at constant currency, with R&D Solutions revenue of $8,896M, up 4.3%, and R&DS contracted backlog of $32.7B at year end of which approximately $8.3B was expected to convert within twelve months. The company also folded Contract Sales & Medical Solutions, $788M of 2025 revenue, into a renamed Commercial Solutions segment, which changes segment comparability going forward but not the R&DS figures."
+    },
+    {
+      "company": "Veeva Systems Inc.",
+      "year": 2026,
+      "event": "Reported fiscal 2026 results for the year ended 31 January 2026: total revenue of $3,195.3M, up 16% from $2,746.6M, with subscription revenue of $2,684.2M, up 17% from $2,284.7M, and professional services and other revenue of $511.1M. On safety specifically the release stated only that 'Safety momentum continued with Veeva's sixth top 20 win and its first top 20 biopharma live on Workbench and Signal.' No safety revenue line was disclosed."
+    },
+    {
+      "company": "openFDA",
+      "year": 2026,
+      "event": "The FDA's public API over the adverse event reporting system, queried on 17 October 2026 against a release stamped 30 July 2026, returns 1,307,769 reports received in calendar 2025, 1,319,106 in 2024, 1,368,572 in 2023, 1,523,664 in 2022 and a peak of 1,566,148 in 2021, on 20,692,690 records in total. Annual intake is therefore 16.5% below its 2021 peak. The agency's own 'Reports Received and Reports Entered into FAERS by Year' table has not been updated past the first quarter of 2015, which is why the API rather than the table is the register used here."
+    }
+  ],
+  "regulatory_landscape": [
+    "Directive 2010/84/EU and Regulation (EU) No 1235/2010, which amended Directive 2001/83/EC and Regulation (EC) No 726/2004 to create the modern EU pharmacovigilance system, establish the Pharmacovigilance Risk Assessment Committee and make a documented safety system a condition of holding a marketing authorisation",
+    "EU Good Pharmacovigilance Practices modules, in particular Module I (systems and quality), Module II (pharmacovigilance system master file), Module V (risk management plans), Module VI (collection, management and submission of reports of suspected adverse reactions), Module VII (periodic safety update reports) and Module IX (signal management) — these define the recurring deliverables that most of this market's labour produces",
+    "ICH E2B(R3), the electronic transmission standard for individual case safety reports, against whose data elements EudraVigilance calculates 15-day and 90-day reporting compliance for marketing authorisation holders",
+    "21 CFR 314.80 and 21 CFR 600.80, the United States postmarketing reporting requirements for drugs and biologics, which set the 15-day Alert report clock and the periodic adverse drug experience report cycle",
+    "21 CFR 312.32, IND safety reporting, which governs expedited reporting of serious and unexpected suspected adverse reactions during clinical development and is the US counterpart to the SUSAR flow into EudraVigilance's clinical trial module",
+    "The FDA Adverse Event Monitoring System, which from 11 March 2026 replaced FAERS, VAERS and AERS as the agency's single intake and publication platform and moved public disclosure from quarterly releases to real time",
+    "Regulation (EU) No 658/2014 on fees payable to the European Medicines Agency for pharmacovigilance activities, which prices PSUR assessment, post-authorisation safety studies and referral procedures and so puts a published unit cost on part of the obligation",
+    "ICH E2E pharmacovigilance planning and the resulting requirement for a safety specification and pharmacovigilance plan at the point of authorisation, which is what makes pharmacovigilance spend begin before a product has any adverse events at all"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "Direct query of the FDA's openFDA drug/event endpoint by receivedate calendar year on 17 October 2026, against a release stamped last_updated 2026-07-30, giving exact counts of adverse event reports received for 2018 through 2025 and a total record count for the public release",
+      "Line-item extraction from the EMA's 2025 and 2024 Annual Reports on EudraVigilance (EMA/371010/2025 and EMA/559856/2024) for ICSRs processed per year, cumulative ICSRs and individual cases, reporting marketing authorisation holder and sponsor counts, and signal management volumes",
+      "Line-item extraction from IQVIA's full-year 2025 results and Veeva Systems' fiscal 2026 results release, confirming in each case that no pharmacovigilance or safety revenue line is separately disclosed",
+      "Normalisation of every published third-party estimate to a common 2026 base year at that publisher's own stated CAGR before any comparison was drawn, and a self-consistency test of each publisher's stated CAGR against its own endpoints"
+    ],
+    "secondary_research": [
+      "European Medicines Agency, 2025 Annual Report on EudraVigilance for the European Parliament, the Council and the Commission, EMA/371010/2025 (1,765,581 EVPM ICSRs processed in 2025; 31,253,245 ICSRs and 17,898,709 individual cases at 31 December 2025; 1,174 reporting MAHs; 1,201 potential signals reviewed; 60 confirmed signals assessed by the PRAC)",
+      "European Medicines Agency, 2024 Annual Report on EudraVigilance, EMA/559856/2024 (1,757,524 ICSRs processed in 2024 against 1,908,605 in 2023; 29,317,644 ICSRs at 31 December 2024; 1,141 reporting MAHs; 71 confirmed signals assessed)",
+      "openFDA drug/event API, release last updated 30 July 2026 (reports received by calendar year 2018-2025; 20,692,690 records in the public release)",
+      "U.S. Food and Drug Administration press announcement, 'FDA Launches New Adverse Event Look-Up Tool', 11 March 2026 (approximately 6 million reports per year across seven databases at approximately $37 million per year; approximately $120 million of savings projected over five years)",
+      "U.S. Food and Drug Administration, CDER Office of Surveillance and Epidemiology ('evaluates more than 2 million adverse event and medication error reports submitted every year to FDA's MedWatch program'; two offices and eight divisions)",
+      "VigiBase resource profile update, Uppsala Monitoring Centre data as of 31 December 2024 (over 40 million individual case reports from over 160 countries), and the WHO Programme for International Drug Monitoring (over 35 million as of July 2023)",
+      "IQVIA Holdings Inc., fourth-quarter and full-year 2025 results, February 2026 (revenue $16,310M; R&D Solutions $8,896M; R&DS backlog $32.7B)",
+      "Veeva Systems Inc., fourth quarter and fiscal year 2026 results, year ended 31 January 2026 (total revenue $3,195.3M; subscription revenue $2,684.2M)",
+      "Federal Register, 'Prescription Drug User Fee Rates for Fiscal Year 2026', 90 FR 35866, document 2025-14413, 30 July 2025 (PDUFA VII base revenue of $1,434,377,467 before adjustments)",
+      "Published market estimates from Research and Markets, Precedence Research, Fortune Business Insights, Mordor Intelligence, Future Market Insights, SNS Insider, Grand View Research, SkyQuest, IMARC, Global Growth Insights and 360iResearch"
+    ],
+    "data_validation": "Seven independent divisions were computed against public registers and cross-checked against each other. The headline division is dollars of published market per adverse-event report received: $10.45B over the 1,307,769 reports FAERS received in 2025 gives $7,991 per report, and across the whole-function tier the range is $6,989 to $10,483. That is not credible as a per-case processing cost — the only published per-case rate card runs $200 to $400 standard and $400 to $600 expedited, so the figure is 13.3x to 40.0x a unit cost — and widening the denominator does not close it: adding EudraVigilance's 1,765,581 ICSRs for 2025 gives 3,073,350 regulatory submissions and $3,400 per ICSR, while the FDA's own count of approximately 6 million reports a year across all seven of its databases and all regulated product categories still gives $1,742 per report. The per-report figure is therefore a density metric, not a unit cost, and it rules out any reading of this market as case processing priced per case. A bottom-up build in the other direction — 3,073,350 ICSRs at $200 to $600, taken as 40% to 80% of the budget on Indegene's published ratio — gives $0.77B to $4.61B, below every broad published estimate, which measures how much of the function is salaried headcount and repeat processing the registers cannot see, and sets an arithmetic floor of roughly $1B. The regulator's own unit cost is an independent check in the opposite direction: the FDA's approximately $37 million a year to operate seven databases handling approximately 6 million reports is $6.17 per report and 0.354% of the published market, a ratio of 1,295x to the market's own per-report density, which is why the software-only tier published at $0.371B is three decimal orders below the whole-function tier rather than a third of it. That tier is separately refuted by being 11.6% of Veeva Systems' audited $3,195.3M of FY2026 revenue and 2.43x below Fortune Business Insights' own implied software line of $0.903B. The containment test rules out the high reading: at Mordor's 54.88% outsourcing ratio a $10.45B market implies $5.74B of outsourced pharmacovigilance, or 64.5% of all IQVIA R&D Solutions revenue of $8,896M, which is survivable, whereas $13.71B implies $7.52B, or 84.6%, which is not. Per reporting marketing authorisation holder, $10.45B over the 1,174 MAHs that reported to EudraVigilance at headquarter level in 2025 is $8.90M a year, credible as a mean and an upper bound on it because the true global denominator is larger. None of this is a market estimate. It is a set of plausibility tests that eliminate three of the twelve published readings and leave the whole-function tier standing, and the figures published are a named publisher's own, not ours."
+  },
+  "faqs": [
+    {
+      "question": "How big is the pharmacovigilance market, and why do published figures differ so much?",
+      "answer": "On the whole-function scope we publish — case handling, signal management and risk management across the product life cycle, in-house and outsourced — pharmacovigilance is $10.45B in 2026 and reaches $20.38B by 2032 at an 11.78% CAGR. Published 2026 estimates span $0.371B to $13.71B, a 36.95x spread, but that range is misleading: the extremes are two deliberately narrow sub-scopes, software-only at $0.371B and outsourced services only at $3.07B, that get quoted as though they were the whole market. Normalise the eight estimates that do cover the whole function to a common 2026 base and they run $9.14B to $13.71B — a 1.50x spread, which is tight for this literature. Always ask which of the three tiers a pharmacovigilance figure belongs to before using it."
+    },
+    {
+      "question": "Does the market disagree about size or about growth?",
+      "answer": "About growth, which is unusual. Within the whole-function tier the 2026 sizes are 1.50x apart while the CAGRs are 5.6% to 16.34%, a 2.92x spread. That is the inverse of the normal pattern in healthcare market research, where sizes disagree by multiples and growth rates agree closely because publishers are describing different things. Pharmacovigilance is statutorily defined, its deliverables are enumerated in ICH E2B(R3) and the EU GVP modules, and everyone is counting the same work — so this is a forecasting disagreement, not a definition disagreement. It also compounds: carried to 2032 the published and extended estimates run $12.76B to $34.17B, 2.68x apart, so nearly half the uncertainty a reader inherits is created after the base year by the choice of growth rate."
+    },
+    {
+      "question": "What does the published market work out to per adverse-event report, and is that a processing cost?",
+      "answer": "It works out to about $7,991 per report and it is emphatically not a processing cost. FAERS received exactly 1,307,769 reports in calendar 2025 on the FDA's own public API, and $10.45B over that count is $7,991; across the whole-function tier the range is $6,989 to $10,483. The only published per-case rate card found runs $200 to $400 for standard processing and $400 to $600 for expedited, so the market is 13x to 40x a unit cost. Widening the denominator does not fix it — adding EudraVigilance's 1,765,581 ICSRs for 2025 gives $3,400 per submission, and the FDA's own count of about 6 million reports a year across all seven of its databases still gives $1,742. The per-report figure is a density metric. Anyone presenting it as the cost of handling a case is wrong by one to two orders of magnitude."
+    },
+    {
+      "question": "If adverse-event report volumes are falling, how can the market grow at 11.78%?",
+      "answer": "Only by spending more per report. FAERS intake peaked at 1,566,148 reports in 2021 and was 1,307,769 in 2025, down 16.5%, and EudraVigilance processed 1,765,581 ICSRs in 2025 against 1,908,605 in 2023, down 7.5%. Hold FAERS volume at its 2025 level and the forecast implies $7,991 per report in 2026 rising to $15,586 by 2032 — very nearly a doubling. That is defensible, because obligations per case have genuinely risen through ICH E2B(R3), the pharmacovigilance system master file, risk management plan and PSUR requirements, signal-management worksharing and the extension of vigilance to biosimilars, cell and gene therapies and devices, and none of those add reports. But it means a reader buying a double-digit CAGR here is buying a forecast of regulatory intensity, not of patient safety activity, and no publisher states that."
+    },
+    {
+      "question": "Which vendors lead the pharmacovigilance market, and what are their shares?",
+      "answer": "Nobody publicly knows, and this report does not guess. IQVIA reports R&D Solutions revenue of $8,896M for FY2025 without separating safety from clinical trials, laboratories, sites and data. Veeva Systems reports total FY2026 revenue of $3,195.3M and subscription revenue of $2,684.2M without breaking out Vault Safety. Oracle discloses no Argus revenue, ArisGlobal is privately held, and Accenture and Cognizant report life sciences inside broader industry groupings. Customer counts circulating in trade write-ups could not be traced to any company release and are excluded. What can be said is a containment test: applying Mordor's own 54.88% outsourcing ratio to a $10.45B market gives $5.74B of outsourced pharmacovigilance across all vendors, which is 64.5% of all IQVIA R&D Solutions revenue — plausible; the same ratio applied to the $13.71B reading gives 84.6%, which is not."
+    },
+    {
+      "question": "Why does this report publish no regional or country breakdown?",
+      "answer": "Because the published regional splits contradict each other by more than the global totals do. Four publishers give North America's share of a nominally identical market in the same year as 31.14% (Precedence), 31.7% (Grand View), 40.84% (Fortune Business Insights) and 43.62% (Mordor) — a 1.40x disagreement on one region in one year, against a 1.50x disagreement about the entire global market. Precedence also puts the United States alone at $2.29B in 2025, which is 22.1% of its own $10.36B global figure and cannot be reconciled with the same page's 31.14% for all of North America unless Canada and Mexico account for 9% of global pharmacovigilance. One of those numbers is wrong and the page does not say which, so we publish neither. An omitted section is honest; a fabricated 40.84% applied to our scope and base year would not be."
+    },
+    {
+      "question": "What changed on the regulator side in 2026, and does it affect the market?",
+      "answer": "The FDA retired FAERS. On 11 March 2026 it launched the Adverse Event Monitoring System, folding FAERS, VAERS and AERS into one platform with MAUDE, the Human Foods Complaint System and CTPAE to follow in May, and replacing quarterly data releases with real-time publication. The agency disclosed that the old estate processed approximately 6 million reports a year across seven databases at approximately $37 million a year, and projected approximately $120 million of savings over five years. Those figures give $6.17 per report to run the entire national infrastructure, which is 0.354% of the published pharmacovigilance market — a ratio of 1,295x to the market's own per-report density. The direct commercial effect is small and negative, since it removes authority-side infrastructure spend; the indirect effect is larger, because real-time public disclosure shortens the window between a report arriving and a sponsor having to account for it."
+    }
+  ],
+  "seo": {
+    "meta_title": "Pharmacovigilance Market Size, Share & Forecast 2032",
+    "meta_description": "Pharmacovigilance is $10.45B in 2026 and $20.38B by 2032 at 11.78% CAGR. Sizes agree within 1.50x; CAGRs disagree 2.92x. We divide by FAERS report counts.",
+    "keywords": [
+      "pharmacovigilance market size",
+      "pharmacovigilance market forecast",
+      "drug safety market",
+      "FAERS adverse event reports",
+      "EudraVigilance ICSRs",
+      "ICSR case processing cost",
+      "pharmacovigilance outsourcing"
+    ]
+  },
+  "executive_summary": "Pharmacovigilance is the statutory work of collecting, assessing and acting on the safety of medicines in use, and it is one of the few healthcare markets with an exact public denominator: the individual case safety reports it exists to produce are counted and published by three separate authorities. We publish the whole-function reading — $10.45B in 2026 rising to $20.38B by 2032 at 11.78%. Normalised to a common 2026 base, eight independent publishers give $9.14B, $9.20B, $9.80B, $9.83B, $10.45B, $10.54B, $11.29B and $13.71B: a 1.50x spread, unusually tight. Their growth rates, however, run 5.6%, 6.8%, 8.73%, 8.8%, 10.34%, 11.78%, 14.69% and 16.34% — a 2.92x spread that widens the 2032 range to $12.76B-$34.17B, or 2.68x. That inverts the usual pattern: these publishers agree what pharmacovigilance is and what it is worth today, and disagree by nearly threefold about how fast it grows. The 36.95x headline spread in the wider literature is an artefact of two narrow sub-scopes — software at $0.371B and outsourced services at $3.07B — being quoted as the market. Dividing through the registers settles what the market is not. FAERS received exactly 1,307,769 reports in 2025, so $10.45B is $7,991 per adverse-event report; adding EudraVigilance's 1,765,581 ICSRs gives $3,400 per regulatory submission, and the FDA's own count of about 6 million reports a year across all seven of its databases still gives $1,742. Against a published rate card of $200-$600 a case, every one of those is one to two orders of magnitude too high. This is not a case-processing market priced per case; it is a headcount and deliverables market, and the per-report figure is a density metric. Two further divisions bound it: the FDA spends $6.17 per report, or 0.354% of this market, to run the entire national infrastructure, which is why the software tier is three decimal orders below the whole-function tier; and applying Mordor's own 54.88% outsourcing ratio to $13.71B would require 84.6% of all IQVIA R&D Solutions revenue, which rules the high reading out. Finally, the registers are shrinking while the forecasts compound, which means every published CAGR here is a forecast of regulatory intensity rather than of adverse events.",
+  "key_highlights": [
+    "Pharmacovigilance, whole-function scope: $10.45B in 2026 to $20.38B in 2032 at 11.78%. The 2032 endpoint is our one-year extension of the publisher's own stated rate, whose horizon ends at $18.26B in 2031.",
+    "Published 2026 estimates span $0.371B to $13.71B — 36.95x — but across three deliberate tiers: software only, outsourced services only, and the whole function at $9.14B-$13.71B.",
+    "Inside the whole-function tier, sizes are only 1.50x apart while CAGRs are 2.92x apart (5.6% to 16.34%). This is a forecasting disagreement, not a definition disagreement, and it is the inverse of the usual pattern.",
+    "Carried to 2032 the disagreement widens rather than narrows: $12.76B to $34.17B, 2.68x. Nearly half the uncertainty a reader inherits is created after the base year.",
+    "FAERS received exactly 1,307,769 reports in 2025 and EudraVigilance processed 1,765,581 ICSRs: $10.45B is $7,991 per FAERS report, or $3,400 per regulatory submission across both. Against a $200-$600 per-case rate card, that is 13x to 40x — so this is not a case-processing market.",
+    "The FDA disclosed both terms of its own division: approximately 6 million reports a year across seven databases at approximately $37 million a year, or $6.17 per report and 0.354% of the published market — a ratio of 1,295x.",
+    "The high reading fails containment: $13.71B at a 54.88% outsourcing ratio implies $7.52B of outsourced pharmacovigilance, 84.6% of all IQVIA R&D Solutions revenue of $8,896M. At $10.45B the same test gives 64.5%, which survives.",
+    "Report volume is falling as the market compounds: FAERS is down 16.5% from its 1,566,148 peak in 2021, EudraVigilance 7.5% below 2023. The forecast implies dollars per report nearly doubling to $15,586 by 2032 at constant volume."
+  ],
+  "market_context": "Pharmacovigilance sits between a legal obligation and an operational function, and that is why it is hard to size and easy to mis-size. No marketing authorisation holder chooses whether to do it: Directive 2010/84/EU and Regulation (EU) No 1235/2010 in Europe, and 21 CFR 314.80 and 600.80 in the United States, make a documented safety system a condition of holding the authorisation at all. So the floor is set by statute rather than by budget, which is why eight publishers can agree on the present size to within 50%. But almost none of the spend is a purchase. On the publishers' own ratios, contract outsourcing is 54.88% (Mordor), 57.03% (Fortune Business Insights) or 60% (Precedence) of the market, meaning 40% to 45% is internal headcount inside pharmaceutical companies that no vendor can win and no filing discloses. The vendors that do sell into it — IQVIA at $8,896M of R&D Solutions revenue, Veeva at $3,195.3M of total revenue, Oracle, Accenture, Cognizant and the private ArisGlobal — disclose no pharmacovigilance line between them, which is why this report is grounded on adverse-event register counts rather than on a bottom-up vendor build. On the authority side the function is consolidating rather than expanding: the FDA retired FAERS, VAERS and AERS into one Adverse Event Monitoring System on 11 March 2026 to take $120 million out of a $37 million annual run cost, while the EMA's 2025 report shows EudraVigilance intake essentially flat at 1,765,581 ICSRs and its analytical work — 1,201 potential signals reviewed, 60 confirmed signals assessed — holding steady. Pharmacovigilance is therefore a market where the obligation is growing, the paperwork per obligation is growing, and the countable events are not.",
+  "forecast_analysis": "We publish $10.45B for 2026 and $20.38B for 2032 at 11.78%. Two things about that need saying plainly. First, the scope: this is Mordor Intelligence's definition — the value of pharmacovigilance work across the product life cycle, case handling, signal work and risk management, in-house and outsourced, with standalone software licence revenue excluded unless bundled into service delivery. It is chosen not because it is the median of the eight normalised estimates, though it is, but because it is the only definition in the entire published literature that names its own boundary. Second, the endpoint: Mordor's horizon stops at $18.26B in 2031, so the 2032 figure is our one-year extension of the publisher's own stated rate, not something it publishes. The arithmetic is $10.45B x 1.1178^6 = $20.3846B, cross-checked against $18.26B x 1.1178 = $20.41B, a 0.15% difference; the implied CAGR across 2026-2032 is 11.776% against 11.78% stated. The intermediate years are interpolation at a constant rate, not observation, and the chart is labelled as such. The alternative was Research and Markets' published 2032 figure of $34.17B at 16.34%, and that is ruled out on containment: its outsourced slice at Mordor's own 54.88% ratio would be $7.52B, or 84.6% of all IQVIA R&D Solutions revenue, against the 64.5% that $10.45B implies. The honest statement about the forecast range is that it is wide and that the width is about growth, not scope. The eight whole-function 2026 values are 1.50x apart; the eight CAGRs are 2.92x apart; and by 2032 the published and extended endpoints run $12.76B (Grand View at 5.6%) to $34.17B (Research and Markets at 16.34%), 2.68x apart. Whichever rate a reader picks, they are picking a view on regulatory intensity, because the registers are not cooperating: FAERS intake is 16.5% below its 2021 peak and EudraVigilance is 7.5% below 2023. Holding FAERS volume constant, our own forecast implies the dollars of pharmacovigilance spend per adverse-event report received rise from $7,991 in 2026 to $15,586 in 2032. That is the forecast, stated in the unit that can actually be audited.",
+  "reader_takeaways": [
+    "Never quote a pharmacovigilance market size without naming its tier. The same year supports $0.371B for software, $3.07B for outsourced services and $9.14B-$13.71B for the whole function. The gap between the first and last is 36.95x, far larger than any forecast error.",
+    "Inside the whole-function tier, buy the size and interrogate the growth. The eight normalised 2026 values are 1.50x apart; the CAGRs are 2.92x apart and the 2032 endpoints 2.68x apart. Most of what a reader inherits as uncertainty is created after the base year.",
+    "Check any pharmacovigilance figure against two exact public counts: 1,307,769 FAERS reports received in 2025 and 1,765,581 EudraVigilance ICSRs processed in 2025. Dollars per report is a density metric, not a unit cost — at $200-$600 a case, no published market size in this sector is within an order of magnitude of being a processing cost.",
+    "Model this as headcount and recurring deliverables, not throughput. Roughly 40% to 45% of spend is internal on the publishers' own outsourcing ratios, and the growth comes from PSURs, risk management plans, signal management and new product modalities — none of which generates an additional adverse-event report.",
+    "Treat any vendor share claim in this market as unverifiable. IQVIA, Veeva, Oracle, Accenture, Cognizant and ArisGlobal collectively disclose no pharmacovigilance revenue line. The one thing public filings do support is a containment test, and it is the test that rules out the $13.71B reading."
+  ]
+}

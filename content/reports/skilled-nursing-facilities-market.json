@@ -1,0 +1,230 @@
+{
+  "report_id": "skilled-nursing-facilities-market",
+  "slug": "skilled-nursing-facilities-market",
+  "title": "Skilled Nursing Facilities Market Size, Share and Trends Analysis",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2033",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 453.31,
+    "forecast_value": 844.77,
+    "cagr": 9.3
+  },
+  "executive_summary": "Skilled nursing is one of the few healthcare markets where almost every input is a published federal fact. The per-diem price is set by regulation, the facility count is a certification register, and the spending total, occupancy, margin and length of stay are published by MedPAC every March from claims and cost reports. That makes the published market estimates unusually easy to audit -- and the audit does not go well.\n\nIn 2024 the Medicare fee-for-service programme and its beneficiaries spent $31 billion under the skilled nursing facility prospective payment system, across about 1.5 million covered stays at 14,400 freestanding facilities. The smallest global published base-year estimate for the same year is $380.09 billion. That is 12.3x the register. Against the most recent global figure, $453.31 billion for 2026, the multiple is 14.6x. Within a single base year, the one house that publishes a United States-only figure and the houses that publish a global one differ by 2.03x.\n\nSo the headline gap is a scope disagreement, and the tiers can be named rather than guessed at. Tier 1 is the Medicare Part A skilled nursing benefit: about $31 billion, post-acute, time-limited, paid per diem under PDPM after a qualifying hospital stay. Tier 2 is all-payer United States nursing facility revenue, roughly $181 to $187 billion on one published estimate and $219.9 billion for the adjacent CMS national-accounts category. Tier 3, where every global headline sits, is institutional nursing and long-term care worldwide. No published estimate describes Tier 1 at all.\n\nWhat is genuinely contested is growth, not scope. Published compound rates run from 3.44% to 9.3% -- a 2.70x spread, and still 1.45x among global-scope houses alone. Meanwhile the register the growth is supposed to describe shows a facility count falling about 1.0% a year since 2019, median occupancy of 83%, covered admissions per 1,000 beneficiaries down from 55 in 2019 to 45 in 2024, and MedPAC recommending Congress cut 2026 base rates by 4%.",
+  "market_context": "A skilled nursing facility is two businesses in one building. Medicare pays a high per-diem rate for short post-acute stays after a qualifying hospital admission; Medicaid pays a much lower rate for long-term care, and that is the bulk of the work. MedPAC's 2024 figures make the split measurable: fee-for-service Medicare accounted for 13% of freestanding facility revenue, down from 14% in 2023, and just 8% of patient days at the median facility, against 64% of days paid by Medicaid. Ninety-six percent of facilities are dually certified for both.\n\nThat structure is why the sector's financials look contradictory. The fee-for-service Medicare margin for freestanding facilities was 24.4% in 2024, the twenty-fifth consecutive year at or above 10%. The all-payer total margin was 2.1%, and 40% of facilities still lost money across all payers. Medicare is a preferred payer attached to a small share of the volume; everything else is roughly break-even.\n\nIt is also why the market boundary moves so much. Push the boundary out to assisted and independent living and the bed count rises far faster than the revenue: skilled nursing revenue per occupied bed runs about 2.92x senior living revenue per resident on disclosed 2025 figures. Every global estimate of this market is a decision about where in that gradient to stop counting.",
+  "forecast_analysis": "The series shown here is Coherent Market Insights' April 2026 estimate: $453.31 billion in 2026 to $844.77 billion by 2033 at 9.3%. It was chosen because it is the most recently published, carries the most recent base year, states its unit unambiguously in billions, and its endpoints reconcile to its own stated rate to within 0.001 points. The intermediate years are geometric interpolation between two published endpoints, not separately sourced annual observations.\n\nIt is also the fastest-growing series in the set, and readers should know why that is hard to reconcile with the register. Medicare-participating facilities fell from 14,798 in 2023 to 14,518 by July 2025, about -1.0% a year since 2019. Median occupancy was 83% in 2024. Covered admissions per 1,000 fee-for-service beneficiaries fell from 55 in 2019 to 45 in 2024. MedPAC has recommended cutting 2026 base rates by 4%.\n\nWhat can support high single-digit growth is price and intensity rather than volume: a net 3.2% FY2026 rate update, covered days per admission up from 26.1 in 2019 to 30.7 in 2024, Medicaid rate increases in 45 states, and published evidence MedPAC itself cites that providers are adapting billing to PDPM incentives. Readers working to a United States all-payer definition should anchor instead on $181 to $187 billion and 3.44%; readers working to the Medicare Part A benefit should anchor on the $31 billion register.",
+  "seo": {
+    "meta_title": "Skilled Nursing Facilities Market Size & Forecast to 2033",
+    "meta_description": "Global skilled nursing estimates sit 12.3x above Medicare's $31bn SNF register. A PDPM per-diem division names the tiers and shows which one you buy.",
+    "keywords": [
+      "skilled nursing facilities market",
+      "skilled nursing facility market size",
+      "SNF market",
+      "PDPM per diem rates",
+      "nursing home market",
+      "post-acute care market",
+      "MedPAC skilled nursing"
+    ]
+  },
+  "market_overview": {
+    "summary": "On the broad, global definition used by the most recently published estimate, the skilled nursing facilities market is $453.31 billion in 2026, projected to $844.77 billion by 2033 at a 9.3% CAGR. That figure describes institutional nursing and long-term care worldwide. The Medicare fee-for-service skilled nursing benefit in the United States -- what the term means in payment policy -- was $31 billion in 2024, some 14.6 times smaller. All-payer United States nursing facility revenue sits between, at $181 to $220 billion depending on the series. The gap between tiers is scope. The gap between published growth rates, 3.44% to 9.3%, is a real disagreement.",
+    "key_trends": [
+      "Three distinct tiers are in circulation under one name: Medicare Part A skilled nursing at $31bn (2024), US all-payer nursing facility revenue at $181-220bn, and global institutional long-term care at $326-483bn",
+      "Published CAGRs spread 2.70x (3.44% to 9.3%) and still 1.45x among global-scope houses, while 2026 base-year values agree to within 1.065x -- the reverse of the usual pattern",
+      "Medicare-participating facilities fell from 14,798 in 2023 to 14,518 by July 2025, about -1.0% a year since 2019, with 20 openings and 50 terminations in the first half of 2025",
+      "Covered admissions per 1,000 FFS beneficiaries fell from 55 in 2019 to 45 in 2024 while covered days per admission rose from 26.1 to 30.7, so growth is in length of stay, not episodes",
+      "The FFS Medicare margin for freestanding SNFs was 24.4% in 2024 -- a 25th consecutive year above 10% -- against an all-payer total margin of 2.1% and 40% of facilities losing money overall",
+      "MedPAC has recommended Congress cut 2026 SNF base payment rates by 4% for FY2027, after recommending -3% the year before"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in US post-acute care; capacity-constrained rather than adoption-constrained",
+    "market_drivers": [
+      "Statutory rate updates: a net 3.2% FY2026 update to the PDPM federal per-diem rates",
+      "Length of stay rising under PDPM, from 26.1 covered days per admission in 2019 to 30.7 in 2024",
+      "Medicaid payment rate increases enacted by 45 states for FY2024, lifting the payer that funds most facility days"
+    ],
+    "market_challenges": [
+      "A facility count falling about 1.0% per year since 2019 and median occupancy of 83%",
+      "MedPAC's standing recommendation to cut base rates, now -4% for FY2027",
+      "Medicare Advantage growth displacing the one payer whose rates carry the margin"
+    ]
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Statutory per-diem rate updates, published annually in the Federal Register: a net 3.2% increase for FY2026 (3.3% market basket plus a 0.6 point forecast-error adjustment, less 0.7 points for productivity)",
+      "Length of stay rising under the Patient Driven Payment Model: covered days per admission went from 26.1 in 2019 to 30.7 in 2024, a 4.9% rise in 2024 alone",
+      "Medicaid rate increases made by 45 states for FY2024, which lifted the non-Medicare margin for freestanding facilities from its 2023 level to -2.3%",
+      "Demographic demand and the setting's low cost relative to inpatient rehabilitation facilities, which MedPAC gives as the reason the sector stays attractive to investors",
+      "Capital availability: HUD Section 232 financed 337 projects in FY2025 against 220 in FY2024, with the insured amount rising from $3.2bn to $6.0bn"
+    ],
+    "restraints": [
+      "Supply is shrinking: Medicare-participating facilities fell from 14,798 in 2023 to 14,634 in 2024 to 14,518 by 10 July 2025, averaging -1.0% a year since 2019",
+      "Median national occupancy was 83% in 2024, with the bottom quartile at or below 70% -- below the 85% median of 2019 and the 88% of 2010",
+      "Covered admissions per 1,000 fee-for-service beneficiaries fell from 55 in 2019 to 45 in 2024, a decline of about 3.9% a year",
+      "MedPAC has recommended reducing 2026 base payment rates by 4% for FY2027, having recommended -3% for FY2026",
+      "Medicare Advantage enrolment growth is reducing the fee-for-service share of days and revenue, and MA plans use prior authorisation to manage admissions and length of stay"
+    ],
+    "opportunities": [
+      "Case-mix and documentation under PDPM, where MedPAC cites published evidence that providers are adapting billing behaviour to the incentives of the model",
+      "Consolidation by operators that can run occupancy above the national median: Ensign reported 82.2% operational-bed occupancy for 2025 and PACS 89% portfolio-wide, against a national median of 83%",
+      "Medicaid long-term care rates, which fund most facility days and which 45 states raised for FY2024 -- the single largest lever on all-payer profitability",
+      "Acquiring facilities that exit the Medicare programme without closing: of 50 terminations in the first half of 2025, all but 9 were voluntary"
+    ],
+    "challenges": [
+      "The term means three different things at three different scales, so published market sizes cannot be compared without first establishing the tier",
+      "Staffing: sector employment in August 2025 remained 2% below March 2020 despite growing 4% year on year, and an industry survey of 411 providers reported half had turned away potential residents",
+      "Ownership structures that MedPAC describes as making common ownership and true facility profitability difficult to identify at all",
+      "Payment adequacy findings cut against the sector's own case: a 24.4% fee-for-service Medicare margin is the evidence MedPAC uses to recommend rate cuts"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Freestanding skilled nursing facilities",
+      "Hospital-based skilled nursing units",
+      "Hospital swing beds"
+    ],
+    "by_application": [
+      "Post-acute rehabilitation after surgery or hospitalisation",
+      "Long-term custodial nursing care",
+      "Medically complex and skilled-in-place care",
+      "Memory care"
+    ],
+    "by_end_user": [
+      "For-profit operators",
+      "Non-profit operators",
+      "Government-operated facilities"
+    ],
+    "by_payer": [
+      "Medicaid",
+      "Medicare fee-for-service",
+      "Medicare Advantage",
+      "Private pay and private insurance"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 453.31 },
+    { "year": 2027, "value": 495.47 },
+    { "year": 2028, "value": 541.55 },
+    { "year": 2029, "value": 591.91 },
+    { "year": 2030, "value": 646.96 },
+    { "year": 2031, "value": 707.13 },
+    { "year": 2032, "value": 772.89 },
+    { "year": 2033, "value": 844.77 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2033 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "The Ensign Group",
+      "headquarters": "United States",
+      "market_position": "Largest disclosed pure-play skilled nursing operator by facility count",
+      "description": "Reported skilled services revenue of $4.84 billion for 2025, up 18.7%, on 10,795,373 actual patient days across 373 facilities at 31 December 2025, with operational-bed occupancy of 82.2% against 80.5% a year earlier. Skilled nursing facilities produced 95.6% of revenue; Medicaid accounted for 46.6% and Medicare 24.7% of skilled services revenue. Revenue of $4.84 billion divided by 10,795,373 patient days is $448.34 per patient day across all payers. No market share is disclosed, and at roughly 2% of United States all-payer nursing facility revenue none would be meaningful."
+    },
+    {
+      "company": "PACS Group",
+      "headquarters": "United States",
+      "market_position": "Fast-growing acquirer; highest disclosed occupancy of the listed operators",
+      "description": "Reported patient and resident service revenue of $5.3 billion for 2025, up 29.4%, with skilled nursing services revenue up 29.0% on a 22.8% increase in patient days, across 321 post-acute care facilities in 17 states plus 28 assisted living and 2 independent living facilities. Portfolio occupancy was 89%, and 95% at mature facilities. Medicare was 33.7% and Medicaid 40.5% of routine revenue -- a markedly more Medicare-weighted book than Ensign's. The 10-K is internally inconsistent on leased facility count, giving 219 in Item 1 and 268 under Properties. No market share is disclosed."
+    },
+    {
+      "company": "Brookdale Senior Living",
+      "headquarters": "United States",
+      "market_position": "Senior living operator, frequently listed in this market's competitive sets; discloses no skilled nursing segment",
+      "description": "Reported approximately $3.19 billion of revenue for 2025 with consolidated occupancy of 80.9% against 78.6% in 2024, across 623 communities in 41 states able to serve about 57,000 residents as of 30 September 2025. Its 2025 disclosures carry no skilled nursing breakout. Revenue of $3.19 billion over 57,000 residents is about $56,035 per resident per year, against about $163,644 per occupied bed per year at Ensign -- a 2.92x gap that is the clearest available measure of where the skilled nursing boundary sits. Brookdale's presence in a skilled nursing competitive set is itself a scope statement."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "SNF Prospective Payment System under section 1888(e) of the Social Security Act, which sets the unadjusted Federal per-diem rates annually by rule; the FY2026 final rule was published at 90 FR 37310 on 4 August 2025, effective 1 October 2025, with a net 3.2% update",
+    "Patient Driven Payment Model, effective 1 October 2019, which pays each covered day as the sum of five case-mix-adjusted components (physical therapy, occupational therapy, speech-language pathology, nursing, non-therapy ancillaries) plus a non-case-mix component; the FY2026 urban component rates sum to $524.30 per day at a case-mix index of 1.0",
+    "The three-day qualifying inpatient hospital stay requirement for Medicare SNF coverage, whose public health emergency waiver expired in May 2023 and whose expiry MedPAC attributes much of the 2023 decline in admissions and days to",
+    "Medicare and Medicaid certification under 42 CFR Part 483, tracked in CMS's Quality, Certification and Oversight Reports; 96% of facilities are dually certified for Medicare Part A skilled care and Medicaid long-term care",
+    "SNF Quality Reporting Program and SNF Value-Based Purchasing, which adjust payment on reported measures and were updated in the FY2026 final rule",
+    "Minimum staffing requirements for long-term care facilities, whose expected repeal MedPAC reports investors and facility owners welcomed",
+    "HUD Section 232 mortgage insurance, the sector's principal federal lending channel, which financed 337 projects for $6.0 billion insured in FY2025"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of federal registers, rulemaking, SEC filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 7 (Skilled nursing facility services): 2024 figures of ~14,400 freestanding SNFs, ~1.5 million Medicare-covered stays, $31 billion programme and beneficiary spending under the SNF PPS ($26 billion programme only), median occupancy 83%, FFS Medicare margin 24.4%, FFS Medicare 13% of freestanding facility revenue; Table 7-2 facility counts 14,798 (2023), 14,634 (2024), 14,518 (to 10 July 2025) from CMS Quality, Certification and Oversight Reports accessed 3 November 2025; Table 7-3 admissions and days per 1,000 FFS beneficiaries 2019-2024",
+      "MedPAC, Report to the Congress, March 2025, Chapter 6: 2023 figures of ~14,500 freestanding SNFs, ~1.6 million covered stays, $30 billion FFS spending, 22% margin, and the occupancy series back to 2010",
+      "CMS, FY2026 SNF PPS final rule, 90 FR 37310, published 4 August 2025 (Tables 4 and 5, unadjusted Federal per-diem rates; net 3.2% update), with the rate table read from an independent transcription because the Federal Register tables are embedded as images",
+      "CMS Office of the Actuary National Health Expenditure Accounts, as published in Health Affairs (2026): freestanding nursing care facilities and continuing care retirement communities at $219.9 billion in 2024, up 7.3% from $205.0 billion in 2023",
+      "The Ensign Group Form 10-K for the year ended 31 December 2025; PACS Group Form 10-K for the year ended 31 December 2025; Brookdale Senior Living full-year 2025 results (18 February 2026) and its September 2025 occupancy Form 8-K",
+      "Published market estimates from Coherent Market Insights (CMI6806, 2 April 2026), Credence Research, 360iResearch via Research and Markets (report 6011760, September 2026), Research Dive (July 2023) and Nova One Advisor (United States)"
+    ],
+    "data_validation": "Market size is taken from published third-party estimates and attributed by name; no methodology behind those estimates was inspected, and they are presented as published estimates rather than as verified measurements. Three independent grounding divisions were computed from federal and SEC sources and are plausibility tests, not market estimates. First, MedPAC's 1.5 million covered stays at 30.7 covered days per admission gives 46,050,000 covered days for 2024; $31 billion divided by 46,050,000 days is $673.18 per covered day, and $26 billion of programme-only spending is $564.60 per day, against an FY2026 unadjusted urban per-diem sum of $524.30 at a case-mix index of 1.0 -- a ratio of 1.284, consistent with post-acute case-mix indices above 1.0 plus urban wage-index uplift. The spend is calendar 2024 and the rates are FY2026, so the comparison crosses two payment updates; the bias runs one way, meaning the true multiple against rates in force in 2024 is larger, not smaller. Second, grossing the $31 billion register up by MedPAC's 13% fee-for-service share of freestanding facility revenue gives $238.5 billion of implied United States all-payer nursing facility revenue, against $219.9 billion in the CMS national accounts for 2024 -- agreement within 8.5% between two unrelated instruments. Third, Ensign's $4.84 billion over 10,795,373 patient days is $448.34 per day all-payer and $12.98 million per facility, against $15.15 million per facility for the national accounts total over 14,518 certified facilities. These tests establish what the published figures cannot mean. They do not establish the correct market size and are not offered as an estimate. Regional and country breakdowns are published as empty because no named source gives those splits; vendor share is omitted because none is disclosed and, at roughly 2% of the United States all-payer total for the largest listed operators, none would be meaningful.",
+    "known_limitations": [
+      "MedPAC's 1.5 million stays and $31 billion are rounded in the source, so the per-covered-day results carry roughly one significant figure of denominator uncertainty",
+      "The 360iResearch series is printed in millions (USD 482.78 million in 2026), a unit the federal registers rule out absolutely; its CAGR is cited and its headline value is not restated in billions here",
+      "A $274.12 billion (2025) to $402.8 billion (2032) series at 5.64% is still returned by search engines for Research and Markets report 6011760, but both live URLs now serve the September 2026 edition and the figure could not be verified on any publisher page, so it is not published",
+      "Credence Research states 2023 as base year in one table and 2024 in two others; Nova One Advisor's page carries three mutually inconsistent figure sets. The values used here are the ones that appear in the majority of each page's own tables",
+      "Hospital swing beds, at $2 billion for about 66,000 covered stays in 2024, are excluded from the per-diem division because most such stays are not paid under the SNF PPS"
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How big is the skilled nursing facilities market?",
+      "answer": "It depends entirely on which of three tiers you mean. On the broad global definition used by the most recently published estimate, $453.31 billion in 2026 rising to $844.77 billion by 2033 at 9.3%. All-payer United States nursing facility revenue is $181 to $220 billion depending on the series. The Medicare fee-for-service skilled nursing benefit -- what the term means in payment policy -- was $31 billion in 2024. The global headline is 14.6 times the Medicare register."
+    },
+    {
+      "question": "Why do published estimates differ so much?"
+      ,
+      "answer": "For two separate reasons that are usually conflated. Across tiers it is scope: the smallest global base-year figure for 2024, $380.09 billion, is 12.3x MedPAC's $31 billion Medicare register for the same year, and the one United States-only house differs from the global houses by 2.03x in a single base year. Among the global houses themselves the base-year values now agree to within 1.065x, but the growth rates spread 1.45x. That part is a genuine disagreement about growth."
+    },
+    {
+      "question": "How can the published figures be checked against public data?",
+      "answer": "Because the per-diem price is statutory. The FY2026 unadjusted Federal per-diem components for urban facilities sum to $524.30 a day at a case-mix index of 1.0. MedPAC reports about 1.5 million covered stays at 30.7 covered days each for 2024, which is 46,050,000 covered days; $31 billion over that denominator is $673.18 per covered day, or 1.284 times the statutory sum. That is what you would expect from post-acute case-mix indices above 1.0 plus urban wage-index uplift, so the register and the rule corroborate each other."
+    },
+    {
+      "question": "Is the number of skilled nursing facilities growing?",
+      "answer": "No. Medicare-participating facilities fell from 14,798 in 2023 to 14,634 in 2024 and to 14,518 by 10 July 2025, averaging about -1.0% a year since 2019. In the first half of 2025 there were 20 new facilities against 50 terminations, of which all but 9 were voluntary rather than imposed by Medicare. Medicaid-certified nursing facilities stood at 14,232 in July 2025. Median occupancy was 83% in 2024, below the 85% of 2019 and the 88% of 2010."
+    },
+    {
+      "question": "Can the sector really grow at 9.3% a year?",
+      "answer": "Not on volume. Covered admissions per 1,000 fee-for-service beneficiaries fell from 55 in 2019 to 45 in 2024 and the facility count is shrinking. What can produce high single-digit spending growth is price and intensity: a net 3.2% FY2026 rate update, covered days per admission up from 26.1 in 2019 to 30.7 in 2024, Medicaid rate rises in 45 states, and published evidence MedPAC cites that providers are adapting billing to PDPM incentives. That is a payment-policy mechanism, and MedPAC has recommended Congress cut 2026 base rates by 4%."
+    },
+    {
+      "question": "Who leads the skilled nursing facilities market?",
+      "answer": "No one holds a meaningful share. Ensign reported $4.84 billion of skilled services revenue across 373 facilities for 2025 and PACS $5.3 billion across 321 facilities -- each roughly 2% of a United States all-payer total near $220 billion. MedPAC describes the sector as fragmented, dominated by independent providers and regional chains, with ownership structures that make common ownership hard to identify at all. No publisher discloses vendor share for this market and none is published here."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because no named public source gives those splits for this market. Every global house advertises a regional segmentation behind its paywall and none publishes the numbers. The only regional statement this research can defend is an inference -- that the United States is roughly half the global total, since about $220 billion of a $453.31 billion 2026 figure leaves around $233 billion for the rest of the world -- and an inference drawn across two differently scoped series does not belong in a regional table."
+    },
+    {
+      "question": "Where does skilled nursing end and senior living begin?",
+      "answer": "At about a 2.92x gap in revenue per bed. Ensign's $448.34 per patient day works out to roughly $163,644 per occupied bed a year across all payers. Brookdale's $3.19 billion over about 57,000 residents is roughly $56,035 per resident a year. Global estimates that bundle assisted and independent living into skilled nursing add beds far faster than revenue, which is one mechanical reason the broad figures are large while the underlying growth story stays weak."
+    }
+  ],
+  "key_highlights": [
+    "The most recent global published estimate is $453.31 billion in 2026 rising to $844.77 billion by 2033 at 9.3%, and it describes institutional long-term care worldwide, not the Medicare skilled nursing benefit",
+    "Medicare fee-for-service spent $31 billion on skilled nursing facility services in 2024 across about 1.5 million covered stays -- 14.6 times smaller than the global headline, and 12.3 times smaller than the lowest global figure for the same base year",
+    "Three tiers circulate under one name: Medicare Part A skilled nursing at ~$31bn, US all-payer nursing facility revenue at $181-220bn, and global institutional long-term care at $326-483bn",
+    "$31bn over 46,050,000 covered days is $673.18 per covered day, 1.284 times the FY2026 statutory urban per-diem sum of $524.30 -- the register and the Federal Register corroborate each other",
+    "Grossing the register up by MedPAC's 13% fee-for-service revenue share gives $238.5 billion of implied US all-payer revenue, within 8.5% of the $219.9 billion CMS national accounts figure for 2024",
+    "Published CAGRs spread 2.70x (3.44% to 9.3%) while 2026 base-year values agree to within 1.065x, so the growth rate is the contested figure here, not the scope boundary",
+    "The register points the other way: facilities down from 14,798 (2023) to 14,518 (July 2025), median occupancy 83%, admissions per 1,000 FFS beneficiaries down from 55 to 45, and MedPAC recommending a 4% rate cut"
+  ],
+  "reader_takeaways": [
+    "Establish the tier before quoting any skilled nursing figure: the same phrase covers a $31 billion Medicare benefit, a ~$220 billion US all-payer sector and a ~$453 billion global long-term care market",
+    "Treat the growth rate, not the scope, as the contested number in this market: base-year values have converged to within 1.065x while published CAGRs still differ 2.70x",
+    "Do not plan on volume growth. Facilities are closing at about 1.0% a year, median occupancy is 83%, and covered admissions per 1,000 beneficiaries fell from 55 in 2019 to 45 in 2024",
+    "Price risk is the live risk. The 24.4% fee-for-service Medicare margin that makes the sector attractive is the same evidence MedPAC uses to recommend a 4% cut to 2026 base rates",
+    "Reject any vendor share you are shown. The two largest listed operators are each about 2% of the US all-payer total and no share figure is publicly disclosed"
+  ]
+}

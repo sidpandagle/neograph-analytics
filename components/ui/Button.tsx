@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ghost:
         'bg-transparent text-[var(--cmi-primary)] hover:text-[var(--cmi-primary-pressed)] px-1.5',
       danger:
-        'bg-[var(--destructive)] text-white hover:brightness-95',
+        'bg-[var(--destructive)] text-[var(--destructive-foreground)] hover:brightness-95',
       onBlue:
         'bg-[var(--card)] text-[var(--cmi-ink)] hover:bg-[var(--cmi-chip-blue)]',
       outlineOnBlue:

@@ -189,8 +189,12 @@ export default async function PressReleaseDetailPage({ params }: PressReleasePag
       <Section>
         <Container size="lg">
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left – article (2/3 width) */}
-            <div className="lg:col-span-2">
+            {/* Left – article (2/3 width). min-w-0: without it the single-column
+                grid track below lg sizes to the article's max-content width, so a
+                wide table in author HTML inflated the track to 1009px inside a
+                669px container and pushed the page into horizontal scroll.
+                ReportContentWrapper already carries it on both of its columns. */}
+            <div className="lg:col-span-2 min-w-0">
               <article>
                 <StyledArticleContent htmlContent={pressRelease.content} />
               </article>
