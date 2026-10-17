@@ -188,6 +188,55 @@ Not browser-dependent:
 7. **The report-expansion target is met** — 182 rows against the 142 it started
    from is 40, inside the 30-50 asked for. No round 5 is scheduled; the loop
    stays on review and fixes unless more reports are asked for.
+## Round 5 publish sequence — run in the run-up to the 21:00 IST merge
+
+Five reports and one article sit on `work/continuous-improvements`, all passing
+`check`, none published. Corpus goes **182 -> 187**. Prior rounds' content is
+already live (8 blog rows, 6 press releases), so this is the only new content.
+
+Reports first, then the article, because the article links all five and
+`blog-db.mjs check --online` fails until they resolve. That failure has already
+been observed and names exactly the five slugs — it is the sequencing rule
+working, not a defect.
+
+```bash
+# 1. everything must still pass
+node scripts/report-db.mjs check content/reports/*.json
+
+# 2. reports FIRST
+node scripts/report-db.mjs publish \
+  content/reports/dialysis-and-renal-care-market.json \
+  content/reports/contract-research-organization-market.json \
+  content/reports/pharmacovigilance-market.json \
+  content/reports/radiotherapy-equipment-market.json \
+  content/reports/ambulatory-surgery-centers-market.json
+
+# 3. the article's links now resolve — this check must flip from FAIL to PASS
+node scripts/blog-db.mjs check content/blogs/when-forecasters-agree-on-size-and-not-on-growth.json --online
+
+# 4. then the article
+node scripts/blog-db.mjs publish content/blogs/when-forecasters-agree-on-size-and-not-on-growth.json
+
+# 5. prerender every page — an unbuilt row is a hard 404 behind an ISR card
+npm run build
+```
+
+Then the deploy per `DEPLOY-RUNBOOK.md`, and resubmit the sitemap: it grows by
+six URLs (five reports plus the article), 221 -> 227.
+
+**Do not publish before the window.** `app/reports/[slug]/page.tsx` and
+`app/blog/[slug]/page.tsx` set `dynamicParams = false`, so a Supabase row absent
+from the last build's `generateStaticParams()` is a hard 404 while `/reports`
+(ISR, hourly) already lists a card linking to it.
+
+### After publishing, update these
+
+- `research/REPORT-PIPELINE.md` — rows 41-45 `check-passed` -> `published`
+- `WORKLOG.md` — the published figures and what production actually shows
+- the corpus count in the hero, the listing and `/llms.txt` — 182 -> 187,
+  derived, so confirm rather than edit
+- `node scripts/audit-html.mjs --prod` once the deploy lands
+
 ## Blockers
 
 None.
