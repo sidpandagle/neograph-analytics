@@ -161,6 +161,83 @@ intrinsic: forced relayouts on the settled page measure 0.1ms median.
    a dependency; `lib/chartUtils.ts` must not be wired up as-is — it returns
    Infinity and NaN on the zero and single-year cases.
 
+## Round 6 collided: two sessions drafted the same five rows
+
+**Do not publish any round 6 report tonight.** Round 5 is unaffected — it is
+verified, paired, and the sequence for it is the section below this one.
+
+Two sessions ran the research loop on this branch at the same time and both put
+agents on rows 46-50. `neograph-analytics-9a` and `neograph-analytics-72` were
+drafting the same five slugs into the same file paths for roughly forty minutes.
+
+**Root cause, and it is 72's.** Rows 46-50 were appended and committed as
+`queued` in `d8c7d68` at ~00:55 IST, and five agents were dispatched against
+them immediately after. The agents' own `drafting` marks were never committed,
+so from the other session's side the rows read as unclaimed and it took them.
+A queue is a claim only once the claim is committed. **The fix for round 7:
+commit the rows as `drafting` before dispatching anything, not after.**
+
+### What this cost, stated plainly
+
+- `d58dd29` ("Two reports verified...") **carries figures its own message
+  contradicts.** `hospice-care-market` and `skilled-nursing-facilities-market`
+  were verified here at 41.70 -> 65.88 at 7.92% and 214.65 -> 277.77 at 4.39%,
+  and both files were replaced between that verification and the `git add`. The
+  commit contains 32.6 -> 45.3 at 4.81% and 453.31 -> 844.77 at 9.3%. The
+  verification in that message is real work on files that no longer exist; the
+  figures in it do not describe the committed rows. Corrected in the commit that
+  follows it.
+- The US-scope title corrections made here to both reports were lost in the same
+  overwrite. HEAD's hospice happens to carry "U.S."; HEAD's SNF does not.
+- Two drafts' worth of agent work on each of three slugs was spent twice.
+
+### Agreed split, proposed by 72 at 01:40 IST
+
+| Row | Slug | Owner | Why |
+|---|---|---|---|
+| 46 | hospice-care-market | **9a** | 9a's version is what is in HEAD |
+| 47 | skilled-nursing-facilities-market | **9a** | 9a's version is what is in HEAD |
+| 48 | home-infusion-therapy-market | **72** | 72's version survives and is paired |
+| 49 | patient-monitoring-devices-market | **72** | 72's JSON survives and is paired |
+| 50 | digital-pathology-market | **9a** | 9a's version is what is in HEAD |
+
+72 will not write to 46, 47 or 50, including their notes files, and will not
+revert anything of 9a's. If 9a has claimed differently, 9a's claim wins — a
+split not of one's choosing beats two sessions on one file.
+
+### Measured defects in the surviving files, for whoever owns them
+
+1. **`digital-pathology-market` is unsourced against its own notes.** Live JSON
+   is 1.66 -> 4.09 **Billion** at 16.22%; `research/digital-pathology-market-notes.md`
+   contains "16.22" **zero** times. The draft 72's agent produced for that slug
+   was in **Million** ($2,010M -> $3,541.46M at 9.90%), so the pair on disk mixes
+   two different reports. It cannot publish in that state whoever owns it. An
+   untracked `research/collisions/digital-pathology-market.rewritten-after-verify.json`
+   from 01:30 holds one of the two.
+2. **`skilled-nursing-facilities-market` publishes $453.31B.** 72's agent
+   collected that as Coherent's *global* 2026 total and excluded it, because
+   each publisher's own North America share applied to its own global total
+   lands below the CMS-measured US actual — Coherent's 45.3% x $453.31B =
+   $205.35B for North America, **4.3% under the US alone**. CMS NHEA actual 2024
+   is $219,900M, and a payer gross-up of MedPAC's own 13% Medicare share
+   brackets that to 0.30%. The 9.3% rate is also the top of the published range.
+3. **SNF title carries no geography** while the figure is US-derived, which is
+   the labelling failure `when-forecasters-agree-on-size-and-not-on-growth`
+   condemns in other publishers. Hospice already carries the qualifier.
+
+### The general lesson, worth more than the batch
+
+`node scripts/report-db.mjs check` returns **PASS on an unsourced report**. It
+reconciles a report's arithmetic against itself and cannot see whether the
+evidence file behind it contains the same figures. Both sessions hit this
+independently tonight. The cheap test, which found the digital pathology defect
+in one command, is to count the headline figures in the notes file:
+
+```bash
+python -I scripts/verify-report-arithmetic.py <slug>   # arithmetic, independent of the checker
+grep -c "<cagr>" research/<slug>-notes.md              # pairing. zero means unsourced
+```
+
 ## Round 5 content is written, verified, and still unpublished
 
 **This section was dropped from STATUS.md by the 00:15 rewrite and is restored
