@@ -112,8 +112,14 @@ Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` f
 - `/sitemap.xml` - **the only sitemap `robots.ts` advertises**, and the
   complete one: static pages, reports, articles, press releases, consulting,
   legal and author profiles. `/sitemap-pages.xml` and
-  `/sitemap-consulting.xml` serve their own older subsets and are not
-  advertised anywhere
+  `/sitemap-consulting.xml` are **308 redirects to it** as of 2026-10-18 —
+  they used to serve older subsets (8 static pages, 10 consulting) with their
+  own `priority` and, in the pages one, a `lastmod` stamped at fetch time.
+  Measured 10 of 10 and 8 of 8 already present in `/sitemap.xml` before the
+  redirect. The paginated `/api/sitemap-reports/[page]` family (reached via the
+  `sitemap-reports-:page.xml` rewrites in `next.config.ts`) is still
+  unadvertised and still duplicates report URLs; it paginates at 500 against a
+  50,000-URL limit, so it is a growth mechanism rather than a stale subset
 
 ### External Integrations
 
@@ -139,11 +145,20 @@ The `/reports/[slug]` page includes:
 - Key findings bullets, FAQ accordion, competitive landscape / key players
 - Report code in `HF{id}` format
 
-**Chart components.** Three render, all imported by
+**Chart components.** Four render, all imported by
 `components/reports/JsonReportSections.tsx`:
 - `charts/MarketForecastLineChart.tsx`
 - `charts/ComponentSharePieChart.tsx`
 - `charts/RegionalBarChart.tsx`
+- `charts/CountryBarChart.tsx` — share and growth by country, on **140 of 182**
+  report pages (the rows with a populated `country_analysis`). It has no table
+  of its own on purpose: `CountryTable` renders the same figures server-side
+  directly below it, which is also why the SVG is `role="img"`
+
+There is **no competitive-position chart and should not be one**:
+`competitive_landscape` carries exactly one numeric field across all 182 rows
+(`founded`, on 142), `market_position` is prose and `company_profiles.revenue`
+is a string. Measured with `scripts/column-population.mjs`.
 
 Four more exist and are imported by nothing: `charts/MarketGrowthChart.tsx`,
 `charts/MarketSharePieChart.tsx`, `charts/RegionalAnalysisChart.tsx`, and
@@ -298,7 +313,8 @@ through ISR with no deploy.
 ```bash
 node scripts/report-db.mjs check content/reports/*.json   # drafts, offline
 node scripts/report-db.mjs columns                        # the table's 32 columns
-node scripts/audit-html.mjs [--prod]                      # 16 routes, headless
+node scripts/audit-html.mjs [--prod]                      # 18 routes, headless
+node scripts/column-population.mjs [--depth <col>]        # which JSONB columns carry data
 node scripts/contrast-audit.mjs                           # token contrast, both themes
 node scripts/report-db.mjs audit                          # SEO lengths corpus-wide
 node --experimental-strip-types scripts/seo-unit.mjs      # lib/seo.ts helpers, offline
@@ -308,4 +324,20 @@ node scripts/source-hygiene.mjs                           # eaten regex escapes,
 
 Supabase egress is metered and the report rows carry large JSONB columns: never
 `select('*')` for a list view, and memoise any query that would otherwise run
-once per page in a 152-page build.
+once per page in a 152-page build. To ask whether a column is populated at all,
+select its **first element** (`country_analysis->0`) rather than the array —
+that is what `scripts/column-population.mjs` does, and it answers the question
+for all 182 rows at the cost of 182 small objects.
+
+`audit-html.mjs` reads the built HTML under `.next/server/app`, and both it and
+`next.config.ts` honour **`NEXT_DIST_DIR`**. Use it whenever another session may
+have a dev server running: `next dev` rewrites `.next` continuously, and a build
+racing it fails mid-export with `PageNotFoundError: Cannot find module for page:
+/reports/[slug]/page` naming an arbitrary report route — a failure that looks
+like a defect in that page and is not one.
+
+```bash
+NEXT_DIST_DIR=.next-verify npm run build
+NEXT_DIST_DIR=.next-verify node scripts/audit-html.mjs
+git checkout -- tsconfig.json   # the build adds <distDir>/types to `include`
+```
