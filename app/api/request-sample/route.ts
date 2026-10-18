@@ -10,6 +10,7 @@ import {
   tooManyRequests,
   type FieldRule,
 } from '@/lib/api/form-guard';
+import { recordSubmission } from '@/lib/api/submissions';
 
 const RULES: FieldRule[] = [
   { key: 'fullName', label: 'Name', required: true, max: 120 },
@@ -29,7 +30,8 @@ const FROM_EMAIL = 'support@neographanalytics.com';
 
 export async function POST(request: NextRequest) {
   try {
-    if (rateLimited(clientKey(request))) return tooManyRequests();
+    const clientIp = clientKey(request);
+    if (rateLimited(clientIp)) return tooManyRequests();
 
     let body: unknown;
     try {
@@ -40,6 +42,17 @@ export async function POST(request: NextRequest) {
 
     const { ok, errors, values: data } = validate(body, RULES);
     if (!ok) return badRequest(errors);
+
+    // Store and notify before the email goes out: a Resend failure must not be
+    // the difference between having the lead and not having it.
+    const submissionId = await recordSubmission({
+      formType: 'request-sample',
+      values: data,
+      extraKeys: ['jobTitle'],
+      request,
+      clientIp,
+      summary: data.reportTitle,
+    });
 
     await resend.emails.send({
       from: FROM_EMAIL,
@@ -71,7 +84,7 @@ export async function POST(request: NextRequest) {
       success: true,
       data: {
         success: true,
-        submissionId: crypto.randomUUID(),
+        submissionId: submissionId ?? crypto.randomUUID(),
         category: 'request-sample',
         message: 'Thank you for your request. We will send you the sample shortly.',
         createdAt: new Date().toISOString(),

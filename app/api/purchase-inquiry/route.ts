@@ -10,6 +10,7 @@ import {
   tooManyRequests,
   type FieldRule,
 } from '@/lib/api/form-guard';
+import { recordSubmission } from '@/lib/api/submissions';
 
 /* The checkout form used to call `setSubmitted(true)` and nothing else: it
    rendered "our team will contact you" over a lead that was never sent
@@ -36,7 +37,8 @@ const FROM_EMAIL = 'support@neographanalytics.com';
 
 export async function POST(request: NextRequest) {
   try {
-    if (rateLimited(clientKey(request))) return tooManyRequests();
+    const clientIp = clientKey(request);
+    if (rateLimited(clientIp)) return tooManyRequests();
 
     let body: unknown;
     try {
@@ -49,6 +51,17 @@ export async function POST(request: NextRequest) {
     if (!ok) return badRequest(errors);
 
     const reportUrl = `https://www.neographanalytics.com/reports/${encodeURIComponent(data.reportSlug)}`;
+
+    // Store and notify before the email goes out: a Resend failure must not be
+    // the difference between having the lead and not having it.
+    const submissionId = await recordSubmission({
+      formType: 'purchase-inquiry',
+      values: data,
+      extraKeys: ['quotedPrice'],
+      request,
+      clientIp,
+      summary: data.reportTitle,
+    });
 
     await resend.emails.send({
       from: FROM_EMAIL,
@@ -79,7 +92,7 @@ export async function POST(request: NextRequest) {
       success: true,
       data: {
         success: true,
-        submissionId: crypto.randomUUID(),
+        submissionId: submissionId ?? crypto.randomUUID(),
         category: 'purchase-inquiry',
         message: 'Thank you. Our team will contact you to complete your purchase.',
         createdAt: new Date().toISOString(),

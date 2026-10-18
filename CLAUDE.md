@@ -108,6 +108,11 @@ Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` f
 - `/order-success` - Post-purchase confirmation
 - `/methodology` - how the figures are produced; linked from report pages
 - `/design-system` - live component gallery, `noindex, nofollow`
+- `/admin/submissions` - every form submission, newest first. Supabase
+  email+password login, then `/api/admin/submissions` re-checks the token and
+  requires the email to be in **`ADMIN_EMAILS`** — unset denies everyone, and
+  the project has four confirmed auth users, so the allowlist is what makes
+  "signed in" mean "allowed". `noindex`, and `/admin` is in `robots.ts`
 - `/llms.txt` - LLM crawler endpoint
 - `/sitemap.xml` - **the only sitemap `robots.ts` advertises**, and the
   complete one: static pages, reports, articles, press releases, consulting,
@@ -127,6 +132,23 @@ Type definitions live alongside in `*.types.ts` files. See `lib/api/README.md` f
 - **PayPal**: Report purchase flow via `@paypal/react-paypal-js` (CheckoutForm, PayPalButton components)
 - **Image CDN**: `cdn.neographanalytics.com` configured as remote image pattern in `next.config.ts`
 - **HubSpot**: Tracking script injected in root layout
+- **ntfy**: new-submission push via `lib/ntfy.ts` (`NTFY_TOPIC`, optional
+  `NTFY_SERVER` / `NTFY_TOKEN`). Fire-and-forget — a failed notification is
+  logged, never surfaced to the visitor
+
+### Form submissions are stored, not just emailed
+
+The four public form routes (`contact`, `request-sample`, `purchase-inquiry`,
+`not-found-inquiry`) call `recordSubmission()` from `lib/api/submissions.ts`
+**before** the Resend send, so a mail failure no longer loses the lead; the
+returned row id is the `submissionId` in the response. The table is
+`public.form_submissions` — DDL in `scripts/sql/form_submissions.sql`, which
+has to be pasted into the Supabase SQL editor because PostgREST cannot run it.
+
+**RLS is on with no policies**, deliberately: measured, the anon key reads `[]`
+and an anon insert fails `42501`. Both the public insert and the admin read go
+through the service-role key on the server. A policy granting `authenticated` a
+read would hand every lead to anyone who can create an account in the project.
 
 ### Navigation Components
 
@@ -320,6 +342,8 @@ node scripts/report-db.mjs audit                          # SEO lengths corpus-w
 node --experimental-strip-types scripts/seo-unit.mjs      # lib/seo.ts helpers, offline
 node --experimental-strip-types scripts/api-unit.mjs     # lib/api/pgrst.ts helpers, offline
 node scripts/source-hygiene.mjs                           # eaten regex escapes, offline
+node scripts/submissions-db.mjs check                     # lead table present?
+node scripts/submissions-db.mjs list [n]                  # newest n submissions
 ```
 
 Supabase egress is metered and the report rows carry large JSONB columns: never

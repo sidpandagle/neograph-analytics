@@ -10,6 +10,7 @@ import {
   tooManyRequests,
   type FieldRule,
 } from '@/lib/api/form-guard';
+import { recordSubmission } from '@/lib/api/submissions';
 
 const RULES: FieldRule[] = [
   { key: 'name', label: 'Name', required: true, max: 120 },
@@ -26,7 +27,8 @@ const FROM_EMAIL = 'support@neographanalytics.com';
 
 export async function POST(request: NextRequest) {
   try {
-    if (rateLimited(clientKey(request))) return tooManyRequests();
+    const clientIp = clientKey(request);
+    if (rateLimited(clientIp)) return tooManyRequests();
 
     let body: unknown;
     try {
@@ -37,6 +39,17 @@ export async function POST(request: NextRequest) {
 
     const { ok, errors, values: data } = validate(body, RULES);
     if (!ok) return badRequest(errors);
+
+    // Store and notify before the email goes out: a Resend failure must not be
+    // the difference between having the lead and not having it.
+    await recordSubmission({
+      formType: 'not-found-inquiry',
+      values: data,
+      extraKeys: ['attemptedUrl'],
+      request,
+      clientIp,
+      summary: data.interest,
+    });
 
     await resend.emails.send({
       from: FROM_EMAIL,

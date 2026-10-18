@@ -11,6 +11,7 @@ export default function robots(): MetadataRoute.Robots {
           '/order-success',
           '/design-system',
           '/request-sample',
+          '/admin',
         ],
       },
     ],
