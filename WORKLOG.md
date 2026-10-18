@@ -3539,3 +3539,80 @@ source-hygiene.mjs                         236 files, 0 findings
 seo-unit.mjs / api-unit.mjs                all assertions passed
 report-db.mjs check content/reports/[a-z]* 50 pass, 0 fail
 ```
+
+## 2026-10-18, 07:34 IST — `/research`, session 9a: round 7 drafted, Medicare's five post-acute settings complete
+
+**Correction to the record first:** commits `8e1225b` and `c6048c8` say "09:20
+IST is outside the window". The real time was **07:20-07:34 IST** — the five-agent
+fan-out took about 22 minutes of wall clock, not two hours, and I wrote the
+commit message against an estimate instead of the clock. The conclusion is
+unchanged (both are outside the window; nothing published), but the timestamps
+in those two messages are wrong and this is the correction.
+
+**Five drafts, five agents, one per topic.** Rows 51-55:
+`home-health-care-market`, `inpatient-rehabilitation-facilities-market`,
+`long-term-care-hospitals-market`, `clinical-laboratory-services-market`,
+`ambulance-and-emergency-medical-services-market`. The round 7 claim was
+committed at `09c6197` **before** any agent was dispatched, and `git status`
+after the fan-out showed **exactly the ten expected files** — no agent wrote
+outside its two paths, and none touched the pipeline, so the 6A collision did
+not repeat. The other six modified paths in the tree at that moment are 72's
+and e6's and were deliberately left unstaged.
+
+**Nothing was taken on the agents' word.** All three gates re-run here on all
+five files, and every grounding division recomputed independently. All five
+reproduced. Two small discrepancies between a report-back and my own
+arithmetic, both the agent's rounding of its own intermediate and neither
+affecting a published figure: IRF's divergence is **3.94%**, reported as 3.92%;
+ambulance's `--pair` is 39/40 rather than 40/40, the miss being `39.69` — the
+complement of its own 60.31%, derived in prose and not an unsourced figure.
+
+| Slug | Base -> forecast | CAGR | Size spread | Grounding, recomputed here |
+|---|---|---|---|---|
+| home-health-care-market | $504.80B -> $1,015.80B | 10.51% | 1.344x global, 3.91x US-only | `0.423 x 504.80 = $213.53B / 12,234 = $17.45M/agency` against measured $3.2683M (Enhabit) and $3.2195M (DOJ decree), agreeing to 1.5% -> **5.34x** |
+| inpatient-rehabilitation-facilities-market | $23.72B -> $37.22B | 7.80% | 12.79x-54.81x vs parents | FY2026 rule to the cent: `18,907 x 1.026 x 1.0001 x 0.9985 = $19,371`; both CMG rates reproduce exactly; realised $25,287/stay = **1.3054x** statutory |
+| long-term-care-hospitals-market | $23.62B -> $34.80B | 4.96% | **17.05x** | `$2.4B / 47,000 = $51,064` = 1.0613x statutory; floor $6.64B vs operator-scaled $8.01B, gap 1.21x |
+| clinical-laboratory-services-market | $315.14B -> $459.58B | 6.49% | 1.480x | `$103.79B / 30,756 = $3.37M/lab`; Quest `$10,785M / 244M = $44.20` vs a $31.72 CLFS basket = **1.393x** |
+| ambulance-and-emergency-medical-services-market | $51.73B -> $90.93B | 9.86% | 8.94x, **1.90x inside one house** | GADCS tiers sum to **exactly** MedPAC's printed 49,901,430 and $51,106,771,767 = $1,024.15/transport = **0.988x the whole global headline** |
+
+**The finding the round was designed to produce.** Medicare pays for post-acute
+care in five settings; the corpus now has all five (SNF 47, hospice 46, home
+health 51, IRF 52, LTCH 53). The literature does not treat them equally, and the
+inequality runs the opposite way to intuition: the size spread is **17.05x** for
+LTCHs, **3.91x** for US home health, and for IRFs there is **no published dollar
+figure at all** — while the federal measurement is sharpest precisely there. The
+IRF rule reconciles to the cent and 94 case-mix weights are published; no house
+sizes it. This is writable as a cross-report article and is the next task.
+
+**Row 47's defect is not about one publisher.** Measured again, in two more
+markets. Home health: two of five global houses publish a North America figure
+*below* the federally measured US alone when advanced at their own rate —
+Coherent **-3.80%**, Fortune **-8.42%**, the latter on its own published dollar
+figure rather than on a share. Ambulance: the measured US floor is **2.317x**
+Fortune's implied US, forcing a >=80.15% US share or a 2.317x larger headline.
+The SNF report documented this for one house; it generalises across the tier.
+
+**Where the CAGR spread exceeds the size spread, the growth rate is a policy
+forecast.** Clinical lab 1.97x against 1.480x; home health 1.579x against
+1.344x. Both reverse the corpus pattern, and in both the disputed quantity is a
+statutory rate path — PAMA's cuts, blocked 3 Feb 2026 and still authorised for
+2027-29, and the CY2026 home health rate — not patient volume.
+
+**One deviation, flagged rather than buried.** The IRF headline is this corpus's
+first **constructed** headline: no publisher sizes the IRF in dollars, so the base
+is built from MedPAC and the Federal Register and the growth rate comes from a
+*different* publisher than the base. Labelled as a construction in the meta
+description, executive summary, forecast analysis, methodology and two FAQs,
+with both derivation routes and their 3.94% divergence printed. I accepted it —
+a labelled construction from federal measurements is worth more than a citation
+to a house that does not measure the thing — but it sets a precedent for what
+this publication will put in a headline, so it is recorded in the pipeline for
+Siddhant to confirm or reverse rather than inherit silently.
+
+**Gates:** `check content/reports/[a-z]*.json` **55 pass, 0 fail**;
+`--pair --all` **55 paired-checked, 0 not paired**; verifier reproduces on all
+five with a worst CAGR delta of 0.0044 pt. Budget at 07:34: headroom **+23.7
+points**, normal running.
+
+**Nothing published.** Rounds 6 and 7 — ten reports — publish together in the
+21:00 IST run-up, reports before any article.
