@@ -1,6 +1,28 @@
 import type { NextConfig } from "next";
 
+/**
+ * Build output directory.
+ *
+ * Why this is overridable: more than one agent session works this branch at a
+ * time, and `next dev` rewrites `.next` continuously. A `next build` racing a
+ * dev server over the same directory fails mid-export with
+ * `PageNotFoundError: Cannot find module for page: /reports/[slug]/page` —
+ * observed 2026-10-18 12:25 IST against a `next dev -p 3101` started at 12:22.
+ * The failure looks like a defect in the page it names and is not one.
+ *
+ * `NEXT_DIST_DIR=.next-verify npm run build` gives a verification build its own
+ * directory. Unset, the default `.next` is used, so production builds and
+ * Vercel are untouched.
+ *
+ * One side effect to know about: `next build` rewrites `tsconfig.json`, adding
+ * `<distDir>/types/**\/*.ts` to `include` and reformatting the whole file.
+ * That edit is session-local and must not be committed — run
+ * `git checkout -- tsconfig.json` after a verification build.
+ */
+const distDir = process.env.NEXT_DIST_DIR || '.next';
+
 const nextConfig: NextConfig = {
+  distDir,
   images: {
     remotePatterns: [
       {

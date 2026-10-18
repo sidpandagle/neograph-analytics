@@ -1,77 +1,32 @@
 import { NextResponse } from 'next/server';
 
-const BASE_URL = 'https://www.neographanalytics.com';
-
-export async function GET() {
-  const staticPages = [
-    {
-      url: BASE_URL,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/methodology`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/contact`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/reports`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/press-releases`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily',
-      priority: 0.8,
-    },
-  ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages
-  .map(
-    (page) => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  return new NextResponse(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
-    },
-  });
+/**
+ * Superseded by `/sitemap.xml`. Kept as a permanent redirect, not removed.
+ *
+ * This route served its own list of 8 static URLs, each with
+ * `lastModified: new Date().toISOString()` — a timestamp that said "changed
+ * just now" on every fetch, for pages that had not changed. `/sitemap.xml`
+ * (`app/sitemap.ts`) now carries **221** URLs including all 8 of these, with
+ * dates that mean something, and `app/robots.ts` advertises that one and only
+ * that one.
+ *
+ * Two sitemaps declaring the same URL with different `priority` and a
+ * fabricated `lastmod` is worse than one: a crawler that remembers this path —
+ * and Search Console remembers every sitemap ever submitted — keeps being told
+ * a different story about the same pages.
+ *
+ * Verified before this became a redirect (2026-10-18, against the built
+ * output): all 8 URLs here appear in `/sitemap.xml`, the homepage as
+ * `https://www.neographanalytics.com/` rather than the bare host — the same
+ * page, and the trailing-slash form is the one the app itself emits.
+ *
+ * A 308 rather than a 404 because the path may still be registered somewhere
+ * we cannot see. The previous generator is in git history at `ab17fc0`.
+ */
+export async function GET(request: Request) {
+  /* Host-relative: an absolute production URL here sends a preview deployment's
+     crawler — and a local verification run — to the live site instead of the
+     one being checked. Measured 2026-10-18: with the absolute form,
+     `curl -L http://localhost:3102/sitemap-pages.xml` fetched production. */
+  return NextResponse.redirect(new URL('/sitemap.xml', request.url), 308);
 }

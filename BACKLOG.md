@@ -33,9 +33,24 @@ Priority order. `[P0]` = site is broken / losing traffic. `[P1]` = high value.
       `/reports` HTML 508KB -> 184KB with the corpus up from 142 to 152.
 
 ## P1 — visuals
-- [ ] Build a chart set driven by real columns: forecast line (`market_forecast`),
+- [x] Build a chart set driven by real columns: forecast line (`market_forecast`),
       segmentation share, regional bars, country comparison, competitive position.
       Recharts is already a dependency.
+      **DONE 2026-10-18 for four of the five; the fifth is refuted, not deferred.**
+      Forecast line, segmentation share and regional bars shipped earlier in the
+      week. **Country comparison** shipped 2026-10-18 —
+      `components/reports/charts/CountryBarChart.tsx`, on **140 of 182** report
+      pages, 1:1 with the country table beside it, audit rule negative-tested
+      three ways.
+      **Competitive position cannot be built from this data and should not be
+      faked.** Measured with `scripts/column-population.mjs`:
+      `competitive_landscape` has a first element on **182 of 182** rows and the
+      only numeric field on it is `founded` (142 of 182); `market_position` is
+      prose and `company_profiles.revenue` is a string ("42B"). There is no
+      disclosed share to position anyone by, so a scatter or quadrant would be
+      axes invented to look like measurement — which is the thing this
+      publication refuses to do. Reopen only if a share column is added and
+      sourced per company.
 - [x] Per-report OG images (1200x630) generated from market metrics.
       **DONE 2026-10-16** — `app/reports/[slug]/opengraph-image.tsx`, build-time,
       no image host and no egress. All 152 reports previously shared one stock
@@ -222,13 +237,36 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       **DONE 2026-10-15 — PR #4 — root canonical removed.**
 - [ ] Hardcoded `price: '$2,995'` is published as Product/Offer JSON-LD with
       `InStock` on all 140 reports, while checkout throws by design.
-- [ ] No `error.tsx`/`global-error.tsx` anywhere; `lib/api/consulting.ts:22,42`
+- [ ] ~~No `error.tsx`/`global-error.tsx` anywhere~~; `lib/api/consulting.ts:22,42`
       throws instead of returning `ApiResponse`, so a Supabase outage fails the
       build or shows a bare error screen.
-- [ ] Sitemap fragmentation: `robots.ts` advertises only `/sitemap.xml`;
+      **HALF STALE 2026-10-18** — `app/error.tsx`, `app/global-error.tsx`,
+      `app/not-found.tsx` and `app/consulting/[slug]/not-found.tsx` all exist;
+      an earlier session added them and the bullet was never updated. The
+      `consulting.ts` throws stand, and the open question is whether a Supabase
+      outage *should* fail the build (keeping the last good deploy) rather than
+      render an error page - so this is a decision, not a bug.
+- [x] ~~Sitemap fragmentation: `robots.ts` advertises only `/sitemap.xml`;
       `/sitemap-pages.xml`, `/sitemap-consulting.xml` are referenced nowhere, so
       consulting and legal URLs are in no discoverable sitemap. Reports are
-      declared twice with conflicting priority.
+      declared twice with conflicting priority.~~
+      **DONE 2026-10-18.** The discoverability half was fixed by R-24 —
+      `/sitemap.xml` carries all 221 URLs including the consulting and legal
+      pages. The contradiction half is fixed now: both legacy routes are **308
+      permanent redirects to `/sitemap.xml`**, superseded rather than deleted,
+      with the previous generator's git ref in each file header. Measured first:
+      `/sitemap-consulting.xml` was 10 of 10 already in the canonical sitemap,
+      `/sitemap-pages.xml` 8 of 8 (its homepage entry being the bare host
+      against the canonical trailing-slash form), and the pages route stamped
+      `lastModified: new Date().toISOString()` on every entry — the same lying
+      date `eaba86a` had just removed from the main sitemap. Verified over HTTP
+      on port 3102, both 308ing to a 221-URL sitemap. The redirect is
+      host-relative; the absolute form sent a local verification run to
+      production.
+      **Not touched, deliberately:** `/api/sitemap-reports/[page]` and its blog
+      and press-release siblings are also unadvertised and also declare report
+      URLs, but they paginate at 500 against a 50,000-URL limit — a growth
+      mechanism rather than a stale subset. They stay.
 
 ### P1
 - [x] `/consulting` returns 404 but is linked from 3 places and listed in
@@ -238,8 +276,22 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       inserting a team member silently repoints every author URL.
 - [ ] `getReportsByAuthorId` and `getReportsByCategory` return `[]` with
       `success: true` (unimplemented), so every author page publishes "0 reports".
-- [ ] Checkout collects buyer details then `lib/api/orders.ts:8` throws
-      unconditionally — with no error boundary, a buyer sees a white screen.
+      **The published claim is fixed 2026-10-18; the data gap is not.** The three
+      author pages are in `/sitemap.xml` and each said "Total Reports Authored:
+      0" over an empty state naming the analyst as having authored nothing - a
+      statement about a named person that the corpus cannot support, because
+      `neograph_reports` has no author column (R-26). The empty state now says
+      figures are published under organisational attribution, and the counter
+      tile renders only when the count is above zero. Implementing the join
+      needs the column, which is R-26 and Siddhant's.
+      `getReportsByCategory` is called from nowhere.
+- [x] ~~Checkout collects buyer details then `lib/api/orders.ts:8` throws
+      unconditionally — with no error boundary, a buyer sees a white screen.~~
+      **NOT A DEFECT 2026-10-18** — no code path reaches it. `createOrder` and
+      `captureOrder` are called from nowhere in `app/` or `components/`; the
+      only grep hit, `PayPalButton.tsx:58`, is the PayPal SDK's own
+      `createOrder` prop resolving an id it already holds. Dead code, kept per
+      the no-deletion rule. `app/error.tsx` also exists now.
 - [x] Form handlers (`api/contact`, `api/request-sample`, `api/not-found-inquiry`)
       do no validation or HTML escaping and have no rate limit; attacker-controlled
       `replyTo` + raw HTML interpolation = phishing from support@, plus Resend
@@ -384,11 +436,23 @@ after the deploy. Seven of eleven audited pages now come back clean.
       member silently repoints every author after them. Documented in
       `lib/api/authors.ts`; deliberately not redesigned, because `MeetTheTeam` is
       dead code, nothing links to author pages and they are in no sitemap.
-- [ ] `/reports` server-renders 12 of 142 report links; the rest sit behind
+- [x] `/reports` server-renders 12 of 142 report links; the rest sit behind
       client-side pagination. Discovery is covered by the sitemap, so this is
       internal-linking depth rather than indexing.
-- [ ] `/design-system` renders 2 `<h1>` and has no canonical. Robots-disallowed,
-      so low priority.
+      **DONE 2026-10-18** — `components/reports/ReportDirectory.tsx`, a Server
+      Component listing all **182** reports as real links grouped by vertical
+      (13 groups, counts summing to 182), rendered *outside* the Suspense
+      boundary because `useSearchParams()` in the client listing would otherwise
+      replace it with the skeleton in the static HTML. `getReportCards()` is now
+      `cache()`d so the listing and the directory are one query. Cost: 199KB ->
+      273KB of HTML, 33.0KB gzipped; hoisting the link classes to one container
+      returned 47KB of that. Audit rule added and negative-tested — the page
+      fails if it renders under 100 report links.
+- [x] ~~`/design-system` renders 2 `<h1>` and has no canonical. Robots-disallowed,
+      so low priority.~~ **NOT A DEFECT 2026-10-18** — the built page has **1**
+      `<h1>` and a canonical pointing at
+      `https://www.neographanalytics.com/design-system`. Measured against
+      `server/app/design-system.html` in a clean build.
 - [ ] `/reports` still ships ~508KB, nearly all of it the RSC payload for 142
       reports. Select only the columns the cards need.
 

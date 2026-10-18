@@ -628,3 +628,236 @@ Supabase types (needs a CLI install this session will not make), and
 
 **Unchanged:** PR #20 needs one click; the round 5 publish sequence is the
 21:00 IST job; `C-2`'s drafting half belongs to the content session.
+
+
+---
+
+## MERGED — PR #20 is in production as of ~03:00 IST on the 18th
+
+Session `f3ea25fa`, on Siddhant's explicit instruction. **This was an
+owner-requested extra merge, not the 21:00 slot — the 21:00 IST slot on the
+18th is still open and still carries the round 5 publish sequence.**
+
+**Merge commit `02fa7b1`, 100 commits.** The "needs one click" block earlier
+in this file is now closed; `gh pr merge` was not refused in this session.
+
+**The PR did not carry tonight's work until it was pushed.** It stood at 75
+commits against a branch that was **26 commits ahead of its own remote** —
+everything from tonight was missing from it. The branch was pushed first
+(`666c878..eaba86a`), the PR went to 100 commits, then it was merged. Anyone
+merging #20 as it stood would have shipped the branch as it was 9 hours
+earlier.
+
+**Verified at the merged HEAD before pushing:** build exit 0, `tsc` clean,
+lint 0 errors, `audit-html.mjs` 18 of 18, contrast 0 failing pairs in both
+themes, source-hygiene 234 files / 0 findings, `seo-unit` and `api-unit` both
+fully passing. The PR sat at `MERGEABLE / UNSTABLE` only because the Vercel
+preview was still deploying; it was waited out, both checks passed, and the
+production deployment for `02fa7b1` reports success.
+
+**No Supabase row was published** — code-only merge, so the
+`dynamicParams = false` hazard does not apply. Round 5 is still unpublished on
+the branch.
+
+**Verified in production in a browser at 02:57 IST** (inside the window), on
+`/reports/ai-in-lab-automation-market`: 1 share-segment table (3 rows) beside
+**1** donut not 2, 1 regional table (3 rows), 1 forecast table (10 rows), all
+three `role="img"` wrappers present, and the series reading
+`2023 Base year $0.60B` → `2032 $5.60B` against a tile that says
+"Base Year (2023) → $0.6B". The chart's "Base" marker renders; before this
+deploy it drew nothing on 141 of 182 report pages. Site-wide `/sitemap.xml`
+**221 URLs** (182 reports), `/llms.txt` 182 report URLs.
+`audit-html.mjs --prod`: **18 of 18 pages error-free, 0 errors**, 44 of 221
+URLs fetched, 0 dead.
+
+### Warning for the next session: curl cannot check production from here
+
+The first production check reported the new markup missing on 25 consecutive
+polls. **It was a false negative.** `curl` gets **HTTP 403** with
+`x-vercel-mitigated: challenge`, and the 34KB challenge page contains none of
+the markers. A browser user-agent does not help — the challenge needs JS.
+
+This matters because **step 5 of `DEPLOY-RUNBOOK.md` recommends three bare
+`curl` checks**, and all three now return the challenge page: a new-slug 404
+check would report every new report as broken, and the corpus-count check
+returns nothing. Use `node scripts/audit-html.mjs --prod`, which does get
+through, or a browser inside the 21:00-09:00 window. The runbook was not
+edited — it is a shared file and that is the owner's call — but do not trust
+a bare `curl` result against production.
+
+### Still needs Siddhant
+
+- **Resubmit the sitemap in Search Console.** The sitemap itself changed,
+  204 URLs → 221. Then watch the 30 newer URLs.
+- Everything in the "Needs Siddhant" list earlier in this file still stands:
+  R-31 (GA deferral), contracting entity and governing law, the one live send
+  through `/api/purchase-inquiry`, R-26 (analyst attribution), R-21 (the
+  `/about` dividers).
+- From tonight's lib/api sweep: the hardcoded `$2,995` Product/Offer, the
+  positional author URLs, the synthetic positional report `id`, generated
+  Supabase types, and `/reports` server-rendering 12 of 182 report links.
+
+---
+
+## Appended by session `9a`, 2026-10-18 07:40 IST — research lane only
+
+Append-only block. `e6` owns this file's body above; nothing there was edited.
+
+**Budget at 06:50:** 7d used 31%, pace 82.0%, ceiling 57.4%, **headroom +26.4
+points.** Normal running.
+
+**Closed this morning, both committed on `work/continuous-improvements`:**
+
+- `d6eef45` — the `revenue-cycle-management-market` pairing debt. It needed no
+  research: the evidence file was on disk under the *draft* slug, because the
+  report was deliberately renamed at publish time. `pair()` matches by exact
+  filename, so a rename read to it as missing work. `git mv`, pointer stub left
+  at the old path. **`--pair --all` is now 50 paired-checked, 0 not paired**,
+  which closes the pairing-debt table (72 had fixed veterinary at 02:05).
+- `5499d2c` — row 47, `skilled-nursing-facilities-market`. Of its two recorded
+  defects, one was a mis-record: a geo-neutral title is *correct* beside a
+  global headline, so the note claiming the scope had been "corrected to U.S."
+  is withdrawn. The real one is now stated on the page: Coherent's own North
+  America share, **45.3% in 2026, re-verified at the publisher**, gives
+  `0.453 x 453.31 = $205.35B`, which is **6.62% below** the CMS NHEA's
+  *measured* US-alone `$219.9B` for 2024. At Coherent's own 9.3%,
+  `219.9 x 1.093^2 = $262.70B`, forcing NA to **>=57.95%** or the headline to
+  **1.279x** published. Not re-sourced, deliberately — any Tier 3 global near
+  $450B forces the same ~58% floor, so swapping houses would hide the finding.
+  **Round 6 is now fully `check-passed`, all five rows.**
+
+**In flight:** round 7 claimed and committed at `09c6197` **before** dispatch,
+then five agents, one per topic — rows 51-55: `home-health-care-market`,
+`inpatient-rehabilitation-facilities-market`,
+`long-term-care-hospitals-market`, `clinical-laboratory-services-market`,
+`ambulance-and-emergency-medical-services-market`. Rows 51-53 complete
+Medicare's five post-acute settings, which is what makes the cross-setting
+article possible. Each agent owns only its own `research/<slug>-notes.md` and
+`content/reports/<slug>.json`.
+
+**Gates after this morning's changes:** `check content/reports/[a-z]*.json` 50
+pass 0 fail; `--pair --all` 50/0; `source-hygiene.mjs` 236 files, 0 findings.
+
+**Nothing published.** 07:40 IST is outside the window; round 6 and round 7
+publish together in the 21:00 run-up, reports before any article. Whoever takes
+the 21:00 slot should carry `e6`'s publish block above — it is still correct,
+including the `check content/reports/[a-z]*.json` glob caveat.
+
+---
+
+## Fourth session on the branch, 2026-10-18 13:05 IST — country chart + concurrent-build fix
+
+**Appended, not overwritten**, per the lesson already recorded twice above.
+
+**Who is here.** Session `281bde29` (infrastructure/visuals), alongside the content
+session's `next dev -p 3101` started 12:22. Budget at 12:18: 7d used 31%, pace
+**82.0%**, ceiling 57.4%, **headroom +26.4 points** — normal running.
+
+**Files this session wrote:** `components/reports/charts/CountryBarChart.tsx`
+(new), `components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`scripts/column-population.mjs` (new), `next.config.ts`, `.gitignore`,
+`BACKLOG.md`, `WORKLOG.md`, this block. **Not touched:** anything under
+`content/` or `research/`, and **no Supabase write of any kind.**
+
+**What shipped.** The country-comparison chart — the fourth of the five charts
+in the open P1 "visuals" item. Share and growth as grouped bars on **140 of 182
+report pages**, inside a `ChartFigure` with a source line, `role="img"` because
+`CountryTable` already carries the same figures as text directly below it. A
+sixth `audit-html.mjs` rule pins the chart to that table and was negative-tested
+three ways against built HTML, each corruption caught and the file restored
+byte-identical.
+
+**The fifth chart is refuted and the item is closed.** `competitive_landscape`
+carries numbers on only one field across all 182 rows — `founded`. No disclosed
+market share, `revenue` stored as the string "42B". A competitive-position
+quadrant drawn from that would be invented precision. Written into `BACKLOG.md`
+under the item so it does not read as missing work.
+
+### Two things the next session needs to know
+
+1. **`npm run build` and `next dev` cannot share `.next`.** A build racing the
+   dev server fails with `PageNotFoundError: Cannot find module for page:
+   /reports/[slug]/page` naming a random report route. The page is not broken.
+   Use **`NEXT_DIST_DIR=.next-verify npm run build`** (and the same variable for
+   `audit-html.mjs`); `next.config.ts` and `.gitignore` support it now. The dev
+   server's PID was verified and **left running** — it is not this session's.
+2. **`next build` rewrites `tsconfig.json`** — it adds `<distDir>/types` to
+   `include` and reformats the file. Session-local; `git checkout --
+   tsconfig.json` after a verification build rather than committing it.
+
+### Still as recorded above, unchanged by this session
+
+- **Round 5's five reports and one article remain unpublished and must stay
+  that way until a merge can follow within the hour.** PR #20 is now **MERGED**
+  (17-10 17:26Z), so the blocker that held them is gone *for the 21:00 slot* —
+  publish in the run-up to that merge, reports before the article, following the
+  sequence already written above. Nothing was published at 13:00; it is nine
+  hours from the deploy and the rule is that a new row without a build is a hard
+  404 behind an ISR card.
+- Today's 21:00 IST merge is still open and now carries this work too.
+
+### Same session, 13:20 IST — second item done, and a third sweep of staged files
+
+**Shipped since the block above.** `/reports` linked **12 of 182** reports in
+the delivered HTML; it now links all 182 through `ReportDirectory`, a Server
+Component rendered *outside* the Suspense boundary (inside it, `useSearchParams()`
+would have replaced it with the skeleton and added zero crawlable links).
+`getReportCards()` is `cache()`d so the listing and the directory are one query.
+Cost measured: 199KB -> 273KB of HTML, 33.0KB gzipped; hoisting the link classes
+to one container returned 47KB of that. Seventh audit rule added, negative-tested.
+
+**Budget at 13:15:** 7d used 32%, pace 82.5%, ceiling 57.8%, **headroom +22.8
+points** — normal running. 5h bucket 28%.
+
+**Warning for whoever commits next.** `50eb4ee` swept up eight files this
+session had staged by path, four minutes after they were staged, and this
+session's own `git commit` then reported "no changes added to commit". The tree
+is correct and verified byte-for-byte; `2b9fe8c` records it. That is the **third**
+such correction on this branch. Staging by path does not help when the other
+session stages everything — **commit in the same breath as staging.**
+
+**Open, in order, for this lane:**
+1. **R-32** — the new directory block has never been looked at in a browser.
+   First thing when the 21:00-09:00 window opens.
+2. **R-13** — `/methodology` first paint. Both candidate levers are refuted;
+   what is left is a 968ms style-and-layout pass over 362 nodes, and narrowing
+   it needs the browser window.
+3. The 21:00 IST merge, which now carries this lane's two items plus the
+   content session's round 6/7 work, and the round 5 publish sequence that must
+   run *in the run-up to it* rather than at any earlier hour.
+
+### Same session, 13:45 IST — four items done, all committed
+
+1. **Country chart** — `CountryBarChart` on 140 of 182 report pages; the
+   competitive-position chart refuted with the measurement (one numeric field
+   across 182 rows) and the P1 visuals item closed.
+2. **`/reports` links all 182 reports**, not 12. Server-rendered directory,
+   outside the Suspense boundary, `getReportCards()` now `cache()`d.
+3. **Three indexable author pages stopped claiming their analysts have
+   published nothing.** `/authors/1..3` are in `/sitemap.xml` and each said
+   "Total Reports Authored: 0" over an empty state naming the person. The zero
+   was the absence of a record (no author column — R-26), not a count.
+4. **The two legacy sitemaps 308 to `/sitemap.xml`** — measured as strict
+   subsets first; the pages one was stamping `lastmod` at fetch time.
+
+Struck as **stale, with measurements**, while picking work: `error.tsx` and
+`global-error.tsx` exist; `/design-system` has 1 `<h1>` and a canonical;
+`lib/api/orders.ts`'s unconditional throw is unreachable. `CLAUDE.md` corrected
+in three places by `1a10fbf`.
+
+**Checkers now:** `audit-html.mjs` 18 routes / 8 rule families, 0 errors;
+contrast 0 failing pairs; source-hygiene 251 files / 0 findings; lint 12
+warnings / 0 errors; `tsc` clean; build 418 pages. Two new audit rules today,
+each negative-tested (country chart/table parity three ways, `/reports` link
+floor once).
+
+**Use `NEXT_DIST_DIR=.next-verify` for any verification build** while another
+session's `next dev` is running, and `git checkout -- tsconfig.json` after.
+
+**Budget 13:45:** 7d used 35%, pace 82.7%, ceiling 57.9%, **headroom +22.9
+points** — normal running.
+
+**Next in this lane:** R-32 and R-13 both need the 21:00 browser window; C-7
+needs a headless renderer that is not installed and should not be installed on
+a whim. Until 21:00 the remaining headless work is thin, so the next pass is
+measured review of what shipped today rather than new surface.

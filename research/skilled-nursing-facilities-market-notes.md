@@ -193,7 +193,70 @@ also that Brookdale's 2025 disclosures carry no skilled nursing breakout at all
 — the company is a senior living operator — so its inclusion in any "skilled
 nursing facility" competitive set is itself a scope statement.
 
-### (e) The register's own trend, against the published CAGRs
+### (e) The headline's own regional share, against the national accounts
+
+Added 2026-10-18, after the draft passed `check`. Raised by peer session
+`neograph-analytics-72` and re-derived here from the publisher's own page.
+
+Coherent's page publishes exactly one regional number: North America **"is
+expected to hold 45.3% of the market share in 2026."** Verified on the
+publisher's own page, not a repost. That share is the only bridge the house
+offers between its global headline and any country register, and it does not
+hold.
+
+```
+0.453 x $453.31B = $205.35B  implied North America, 2026 (CMI's own share x CMI's own headline)
+```
+
+The CMS National Health Expenditure Accounts measure US spending at freestanding
+nursing care facilities and continuing care retirement communities at **$219.9B
+in 2024** — an actual, from the national accounts, not an estimate.
+
+```
+($219.9B - $205.35B) / $219.9B = 6.62%
+```
+
+**CMI's entire North America, two years later, is 6.62% below what the United
+States alone had already measurably spent.** North America contains the United
+States, and the series the $219.9B comes from rose 7.3% in 2024, so the US 2026
+figure is higher still, not lower. Advancing it at *Coherent's own* 9.3%:
+
+```
+$219.9B x 1.093^2 = $262.70B   United States alone, 2026, at CMI's own growth rate
+$262.70B / $453.31B = 57.95%   the North America share CMI's headline forces
+$262.70B / 0.453    = $579.92B = 1.279x CMI's headline, if 45.3% is the true share
+```
+
+So the two numbers cannot both be right: **either North America is at least
+58.0% and not 45.3%, or the global headline is 1.28x larger than published.**
+This is an internal inconsistency in the source, demonstrated against a federal
+measurement, and it is not a scope argument — the comparison is on Coherent's
+*own* Tier 3 boundary, which keeps the senior-living adjacency inside, exactly
+as the NHEA category does by including continuing care retirement communities.
+
+**Why 6.62% and not 4.3%.** The peer first measured the shortfall at 4.3%,
+against $214.65B, a *published 2026 US estimate*. Both arithmetics are right
+against their own denominator, and 6.62% is the one to publish: a
+forward-dated regional component falling below a **historical measurement**
+cannot be rescued by any growth assumption, whereas falling below another
+house's *estimate* can be. Measurements bound estimates; estimates do not bound
+each other.
+
+**What this does not rule out.** Against Nova One Advisor's US-only $187.17B for
+2024 there is no contradiction at all — CMI's implied North America sits 9.71%
+*above* it. The contradiction appears only against the national accounts. That is
+the point: the two US-only readings differ by more than CMI's error, so a house
+can print a regional share that looks defensible against a commercial US
+estimate and still contradict the federal one.
+
+**Generalises past this publisher.** Any Tier 3 global headline near $450B for a
+2026 base must put North America at roughly 58%, because the US component is
+federally measured and is most of it. A house printing ~45% is understating
+either the US or its own global total. The defect is a property of the tier, not
+of Coherent specifically — which is why re-sourcing to another Tier 3 house was
+not the fix. It is stated on the page instead.
+
+### (f) The register's own trend, against the published CAGRs
 
 From MedPAC's March 2026 chapter (CMS Quality, Certification and Oversight
 Reports, accessed 3 November 2025) and its Table 7-3:
@@ -237,6 +300,20 @@ states its currency and unit unambiguously in billions, and its endpoints
 reconcile to its stated CAGR to within 0.001 points
 (`453.31 x 1.093^7 = 844.77`). It is a Tier 3, global-scope series, and the
 report says so in the executive summary, the forecast analysis and the FAQs.
+
+**Published with a stated contradiction, not silently.** Grounding section (e)
+shows the chosen headline cannot be reconciled with its own published North
+America share: Coherent's 45.3% of its own USD 453.31 bn gives USD 205.35 bn for
+North America in 2026, which is 6.62% below the USD 219.9 bn the CMS national
+accounts *measured* for the United States alone in 2024. Either the share is
+wrong and North America is at least 58.0%, or the headline is 1.28x too low.
+The series is still the one published — its edition date is known, its endpoints
+reconcile to 0.001 points, and the defect generalises to every Tier 3 house near
+this level rather than singling this one out — but the contradiction is stated
+in `forecast_analysis` and in a FAQ, with the arithmetic, so no reader takes the
+regional share as usable. Re-sourcing was considered and rejected: a different
+Tier 3 global at the same level forces the same ~58% North America floor, so
+swapping houses would hide the finding rather than fix it.
 
 It is also the fastest-growing series in the set. That is stated as a problem
 with the series rather than hidden: `forecast_analysis` tells a reader working to
@@ -390,7 +467,13 @@ filings and releases.
    — USD 453.31 bn in 2026 to USD 844.77 bn by 2033 at 9.3%; base year 2025
    (no 2025 value published); historical period 2020-2024. An earlier release
    from the same house gave USD 414.74 bn (2025) to USD 763.53 bn (2032) at
-   9.1%, and a second release 8.9% for the same period.
+   9.1%, and a second release 8.9% for the same period. **The page publishes
+   exactly one regional figure: North America "is expected to hold 45.3% of the
+   market share in 2026."** Re-verified on the publisher's own page on
+   2026-10-18, and the basis of grounding section (e): 0.453 x 453.31 =
+   USD 205.35 bn, which is 6.62% below the CMS NHEA's measured US-alone
+   USD 219.9 bn for 2024. No regional split in dollars, and no share for any
+   other region, is published; the regional chart is an image.
 10. Credence Research, "Skilled Nursing Facility Market Size, Growth and
     Forecast 2032", last updated "Sep 21" (site copyright 2026).
     https://www.credenceresearch.com/report/skilled-nursing-facility-market

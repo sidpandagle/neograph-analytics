@@ -3254,3 +3254,651 @@ a CLI install, which this session may not do), and `/reports` server-rendering
 return Infinity/NaN on the zero and single-year cases but are imported by
 nothing; they stay in place per the no-deletion rule, and `CLAUDE.md` already
 warns about them.
+
+
+---
+
+## 2026-10-18, ~03:00 IST — PR #20 merged on request, and verified in production
+
+Session `f3ea25fa`. Merged on Siddhant's explicit instruction ("Merge"), which
+is an owner-requested extra merge, not the 21:00 slot. The 21:00 IST slot on
+the 18th is therefore still open and still carries the round 5 publish
+sequence.
+
+### What was merged
+
+`gh pr merge 20 --merge` → merge commit **`02fa7b1`**, 100 commits from
+`work/continuous-improvements` into `main`.
+
+The PR stood at 75 commits and had not been pushed since `666c878`, so the
+branch was **26 commits ahead of its own remote** — everything from tonight
+was absent from the PR. The branch was pushed first (`666c878..eaba86a`), the
+PR went to 100 commits, and only then was it merged. Merging it as it stood
+would have shipped the state of the branch 9 hours earlier.
+
+### Verified at the exact merged HEAD, before pushing
+
+```
+npm run build        exit 0
+tsc --noEmit         clean
+npm run lint         0 errors
+audit-html.mjs       18 of 18 routes error-free, 0 errors, 1 pre-existing warning
+contrast-audit.mjs   0 failing pairs, both themes
+source-hygiene.mjs   234 files, 0 findings
+seo-unit.mjs         all assertions passed
+api-unit.mjs         all assertions passed
+```
+
+Then the Vercel **preview** check was waited out rather than skipped — the PR
+sat at `MERGEABLE / UNSTABLE` only because that deployment was still running.
+Both checks passed before the merge, and the production deployment for
+`02fa7b1` reports `success`.
+
+**No Supabase row was published.** This was a code-only merge, so the
+`dynamicParams = false` hazard does not apply: the danger is a published row
+without a deploy, not a deploy without rows. Round 5's five reports and one
+article are still unpublished on the branch.
+
+### A false negative worth recording
+
+First production check reported the new markup absent on 25 consecutive
+polls. It was not absent. `curl` gets **HTTP 403** from
+`www.neographanalytics.com` with `x-vercel-mitigated: challenge` — Vercel's
+bot challenge — and the 34KB challenge page contains none of the markers, so
+the loop was faithfully reporting on a page that was not the site. A browser
+user-agent does not help; the challenge needs JavaScript. The loop also ran
+its 25 attempts in seconds, because nothing in it actually waited.
+
+Two things follow. `scripts/audit-html.mjs --prod` **does** get through and is
+the right tool — it fetched 44 of 221 URLs with 0 dead. And a bare `curl`
+against production is not a usable check from this machine, which matters
+because step 5 of `DEPLOY-RUNBOOK.md` currently recommends exactly that:
+
+```bash
+curl -sI https://www.neographanalytics.com/reports/<new-slug> | head -1
+curl -s https://www.neographanalytics.com/llms.txt | grep -c "^URL: ..."
+curl -s https://www.neographanalytics.com/reports | grep -o "[0-9]* research reports"
+```
+
+All three return the challenge page. A 404 check written that way would report
+every new report as broken, and a corpus-count check would report nothing at
+all. The runbook is not edited here because it is a shared file and the owner
+may have a reason for it; the measurement is recorded and flagged instead.
+
+### Measured in production, in a browser (02:57 IST, inside the window)
+
+`/reports/ai-in-lab-automation-market`, live DOM:
+
+```
+share-segment table      1   (3 rows)   — and 1 donut, not 2
+regional table           1   (3 rows)
+forecast series table    1  (10 rows)
+country table            1   (3 rows)   — pre-existing
+role="img" wrappers      1 donut + 1 bar + 1 area
+forecast series          2023 Base year = $0.60B, then 2024..2032 -> $5.60B
+base-year tile           "Base Year (2023) -> $0.6B"
+```
+
+The tile and the prepended base row agree exactly, which is the claim the fix
+rested on. The chart's `ReferenceLine` label "Base" now renders; before this
+deploy it drew nothing on the 141 of 182 rows whose base year sits outside
+the series.
+
+Site-wide: `/sitemap.xml` **221 URLs**, 182 of them reports; `/llms.txt` 182
+report URLs. Both match what the merge was expected to carry.
+
+### Next
+
+- **Resubmit the sitemap in Search Console** — it is the sitemap itself that
+  changed, 204 URLs to 221. Owner action.
+- The 21:00 IST slot on the 18th is unused and round 5 is still unpublished.
+
+## 2026-10-18, 07:20 IST — `/research`, session 9a: both pairing-debt rows closed, row 47 resolved
+
+**`revenue-cycle-management-market` needed no research.** `--pair` reported it
+as having no evidence file and the pipeline recorded that as reconstruction
+work. The file was on disk under the *draft* slug,
+`research/revenue-cycle-management-automation-market-notes.md` — the report was
+deliberately renamed at publish time (row 19) because the research's own finding
+is that no defensible standalone size for RCM *automation* exists, so it
+published as whole-market RCM. `pair()` matches evidence by exact filename, so a
+deliberate rename reads to it as missing work. Measured before touching
+anything: the headline `73.61` / `148.44` / `12.4` appear in that file 4, 2 and
+5 times. `git mv` to the published slug, content unchanged, pointer stub left at
+the old path per the no-deletion rule. `--pair` on the slug: paired, 40/40.
+
+**Corpus-wide: `--pair --all` is 50 paired-checked, 0 not paired.** With 72's
+veterinary-diagnostics transcription fix at 02:05, the pairing-debt table is
+closed. The durable lesson is about the checker, not the corpus: `--pair` cannot
+distinguish a rename from missing work, so a renamed slug has to move its notes
+in the same commit.
+
+**Row 47, `skilled-nursing-facilities-market` — one defect was a mis-record, one
+was real.**
+
+Defect (a), "scope corrected to U.S. in the title", was false in both
+directions: `title` and `seo.meta_title` are geo-neutral, which is *correct*
+beside a global headline. Nothing to fix; the note is withdrawn.
+
+Defect (b) is real, and is now stated on the page rather than re-sourced.
+Coherent's page publishes exactly one regional figure — North America "expected
+to hold 45.3% of the market share in 2026", re-verified at the publisher rather
+than taken from the peer's report:
+
+```
+0.453 x $453.31B = $205.35B          implied North America, 2026
+($219.9B - $205.35B) / $219.9B       = 6.62% below CMS NHEA's MEASURED US-alone 2024
+$219.9B x 1.093^2 = $262.70B         US alone 2026, at Coherent's own 9.3%
+$262.70B / $453.31B = 57.95%         the NA share the headline forces
+$262.70B / 0.453 = $579.92B          = 1.279x the published headline, if 45.3% holds
+```
+
+A region cannot be 6.62% smaller than one country inside it, two years after the
+measurement, in a series that rose 7.3% that year. Either the share is wrong and
+North America is at least 58.0%, or the global headline is 1.28x too low.
+
+**6.62% is published, not the peer's first 4.3%.** Both arithmetics are right
+against their own denominator; 4.3% measured against $214.65B, a published *2026
+estimate*. A forward-dated regional component falling below a *historical
+measurement* cannot be rescued by any growth assumption, whereas falling below
+another house's estimate can. Measurements bound estimates; estimates do not
+bound each other.
+
+**Not re-sourced, deliberately.** Any Tier 3 global headline near $450B for a
+2026 base forces North America to roughly 58%, because the US component is
+federally measured and is most of it. The defect is a property of the tier, not
+of this publisher, so swapping houses would have hidden the finding instead of
+fixing it. Also recorded: against Nova One Advisor's US-only $187.17B for 2024
+there is **no** contradiction — the implied NA sits 9.71% *above* it. The
+contradiction appears only against the national accounts, which is why a house
+can print a regional share that survives a commercial US estimate and still
+contradicts the federal one.
+
+Carried as notes grounding section (e), in `forecast_analysis`, and in FAQ 6,
+with the arithmetic printed. `check` exit 0; verifier reproduces at 0.0001 pt;
+`--pair` paired 38/39, the single miss being `1888` — the SSA s.1888(e)
+statutory citation, which the figure extractor reads as a number.
+
+Gates after the change: `check content/reports/[a-z]*.json` **50 pass, 0 fail**;
+`--pair --all` **50/0**; `source-hygiene.mjs` 236 files, 0 findings. Nothing
+published — 07:20 IST is outside the window, and row 47 publishes with the rest
+of round 6 in the 21:00 run-up.
+
+---
+
+## 2026-10-18 12:20-13:10 IST — the country chart, and the one chart that cannot be built
+
+Session `281bde29`, infrastructure side. Budget at start: 7d used 31%, pace
+82.0%, ceiling 57.4%, **headroom +26.4 points** — normal running. Files written:
+`components/reports/charts/CountryBarChart.tsx` (new),
+`components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`scripts/column-population.mjs` (new), `next.config.ts`, `.gitignore`,
+`BACKLOG.md`, `WORKLOG.md`, and an appended `STATUS.md` block. **No Supabase
+write, nothing under `content/`, nothing under `research/`.**
+
+### The P1 "visuals" backlog item asked for five charts. Two of them were never checkable
+
+The item reads: forecast line, segmentation share, regional bars, **country
+comparison**, **competitive position**. The first three ship. The last two had
+never been measured against the live corpus, only against the drafts — where
+`country_analysis` is `[]` on **50 of 50** local drafts, which would have read
+as "no data, skip it".
+
+`scripts/column-population.mjs` is the cheap probe that settled it. It selects
+the **first element** of each array column (`country_analysis->0`), never the
+array, so the question costs 182 small objects rather than the JSONB corpus —
+the form `STATUS.md` itself recommended at 02:30 for the forecast question.
+
+Measured against the 182 published rows:
+
+| Column | rows with a first element | numeric fields on it |
+|---|---|---|
+| `country_analysis` | **140 of 182** | `market_share` 140/140, `growth_rate` 140/140 |
+| `regional_analysis` | 140 of 182 | `market_share` 140/140, `growth_rate` 140/140 |
+| `competitive_landscape` | **182 of 182** | **`founded` only** (142/182) |
+| `company_profiles` | 140 of 182 | none — `revenue` is a string ("42B") |
+
+**So the country chart had data on 140 pages and nobody had drawn it, and the
+competitive-position chart has no quantity to position anything by.** The only
+numbers in `competitive_landscape` are founding years; `market_position` is
+prose ("Largest disclosed advanced wound franchise"). A competitive-position
+chart drawn from that would be axes invented to look like measurement.
+**Refuted, not deferred** — recorded in `BACKLOG.md` under the item rather than
+left as an open task that reads like missing work.
+
+Depth, probed the same way (`--depth country_analysis`): arrays reach index 3 on
+**85** rows and index 5 on **1**, so at most six country pairs are ever drawn
+and the chart truncates nothing.
+
+### What shipped
+
+`CountryBarChart` — share and growth as grouped horizontal bars, the same shape
+as the regional chart, sitting above the existing `CountryTable` inside a
+`ChartFigure` so it carries a source line and the `/methodology` link like every
+other figure on the site. It has **no table of its own**: `CountryTable` already
+renders the same array server-side directly below it, so a second copy would
+duplicate every figure in the HTML. That is also why the SVG is `role="img"` —
+the numbers are announced once, from the table.
+
+It is fed the table's **filtered** rows, not the raw column: `usableRows()`
+drops placeholders such as `{"country": ""}`, and a row the table refuses to
+print must not become a nameless bar either.
+
+Built output: **140 of 182 report pages** carry the chart, and the same 140
+carry the country table — 1:1, and exactly the 140 the probe predicted.
+
+Its caption falls back to the regional `charts[]` entry when a row has no
+`country_analysis` entry, because a row that labels one geographic chart labels
+the other, and `chartSourceNote()` never returns an empty caption.
+
+### A sixth audit rule, negative-tested three ways
+
+`audit-html.mjs` now pins the country chart to its table, as the regional and
+forecast rules already do: equal counts, 3 × `scope="col"`, and `cells ===
+rows * 3` so a truncated table fails.
+
+Checked first that the sample can fail it — the C-4 lesson. Of the four audited
+report routes, **1 carries `country_analysis`** (`ai-in-lab-automation-market`);
+the other three emit no country table at all, so a rule written without checking
+would have reported clean while never running. Corruptions against the built
+page, each restored byte-identical (`md5sum -c` OK):
+
+1. chart aria-label renamed → `0 country bar chart(s) but 1 country table(s)`
+2. one `scope="col"` → `data-col` → `does not mark all 3 column headers`
+3. one `<td>` → `<th>` → `has 3 row(s) but 8 data cell(s), expected 9`
+
+### The build failure that was not a defect
+
+`npm run build` failed mid-export with `PageNotFoundError: Cannot find module
+for page: /reports/[slug]/page` on `/reports/space-economy-lunar-mining-market`.
+The page is fine. Another session on this branch started `next dev -p 3101` at
+**12:22 IST** (PID 51416, verified by command line, **not killed** — it is not
+this session's process), and `next dev` rewrites `.next` continuously while a
+build is exporting out of it.
+
+`next.config.ts` now reads `distDir` from **`NEXT_DIST_DIR`**, defaulting to
+`.next`, so a verification build gets its own directory and the two sessions
+stop clobbering each other: `NEXT_DIST_DIR=.next-verify npm run build`.
+`audit-html.mjs` honours the same variable. `/.next-*/` added to `.gitignore`
+beside the existing `/.next.*/`. Vercel and any build without the variable set
+are untouched.
+
+One side effect, documented in the config: `next build` **rewrites
+`tsconfig.json`**, adding `<distDir>/types` to `include` and reformatting the
+file. That edit is session-local and was reverted, not committed.
+
+### Gates, all against `.next-verify`
+
+```
+NEXT_DIST_DIR=.next-verify npm run build   exit 0, 417 pages, 182 report paths
+tsc --noEmit                               clean
+npm run lint                               12 warnings, 0 errors — unchanged
+audit-html.mjs (6th rule live)             18 of 18 routes, 0 errors, 1 pre-existing warning
+contrast-audit.mjs                         0 failing pairs, both themes
+source-hygiene.mjs                         236 files, 0 findings
+seo-unit.mjs / api-unit.mjs                all assertions passed
+report-db.mjs check content/reports/[a-z]* 50 pass, 0 fail
+```
+
+## 2026-10-18, 07:34 IST — `/research`, session 9a: round 7 drafted, Medicare's five post-acute settings complete
+
+**Correction to the record first:** commits `8e1225b` and `c6048c8` say "09:20
+IST is outside the window". The real time was **07:20-07:34 IST** — the five-agent
+fan-out took about 22 minutes of wall clock, not two hours, and I wrote the
+commit message against an estimate instead of the clock. The conclusion is
+unchanged (both are outside the window; nothing published), but the timestamps
+in those two messages are wrong and this is the correction.
+
+**Five drafts, five agents, one per topic.** Rows 51-55:
+`home-health-care-market`, `inpatient-rehabilitation-facilities-market`,
+`long-term-care-hospitals-market`, `clinical-laboratory-services-market`,
+`ambulance-and-emergency-medical-services-market`. The round 7 claim was
+committed at `09c6197` **before** any agent was dispatched, and `git status`
+after the fan-out showed **exactly the ten expected files** — no agent wrote
+outside its two paths, and none touched the pipeline, so the 6A collision did
+not repeat. The other six modified paths in the tree at that moment are 72's
+and e6's and were deliberately left unstaged.
+
+**Nothing was taken on the agents' word.** All three gates re-run here on all
+five files, and every grounding division recomputed independently. All five
+reproduced. Two small discrepancies between a report-back and my own
+arithmetic, both the agent's rounding of its own intermediate and neither
+affecting a published figure: IRF's divergence is **3.94%**, reported as 3.92%;
+ambulance's `--pair` is 39/40 rather than 40/40, the miss being `39.69` — the
+complement of its own 60.31%, derived in prose and not an unsourced figure.
+
+| Slug | Base -> forecast | CAGR | Size spread | Grounding, recomputed here |
+|---|---|---|---|---|
+| home-health-care-market | $504.80B -> $1,015.80B | 10.51% | 1.344x global, 3.91x US-only | `0.423 x 504.80 = $213.53B / 12,234 = $17.45M/agency` against measured $3.2683M (Enhabit) and $3.2195M (DOJ decree), agreeing to 1.5% -> **5.34x** |
+| inpatient-rehabilitation-facilities-market | $23.72B -> $37.22B | 7.80% | 12.79x-54.81x vs parents | FY2026 rule to the cent: `18,907 x 1.026 x 1.0001 x 0.9985 = $19,371`; both CMG rates reproduce exactly; realised $25,287/stay = **1.3054x** statutory |
+| long-term-care-hospitals-market | $23.62B -> $34.80B | 4.96% | **17.05x** | `$2.4B / 47,000 = $51,064` = 1.0613x statutory; floor $6.64B vs operator-scaled $8.01B, gap 1.21x |
+| clinical-laboratory-services-market | $315.14B -> $459.58B | 6.49% | 1.480x | `$103.79B / 30,756 = $3.37M/lab`; Quest `$10,785M / 244M = $44.20` vs a $31.72 CLFS basket = **1.393x** |
+| ambulance-and-emergency-medical-services-market | $51.73B -> $90.93B | 9.86% | 8.94x, **1.90x inside one house** | GADCS tiers sum to **exactly** MedPAC's printed 49,901,430 and $51,106,771,767 = $1,024.15/transport = **0.988x the whole global headline** |
+
+**The finding the round was designed to produce.** Medicare pays for post-acute
+care in five settings; the corpus now has all five (SNF 47, hospice 46, home
+health 51, IRF 52, LTCH 53). The literature does not treat them equally, and the
+inequality runs the opposite way to intuition: the size spread is **17.05x** for
+LTCHs, **3.91x** for US home health, and for IRFs there is **no published dollar
+figure at all** — while the federal measurement is sharpest precisely there. The
+IRF rule reconciles to the cent and 94 case-mix weights are published; no house
+sizes it. This is writable as a cross-report article and is the next task.
+
+**Row 47's defect is not about one publisher.** Measured again, in two more
+markets. Home health: two of five global houses publish a North America figure
+*below* the federally measured US alone when advanced at their own rate —
+Coherent **-3.80%**, Fortune **-8.42%**, the latter on its own published dollar
+figure rather than on a share. Ambulance: the measured US floor is **2.317x**
+Fortune's implied US, forcing a >=80.15% US share or a 2.317x larger headline.
+The SNF report documented this for one house; it generalises across the tier.
+
+**Where the CAGR spread exceeds the size spread, the growth rate is a policy
+forecast.** Clinical lab 1.97x against 1.480x; home health 1.579x against
+1.344x. Both reverse the corpus pattern, and in both the disputed quantity is a
+statutory rate path — PAMA's cuts, blocked 3 Feb 2026 and still authorised for
+2027-29, and the CY2026 home health rate — not patient volume.
+
+**One deviation, flagged rather than buried.** The IRF headline is this corpus's
+first **constructed** headline: no publisher sizes the IRF in dollars, so the base
+is built from MedPAC and the Federal Register and the growth rate comes from a
+*different* publisher than the base. Labelled as a construction in the meta
+description, executive summary, forecast analysis, methodology and two FAQs,
+with both derivation routes and their 3.94% divergence printed. I accepted it —
+a labelled construction from federal measurements is worth more than a citation
+to a house that does not measure the thing — but it sets a precedent for what
+this publication will put in a headline, so it is recorded in the pipeline for
+Siddhant to confirm or reverse rather than inherit silently.
+
+**Gates:** `check content/reports/[a-z]*.json` **55 pass, 0 fail**;
+`--pair --all` **55 paired-checked, 0 not paired**; verifier reproduces on all
+five with a worst CAGR delta of 0.0044 pt. Budget at 07:34: headroom **+23.7
+points**, normal running.
+
+**Nothing published.** Rounds 6 and 7 — ten reports — publish together in the
+21:00 IST run-up, reports before any article.
+
+## 2026-10-18 13:15-14:05 IST — `/reports` linked 12 of 182 reports; now it links all of them
+
+Same session `281bde29`. Files: `components/reports/ReportDirectory.tsx` (new),
+`components/reports/index.ts`, `app/reports/page.tsx`, `lib/api/reports.ts`,
+`scripts/audit-html.mjs`, plus the state files. **No Supabase write; nothing
+under `content/` or `research/`.**
+
+### The measurement
+
+`/reports` paginates client-side at 12 cards. Measured against the built
+`reports.html`: **12 unique `/reports/<slug>` links in the delivered HTML**, out
+of 182 rows. Confirmed again from the other direction during the negative test
+below, which reported exactly `12 report link(s)` with the new block stripped.
+
+The backlog called this "internal-linking depth rather than indexing", and that
+is right as far as it goes: `/sitemap.xml` lists all 182. But a report whose only
+inbound link is a sitemap entry has no internal link at all, and a reader with
+JavaScript off saw a catalogue of twelve on a 182-report publication.
+
+### What shipped
+
+`ReportDirectory` — a Server Component listing every report as a real `<a>`,
+grouped by vertical, under the client listing. Built output, parsed out of the
+nav itself: **13 verticals, 182 unique links**, group counts 47 Healthcare IT /
+36 Biotechnology / 29 Pharmaceuticals / 28 Medical Devices / 8 Life Sciences /
+6 Agriculture & Food Tech / 6 Medical Imaging / 4 each Advanced Materials,
+Climate & Energy, Quantum Technology, Space Economy / 3 each Digital
+Infrastructure, Synthetic Biology — **summing to 182**.
+
+**It is rendered outside the Suspense boundary, and that is the point.**
+`ReportsListingClient` calls `useSearchParams()`, which opts everything up to
+the nearest boundary out of the static render — PR #9's finding. A directory
+placed beside it *inside* that boundary would be replaced by the skeleton in the
+delivered HTML and would have added zero crawlable links while looking correct
+in a browser.
+
+That means a second `getReportCards()` call, so the function is now wrapped in
+React `cache()`: the listing and the directory dedupe to **one** corpus-card
+query per render pass, not two. Anchor text is `marketName()`, the same trim the
+related-report and social cards use, because the stored titles end in
+"— Growth Drivers, Restraints and Future Outlook 2032" and 182 anchors of that
+shape are 182 near-identical anchors.
+
+### What it costs, measured rather than assumed
+
+| `reports.html` | bytes |
+|---|---|
+| before the directory | 199,342 |
+| directory, `className` on each of 182 anchors | 321,094 |
+| directory, classes hoisted to one container (`[&_a]:…`) | **273,207** |
+
+So the hoist returned **47KB** and the directory costs **67KB** uncompressed —
+24,278 characters of it the nav block — for 170 additional internal links. The
+page gzips to **33.0KB**. The hoist is the reason the link styling is a
+descendant selector rather than a utility on every anchor.
+
+### A seventh audit rule, negative-tested
+
+`audit-html.mjs` now fails `/reports` if it server-renders fewer than 100 report
+links. A threshold rather than a count, since the corpus grows weekly. The
+regression it guards is **silent** — with JS on, a browser shows the same page
+either way. Negative test: nav block stripped from the built HTML →
+`x /reports server-renders 12 report link(s)`; file restored, `md5sum -c` OK,
+audit back to 18 of 18 and 0 errors.
+
+### Gates
+
+```
+NEXT_DIST_DIR=.next-verify npm run build   exit 0, 417 pages
+tsc --noEmit                               clean
+npm run lint                               12 warnings, 0 errors — unchanged
+audit-html.mjs (7 rules)                   18 of 18, 0 errors, 1 pre-existing warning
+contrast-audit.mjs                         0 failing pairs
+source-hygiene.mjs                         245 files, 0 findings
+```
+
+**Not visually verified.** 14:05 IST is outside the 21:00-09:00 browser window,
+so the directory's rendered layout at phone and desktop widths is modelled from
+the markup, not observed. Filed in `REVIEW-QUEUE.md` as the one thing to look at
+when the window opens.
+
+## 2026-10-18, 07:50 IST — the cross-setting article, written and held
+
+`content/blogs/five-settings-one-benefit-what-medicare-measures.json`. The
+finding round 7 was designed to produce, and the one no single report can carry.
+
+| Setting | Published 2026 | Medicare FFS register | Ratio |
+|---|---|---|---|
+| home health | $504.80B | $16.0B | **31.55x** |
+| skilled nursing | $453.31B | $31B | **14.62x** |
+| long-term care hospitals | $23.62B | $2.4B | 9.84x |
+| inpatient rehabilitation | $23.72B | $11.62B | 2.04x |
+| hospice | $32.60B | $28.3B | **1.15x** |
+
+A **27.4-fold** difference in how far the published market departs from the same
+federal benefit, inside one program, where every denominator is measured and
+every price is statutory.
+
+**The mechanism is sourced, not inferred, which is what makes it publishable.**
+Hospice sits at 1.15x because Medicare is **93.1%** of VITAS's hospice revenue —
+a house sizing "the hospice market" has almost nothing else to count. That makes
+hospice the control case: it proves the houses *can* land on the register, which
+removes the charitable reading of 31.55x. Home health sits at 31.55x because the
+houses print their own scope and it is not the Medicare benefit — Coherent
+covers "unskilled home healthcare" plus blood sugar monitors, mobility aids and
+pregnancy test kits; Persistence includes pregnancy care; Grand View puts
+services at only **83.9%** of its own market, so a sixth of its "home health care
+market" is hardware. The ratio is measuring annexation of the *name*, and the
+ordering of the five tracks it almost exactly.
+
+**`--online` fails, and that is the ordering working.** All nine failing links
+are rounds 6 and 7 reports still held on this branch. That every failing link is
+one of the ten held drafts is itself the confirmation that the article cites only
+this batch and nothing stale. Offline `check` passes, 0 U+FFFD; title and excerpt
+were shortened to 65 and 185 chars to clear the two card warnings.
+
+**Publish order at 21:00 IST, unchanged and now load-bearing:** ten reports
+first (rounds 6 and 7), then this article, then `npm run build`, then the deploy.
+The article 404s its own citations in any other order.
+
+Budget at 07:50: headroom **+23.7 points**. Nothing published.
+
+### Record correction: `50eb4ee` does not describe what it committed
+
+`50eb4ee` ("Log the cross-setting article and the publish order it depends on",
+13:13 IST) carries **all eight files of this session's `/reports` directory
+work** — `ReportDirectory.tsx`, `components/reports/index.ts`,
+`app/reports/page.tsx`, `lib/api/reports.ts`, `scripts/audit-html.mjs`,
+`BACKLOG.md`, `REVIEW-QUEUE.md` and the `WORKLOG.md` entry above. They had been
+staged by path here and were swept into the content session's commit before this
+session's own `git commit` ran, which then reported "no changes added to
+commit".
+
+**The tree is correct** — `git show HEAD:<file>` is byte-identical to the
+working copy for all eight, `md5sum` matched on `ReportDirectory.tsx`, and the
+audit rule is present in the committed script. Only the history is mislabelled.
+Nothing is rewritten: this is a shared branch and two sessions have committed on
+top.
+
+This is the **third** record-correction on this branch (`bae7279`, `be2d931`,
+this one), and all three have the same cause: a tree-wide `git add` on a branch
+two sessions are writing to. Staging by path does not protect you if the other
+session stages everything. The only thing that does is **commit immediately
+after staging**, in the same tool call where possible — the window here was
+about four minutes.
+
+## 2026-10-18 14:10-14:40 IST — three indexable pages said an analyst had published nothing
+
+Session `281bde29`. Files: `components/authors/AuthorProfile.tsx`,
+`components/authors/AuthorReportsListing.tsx`, `BACKLOG.md`, `WORKLOG.md`.
+No Supabase write.
+
+### Started as a staleness sweep of the open technical bullets, which found one live defect and three dead ones
+
+The queues above this lane were all owner-gated or browser-gated, so the open
+P0/P1 bullets from the 2026-10-15 technical audit were re-measured against the
+current build rather than taken on their word. Three are stale and are struck
+in `BACKLOG.md` with what settled them:
+
+- **"No `error.tsx`/`global-error.tsx` anywhere"** — both exist at `app/`, plus
+  `app/not-found.tsx` and `app/consulting/[slug]/not-found.tsx`. Added by an
+  earlier session; the bullet was never updated. The `lib/api/consulting.ts`
+  half of it stands: `getAllConsultingServices` and
+  `getConsultingServicesByCategory` still `throw` instead of returning an
+  `ApiResponse`.
+- **"Checkout ... `lib/api/orders.ts:8` throws unconditionally — a buyer sees a
+  white screen"** — **no code path reaches it.** `createOrder` and
+  `captureOrder` are called from nowhere in `app/` or `components/`; the one
+  grep hit, `PayPalButton.tsx:58`, is the PayPal SDK's own `createOrder` prop
+  resolving an id it already holds. The stubs are dead code, and per the
+  no-deletion rule they stay.
+- **"`/design-system` renders 2 `<h1>` and has no canonical"** — the built page
+  has **1** `<h1>` and `rel="canonical"` pointing at
+  `https://www.neographanalytics.com/design-system`.
+
+### The live one
+
+`/authors/1`, `/authors/2` and `/authors/3` are **in `/sitemap.xml`** (verified
+in the built `sitemap.xml.body`) and each published, in full:
+
+> **Total Reports Authored — 0**
+> **No Reports Yet.** Deepa Pandey hasn t authored any reports yet. Check back
+> soon!
+
+That is a statement about a named person, and the data cannot support it.
+`getReportsByAuthorId` returns `{ success: true, data: [] }` **by
+construction** — `neograph_reports` has no author column (32, checked, R-26) —
+so the branch renders for all three analysts regardless of what they wrote. The
+zero is not a count of anything; it is the absence of a record.
+
+Fixed by saying what is true: the empty state now reads **"Reports are published
+under organisational attribution"** and explains that figures go out under the
+company rather than individual bylines, with links to `/reports` and
+`/methodology`. The "Total Reports Authored" tile renders only when
+`totalReports > 0`, so a zero that means "not recorded" is never published as a
+measurement.
+
+Both components carry the reason inline, pointing at R-26, so that when the
+attribution is recorded the copy is a known thing to revisit rather than a
+mystery.
+
+Verified: build exit 0, all three author pages re-read out of the built HTML and
+none now contains the old sentence or a zero tile. `audit-html.mjs` 18 of 18 and
+0 errors, contrast 0 failing pairs, source-hygiene 251 files / 0 findings, lint
+12 warnings / 0 errors, `tsc` clean.
+
+**Not a content invention:** no report was attributed to anyone. The change
+removes a claim; it does not add one.
+
+### Timestamp correction to the two entries above
+
+The headers read 13:15-14:05 and 14:10-14:40 IST. Local `date` at the time of
+the second commit was **13:28 IST**: the directory work ran roughly
+12:50-13:15 and the author-page work 13:15-13:28. The content is accurate; the
+clock times in those two headers are not. Recorded here rather than rewritten,
+since this file is append-only.
+
+## 2026-10-18 13:30-13:55 IST — two sitemaps told crawlers a different story about the same pages
+
+Session `281bde29`. Files: `app/sitemap-pages.xml/route.ts`,
+`app/sitemap-consulting.xml/route.ts`, `BACKLOG.md`, `WORKLOG.md`. No Supabase
+write.
+
+### The measurement
+
+`app/robots.ts` advertises exactly one sitemap, `/sitemap.xml`, and that file
+now carries **221** URLs. Two other sitemap routes were still serving their own
+older subsets, advertised nowhere:
+
+| Route | URLs | all present in `/sitemap.xml`? |
+|---|---|---|
+| `/sitemap-pages.xml` | 8 static pages | 7 exactly; the 8th is the homepage as the bare host `https://www.neographanalytics.com` against the canonical `.../` — the same page, and the trailing-slash form is what the app emits |
+| `/sitemap-consulting.xml` | 10 consulting services | **10 of 10** |
+
+So both are strict subsets. What they added was contradiction: their own
+`priority` values for URLs `/sitemap.xml` already prioritises, and — in the
+pages one — `lastModified: new Date().toISOString()` on **every** entry, which
+claims each page changed at the moment of the fetch. `eaba86a` had just removed
+exactly that kind of lying date from the main sitemap.
+
+Search Console remembers every sitemap ever submitted, so "advertised nowhere"
+does not mean "not fetched".
+
+### What shipped
+
+Both routes are now **308 permanent redirects to `/sitemap.xml`** — superseded,
+not deleted, with the reasoning and the git ref of the previous generator
+(`ab17fc0`, `ef27523`) in each file's header.
+
+The redirect target is **host-relative** (`new URL('/sitemap.xml',
+request.url)`), and that is a measured correction rather than a style choice:
+the first version hardcoded the production URL, and
+`curl -L http://localhost:3102/sitemap-pages.xml` then fetched **production**
+instead of the build under test. A preview deployment's crawler would have done
+the same.
+
+### Verified over HTTP, not from the build output alone
+
+Served the verification build on **port 3102** (`NEXT_DIST_DIR=.next-verify npx
+next start -p 3102` — 3100 holds a stale `next start` from the 17th that is not
+this session's, and 3101 is the other session's dev server):
+
+```
+/sitemap-pages.xml        308 -> http://localhost:3102/sitemap.xml
+/sitemap-consulting.xml   308 -> http://localhost:3102/sitemap.xml
+followed, locally         221 <loc> entries
+/sitemap.xml              221 <loc> entries, unchanged
+/reports                  182 unique report links  (the directory, live)
+```
+
+Both PIDs of my own server were identified by command line and stopped by id,
+not by port; `curl` after that returns nothing, confirming it is down and that
+nothing else was holding 3102.
+
+Gates: `tsc` clean, build exit 0 (418 pages), `audit-html.mjs` 18 of 18 and 0
+errors, source-hygiene 251 files / 0 findings, lint 12 warnings / 0 errors.
+
+### Left alone, deliberately
+
+`/api/sitemap-reports/[page]`, `/api/sitemap-blogs/[page]` and
+`/api/sitemap-press-releases/[page]` (reached through the
+`sitemap-reports-:page.xml` rewrites) are also unadvertised and also duplicate
+report URLs. They paginate at 500 entries, which is premature at 221 URLs
+against the 50,000-URL sitemap limit, but they are a growth mechanism rather
+than a stale subset, so they stay as they are and are noted in `BACKLOG.md`.

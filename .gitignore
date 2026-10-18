@@ -21,6 +21,10 @@
 # false pass. Those set-asides are build output too, and are never deleted
 # by this repo's tooling -- remove them by hand when the disk is wanted.
 /.next.*/
+# `NEXT_DIST_DIR=<dir> npm run build` (see next.config.ts) builds into its own
+# directory so a verification build does not race another session's `next dev`
+# over `.next`. Same rule: build output, ignored, never deleted by tooling.
+/.next-*/
 
 # Throwaway one-off scripts. They live in scripts/ rather than the scratchpad
 # because node resolves node_modules from the file's directory upward, so a

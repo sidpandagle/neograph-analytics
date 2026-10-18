@@ -1,0 +1,238 @@
+{
+  "report_id": "ambulance-and-emergency-medical-services-market",
+  "slug": "ambulance-and-emergency-medical-services-market",
+  "title": "Ambulance and Emergency Medical Services Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 51.73,
+    "forecast_value": 90.93,
+    "cagr": 9.86
+  },
+  "executive_summary": "Eight published estimates of the ambulance and emergency medical services market put its 2026 value between $7.13 billion and $63.76 billion. That is an 8.94x spread at a single base year, and it is not a disagreement about growth: published CAGRs span only 5.7% to 9.82%, a 1.72x range. The variable is what counts as the market.\n\nThe cleanest demonstration needs no register at all. Fortune Business Insights publishes an 'Ambulance Services Market' and an 'Emergency Medical Services Market', both last updated 28 September 2026, at $63.76 billion and $33.56 billion respectively for 2026. One house, one month, overlapping subject matter, 1.90x apart. Neither page mentions the other.\n\nThe register settles what the figures can mean. CMS built the Ground Ambulance Data Collection System under the Bipartisan Budget Act of 2018 because no cost data for this sector existed; MedPAC published the first analysis of it in June 2026. Multiplying its transport counts by its measured cost per transport by ownership gives $11,820,254,249 for for-profit organisations, $8,044,678,720 for nonprofit and $31,241,838,798 for government-owned, on 49,901,430 transports: $51,106,771,767 in total, or $1,024.15 per transport.\n\nThat $51.11 billion is the measured cost of delivering ground ambulance service in the United States alone, in 2022 dollars, from roughly 71% of US ground ambulance organisations, with air ambulance excluded entirely. It is 0.988x the largest-scope global published estimate for 2026. The published headlines are therefore billed-revenue quantities for a commercially addressable subset, not measures of what emergency medical services cost to run.\n\nTwo structural facts explain the gap, and both come from sources rather than assumption. First, an EMS activation is not a billable transport: NEMSIS counted 60,298,684 activations in 2024 but only 36,367,261 treated-and-transported 911 responses, and under the ambulance fee schedule Medicare pays for a transport and not for a response that does not produce one. Second, 5,652 of the 10,358 organisations in the GADCS sample are government-owned, most of them also running fire or first response, and 52% of their reported revenue came from sources such as local government funding rather than from billing. A revenue-based market model either excludes that money or double-counts a tax base.",
+  "market_context": "Ground ambulance service in the United States is mostly a municipal function that happens to bill. MedPAC's June 2026 mandated report finds that 5,652 of the 10,358 organisations in the CMS Ground Ambulance Data Collection System sample are government-owned, carrying 19,213,923 of 49,901,430 transports, and notes that 'most of the government-owned ambulance organizations also provide fire or other first response services.' For comparison, MedPAC puts government ownership of acute care hospitals at about 20%. Government is the majority owner in urban (51%), rural (56%) and super-rural (65%) service areas alike.\n\nThe money follows the ownership. Government-owned organisations show the highest measured cost per transport at $1,626, against $830 for nonprofit and $563 for for-profit organisations, and the lowest revenue-to-cost ratios: a median of 0.98 weighted by transports and 0.72 unweighted, against 1.11 and 1.03 for for-profit organisations. Thirty percent of them reported local government funding, averaging $322 per transport, against $32 for nonprofit and $12 for for-profit organisations.\n\nWashington State's licence register shows the same shape at state scale: of 299 EMS agencies licensed for ground transportation in 2022, 244 are public, 50 private and 5 tribal. The state's study records those public agencies as funded through local government taxes and levies under RCW 84.52.069.\n\nAir ambulance sits at the other extreme of the same market. GAO found 2017 median prices of about $36,400 for a helicopter transport and $40,600 for fixed-wing, with 69% of privately insured transports out of network. At 35.5x the measured mean ground cost per transport, it is a different price regime bundled under one title.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 9.8569% CAGR between 360iResearch's published 2026 and 2032 endpoints, $51.73 billion and $90.93 billion. The intermediate years are interpolation, not separately sourced observations. The publisher prints 9.82%; its own endpoints imply 9.8569%, and the 9.86% headline here is that derivation rather than the printed figure, so that the series and the headline cannot disagree.\n\nThis series was chosen because it is the most recently published of the eight surveyed, carries the most recent base year, and is the only one whose stated scope explicitly spans road, air and water transport, emergency and non-emergency service, and all payment methods including government funding. It is a billed-revenue boundary. Readers working to the cost of delivering the service should anchor instead on the $51.11 billion measured US ground figure derived from CMS's own data collection, which is 0.988x this entire global headline.\n\nThe chosen headline also carries a contradiction worth stating. 360iResearch publishes no regional split, but the house that does fails against the register: Fortune Business Insights puts the United States at about 34.6% of its $63.76 billion global 2026 figure, or $22.04 billion. The measured US ground cost floor of $51.11 billion is 2.319x that. Either the United States is at least 80.15% of the global total and not 34.6%, or the global headline is 2.317x larger than published, at $147.71 billion. The same test on Fortune's EMS series gives $13.76 billion for the US and a ratio of 3.71x. This generalises past either publisher: any global ambulance-services headline near $50-65 billion for a 2026 base must put the United States at roughly 80%, because the US ground component alone is federally measured and is most of it.\n\nOn growth, the published range is 5.7% to 9.82%, a 1.72x spread that no public register settles. The volume register runs below the middle of it: NEMSIS activations rose 5.53% from 60,298,684 in 2024 to 63,635,893 in 2025, and part of even that is a rising reporting-agency count. Anything above roughly 6% has to come from price and intensity rather than call volume.",
+  "market_overview": {
+    "summary": "On the broadest published service definition, the ambulance and emergency medical services market is $51.73 billion in 2026, projected to $90.93 billion by 2032 at a 9.86% CAGR. Other houses put the same base year anywhere from $7.13 billion to $63.76 billion, an 8.94x spread, and one publisher's two reports on overlapping subject matter are 1.90x apart in the same month. The gap is scope, not growth. Against all of them, the measured cost of delivering ground ambulance service in the United States alone is $51.11 billion from CMS's own data collection, which is 0.988x the global headline published here.",
+    "key_trends": [
+      "Base-year estimates spread 8.94x ($7.13B to $63.76B for 2026) while published CAGRs spread only 1.72x (5.7% to 9.82%)",
+      "One publisher's 'ambulance services' and 'emergency medical services' reports, both updated 28 September 2026, differ 1.90x: $63.76B against $33.56B",
+      "Measured US ground ambulance cost is $51,106,771,767 on 49,901,430 transports, or $1,024.15 each, which is 0.988x the global headline",
+      "An activation is not a billable transport: 60,298,684 NEMSIS activations in 2024 produced 36,367,261 treated-and-transported 911 responses, 60.31%",
+      "Medicare's realised payment of $469.03 per transport is 45.80% of measured cost, so 52% of government-owned organisations' revenue comes from non-billing sources",
+      "Air ambulance is 28.34% of one house's own ambulance total on roughly 3.37% of transports, at 2017 median prices of $36,400 to $40,600 per flight"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal service, fragmented delivery"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "An ageing population raising activation volume: NEMSIS records 45.8% of 2024 activations in patients aged 61 and over",
+      "Annual statutory rate updates to the ambulance fee schedule conversion factor, set at $284.56 for 2026, which lift billed revenue without any volume growth",
+      "Consolidation toward scale operators: cost per transport falls from $2,878 in the lowest volume quartile to $918 in the highest",
+      "Growth in non-emergency and interfacility transport, which is 48.7% of for-profit organisations' transports against 8.9% of government-owned organisations'",
+      "Air medical capacity expansion, with one operator reporting 385 air bases and 80,577 emergent air transport requests in a single quarter"
+    ],
+    "restraints": [
+      "Medicare pays $469.03 per transport against a measured $1,024.15 cost, and its RVUs have not been updated since 2002",
+      "Tax-funded municipal delivery sits outside any billed-revenue market: 54.57% of US ground ambulance organisations are government-owned",
+      "The fee schedule pays for transports only, so the 39.69% of activations that do not end in a treated-and-transported 911 response generate no revenue at all",
+      "Median government-owned organisations recover 0.72 of their costs from all revenue sources combined, unweighted",
+      "Balance-billing reform narrows the out-of-network premium that has carried commercial revenue, with allowed amounts running 152% to 646% of Medicare for the same codes"
+    ],
+    "opportunities": [
+      "Dynamic staffing cuts measured cost per transport to $636 against $1,524 for static models at comparable service intensity",
+      "Access gaps are quantified and addressable: 7.2% of the population across 41 states, 4.5 million people, lived more than a 25-minute trip from an ambulance station in 2021",
+      "Mobile integrated health care and treat-in-place models address the two-fifths of activations that currently produce no billable transport",
+      "Cost reporting through GADCS gives operators, for the first time, a benchmark against which to argue payment adequacy",
+      "Scale consolidation in a sector of roughly 10,600 organisations where the largest operator holds about 8.10% of US ground transports"
+    ],
+    "challenges": [
+      "No published estimate separates billed revenue from tax-funded delivery, so market sizing is an unreliable basis for planning",
+      "Two publishers' figures for the same subject differ by more than the entire air ambulance segment",
+      "No vendor share is publicly disclosed for the service market, and the shares in circulation belong to device vendors in a products model",
+      "Cost per transport runs from $367 at the 10th percentile to $4,136 at the 90th, an 11x range that defeats any single national average",
+      "The ambulance fee schedule's geographic adjustment is blunt: 34 states have a single statewide practice expense GPCI, so high- and low-cost areas are paid identically"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Emergency transport",
+      "Non-emergency and scheduled transport",
+      "Interfacility transfer",
+      "Event and standby coverage"
+    ],
+    "by_application": [
+      "Basic life support",
+      "Advanced life support",
+      "Specialty care and critical care transport",
+      "Paramedic ALS intercept"
+    ],
+    "by_end_user": [
+      "Government and municipal agencies, including fire-based services",
+      "Private for-profit operators",
+      "Nonprofit and volunteer agencies",
+      "Hospital-affiliated providers"
+    ],
+    "by_transport_mode": [
+      "Road ambulance",
+      "Rotary-wing air ambulance",
+      "Fixed-wing air ambulance",
+      "Water ambulance"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 51.73 },
+    { "year": 2027, "value": 56.83 },
+    { "year": 2028, "value": 62.43 },
+    { "year": 2029, "value": 68.58 },
+    { "year": 2030, "value": 75.34 },
+    { "year": 2031, "value": 82.77 },
+    { "year": 2032, "value": 90.93 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2032 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "GMR Solutions Inc. (Global Medical Response)",
+      "headquarters": "United States",
+      "market_position": "Largest disclosed US operator",
+      "description": "Listed on the New York Stock Exchange as GMRS following a May 2026 initial public offering, which makes it the only large US ambulance operator whose volumes are disclosed quarterly. Operates American Medical Response on the ground and Air Evac Lifeteam, REACH Air Medical Services, Guardian Flight, Med-Trans Corporation and AirMed International in the air, across approximately 1,400 counties and 385 air bases. Reported 2,090,486 transports in the first half of 2026, of which 2,019,992 ground and 70,494 flights, at net transport revenue of $1,365 per ambulance transport. Full-year 2026 guidance is $5,890 million to $6,180 million of net revenue. Annualising its first-half ground volume gives 4,039,984 transports, about 8.10% of the 49,901,430 US ground transports in the CMS GADCS sample. No market share is disclosed and none is published here."
+    },
+    {
+      "company": "Falck A/S",
+      "headquarters": "Denmark",
+      "market_position": "Largest disclosed European operator",
+      "description": "Reported FY2025 group revenue of DKK 12,495 million, up 3.0% reported and 4.0% organic, with EBIT before special items of DKK 505 million at a 4.0% margin and profit for the year of DKK 195 million. Growth was driven by Europe, including ambulance contract wins in Scandinavia; US revenue fell against 2024 and earnings were affected by salary increases, exchange rates and lower ambulance trip revenue collection. The company discloses no transport or mission count, so no per-transport figure can be derived for it, and no market share is disclosed."
+    },
+    {
+      "company": "Government and fire-based agencies, collectively",
+      "headquarters": "United States",
+      "market_position": "Majority of organisations, 38.50% of transports",
+      "description": "Not a company, and included because leaving it out would misrepresent the competitive set. MedPAC's analysis of the CMS Ground Ambulance Data Collection System finds 5,652 of 10,358 organisations government-owned, carrying 19,213,923 of 49,901,430 transports, and states that most of them also provide fire or other first response services. They show the highest measured cost per transport at $1,626 and the lowest revenue-to-cost ratios, with 52% of reported revenue coming from sources such as local government funding. In Washington State, 244 of the 299 EMS agencies licensed for ground transportation in 2022 were public. Most of this delivery is tax-funded rather than billed, and therefore sits partly or wholly outside every published market size."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "GMR Solutions Inc. (Global Medical Response)",
+      "year": 2026,
+      "event": "Completed an initial public offering on the New York Stock Exchange under the ticker GMRS, closing 14 May 2026 on a prospectus dated 12 May 2026, selling 31.9 million Class A shares for net proceeds of $446.8 million. The largest US ambulance operator's transport volumes and revenue per transport became publicly disclosed quarterly as a result."
+    },
+    {
+      "company": "Medicare Payment Advisory Commission",
+      "year": 2026,
+      "event": "Published the first analysis of the CMS Ground Ambulance Data Collection System in its June 2026 report to Congress, and recommended 14-0 that Congress direct the Secretary to continue collecting cost and revenue data from ground ambulance suppliers and providers while streamlining the instrument. The report measured cost per transport for the sector for the first time, at $1,018 urban, $997 rural and $1,263 super-rural."
+    },
+    {
+      "company": "Centers for Medicare & Medicaid Services",
+      "year": 2026,
+      "event": "Set the ambulance fee schedule conversion factor at $284.56 and the mileage base rate at $9.15 per mile for 2026. The relative value units the conversion factor multiplies have not been updated since they were established by negotiated rulemaking in 2002, and the temporary urban, rural and super-rural add-ons remain effective through 31 December 2027."
+    },
+    {
+      "company": "Falck A/S",
+      "year": 2026,
+      "event": "Reported FY2025 results on 5 February 2026 with group revenue of DKK 12,495 million and EBIT before special items of DKK 505 million, and raised its 2026 earnings expectations on newly won contracts. The release attributed weaker earnings partly to lower ambulance trip revenue collection in the United States."
+    }
+  ],
+  "regulatory_landscape": [
+    "Medicare ambulance fee schedule under section 1834(l) of the Social Security Act, implemented 2002, which pays a relative value unit multiplied by a conversion factor of $284.56 for 2026 plus separate mileage at $9.15 per mile, and pays only for responses that result in a transport",
+    "Section 50203(b) of the Bipartisan Budget Act of 2018, which mandated the Medicare Ground Ambulance Data Collection System and the MedPAC assessment of it delivered in June 2026",
+    "Section 311 of the Consolidated Appropriations Act of 2022, which moved the MedPAC ground ambulance report deadline to the second 15 June following transmission of the first representative sample",
+    "No Surprises Act balance-billing protections, which cover air ambulance transport but exclude ground ambulance, and which established the Advisory Committee on Ground Ambulance and Patient Billing that reported to the Secretaries in 2024",
+    "State balance-billing statutes, which in Washington excluded ground ambulance services from protection in all three enactments of the Balance Billing Protection Act, Chapter 48.49 RCW",
+    "State and local EMS licensing and levy authority, such as RCW 84.52.069, under which public EMS agencies are funded through local government taxes and levies rather than billing"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public registers, statutory rate schedules, SEC-registrant disclosures and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare and the Health Care Delivery System, June 2026, Chapter 6, 'Mandated report: Assessment of the Medicare Ground Ambulance Data Collection System' — 2024 totals of approximately 10,600 suppliers and providers, 11.3 million FFS Medicare transports and $5.3 billion in payments; Tables 6-1 to 6-11",
+      "NEMSIS / NHTSA Office of EMS, 2024 National EMS Data Report — 60,298,684 activations, 14,756 agencies, 54 states and territories, 36,367,261 treated-and-transported 911 responses; and the 2025 public-release research dataset at 63,635,893 activations",
+      "CMS ambulance fee schedule public use files for 2026 as tabulated by MedPAC — conversion factor $284.56, mileage $9.15 per mile, the seven service-level RVUs and the urban, rural and super-rural add-on structure",
+      "GMR Solutions Inc. quarterly releases of 1 June 2026 and 12 August 2026, and Falck A/S annual report release of 5 February 2026",
+      "GAO-19-292, Air Ambulance (20 March 2019) — 2017 median prices of $36,400 helicopter and $40,600 fixed-wing, 69% out of network, about 20,700 transports analysed",
+      "Washington State Office of the Insurance Commissioner, Ground Ambulance Balance Billing Study Report, 1 October 2023 — 2022 licence counts, the 818,000 dispatch calls of which 684,000 resulted in transport, and Table 8 cost and allowed-amount figures",
+      "Published market estimates from 360iResearch via Research and Markets (September 2026, ambulance services and air ambulance services), Fortune Business Insights (two reports, 28 September 2026), Market Research Future (31 August 2026), Global Growth Insights (9 February 2026), Market Growth Reports (17 September 2026) and Mordor Intelligence (11 September 2026)"
+    ],
+    "data_validation": "Market size is taken from a named published third-party estimate, 360iResearch via Research and Markets, September 2026, and is presented as a published estimate rather than a verified measurement; no methodology behind it was inspected. The headline CAGR of 9.86% is derived from that publisher's own two endpoints, which imply 9.8569%, rather than from its printed 9.82%, and the report states this. The $51,106,771,767 and $1,024.15 figures in this report are arithmetic on MedPAC's published GADCS tables: transport counts by ownership multiplied by measured cost per transport by ownership, with the three ownership transport counts summing to exactly the 49,901,430 total MedPAC prints, which is the check that the table was read correctly. That result is a floor on US ground ambulance cost, not an estimate of it: MedPAC deflates all GADCS dollars to 2022 levels, the transports cover a 12-month period in 2022-2023, air ambulance is excluded, and the sample is about 71% of US ground ambulance organisations. The GADCS cohorts were drawn by organisation rather than weighted by volume, so the figure is deliberately not grossed up to a national total. The 2026 fee schedule amounts shown are computed here from MedPAC's published conversion factor, RVUs and add-ons at a practice expense GPCI of exactly 1.000, so they are arithmetic on published parameters and not quoted CMS payment amounts. All of the per-transport divisions are plausibility tests that establish what the published figures cannot mean; none is offered as a market estimate. NEMSIS activation counts are not transport counts and are not treated as such, and the 5.53% activation growth from 2024 to 2025 is confounded by a reporting-agency count that rose from 14,756 to 14,801 in the same period.",
+    "secondary_research_note": "Figures attributed to Jonk et al. (2023), to GAO reports of 2003, 2007 and 2012, and to the CMS negotiated rulemaking record of 2002 and 2004 are cited at second hand through MedPAC's June 2026 chapter. No statistic is attributed to the CMS Advisory Committee on Ground Ambulance and Patient Billing, whose page could not be retrieved during this research."
+  },
+  "faqs": [
+    {
+      "question": "How big is the ambulance and emergency medical services market?",
+      "answer": "It depends entirely on scope. On the broadest published service definition, which covers road, air and water transport, emergency and non-emergency service and all payment methods, $51.73 billion in 2026 rising to $90.93 billion by 2032 at 9.86%. Other houses put the same 2026 base year at $7.13 billion, $32.11 billion, $33.56 billion, $38.38 billion or $63.76 billion. The full spread is 8.94x."
+    },
+    {
+      "question": "Why do published estimates differ by nearly nine times?",
+      "answer": "Because they are counting different things, not because they disagree about growth: published CAGRs span only 5.7% to 9.82%. Some are products models in disguise. One house's 'EMS market' segments by wound care consumables, patient handling equipment and infection control supplies, and names Stryker and Cardinal Health as its leaders; a correctly labelled EMS products market from another house is $35.49 billion for 2026 on the same kind of basis. The clearest illustration needs no register: Fortune Business Insights publishes both an ambulance services report at $63.76 billion and an EMS report at $33.56 billion for 2026, both last updated 28 September 2026, 1.90x apart, with neither page mentioning the other."
+    },
+    {
+      "question": "What does the US register say the service actually costs?",
+      "answer": "CMS built the Ground Ambulance Data Collection System because no cost data existed, and MedPAC published the first analysis in June 2026. Multiplying its transport counts by its measured cost per transport gives $11,820,254,249 for for-profit organisations, $8,044,678,720 for nonprofit and $31,241,838,798 for government-owned, on 49,901,430 transports: $51,106,771,767, or $1,024.15 each. That is one country, ground only, in 2022 dollars, from about 71% of US ground ambulance organisations, and it is 0.988x the entire global ambulance services market as published. So the published headlines are billed-revenue quantities, not measures of what the service costs to run."
+    },
+    {
+      "question": "Is an EMS activation the same thing as a billable transport?",
+      "answer": "No, and the difference is large. NEMSIS defines an activation as an occurrence that initiates an EMS response with the potential of patient contact, and says explicitly that one patient may require several activations and that not every activation results in a patient encounter. In 2024 there were 60,298,684 activations but 36,367,261 treated-and-transported 911 responses, 60.31% of the total. MedPAC states the payment rule from the other side: Medicare pays for a transport but not for a response that does not result in one. Washington State measured the same funnel at 684,000 transports from 818,000 dispatch calls, or 83.6%, on its narrower call definition."
+    },
+    {
+      "question": "How much of US emergency medical services is tax-funded rather than billed?",
+      "answer": "Enough to make any revenue-based market size incomplete. Of the 10,358 organisations in the GADCS sample, 5,652 are government-owned, carrying 19,213,923 of 49,901,430 transports, and MedPAC notes that most of them also provide fire or other first response services. Fifty-two percent of their reported revenue came from sources such as local government funding rather than billing; 30% reported local government funding averaging $322 per transport, against $32 for nonprofit and $12 for for-profit organisations. In Washington State, 244 of 299 EMS agencies licensed for ground transportation in 2022 were public, funded through local taxes and levies. The median government-owned organisation recovers 0.72 of its costs from all revenue combined."
+    },
+    {
+      "question": "Why is air ambulance treated as a separate segment?",
+      "answer": "Because it is a different price regime. GAO found 2017 median prices of about $36,400 for a helicopter transport and $40,600 for fixed-wing, with 69% of privately insured transports out of network. Against the measured $1,024.15 mean ground cost per transport, the helicopter median is 35.5x. One house puts air ambulance at $14.66 billion of its own $51.73 billion ambulance total, or 28.34%, while the largest disclosed US operator reports flights as about 3.37% of its transports. A blended figure is dominated at the margin by its air component in a way its volume share never suggests."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because the only published splits fail against a federal measurement. Fortune Business Insights puts the United States at about 34.6% of its $63.76 billion global 2026 figure, which is $22.04 billion. The measured US ground cost floor of $51.11 billion is 2.319x that, so either the United States is at least 80.15% of the global total or the global headline is 2.317x larger than published. The same test on its EMS series gives 3.71x. This holds for any global headline near $50-65 billion, because the US ground component alone is federally measured and is most of it. Publishing a regional table would mean reproducing a split the arithmetic rules out."
+    },
+    {
+      "question": "Does Medicare cover the cost of a transport?",
+      "answer": "No. Medicare paid $5.3 billion for 11.3 million FFS transports in 2024, which is $469.03 per transport, against the measured $1,024.15 cost of providing one: 45.80%. The fee schedule's relative value units have not been updated since negotiated rulemaking in 2002, and its geographic adjustment is blunt because 34 states have a single statewide practice expense GPCI, so high- and low-cost areas inside those states are paid identically. That shortfall, not a commercial market, is what the tax funding in the previous answer is covering."
+    }
+  ],
+  "key_highlights": [
+    "Published 2026 base-year estimates spread 8.94x, from $7.13 billion to $63.76 billion, while CAGRs spread only 1.72x",
+    "One publisher's ambulance services and EMS reports, both updated 28 September 2026, differ 1.90x: $63.76 billion against $33.56 billion",
+    "Measured US ground ambulance cost is $51,106,771,767 on 49,901,430 transports, $1,024.15 each, or 0.988x the global headline published here",
+    "60,298,684 NEMSIS activations in 2024 produced 36,367,261 treated-and-transported 911 responses; the fee schedule pays only for transports",
+    "Medicare's $469.03 realised payment per transport is 45.80% of measured cost, and 52% of government-owned organisations' revenue is not from billing",
+    "5,652 of 10,358 US ground ambulance organisations are government-owned, most also running fire or first response, carrying 38.50% of transports",
+    "Any ~$50-65 billion global 2026 headline forces the United States to roughly 80%, not the 34.6% the one house that publishes a split prints"
+  ],
+  "reader_takeaways": [
+    "Before comparing two ambulance or EMS forecasts, check whether either is a products model: the figures near $32-38 billion often segment by consumables and patient handling equipment, not by service revenue",
+    "Treat every published headline as a billed-revenue quantity. The measured cost of US ground service alone, $51.11 billion, is 0.988x the largest global estimate, so no published figure is measuring what the system costs",
+    "Never divide a market size by the NEMSIS activation count. Only 60.31% of 2024 activations were treated-and-transported 911 responses, and the fee schedule pays for transports only",
+    "Plan around the tax subsidy rather than past it: Medicare covers 45.80% of measured cost, a majority of US organisations are government-owned, and 52% of their revenue never passes through a bill",
+    "Treat any regional or country share you are shown as unusable here, because the only published US share is 2.32x below what federal data measured US ground service to cost"
+  ],
+  "seo": {
+    "meta_title": "Ambulance and EMS Market Size and Forecast to 2032",
+    "meta_description": "Published 2026 estimates of the ambulance and EMS market spread 8.94x. Measured US ground cost of $51.11bn, from CMS data, is 0.988x the global headline.",
+    "keywords": [
+      "ambulance services market",
+      "emergency medical services market",
+      "EMS market size",
+      "ambulance fee schedule 2026",
+      "ground ambulance cost per transport",
+      "NEMSIS activations",
+      "air ambulance market",
+      "GADCS MedPAC"
+    ]
+  }
+}

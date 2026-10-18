@@ -10,6 +10,7 @@ import {
   tooManyRequests,
   type FieldRule,
 } from '@/lib/api/form-guard';
+import { recordSubmission } from '@/lib/api/submissions';
 
 const RULES: FieldRule[] = [
   { key: 'fullName', label: 'Name', required: true, max: 120 },
@@ -28,7 +29,8 @@ const FROM_EMAIL = 'support@neographanalytics.com';
 
 export async function POST(request: NextRequest) {
   try {
-    if (rateLimited(clientKey(request))) return tooManyRequests();
+    const clientIp = clientKey(request);
+    if (rateLimited(clientIp)) return tooManyRequests();
 
     let body: unknown;
     try {
@@ -52,6 +54,16 @@ export async function POST(request: NextRequest) {
     // Never let a caller-supplied value reach a mail header unescaped or multiline.
     // `??` would not fire here on an empty string, so use `||`.
     const subjectLabel = subjectMap[data.subject] || singleLine(data.subject, 60) || 'Inquiry';
+
+    // Store and notify before the email goes out: a Resend failure must not be
+    // the difference between having the lead and not having it.
+    const submissionId = await recordSubmission({
+      formType: 'contact',
+      values: data,
+      request,
+      clientIp,
+      summary: subjectLabel,
+    });
 
     await resend.emails.send({
       from: FROM_EMAIL,
@@ -83,7 +95,7 @@ export async function POST(request: NextRequest) {
       success: true,
       data: {
         success: true,
-        submissionId: crypto.randomUUID(),
+        submissionId: submissionId ?? crypto.randomUUID(),
         category: 'contact',
         message: 'Thank you for your inquiry. We will get back to you shortly.',
         createdAt: new Date().toISOString(),

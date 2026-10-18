@@ -1,0 +1,227 @@
+{
+  "report_id": "home-health-care-market",
+  "slug": "home-health-care-market",
+  "title": "Home Health Care Market Size, Share & Forecast 2026-2033",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2033",
+  "historical_period": "2021-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 504.8,
+    "forecast_value": 1015.8,
+    "cagr": 10.51
+  },
+  "executive_summary": "Seven verifiable published estimates of the home health care market agree with each other far more than they agree with the one part of this market that is actually measured. On a 2026 base the global houses cluster between $432.01 billion and $580.80 billion -- a spread of only 1.344x -- while their compound growth rates spread 1.579x, from 7.8% to 12.32%. That is the reverse of the usual pattern, where analysts agree on growth and disagree on scope.\n\nThe gap that matters is elsewhere. In 2024 fee-for-service Medicare spent $16.0 billion on the home health benefit, across 8.3 million 30-day periods delivered by 12,234 certified agencies, as MedPAC reports from claims and cost reports. The all-payer United States total, measured by the CMS National Health Expenditure Accounts, was $169.4 billion. Against the global headline those are 31.55x and 2.98x apart respectively. A buyer who reads \"home health care market\" and pictures the Medicare benefit is off by more than an order of magnitude before any growth assumption is applied.\n\nThe scope decision can be identified rather than guessed at. Apply Grand View's own 42.3% North America share to its own 2026 headline and divide by the certification register: $213.53 billion across 12,234 agencies is $17,454,000 per agency per year. Two independent measurements say the real figure is about a fifth of that -- Enhabit's 10-K puts $813.8 million of home health revenue across 249 locations, or $3,268,300 each, and the Department of Justice consent decree in the UnitedHealth/Amedisys merger divested 164 locations carrying approximately $528 million of annual revenue, or $3,219,500 each. Those two agree to within 1.5% of one another and sit 5.34x below the implied figure. The global headline therefore cannot be the Medicare-certified home health agency sector; it necessarily includes home medical equipment, infusion and respiratory therapy, telehealth and unskilled personal care, which is exactly what the publishers' own segment lists say.",
+  "market_context": "Medicare home health is a benefit, not an industry, and it is paid on the calendar year. The operative instrument is the CY 2026 Home Health Prospective Payment System rate update, CMS-1828-F, at 90 FR 55342, published 2 December 2025 -- a CY rule, unlike the FY rules that govern skilled nursing, inpatient rehabilitation, long-term care hospitals and hospice. It sets a national standardized 30-day period payment of $2,038.22 for an agency submitting quality data, and six per-visit amounts used to pay low-utilisation payment adjustments: $80.12 for a home health aide visit, $283.64 for medical social services, $194.74 for occupational therapy, $193.42 for physical therapy, $176.96 for skilled nursing and $210.25 for speech-language pathology.\n\nThe benefit requires a homebound patient with an intermittent skilled need, certified by a physician, nurse practitioner, clinical nurse specialist or physician assistant, with a face-to-face encounter in the 90 days before or 30 days after the start of care. It does not require a prior hospital stay, which is the clearest line between it and acute hospital-level care delivered at home under the separate Acute Hospital Care at Home waiver -- that is billed as an inpatient stay under the IPPS, by 373 approved hospitals rather than 12,234 certified agencies, and none of its dollars appear in the $16.0 billion figure used here.\n\nThe register underneath the benefit is shrinking in volume while growing in price. In-person visits fell from 99.7 million in 2019 to 65.4 million in 2024, a 34.4% decline; visits per full 30-day period fell 18.0%, from 10.2 to 8.4. Medicare's payment per visit rose from $180 to $245 over the same five years. Agencies grew from 11,356 to 12,234, but the whole increase is California, which went from 1,533 to 2,914 while the rest of the nation and territories fell from 9,823 to 9,320.",
+  "forecast_analysis": "The curve shown here is modelled at a constant 10.5056% between Grand View Research's published 2026 and 2033 endpoints of $504.8 billion and $1,015.8 billion. The intermediate years are interpolation, not separately sourced observations, and should be read as the shape the two endpoints imply.\n\nThis series was chosen for a specific, checkable reason: it is the only global estimate in this set whose published regional share survives division against a federal measurement. Every global house publishes a North America percentage, and North America contains the United States, whose home health spending the CMS National Health Expenditure Accounts measured at $169.4 billion in 2024. Coherent's 40.7% of its own $473.10 billion gives $192.55 billion for North America in 2026 -- 3.80% below the United States alone advanced at Coherent's own 8.7%. Fortune publishes North America 2025 as $172.64 billion, which is 8.42% below the United States alone advanced at Fortune's own 11.28%. Grand View's 42.3% of its own 2025 figure gives $205.28 billion, 9.67% above the United States alone at its own 10.5%, leaving $18.09 billion for the rest of the continent. It is the one share that can carry its own headline.\n\nThe growth rate is the part of this literature on which the houses genuinely disagree: 7.8% to 12.32%, a 1.579x spread, and Persistence's own endpoints imply 7.347% rather than the 7.8% it states. A reader working to the Medicare benefit should not use any of them. MedPAC measured a 21.2% fee-for-service margin for freestanding agencies in 2024, projects 19% for 2026, and voted 17-0 to recommend Congress cut the CY2026 base rate by 7 percent for CY2027. The CY2026 rule itself already cut aggregate payments by approximately $220 million, or 1.3 percent. Falling volume, a 7% recommended cut and 10.5% compound revenue growth are not the same market.",
+  "market_overview": {
+    "summary": "On the broadest and most recently published global definition, the home health care market is $504.8 billion in 2026, projected to $1,015.8 billion by 2033 at a 10.51% CAGR. That boundary includes home medical equipment, infusion and respiratory therapy, telehealth and unskilled personal care alongside skilled agency care. Narrower readings are far smaller: all-payer United States home health spending was measured at $169.4 billion in 2024, and the fee-for-service Medicare home health benefit itself at $16.0 billion across 8.3 million 30-day periods and 12,234 certified agencies. The global headline is 31.55x the Medicare benefit and 2.98x the measured US all-payer total. The gap is scope, and it can be demonstrated by arithmetic rather than asserted.",
+    "key_trends": [
+      "Verified global base-year estimates spread only 1.344x ($432.01B to $580.80B for 2026) while published CAGRs spread 1.579x (7.8% to 12.32%) -- the houses agree on scope and disagree on growth",
+      "The global headline divided by the certification register implies $17,454,000 per agency per year, against a measured $3,268,300 per Enhabit home health location and $3,219,500 per location in the DOJ-mandated Amedisys divestiture",
+      "In-person home health visits fell 34.4% from 99.7 million in 2019 to 65.4 million in 2024, while Medicare's payment per visit rose from $180 to $245",
+      "The 2019-2024 increase in certified agencies, from 11,356 to 12,234, is entirely California: 1,533 to 2,914, while the rest of the nation fell from 9,823 to 9,320",
+      "MedPAC measured a 21.2% fee-for-service Medicare margin for freestanding agencies in 2024 and voted 17-0 to recommend a 7 percent cut to the CY2026 base rate for CY2027",
+      "Only 2.2% of 30-day periods in 2024 included a telehealth visit or remote monitoring, on about 375,000 telehealth visits -- under 1% of all visits"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Universal in the United States; 97% of fee-for-service beneficiaries live in a ZIP code served by two or more agencies"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "A statutory, permanent Medicare benefit with no copayment or deductible and no prior-hospitalisation requirement, which removes the main access frictions that limit post-acute alternatives",
+      "Payment per unit rising even as volume falls: Medicare's payment per in-person visit went from $180 in 2019 to $245 in 2024, and payment per full 30-day period from $1,945 in 2021 to $2,057 in 2024",
+      "A fee-for-service Medicare margin of 21.2% for freestanding agencies in 2024, against an all-payer margin of 5.0%, which keeps the Medicare book attractive to capital",
+      "Payer vertical integration: Optum acquired LHC Group in 2023 and Amedisys in 2025 for about $3.3 billion, following Humana's 2021 purchase of Kindred at Home",
+      "A boundary that absorbs adjacent, faster-growing categories -- home medical equipment, infusion, respiratory therapy and unskilled personal care -- which is where most of the published global growth rate comes from"
+    ],
+    "restraints": [
+      "Volume is falling, not growing: 30-day periods went from 9.3 million in 2021 to 8.3 million in 2024, and fee-for-service users from 3.3 million in 2019 to 2.7 million",
+      "The CY2026 rule cut aggregate payments by approximately $220 million, or 1.3 percent, through a -1.023% permanent and a -3.0% temporary adjustment",
+      "MedPAC has recommended Congress reduce the CY2026 base rate by 7 percent for CY2027, voting 17-0, with an estimated $10 billion to $25 billion of savings over five years",
+      "Visits per full 30-day period fell 18.0% between 2019 and 2024, from 10.2 to 8.4, so the clinical content of a period is thinning as its price rises",
+      "Migration of beneficiaries from fee-for-service to Medicare Advantage removes volume from the payment system on which the public register is built"
+    ],
+    "opportunities": [
+      "Medicare Advantage and managed care now make up a third of a focused operator's book -- Enhabit reports 23.9% Medicare Advantage and 9.1% managed care against 65.8% Medicare -- and that mix is where growth is not rate-constrained",
+      "Consolidation of a register MedPAC and both public operators describe as highly fragmented: Enhabit's $813.8 million of home health revenue is 0.48% of the measured US all-payer total",
+      "Divestiture-driven portfolio reshuffling creates buyable assets at known prices: Pennant paid $146.5 million for 54 agencies from the UnitedHealth/Amedisys decree",
+      "Digital delivery is almost entirely unexploited inside the benefit -- 2.2% of periods and about 12% of agencies in 2024 -- so the headroom is the whole category rather than an increment",
+      "The unskilled and personal-care mass that the published global boundary already counts is where the volume is: Aveanna's private duty services segment is 8.05x its home health and hospice segment"
+    ],
+    "challenges": [
+      "No vendor market share is published for this sector, and the arithmetic forbids inventing it, so competitive claims cannot be independently checked",
+      "Two of five global houses publish a North America share that cannot carry their own global headline once it is tested against the federal measurement of US spending",
+      "Scope inconsistency makes published market sizing an unreliable basis for planning: the same country in essentially the same year is estimated at $56.93 billion and $222.61 billion by two houses, a 3.91x spread straddling a federal measurement of $169.4 billion",
+      "Program-integrity exposure concentrated in one county: Los Angeles accounted for about $1.4 billion, roughly 9% of fee-for-service home health expenditure, on about 2% of beneficiaries, and MedPAC says further investigation may be warranted",
+      "Nonprofit and small agencies earn materially less: a 12.2% margin for nonprofits against 23.1% for for-profits, and 14.4% in the smallest volume quintile against 23.2% in the largest"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Skilled nursing services",
+      "Rehabilitation therapy services (physical, occupational, speech-language)",
+      "Infusion therapy",
+      "Respiratory therapy",
+      "Unskilled and personal care services",
+      "Home medical equipment and monitoring devices"
+    ],
+    "by_application": [
+      "Post-acute care after an inpatient stay",
+      "Community-admitted chronic condition management",
+      "Rehabilitation and functional recovery",
+      "Wound and medication management",
+      "Telehealth and remote patient monitoring"
+    ],
+    "by_end_user": [
+      "Medicare fee-for-service beneficiaries",
+      "Medicare Advantage and managed care enrollees",
+      "Medicaid long-term services and supports recipients",
+      "Private insurance and self-pay households"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 504.8 },
+    { "year": 2027, "value": 557.83 },
+    { "year": 2028, "value": 616.44 },
+    { "year": 2029, "value": 681.2 },
+    { "year": 2030, "value": 752.76 },
+    { "year": 2031, "value": 831.84 },
+    { "year": 2032, "value": 919.23 },
+    { "year": 2033, "value": 1015.8 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2033 (modelled at constant CAGR between published endpoints)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "UnitedHealth Group (Optum Health)",
+      "headquarters": "United States",
+      "market_position": "Largest consolidator; share not disclosed",
+      "description": "Acquired LHC Group in 2023 and completed the purchase of Amedisys on 14 August 2025 at $101 per share, valuing it at about $3.3 billion. The Department of Justice had sued to block the merger in November 2024; the settlement agreed on 7 August 2025 and finalised by the district court in December 2025 required divestiture of at least 164 home health and hospice locations representing approximately $528 million in annual revenue across 19 states, with eight more if approval of that package were not obtained. No share percentage is publicly disclosed, and the $528 million of divested revenue is the only publicly priced slice of the portfolio."
+    },
+    {
+      "company": "Enhabit, Inc.",
+      "headquarters": "United States",
+      "market_position": "Largest publicly traded standalone operator; share not disclosed",
+      "description": "Reported 249 home health locations in 33 states and 117 hospice locations in 25 states at 31 December 2025, on net service revenue of about $1,060.0 million -- home health $813.8 million (76.8%) and hospice $246.2 million (23.2%). Payor mix is Medicare 65.8%, Medicare Advantage 23.9%, managed care 9.1%, Medicaid 0.8%, with Medicare and Medicare Advantage together 89.7%. Its own 10-K calls the home health and hospice industries large, growing and highly fragmented, and cites about 12,200 home health agencies nationwide in 2025 -- corroborating the federal register count from an independent direction. Its $813.8 million of home health revenue is 0.48% of the measured US all-payer total."
+    },
+    {
+      "company": "Aveanna Healthcare Holdings, Inc.",
+      "headquarters": "United States",
+      "market_position": "Largest home-based care pure play by revenue; share not disclosed",
+      "description": "Reported consolidated revenue of $2,433.199 million for the 53 weeks ended 3 January 2026, of which private duty services $2,001.147 million, home health and hospice $248.557 million and medical solutions $183.495 million. Its private duty segment is 8.05x its home health and hospice segment, and the home health and hospice benefit is only 10.2% of the company. That split is itself a scope statement: the largest home-based care operator is overwhelmingly a Medicaid-funded private duty nursing business, not a Medicare home health agency. Reimbursement sources span 38 states; about 300 offices and medical sites are leased. The filing describes the market as highly competitive and fragmented and cites MedPAC for over 12,000 Medicare-certified agencies in 2025."
+    },
+    {
+      "company": "The Pennant Group, Inc.",
+      "headquarters": "United States",
+      "market_position": "Acquirer of divested assets; share not disclosed",
+      "description": "Completed a $146.5 million purchase of 54 home health, hospice and personal care agencies across three states from UnitedHealth Group under the Amedisys consent decree, alongside further acquisitions in California. MedPAC cites the transaction as evidence that access to capital remains adequate for operators seeking to expand even as the overall volume of investor purchases of agencies has fallen since 2022."
+    },
+    {
+      "company": "Addus HomeCare Corporation",
+      "headquarters": "United States",
+      "market_position": "Regional consolidator; share not disclosed",
+      "description": "Completed a $21.3 million acquisition of home health and hospice agencies in Pennsylvania in 2025, cited by MedPAC among the transactions indicating adequate access to capital. The modest size of the deal relative to the sector total is a direct illustration of fragmentation: no publicly disclosed transaction in 2025 moved assets worth as much as 1% of the measured US all-payer total."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "CY 2026 Home Health Prospective Payment System rate update, CMS-1828-F, 90 FR 55342, published 2 December 2025 -- a calendar-year rule, unlike the fiscal-year rules governing skilled nursing, inpatient rehabilitation, long-term care hospitals and hospice. Sets the national standardized 30-day period payment at $2,038.22 for agencies submitting quality data and $1,998.41 for those that do not.",
+    "Patient-Driven Groupings Model case-mix system and the 30-day unit of payment, required by the Bipartisan Budget Act of 2018, which also requires CMS to make permanent and temporary adjustments when actual behaviour diverges from the behaviour assumed when the base rate was set. CY2026 applies a -1.023% permanent and a -3.0% temporary adjustment, neither of which touches LUPA per-visit rates.",
+    "Low-utilisation payment adjustment: a 30-day period below its payment group's visit threshold is paid per visit instead of per period, at $80.12 for a home health aide visit, $283.64 for medical social services, $194.74 for occupational therapy, $193.42 for physical therapy, $176.96 for skilled nursing and $210.25 for speech-language pathology in CY2026. Thresholds sit at the 10th percentile of visits for each payment group and were recalculated on CY2024 claims.",
+    "Homebound status and intermittent skilled need, certified by a physician, nurse practitioner, clinical nurse specialist or physician assistant, with a face-to-face encounter in the 90 days before or 30 days after the start of care. The CY2026 rule finalises changes to that encounter policy at 42 CFR 424.22(a)(1)(v). No prior inpatient stay is required.",
+    "Expanded Home Health Value-Based Purchasing Model, for which the CY2026 rule adds a ninth measure-removal factor, removes three HHCAHPS-based measures and revises measure weights, alongside a revised HHCAHPS survey from the April 2026 sample month.",
+    "Home Health Quality Reporting Program, from which the CY2026 rule removes the COVID-19 vaccination measure and four assessment items, and under which a two percentage point payment penalty applies to non-submitters.",
+    "Outlier payment policy under section 1895(b)(5)(A) of the Act, with the fixed dollar loss ratio set so aggregate outlier payments are projected not to exceed 2.5 percent of total aggregate payments.",
+    "MedPAC's statutory payment-adequacy recommendation: reduce the CY2026 base payment rate by 7 percent for CY2027, adopted 17-0, estimated to reduce spending by $750 million to $2 billion over one year and $10 billion to $25 billion over five."
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of public registers, Federal Register rulemaking, SEC filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 8 (home health care services) and Chapter 14 (mandated report on the impact of recent changes to the home health PPS) -- agency counts from the CMS Provider of Services file, 30-day period and visit counts from home health standard analytic files, margins from Medicare home health cost report files",
+      "CMS, CY 2026 Home Health Prospective Payment System rate update, final rule CMS-1828-F, 90 FR 55342, published 2 December 2025 -- Tables 14 through 17 for the 30-day period and per-visit payment amounts, and the regulatory impact analysis for the aggregate payment change",
+      "CMS Office of the Actuary / Health Affairs, National Health Care Spending Increased 7.2 Percent In 2024, January 2026 (National Health Expenditure Accounts), Exhibit 2 -- home health care spending of $153.6 billion in 2023 and $169.4 billion in 2024",
+      "Enhabit, Inc. Form 10-K for the year ended 31 December 2025, and Aveanna Healthcare Holdings, Inc. Form 10-K for the 53 weeks ended 3 January 2026 -- location counts, segment revenue and payor mix",
+      "United States Department of Justice settlement in United States v. UnitedHealth Group Inc. and Amedisys, Inc., agreed 7 August 2025 and finalised December 2025 -- 164 divested locations representing approximately $528 million in annual revenue across 19 states",
+      "Published market estimates from Grand View Research (June 2026), Coherent Market Insights (1 April 2026), Fortune Business Insights (September 2026), Precedence Research (September 2026), Persistence Market Research (January 2026), Verified Market Research (May 2025) and Towards Healthcare (July 2026)"
+    ],
+    "data_validation": "Market size is taken from a named published third-party estimate and attributed to it; no methodology behind that estimate was inspected, and it is presented as a published estimate rather than a verified measurement. The headline was chosen by a test rather than by preference: each global house's published North America share was applied to its own headline and compared with the CMS National Health Expenditure Accounts' measured US home health spending of $169.4 billion for 2024, advanced at that same house's own growth rate. Two of five houses produce a North America total below the United States alone and were set aside; the published series is the one whose share survives. The per-agency and per-location figures in this report are a plausibility test, computed by dividing published totals by published denominators -- the implied $17,454,000 per agency per year against a measured $3,268,300 per Enhabit home health location and $3,219,500 per divested location, which agree with each other to within 1.5%. That test establishes what the published global figure cannot mean; it does not establish what the correct market size is and is not offered as an estimate. The Medicare register was separately checked for internal consistency: $16.0 billion over 8.3 million 30-day periods is $1,927.71 per period, or 0.9458 of the CY2026 statutory base rate of $2,038.22, which is what an episode mix containing low-utilisation periods should produce; and the CY2026 rule's own -$220 million at -1.3 percent implies a $16,923,000,000 payment base, within 5.77% of MedPAC's measured $16.0 billion from a wholly different instrument. The 2027 to 2032 points in the forecast series are geometric interpolation between two published endpoints, not separately sourced observations. All payment figures are calendar-year figures: Medicare home health is paid on the calendar year, and no fiscal-year home health rule exists.",
+    "secondary_research_note": "Figures from Data Bridge Market Research could not be verified on the publisher's own page and are excluded from every spread reported here."
+  },
+  "faqs": [
+    {
+      "question": "How big is the home health care market?",
+      "answer": "It depends entirely on scope, and the three answers differ by more than an order of magnitude. On the broadest published global definition, $504.8 billion in 2026 rising to $1,015.8 billion by 2033 at 10.51%. All-payer United States home health spending was measured at $169.4 billion in 2024 by the CMS National Health Expenditure Accounts. The fee-for-service Medicare home health benefit itself was $16.0 billion in 2024. The global headline is 31.55x the last of those."
+    },
+    {
+      "question": "Why do published estimates differ, and by how much?",
+      "answer": "Less than you would expect on size and more than you would expect on growth. Verified global 2026 base-year figures run $432.01 billion to $580.80 billion, a spread of 1.344x, while published CAGRs run 7.8% to 12.32%, a spread of 1.579x. Within the United States the disagreement is far worse: two houses put the same country in essentially the same year at $56.93 billion and $222.61 billion, a 3.91x spread straddling a federal measurement of $169.4 billion."
+    },
+    {
+      "question": "How can you tell the global figures are not measuring Medicare home health agencies?",
+      "answer": "By dividing. Apply Grand View's own 42.3% North America share to its own 2026 headline and you get $213.53 billion; divide that by the 12,234 Medicare-certified agencies in the CMS Provider of Services file and you get $17,454,000 per agency per year. Enhabit's 10-K reports $813.8 million of home health revenue across 249 locations, or $3,268,300 each, and the DOJ consent decree in the UnitedHealth/Amedisys merger divested 164 locations carrying approximately $528 million in annual revenue, or $3,219,500 each. Those two measurements agree within 1.5% and are 5.34x below the implied figure, so the global boundary must include equipment, infusion, respiratory therapy, telehealth and unskilled personal care."
+    },
+    {
+      "question": "Is this the same as the hospital-at-home market?",
+      "answer": "No, and the payment systems make the line sharp. Home health is the permanent Medicare benefit under the Home Health Prospective Payment System: intermittent skilled care for a homebound patient, paid per 30-day period, by 12,234 certified agencies, with no prior hospital stay required. Hospital at home is inpatient-level acute care delivered under the Acute Hospital Care at Home waiver, billed as an inpatient stay under the IPPS by 373 approved hospitals, and extended through 30 September 2030 by the Consolidated Appropriations Act, 2026. The $16.0 billion figure quoted here excludes it entirely. NeoGraph covers that market in a separate report."
+    },
+    {
+      "question": "Is Medicare home health volume growing?",
+      "answer": "No. In-person visits fell 34.4%, from 99.7 million in 2019 to 65.4 million in 2024. Thirty-day periods fell from 9.3 million in 2021 to 8.3 million in 2024, and fee-for-service users from 3.3 million in 2019 to 2.7 million. Visits per full period fell 18.0%, from 10.2 to 8.4. Spending has been roughly flat at $16.0 billion because payment per visit rose from $180 to $245 over the same five years. The agency count did rise, from 11,356 to 12,234, but the entire increase is California -- 1,533 to 2,914 -- while the rest of the nation and territories fell from 9,823 to 9,320."
+    },
+    {
+      "question": "Is this a CY rule or an FY rule, and why does it matter?",
+      "answer": "A calendar-year rule. Medicare home health is updated on the calendar year, unlike skilled nursing, inpatient rehabilitation, long-term care hospitals and hospice, which are all fiscal-year systems. The operative instrument is the CY 2026 HH PPS rate update, CMS-1828-F, at 90 FR 55342, published 2 December 2025. There is no FY2026 home health rule, so any figure labelled that way is either mislabelled or from another sector."
+    },
+    {
+      "question": "Who leads the home health care market?",
+      "answer": "No share percentage is publicly disclosed for any operator, and the arithmetic forbids inventing one. Optum is the largest consolidator, having bought LHC Group in 2023 and Amedisys in 2025 for about $3.3 billion. Enhabit is the largest publicly traded standalone operator at about $1,060.0 million of revenue -- its $813.8 million of home health revenue is 0.48% of the measured US all-payer total. MedPAC and both public operators' own filings describe the sector as highly fragmented. Treat any share percentage you are shown as unsourced."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because no published source gives one that survives scrutiny. Five global houses advertise a regional segmentation and none publishes a split in dollars; four publish a single North America percentage, and two of those cannot carry their own house's headline once tested against the federal measurement of US spending. Publishing a regional table would mean inventing it, so the sections are omitted rather than filled."
+    }
+  ],
+  "key_highlights": [
+    "Headline: $504.8 billion in 2026 to $1,015.8 billion by 2033 at 10.51%, on a global boundary that includes equipment, infusion, telehealth and unskilled care",
+    "Verified global base-year estimates spread only 1.344x while published CAGRs spread 1.579x -- the houses agree on scope and disagree on growth",
+    "The global headline is 31.55x fee-for-service Medicare's $16.0 billion home health benefit and 2.98x the measured US all-payer total of $169.4 billion",
+    "The headline divided by the certification register implies $17,454,000 per agency per year, against a measured $3,268,300 and $3,219,500 per location from two independent disclosures that agree within 1.5%",
+    "Two of five global houses publish a North America share that falls below the United States alone once advanced from the federal measurement at their own growth rate",
+    "In-person visits fell 34.4% from 2019 to 2024 while Medicare's payment per visit rose from $180 to $245; spending stayed flat at $16.0 billion",
+    "MedPAC measured a 21.2% fee-for-service margin for freestanding agencies in 2024 and voted 17-0 for a 7 percent cut to the CY2026 base rate"
+  ],
+  "reader_takeaways": [
+    "Before quoting any home health figure, establish which of three tiers it belongs to -- the $16.0 billion Medicare benefit, the $169.4 billion measured US all-payer total, or a $432.01 billion to $580.80 billion global boundary that includes equipment and unskilled care -- because the choice moves the number by more than 31x",
+    "Test a global house's regional share before trusting its headline: apply its own North America percentage to its own total and check that the remainder after the federally measured United States is positive. Two of five fail that test",
+    "Do not plan on volume growth in the Medicare benefit. Visits are down 34.4% since 2019, periods and users are falling, and the only growth in the agency register is one county in California that MedPAC has flagged for program-integrity review",
+    "Expect rate pressure, not rate relief: the CY2026 rule already cut aggregate payments by about $220 million, and MedPAC has recommended a further 7 percent cut for CY2027 on a 17-0 vote",
+    "Treat any vendor market share you are shown as unsourced. The largest publicly traded standalone operator holds 0.48% of the measured US all-payer total, and no house publishes a share table for this sector"
+  ],
+  "seo": {
+    "meta_title": "Home Health Care Market Size and Forecast to 2033",
+    "meta_description": "Global home health care estimates cluster inside 1.344x but sit 31.55x above Medicare's $16.0bn benefit. A per-agency test against the CMS register shows why.",
+    "keywords": [
+      "home health care market",
+      "home health care market size",
+      "home health agency market",
+      "HH PPS CY2026",
+      "PDGM 30-day period payment",
+      "Medicare home health spending",
+      "home healthcare forecast 2033"
+    ]
+  }
+}
