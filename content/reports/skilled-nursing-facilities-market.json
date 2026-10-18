@@ -16,7 +16,7 @@
   },
   "executive_summary": "Skilled nursing is one of the few healthcare markets where almost every input is a published federal fact. The per-diem price is set by regulation, the facility count is a certification register, and the spending total, occupancy, margin and length of stay are published by MedPAC every March from claims and cost reports. That makes the published market estimates unusually easy to audit -- and the audit does not go well.\n\nIn 2024 the Medicare fee-for-service programme and its beneficiaries spent $31 billion under the skilled nursing facility prospective payment system, across about 1.5 million covered stays at 14,400 freestanding facilities. The smallest global published base-year estimate for the same year is $380.09 billion. That is 12.3x the register. Against the most recent global figure, $453.31 billion for 2026, the multiple is 14.6x. Within a single base year, the one house that publishes a United States-only figure and the houses that publish a global one differ by 2.03x.\n\nSo the headline gap is a scope disagreement, and the tiers can be named rather than guessed at. Tier 1 is the Medicare Part A skilled nursing benefit: about $31 billion, post-acute, time-limited, paid per diem under PDPM after a qualifying hospital stay. Tier 2 is all-payer United States nursing facility revenue, roughly $181 to $187 billion on one published estimate and $219.9 billion for the adjacent CMS national-accounts category. Tier 3, where every global headline sits, is institutional nursing and long-term care worldwide. No published estimate describes Tier 1 at all.\n\nWhat is genuinely contested is growth, not scope. Published compound rates run from 3.44% to 9.3% -- a 2.70x spread, and still 1.45x among global-scope houses alone. Meanwhile the register the growth is supposed to describe shows a facility count falling about 1.0% a year since 2019, median occupancy of 83%, covered admissions per 1,000 beneficiaries down from 55 in 2019 to 45 in 2024, and MedPAC recommending Congress cut 2026 base rates by 4%.",
   "market_context": "A skilled nursing facility is two businesses in one building. Medicare pays a high per-diem rate for short post-acute stays after a qualifying hospital admission; Medicaid pays a much lower rate for long-term care, and that is the bulk of the work. MedPAC's 2024 figures make the split measurable: fee-for-service Medicare accounted for 13% of freestanding facility revenue, down from 14% in 2023, and just 8% of patient days at the median facility, against 64% of days paid by Medicaid. Ninety-six percent of facilities are dually certified for both.\n\nThat structure is why the sector's financials look contradictory. The fee-for-service Medicare margin for freestanding facilities was 24.4% in 2024, the twenty-fifth consecutive year at or above 10%. The all-payer total margin was 2.1%, and 40% of facilities still lost money across all payers. Medicare is a preferred payer attached to a small share of the volume; everything else is roughly break-even.\n\nIt is also why the market boundary moves so much. Push the boundary out to assisted and independent living and the bed count rises far faster than the revenue: skilled nursing revenue per occupied bed runs about 2.92x senior living revenue per resident on disclosed 2025 figures. Every global estimate of this market is a decision about where in that gradient to stop counting.",
-  "forecast_analysis": "The series shown here is Coherent Market Insights' April 2026 estimate: $453.31 billion in 2026 to $844.77 billion by 2033 at 9.3%. It was chosen because it is the most recently published, carries the most recent base year, states its unit unambiguously in billions, and its endpoints reconcile to its own stated rate to within 0.001 points. The intermediate years are geometric interpolation between two published endpoints, not separately sourced annual observations.\n\nIt is also the fastest-growing series in the set, and readers should know why that is hard to reconcile with the register. Medicare-participating facilities fell from 14,798 in 2023 to 14,518 by July 2025, about -1.0% a year since 2019. Median occupancy was 83% in 2024. Covered admissions per 1,000 fee-for-service beneficiaries fell from 55 in 2019 to 45 in 2024. MedPAC has recommended cutting 2026 base rates by 4%.\n\nWhat can support high single-digit growth is price and intensity rather than volume: a net 3.2% FY2026 rate update, covered days per admission up from 26.1 in 2019 to 30.7 in 2024, Medicaid rate increases in 45 states, and published evidence MedPAC itself cites that providers are adapting billing to PDPM incentives. Readers working to a United States all-payer definition should anchor instead on $181 to $187 billion and 3.44%; readers working to the Medicare Part A benefit should anchor on the $31 billion register.",
+  "forecast_analysis": "The series shown here is Coherent Market Insights' April 2026 estimate: $453.31 billion in 2026 to $844.77 billion by 2033 at 9.3%. It was chosen because it is the most recently published, carries the most recent base year, states its unit unambiguously in billions, and its endpoints reconcile to its own stated rate to within 0.001 points. The intermediate years are geometric interpolation between two published endpoints, not separately sourced annual observations.\n\nIt is also the fastest-growing series in the set, and readers should know why that is hard to reconcile with the register. Medicare-participating facilities fell from 14,798 in 2023 to 14,518 by July 2025, about -1.0% a year since 2019. Median occupancy was 83% in 2024. Covered admissions per 1,000 fee-for-service beneficiaries fell from 55 in 2019 to 45 in 2024. MedPAC has recommended cutting 2026 base rates by 4%.\n\nWhat can support high single-digit growth is price and intensity rather than volume: a net 3.2% FY2026 rate update, covered days per admission up from 26.1 in 2019 to 30.7 in 2024, Medicaid rate increases in 45 states, and published evidence MedPAC itself cites that providers are adapting billing to PDPM incentives. Readers working to a United States all-payer definition should anchor instead on $181 to $187 billion and 3.44%; readers working to the Medicare Part A benefit should anchor on the $31 billion register.\n\nOne caveat belongs with the headline rather than in a footnote. Coherent publishes a single regional figure -- North America at 45.3% of the market in 2026 -- and it cannot be reconciled with the federal accounts. That share of its own headline gives $205.35 billion for North America in 2026, while the CMS National Health Expenditure Accounts measured $219.9 billion for the United States alone in 2024, two years earlier, in the adjacent category that likewise includes continuing care retirement communities. North America contains the United States, so the implied region is 6.62% below a measured national actual. Advancing that actual at Coherent's own 9.3% gives $262.70 billion for the United States in 2026, which forces North America to at least 57.95% of the published total -- or, holding the 45.3% share, forces the global figure to $579.92 billion, 1.28x what is published. Either the share or the headline is wrong, and nothing public says which. Treat the 45.3% as unusable; the figure a United States reader should anchor on is the national accounts total, not a share of a global model.",
   "seo": {
     "meta_title": "Skilled Nursing Facilities Market Size & Forecast to 2033",
     "meta_description": "Global skilled nursing estimates sit 12.3x above Medicare's $31bn SNF register. A PDPM per-diem division names the tiers and shows which one you buy.",
@@ -108,14 +108,38 @@
   "regional_analysis": [],
   "country_analysis": [],
   "market_forecast": [
-    { "year": 2026, "value": 453.31 },
-    { "year": 2027, "value": 495.47 },
-    { "year": 2028, "value": 541.55 },
-    { "year": 2029, "value": 591.91 },
-    { "year": 2030, "value": 646.96 },
-    { "year": 2031, "value": 707.13 },
-    { "year": 2032, "value": 772.89 },
-    { "year": 2033, "value": 844.77 }
+    {
+      "year": 2026,
+      "value": 453.31
+    },
+    {
+      "year": 2027,
+      "value": 495.47
+    },
+    {
+      "year": 2028,
+      "value": 541.55
+    },
+    {
+      "year": 2029,
+      "value": 591.91
+    },
+    {
+      "year": 2030,
+      "value": 646.96
+    },
+    {
+      "year": 2031,
+      "value": 707.13
+    },
+    {
+      "year": 2032,
+      "value": 772.89
+    },
+    {
+      "year": 2033,
+      "value": 844.77
+    }
   ],
   "charts": [
     {
@@ -182,8 +206,7 @@
       "answer": "It depends entirely on which of three tiers you mean. On the broad global definition used by the most recently published estimate, $453.31 billion in 2026 rising to $844.77 billion by 2033 at 9.3%. All-payer United States nursing facility revenue is $181 to $220 billion depending on the series. The Medicare fee-for-service skilled nursing benefit -- what the term means in payment policy -- was $31 billion in 2024. The global headline is 14.6 times the Medicare register."
     },
     {
-      "question": "Why do published estimates differ so much?"
-      ,
+      "question": "Why do published estimates differ so much?",
       "answer": "For two separate reasons that are usually conflated. Across tiers it is scope: the smallest global base-year figure for 2024, $380.09 billion, is 12.3x MedPAC's $31 billion Medicare register for the same year, and the one United States-only house differs from the global houses by 2.03x in a single base year. Among the global houses themselves the base-year values now agree to within 1.065x, but the growth rates spread 1.45x. That part is a genuine disagreement about growth."
     },
     {
@@ -204,7 +227,7 @@
     },
     {
       "question": "Why does this report show no regional or country breakdown?",
-      "answer": "Because no named public source gives those splits for this market. Every global house advertises a regional segmentation behind its paywall and none publishes the numbers. The only regional statement this research can defend is an inference -- that the United States is roughly half the global total, since about $220 billion of a $453.31 billion 2026 figure leaves around $233 billion for the rest of the world -- and an inference drawn across two differently scoped series does not belong in a regional table."
+      "answer": "Because no named public source gives those splits for this market. Every global house advertises a regional segmentation behind its paywall and none publishes the numbers. The only regional statement this research can defend is an inference -- that the United States is roughly half the global total, since about $220 billion of a $453.31 billion 2026 figure leaves around $233 billion for the rest of the world -- and an inference drawn across two differently scoped series does not belong in a regional table. There is a sharper reason too. The source of this report's headline does publish one regional share -- North America at 45.3% for 2026 -- and that share fails a federal cross-check: 45.3% of $453.31 billion is $205.35 billion, which is 6.62% below the $219.9 billion the CMS national accounts measured for the United States alone in 2024. A region cannot be smaller than one country inside it, two years after the measurement, in a series that rose 7.3% that year. So the one regional number on offer is demonstrably wrong by at least 6.62%, and publishing a regional table built on it would propagate that error into every row."
     },
     {
       "question": "Where does skilled nursing end and senior living begin?",

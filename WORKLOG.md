@@ -3352,3 +3352,74 @@ report URLs. Both match what the merge was expected to carry.
 - **Resubmit the sitemap in Search Console** — it is the sitemap itself that
   changed, 204 URLs to 221. Owner action.
 - The 21:00 IST slot on the 18th is unused and round 5 is still unpublished.
+
+## 2026-10-18, 07:20 IST — `/research`, session 9a: both pairing-debt rows closed, row 47 resolved
+
+**`revenue-cycle-management-market` needed no research.** `--pair` reported it
+as having no evidence file and the pipeline recorded that as reconstruction
+work. The file was on disk under the *draft* slug,
+`research/revenue-cycle-management-automation-market-notes.md` — the report was
+deliberately renamed at publish time (row 19) because the research's own finding
+is that no defensible standalone size for RCM *automation* exists, so it
+published as whole-market RCM. `pair()` matches evidence by exact filename, so a
+deliberate rename reads to it as missing work. Measured before touching
+anything: the headline `73.61` / `148.44` / `12.4` appear in that file 4, 2 and
+5 times. `git mv` to the published slug, content unchanged, pointer stub left at
+the old path per the no-deletion rule. `--pair` on the slug: paired, 40/40.
+
+**Corpus-wide: `--pair --all` is 50 paired-checked, 0 not paired.** With 72's
+veterinary-diagnostics transcription fix at 02:05, the pairing-debt table is
+closed. The durable lesson is about the checker, not the corpus: `--pair` cannot
+distinguish a rename from missing work, so a renamed slug has to move its notes
+in the same commit.
+
+**Row 47, `skilled-nursing-facilities-market` — one defect was a mis-record, one
+was real.**
+
+Defect (a), "scope corrected to U.S. in the title", was false in both
+directions: `title` and `seo.meta_title` are geo-neutral, which is *correct*
+beside a global headline. Nothing to fix; the note is withdrawn.
+
+Defect (b) is real, and is now stated on the page rather than re-sourced.
+Coherent's page publishes exactly one regional figure — North America "expected
+to hold 45.3% of the market share in 2026", re-verified at the publisher rather
+than taken from the peer's report:
+
+```
+0.453 x $453.31B = $205.35B          implied North America, 2026
+($219.9B - $205.35B) / $219.9B       = 6.62% below CMS NHEA's MEASURED US-alone 2024
+$219.9B x 1.093^2 = $262.70B         US alone 2026, at Coherent's own 9.3%
+$262.70B / $453.31B = 57.95%         the NA share the headline forces
+$262.70B / 0.453 = $579.92B          = 1.279x the published headline, if 45.3% holds
+```
+
+A region cannot be 6.62% smaller than one country inside it, two years after the
+measurement, in a series that rose 7.3% that year. Either the share is wrong and
+North America is at least 58.0%, or the global headline is 1.28x too low.
+
+**6.62% is published, not the peer's first 4.3%.** Both arithmetics are right
+against their own denominator; 4.3% measured against $214.65B, a published *2026
+estimate*. A forward-dated regional component falling below a *historical
+measurement* cannot be rescued by any growth assumption, whereas falling below
+another house's estimate can. Measurements bound estimates; estimates do not
+bound each other.
+
+**Not re-sourced, deliberately.** Any Tier 3 global headline near $450B for a
+2026 base forces North America to roughly 58%, because the US component is
+federally measured and is most of it. The defect is a property of the tier, not
+of this publisher, so swapping houses would have hidden the finding instead of
+fixing it. Also recorded: against Nova One Advisor's US-only $187.17B for 2024
+there is **no** contradiction — the implied NA sits 9.71% *above* it. The
+contradiction appears only against the national accounts, which is why a house
+can print a regional share that survives a commercial US estimate and still
+contradicts the federal one.
+
+Carried as notes grounding section (e), in `forecast_analysis`, and in FAQ 6,
+with the arithmetic printed. `check` exit 0; verifier reproduces at 0.0001 pt;
+`--pair` paired 38/39, the single miss being `1888` — the SSA s.1888(e)
+statutory citation, which the figure extractor reads as a number.
+
+Gates after the change: `check content/reports/[a-z]*.json` **50 pass, 0 fail**;
+`--pair --all` **50/0**; `source-hygiene.mjs` 236 files, 0 findings. Nothing
+published — 07:20 IST is outside the window, and row 47 publishes with the rest
+of round 6 in the 21:00 run-up.
