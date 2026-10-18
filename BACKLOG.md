@@ -399,9 +399,18 @@ after the deploy. Seven of eleven audited pages now come back clean.
       member silently repoints every author after them. Documented in
       `lib/api/authors.ts`; deliberately not redesigned, because `MeetTheTeam` is
       dead code, nothing links to author pages and they are in no sitemap.
-- [ ] `/reports` server-renders 12 of 142 report links; the rest sit behind
+- [x] `/reports` server-renders 12 of 142 report links; the rest sit behind
       client-side pagination. Discovery is covered by the sitemap, so this is
       internal-linking depth rather than indexing.
+      **DONE 2026-10-18** — `components/reports/ReportDirectory.tsx`, a Server
+      Component listing all **182** reports as real links grouped by vertical
+      (13 groups, counts summing to 182), rendered *outside* the Suspense
+      boundary because `useSearchParams()` in the client listing would otherwise
+      replace it with the skeleton in the static HTML. `getReportCards()` is now
+      `cache()`d so the listing and the directory are one query. Cost: 199KB ->
+      273KB of HTML, 33.0KB gzipped; hoisting the link classes to one container
+      returned 47KB of that. Audit rule added and negative-tested — the page
+      fails if it renders under 100 report links.
 - [ ] `/design-system` renders 2 `<h1>` and has no canonical. Robots-disallowed,
       so low priority.
 - [ ] `/reports` still ships ~508KB, nearly all of it the RSC payload for 142

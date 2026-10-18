@@ -3616,3 +3616,125 @@ points**, normal running.
 
 **Nothing published.** Rounds 6 and 7 — ten reports — publish together in the
 21:00 IST run-up, reports before any article.
+
+## 2026-10-18 13:15-14:05 IST — `/reports` linked 12 of 182 reports; now it links all of them
+
+Same session `281bde29`. Files: `components/reports/ReportDirectory.tsx` (new),
+`components/reports/index.ts`, `app/reports/page.tsx`, `lib/api/reports.ts`,
+`scripts/audit-html.mjs`, plus the state files. **No Supabase write; nothing
+under `content/` or `research/`.**
+
+### The measurement
+
+`/reports` paginates client-side at 12 cards. Measured against the built
+`reports.html`: **12 unique `/reports/<slug>` links in the delivered HTML**, out
+of 182 rows. Confirmed again from the other direction during the negative test
+below, which reported exactly `12 report link(s)` with the new block stripped.
+
+The backlog called this "internal-linking depth rather than indexing", and that
+is right as far as it goes: `/sitemap.xml` lists all 182. But a report whose only
+inbound link is a sitemap entry has no internal link at all, and a reader with
+JavaScript off saw a catalogue of twelve on a 182-report publication.
+
+### What shipped
+
+`ReportDirectory` — a Server Component listing every report as a real `<a>`,
+grouped by vertical, under the client listing. Built output, parsed out of the
+nav itself: **13 verticals, 182 unique links**, group counts 47 Healthcare IT /
+36 Biotechnology / 29 Pharmaceuticals / 28 Medical Devices / 8 Life Sciences /
+6 Agriculture & Food Tech / 6 Medical Imaging / 4 each Advanced Materials,
+Climate & Energy, Quantum Technology, Space Economy / 3 each Digital
+Infrastructure, Synthetic Biology — **summing to 182**.
+
+**It is rendered outside the Suspense boundary, and that is the point.**
+`ReportsListingClient` calls `useSearchParams()`, which opts everything up to
+the nearest boundary out of the static render — PR #9's finding. A directory
+placed beside it *inside* that boundary would be replaced by the skeleton in the
+delivered HTML and would have added zero crawlable links while looking correct
+in a browser.
+
+That means a second `getReportCards()` call, so the function is now wrapped in
+React `cache()`: the listing and the directory dedupe to **one** corpus-card
+query per render pass, not two. Anchor text is `marketName()`, the same trim the
+related-report and social cards use, because the stored titles end in
+"— Growth Drivers, Restraints and Future Outlook 2032" and 182 anchors of that
+shape are 182 near-identical anchors.
+
+### What it costs, measured rather than assumed
+
+| `reports.html` | bytes |
+|---|---|
+| before the directory | 199,342 |
+| directory, `className` on each of 182 anchors | 321,094 |
+| directory, classes hoisted to one container (`[&_a]:…`) | **273,207** |
+
+So the hoist returned **47KB** and the directory costs **67KB** uncompressed —
+24,278 characters of it the nav block — for 170 additional internal links. The
+page gzips to **33.0KB**. The hoist is the reason the link styling is a
+descendant selector rather than a utility on every anchor.
+
+### A seventh audit rule, negative-tested
+
+`audit-html.mjs` now fails `/reports` if it server-renders fewer than 100 report
+links. A threshold rather than a count, since the corpus grows weekly. The
+regression it guards is **silent** — with JS on, a browser shows the same page
+either way. Negative test: nav block stripped from the built HTML →
+`x /reports server-renders 12 report link(s)`; file restored, `md5sum -c` OK,
+audit back to 18 of 18 and 0 errors.
+
+### Gates
+
+```
+NEXT_DIST_DIR=.next-verify npm run build   exit 0, 417 pages
+tsc --noEmit                               clean
+npm run lint                               12 warnings, 0 errors — unchanged
+audit-html.mjs (7 rules)                   18 of 18, 0 errors, 1 pre-existing warning
+contrast-audit.mjs                         0 failing pairs
+source-hygiene.mjs                         245 files, 0 findings
+```
+
+**Not visually verified.** 14:05 IST is outside the 21:00-09:00 browser window,
+so the directory's rendered layout at phone and desktop widths is modelled from
+the markup, not observed. Filed in `REVIEW-QUEUE.md` as the one thing to look at
+when the window opens.
+
+## 2026-10-18, 07:50 IST — the cross-setting article, written and held
+
+`content/blogs/five-settings-one-benefit-what-medicare-measures.json`. The
+finding round 7 was designed to produce, and the one no single report can carry.
+
+| Setting | Published 2026 | Medicare FFS register | Ratio |
+|---|---|---|---|
+| home health | $504.80B | $16.0B | **31.55x** |
+| skilled nursing | $453.31B | $31B | **14.62x** |
+| long-term care hospitals | $23.62B | $2.4B | 9.84x |
+| inpatient rehabilitation | $23.72B | $11.62B | 2.04x |
+| hospice | $32.60B | $28.3B | **1.15x** |
+
+A **27.4-fold** difference in how far the published market departs from the same
+federal benefit, inside one program, where every denominator is measured and
+every price is statutory.
+
+**The mechanism is sourced, not inferred, which is what makes it publishable.**
+Hospice sits at 1.15x because Medicare is **93.1%** of VITAS's hospice revenue —
+a house sizing "the hospice market" has almost nothing else to count. That makes
+hospice the control case: it proves the houses *can* land on the register, which
+removes the charitable reading of 31.55x. Home health sits at 31.55x because the
+houses print their own scope and it is not the Medicare benefit — Coherent
+covers "unskilled home healthcare" plus blood sugar monitors, mobility aids and
+pregnancy test kits; Persistence includes pregnancy care; Grand View puts
+services at only **83.9%** of its own market, so a sixth of its "home health care
+market" is hardware. The ratio is measuring annexation of the *name*, and the
+ordering of the five tracks it almost exactly.
+
+**`--online` fails, and that is the ordering working.** All nine failing links
+are rounds 6 and 7 reports still held on this branch. That every failing link is
+one of the ten held drafts is itself the confirmation that the article cites only
+this batch and nothing stale. Offline `check` passes, 0 U+FFFD; title and excerpt
+were shortened to 65 and 185 chars to clear the two card warnings.
+
+**Publish order at 21:00 IST, unchanged and now load-bearing:** ten reports
+first (rounds 6 and 7), then this article, then `npm run build`, then the deploy.
+The article 404s its own citations in any other order.
+
+Budget at 07:50: headroom **+23.7 points**. Nothing published.

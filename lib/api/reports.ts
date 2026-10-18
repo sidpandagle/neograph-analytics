@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { ilikeAny, safeYear } from './pgrst';
 import type { Report, ReportFilters } from './reports.types';
@@ -119,7 +120,13 @@ const SITEMAP_COLUMNS = 'slug,published_year';
  * (`keyFindings`, `faqs`, `keyPlayers`, `overview`) come back empty rather than
  * being fetched and discarded.
  */
-export async function getReportCards(): Promise<ApiResponse<Report[]>> {
+/*
+ * Memoised per request/render pass: `/reports` renders both the client listing
+ * and the server-rendered directory beneath it, and they must not be two
+ * corpus-wide card queries. `cache()` dedupes them; the 1h `revalidate` on the
+ * route is what limits how often the query runs at all.
+ */
+export const getReportCards = cache(async function getReportCards(): Promise<ApiResponse<Report[]>> {
   const { data, error } = await supabase
     .from('neograph_reports')
     .select(CARD_COLUMNS)
@@ -129,7 +136,7 @@ export async function getReportCards(): Promise<ApiResponse<Report[]>> {
 
   const reports = (data ?? []).map((row, i) => rowToReport(row as Record<string, unknown>, i));
   return { success: true, data: reports };
-}
+});
 
 /** Slug and year only — everything a sitemap entry needs. */
 export async function getReportSitemapEntries(): Promise<

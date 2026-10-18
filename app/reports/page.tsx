@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { getReportCards } from '@/lib/api/reports';
-import { ReportsListingClient } from '@/components/reports';
+import { ReportDirectory, ReportsListingClient } from '@/components/reports';
 import ReportsSkeleton from '@/components/reports/ReportsSkeleton';
 
 export const revalidate = 3600;
@@ -44,10 +44,33 @@ async function ReportsContent() {
   return <ReportsListingClient reports={cards} />;
 }
 
+/*
+ * Rendered OUTSIDE the Suspense boundary below, and that is the whole point.
+ * `ReportsListingClient` calls `useSearchParams()`, which opts everything up to
+ * the nearest boundary out of the static render — PR #9's finding — so a
+ * directory placed beside it inside that boundary would be replaced by the
+ * skeleton in the delivered HTML and add exactly zero crawlable links.
+ * `getReportCards()` is memoised with `cache()`, so this is not a second query.
+ */
+async function ReportsDirectorySection() {
+  const result = await getReportCards();
+  const reports = result.success ? result.data : [];
+  const entries = reports.map((r) => ({ slug: r.slug, title: r.title, category: r.category }));
+
+  return (
+    <div className="desk pb-20">
+      <ReportDirectory entries={entries} />
+    </div>
+  );
+}
+
 export default function ReportsPage() {
   return (
-    <Suspense fallback={<ReportsSkeleton />}>
-      <ReportsContent />
-    </Suspense>
+    <>
+      <Suspense fallback={<ReportsSkeleton />}>
+        <ReportsContent />
+      </Suspense>
+      <ReportsDirectorySection />
+    </>
   );
 }

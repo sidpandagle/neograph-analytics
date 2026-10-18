@@ -338,6 +338,22 @@ function auditDocument(route, html) {
   });
   if (unlabelled.length) errors.push(`${unlabelled.length} form control(s) with no label`);
 
+  // ── the listing links the whole corpus, not one page of it ────────────────
+  /* `/reports` paginates client-side, so for most of this repo's life the
+     delivered HTML carried 12 of the 182 report links and every other report
+     had exactly one inbound link on the site — the sitemap. The server-rendered
+     directory fixes that, and this rule is what keeps it fixed: the regression
+     is silent, because the page looks identical in a browser with JS on.
+     Threshold rather than an exact count, since the corpus grows weekly. */
+  if (route === '/reports') {
+    const listed = new Set((html.match(/href="\/reports\/[a-z0-9-]+"/g) ?? []));
+    if (listed.size < 100) {
+      errors.push(
+        `/reports server-renders ${listed.size} report link(s) — the directory is missing or did not render, and the corpus is reachable only from the sitemap`
+      );
+    }
+  }
+
   // ── charts carry their source ─────────────────────────────────────────────
   const figures = (html.match(/<figure\b/gi) ?? []).length;
   const figcaptions = (html.match(/<figcaption\b/gi) ?? []).length;
