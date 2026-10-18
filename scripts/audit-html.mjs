@@ -71,12 +71,19 @@ const attr = (tag, name) => {
   return m ? m[1] : null;
 };
 
+/**
+ * Where the built HTML lives. `NEXT_DIST_DIR` mirrors the same variable in
+ * next.config.ts, so a build run into its own directory (to avoid racing
+ * another session's `next dev` over `.next`) can still be audited.
+ */
+const DIST = process.env.NEXT_DIST_DIR || '.next';
+
 async function load(route, file) {
   if (PROD) {
     const res = await fetch(`${BASE}${route}`, { redirect: 'follow' });
     return { status: res.status, html: await res.text() };
   }
-  const p = path.join('.next', 'server', 'app', file);
+  const p = path.join(DIST, 'server', 'app', file);
   if (!fs.existsSync(p)) return { status: 0, html: null };
   return { status: 200, html: fs.readFileSync(p, 'utf8') };
 }
@@ -179,7 +186,7 @@ function auditDocument(route, html) {
       if (!route) {
         warnings.push(`${label}.license is off-site (${lic}) - not checkable here`);
       } else if (!PROD) {
-        const file = path.join('.next', 'server', 'app', `${route.replace(/^\//, '')}.html`);
+        const file = path.join(DIST, 'server', 'app', `${route.replace(/^\//, '')}.html`);
         if (!fs.existsSync(file)) errors.push(`${label}.license points at ${route}, which this build does not render`);
       } else {
         /* auditDocument is synchronous; defer the network check to the run loop. */
@@ -423,6 +430,35 @@ function auditDocument(route, html) {
     }
     if (rows < 3) {
       errors.push(`${label} lists ${rows} region(s) — the corpus carries 3 to 5, so this is a truncated set`);
+    }
+    if (cells !== rows * 3) {
+      errors.push(`${label} has ${rows} row(s) but ${cells} data cell(s), expected ${rows * 3}`);
+    }
+  }
+
+  /* Country breakdown, same class again. The country figures were already in
+     the HTML as a table before the chart existed; this rule exists so the pair
+     stays a pair, and so a future change that renders the bars without the
+     table is caught. Exercised by /reports/ai-in-lab-automation-market, the
+     one audited route of the four that carries country_analysis — measured
+     140 of the 182 built report pages carry it. */
+  const countryTables = [...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)]
+    .map((m) => m[1])
+    .filter((body) => /market share and growth rate by country/i.test(body));
+  const countryCharts = (html.match(/aria-label="Grouped bar chart of market share and growth rate by country/g) ?? []).length;
+
+  if (countryCharts !== countryTables.length) {
+    errors.push(
+      `${countryCharts} country bar chart(s) but ${countryTables.length} country table(s) — the bars are drawn client-side, so the table is the only copy in the HTML`
+    );
+  }
+  for (const [n, body] of countryTables.entries()) {
+    const label = `country table ${n + 1}`;
+    const tbody = (body.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i) ?? [, ''])[1];
+    const rows = (tbody.match(/<tr\b/gi) ?? []).length;
+    const cells = (tbody.match(/<td\b/gi) ?? []).length;
+    if ((body.match(/scope="col"/g) ?? []).length !== 3) {
+      errors.push(`${label} does not mark all 3 column headers with scope="col"`);
     }
     if (cells !== rows * 3) {
       errors.push(`${label} has ${rows} row(s) but ${cells} data cell(s), expected ${rows * 3}`);

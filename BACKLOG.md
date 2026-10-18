@@ -33,9 +33,24 @@ Priority order. `[P0]` = site is broken / losing traffic. `[P1]` = high value.
       `/reports` HTML 508KB -> 184KB with the corpus up from 142 to 152.
 
 ## P1 — visuals
-- [ ] Build a chart set driven by real columns: forecast line (`market_forecast`),
+- [x] Build a chart set driven by real columns: forecast line (`market_forecast`),
       segmentation share, regional bars, country comparison, competitive position.
       Recharts is already a dependency.
+      **DONE 2026-10-18 for four of the five; the fifth is refuted, not deferred.**
+      Forecast line, segmentation share and regional bars shipped earlier in the
+      week. **Country comparison** shipped 2026-10-18 —
+      `components/reports/charts/CountryBarChart.tsx`, on **140 of 182** report
+      pages, 1:1 with the country table beside it, audit rule negative-tested
+      three ways.
+      **Competitive position cannot be built from this data and should not be
+      faked.** Measured with `scripts/column-population.mjs`:
+      `competitive_landscape` has a first element on **182 of 182** rows and the
+      only numeric field on it is `founded` (142 of 182); `market_position` is
+      prose and `company_profiles.revenue` is a string ("42B"). There is no
+      disclosed share to position anyone by, so a scatter or quadrant would be
+      axes invented to look like measurement — which is the thing this
+      publication refuses to do. Reopen only if a share column is added and
+      sourced per company.
 - [x] Per-report OG images (1200x630) generated from market metrics.
       **DONE 2026-10-16** — `app/reports/[slug]/opengraph-image.tsx`, build-time,
       no image host and no egress. All 152 reports previously shared one stock

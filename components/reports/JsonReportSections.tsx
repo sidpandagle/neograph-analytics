@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react'
 import { MarketForecastLineChart } from './charts/MarketForecastLineChart'
 import { ComponentSharePieChart } from './charts/ComponentSharePieChart'
 import { RegionalBarChart } from './charts/RegionalBarChart'
+import { CountryBarChart } from './charts/CountryBarChart'
 import { ChartFigure } from './ChartFigure'
 import type { JsonReport, SegmentItem } from '@/lib/jsonReports'
 import { pct, barWidth, toNum, usableRows } from '@/lib/format'
@@ -293,7 +294,15 @@ function MarketSegmentationSection({
 
 // ── country table ─────────────────────────────────────────────────────────────
 
-function CountryTable({ countries }: { countries: JsonReport['country_analysis'] }) {
+function CountryTable({
+  countries,
+  source,
+  modelling,
+}: {
+  countries: JsonReport['country_analysis']
+  source: string
+  modelling?: string
+}) {
   // Supabase rows can carry placeholders such as {"country": ""} with no metrics.
   const rows = usableRows(countries ?? [], 'country', ['market_share', 'growth_rate'])
   if (!rows.length) return null
@@ -301,6 +310,11 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
   return (
     <div className="mt-6">
       <SubHeading>Country-Level Analysis</SubHeading>
+      {/* The chart is fed `rows`, not `countries`: a placeholder row the table
+          refuses to print must not become a nameless bar either. */}
+      <ChartFigure source={source} modelling={modelling} className="mb-6">
+        <CountryBarChart countries={rows} />
+      </ChartFigure>
       {/* overflow-hidden clipped this table rather than scrolling it: at 390px
           the 357px table sat in a 312px box, so 45px -- the whole Growth
           column -- was unreachable, and the page itself did not scroll
@@ -354,7 +368,17 @@ function CountryTable({ countries }: { countries: JsonReport['country_analysis']
 
 // ── regional analysis ─────────────────────────────────────────────────────────
 
-function RegionalSection({ regions, countries }: { regions: JsonReport['regional_analysis']; countries: JsonReport['country_analysis'] }) {
+function RegionalSection({
+  regions,
+  countries,
+  countrySource,
+  countryModelling,
+}: {
+  regions: JsonReport['regional_analysis']
+  countries: JsonReport['country_analysis']
+  countrySource: string
+  countryModelling?: string
+}) {
   const regionRows = usableRows(regions ?? [], 'region', ['market_share', 'growth_rate'])
   if (!regionRows.length) return null
 
@@ -406,7 +430,7 @@ function RegionalSection({ regions, countries }: { regions: JsonReport['regional
           </div>
         ))}
       </div>
-      <CountryTable countries={countries} />
+      <CountryTable countries={countries} source={countrySource} modelling={countryModelling} />
     </section>
   )
 }
@@ -1023,6 +1047,11 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
   const forecastChart = findChartEntry(report.charts, 'market_forecast', ['forecast', 'market size', 'growth'])
   const segmentationChart = findChartEntry(report.charts, 'market_segmentation', ['segment', 'component', 'share by'])
   const regionalChart = findChartEntry(report.charts, 'regional_analysis', ['region', 'geograph'])
+  // Falls back to the regional entry: a row that labels one geographic chart
+  // labels the country breakdown too, and `chartSourceNote` never returns an
+  // empty caption for either.
+  const countryChart =
+    findChartEntry(report.charts, 'country_analysis', ['country', 'countries']) ?? regionalChart
 
   return (
     <div>
@@ -1154,7 +1183,12 @@ export function JsonReportSections({ report }: JsonReportSectionsProps) {
       {report.regional_analysis.length > 0 && (
         <section className="mb-14">
           <SectionHeading id="regional" num={nextSection()}>Regional Analysis</SectionHeading>
-          <RegionalSection regions={report.regional_analysis} countries={report.country_analysis} />
+          <RegionalSection
+            regions={report.regional_analysis}
+            countries={report.country_analysis}
+            countrySource={chartSourceNote(countryChart)}
+            countryModelling={chartModellingNote(countryChart)}
+          />
         </section>
       )}
 

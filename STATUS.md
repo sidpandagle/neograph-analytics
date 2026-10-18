@@ -742,3 +742,56 @@ pass 0 fail; `--pair --all` 50/0; `source-hygiene.mjs` 236 files, 0 findings.
 publish together in the 21:00 run-up, reports before any article. Whoever takes
 the 21:00 slot should carry `e6`'s publish block above — it is still correct,
 including the `check content/reports/[a-z]*.json` glob caveat.
+
+---
+
+## Fourth session on the branch, 2026-10-18 13:05 IST — country chart + concurrent-build fix
+
+**Appended, not overwritten**, per the lesson already recorded twice above.
+
+**Who is here.** Session `281bde29` (infrastructure/visuals), alongside the content
+session's `next dev -p 3101` started 12:22. Budget at 12:18: 7d used 31%, pace
+**82.0%**, ceiling 57.4%, **headroom +26.4 points** — normal running.
+
+**Files this session wrote:** `components/reports/charts/CountryBarChart.tsx`
+(new), `components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`scripts/column-population.mjs` (new), `next.config.ts`, `.gitignore`,
+`BACKLOG.md`, `WORKLOG.md`, this block. **Not touched:** anything under
+`content/` or `research/`, and **no Supabase write of any kind.**
+
+**What shipped.** The country-comparison chart — the fourth of the five charts
+in the open P1 "visuals" item. Share and growth as grouped bars on **140 of 182
+report pages**, inside a `ChartFigure` with a source line, `role="img"` because
+`CountryTable` already carries the same figures as text directly below it. A
+sixth `audit-html.mjs` rule pins the chart to that table and was negative-tested
+three ways against built HTML, each corruption caught and the file restored
+byte-identical.
+
+**The fifth chart is refuted and the item is closed.** `competitive_landscape`
+carries numbers on only one field across all 182 rows — `founded`. No disclosed
+market share, `revenue` stored as the string "42B". A competitive-position
+quadrant drawn from that would be invented precision. Written into `BACKLOG.md`
+under the item so it does not read as missing work.
+
+### Two things the next session needs to know
+
+1. **`npm run build` and `next dev` cannot share `.next`.** A build racing the
+   dev server fails with `PageNotFoundError: Cannot find module for page:
+   /reports/[slug]/page` naming a random report route. The page is not broken.
+   Use **`NEXT_DIST_DIR=.next-verify npm run build`** (and the same variable for
+   `audit-html.mjs`); `next.config.ts` and `.gitignore` support it now. The dev
+   server's PID was verified and **left running** — it is not this session's.
+2. **`next build` rewrites `tsconfig.json`** — it adds `<distDir>/types` to
+   `include` and reformats the file. Session-local; `git checkout --
+   tsconfig.json` after a verification build rather than committing it.
+
+### Still as recorded above, unchanged by this session
+
+- **Round 5's five reports and one article remain unpublished and must stay
+  that way until a merge can follow within the hour.** PR #20 is now **MERGED**
+  (17-10 17:26Z), so the blocker that held them is gone *for the 21:00 slot* —
+  publish in the run-up to that merge, reports before the article, following the
+  sequence already written above. Nothing was published at 13:00; it is nine
+  hours from the deploy and the rule is that a new row without a build is a hard
+  404 behind an ISR card.
+- Today's 21:00 IST merge is still open and now carries this work too.

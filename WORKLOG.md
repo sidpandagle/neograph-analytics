@@ -3423,3 +3423,119 @@ Gates after the change: `check content/reports/[a-z]*.json` **50 pass, 0 fail**;
 `--pair --all` **50/0**; `source-hygiene.mjs` 236 files, 0 findings. Nothing
 published — 07:20 IST is outside the window, and row 47 publishes with the rest
 of round 6 in the 21:00 run-up.
+
+---
+
+## 2026-10-18 12:20-13:10 IST — the country chart, and the one chart that cannot be built
+
+Session `281bde29`, infrastructure side. Budget at start: 7d used 31%, pace
+82.0%, ceiling 57.4%, **headroom +26.4 points** — normal running. Files written:
+`components/reports/charts/CountryBarChart.tsx` (new),
+`components/reports/JsonReportSections.tsx`, `scripts/audit-html.mjs`,
+`scripts/column-population.mjs` (new), `next.config.ts`, `.gitignore`,
+`BACKLOG.md`, `WORKLOG.md`, and an appended `STATUS.md` block. **No Supabase
+write, nothing under `content/`, nothing under `research/`.**
+
+### The P1 "visuals" backlog item asked for five charts. Two of them were never checkable
+
+The item reads: forecast line, segmentation share, regional bars, **country
+comparison**, **competitive position**. The first three ship. The last two had
+never been measured against the live corpus, only against the drafts — where
+`country_analysis` is `[]` on **50 of 50** local drafts, which would have read
+as "no data, skip it".
+
+`scripts/column-population.mjs` is the cheap probe that settled it. It selects
+the **first element** of each array column (`country_analysis->0`), never the
+array, so the question costs 182 small objects rather than the JSONB corpus —
+the form `STATUS.md` itself recommended at 02:30 for the forecast question.
+
+Measured against the 182 published rows:
+
+| Column | rows with a first element | numeric fields on it |
+|---|---|---|
+| `country_analysis` | **140 of 182** | `market_share` 140/140, `growth_rate` 140/140 |
+| `regional_analysis` | 140 of 182 | `market_share` 140/140, `growth_rate` 140/140 |
+| `competitive_landscape` | **182 of 182** | **`founded` only** (142/182) |
+| `company_profiles` | 140 of 182 | none — `revenue` is a string ("42B") |
+
+**So the country chart had data on 140 pages and nobody had drawn it, and the
+competitive-position chart has no quantity to position anything by.** The only
+numbers in `competitive_landscape` are founding years; `market_position` is
+prose ("Largest disclosed advanced wound franchise"). A competitive-position
+chart drawn from that would be axes invented to look like measurement.
+**Refuted, not deferred** — recorded in `BACKLOG.md` under the item rather than
+left as an open task that reads like missing work.
+
+Depth, probed the same way (`--depth country_analysis`): arrays reach index 3 on
+**85** rows and index 5 on **1**, so at most six country pairs are ever drawn
+and the chart truncates nothing.
+
+### What shipped
+
+`CountryBarChart` — share and growth as grouped horizontal bars, the same shape
+as the regional chart, sitting above the existing `CountryTable` inside a
+`ChartFigure` so it carries a source line and the `/methodology` link like every
+other figure on the site. It has **no table of its own**: `CountryTable` already
+renders the same array server-side directly below it, so a second copy would
+duplicate every figure in the HTML. That is also why the SVG is `role="img"` —
+the numbers are announced once, from the table.
+
+It is fed the table's **filtered** rows, not the raw column: `usableRows()`
+drops placeholders such as `{"country": ""}`, and a row the table refuses to
+print must not become a nameless bar either.
+
+Built output: **140 of 182 report pages** carry the chart, and the same 140
+carry the country table — 1:1, and exactly the 140 the probe predicted.
+
+Its caption falls back to the regional `charts[]` entry when a row has no
+`country_analysis` entry, because a row that labels one geographic chart labels
+the other, and `chartSourceNote()` never returns an empty caption.
+
+### A sixth audit rule, negative-tested three ways
+
+`audit-html.mjs` now pins the country chart to its table, as the regional and
+forecast rules already do: equal counts, 3 × `scope="col"`, and `cells ===
+rows * 3` so a truncated table fails.
+
+Checked first that the sample can fail it — the C-4 lesson. Of the four audited
+report routes, **1 carries `country_analysis`** (`ai-in-lab-automation-market`);
+the other three emit no country table at all, so a rule written without checking
+would have reported clean while never running. Corruptions against the built
+page, each restored byte-identical (`md5sum -c` OK):
+
+1. chart aria-label renamed → `0 country bar chart(s) but 1 country table(s)`
+2. one `scope="col"` → `data-col` → `does not mark all 3 column headers`
+3. one `<td>` → `<th>` → `has 3 row(s) but 8 data cell(s), expected 9`
+
+### The build failure that was not a defect
+
+`npm run build` failed mid-export with `PageNotFoundError: Cannot find module
+for page: /reports/[slug]/page` on `/reports/space-economy-lunar-mining-market`.
+The page is fine. Another session on this branch started `next dev -p 3101` at
+**12:22 IST** (PID 51416, verified by command line, **not killed** — it is not
+this session's process), and `next dev` rewrites `.next` continuously while a
+build is exporting out of it.
+
+`next.config.ts` now reads `distDir` from **`NEXT_DIST_DIR`**, defaulting to
+`.next`, so a verification build gets its own directory and the two sessions
+stop clobbering each other: `NEXT_DIST_DIR=.next-verify npm run build`.
+`audit-html.mjs` honours the same variable. `/.next-*/` added to `.gitignore`
+beside the existing `/.next.*/`. Vercel and any build without the variable set
+are untouched.
+
+One side effect, documented in the config: `next build` **rewrites
+`tsconfig.json`**, adding `<distDir>/types` to `include` and reformatting the
+file. That edit is session-local and was reverted, not committed.
+
+### Gates, all against `.next-verify`
+
+```
+NEXT_DIST_DIR=.next-verify npm run build   exit 0, 417 pages, 182 report paths
+tsc --noEmit                               clean
+npm run lint                               12 warnings, 0 errors — unchanged
+audit-html.mjs (6th rule live)             18 of 18 routes, 0 errors, 1 pre-existing warning
+contrast-audit.mjs                         0 failing pairs, both themes
+source-hygiene.mjs                         236 files, 0 findings
+seo-unit.mjs / api-unit.mjs                all assertions passed
+report-db.mjs check content/reports/[a-z]* 50 pass, 0 fail
+```
