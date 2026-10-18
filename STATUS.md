@@ -825,3 +825,39 @@ session stages everything — **commit in the same breath as staging.**
 3. The 21:00 IST merge, which now carries this lane's two items plus the
    content session's round 6/7 work, and the round 5 publish sequence that must
    run *in the run-up to it* rather than at any earlier hour.
+
+### Same session, 13:45 IST — four items done, all committed
+
+1. **Country chart** — `CountryBarChart` on 140 of 182 report pages; the
+   competitive-position chart refuted with the measurement (one numeric field
+   across 182 rows) and the P1 visuals item closed.
+2. **`/reports` links all 182 reports**, not 12. Server-rendered directory,
+   outside the Suspense boundary, `getReportCards()` now `cache()`d.
+3. **Three indexable author pages stopped claiming their analysts have
+   published nothing.** `/authors/1..3` are in `/sitemap.xml` and each said
+   "Total Reports Authored: 0" over an empty state naming the person. The zero
+   was the absence of a record (no author column — R-26), not a count.
+4. **The two legacy sitemaps 308 to `/sitemap.xml`** — measured as strict
+   subsets first; the pages one was stamping `lastmod` at fetch time.
+
+Struck as **stale, with measurements**, while picking work: `error.tsx` and
+`global-error.tsx` exist; `/design-system` has 1 `<h1>` and a canonical;
+`lib/api/orders.ts`'s unconditional throw is unreachable. `CLAUDE.md` corrected
+in three places by `1a10fbf`.
+
+**Checkers now:** `audit-html.mjs` 18 routes / 8 rule families, 0 errors;
+contrast 0 failing pairs; source-hygiene 251 files / 0 findings; lint 12
+warnings / 0 errors; `tsc` clean; build 418 pages. Two new audit rules today,
+each negative-tested (country chart/table parity three ways, `/reports` link
+floor once).
+
+**Use `NEXT_DIST_DIR=.next-verify` for any verification build** while another
+session's `next dev` is running, and `git checkout -- tsconfig.json` after.
+
+**Budget 13:45:** 7d used 35%, pace 82.7%, ceiling 57.9%, **headroom +22.9
+points** — normal running.
+
+**Next in this lane:** R-32 and R-13 both need the 21:00 browser window; C-7
+needs a headless renderer that is not installed and should not be installed on
+a whim. Until 21:00 the remaining headless work is thin, so the next pass is
+measured review of what shipped today rather than new surface.
