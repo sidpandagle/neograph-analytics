@@ -3825,3 +3825,80 @@ none now contains the old sentence or a zero tile. `audit-html.mjs` 18 of 18 and
 
 **Not a content invention:** no report was attributed to anyone. The change
 removes a claim; it does not add one.
+
+### Timestamp correction to the two entries above
+
+The headers read 13:15-14:05 and 14:10-14:40 IST. Local `date` at the time of
+the second commit was **13:28 IST**: the directory work ran roughly
+12:50-13:15 and the author-page work 13:15-13:28. The content is accurate; the
+clock times in those two headers are not. Recorded here rather than rewritten,
+since this file is append-only.
+
+## 2026-10-18 13:30-13:55 IST — two sitemaps told crawlers a different story about the same pages
+
+Session `281bde29`. Files: `app/sitemap-pages.xml/route.ts`,
+`app/sitemap-consulting.xml/route.ts`, `BACKLOG.md`, `WORKLOG.md`. No Supabase
+write.
+
+### The measurement
+
+`app/robots.ts` advertises exactly one sitemap, `/sitemap.xml`, and that file
+now carries **221** URLs. Two other sitemap routes were still serving their own
+older subsets, advertised nowhere:
+
+| Route | URLs | all present in `/sitemap.xml`? |
+|---|---|---|
+| `/sitemap-pages.xml` | 8 static pages | 7 exactly; the 8th is the homepage as the bare host `https://www.neographanalytics.com` against the canonical `.../` — the same page, and the trailing-slash form is what the app emits |
+| `/sitemap-consulting.xml` | 10 consulting services | **10 of 10** |
+
+So both are strict subsets. What they added was contradiction: their own
+`priority` values for URLs `/sitemap.xml` already prioritises, and — in the
+pages one — `lastModified: new Date().toISOString()` on **every** entry, which
+claims each page changed at the moment of the fetch. `eaba86a` had just removed
+exactly that kind of lying date from the main sitemap.
+
+Search Console remembers every sitemap ever submitted, so "advertised nowhere"
+does not mean "not fetched".
+
+### What shipped
+
+Both routes are now **308 permanent redirects to `/sitemap.xml`** — superseded,
+not deleted, with the reasoning and the git ref of the previous generator
+(`ab17fc0`, `ef27523`) in each file's header.
+
+The redirect target is **host-relative** (`new URL('/sitemap.xml',
+request.url)`), and that is a measured correction rather than a style choice:
+the first version hardcoded the production URL, and
+`curl -L http://localhost:3102/sitemap-pages.xml` then fetched **production**
+instead of the build under test. A preview deployment's crawler would have done
+the same.
+
+### Verified over HTTP, not from the build output alone
+
+Served the verification build on **port 3102** (`NEXT_DIST_DIR=.next-verify npx
+next start -p 3102` — 3100 holds a stale `next start` from the 17th that is not
+this session's, and 3101 is the other session's dev server):
+
+```
+/sitemap-pages.xml        308 -> http://localhost:3102/sitemap.xml
+/sitemap-consulting.xml   308 -> http://localhost:3102/sitemap.xml
+followed, locally         221 <loc> entries
+/sitemap.xml              221 <loc> entries, unchanged
+/reports                  182 unique report links  (the directory, live)
+```
+
+Both PIDs of my own server were identified by command line and stopped by id,
+not by port; `curl` after that returns nothing, confirming it is down and that
+nothing else was holding 3102.
+
+Gates: `tsc` clean, build exit 0 (418 pages), `audit-html.mjs` 18 of 18 and 0
+errors, source-hygiene 251 files / 0 findings, lint 12 warnings / 0 errors.
+
+### Left alone, deliberately
+
+`/api/sitemap-reports/[page]`, `/api/sitemap-blogs/[page]` and
+`/api/sitemap-press-releases/[page]` (reached through the
+`sitemap-reports-:page.xml` rewrites) are also unadvertised and also duplicate
+report URLs. They paginate at 500 entries, which is premature at 221 URLs
+against the 50,000-URL sitemap limit, but they are a growth mechanism rather
+than a stale subset, so they stay as they are and are noted in `BACKLOG.md`.

@@ -1,49 +1,21 @@
 import { NextResponse } from 'next/server';
-import { getAllConsultingServices } from '@/lib/api/consulting';
 
-const BASE_URL = 'https://www.neographanalytics.com';
-
-export async function GET() {
-  try {
-    // Get dynamic consulting services from JSON
-    const consultingServices = await getAllConsultingServices();
-
-    // No hub entry: /consulting has no page of its own and now redirects to
-    // /services, which sitemap-pages already lists. Advertising a redirect
-    // here would just hand crawlers a URL that never resolves to content.
-
-    // Dynamic consulting service pages from /consulting/[slug]
-    const dynamicConsultingPages = consultingServices.map((service) => ({
-      url: `${BASE_URL}/consulting/${service.slug}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    }));
-
-    const allPages = dynamicConsultingPages;
-
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages
-  .map(
-    (page) => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-    return new NextResponse(sitemap, {
-      headers: {
-        'Content-Type': 'application/xml',
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600',
-      },
-    });
-  } catch (error) {
-    console.error('Error generating consulting sitemap:', error);
-    return new NextResponse('Error generating sitemap', { status: 500 });
-  }
+/**
+ * Superseded by `/sitemap.xml`. Kept as a permanent redirect, not removed.
+ *
+ * This route served the 10 `/consulting/<slug>` URLs on their own. R-24 added
+ * every one of them to `/sitemap.xml`, which `app/robots.ts` advertises as the
+ * single sitemap; verified against the built output on 2026-10-18, **10 of 10**
+ * of these URLs are in that file.
+ *
+ * Nothing is lost by redirecting, and leaving it in place meant two sitemaps
+ * declaring the same ten URLs with their own `priority` and `lastmod`. The
+ * previous generator is in git history at `ef27523`.
+ */
+export async function GET(request: Request) {
+  /* Host-relative: an absolute production URL here sends a preview deployment's
+     crawler — and a local verification run — to the live site instead of the
+     one being checked. Measured 2026-10-18: with the absolute form,
+     `curl -L http://localhost:3102/sitemap-pages.xml` fetched production. */
+  return NextResponse.redirect(new URL('/sitemap.xml', request.url), 308);
 }

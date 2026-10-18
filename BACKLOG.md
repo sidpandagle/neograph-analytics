@@ -246,10 +246,27 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       `consulting.ts` throws stand, and the open question is whether a Supabase
       outage *should* fail the build (keeping the last good deploy) rather than
       render an error page - so this is a decision, not a bug.
-- [ ] Sitemap fragmentation: `robots.ts` advertises only `/sitemap.xml`;
+- [x] ~~Sitemap fragmentation: `robots.ts` advertises only `/sitemap.xml`;
       `/sitemap-pages.xml`, `/sitemap-consulting.xml` are referenced nowhere, so
       consulting and legal URLs are in no discoverable sitemap. Reports are
-      declared twice with conflicting priority.
+      declared twice with conflicting priority.~~
+      **DONE 2026-10-18.** The discoverability half was fixed by R-24 —
+      `/sitemap.xml` carries all 221 URLs including the consulting and legal
+      pages. The contradiction half is fixed now: both legacy routes are **308
+      permanent redirects to `/sitemap.xml`**, superseded rather than deleted,
+      with the previous generator's git ref in each file header. Measured first:
+      `/sitemap-consulting.xml` was 10 of 10 already in the canonical sitemap,
+      `/sitemap-pages.xml` 8 of 8 (its homepage entry being the bare host
+      against the canonical trailing-slash form), and the pages route stamped
+      `lastModified: new Date().toISOString()` on every entry — the same lying
+      date `eaba86a` had just removed from the main sitemap. Verified over HTTP
+      on port 3102, both 308ing to a 221-URL sitemap. The redirect is
+      host-relative; the absolute form sent a local verification run to
+      production.
+      **Not touched, deliberately:** `/api/sitemap-reports/[page]` and its blog
+      and press-release siblings are also unadvertised and also declare report
+      URLs, but they paginate at 500 against a 50,000-URL limit — a growth
+      mechanism rather than a stale subset. They stay.
 
 ### P1
 - [x] `/consulting` returns 404 but is linked from 3 places and listed in
