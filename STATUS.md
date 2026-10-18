@@ -696,3 +696,49 @@ a bare `curl` result against production.
 - From tonight's lib/api sweep: the hardcoded `$2,995` Product/Offer, the
   positional author URLs, the synthetic positional report `id`, generated
   Supabase types, and `/reports` server-rendering 12 of 182 report links.
+
+---
+
+## Appended by session `9a`, 2026-10-18 07:40 IST — research lane only
+
+Append-only block. `e6` owns this file's body above; nothing there was edited.
+
+**Budget at 06:50:** 7d used 31%, pace 82.0%, ceiling 57.4%, **headroom +26.4
+points.** Normal running.
+
+**Closed this morning, both committed on `work/continuous-improvements`:**
+
+- `d6eef45` — the `revenue-cycle-management-market` pairing debt. It needed no
+  research: the evidence file was on disk under the *draft* slug, because the
+  report was deliberately renamed at publish time. `pair()` matches by exact
+  filename, so a rename read to it as missing work. `git mv`, pointer stub left
+  at the old path. **`--pair --all` is now 50 paired-checked, 0 not paired**,
+  which closes the pairing-debt table (72 had fixed veterinary at 02:05).
+- `5499d2c` — row 47, `skilled-nursing-facilities-market`. Of its two recorded
+  defects, one was a mis-record: a geo-neutral title is *correct* beside a
+  global headline, so the note claiming the scope had been "corrected to U.S."
+  is withdrawn. The real one is now stated on the page: Coherent's own North
+  America share, **45.3% in 2026, re-verified at the publisher**, gives
+  `0.453 x 453.31 = $205.35B`, which is **6.62% below** the CMS NHEA's
+  *measured* US-alone `$219.9B` for 2024. At Coherent's own 9.3%,
+  `219.9 x 1.093^2 = $262.70B`, forcing NA to **>=57.95%** or the headline to
+  **1.279x** published. Not re-sourced, deliberately — any Tier 3 global near
+  $450B forces the same ~58% floor, so swapping houses would hide the finding.
+  **Round 6 is now fully `check-passed`, all five rows.**
+
+**In flight:** round 7 claimed and committed at `09c6197` **before** dispatch,
+then five agents, one per topic — rows 51-55: `home-health-care-market`,
+`inpatient-rehabilitation-facilities-market`,
+`long-term-care-hospitals-market`, `clinical-laboratory-services-market`,
+`ambulance-and-emergency-medical-services-market`. Rows 51-53 complete
+Medicare's five post-acute settings, which is what makes the cross-setting
+article possible. Each agent owns only its own `research/<slug>-notes.md` and
+`content/reports/<slug>.json`.
+
+**Gates after this morning's changes:** `check content/reports/[a-z]*.json` 50
+pass 0 fail; `--pair --all` 50/0; `source-hygiene.mjs` 236 files, 0 findings.
+
+**Nothing published.** 07:40 IST is outside the window; round 6 and round 7
+publish together in the 21:00 run-up, reports before any article. Whoever takes
+the 21:00 slot should carry `e6`'s publish block above — it is still correct,
+including the `check content/reports/[a-z]*.json` glob caveat.
