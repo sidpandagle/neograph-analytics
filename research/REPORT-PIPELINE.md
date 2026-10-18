@@ -220,11 +220,11 @@ Fee Schedule.
 
 | # | Slug | Industry | Round | Countable register | State |
 |---|---|---|---|---|---|
-| 51 | home-health-care-market | Healthcare IT | 7A | CMS Medicare-certified home health agency count (Care Compare / Provider of Services file); **CY**2026 HH PPS final rule 30-day episode base payment amount and the LUPA per-visit amounts (home health is paid on the *calendar* year, unlike SNF/IRF/LTCH/hospice, which are fiscal-year — do not assume FY); MedPAC home health chapter FFS spending, episode counts and margin; UnitedHealth/LHC, Enhabit and Aveanna disclosed revenue and location counts | **drafting (2026-10-18)** |
-| 52 | inpatient-rehabilitation-facilities-market | Healthcare IT | 7A | CMS certified IRF count (freestanding vs hospital-unit split); FY2026 IRF PPS final rule standard payment conversion factor and CMG relative weights; MedPAC IRF chapter FFS spending, cases, occupancy and margin; Encompass Health and Select Medical disclosed segment revenue and bed counts | **drafting (2026-10-18)** |
-| 53 | long-term-care-hospitals-market | Healthcare IT | 7A | CMS certified LTCH count (~340, small enough to be nearly exact); FY2026 LTCH PPS final rule standard federal payment rate and the site-neutral rate; MedPAC LTCH chapter FFS spending, discharges and margin, plus the post-2016 dual-rate structure that halved the eligible population; Select Medical critical-illness-recovery segment disclosed revenue and hospital count | **drafting (2026-10-18)** |
-| 54 | clinical-laboratory-services-market | Life Sciences | 7A | CMS CLIA certified-laboratory counts by certificate type; Clinical Laboratory Fee Schedule amounts and the PAMA private-payer rate-setting data; Medicare Part B lab spending; Labcorp and Quest disclosed revenue, requisition and test volumes | **drafting (2026-10-18)** |
-| 55 | ambulance-and-emergency-medical-services-market | Healthcare IT | 7A | CMS Ambulance Fee Schedule base rates by level of service plus the mileage amounts and the ground ambulance add-ons; CMS ambulance supplier enrollment counts; NEMSIS national EMS activation counts; No Surprises Act ground-ambulance advisory committee data; Global Medical Response / Falck disclosed figures where public | **drafting (2026-10-18)** |
+| 51 | home-health-care-market | Healthcare IT | 7A | CMS Medicare-certified home health agency count (Care Compare / Provider of Services file); **CY**2026 HH PPS final rule 30-day episode base payment amount and the LUPA per-visit amounts (home health is paid on the *calendar* year, unlike SNF/IRF/LTCH/hospice, which are fiscal-year — do not assume FY); MedPAC home health chapter FFS spending, episode counts and margin; UnitedHealth/LHC, Enhabit and Aveanna disclosed revenue and location counts | **check-passed (2026-10-18)** — $504.80B (2026) -> $1,015.80B (2033) @ 10.51%, Grand View. CY trap avoided: CMS-1828-F, **90 FR 55342**, 2 Dec 2025, "Calendar Year 2026". Boundary vs `hospital-at-home-market` set from the payment instruments (s.1895 HH PPS / 30-day period / 12,234 agencies / no prior stay, against the AHCAH waiver / IPPS DRG / 373 hospitals), not asserted. |
+| 52 | inpatient-rehabilitation-facilities-market | Healthcare IT | 7A | CMS certified IRF count (freestanding vs hospital-unit split); FY2026 IRF PPS final rule standard payment conversion factor and CMG relative weights; MedPAC IRF chapter FFS spending, cases, occupancy and margin; Encompass Health and Select Medical disclosed segment revenue and bed counts | **check-passed (2026-10-18), WITH A DEVIATION FOR SIDDHANT** — $23.72B (2026) -> $37.22B (2032) @ 7.80%. **No publisher sizes the IRF in dollars**, so the base is NeoGraph's own construction from MedPAC and the Federal Register, and the growth rate comes from a *different* publisher (GMI) than the base. First constructed headline in this corpus. Labelled as a construction in the meta description, executive summary, forecast analysis, methodology and two FAQs, with both derivation routes and their 3.94% divergence printed. Accepted on the view that a construction from federal measurements, labelled, beats citing a house that does not measure it — but it is a precedent, so it is flagged here rather than buried in a commit. |
+| 53 | long-term-care-hospitals-market | Healthcare IT | 7A | CMS certified LTCH count (~340, small enough to be nearly exact); FY2026 LTCH PPS final rule standard federal payment rate and the site-neutral rate; MedPAC LTCH chapter FFS spending, discharges and margin, plus the post-2016 dual-rate structure that halved the eligible population; Select Medical critical-illness-recovery segment disclosed revenue and hospital count | **check-passed (2026-10-18)** — $23.62B (2026) -> $34.80B (2034) @ 4.96%, Dataintelo, published at the rate its own endpoints imply (4.9649%) rather than its stated 5.2%, which contradicts its own 2034 value. A contracting sector: spending -8.99%/yr, cases -11.56%/yr. MedPAC's March 2026 post-acute chapter **excludes LTCHs by footnote**. |
+| 54 | clinical-laboratory-services-market | Life Sciences | 7A | CMS CLIA certified-laboratory counts by certificate type; Clinical Laboratory Fee Schedule amounts and the PAMA private-payer rate-setting data; Medicare Part B lab spending; Labcorp and Quest disclosed revenue, requisition and test volumes | **check-passed (2026-10-18)** — $315.14B (2026) -> $459.58B (2032) @ 6.49%, Mordor, chosen as the only surveyed series whose scope excludes instruments, reagents and standalone software by name. CLIA register split cleanly from the point-of-care report: that one owns waiver 233,448 + PPM 21,736 = 255,184; this one uses compliance 15,214 + accreditation 15,542 = 30,756. |
+| 55 | ambulance-and-emergency-medical-services-market | Healthcare IT | 7A | CMS Ambulance Fee Schedule base rates by level of service plus the mileage amounts and the ground ambulance add-ons; CMS ambulance supplier enrollment counts; NEMSIS national EMS activation counts; No Surprises Act ground-ambulance advisory committee data; Global Medical Response / Falck disclosed figures where public | **check-passed (2026-10-18)** — $51.73B (2026) -> $90.93B (2032) @ 9.86% (published at the derivation, since 360iResearch's printed 9.82% disagrees with its own endpoints). MedPAC's GADCS ownership tiers sum to **exactly** its printed 49,901,430 transports and $51.11B, which is **0.988x the entire global published headline** and is published as a floor, not grossed up. |
 
 Admission test applied as usual, and two candidates were rejected rather than
 drafted, recorded so they are not re-proposed: **dental services** (no federal
@@ -242,3 +242,67 @@ uncommitted reads as unclaimed from every other session on the branch, and that
 is what put ten agents on five slugs. Five agents, one per topic, each owning
 exactly `research/<slug>-notes.md` and `content/reports/<slug>.json` and nothing
 else — not this file, not `WORKLOG.md`, not `STATUS.md`.
+
+### Round 7 — all five pass `check`, held for the publish window
+
+Five topics, five agents, one per topic, each owning only its own notes and
+report JSON. **No agent wrote outside its two paths this time** — `git status`
+after the fan-out showed exactly the ten expected files, which is the round 6A
+lesson holding. Every figure below was re-derived in the session: all three
+gates re-run on all five files, and each grounding division recomputed
+independently. All five reproduced.
+
+| Slug | Base -> forecast | CAGR | Size spread | CAGR spread | Grounding |
+|---|---|---|---|---|---|
+| home-health-care-market | $504.80B -> $1,015.80B | 10.51% | 1.344x verified global; **3.91x** US-only | **1.579x** | `0.423 x 504.80 = $213.53B` NA, `/ 12,234` certified agencies = **$17.45M per agency**, against two *measured* per-location figures agreeing to 1.5% — $3.2683M (Enhabit 10-K) and $3.2195M (DOJ divestiture decree) — a **5.34x** gap that rules out the global headline being the certified-agency sector. Register internally consistent: `$16.0B / 8.3M periods = $1,927.71` = **0.9458** of the statutory $2,038.22; `$16.0B / 65.4M visits = $244.65` against MedPAC's own $245 |
+| inpatient-rehabilitation-facilities-market | $23.72B -> $37.22B | 7.80% | 6.36x across parent categories; **12.79x / 54.81x** against this market | 1.19x | The FY2026 rule reconciles **to the cent**: `18,907 x 1.026 x 1.0001 x 0.9985 = $19,371`, and `19,371 x 0.7244 = $14,032.35` / `x 4.5328 = $87,804.87` reproduce both published CMG rates exactly. Realised `$11.0B / 435,000 stays = $25,287` = **1.3054x** statutory. Per occupied bed day $2,062.51, between Encompass's $1,806.79 and Select's $2,260. MedPAC's own 42% reproduces: `166 / 392 = 42.3%` |
+| long-term-care-hospitals-market | $23.62B -> $34.80B | 4.96% | **17.05x** | 1.10x | `$2.4B / 47,000` FFS stays = $51,064 = **1.0613x** statutory; all-payer floor `130,050 x $51,064 = $6.64B` against an operator-scaled `$23.825M x 336 = $8.01B`, gap **1.21x**, reproduced independently as $2,230/day vs $1,850.14/day. Reanin's global $1.32B is **0.55x** US Medicare FFS alone and is ruled out |
+| clinical-laboratory-services-market | $315.14B -> $459.58B | 6.49% | 1.480x | **1.97x** | `$103.79B / 30,756` compliance-and-accreditation labs = **$3.37M/lab** (the same numerator over the waived 255,184 gives $406,726, absurd for a waiver certificate — which is how the two CLIA tiers separate). Quest `$10,785M / 244M requisitions = $44.20` against a $31.72 three-test CLFS basket = **1.393x**. Labcorp Dx alone is **1.0997x** MarkNtel's entire US market |
+| ambulance-and-emergency-medical-services-market | $51.73B -> $90.93B | 9.86% | 8.94x full set; 1.99x ex-outlier; **1.90x inside one house** | 1.72x | MedPAC's GADCS ownership tiers sum to **exactly** its printed total: `20,995,123 x $563 + 9,692,384 x $830 + 19,213,923 x $1,626 = $51,106,771,767` over `49,901,430` transports = **$1,024.15 per transport**, and that US-ground-only floor is **0.988x the entire global published headline**. Realised Medicare `$5.3B / 11.3M = $469.03` = **45.80%** of measured cost |
+
+**Three findings this round produced that no single earlier report could.**
+
+1. **Row 47's defect generalises across houses and across markets.** In home
+   health, two of five global houses publish a North America figure that falls
+   *below* the federally measured United States alone when advanced at their own
+   rate — Coherent by **3.80%**, Fortune by **8.42%** on its own published
+   dollar figure rather than on a share. Grand View passes (NA 9.67% above the
+   US alone), which is why it is the headline. In ambulance, the measured US
+   floor is **2.317x** Fortune's implied US, forcing either a >=80.15% US share
+   or a headline 2.317x larger. So the SNF finding was not about one publisher.
+2. **In two of five markets the CAGR spread exceeds the size spread** — clinical
+   lab 1.97x against 1.480x, home health 1.579x against 1.344x — reversing the
+   pattern every earlier round found. Where it reverses, the growth rate is a
+   forecast of a *policy* (PAMA's blocked-but-still-authorised cuts; the CY2026
+   home health rate path), not of volume.
+3. **One house, two incompatible markets, same day.** Fortune publishes
+   "Ambulance Services" at $63.76B and "Emergency Medical Services" at $33.56B,
+   both for 2026, both last updated 28 September 2026, neither page mentioning
+   the other. A **1.90x** disagreement inside a single publisher is not a scope
+   difference between houses; it is one house selling two answers.
+
+**The post-acute family is now complete.** Medicare pays for post-acute care in
+five settings and this corpus has all five: SNF (row 47), hospice (46), home
+health (51), IRF (52), LTCH (53). The cross-setting article the round was
+designed to make possible is now writable, and the striking part is how
+unequally the literature treats them — the size spread runs **17.05x** for
+LTCHs, **6.65x** for dialysis-adjacent SNF, **3.91x** for US home health, and
+for IRFs there is *no published dollar figure at all*. That is not five houses
+disagreeing about growth. It is the literature being thinnest exactly where the
+federal measurement is sharpest.
+
+**One deviation, flagged for Siddhant rather than buried.** The IRF headline is
+the first **constructed** headline in this corpus: no publisher sizes the IRF in
+dollars, so the base is built from MedPAC and the Federal Register, and the
+growth rate is taken from a different publisher than the base. It is labelled as
+a construction in the meta description, executive summary, forecast analysis,
+methodology and two FAQs, with both derivation routes and their 3.94% divergence
+printed on the page. Accepted on the view that a labelled construction from
+federal measurements is worth more than a citation to a house that does not
+measure the thing — but it is a precedent for what this publication will put in
+a headline, so it is a decision Siddhant should see rather than inherit.
+
+Every one of the five: `regional_analysis` and `country_analysis` empty; no
+vendor `market_share` anywhere; `check` exit 0; verifier reproduces with a worst
+CAGR delta of **0.0044 pt**; `--pair` paired on all five. Corpus-wide after this
+round: **`check` 55 pass 0 fail, `--pair --all` 55 paired-checked 0 not paired.**
