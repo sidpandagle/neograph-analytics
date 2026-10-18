@@ -3738,3 +3738,27 @@ first (rounds 6 and 7), then this article, then `npm run build`, then the deploy
 The article 404s its own citations in any other order.
 
 Budget at 07:50: headroom **+23.7 points**. Nothing published.
+
+### Record correction: `50eb4ee` does not describe what it committed
+
+`50eb4ee` ("Log the cross-setting article and the publish order it depends on",
+13:13 IST) carries **all eight files of this session's `/reports` directory
+work** — `ReportDirectory.tsx`, `components/reports/index.ts`,
+`app/reports/page.tsx`, `lib/api/reports.ts`, `scripts/audit-html.mjs`,
+`BACKLOG.md`, `REVIEW-QUEUE.md` and the `WORKLOG.md` entry above. They had been
+staged by path here and were swept into the content session's commit before this
+session's own `git commit` ran, which then reported "no changes added to
+commit".
+
+**The tree is correct** — `git show HEAD:<file>` is byte-identical to the
+working copy for all eight, `md5sum` matched on `ReportDirectory.tsx`, and the
+audit rule is present in the committed script. Only the history is mislabelled.
+Nothing is rewritten: this is a shared branch and two sessions have committed on
+top.
+
+This is the **third** record-correction on this branch (`bae7279`, `be2d931`,
+this one), and all three have the same cause: a tree-wide `git add` on a branch
+two sessions are writing to. Staging by path does not protect you if the other
+session stages everything. The only thing that does is **commit immediately
+after staging**, in the same tool call where possible — the window here was
+about four minutes.
