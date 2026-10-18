@@ -795,3 +795,33 @@ under the item so it does not read as missing work.
   hours from the deploy and the rule is that a new row without a build is a hard
   404 behind an ISR card.
 - Today's 21:00 IST merge is still open and now carries this work too.
+
+### Same session, 13:20 IST — second item done, and a third sweep of staged files
+
+**Shipped since the block above.** `/reports` linked **12 of 182** reports in
+the delivered HTML; it now links all 182 through `ReportDirectory`, a Server
+Component rendered *outside* the Suspense boundary (inside it, `useSearchParams()`
+would have replaced it with the skeleton and added zero crawlable links).
+`getReportCards()` is `cache()`d so the listing and the directory are one query.
+Cost measured: 199KB -> 273KB of HTML, 33.0KB gzipped; hoisting the link classes
+to one container returned 47KB of that. Seventh audit rule added, negative-tested.
+
+**Budget at 13:15:** 7d used 32%, pace 82.5%, ceiling 57.8%, **headroom +22.8
+points** — normal running. 5h bucket 28%.
+
+**Warning for whoever commits next.** `50eb4ee` swept up eight files this
+session had staged by path, four minutes after they were staged, and this
+session's own `git commit` then reported "no changes added to commit". The tree
+is correct and verified byte-for-byte; `2b9fe8c` records it. That is the **third**
+such correction on this branch. Staging by path does not help when the other
+session stages everything — **commit in the same breath as staging.**
+
+**Open, in order, for this lane:**
+1. **R-32** — the new directory block has never been looked at in a browser.
+   First thing when the 21:00-09:00 window opens.
+2. **R-13** — `/methodology` first paint. Both candidate levers are refuted;
+   what is left is a 968ms style-and-layout pass over 362 nodes, and narrowing
+   it needs the browser window.
+3. The 21:00 IST merge, which now carries this lane's two items plus the
+   content session's round 6/7 work, and the round 5 publish sequence that must
+   run *in the run-up to it* rather than at any earlier hour.
