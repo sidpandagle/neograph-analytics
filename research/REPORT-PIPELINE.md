@@ -189,3 +189,56 @@ a device-load — not divisible); **single-use bioprocessing** (no public regist
 at all; the only denominators available are vendor-reported and so are the
 numerators); **clinical trial site management** (not separable from row 42's
 CRO register without double-counting the same trial starts).
+
+## Round 7 queue — appended 2026-10-18, 07:35 IST by session 9a
+
+Round 6's five rows are all `check-passed` as of 07:20 (row 47 was the last, and
+its defect is now stated on the page rather than re-sourced), and the
+pairing-debt table above is closed. The queue is therefore empty again, and the
+skill's answer to an empty queue is to propose five. Live corpus at 07:30:
+**182** rows, none of the five slugs below among them, none a regional clone.
+
+**The design: finish the post-acute family, then step outside it.** Rounds 5 and
+6 established one diagnostic — divide the headline by a statutory price times a
+federal provider count — and row 47 showed its sharpest result yet: a global
+headline whose *own* published regional share falls 6.62% below a measured
+national actual. Medicare pays for post-acute care in **five** settings, each
+with its own prospective payment system, its own published base rate and its own
+certification register. This corpus now has two of them (SNF row 47, hospice row
+46). Rows 51-53 take the remaining three, which makes the set complete and makes
+one cross-report finding available that no single report can carry: **the same
+patient, discharged to five different settings at five statutory prices, sized
+by houses that disagree with each other by different multiples in each setting.**
+If the size spread varies systematically across the five, it is a scope artefact
+of each setting's boundary; if it is constant, it is a property of the houses.
+Either answer is publishable, and neither is reachable without all five.
+
+Rows 54 and 55 deliberately leave the family, so the round is not five
+restatements of one register. Both still meet the admission test, and both carry
+a statutory price list: the Clinical Laboratory Fee Schedule and the Ambulance
+Fee Schedule.
+
+| # | Slug | Industry | Round | Countable register | State |
+|---|---|---|---|---|---|
+| 51 | home-health-care-market | Healthcare IT | 7A | CMS Medicare-certified home health agency count (Care Compare / Provider of Services file); **CY**2026 HH PPS final rule 30-day episode base payment amount and the LUPA per-visit amounts (home health is paid on the *calendar* year, unlike SNF/IRF/LTCH/hospice, which are fiscal-year — do not assume FY); MedPAC home health chapter FFS spending, episode counts and margin; UnitedHealth/LHC, Enhabit and Aveanna disclosed revenue and location counts | **drafting (2026-10-18)** |
+| 52 | inpatient-rehabilitation-facilities-market | Healthcare IT | 7A | CMS certified IRF count (freestanding vs hospital-unit split); FY2026 IRF PPS final rule standard payment conversion factor and CMG relative weights; MedPAC IRF chapter FFS spending, cases, occupancy and margin; Encompass Health and Select Medical disclosed segment revenue and bed counts | **drafting (2026-10-18)** |
+| 53 | long-term-care-hospitals-market | Healthcare IT | 7A | CMS certified LTCH count (~340, small enough to be nearly exact); FY2026 LTCH PPS final rule standard federal payment rate and the site-neutral rate; MedPAC LTCH chapter FFS spending, discharges and margin, plus the post-2016 dual-rate structure that halved the eligible population; Select Medical critical-illness-recovery segment disclosed revenue and hospital count | **drafting (2026-10-18)** |
+| 54 | clinical-laboratory-services-market | Life Sciences | 7A | CMS CLIA certified-laboratory counts by certificate type; Clinical Laboratory Fee Schedule amounts and the PAMA private-payer rate-setting data; Medicare Part B lab spending; Labcorp and Quest disclosed revenue, requisition and test volumes | **drafting (2026-10-18)** |
+| 55 | ambulance-and-emergency-medical-services-market | Healthcare IT | 7A | CMS Ambulance Fee Schedule base rates by level of service plus the mileage amounts and the ground ambulance add-ons; CMS ambulance supplier enrollment counts; NEMSIS national EMS activation counts; No Surprises Act ground-ambulance advisory committee data; Global Medical Response / Falck disclosed figures where public | **drafting (2026-10-18)** |
+
+Admission test applied as usual, and two candidates were rejected rather than
+drafted, recorded so they are not re-proposed: **dental services** (no federal
+price register — Medicare largely excludes dental, so there is no statutory
+amount and no certification count to divide through; the only denominators are
+ADA survey estimates, which are themselves estimates); **freestanding imaging
+centres** (the Physician Fee Schedule prices the procedure, but no federal
+register counts *centres* as distinct from enrolled billing suppliers, so the
+denominator and the numerator are not the same unit — the same defect that
+rejected medical-device sterilization in round 6).
+
+Marked `drafting` and **committed before any agent was dispatched**, which is the
+correction round 6A earned: a queue committed as `queued` with the claims left
+uncommitted reads as unclaimed from every other session on the branch, and that
+is what put ten agents on five slugs. Five agents, one per topic, each owning
+exactly `research/<slug>-notes.md` and `content/reports/<slug>.json` and nothing
+else — not this file, not `WORKLOG.md`, not `STATUS.md`.
