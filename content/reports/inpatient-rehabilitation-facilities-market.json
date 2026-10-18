@@ -1,0 +1,235 @@
+{
+  "report_id": "inpatient-rehabilitation-facilities-market",
+  "slug": "inpatient-rehabilitation-facilities-market",
+  "title": "Inpatient Rehabilitation Facilities Market Size, Share & Forecast 2026-2032",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2032",
+  "historical_period": "2022-2025",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 23.72,
+    "forecast_value": 37.22,
+    "cagr": 7.8
+  },
+  "executive_summary": "No market-research publisher surveyed for this report sizes the inpatient rehabilitation facility in dollars. Five searches across roughly twenty houses found reports titled to \"medical rehabilitation services\", \"rehabilitation\" and \"post-acute care\", two of which name the inpatient rehabilitation facility as a segment and publish a growth rate for it while withholding its size. That absence sits beside one of the best-measured care settings in American health care: a statutory price published annually in the Federal Register, a case-mix weight table with 94 groups, a facility census split by ownership and by freestanding-versus-unit, and claims-derived spending, stays, occupancy, length of stay and margin published by MedPAC every March.\n\nSo the headline here is constructed from the register rather than cited from a house, and the report says so everywhere it appears. MedPAC measured $11.0 billion of fee-for-service Medicare spending on inpatient rehabilitation facility services in fiscal 2024, across about 435,000 covered stays in 1,169 facilities. MedPAC also publishes that fee-for-service Medicare was about 49 percent of all payments at freestanding IRFs. Dividing the first by the second and advancing at MedPAC's own stated payment updates of 3.0 percent for fiscal 2025 and 2.6 percent for fiscal 2026 gives $23.72 billion of United States all-payer inpatient rehabilitation facility revenue for 2026. A second route from the stay side -- 435,000 stays divided by MedPAC's separately published 51 percent share of stays, valued at the realised $25,287.36 per stay -- lands at $21.5686 billion for fiscal 2024 against the first method's $22.449 billion, a divergence of 3.92 percent.\n\nThe result survives a third, unrelated test. Forty-two thousand IRF beds at 71 percent occupancy give 10,884,300 occupied bed days in fiscal 2024, so the construction implies $2,062.51 per occupied bed day. Encompass Health disclosed $1,806.79 per patient day for 2025 and Select Medical's rehabilitation hospital segment disclosed $2,260. The national figure falls between the two largest disclosed books in the sector, which is what a correct denominator looks like.\n\nAgainst that, the nearest published figures are the parent categories: Grand View Research puts global medical rehabilitation services at $303.4 billion for 2026, which is 12.79x this market, and Global Market Insights puts global post-acute care at $1.3 trillion, which is 54.81x. Anyone quoting either under an inpatient rehabilitation heading is reporting a different industry.",
+  "market_context": "An inpatient rehabilitation facility is not a service line; it is a legal class. To be paid under the IRF prospective payment system rather than the inpatient hospital system, a facility must meet a compliance threshold requiring that no less than 60 percent of patients admitted required intensive rehabilitation for one or more of 13 specified conditions, as principal diagnosis or comorbidity. Fail the threshold and Medicare pays for every one of that facility's stays under the acute hospital system instead. The facility does not lose a bonus; it leaves this market.\n\nThat makes the 1,169-facility register something sharper than a count of hospitals that do rehabilitation. It is a list of hospitals whose case mix passes a federal test each year. MedPAC's fiscal 2024 data show how tightly the constraint binds: the three most common admitting conditions were stroke at 15.1 percent of stays, other neurological conditions at 15.0 percent and debility at 14.7 percent -- and debility, generalised deconditioning not attributable to another condition, is not one of the 13.\n\nThe sector is also two sectors wearing one name. Sixty-six percent of IRFs are hospital-based units, but the 392 freestanding hospitals take 64 percent of fee-for-service stays, run 74 percent occupancy against 67 percent, cost $18,000 per stay against $25,000, and earn a 25.0 percent fee-for-service Medicare margin against 4.1 percent. Facilities with fewer than 10 beds run a margin of -4.9 percent. Every growth figure in this report is an average across those two populations, and they are moving in opposite directions: freestanding and for-profit counts rose 4.3 percent in fiscal 2024 while hospital-based fell 0.9 percent and nonprofit fell 2.8 percent.",
+  "forecast_analysis": "The base year is a construction, not a citation, and that is the most important thing to know before using it. It is MedPAC's measured $11.0 billion of fiscal 2024 fee-for-service Medicare IRF spending, divided by MedPAC's own published 49 percent fee-for-service share of payments at freestanding IRFs to reach $22.449 billion all-payer, then advanced at MedPAC's own stated regulatory updates of 3.0 percent for fiscal 2025 and 2.6 percent for fiscal 2026 to reach $23.72 billion. MedPAC states the 49 percent share could not be calculated for hospital-based IRFs because of cost-report limitations, so applying it nationally is an assumption. It is checked rather than asserted: the stay-side route reaches $21.5686 billion for the same year, 3.92 percent away.\n\nThe growth rate is a citation. Global Market Insights publishes a 7.8 percent compound rate for the inpatient rehabilitation facility segment of its United States post-acute care market, report GMI5203 of January 2026, over its 2026-2035 forecast period. It is the only published IRF-specific growth rate on a United States, all-payer scope that this research could find. Applying it over 2026-2032 truncates the publisher's period without altering the rate. The same house publishes 8.5 percent for the IRF segment of its global post-acute care report a month earlier; the 70-basis-point gap is noted rather than reconciled.\n\nTwo cautions. First, the base advances at price only. MedPAC reports that fee-for-service IRF stays rose 7.6 percent in fiscal 2024 and stays per 10,000 beneficiaries rose 9.7 percent to 132, so $23.72 billion is a floor rather than a central estimate; the direction of the error is known and its magnitude is not claimed. Second, the register does not obviously support compound growth near 8 percent. Occupancy is 71 percent, the facility count grew under 1 percent, the fee-for-service Medicare margin is 17.1 percent and projected at about 18 percent for fiscal 2026, and MedPAC has recommended for the second consecutive year that Congress cut the base payment rate by 7 percent. What the register does support is volume growth, which is where the published rate has to come from.\n\nThe curve shown is modelled at a constant 7.80 percent between the two endpoints. The intermediate years are interpolation, not separately sourced observations. Recomputed from the endpoints the series gives 7.7979 percent, 0.0021 points from the stated rate.",
+  "seo": {
+    "meta_title": "Inpatient Rehabilitation Facilities Market Size & Forecast",
+    "meta_description": "No publisher sizes the IRF market. This report builds it from MedPAC and the Federal Register: $23.72B in 2026 at 7.80%, with the arithmetic shown.",
+    "keywords": [
+      "inpatient rehabilitation facilities market",
+      "IRF market size",
+      "inpatient rehabilitation hospital market",
+      "IRF PPS conversion factor",
+      "post-acute care market",
+      "Encompass Health",
+      "60 percent rule"
+    ]
+  },
+  "market_overview": {
+    "summary": "United States all-payer inpatient rehabilitation facility revenue is $23.72 billion in 2026 on the construction set out in this report, projected to $37.22 billion by 2032 at a 7.80 percent CAGR. No market-research publisher sizes this market in dollars; the base is built from MedPAC's measured $11.0 billion of fiscal 2024 fee-for-service Medicare IRF spending and MedPAC's own published payment shares and rate updates, and the growth rate is Global Market Insights' published 7.8 percent for the IRF segment of United States post-acute care. The measured fee-for-service Medicare tier alone is $11.62 billion for fiscal 2026, 49.0 percent of the headline. The nearest published figures measure different industries: global medical rehabilitation services at $303.4 billion for 2026 is 12.79x this market, and global post-acute care at $1.3 trillion is 54.81x.",
+    "key_trends": [
+      "No publisher surveyed sizes the IRF in dollars; two publish an IRF segment CAGR (7.8 percent US, 8.5 percent global) with no value attached",
+      "Published parent-category figures for 2026 spread 6.36x, from $204.54 billion for global rehabilitation to $1.3 trillion for global post-acute care",
+      "Freestanding IRFs earn a 25.0 percent fee-for-service Medicare margin against 4.1 percent for hospital-based units, on costs of $18,000 against $25,000 per stay",
+      "Fee-for-service IRF stays rose 7.6 percent in fiscal 2024 and stays per 10,000 beneficiaries rose 9.7 percent to 132, while the facility count grew under 1 percent",
+      "MedPAC has recommended a 7 percent cut to the IRF base payment rate for fiscal 2027, by 17 votes to nil, for the second consecutive year",
+      "Access is thin by design: fewer than 30 percent of hospital service areas contained an IRF in 2022, against 97 percent for skilled nursing facilities"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Fully reimbursed, federally defined, capacity-constrained by a case-mix compliance threshold"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Volume: fee-for-service stays per 10,000 Medicare beneficiaries rose from 107 in 2019 to 132 in fiscal 2024, up 9.7 percent in a single year",
+      "Case-mix intensity: growth above 12 percent in other neurological and non-traumatic brain injury rehabilitation, which sit among the higher-weighted case-mix groups",
+      "For-profit capital: freestanding and for-profit facility counts both rose 4.3 percent in fiscal 2024, and almost all new IRFs that opened were for-profit",
+      "Statutory price updates that have been positive every year: 3.0 percent for fiscal 2025, 2.6 percent for fiscal 2026 and 2.3 percent for fiscal 2027",
+      "Referral economics inside hospitals: an acute hospital that discharges to its own IRF subunit frees an acute bed, and MedPAC finds acute hospitals with IRF subunits earn slightly better fee-for-service margins than those without"
+    ],
+    "restraints": [
+      "MedPAC's standing recommendation that Congress cut the base payment rate by 7 percent, which it estimates would reduce spending by $2 billion to $5 billion in one year",
+      "The 60 percent compliance threshold caps how much of a facility's book can be general rehabilitation, and debility at 14.7 percent of stays sits outside the 13 qualifying conditions",
+      "Hospital-based units, two-thirds of all IRFs, run a 4.1 percent fee-for-service margin and their count is falling",
+      "Occupancy at 71 percent nationally means the sector already carries spare capacity, so revenue growth cannot come from filling existing beds alone",
+      "Beds under 10 run a negative fee-for-service margin of -4.9 percent, which makes small hospital-based units structurally unviable"
+    ],
+    "opportunities": [
+      "Geographic whitespace: only about 30 percent of fee-for-service Medicare beneficiaries lived in a hospital service area containing an IRF",
+      "Bed addition rather than facility addition: Encompass Health added 517 beds in 2025 via eight new hospitals and 127 beds to existing sites, and states a plan to grow licensed beds by about 72 percent",
+      "Higher-acuity case mix, where the payment table ranges 6.257x from the lowest to the highest non-terminal case-mix group",
+      "Consolidation of hospital-based units into freestanding joint ventures, which moves volume from a 4.1 percent margin structure to a 25.0 percent one"
+    ],
+    "challenges": [
+      "No published market sizing exists, so procurement, investment and planning in this sector run on constructions rather than citations",
+      "Medicare Advantage at 16.4 percent of the largest operator's revenue pays differently from fee-for-service and discloses nothing comparable to the IRF PPS rate table",
+      "Hospital-based IRFs take 36 percent of stays but 78 percent of high-cost outlier stays, and outlier payments cover only part of the excess cost by design",
+      "Quality measurement is incomplete: no patient-experience survey is collected under the Quality Reporting Program, and MedPAC raises validity concerns about the provider-reported function data that drive case-mix assignment",
+      "Audit exposure, with the largest operator disclosing Medicare review requests spanning discharges from 2010 to 2025"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Freestanding inpatient rehabilitation hospitals",
+      "Hospital-based inpatient rehabilitation units"
+    ],
+    "by_application": [
+      "Stroke rehabilitation",
+      "Other neurological conditions",
+      "Debility",
+      "Fracture of the lower extremity",
+      "Brain injury",
+      "Traumatic spinal cord injury",
+      "Other orthopaedic conditions"
+    ],
+    "by_end_user": [
+      "For-profit operators",
+      "Nonprofit health systems",
+      "Government facilities"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 23.72 },
+    { "year": 2027, "value": 25.57 },
+    { "year": 2028, "value": 27.56 },
+    { "year": 2029, "value": 29.71 },
+    { "year": 2030, "value": 32.03 },
+    { "year": 2031, "value": 34.53 },
+    { "year": 2032, "value": 37.22 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "United States all-payer IRF revenue, 2026-2032 (modelled at constant CAGR between a constructed base and a published segment rate)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Encompass Health",
+      "headquarters": "Birmingham, Alabama, United States",
+      "market_position": "Largest operator; roughly a quarter to a third of the sector on every denominator available",
+      "description": "Describes itself as the largest owner and operator of inpatient rehabilitation hospitals in the United States. 173 hospitals in 39 states and Puerto Rico at 31 December 2025, 11,465 licensed beds, 263,299 discharges and $5,935.2 million of net operating revenue, of which $5,756.3 million was inpatient. Net patient revenue per discharge $21,862.20, occupancy 75.9 percent, average length of stay 12.1 days. Payor mix: Medicare 65.4 percent, Medicare Advantage 16.4 percent, managed care 10.7 percent, Medicaid 3.1 percent. MedPAC reported that in calendar 2024 the company owned or operated about 42 percent of freestanding IRFs and accounted for about 34 percent of all fee-for-service Medicare IRF stays; the first reproduces exactly from the company's own count (166 of 392 freestanding IRFs, 42.3 percent). Revenue share is not disclosed by any source and is not estimated here."
+    },
+    {
+      "company": "Select Medical",
+      "headquarters": "Mechanicsburg, Pennsylvania, United States",
+      "market_position": "Second listed operator; higher-acuity book at materially higher revenue per day",
+      "description": "Rehabilitation hospital segment revenue of $1,288,954 thousand for 2025, up 16.1 percent, across 38 rehabilitation hospitals in 15 states. 510,127 patient days, 36,787 admissions, $2,260 revenue per patient day, 82 percent occupancy, adjusted EBITDA margin 21.6 percent. That works out at $35,038 per admission on a 13.87-day average stay -- 25.1 percent more revenue per day than Encompass Health, on the same payment system, which is what a catastrophic and neuro-transitional case mix looks like inside a table whose weights range 6.257x. The company also runs 104 critical illness recovery hospitals and 1,917 outpatient clinics, which are outside this market."
+    },
+    {
+      "company": "Hospital-based IRF units",
+      "headquarters": "United States, distributed",
+      "market_position": "Two-thirds of all facilities, 36 percent of stays, and the structurally weaker half of the sector",
+      "description": "Not a company but the sector's larger population: 777 of 1,169 IRFs in fiscal 2024, operating about 19,000 of roughly 42,000 national IRF beds. Sixty-seven percent have fewer than 25 beds, occupancy runs 67 percent, cost per stay is $25,000 against $18,000 at freestanding hospitals, and the fee-for-service Medicare margin is 4.1 percent. The count fell 0.9 percent in fiscal 2024 and nonprofit facilities fell 2.8 percent. These units take 36 percent of fee-for-service stays but 78 percent of high-cost outlier stays. Any growth rate applied to this market is an average across this population and the freestanding one, which are moving in opposite directions."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [
+    {
+      "company": "CMS",
+      "year": 2026,
+      "event": "FY2027 IRF PPS final rule released 30 July 2026 sets the standard payment conversion factor at $19,868, up from $19,371, applying a 2.3 percent market basket update (3.2 percent less a 0.9 point productivity adjustment) and a CMG relative weight budget neutrality factor of 0.9990. Labor-related share 74.3 percent."
+    },
+    {
+      "company": "MedPAC",
+      "year": 2026,
+      "event": "In its March 2026 report to Congress, the Commission recommended by 17 votes to nil that Congress reduce the 2026 IRF base payment rate by 7 percent for fiscal 2027 -- the same recommendation as the prior year -- estimating a spending reduction of $2 billion to $5 billion in one year and $10 billion to $25 billion over five years."
+    },
+    {
+      "company": "Select Medical",
+      "year": 2026,
+      "event": "Merger agreement announced 2 March 2026 to take the company private at $16.50 per share in cash, an enterprise value of about $3.9 billion, by a group led by Executive Chairman Robert Ortenzio, Senior EVP Martin Jackson and Welsh, Carson, Anderson & Stowe. The Hart-Scott-Rodino waiting period expired 27 April 2026; management guided to a mid-2026 close. Pending as of the latest disclosure reviewed."
+    },
+    {
+      "company": "Encompass Health",
+      "year": 2025,
+      "event": "Added 517 inpatient rehabilitation beds during 2025 through eight new hospitals and 127 beds added to existing hospitals, taking the portfolio to 173 hospitals and 11,465 licensed beds at 31 December 2025, with 2026 revenue guidance of $6,365 million to $6,465 million."
+    },
+    {
+      "company": "CMS",
+      "year": 2025,
+      "event": "FY2026 IRF PPS final rule published 5 August 2025 at 90 FR 37678 set the standard payment conversion factor at $19,371, from $18,907, and continued the second year of the three-year budget-neutral phase-out of the rural adjustment. CMS estimated the overall economic impact at a $340 million increase in payments."
+    }
+  ],
+  "regulatory_landscape": [
+    "IRF prospective payment system, 42 CFR 412 subpart P: pays a per-discharge amount equal to the standard payment conversion factor ($19,371 for FY2026, $19,868 for FY2027) multiplied by a case-mix group relative weight, then adjusted for wage index, low-income patient share, teaching status and rurality",
+    "The compliance threshold, commonly called the 60 percent rule: no less than 60 percent of patients admitted must have required intensive rehabilitation for one or more of 13 specified conditions, as principal diagnosis or comorbidity. A facility that fails it has all of its stays paid under the inpatient hospital PPS instead",
+    "Medicare coverage criteria for an individual IRF stay: active therapy in at least two modalities, one of them physical or occupational therapy, typically three hours a day at least five days a week; clinical stability at admission; face-to-face rehabilitation physician supervision at least three days a week; and an intensive coordinated interdisciplinary team",
+    "Facility requirements: a rehabilitation medical director full-time at freestanding IRFs or at least 20 hours a week at hospital-based units, a coordinated interdisciplinary team, preadmission screening and an individualised plan of care",
+    "IRF Quality Reporting Program, which reduces the annual market basket update for non-reporting facilities and publishes risk-adjusted successful community discharge and potentially preventable readmission rates through the CMS Provider Data Catalog",
+    "High-cost outlier policy, set to equal 3 percent of estimated aggregate payments, under which hospital-based IRFs took 78 percent of outlier stays in fiscal 2024 while accounting for 36 percent of stays"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of federal registers, Federal Register rulemaking, SEC filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 9, Inpatient rehabilitation facility services -- $11.0 billion FFS spending, 435,000 stays, 1,169 facilities, Tables 9-1 to 9-4",
+      "CMS, FY2026 IRF PPS final rule, 90 FR 37678, Federal Register Vol. 90 No. 148, 5 August 2025 -- Table 5 conversion factor derivation, Table 2 relative weights for 94 case-mix groups, Table 6 payment rates",
+      "CMS, FY2027 IRF PPS final rule, Federal Register public-inspection document 2026-15652, released 30 July 2026 -- conversion factor $19,868",
+      "Encompass Health Corporation, 2025 Annual Report incorporating the Form 10-K for the year ended 31 December 2025, and the fourth-quarter 2025 earnings release of 5 February 2026",
+      "Select Medical Holdings Corporation, Form 8-K exhibit 99.1, fourth quarter and full-year 2025 results, filed 19 February 2026",
+      "Global Market Insights, U.S. Post-acute Care Market (GMI5203, January 2026) and Post-acute Care Market (GMI5512, December 2025)",
+      "Grand View Research, Medical Rehabilitation Services Market (GVR-4-68039-986-5, July 2026); Business Research Insights, Rehabilitation Market (report 118849, updated 16 September 2026)"
+    ],
+    "data_validation": "The headline is a construction, not a citation, because no publisher surveyed sizes this market in dollars. It is built in four printed steps from MedPAC's measured $11.0 billion of fiscal 2024 fee-for-service Medicare IRF spending, divided by MedPAC's own published 49 percent fee-for-service payment share at freestanding IRFs and advanced at MedPAC's own stated 3.0 percent and 2.6 percent regulatory updates. Three independent checks were run on it. First, a second route from the stay side -- 435,000 stays divided by MedPAC's separately published 51 percent stay share, valued at the realised $25,287.36 per stay -- reaches $21.5686 billion against the first method's $22.449 billion, a divergence of 3.92 percent. Second, the result implies $2,062.51 per occupied bed day across 42,000 beds at 71 percent occupancy, which falls between Encompass Health's disclosed $1,806.79 and Select Medical's disclosed $2,260. Third, the Federal Register rule reconciles against itself to the cent: $19,371 multiplied by relative weights of 0.7244 and 4.5328 gives exactly the $14,032.35 and $87,804.87 payment rates published in the same rule. These are plausibility tests computed from published totals and published denominators. They establish what the figures cannot mean; they are not themselves market estimates. MedPAC states the 49 percent share could not be calculated for hospital-based IRFs, so applying it nationally is an assumption, and the advance is at price only, which makes the base a floor rather than a central estimate. The growth rate is Global Market Insights' published 7.8 percent for the IRF segment of United States post-acute care; it comes from a different publisher than the base, and the report says so rather than implying a single coherent series.",
+    "limitations": "Base and growth rate come from different publishers. No regional or country split is published for this market by anyone, so those sections are empty rather than estimated. Vendor revenue share is not disclosed by any source and is not estimated."
+  },
+  "faqs": [
+    {
+      "question": "How big is the inpatient rehabilitation facilities market?",
+      "answer": "United States all-payer IRF revenue is $23.72 billion in 2026 on the construction in this report, rising to $37.22 billion by 2032 at 7.80 percent. The measured fee-for-service Medicare tier alone is $11.62 billion for fiscal 2026 -- 49.0 percent of the headline -- derived from MedPAC's $11.0 billion for fiscal 2024 advanced at the statutory updates. No market-research publisher surveyed for this report sizes the IRF market in dollars at all."
+    },
+    {
+      "question": "Why is the headline a construction rather than a published estimate?",
+      "answer": "Because there is no published estimate to cite. Five searches across roughly twenty publishers found reports on medical rehabilitation services, rehabilitation and post-acute care, but none titled to the inpatient rehabilitation facility. Global Market Insights names IRF as a segment in two reports and publishes a growth rate for it -- 7.8 percent for the United States, 8.5 percent globally -- but publishes no value or share for it. The alternative was to put a parent-category figure under an IRF title, which would overstate this market by 12.79x."
+    },
+    {
+      "question": "How was $23.72 billion arrived at?",
+      "answer": "MedPAC measured $11.0 billion of fee-for-service Medicare IRF spending in fiscal 2024. MedPAC also publishes that fee-for-service Medicare was about 49 percent of all payments at freestanding IRFs, giving $22.449 billion all-payer. Advancing that at MedPAC's own stated regulatory updates of 3.0 percent for fiscal 2025 and 2.6 percent for fiscal 2026 gives $23.72 billion. A second route from the stay side reaches $21.5686 billion for fiscal 2024, 3.92 percent away. Because the advance is at price only and stays rose 7.6 percent in fiscal 2024, $23.72 billion is a floor."
+    },
+    {
+      "question": "What is the 60 percent rule and why does it matter to market size?",
+      "answer": "It is the compliance threshold that defines the market's boundary. No less than 60 percent of patients admitted to an IRF must have required intensive rehabilitation for one or more of 13 specified conditions, as principal diagnosis or comorbidity. A facility that fails it has all of its stays paid under the inpatient hospital system instead -- it leaves this market entirely. That is why the 1,169-facility register is a list of hospitals that pass a federal test rather than a list of hospitals that do rehabilitation. Debility, at 14.7 percent of fiscal 2024 stays, is not among the 13."
+    },
+    {
+      "question": "How does the IRF market relate to the rehabilitation robotics market?",
+      "answer": "They do not overlap and must not be summed. Rehabilitation robotics is equipment -- robots that assist, guide or measure patient movement -- at $1.77 billion in 2026 growing at 17.10 percent. The IRF market is the facility and the service: the licensed hospital or unit, its beds, its staff and the per-discharge payment it receives. A robot is a capital purchase inside an IRF. The facility market is 13.4x the device market at the 2026 base year."
+    },
+    {
+      "question": "Does the register support 7.8 percent growth?",
+      "answer": "Not on price, and not on facility count. Occupancy is 71 percent, the facility count grew under 1 percent in fiscal 2024, the price updates were 3.0, 2.6 and 2.3 percent for fiscal 2025 to 2027, and MedPAC has twice recommended a 7 percent base rate cut against a 17.1 percent fee-for-service margin. It supports growth on volume: fee-for-service stays rose 7.6 percent in fiscal 2024 and stays per 10,000 beneficiaries rose 9.7 percent to 132, with over 12 percent growth in other neurological and non-traumatic brain injury rehabilitation."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "The headline is United States only and is built from United States federal instruments, so there is no global model to split. Outside the United States the IRF is not a defined payment category at all -- no equivalent of the 60 percent rule, the case-mix group table or the IRF patient assessment instrument exists -- so a country table would compare a regulated class against loosely similar hospital departments. The sections are omitted rather than filled with placeholder figures."
+    },
+    {
+      "question": "Who leads the inpatient rehabilitation facility market?",
+      "answer": "Encompass Health by a wide margin. MedPAC reported it owned or operated about 42 percent of freestanding IRFs and accounted for about 34 percent of all fee-for-service Medicare stays in calendar 2024, and its own count reproduces that exactly at 166 of 392 freestanding facilities. Against other denominators it is 27.3 percent of national IRF beds and 30.9 percent of all-payer stays. Adding Select Medical's rehabilitation hospital segment brings the two listed operators to about 30.5 percent of the constructed market. No revenue share is published by anyone and none is estimated here, because three of those four denominators are constructed and they spread 17 points."
+    }
+  ],
+  "key_highlights": [
+    "No market-research publisher surveyed sizes the inpatient rehabilitation facility in dollars; two publish an IRF segment CAGR with no value attached",
+    "United States all-payer IRF revenue constructed at $23.72 billion for 2026, rising to $37.22 billion by 2032 at 7.80 percent",
+    "The measured fee-for-service Medicare tier is $11.62 billion for fiscal 2026 -- 49.0 percent of the headline -- from MedPAC's $11.0 billion for fiscal 2024",
+    "Two independent routes to the all-payer base, from payments and from stays, agree within 3.92 percent",
+    "The construction implies $2,062.51 per occupied bed day, between Encompass Health's $1,806.79 and Select Medical's $2,260",
+    "The FY2026 rule reconciles to the cent: $19,371 times weights of 0.7244 and 4.5328 gives the published $14,032.35 and $87,804.87 rates",
+    "Freestanding IRFs earn 25.0 percent fee-for-service Medicare margins against 4.1 percent for hospital-based units, on 392 facilities against 777"
+  ],
+  "reader_takeaways": [
+    "Any IRF market figure you are shown is a construction, because no publisher has published one -- ask which register it was divided out of and what share statistic was used",
+    "Do not use a medical rehabilitation services or post-acute care headline for inpatient rehabilitation facilities: the first overstates this market by 12.79x and the second by 54.81x",
+    "Model the freestanding and hospital-based populations separately -- 25.0 against 4.1 percent margins, $18,000 against $25,000 cost per stay, growing 4.3 percent against falling 0.9 percent",
+    "Plan on volume rather than price: stays per 10,000 beneficiaries rose 9.7 percent in one year while the three published rate updates were 3.0, 2.6 and 2.3 percent and MedPAC wants the next one to be minus 7",
+    "Treat the 60 percent rule as a capacity constraint on the market itself, not a compliance detail: a facility that fails it stops being an IRF for payment purposes"
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "report_id": "long-term-care-hospitals-market",
+  "slug": "long-term-care-hospitals-market",
+  "title": "Long-Term Care Hospitals Market Size, Share & Forecast 2026-2034",
+  "industry": "Healthcare IT",
+  "published_year": 2026,
+  "base_year": 2026,
+  "forecast_period": "2026-2034",
+  "historical_period": "2016-2024",
+  "currency": "USD",
+  "unit": "Billion",
+  "market_size": {
+    "current_value": 23.62,
+    "forecast_value": 34.8,
+    "cagr": 4.96
+  },
+  "executive_summary": "A long-term care hospital is not a kind of building. It is a Medicare payment class defined by US statute: a hospital that meets the acute care conditions of participation and keeps an average length of stay above 25 days for its qualifying Medicare cases. The register is small enough to print. CMS states in the FY2026 LTCH PPS final rule that there are \"currently approximately 336 LTCHs\", and that its payment impact analysis covers 329 of them.\n\nThat makes this the rare market where the published research can be audited rather than compared. Two global estimates exist that are verifiable on a publisher page, and they differ by 17.05x at the same base year: USD 22.5 billion against USD 1.32 billion, both for 2025, both labelled long-term acute care. They agree on growth almost exactly -- 5.2% against 5.7%, a 1.10x spread. A gap of that shape is not a scope decision. One of the two levels is wrong, and the register says which: Medicare fee-for-service and its beneficiaries spent USD 2.4 billion on 47,000 LTCH stays at about 330 LTCHs in FY2024, so the lower global figure is 0.55x a single payer in a single country.\n\nThe more important finding is what the register itself has done. The Pathway for SGR Reform Act of 2013 split LTCH payment into a standard federal rate for cases meeting clinical criteria and a lower site-neutral rate for everything else. The site-neutral-eligible population did not move onto the lower rate. It left the setting. By FY2024 approximately 9 percent of LTCH cases were site-neutral cases; in FY2026 CMS projects site-neutral payments at approximately 4.1 percent of total LTCH PPS payments. Over the same period FFS Medicare LTCH spending fell from USD 5.1 billion in 2016 to USD 2.4 billion in FY2024 -- 8.99% per year -- and cases fell from 125,586 to 47,000, or 11.56% per year.\n\nThis is a small market, and on the only series anyone measures, it is shrinking. The headline below is a published global all-payer estimate on a much wider boundary, and the report says so everywhere it appears.",
+  "market_context": "The LTCH exists because Medicare created a payment exception for chronically critically ill patients: people with profound debilitation of multiple systems, usually with ongoing respiratory failure, who need hospital-level care for weeks rather than days. A qualifying stay follows an acute hospital stay that included three or more days in intensive care, or includes mechanical ventilation for at least 96 hours. Nothing else about the facility class is a market phenomenon -- it is 42 CFR 412 subpart O and the Pathway for SGR Reform Act of 2013.\n\nThat has a consequence for any global sizing. A facility class defined by one country's payment statute cannot plausibly be two or three times larger outside that country than inside it. The register in the United States supports USD 6.64 billion of all-payer LTCH revenue priced at the Medicare rate, and USD 8.01 billion scaled from the largest operator's disclosure. A published global total of USD 22.5 billion leaves roughly USD 12.3 billion for the rest of the world, which is a statement about where a research house drew its boundary rather than about hospitals.\n\nThe setting is also unusually concentrated in facilities. Select Medical operated 104 critical illness recovery hospitals at the end of 2025; the American Hospital Association's December 2025 case study puts ScionHealth at 65 LTCHs. That is 169 of approximately 336 facilities in the federal register, held by two operators. No revenue share for either is publicly disclosed, and none is published here.",
+  "forecast_analysis": "The curve shown is Dataintelo's own global long-term acute care series: USD 22.5 billion for 2025 and USD 34.8 billion for 2034. The 2026 base of USD 23.62 billion is that publisher's 2025 figure advanced one year on the rate its own two endpoints imply, 4.9649% -- it is interpolation, not a published observation, and the intermediate years are the shape the two endpoints force rather than annual estimates. The rate published here is 4.96% and not Dataintelo's stated 5.2%, because 5.2% implies USD 35.5 billion for 2034 rather than the USD 34.8 billion the same page prints. The endpoints are the publisher's; the rate is the rate those endpoints actually describe.\n\nDataintelo was chosen over the only other verifiable global series for one reason. Reanin's USD 1.32 billion for 2025 is 0.55x what Medicare fee-for-service alone spent on LTCH care in the United States in FY2024, and 0.20x the USD 6.64 billion US all-payer floor derived in this report. A federal measurement rules it out. Dataintelo's published North America figure of USD 10.2 billion for 2025 sits within 1.27x to 1.54x of the same derivation, so it survives an order-of-magnitude test at the regional level even though its global total does not.\n\nThe contradiction is left on the page rather than smoothed. A series growing at 4.96% sits beside a US register whose spending fell 8.99% per year and whose cases fell 11.56% per year between 2016 and FY2024. A reader working to the Medicare benefit should anchor on USD 2.4 billion for FY2024 and CMS's projected USD 2.583 billion for FY2026. A reader working to US all-payer LTCH revenue should anchor on the USD 6.64 billion to USD 8.01 billion bracket. Only a reader who accepts a global all-payer boundary that extends well beyond the US statutory facility class should use the headline at all.",
+  "seo": {
+    "meta_title": "Long-Term Care Hospitals Market Size and Forecast 2034",
+    "meta_description": "Two verifiable LTCH estimates differ 17.05x at the same base year. Against CMS's register of about 336 hospitals, only one survives.",
+    "keywords": [
+      "long-term care hospitals market",
+      "LTCH market size",
+      "long-term acute care hospital market",
+      "LTCH PPS site-neutral rate",
+      "critical illness recovery hospitals",
+      "post-acute care market",
+      "Medicare LTCH spending"
+    ]
+  },
+  "market_overview": {
+    "summary": "On the broad global all-payer definition used by the most recently updated published estimate, the long-term acute care hospital market is USD 23.62 billion in 2026, projected to USD 34.8 billion by 2034 at a 4.96% CAGR. That figure is not what a United States buyer means by a long-term care hospital. CMS counts approximately 336 LTCHs; Medicare fee-for-service and its beneficiaries spent USD 2.4 billion on 47,000 stays at about 330 of them in FY2024; and this report derives a US all-payer bracket of USD 6.64 billion to USD 8.01 billion. The gap between the headline and the register is a boundary decision, and the register's own trend runs the other way.",
+    "key_trends": [
+      "The two verifiable global estimates differ 17.05x at the same base year (USD 22.5 billion against USD 1.32 billion for 2025) while their growth rates differ only 1.10x",
+      "CMS states there are \"currently approximately 336 LTCHs\" and runs its FY2026 payment impact analysis on 329 of them",
+      "FFS Medicare LTCH spending fell from USD 5.1 billion (2016) to USD 2.4 billion (FY2024), 8.99% per year, while cases fell from 125,586 to 47,000, 11.56% per year",
+      "Payment per case moved the other way, from USD 40,656 (2016) to a derived USD 51,063.83 (FY2024), about 2.89% per year -- roughly the statutory update",
+      "Site-neutral cases fell from a derived 42.4% of cases in 2016 to approximately 9 percent in FY2024, and CMS projects site-neutral payments at approximately 4.1 percent of FY2026 LTCH PPS dollars",
+      "Fee-for-service Medicare is only 36.14% of LTCH admissions (47,000 of 130,050 in FY2024), so the one reliable spending series covers barely a third of the volume"
+    ],
+    "market_stage": "Mature",
+    "adoption_level": "Statutorily capped US facility class; approximately 336 certified hospitals"
+  },
+  "market_dynamics": {
+    "drivers": [
+      "Annual statutory rate updates: the LTCH PPS standard federal payment rate rose from USD 48,116.62 in FY2024 to USD 49,383.26 in FY2025 to USD 50,824.51 in FY2026 and USD 52,132.76 in FY2027",
+      "Rising case intensity as the surviving caseload concentrates on ventilator weaning and multi-system failure, lifting payment per case about 2.89% per year since 2016",
+      "Intensive care capacity pressure at acute hospitals, which makes an extended-stay hospital bed the release valve for the longest and costliest cases",
+      "Non-Medicare payers, which are 64% of admissions and pay roughly 1.21x the Medicare rate per day on the only operator disclosure available"
+    ],
+    "restraints": [
+      "The site-neutral rate: the lower of the IPPS rate for the stay or 100 percent of its cost, which priced an entire admission population out of the setting rather than onto a lower rate",
+      "The discharge payment percentage rule, which pays an LTCH under the IPPS entirely until at least 50 percent of its Medicare discharges qualify for the LTCH rate",
+      "A certified register that has fallen from 407 LTCHs in 2016 to approximately 336, about 2.37% per year, with moratoria having blocked new facilities for most of 2007-2017",
+      "Occupancy that has not recovered: average LTCH occupancy was 63% in 2018 and 2019 and 65% in 2020, against 69% in Select Medical's segment in 2025",
+      "A falling denominator: FFS beneficiaries using LTCHs fell from 111,000 in 2016 to about 71,000 in 2020, and cases per 10,000 FFS beneficiaries from 32.7 to 20.9"
+    ],
+    "opportunities": [
+      "Medicare Advantage and commercial contracting, where the payer mix is already the majority of admissions and the per-day price is higher than the statutory rate",
+      "Ventilator weaning as a defensible clinical niche, because the 96-hour mechanical ventilation criterion is one of only two routes to the standard federal rate",
+      "Facility consolidation, where two operators already hold 169 of approximately 336 LTCHs and the register is still contracting",
+      "High-cost outlier cases, funded by an approximately 8 percent reduction to all standard-rate payments and so a structural redistribution toward the sickest caseload"
+    ],
+    "challenges": [
+      "No credible standalone published sizing: of six publishers surveyed, one is unverifiable, one is paywalled entirely, one publishes a segment CAGR with no level, and the two that publish levels differ 17.05x",
+      "The published growth rates contradict the only measured series: 4.96% against a register falling 8.99% per year in spending",
+      "No vendor or operator revenue share is publicly disclosed anywhere in this setting, so competitive claims cannot be independently checked",
+      "MedPAC excluded LTCHs from its March 2026 post-acute care chapter because \"there are few providers and beneficiaries who use this service\", removing the most reliable annual analysis of the sector"
+    ]
+  },
+  "market_segmentation": {
+    "by_type": [
+      "Freestanding long-term care hospitals",
+      "Hospitals-within-hospitals and satellite facilities",
+      "All-inclusive rate providers"
+    ],
+    "by_application": [
+      "Prolonged mechanical ventilation and weaning",
+      "Multi-system organ failure",
+      "Complex wound care",
+      "Severe infection and sepsis recovery",
+      "Traumatic brain and spinal injury"
+    ],
+    "by_end_user": [
+      "Medicare fee-for-service",
+      "Medicare Advantage",
+      "Medicaid managed care",
+      "Commercial insurance"
+    ]
+  },
+  "regional_analysis": [],
+  "country_analysis": [],
+  "market_forecast": [
+    { "year": 2026, "value": 23.62 },
+    { "year": 2027, "value": 24.79 },
+    { "year": 2028, "value": 26.02 },
+    { "year": 2029, "value": 27.31 },
+    { "year": 2030, "value": 28.67 },
+    { "year": 2031, "value": 30.09 },
+    { "year": 2032, "value": 31.59 },
+    { "year": 2033, "value": 33.15 },
+    { "year": 2034, "value": 34.8 }
+  ],
+  "charts": [
+    {
+      "type": "line_chart",
+      "title": "Market size, 2026-2034 (modelled at constant CAGR between published endpoints; the 2026 base is interpolated)",
+      "data_source": "market_forecast"
+    }
+  ],
+  "competitive_landscape": [
+    {
+      "company": "Select Medical Holdings Corporation",
+      "headquarters": "Mechanicsburg, Pennsylvania, United States",
+      "market_position": "Largest disclosed operator by facility count",
+      "description": "Reported 104 critical illness recovery hospitals in 28 states at 31 December 2025, unchanged in number from a year earlier, on segment revenue of USD 2,477.8 million (from USD 2,444.2 million in 2024). Patient days fell to 1,107,387 from 1,118,757 while revenue per patient day rose to USD 2,230 from USD 2,177 and occupancy to 69% from 68%; segment Adjusted EBITDA fell to USD 265.4 million from USD 301.6 million. Flat revenue on falling volume and rising price is the register's own pattern inside one company. No market share is disclosed."
+    },
+    {
+      "company": "ScionHealth",
+      "headquarters": "Louisville, Kentucky, United States",
+      "market_position": "Second largest disclosed operator by facility count",
+      "description": "Operates 65 long-term acute care hospitals in 20 states under the Kindred Hospitals, Cornerstone Specialty Hospitals and Solara Specialty Hospitals brands, per an American Hospital Association case study dated December 2025. The LTCH portfolio originates in Kindred Healthcare's hospital division. Privately held, so no revenue, occupancy or payer-mix figures are disclosed; the case study states only that patients are covered by all payers including traditional Medicare, Medicare Advantage, Medicaid managed care and commercial insurance."
+    },
+    {
+      "company": "Ernest Health",
+      "headquarters": "Albuquerque, New Mexico, United States",
+      "market_position": "Regional operator",
+      "description": "Operates long-term acute care hospitals alongside inpatient rehabilitation facilities across the western and southern United States. Privately held with no public facility count, revenue or payer mix that could be verified against a dated primary document for this edition, so no figures are published for it here. Named because the two disclosed operators account for only about half the federal register and the remainder is regional and independent."
+    },
+    {
+      "company": "Vibra Healthcare",
+      "headquarters": "Mechanicsburg, Pennsylvania, United States",
+      "market_position": "Regional operator",
+      "description": "Operates long-term acute care hospitals and rehabilitation hospitals in multiple states. Privately held; no facility count, revenue or occupancy figure could be verified against a dated primary document for this edition and none is published. MedPAC has described the sector as containing multiple regional chain operators alongside the national companies, and noted that 44 percent of LTCHs billing Medicare every year from 2016 to 2020 never reached an 85 percent share of qualifying cases, with just under half of those in Texas or Louisiana."
+    }
+  ],
+  "company_profiles": [],
+  "recent_developments": [],
+  "regulatory_landscape": [
+    "Pathway for SGR Reform Act of 2013, which created the dual payment-rate structure: a stay is paid the LTCH PPS standard federal rate only if it immediately follows an acute care hospital stay including three or more intensive care days, or includes mechanical ventilation for at least 96 hours",
+    "The site-neutral payment rate, which pays all other LTCH stays the lower of Medicare's IPPS rate for that stay or 100 percent of the cost of the stay, and which CMS projects at approximately 4.1 percent of total FY2026 LTCH PPS payments",
+    "FY2026 IPPS/LTCH PPS final rule (CMS-1833-F, issued 31 July 2025, published 4 August 2025), setting the LTCH PPS standard federal payment rate at USD 50,824.51 on a 2.7 percent annual update, a labor-related share of 72.9 percent and a high-cost outlier fixed-loss amount of USD 78,936",
+    "The 25-day average length of stay condition and the acute care hospital conditions of participation, which together define the facility class",
+    "The discharge payment percentage requirement, in force for cost-reporting periods beginning on or after 1 October 2019: an LTCH whose qualifying share of Medicare discharges falls below 50 percent is paid under the IPPS until it recovers",
+    "The LTCH Quality Reporting Program, which reduces the annual standard federal rate update by 2 percentage points for facilities that fail to report specified quality data",
+    "The CARES Act section 3711(b)(2) waiver of the site-neutral payment rate during the coronavirus public health emergency, whose ending CMS addresses in the FY2026 final rule when identifying site-neutral cases"
+  ],
+  "research_methodology": {
+    "primary_research": [
+      "No primary interviews were conducted for this edition. This report is a synthesis of federal registers, regulatory text, SEC filings and published third-party estimates, and is labelled as such rather than implying fieldwork that did not occur."
+    ],
+    "secondary_research": [
+      "CMS, FY2026 IPPS/LTCH PPS final rule (CMS-1833-F), Federal Register, 4 August 2025: standard federal rate USD 50,824.51; approximately 336 LTCHs currently, 329 in the impact analysis; approximately 9 percent of FY2024 cases site-neutral; site-neutral payments approximately 4.1 percent of FY2026 LTCH PPS payments; aggregate FY2026 payments approximately USD 2.583 billion against FY2025 USD 2.500 billion; 130,050 total admissions from 330 LTCHs on FY2024 data",
+      "MedPAC, Long-term care hospitals payment system, payment basics, revised October 2026: USD 2.4 billion on 47,000 inpatient stays at about 330 LTCHs in FY2024; FY2027 base rate USD 52,132.76",
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2022, Chapter 10: Table 10-3 case, payment-per-case and length-of-stay series for 2016-2020; occupancy; qualifying and nonqualifying case counts",
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2018, Chapter 11, and March 2020, Chapter 11: spending, case, user and facility series for 2012-2018",
+      "MedPAC, Report to the Congress: Medicare Payment Policy, March 2026, Chapter 6, which excludes LTCHs by footnote and puts FY2024 FFS Medicare post-acute spending at USD 57.7 billion",
+      "Select Medical Holdings Corporation, Form 10-K for the year ended 31 December 2025 and the 19 February 2026 earnings release: critical illness recovery segment revenue, hospital count, patient days, revenue per patient day and occupancy",
+      "American Hospital Association, Post-Acute Care case study: ScionHealth U.S., December 2025: 65 LTCHs in 20 states",
+      "Published market estimates from Dataintelo (report HC-202080), Reanin (Rn160052364), Global Market Insights (GMI5203), Kentley Insights via Research and Markets (6224051) and IBISWorld (industry 1591)"
+    ],
+    "data_validation": "Market size is taken from a named published third-party estimate and is presented as that publisher's estimate, not as a verified measurement; the 2026 base year is that publisher's 2025 figure advanced one year on the rate its own endpoints imply, and is interpolation. Four independent checks were run against public registers rather than against other estimates. First, realised Medicare payment per stay: USD 2.4 billion over 47,000 FY2024 stays is USD 51,063.83, which is 1.0613x the FY2024 statutory standard federal rate of USD 48,116.62 -- the margin case mix, the wage index and high-cost outliers would produce, net of the roughly 9 percent of cases paid site-neutral. Second, payer mix: 47,000 FFS stays against CMS's 130,050 total FY2024 LTCH admissions is 36.14%, so the only reliable spending series covers about a third of the volume. Third, a US all-payer bracket: USD 6.64 billion pricing all 130,050 admissions at the Medicare rate, and USD 8.01 billion scaling Select Medical's USD 23.825 million of revenue per hospital across approximately 336 facilities; the 1.21x gap between them reproduces independently as USD 2,230 per patient day against USD 1,850.14 per FFS Medicare day. Fourth, an adjacency test: IBISWorld's specialty hospitals industry implies USD 175.3 million per business, 7.36x Select Medical's per-hospital revenue, which rules that industry out as an LTCH proxy. These are plausibility tests computed from published totals and published denominators. They establish what the published figures cannot mean; they do not establish what the correct market size is, and none is offered as an estimate. The 47,000-stay and about-330-facility figures are MedPAC's own roundings, so the per-stay results carry roughly one significant figure of denominator uncertainty, and the register year (FY2024) differs from the operator disclosure year (2025) without correction.",
+    "data_sources": [
+      "Federal Register (CMS-1833-F, FY2026 IPPS/LTCH PPS final rule)",
+      "MedPAC reports to the Congress and payment basics series",
+      "SEC EDGAR (Select Medical Holdings Corporation)",
+      "American Hospital Association case studies",
+      "Publisher pages for Dataintelo, Reanin, Global Market Insights, Research and Markets and IBISWorld"
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How big is the long-term care hospital market?",
+      "answer": "It depends entirely on the boundary. On the broad global all-payer definition used by the most recently updated published estimate, USD 23.62 billion in 2026 rising to USD 34.8 billion by 2034 at 4.96%. On the United States Medicare fee-for-service benefit, which is what the term means in US payment law, MedPAC measures USD 2.4 billion on 47,000 stays at about 330 LTCHs in FY2024, and CMS projects aggregate FY2026 LTCH PPS payments of approximately USD 2.583 billion. This report derives a US all-payer bracket of USD 6.64 billion to USD 8.01 billion. Those are three different questions and they differ by roughly a factor of ten end to end."
+    },
+    {
+      "question": "Why do published estimates differ so much?",
+      "answer": "Because they are not measuring the same thing, and in one case because a figure is simply too small to be right. The two verifiable global estimates for 2025 are USD 22.5 billion and USD 1.32 billion, a 17.05x gap, while their growth rates differ only 1.10x. The lower figure is 0.55x what Medicare fee-for-service alone spent on LTCH care in the United States in FY2024, which a federal measurement rules out. The higher figure survives at the North America level and leaves about USD 12.3 billion for the rest of the world, for a facility class that exists as a payment category only under US statute."
+    },
+    {
+      "question": "What did the site-neutral payment rate do to this market?",
+      "answer": "It removed the patients rather than repricing them. Reversing MedPAC's own stated annual rates gives about 53,178 nonqualifying cases in 2016 against 23,160 in 2019 -- a 56.4% fall -- while qualifying cases fell only about 2.0% a year. That loss of 30,018 cases is 87.2% of the 34,439 cases the whole sector lost over those three years. By FY2024 CMS reports approximately 9 percent of LTCH cases as site-neutral cases, and for FY2026 it projects site-neutral payments at approximately 4.1 percent of total LTCH PPS payments. The policy worked completely, and the market contracted by the size of the population it removed."
+    },
+    {
+      "question": "Is the number of long-term care hospitals growing?",
+      "answer": "No. CMS states there are \"currently approximately 336 LTCHs\" in the FY2026 final rule, against 407 in 2016 and 426 with valid cost reports in 2012 -- about 2.37% per year of decline since 2016. Spending and volume have fallen much faster than the facility count: FFS Medicare spending from USD 5.1 billion to USD 2.4 billion (8.99% per year) and cases from 125,586 to 47,000 (11.56% per year) between 2016 and FY2024. Average occupancy was 63% in 2018 and 2019 and 65% in 2020."
+    },
+    {
+      "question": "Who are the largest operators, and what share do they hold?",
+      "answer": "Select Medical reported 104 critical illness recovery hospitals in 28 states at 31 December 2025 on segment revenue of USD 2,477.8 million, and an American Hospital Association case study dated December 2025 puts ScionHealth at 65 LTCHs in 20 states. Together that is 169 of approximately 336 facilities in the federal register. That is a facility count from two dated disclosures, not a revenue share. No operator revenue share is publicly disclosed for this setting, and none is published here."
+    },
+    {
+      "question": "Why does this report show no regional or country breakdown?",
+      "answer": "Because no public source gives one that survives checking. The one publisher that prints a regional table does not reconcile against its own dollars -- it states Asia Pacific at 18.4% where USD 4.1 billion of USD 22.5 billion is 18.2% -- and its own FAQ describes the same percentages as shares of admissions rather than of value. The other publishes no regional dollars at all. The only regional statement this research can defend is that the LTCH facility class is a United States payment construct, and that belongs in prose rather than a table."
+    },
+    {
+      "question": "Can the Medicare figure be used as the size of the market?",
+      "answer": "Only as about a third of it. CMS's own FY2026 burden estimate counts 130,050 total LTCH admissions from 330 LTCHs on FY2024 data, against MedPAC's 47,000 fee-for-service Medicare stays -- so FFS Medicare is 36.14% of admissions. The rest is Medicare Advantage, Medicaid managed care and commercial insurance, which on the only operator disclosure available pay roughly 1.21x the Medicare rate per day. That is why this report derives a bracket rather than quoting the Medicare total as a market size."
+    }
+  ],
+  "key_highlights": [
+    "The two verifiable global estimates differ 17.05x at the same base year while their growth rates differ only 1.10x -- a level failure, not a scope decision",
+    "CMS states there are \"currently approximately 336 LTCHs\", and runs its FY2026 payment impact analysis on 329 of them",
+    "MedPAC measures USD 2.4 billion of FFS Medicare spending on 47,000 stays at about 330 LTCHs in FY2024; USD 2.4 billion over 47,000 stays is USD 51,063.83 per stay, 1.0613x the FY2024 statutory rate of USD 48,116.62",
+    "FFS Medicare is only 36.14% of LTCH admissions (47,000 of 130,050 in FY2024), which puts US all-payer revenue in a USD 6.64 billion to USD 8.01 billion bracket",
+    "Site-neutral cases fell from a derived 42.4% of cases in 2016 to approximately 9 percent in FY2024, and to approximately 4.1 percent of FY2026 LTCH PPS dollars",
+    "FFS Medicare LTCH spending fell 8.99% per year and cases 11.56% per year between 2016 and FY2024, while payment per case rose about 2.89% per year",
+    "Two operators hold 169 of approximately 336 facilities; no revenue share is publicly disclosed for either, and none is published here"
+  ],
+  "reader_takeaways": [
+    "Before quoting any LTCH figure, establish which of three boundaries it sits on -- the US Medicare fee-for-service benefit at USD 2.4 billion, US all-payer at USD 6.64 billion to USD 8.01 billion, or a global all-payer reading at USD 23.62 billion -- because that single decision moves the number by about a factor of ten",
+    "Treat the published growth rates as untested against the register: 4.96% compound growth sits beside a measured US series falling 8.99% per year in spending and 11.56% per year in cases",
+    "Do not plan on volume: the facility register is down to approximately 336 from 407 in 2016, occupancy has not recovered past the high sixties, and payment per case is rising at roughly the statutory update and no faster",
+    "Read any site-neutral exposure analysis carefully -- at approximately 9 percent of FY2024 cases and approximately 4.1 percent of FY2026 payments, the exposure is now small because the patients left, not because the rate improved",
+    "Treat any operator or vendor share percentage you are shown as unsourced: none is publicly disclosed in this setting, and the available facility counts cover only about half the register"
+  ]
+}
