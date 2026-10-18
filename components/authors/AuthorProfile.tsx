@@ -74,7 +74,17 @@ export default function AuthorProfile({ author, totalReports }: AuthorProfilePro
                 </p>
               )}
 
-              {/* Stats Card */}
+              {/* Stats Card.
+                  Shown only when there is a count to show. Per-report
+                  attribution is not recorded anywhere — `neograph_reports` has
+                  no author column (32 columns, checked) and
+                  `getReportsByAuthorId` returns an empty list by construction —
+                  so `totalReports` was 0 on all three profiles, and the tile
+                  published "Total Reports Authored: 0" for a principal
+                  consultant on a 182-report publication. A zero that means "not
+                  recorded" is not a measurement, and these pages are in
+                  `/sitemap.xml`. See R-26. */}
+              {totalReports > 0 && (
               <Card className="border-none shadow-sm bg-[var(--card)]">
                 <CardContent className="p-4">
                   <div className="flex items-center gap-3">
@@ -102,6 +112,7 @@ export default function AuthorProfile({ author, totalReports }: AuthorProfilePro
                   </div>
                 </CardContent>
               </Card>
+              )}
             </div>
           </div>
         </div>

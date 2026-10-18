@@ -237,9 +237,15 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       **DONE 2026-10-15 — PR #4 — root canonical removed.**
 - [ ] Hardcoded `price: '$2,995'` is published as Product/Offer JSON-LD with
       `InStock` on all 140 reports, while checkout throws by design.
-- [ ] No `error.tsx`/`global-error.tsx` anywhere; `lib/api/consulting.ts:22,42`
+- [ ] ~~No `error.tsx`/`global-error.tsx` anywhere~~; `lib/api/consulting.ts:22,42`
       throws instead of returning `ApiResponse`, so a Supabase outage fails the
       build or shows a bare error screen.
+      **HALF STALE 2026-10-18** — `app/error.tsx`, `app/global-error.tsx`,
+      `app/not-found.tsx` and `app/consulting/[slug]/not-found.tsx` all exist;
+      an earlier session added them and the bullet was never updated. The
+      `consulting.ts` throws stand, and the open question is whether a Supabase
+      outage *should* fail the build (keeping the last good deploy) rather than
+      render an error page - so this is a decision, not a bug.
 - [ ] Sitemap fragmentation: `robots.ts` advertises only `/sitemap.xml`;
       `/sitemap-pages.xml`, `/sitemap-consulting.xml` are referenced nowhere, so
       consulting and legal URLs are in no discoverable sitemap. Reports are
@@ -253,8 +259,22 @@ sidebar widths), #9 (server rendering on /reports and /request-sample),
       inserting a team member silently repoints every author URL.
 - [ ] `getReportsByAuthorId` and `getReportsByCategory` return `[]` with
       `success: true` (unimplemented), so every author page publishes "0 reports".
-- [ ] Checkout collects buyer details then `lib/api/orders.ts:8` throws
-      unconditionally — with no error boundary, a buyer sees a white screen.
+      **The published claim is fixed 2026-10-18; the data gap is not.** The three
+      author pages are in `/sitemap.xml` and each said "Total Reports Authored:
+      0" over an empty state naming the analyst as having authored nothing - a
+      statement about a named person that the corpus cannot support, because
+      `neograph_reports` has no author column (R-26). The empty state now says
+      figures are published under organisational attribution, and the counter
+      tile renders only when the count is above zero. Implementing the join
+      needs the column, which is R-26 and Siddhant's.
+      `getReportsByCategory` is called from nowhere.
+- [x] ~~Checkout collects buyer details then `lib/api/orders.ts:8` throws
+      unconditionally — with no error boundary, a buyer sees a white screen.~~
+      **NOT A DEFECT 2026-10-18** — no code path reaches it. `createOrder` and
+      `captureOrder` are called from nowhere in `app/` or `components/`; the
+      only grep hit, `PayPalButton.tsx:58`, is the PayPal SDK's own
+      `createOrder` prop resolving an id it already holds. Dead code, kept per
+      the no-deletion rule. `app/error.tsx` also exists now.
 - [x] Form handlers (`api/contact`, `api/request-sample`, `api/not-found-inquiry`)
       do no validation or HTML escaping and have no rate limit; attacker-controlled
       `replyTo` + raw HTML interpolation = phishing from support@, plus Resend
@@ -411,8 +431,11 @@ after the deploy. Seven of eleven audited pages now come back clean.
       273KB of HTML, 33.0KB gzipped; hoisting the link classes to one container
       returned 47KB of that. Audit rule added and negative-tested — the page
       fails if it renders under 100 report links.
-- [ ] `/design-system` renders 2 `<h1>` and has no canonical. Robots-disallowed,
-      so low priority.
+- [x] ~~`/design-system` renders 2 `<h1>` and has no canonical. Robots-disallowed,
+      so low priority.~~ **NOT A DEFECT 2026-10-18** — the built page has **1**
+      `<h1>` and a canonical pointing at
+      `https://www.neographanalytics.com/design-system`. Measured against
+      `server/app/design-system.html` in a clean build.
 - [ ] `/reports` still ships ~508KB, nearly all of it the RSC payload for 142
       reports. Select only the columns the cards need.
 

@@ -3762,3 +3762,66 @@ two sessions are writing to. Staging by path does not protect you if the other
 session stages everything. The only thing that does is **commit immediately
 after staging**, in the same tool call where possible — the window here was
 about four minutes.
+
+## 2026-10-18 14:10-14:40 IST — three indexable pages said an analyst had published nothing
+
+Session `281bde29`. Files: `components/authors/AuthorProfile.tsx`,
+`components/authors/AuthorReportsListing.tsx`, `BACKLOG.md`, `WORKLOG.md`.
+No Supabase write.
+
+### Started as a staleness sweep of the open technical bullets, which found one live defect and three dead ones
+
+The queues above this lane were all owner-gated or browser-gated, so the open
+P0/P1 bullets from the 2026-10-15 technical audit were re-measured against the
+current build rather than taken on their word. Three are stale and are struck
+in `BACKLOG.md` with what settled them:
+
+- **"No `error.tsx`/`global-error.tsx` anywhere"** — both exist at `app/`, plus
+  `app/not-found.tsx` and `app/consulting/[slug]/not-found.tsx`. Added by an
+  earlier session; the bullet was never updated. The `lib/api/consulting.ts`
+  half of it stands: `getAllConsultingServices` and
+  `getConsultingServicesByCategory` still `throw` instead of returning an
+  `ApiResponse`.
+- **"Checkout ... `lib/api/orders.ts:8` throws unconditionally — a buyer sees a
+  white screen"** — **no code path reaches it.** `createOrder` and
+  `captureOrder` are called from nowhere in `app/` or `components/`; the one
+  grep hit, `PayPalButton.tsx:58`, is the PayPal SDK's own `createOrder` prop
+  resolving an id it already holds. The stubs are dead code, and per the
+  no-deletion rule they stay.
+- **"`/design-system` renders 2 `<h1>` and has no canonical"** — the built page
+  has **1** `<h1>` and `rel="canonical"` pointing at
+  `https://www.neographanalytics.com/design-system`.
+
+### The live one
+
+`/authors/1`, `/authors/2` and `/authors/3` are **in `/sitemap.xml`** (verified
+in the built `sitemap.xml.body`) and each published, in full:
+
+> **Total Reports Authored — 0**
+> **No Reports Yet.** Deepa Pandey hasn t authored any reports yet. Check back
+> soon!
+
+That is a statement about a named person, and the data cannot support it.
+`getReportsByAuthorId` returns `{ success: true, data: [] }` **by
+construction** — `neograph_reports` has no author column (32, checked, R-26) —
+so the branch renders for all three analysts regardless of what they wrote. The
+zero is not a count of anything; it is the absence of a record.
+
+Fixed by saying what is true: the empty state now reads **"Reports are published
+under organisational attribution"** and explains that figures go out under the
+company rather than individual bylines, with links to `/reports` and
+`/methodology`. The "Total Reports Authored" tile renders only when
+`totalReports > 0`, so a zero that means "not recorded" is never published as a
+measurement.
+
+Both components carry the reason inline, pointing at R-26, so that when the
+attribution is recorded the copy is a known thing to revisit rather than a
+mystery.
+
+Verified: build exit 0, all three author pages re-read out of the built HTML and
+none now contains the old sentence or a zero tile. `audit-html.mjs` 18 of 18 and
+0 errors, contrast 0 failing pairs, source-hygiene 251 files / 0 findings, lint
+12 warnings / 0 errors, `tsc` clean.
+
+**Not a content invention:** no report was attributed to anyone. The change
+removes a claim; it does not add one.
